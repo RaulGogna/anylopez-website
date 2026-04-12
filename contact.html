@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqués de Comillas 4, Local 6. Tel: 656 306 167. Lun–Vie 10–14h / 16–20h." />
+  <title>Contacto — AnyLopez Clínica Estética</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Any<span>Lopez</span></a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="radiofrecuencia.html">Indiba</a></li>
+          <li><a href="contact.html" class="active">Contacto</a></li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Reserva tu Cita</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Inicio</a>
+      <span>›</span>
+      <span>Contacto</span>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:var(--accent)">Ponte en Contacto</span>
+      <h1>Contáctanos</h1>
+      <p>Conoce nuestra clínica y disfruta de nuestras instalaciones y atención de calidad personalizada</p>
+    </div>
+  </section>
+
+  <!-- CONTACTO PRINCIPAL -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- INFO -->
+        <div>
+          <span class="section-label">Información</span>
+          <h2 class="section-title">¿Qué esperas para contactarnos?</h2>
+          <p style="color:var(--text-mid); margin-bottom:40px;">Estamos encantados de atenderte y resolver todas tus dudas. Reserva tu cita o visítanos directamente en nuestra clínica en Benidorm.</p>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Dirección</h4>
+              <p>Calle Marqués de Comillas 4, Local 6<br>C.P. 03501, Benidorm (Alicante)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Teléfonos</h4>
+              <a href="tel:656306167" style="display:block; color:var(--secondary);">656 306 167</a>
+              <a href="tel:865710769" style="display:block; color:var(--secondary);">865 710 769</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@anylopez.com" style="color:var(--secondary);">info@anylopez.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Horario</h4>
+              <p>Lunes a Viernes<br>10:00 – 14:00 · 16:00 – 20:00</p>
+            </div>
+          </div>
+
+          <!-- MAPA -->
+          <iframe
+            class="map-embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.1234567890123!2d-0.1317!3d38.5335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6317b0c9b9f6ed%3A0x4c123456789abc!2sCalle%20Marqu%C3%A9s%20de%20Comillas%2C%204%2C%2003501%20Benidorm!5e0!3m2!1ses!2ses!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación AnyLopez Benidorm"
+          ></iframe>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div>
+          <div style="background:#fff; padding:40px; border-radius:16px; box-shadow:var(--shadow);">
+            <span class="section-label">Formulario</span>
+            <h2 class="section-title" style="font-size:28px;">Reserva Tu Cita</h2>
+            <p style="color:var(--text-mid); margin-bottom:32px; font-size:15px;">Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre *</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                </div>
+                <div class="form-group">
+                  <label for="apellidos">Apellidos *</label>
+                  <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" />
+              </div>
+
+              <div class="form-group">
+                <label for="tratamiento">Tratamiento de Interés</label>
+                <select id="tratamiento" name="tratamiento">
+                  <option value="">Selecciona un tratamiento...</option>
+                  <option value="higiene-facial">Higiene Facial</option>
+                  <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>
+                  <option value="radiofrecuencia-corporal">Radiofrecuencia Corporal</option>
+                  <option value="radiofrecuencia-indiba">Radiofrecuencia Sistema Indiba</option>
+                  <option value="ultherapy">Ultherapy</option>
+                  <option value="dermapen">Dermapen</option>
+                  <option value="botox">Botox</option>
+                  <option value="acido-hialuronico">Relleno Ácido Hialurónico</option>
+                  <option value="vitaminas-exosomas">Vitaminas + Exosomas</option>
+                  <option value="micropigmentacion">Micropigmentación</option>
+                  <option value="otro">Otro / Consulta general</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Mensaje o comentarios</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; font-size:13px; padding:16px;">
+                Enviar Solicitud
+              </button>
+
+              <p style="font-size:12px; color:var(--text-light); margin-top:16px; text-align:center;">
+                Al enviar este formulario aceptas nuestra política de privacidad. Respondemos en menos de 24h.
+              </p>
+            </form>
+
+            <div id="formSuccess" style="display:none; text-align:center; padding:32px 0;">
+              <div style="font-size:48px; margin-bottom:16px;">✅</div>
+              <h3 style="color:var(--primary); margin-bottom:8px;">¡Mensaje enviado!</h3>
+              <p style="color:var(--text-mid);">Nos pondremos en contacto contigo en menos de 24 horas.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LLAMADA DIRECTA -->
+  <section class="section section--dark">
+    <div class="container text-center">
+      <span class="section-label" style="color:var(--accent)">Llamada directa</span>
+      <h2 class="section-title" style="color:#fff; margin-bottom:16px;">Llámanos al 656 306 167</h2>
+      <p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">Si prefieres hablar directamente con nosotros, llámanos en nuestro horario de atención.</p>
+      <a href="tel:656306167" class="btn btn-accent">Llamar Ahora</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Any<span style="color:var(--accent)">Lopez</span></a>
+          <p>Clínica estética facial y corporal en Benidorm. Tratamientos personalizados con tecnología de última generación y más de 35 años de experiencia.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a href="radiofrecuencia.html">Indiba</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="services.html">Higienes Faciales</a></li>
+            <li><a href="services.html">Radiofrecuencia</a></li>
+            <li><a href="services.html">Ultherapy</a></li>
+            <li><a href="services.html">Dermapen</a></li>
+            <li><a href="services.html">Botox</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>📍 C/ Marqués de Comillas 4, Local 6, Benidorm</p>
+          <p>📞 656 306 167</p>
+          <p>📞 865 710 769</p>
+          <p>✉️ info@anylopez.com</p>
+          <p>🕐 Lun–Vie: 10–14h / 16–20h</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 AnyLopez Clínica Estética. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const menu   = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const email  = document.getElementById('email').value.trim();
+      if (!nombre || !email) {
+        alert('Por favor completa los campos obligatorios (nombre y email).');
+        return;
+      }
+      this.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
