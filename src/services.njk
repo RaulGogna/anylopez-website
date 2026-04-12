@@ -1,38 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Servicios de AnyLopez Clínica Estética: Higienes Faciales, Radiofrecuencia, Ultherapy, Dermapen, Botox, Vitaminas y más en Benidorm." />
-  <title>Servicios — AnyLopez Clínica Estética</title>
-  <link rel="stylesheet" href="css/styles.css" />
+---
+layout: base.njk
+title: "Servicios — AnyLopez Clínica Estética"
+description: "Servicios de AnyLopez Clínica Estética: Higienes Faciales, Radiofrecuencia, Ultherapy, Dermapen, Botox, Vitaminas y más en Benidorm."
+---
+
   <style>
-    .services-tab-nav {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 48px;
-      justify-content: center;
-    }
-    .tab-btn {
-      padding: 10px 20px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border: 1.5px solid var(--border);
-      border-radius: 40px;
-      background: #fff;
-      cursor: pointer;
-      transition: var(--transition);
-      color: var(--text-mid);
-      font-family: 'Inter', sans-serif;
-    }
-    .tab-btn:hover, .tab-btn.active {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
     .treatment-card {
       background: #fff;
       border-radius: 12px;
@@ -72,33 +44,11 @@
       .treatment-card-img { width: 100%; height: 200px; }
     }
   </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">Any<span>Lopez</span></a>
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="about.html">Nosotros</a></li>
-          <li><a href="services.html" class="active">Servicios</a></li>
-          <li><a href="radiofrecuencia.html">Indiba</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Reserva tu Cita</a></li>
-        </ul>
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
 
   <!-- BREADCRUMB -->
   <div class="breadcrumb">
     <div class="container">
-      <a href="index.html">Inicio</a>
+      <a href="/">Inicio</a>
       <span>›</span>
       <span>Servicios</span>
     </div>
@@ -118,7 +68,7 @@
     <div class="container">
       <p style="color:#fff; font-size:14px; font-weight:600; letter-spacing:1px;">
         🎁 <strong>10% de descuento</strong> en tu primera Higiene Facial — ¡Reserva hoy!
-        <a href="contact.html" style="color:#fff; text-decoration:underline; margin-left:12px;">Reservar →</a>
+        <a href="/contact/" style="color:#fff; text-decoration:underline; margin-left:12px;">Reservar →</a>
       </p>
     </div>
   </div>
@@ -196,7 +146,7 @@
           <h3>Radiofrecuencia Facial</h3>
           <p>Reduce arrugas, cierra poros y aporta luminosidad gracias a la acción del colágeno. Activa la producción natural de colágeno y elastina para una piel más firme y joven.</p>
           <br>
-          <a href="radiofrecuencia.html" class="btn btn-outline" style="font-size:11px; padding:10px 20px;">Ver página dedicada →</a>
+          <a href="/radiofrecuencia/" class="btn btn-outline" style="font-size:11px; padding:10px 20px;">Ver página dedicada →</a>
         </div>
       </div>
 
@@ -294,7 +244,7 @@
           <h3>Oferta del Mes — Radiofrecuencia Indiba</h3>
           <p>Si tienes flacidez y celulitis no dudes en disfrutar de nuestra oferta del mes con más del 30% de descuento en Radiofrecuencia Sistema Indiba.</p>
         </div>
-        <a href="contact.html" class="btn btn-outline-white">Reservar Ahora</a>
+        <a href="/contact/" class="btn btn-outline-white">Reservar Ahora</a>
       </div>
     </div>
   </section>
@@ -310,63 +260,6 @@
         <div>✉️ info@anylopez.com</div>
         <div>🕐 Lun–Vie 10:00–14:00 / 16:00–20:00</div>
       </div>
-      <a href="contact.html" class="btn btn-accent">Reserva tu Cita</a>
+      <a href="/contact/" class="btn btn-accent">Reserva tu Cita</a>
     </div>
   </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">Any<span style="color:var(--accent)">Lopez</span></a>
-          <p>Clínica estética facial y corporal en Benidorm. Tratamientos personalizados con tecnología de última generación y más de 35 años de experiencia.</p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Navegación</h4>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="about.html">Nosotros</a></li>
-            <li><a href="services.html">Servicios</a></li>
-            <li><a href="radiofrecuencia.html">Indiba</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="services.html">Higienes Faciales</a></li>
-            <li><a href="services.html">Radiofrecuencia</a></li>
-            <li><a href="services.html">Ultherapy</a></li>
-            <li><a href="services.html">Dermapen</a></li>
-            <li><a href="services.html">Botox</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contacto</h4>
-          <p>📍 C/ Marqués de Comillas 4, Local 6, Benidorm</p>
-          <p>📞 656 306 167</p>
-          <p>📞 865 710 769</p>
-          <p>✉️ info@anylopez.com</p>
-          <p>🕐 Lun–Vie: 10–14h / 16–20h</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2024 AnyLopez Clínica Estética. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('menuToggle');
-    const menu   = document.getElementById('navMenu');
-    toggle.addEventListener('click', () => menu.classList.toggle('open'));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
-  </script>
-</body>
-</html>
