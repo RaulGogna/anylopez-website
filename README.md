@@ -59,15 +59,6 @@ El build se ejecuta automáticamente en cada push a `master` mediante GitHub Act
 
 **URL de producción:** https://raulgogna.github.io/anylopez-website/
 
-## Nota importante sobre rutas
-
-El sitio se publica bajo el subdirectorio `/anylopez-website/`. El `.eleventy.js` tiene configurado `pathPrefix: "/anylopez-website/"`. Todos los enlaces internos deben usar el filtro `| url` de Nunjucks para que las rutas sean correctas tanto en local como en producción:
-
-```njk
-<a href="{{ '/about/' | url }}">Nosotros</a>
-<link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
-```
-
 ## Contacto clínica
 
 - **Dirección:** C/ Marqués de Comillas 4, Local 6, Benidorm
