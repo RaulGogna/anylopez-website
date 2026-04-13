@@ -1,46 +1,71 @@
 # AnyLopez — Clínica Estética Benidorm
 
-Sitio web estático para **AnyLopez Clínica Estética**, ubicada en Benidorm. Migrado desde WordPress a HTML/CSS puro para mayor velocidad, control y facilidad de mantenimiento.
-
-## Páginas
-
-| Archivo | Descripción |
-|---|---|
-| `index.html` | Página principal con hero, servicios destacados, proceso y testimonios |
-| `about.html` | Historia y equipo de la clínica |
-| `services.html` | Catálogo completo de tratamientos |
-| `radiofrecuencia.html` | Página dedicada al tratamiento Indiba / Radiofrecuencia |
-| `contact.html` | Formulario de contacto y datos de localización |
+Sitio web estático para **AnyLopez Clínica Estética**, ubicada en Benidorm. Migrado desde WordPress a HTML/CSS puro y posteriormente a **Eleventy (11ty) v3** para mayor velocidad, control y facilidad de mantenimiento.
 
 ## Tecnologías
 
-- HTML5 semántico
+- [Eleventy v3](https://www.11ty.dev/) — generador de sitios estáticos
+- Nunjucks (`.njk`) como motor de plantillas
 - CSS3 personalizado (`css/styles.css`) — sin frameworks externos
 - JavaScript vanilla para el menú móvil
+- GitHub Actions para CI/CD → GitHub Pages
 
 ## Estructura
 
 ```
 anylopez-website/
-├── index.html
-├── about.html
-├── services.html
-├── radiofrecuencia.html
-├── contact.html
-└── css/
-    └── styles.css
+├── .github/
+│   └── workflows/
+│       └── deploy.yml       # Build + deploy automático a GitHub Pages
+├── src/
+│   ├── _includes/
+│   │   └── base.njk         # Layout base compartido por todas las páginas
+│   ├── index.njk
+│   ├── about.njk
+│   ├── services.njk
+│   ├── radiofrecuencia.njk
+│   └── contact.njk
+├── css/
+│   └── styles.css
+├── _site/                   # Output generado (ignorado en git)
+├── .eleventy.js             # Configuración de Eleventy (pathPrefix incluido)
+└── package.json
 ```
+
+## Páginas
+
+| Archivo | Descripción |
+|---|---|
+| `src/index.njk` | Página principal con hero, servicios destacados, proceso y testimonios |
+| `src/about.njk` | Historia y equipo de la clínica |
+| `src/services.njk` | Catálogo completo de tratamientos |
+| `src/radiofrecuencia.njk` | Página dedicada al tratamiento Indiba / Radiofrecuencia |
+| `src/contact.njk` | Formulario de contacto y datos de localización |
 
 ## Uso local
 
-Abre cualquier archivo `.html` directamente en el navegador o sirve la carpeta con cualquier servidor estático:
-
 ```bash
-# Con Python
-python -m http.server 8080
+npm install
+npm run serve   # Arranca servidor en http://localhost:8080
+```
 
-# Con Node (npx)
-npx serve .
+## Build y despliegue
+
+El build se ejecuta automáticamente en cada push a `master` mediante GitHub Actions:
+
+1. Instala dependencias (`npm ci`)
+2. Genera el sitio (`npm run build` → `_site/`)
+3. Publica `_site/` en GitHub Pages
+
+**URL de producción:** https://raulgogna.github.io/anylopez-website/
+
+## Nota importante sobre rutas
+
+El sitio se publica bajo el subdirectorio `/anylopez-website/`. El `.eleventy.js` tiene configurado `pathPrefix: "/anylopez-website/"`. Todos los enlaces internos deben usar el filtro `| url` de Nunjucks para que las rutas sean correctas tanto en local como en producción:
+
+```njk
+<a href="{{ '/about/' | url }}">Nosotros</a>
+<link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
 ```
 
 ## Contacto clínica
