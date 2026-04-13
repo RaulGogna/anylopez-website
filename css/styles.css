@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5 {
 .nav-menu a.active { color: var(--primary); border-bottom-color: var(--accent); }
 
 .nav-cta { margin-left: 16px; }
-.nav-cta .btn-accent { color: #fff; }
+.nav-cta .btn-accent { color: #fff; padding-bottom: 24px; }
 
 /* Mobile menu toggle */
 .menu-toggle {
