@@ -11,12 +11,13 @@
   --secondary:  #53a292;
   --accent:     #cba590;
   --bg-light:   #d9e8e5;
+  --bg-cream:   #f6f5f4;
   --bg-white:   #ffffff;
   --text-dark:  #2c2c2c;
   --text-mid:   #5a5a5a;
   --text-light: #7f7c76;
   --border:     #e0dbd7;
-  --radius:     6px;
+  --radius:     2px;
   --shadow:     0 4px 24px rgba(32,91,79,.10);
   --transition: all 0.25s ease;
 }
@@ -132,6 +133,31 @@ h1, h2, h3, h4, h5 {
   background: var(--bg-white);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.site-header--transparent {
+  background: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+.site-header--transparent .nav-menu a {
+  color: rgba(255,255,255,0.90);
+}
+
+.site-header--transparent .nav-menu a:hover,
+.site-header--transparent .nav-menu a.active {
+  color: #fff;
+  border-bottom-color: var(--accent);
+}
+
+.site-header--transparent .nav-cta .btn-primary {
+  background: var(--accent);
+}
+
+.site-header--transparent .menu-toggle span {
+  background: #fff;
 }
 
 .header-inner {
@@ -149,8 +175,17 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   color: var(--primary);
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
 }
 .logo span { color: var(--accent); }
+
+.logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 
 .nav-menu { display: flex; gap: 32px; align-items: center; }
 
@@ -193,7 +228,7 @@ h1, h2, h3, h4, h5 {
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: url('https://anylopez.com/wp-content/uploads/2024/08/fondo-web.png') center/cover no-repeat var(--primary);
   overflow: hidden;
 }
 
@@ -201,8 +236,7 @@ h1, h2, h3, h4, h5 {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://anylopez.com/wp-content/uploads/2024/10/banner-5.jpg') center/cover no-repeat;
-  opacity: 0.18;
+  background: linear-gradient(135deg, rgba(32,91,79,0.72) 0%, rgba(32,91,79,0.45) 60%, rgba(83,162,146,0.30) 100%);
 }
 
 .hero-content {
@@ -622,6 +656,78 @@ h1, h2, h3, h4, h5 {
   border: none;
 }
 
+/* --- Gallery Grid --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.gallery-item {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-light);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* --- Feature Strip --- */
+.feature-strip {
+  background: var(--primary);
+  padding: 56px 0;
+}
+
+.feature-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.feature-strip-item .fs-number {
+  font-family: 'Brygada 1918', serif;
+  font-size: 52px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+}
+
+.feature-strip-item .fs-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.70);
+  margin-top: 8px;
+  display: block;
+}
+
+/* --- Image + Text Visual --- */
+.img-text-visual {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-text-visual img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
 /* =============================================
    RESPONSIVE
    ============================================= */
@@ -629,10 +735,14 @@ h1, h2, h3, h4, h5 {
   .grid-4, .stats-grid, .steps { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .offer-banner { flex-direction: column; text-align: center; }
+  .feature-strip-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
 }
 
 @media (max-width: 768px) {
   .section { padding: 56px 0; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .feature-strip-grid { grid-template-columns: repeat(2, 1fr); }
+  .img-text-visual img { height: 300px; }
 
   .nav-menu {
     display: none;
