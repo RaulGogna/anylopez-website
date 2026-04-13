@@ -20,7 +20,7 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="{{ '/' | url }}" class="logo" aria-label="AnyLopez Clínica Estética">
-        <img src="https://anylopez.com/wp-content/uploads/2024/08/cropped-logo.png" alt="AnyLopez" class="logo-img" width="82" height="52" fetchpriority="high" />
+        <img src="{{ '/images/logo.png' | url }}" alt="AnyLopez Clínica Estética" class="logo-img" width="64" height="64" fetchpriority="high" />
       </a>
       <nav>
         <ul class="nav-menu" id="navMenu">
@@ -93,16 +93,6 @@
     const menu   = document.getElementById('navMenu');
     toggle.addEventListener('click', () => menu.classList.toggle('open'));
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
-
-    // Header transparente sobre hero (solo en páginas con .hero)
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      const header = document.getElementById('siteHeader');
-      header.classList.add('site-header--transparent');
-      window.addEventListener('scroll', function () {
-        header.classList.toggle('site-header--transparent', window.scrollY < 80);
-      }, { passive: true });
-    }
   </script>
 </body>
 </html>

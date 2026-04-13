@@ -133,40 +133,6 @@ h1, h2, h3, h4, h5 {
   background: var(--bg-white);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 2px 12px rgba(0,0,0,.06);
-  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.site-header--transparent {
-  background: linear-gradient(to bottom, rgba(28,26,24,0.42) 0%, transparent 100%);
-  border-bottom-color: transparent;
-  box-shadow: none;
-}
-
-.site-header--transparent .nav-menu a {
-  color: rgba(255,255,255,0.92);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.45);
-}
-
-.site-header--transparent .nav-menu a:hover,
-.site-header--transparent .nav-menu a.active {
-  color: #fff;
-  border-bottom-color: var(--accent);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.45);
-}
-
-
-.site-header--transparent .menu-toggle span {
-  background: #fff;
-}
-
-/* Móvil: cuando el menú abierto tiene fondo blanco, revertir colores */
-.site-header--transparent .nav-menu.open a {
-  color: var(--text-dark);
-}
-.site-header--transparent .nav-menu.open a:hover,
-.site-header--transparent .nav-menu.open a.active {
-  color: var(--primary);
-  border-bottom-color: var(--accent);
 }
 
 .header-inner {
@@ -190,7 +156,7 @@ h1, h2, h3, h4, h5 {
 .logo span { color: var(--accent); }
 
 .logo-img {
-  height: 52px;
+  height: 64px;
   width: auto;
   display: block;
   object-fit: contain;
