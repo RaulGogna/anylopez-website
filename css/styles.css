@@ -3,22 +3,20 @@
    Stylesheet
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
-
 /* --- Variables --- */
 :root {
-  --primary:    #205b4f;
-  --secondary:  #53a292;
-  --accent:     #cba590;
-  --bg-light:   #d9e8e5;
-  --bg-cream:   #f6f5f4;
+  --primary:    #1C1A18;
+  --secondary:  #907D72;
+  --accent:     #C4956A;
+  --bg-light:   #EDE8E2;
+  --bg-cream:   #F7F4F0;
   --bg-white:   #ffffff;
   --text-dark:  #2c2c2c;
   --text-mid:   #5a5a5a;
   --text-light: #7f7c76;
   --border:     #e0dbd7;
   --radius:     2px;
-  --shadow:     0 4px 24px rgba(32,91,79,.10);
+  --shadow:     0 4px 24px rgba(28,26,24,.10);
   --transition: all 0.25s ease;
 }
 
@@ -94,7 +92,7 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 2px;
   text-transform: uppercase;
   border-radius: var(--radius);
-  transition: var(--transition);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
   cursor: pointer;
   border: none;
 }
@@ -103,13 +101,13 @@ h1, h2, h3, h4, h5 {
   background: var(--primary);
   color: #fff;
 }
-.btn-primary:hover { background: #174840; }
+.btn-primary:hover { background: #0e0d0c; }
 
 .btn-accent {
   background: var(--accent);
   color: #fff;
 }
-.btn-accent:hover { background: #b8957d; }
+.btn-accent:hover { background: #a97d56; }
 
 .btn-outline {
   background: transparent;
@@ -236,7 +234,7 @@ h1, h2, h3, h4, h5 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(32,91,79,0.72) 0%, rgba(32,91,79,0.45) 60%, rgba(83,162,146,0.30) 100%);
+  background: linear-gradient(135deg, rgba(28,26,24,0.72) 0%, rgba(28,26,24,0.45) 60%, rgba(144,125,114,0.22) 100%);
 }
 
 .hero-content {
@@ -275,7 +273,7 @@ h1, h2, h3, h4, h5 {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: var(--transition);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(32,91,79,.15); }
 
