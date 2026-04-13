@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{{ description }}" />
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="logo">Any<span>Lopez</span></a>
+      <a href="{{ '/' | url }}" class="logo">Any<span>Lopez</span></a>
       <nav>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="/" class="{{ 'active' if page.url == '/' }}">Inicio</a></li>
-          <li><a href="/about/" class="{{ 'active' if page.url == '/about/' }}">Nosotros</a></li>
-          <li><a href="/services/" class="{{ 'active' if page.url == '/services/' }}">Servicios</a></li>
-          <li><a href="/radiofrecuencia/" class="{{ 'active' if page.url == '/radiofrecuencia/' }}">Indiba</a></li>
-          <li><a href="/contact/" class="{{ 'active' if page.url == '/contact/' }}">Contacto</a></li>
-          <li class="nav-cta"><a href="/contact/" class="btn btn-primary">Reserva tu Cita</a></li>
+          <li><a href="{{ '/' | url }}" class="{{ 'active' if page.url == '/' }}">Inicio</a></li>
+          <li><a href="{{ '/about/' | url }}" class="{{ 'active' if page.url == '/about/' }}">Nosotros</a></li>
+          <li><a href="{{ '/services/' | url }}" class="{{ 'active' if page.url == '/services/' }}">Servicios</a></li>
+          <li><a href="{{ '/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/radiofrecuencia/' }}">Indiba</a></li>
+          <li><a href="{{ '/contact/' | url }}" class="{{ 'active' if page.url == '/contact/' }}">Contacto</a></li>
+          <li class="nav-cta"><a href="{{ '/contact/' | url }}" class="btn btn-primary">Reserva tu Cita</a></li>
         </ul>
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
           <span></span><span></span><span></span>
@@ -36,7 +36,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo">Any<span style="color:var(--accent)">Lopez</span></a>
+          <a href="{{ '/' | url }}" class="logo">Any<span style="color:var(--accent)">Lopez</span></a>
           <p>Clínica estética facial y corporal en Benidorm. Tratamientos personalizados con tecnología de última generación y más de 35 años de experiencia.</p>
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Instagram">📷</a>
@@ -47,21 +47,21 @@
         <div class="footer-col">
           <h4>Navegación</h4>
           <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/about/">Nosotros</a></li>
-            <li><a href="/services/">Servicios</a></li>
-            <li><a href="/radiofrecuencia/">Indiba</a></li>
-            <li><a href="/contact/">Contacto</a></li>
+            <li><a href="{{ '/' | url }}">Inicio</a></li>
+            <li><a href="{{ '/about/' | url }}">Nosotros</a></li>
+            <li><a href="{{ '/services/' | url }}">Servicios</a></li>
+            <li><a href="{{ '/radiofrecuencia/' | url }}">Indiba</a></li>
+            <li><a href="{{ '/contact/' | url }}">Contacto</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Servicios</h4>
           <ul>
-            <li><a href="/services/">Higienes Faciales</a></li>
-            <li><a href="/services/">Radiofrecuencia</a></li>
-            <li><a href="/services/">Ultherapy</a></li>
-            <li><a href="/services/">Dermapen</a></li>
-            <li><a href="/services/">Botox</a></li>
+            <li><a href="{{ '/services/' | url }}">Higienes Faciales</a></li>
+            <li><a href="{{ '/services/' | url }}">Radiofrecuencia</a></li>
+            <li><a href="{{ '/services/' | url }}">Ultherapy</a></li>
+            <li><a href="{{ '/services/' | url }}">Dermapen</a></li>
+            <li><a href="{{ '/services/' | url }}">Botox</a></li>
           </ul>
         </div>
         <div class="footer-col">
