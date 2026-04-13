@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 8px 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5 {
 .logo span { color: var(--accent); }
 
 .logo-img {
-  height: 80px;
+  height: 110px;
   width: auto;
   display: block;
   object-fit: contain;
