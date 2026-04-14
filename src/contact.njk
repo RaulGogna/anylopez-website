@@ -84,7 +84,7 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
             <h2 class="section-title" style="font-size:28px;">Reserva Tu Cita</h2>
             <p style="color:var(--text-mid); margin-bottom:32px; font-size:15px;">Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
 
-            <form id="contactForm" novalidate>
+            <form id="contactForm" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate>
               <div class="form-row">
                 <div class="form-group">
                   <label for="nombre">Nombre *</label>
@@ -129,6 +129,8 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
                 <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
               </div>
 
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
               <button type="submit" class="btn btn-primary" style="width:100%; font-size:13px; padding:16px;">
                 Enviar Solicitud
               </button>
@@ -163,13 +165,33 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
   <script>
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
+      const form = this;
       const nombre = document.getElementById('nombre').value.trim();
+      const apellidos = document.getElementById('apellidos').value.trim();
       const email  = document.getElementById('email').value.trim();
-      if (!nombre || !email) {
-        alert('Por favor completa los campos obligatorios (nombre y email).');
+      if (!nombre || !apellidos || !email) {
+        alert('Por favor completa los campos obligatorios (nombre, apellidos y email).');
         return;
       }
-      this.style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          throw new Error('Error del servidor');
+        }
+      }).catch(function() {
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o llámanos al 656 306 167.');
+        btn.disabled = false;
+        btn.textContent = 'Enviar Solicitud';
+      });
     });
   </script>
