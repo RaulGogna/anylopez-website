@@ -173,6 +173,10 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
         alert('Por favor completa los campos obligatorios (nombre, apellidos y email).');
         return;
       }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Por favor introduce un email válido.');
+        return;
+      }
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.textContent = 'Enviando...';
