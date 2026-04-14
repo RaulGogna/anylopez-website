@@ -357,6 +357,68 @@ h1, h2, h3, h4, h5 {
 .team-name { font-size: 18px; margin-bottom: 4px; }
 .team-role { font-size: 13px; color: var(--text-light); letter-spacing: 1px; }
 
+/* --- Google Reviews Badge --- */
+.google-reviews-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 16px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.google-reviews-badge .google-logo {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.google-rating {
+  font-family: 'Brygada 1918', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.google-stars {
+  color: #f5a623;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.google-count {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.google-reviews-badge .google-link {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: var(--transition);
+}
+.google-reviews-badge .google-link:hover { color: var(--secondary); }
+
+/* --- Reviews Carousel --- */
+.reviews-carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px;
+}
+.reviews-carousel::-webkit-scrollbar { display: none; }
+
 /* --- Testimonials --- */
 .testimonial {
   background: #fff;
@@ -364,6 +426,12 @@ h1, h2, h3, h4, h5 {
   padding: 32px;
   box-shadow: var(--shadow);
   position: relative;
+}
+
+.reviews-carousel .testimonial {
+  scroll-snap-align: start;
+  min-width: 340px;
+  flex-shrink: 0;
 }
 
 .testimonial::before {
@@ -377,6 +445,19 @@ h1, h2, h3, h4, h5 {
   line-height: 1;
 }
 
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.testimonial-header .google-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 .testimonial p { color: var(--text-mid); font-size: 15px; font-style: italic; margin-bottom: 20px; }
 
 .testimonial-author { display: flex; align-items: center; gap: 12px; }
@@ -384,6 +465,56 @@ h1, h2, h3, h4, h5 {
 .testimonial-author span  { font-size: 12px; color: var(--text-light); }
 
 .stars { color: #f5a623; font-size: 14px; margin-bottom: 4px; }
+
+/* --- Carousel Controls --- */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.carousel-prev,
+.carousel-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: #fff;
+  color: var(--primary);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.carousel-prev:hover,
+.carousel-next:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+.carousel-dot.active {
+  background: var(--accent);
+  transform: scale(1.2);
+}
 
 /* --- Offer Banner --- */
 .offer-banner {
@@ -712,12 +843,16 @@ h1, h2, h3, h4, h5 {
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .offer-banner { flex-direction: column; text-align: center; }
   .feature-strip-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .reviews-carousel .testimonial { min-width: 300px; }
 }
 
 @media (max-width: 768px) {
   .section { padding: 56px 0; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .feature-strip-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-carousel .testimonial { min-width: 280px; }
+  .google-reviews-badge { gap: 10px; padding: 12px 16px; }
+  .google-rating { font-size: 22px; }
   .img-text-visual img { height: 300px; }
 
   .nav-menu {
@@ -759,4 +894,168 @@ h1, h2, h3, h4, h5 {
   .grid-4, .stats-grid, .steps { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { text-align: center; }
+}
+
+/* =============================================
+   REVIEWS — Dark Spotlight Editorial
+   Scoped a #reviewsSection para no romper
+   otros usos de .testimonial / .reviews-carousel
+   ============================================= */
+
+#reviewsSection {
+  background: var(--primary);
+}
+
+#reviewsSection .section-label {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+#reviewsSection .section-title {
+  color: #fff;
+}
+
+/* Badge Google sobre fondo oscuro */
+#reviewsSection .google-reviews-badge {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#reviewsSection .google-rating {
+  color: #fff;
+}
+
+#reviewsSection .google-stars {
+  color: var(--accent);
+}
+
+#reviewsSection .google-count {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#reviewsSection .google-link {
+  color: var(--accent);
+}
+#reviewsSection .google-link:hover {
+  color: #fff;
+}
+
+/* Spotlight: un solo card visible, centrado */
+#reviewsSection .reviews-carousel {
+  display: block;
+  overflow: visible;
+  scroll-snap-type: none;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 240px;
+}
+
+#reviewsSection .testimonial {
+  display: none;
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 16px 32px 40px;
+  min-width: 0;
+  flex-shrink: unset;
+  scroll-snap-align: unset;
+}
+
+#reviewsSection .testimonial.is-active {
+  display: block;
+}
+
+/* Comilla decorativa ❝ */
+#reviewsSection .testimonial::before {
+  content: '\201C';
+  font-family: 'Brygada 1918', serif;
+  font-size: 100px;
+  color: var(--accent);
+  opacity: 0.5;
+  line-height: 0.75;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Cita principal — el protagonista */
+#reviewsSection .testimonial p {
+  font-family: 'Brygada 1918', serif;
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.55;
+  margin-bottom: 32px;
+}
+
+/* Ocultar estrellas — ya están en el badge */
+#reviewsSection .testimonial-header {
+  display: none;
+}
+
+/* Autor en versalitas */
+#reviewsSection .testimonial-author {
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+}
+
+#reviewsSection .testimonial-author strong {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+#reviewsSection .testimonial-author span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.5px;
+}
+
+/* Controles sobre fondo oscuro */
+#reviewsSection .carousel-controls {
+  margin-top: 8px;
+}
+
+#reviewsSection .carousel-prev,
+#reviewsSection .carousel-next {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#reviewsSection .carousel-prev:hover,
+#reviewsSection .carousel-next:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#reviewsSection .carousel-dot {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+#reviewsSection .carousel-dot.active {
+  background: var(--accent);
+}
+
+@media (max-width: 768px) {
+  #reviewsSection .testimonial {
+    padding: 16px 8px 32px;
+  }
+  #reviewsSection .testimonial p {
+    font-size: 20px;
+  }
+  #reviewsSection .reviews-carousel {
+    min-height: 280px;
+  }
 }

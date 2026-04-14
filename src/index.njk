@@ -125,44 +125,89 @@ preloadHero: true
     </div>
   </section>
 
-  <!-- TESTIMONIAL -->
-  <section class="section section--bg">
+  <!-- RESEÑAS GOOGLE -->
+  <section class="section section--bg" id="reviewsSection">
     <div class="container">
       <div class="text-center">
         <span class="section-label">Opiniones</span>
         <h2 class="section-title">Lo que dicen nuestros pacientes</h2>
       </div>
-      <div class="grid-3">
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>En la Clínica Any Lopez siempre me atienden con mucha cordialidad, es de las mejores atenciones que he recibido. Llegué por sus excelentes reseñas y la verdad me fue estupendo.</p>
+
+      <div class="google-reviews-badge">
+        <svg class="google-logo" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="google-rating">5.0</span>
+        <span class="google-stars" aria-label="5 estrellas">★★★★★</span>
+        <span class="google-count">216 reseñas verificadas</span>
+        <a href="https://www.google.com/search?sca_esv=089c91361eed6c29&hl=es&authuser=0&sxsrf=ANbL-n6cg7IYQEbtv-WD9B8rIOLzHCx38w:1776090354311&q=AnyLopez+Clinica+Est%C3%A9tica&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOXyK1RFfex9EIZ6L3iUSu5IcDdH9WdMYYgCg_1KIu00JNGF7xoTWsns8o7y56Hy4EBeck2c%3D&uds=ALYpb_n4BwUhK1uaN1SPx2VrIkEtLkZ3xVeAZMxA6EJEb8F3bmU1Jlm1g1jsaXz3F3aoc33X8aeIWEEmcyzOsCvQYsz1xD6GTinQllBXRXtuzIOg039fN_BgYe4kwSMb2j7dC0uhDOGU&sa=X&ved=2ahUKEwjOj6GVhOuTAxW_OfsDHTOcBOEQ3PALegQIGBAE" target="_blank" rel="noopener" class="google-link">Ver en Google →</a>
+      </div>
+
+      <div class="reviews-carousel" id="reviewsCarousel">
+        <div class="testimonial is-active">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Mi cutis rejuvenció treinta años. Trato formidable y profesionalidad a prueba de dudas.</p>
           <div class="testimonial-author">
-            <div>
-              <strong>Ana Bayixauli</strong>
-              <span>Benidorm</span>
-            </div>
+            <strong>Pedro</strong>
+            <span>Limpieza facial · Marzo 2026</span>
           </div>
         </div>
         <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>Piel más firme y luminosa desde la primera sesión. Los resultados son rápidos y el equipo es muy profesional. Totalmente recomendable.</p>
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Estoy muy satisfecha. No es la primera vez que he estado aquí. Me encantan los tratamientos, y todos son muy amables. Recomiendo.</p>
           <div class="testimonial-author">
-            <div>
-              <strong>Ana Bayixauli</strong>
-              <span>Paciente Indiba</span>
-            </div>
+            <strong>Eli</strong>
+            <span>Hilos espiculados · Abril 2026</span>
           </div>
         </div>
         <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>Mejoría notable en celulitis y sin ningún dolor. El tratamiento es muy cómodo y los resultados hablan por sí solos. Muy contenta con la clínica.</p>
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Es un centro espectacular. Andrea es muy profesional, es de 10. Un trato personalizado que se nota desde el primer momento.</p>
           <div class="testimonial-author">
-            <div>
-              <strong>Maria Castillo</strong>
-              <span>Paciente Indiba</span>
-            </div>
+            <strong>Cris</strong>
+            <span>INDIBA facial · Enero 2026</span>
           </div>
         </div>
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Recomendado. Muy personalizado y eficaz con todos sus tratamientos, además de muy amables. Volveré sin duda.</p>
+          <div class="testimonial-author">
+            <strong>Rocío</strong>
+            <span>Limpieza facial · Diciembre 2025</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Para mí los mejores en atención y calidad. Muy amables y profesionales. El resultado del tratamiento ha sido increíble.</p>
+          <div class="testimonial-author">
+            <strong>María</strong>
+            <span>Lifting de pestañas · Enero 2026</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+          </div>
+          <p>Muy atentos y puntuales. Nos atendieron a la hora acordada. El tratamiento INDIBA facial ha sido una maravilla.</p>
+          <div class="testimonial-author">
+            <strong>Andy</strong>
+            <span>INDIBA facial · Abril 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-prev" aria-label="Anterior">&#8592;</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-next" aria-label="Siguiente">&#8594;</button>
       </div>
     </div>
   </section>

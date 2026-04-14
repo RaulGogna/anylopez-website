@@ -93,6 +93,56 @@
     const menu   = document.getElementById('navMenu');
     toggle.addEventListener('click', () => menu.classList.toggle('open'));
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+    /* Reviews Spotlight */
+    (function() {
+      const carousel = document.getElementById('reviewsCarousel');
+      if (!carousel) return;
+      const prev = document.querySelector('.carousel-prev');
+      const next = document.querySelector('.carousel-next');
+      const dotsContainer = document.getElementById('carouselDots');
+      const cards = carousel.querySelectorAll('.testimonial');
+      const AUTOPLAY_DELAY = 5000;
+      let autoplayTimer = null;
+      let currentIndex = 0;
+      const total = cards.length;
+
+      const goTo = (index) => {
+        currentIndex = (index + total) % total;
+        cards.forEach((c, i) => c.classList.toggle('is-active', i === currentIndex));
+        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) =>
+          d.classList.toggle('active', i === currentIndex)
+        );
+      };
+
+      cards.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Reseña ' + (i + 1));
+        dotsContainer.appendChild(dot);
+        dot.addEventListener('click', () => { goTo(i); resetAutoplay(); });
+      });
+
+      prev.addEventListener('click', () => { goTo(currentIndex - 1); resetAutoplay(); });
+      next.addEventListener('click', () => { goTo(currentIndex + 1); resetAutoplay(); });
+
+      const startAutoplay = () => {
+        autoplayTimer = setInterval(() => goTo(currentIndex + 1), AUTOPLAY_DELAY);
+      };
+
+      const resetAutoplay = () => {
+        clearInterval(autoplayTimer);
+        startAutoplay();
+      };
+
+      /* Pausa al hover o touch */
+      carousel.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+      carousel.addEventListener('mouseleave', startAutoplay);
+      carousel.addEventListener('touchstart', () => clearInterval(autoplayTimer), { passive: true });
+      carousel.addEventListener('touchend', resetAutoplay, { passive: true });
+
+      startAutoplay();
+    })();
   </script>
 </body>
 </html>
