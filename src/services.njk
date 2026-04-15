@@ -1,265 +1,338 @@
 ---
 layout: base.njk
 title: "Servicios — AnyLopez Clínica Estética"
-description: "Servicios de AnyLopez Clínica Estética: Higienes Faciales, Radiofrecuencia, Ultherapy, Dermapen, Botox, Vitaminas y más en Benidorm."
+description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética en Benidorm: faciales, corporales, inyectables, masajes, depilación IPL y mucho más."
 ---
 
-  <style>
-    .treatment-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      display: flex;
-      gap: 0;
-      margin-bottom: 32px;
-      transition: var(--transition);
-    }
-    .treatment-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(28,26,24,.12); }
-    .treatment-card-img {
-      width: 260px;
-      flex-shrink: 0;
-      object-fit: cover;
-    }
-    .treatment-card-body {
-      padding: 32px;
-      flex: 1;
-    }
-    .treatment-card-body .tag {
-      display: inline-block;
-      padding: 4px 12px;
-      background: var(--bg-light);
-      color: var(--primary);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-radius: 40px;
-      margin-bottom: 12px;
-    }
-    .treatment-card-body h3 { font-size: 22px; margin-bottom: 12px; }
-    .treatment-card-body p  { color: var(--text-mid); font-size: 15px; line-height: 1.7; }
-    @media (max-width: 768px) {
-      .treatment-card { flex-direction: column; }
-      .treatment-card-img { width: 100%; height: 200px; }
-    }
-  </style>
+<style>
+  /* ─── CATEGORY NAV ─────────────────────────────────────────────── */
+  .cat-nav {
+    position: sticky;
+    top: 72px;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid var(--bg-light);
+    padding: 0;
+  }
+  .cat-nav-inner {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 12px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .cat-nav-inner::-webkit-scrollbar { display: none; }
+  .cat-nav-pills {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .cat-nav-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1.5px solid var(--bg-light);
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+  }
+  .cat-nav-pill:hover,
+  .cat-nav-pill.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
 
-  <!-- BREADCRUMB -->
-  <div class="breadcrumb">
-    <div class="container">
-      <a href="{{ '/' | url }}">Inicio</a>
-      <span>›</span>
-      <span>Servicios</span>
+  /* ─── CATEGORY SECTION ─────────────────────────────────────────── */
+  .cat-section {
+    padding: 64px 0 80px;
+    scroll-margin-top: 120px;
+  }
+  .cat-section:nth-child(even) { background: var(--bg-cream); }
+  .cat-header {
+    margin-bottom: 48px;
+  }
+  .cat-header .section-label { margin-bottom: 8px; }
+  .cat-header h2 { font-size: clamp(24px, 4vw, 36px); margin-bottom: 10px; }
+  .cat-header p { color: var(--text-mid); font-size: 15px; max-width: 560px; }
+
+  /* ─── TREATMENT GRID ────────────────────────────────────────────── */
+  .trat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  /* ─── TREATMENT CARD ────────────────────────────────────────────── */
+  .trat-card {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .trat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(28,26,24,.14);
+  }
+  .trat-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: var(--bg-light);
+  }
+  .trat-card-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .trat-card-name {
+    font-family: 'Brygada 1918', serif;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--primary);
+    margin: 0;
+  }
+  .trat-card-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text-mid);
+    margin: 0;
+  }
+  .trat-card-incluye {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .trat-card-incluye li {
+    font-size: 12px;
+    color: var(--text-mid);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .trat-card-incluye li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .trat-card-meta {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .trat-duracion {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+  .trat-duracion svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    stroke: var(--accent);
+  }
+  .trat-cta {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .trat-cta:hover { color: var(--primary); }
+
+  /* ─── RESPONSIVE ────────────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .trat-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .trat-grid { grid-template-columns: 1fr; }
+    .cat-section { padding: 48px 0 64px; }
+    .cat-header { margin-bottom: 32px; }
+  }
+</style>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="{{ '/' | url }}">Inicio</a>
+    <span>›</span>
+    <span>Servicios</span>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">Catálogo Completo</span>
+    <h1>Nuestros Tratamientos</h1>
+    <p>{{ tratamientos.tratamientos | length }} tratamientos en {{ tratamientos.categorias | length }} especialidades — Diseñados y ejecutados por profesionales en Benidorm</p>
+  </div>
+</section>
+
+<!-- OFERTA PRIMER TRATAMIENTO -->
+<div style="background:var(--accent); padding:14px 0; text-align:center;">
+  <div class="container">
+    <p style="color:#fff; font-size:13px; font-weight:600; letter-spacing:1px;">
+      10% de descuento en tu primera Higiene Facial — ¡Reserva hoy!
+      <a href="{{ '/contact/' | url }}" style="color:#fff; text-decoration:underline; margin-left:12px;">Reservar →</a>
+    </p>
+  </div>
+</div>
+
+<!-- CATEGORY NAV -->
+<nav class="cat-nav" aria-label="Categorías de tratamientos">
+  <div class="cat-nav-inner">
+    <div class="cat-nav-pills">
+      {% for cat in tratamientos.categorias %}
+      <a href="#{{ cat.id }}" class="cat-nav-pill">{{ cat.nombre }}</a>
+      {% endfor %}
     </div>
   </div>
+</nav>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="section-label" style="color:var(--accent)">Clínica Estética</span>
-      <h1>Nuestros Servicios</h1>
-      <p>Conoce nuestros diferentes servicios de Estética Facial, Corporal y Medicina Estética</p>
+<!-- TREATMENT CATEGORIES -->
+{% for cat in tratamientos.categorias %}
+{% set catTrats = tratamientos.tratamientos | byCategory(cat.id) %}
+<section class="cat-section" id="{{ cat.id }}">
+  <div class="container">
+    <div class="cat-header">
+      <span class="section-label">{{ loop.index }} / {{ tratamientos.categorias | length }}</span>
+      <h2>{{ cat.nombre }}</h2>
+      <p>{{ cat.descripcion }}</p>
     </div>
-  </section>
 
-  <!-- OFERTA PRIMER TRATAMIENTO -->
-  <div style="background:var(--accent); padding:16px 0; text-align:center;">
-    <div class="container">
-      <p style="color:#fff; font-size:14px; font-weight:600; letter-spacing:1px;">
-        🎁 <strong>10% de descuento</strong> en tu primera Higiene Facial — ¡Reserva hoy!
-        <a href="{{ '/contact/' | url }}" style="color:#fff; text-decoration:underline; margin-left:12px;">Reservar →</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- CATEGORÍAS DE SERVICIOS -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Categorías</span>
-        <h2 class="section-title">¿Qué tratamiento necesitas?</h2>
-        <p class="section-subtitle">Todos nuestros tratamientos son diseñados y ejecutados por profesionales especializados.</p>
-      </div>
-
-      <div class="grid-3" style="margin-bottom:64px;">
-        <div class="service-icon-card">
-          <div class="service-icon">✨</div>
-          <h3>Estética Facial</h3>
-          <p>Higienes faciales, radiofrecuencia, dermapen, vitaminas y tratamientos para el rejuvenecimiento del rostro.</p>
-        </div>
-        <div class="service-icon-card">
-          <div class="service-icon">💪</div>
-          <h3>Estética Corporal</h3>
-          <p>Radiofrecuencia corporal, maderoterapia y tratamientos para modelar y tonificar el cuerpo.</p>
-        </div>
-        <div class="service-icon-card">
-          <div class="service-icon">🏥</div>
-          <h3>Medicina Estética</h3>
-          <p>Ultherapy, botox, relleno de ácido hialurónico, micropigmentación y recuperación celular.</p>
-        </div>
-      </div>
-
-      <!-- TRATAMIENTOS DETALLADOS -->
-      <div class="text-center" style="margin-bottom:48px;">
-        <span class="section-label">Top 10</span>
-        <h2 class="section-title">Nuestros Tratamientos</h2>
-      </div>
-
-      <div class="treatment-card">
+    <div class="trat-grid">
+      {% for trat in catTrats %}
+      <article class="trat-card">
         <img
-          src="https://anylopez.com/wp-content/uploads/2024/10/image-and-text-1.jpg"
-          alt="Higiene Platinum"
-          class="treatment-card-img"
-          onerror="this.style.background='var(--bg-light)';"
+          src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
+          alt="{{ trat.nombre }}"
+          class="trat-card-img"
+          loading="lazy"
+          width="400"
+          height="200"
         />
-        <div class="treatment-card-body">
-          <span class="tag">Facial</span>
-          <h3>Higiene Platinum</h3>
-          <p>Limpieza facial profunda con ácido hialurónico y vitamina C especialmente indicada para pieles impuras y deshidratadas. Deja la piel luminosa, nutrida e hidratada desde la primera sesión.</p>
-        </div>
-      </div>
+        <div class="trat-card-body">
+          <h3 class="trat-card-name">{{ trat.nombre }}</h3>
+          <p class="trat-card-desc">{{ trat.descripcion }}</p>
 
-      <div class="treatment-card">
-        <img
-          src="https://anylopez.com/wp-content/uploads/2024/10/image-and-text-2.jpg"
-          alt="Higiene Detox"
-          class="treatment-card-img"
-          onerror="this.style.background='var(--bg-light)';"
-        />
-        <div class="treatment-card-body">
-          <span class="tag">Facial</span>
-          <h3>Higiene Detox</h3>
-          <p>Ultralimpieza con productos Utsukusy y nanoagujas para tratar la opacidad y las líneas de expresión. Ideal para pieles con impurezas acumuladas y falta de luminosidad.</p>
-        </div>
-      </div>
+          {% if trat.incluye %}
+          <ul class="trat-card-incluye">
+            {% for item in trat.incluye %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
 
-      <div class="treatment-card">
-        <img
-          src="https://anylopez.com/wp-content/uploads/2024/10/Diseno-sin-titulo.png"
-          alt="Radiofrecuencia Facial"
-          class="treatment-card-img"
-          onerror="this.style.background='var(--bg-light)';"
-        />
-        <div class="treatment-card-body">
-          <span class="tag">Facial · Corporal</span>
-          <h3>Radiofrecuencia Facial</h3>
-          <p>Reduce arrugas, cierra poros y aporta luminosidad gracias a la acción del colágeno. Activa la producción natural de colágeno y elastina para una piel más firme y joven.</p>
-          <br>
-          <a href="{{ '/radiofrecuencia/' | url }}" class="btn btn-outline" style="font-size:11px; padding:10px 20px;">Ver página dedicada →</a>
-        </div>
-      </div>
-
-      <div class="treatment-card">
-        <img
-          src="https://anylopez.com/wp-content/uploads/2024/10/111.png"
-          alt="Radiofrecuencia Corporal"
-          class="treatment-card-img"
-          onerror="this.style.background='var(--bg-light)';"
-        />
-        <div class="treatment-card-body">
-          <span class="tag">Corporal</span>
-          <h3>Radiofrecuencia Corporal + Maderoterapia</h3>
-          <p>Trabaja a 448kHz para el remodelado corporal y la mejora de la celulitis. Se recomienda entre 5 y 15 sesiones según el área a tratar. Se puede combinar con maderoterapia para potenciar resultados.</p>
-        </div>
-      </div>
-
-      <div class="treatment-card">
-        <img
-          src="https://anylopez.com/wp-content/uploads/2024/10/services-4.jpg"
-          alt="Dermapen"
-          class="treatment-card-img"
-          onerror="this.style.background='var(--bg-light)';"
-        />
-        <div class="treatment-card-body">
-          <span class="tag">Facial</span>
-          <h3>Dermapen</h3>
-          <p>Microagujas que estimulan el colágeno y la elastina para reducir manchas, estrías y cicatrices. Tratamiento mínimamente invasivo con resultados visibles y duraderos.</p>
-        </div>
-      </div>
-
-      <div class="treatment-card">
-        <img
-          src="https://anylopez.com/wp-content/uploads/2024/10/112.png"
-          alt="Ultherapy"
-          class="treatment-card-img"
-          onerror="this.style.background='var(--bg-light)';"
-        />
-        <div class="treatment-card-body">
-          <span class="tag">Facial · Corporal</span>
-          <h3>Ultherapy Facial y Corporal</h3>
-          <p>Ultrasonido microfocalizado a 70° que estimula el colágeno en tres capas de la piel. Tratamiento lifting no quirúrgico que elimina la flacidez facial y corporal sin cirugía ni anestesia.</p>
-        </div>
-      </div>
-
-      <div class="treatment-card">
-        <img
-          src="https://anylopez.com/wp-content/uploads/2024/10/mountains.jpg"
-          alt="Vitaminas y Exosomas"
-          class="treatment-card-img"
-          onerror="this.style.background='var(--bg-light)';"
-        />
-        <div class="treatment-card-body">
-          <span class="tag">Medicina Estética</span>
-          <h3>Vitaminas + Exosomas</h3>
-          <p>Ciencia avanzada que combina vitaminas con tecnología de exosomas para el rejuvenecimiento de la piel. Mejora la calidad, textura y vitalidad de la piel a nivel celular.</p>
-        </div>
-      </div>
-
-      <div class="treatment-card" style="background:var(--bg-light);">
-        <div class="treatment-card-body" style="display:flex; flex-direction:column; gap:16px;">
-          <div>
-            <span class="tag">Medicina Estética</span>
-            <h3>Botox</h3>
-            <p>Bloquea las señales químicas que contraen los músculos faciales, eliminando las líneas de expresión de forma natural y sin alterar la expresividad del rostro.</p>
+          <div class="trat-card-meta">
+            <span class="trat-duracion">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              {{ trat.duracion }}
+            </span>
+            <a
+              href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20el%20precio%20de%20{{ trat.nombre | urlencode }}."
+              class="trat-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Consultar precio →</a>
           </div>
         </div>
-      </div>
-
-      <div class="treatment-card" style="background:var(--bg-light);">
-        <div class="treatment-card-body">
-          <span class="tag">Medicina Estética</span>
-          <h3>Relleno Ácido Hialurónico</h3>
-          <p>Remodela los contornos faciales y los labios. Trata las líneas de expresión y los surcos nasogenianos. Resultados naturales e inmediatos con mínima recuperación.</p>
-        </div>
-      </div>
-
-      <div class="treatment-card" style="background:var(--bg-light);">
-        <div class="treatment-card-body">
-          <span class="tag">Medicina Estética</span>
-          <h3>Micropigmentación Cejas y Labios</h3>
-          <p>Diseña cejas perfectas y define el color y forma de los labios. Técnica semipermanente que permite lucir un maquillaje natural durante meses.</p>
-        </div>
-      </div>
-
+      </article>
+      {% endfor %}
     </div>
-  </section>
+  </div>
+</section>
+{% endfor %}
 
-  <!-- CTA OFERTA -->
-  <section class="section section--bg">
-    <div class="container">
-      <div class="offer-banner">
-        <div class="offer-badge">30%<br><span style="font-size:24px;">Descuento</span></div>
-        <div class="offer-text">
-          <h3>Oferta del Mes — Radiofrecuencia Indiba</h3>
-          <p>Si tienes flacidez y celulitis no dudes en disfrutar de nuestra oferta del mes con más del 30% de descuento en Radiofrecuencia Sistema Indiba.</p>
-        </div>
-        <a href="{{ '/contact/' | url }}" class="btn btn-outline-white">Reservar Ahora</a>
+<!-- CTA OFERTA -->
+<section class="section section--bg">
+  <div class="container">
+    <div class="offer-banner">
+      <div class="offer-badge">30%<br><span style="font-size:24px;">Descuento</span></div>
+      <div class="offer-text">
+        <h3>Oferta del Mes — Radiofrecuencia Indiba</h3>
+        <p>Si tienes flacidez y celulitis no dudes en disfrutar de nuestra oferta del mes con más del 30% de descuento en Radiofrecuencia Sistema Indiba.</p>
       </div>
+      <a href="{{ '/contact/' | url }}" class="btn btn-outline-white">Reservar Ahora</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACTO RÁPIDO -->
-  <section class="section section--dark">
-    <div class="container text-center">
-      <span class="section-label" style="color:var(--accent)">Información</span>
-      <h2 class="section-title" style="color:#fff; margin-bottom:24px;">Visítanos en Benidorm</h2>
-      <div style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap; color:rgba(255,255,255,0.85); font-size:15px; margin-bottom:32px;">
-        <div>📍 Calle Marqués de Comillas 4, Local 6, C.P. 03501</div>
-        <div>📞 656 306 167 / 865 710 769</div>
-        <div>✉️ info@anylopez.com</div>
-        <div>🕐 Lun–Vie 10:00–14:00 / 16:00–20:00</div>
-      </div>
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reserva tu Cita</a>
+<!-- CONTACTO RÁPIDO -->
+<section class="section section--dark">
+  <div class="container text-center">
+    <span class="section-label" style="color:var(--accent)">Información</span>
+    <h2 class="section-title" style="color:#fff; margin-bottom:24px;">Visítanos en Benidorm</h2>
+    <div style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap; color:rgba(255,255,255,0.85); font-size:15px; margin-bottom:32px;">
+      <div>📍 Calle Marqués de Comillas 4, Local 6, C.P. 03501</div>
+      <div>📞 656 306 167 / 865 710 769</div>
+      <div>✉️ info@anylopez.com</div>
+      <div>🕐 Lun–Vie 10:00–14:00 / 16:00–20:00</div>
     </div>
-  </section>
+    <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reserva tu Cita</a>
+  </div>
+</section>
+
+<script>
+  /* Active pill highlight on scroll */
+  (function () {
+    const pills = document.querySelectorAll('.cat-nav-pill');
+    const sections = Array.from(document.querySelectorAll('.cat-section'));
+    if (!pills.length || !sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            pills.forEach((p) => {
+              p.classList.toggle('active', p.getAttribute('href') === '#' + id);
+            });
+          }
+        });
+      },
+      { rootMargin: '-30% 0px -60% 0px' }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+
+    /* Smooth scroll for pill clicks */
+    pills.forEach((pill) => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(pill.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  })();
+</script>

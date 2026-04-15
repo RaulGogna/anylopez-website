@@ -3,6 +3,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("js");
 
+  eleventyConfig.addFilter("byCategory", (treatments, categoryId) =>
+    treatments.filter((t) => t.categoria === categoryId)
+  );
+
   return {
     pathPrefix: "/anylopez-website/",
     dir: {

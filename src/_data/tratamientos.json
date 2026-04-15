@@ -1,0 +1,696 @@
+{
+  "categorias": [
+    {
+      "id": "limpiezas-faciales",
+      "nombre": "Limpiezas Faciales",
+      "descripcion": "Cuidado facial en distintos niveles de profundidad y sofisticación."
+    },
+    {
+      "id": "tratamientos-faciales",
+      "nombre": "Tratamientos Faciales Avanzados",
+      "descripcion": "Peelings, mesoterapia, dermapen y tecnología de regeneración."
+    },
+    {
+      "id": "lifting-antiaging",
+      "nombre": "Lifting y Antiaging",
+      "descripcion": "Reafirmación sin cirugía con Ultherapy HIFU y radiofrecuencia INDIBA."
+    },
+    {
+      "id": "inyectables",
+      "nombre": "Medicina Estética Inyectable",
+      "descripcion": "Bótox, ácido hialurónico, hilos tensores y PRP."
+    },
+    {
+      "id": "corporal",
+      "nombre": "Tratamientos Corporales",
+      "descripcion": "Maderoterapia, presoterapia, drenaje y recuperación muscular."
+    },
+    {
+      "id": "masajes",
+      "nombre": "Masajes",
+      "descripcion": "Relajantes, terapéuticos, faciales y especializados."
+    },
+    {
+      "id": "estetica-decorativa",
+      "nombre": "Estética Decorativa",
+      "descripcion": "Pestañas pelo a pelo y micropigmentación semipermanente."
+    },
+    {
+      "id": "depilacion",
+      "nombre": "Depilación IPL",
+      "descripcion": "Pulsada intensa, segura y cómoda para todo tipo de pieles."
+    }
+  ],
+  "tratamientos": [
+    {
+      "slug": "limpieza-facial-gold",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Limpieza Facial GOLD",
+      "descripcion": "Tratamiento esencial, delicado y efectivo, ideal para mantener la piel limpia, equilibrada y saludable sin procedimientos agresivos.",
+      "incluye": [
+        "Higiene facial profunda adaptada a todo tipo de piel",
+        "Extracción cuidadosa de comedones e impurezas",
+        "Eliminación de células muertas",
+        "Mejora de textura y apariencia",
+        "Previene obstrucción de poros"
+      ],
+      "duracion": "45 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "50 €" }]
+    },
+    {
+      "slug": "limpieza-facial-platinum",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Limpieza Facial PLATINUM",
+      "descripcion": "Tratamiento avanzado que combina limpieza profunda con una potente hidratación para devolverle a tu piel luminosidad, frescura y vitalidad.",
+      "incluye": [
+        "Limpieza facial profunda",
+        "Exfoliación suave",
+        "Hidratación intensiva con ácido hialurónico",
+        "Aplicación de vitamina C antioxidante",
+        "Mejora elasticidad y uniformidad",
+        "Crema facial final"
+      ],
+      "duracion": "60 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "75 €" }]
+    },
+    {
+      "slug": "limpieza-facial-detox",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Limpieza Facial DETOX",
+      "descripcion": "Higiene detox + peeling con nanoagujas. Innovador, purifica y revitaliza la piel desde el interior.",
+      "incluye": [
+        "Higiene facial profunda",
+        "Peeling con nanoagujas",
+        "Mejora la absorción de activos",
+        "Mascarilla detoxificante",
+        "Renovación cutánea"
+      ],
+      "duracion": "90 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "150 €" }]
+    },
+    {
+      "slug": "limpieza-facial-diamond",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Limpieza Facial DIAMOND",
+      "descripcion": "Tratamiento completo para lograr una piel limpia, hidratada y radiante.",
+      "incluye": [
+        "Limpieza facial profunda",
+        "Aparatología facial avanzada",
+        "Tres exfoliantes",
+        "Serum nutritivo",
+        "Mascarilla adaptada",
+        "Crema hidratante duradera"
+      ],
+      "duracion": "90 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "150 €" }]
+    },
+    {
+      "slug": "limpieza-facial-elite",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Limpieza Facial ELITE",
+      "descripcion": "Tratamiento exclusivo diseñado para renovar, hidratar y revitalizar tu piel al máximo nivel.",
+      "incluye": [
+        "Limpieza facial profunda",
+        "Aparatología facial avanzada",
+        "Exfoliantes premium",
+        "Máscara de yesoterapia reafirmante",
+        "Crema facial nutritiva y protección solar"
+      ],
+      "duracion": "120 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "200 €" }]
+    },
+    {
+      "slug": "mesoterapia-virtual",
+      "imagen": "mesoterapia-virtual.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Mesoterapia Virtual",
+      "descripcion": "Tratamiento no invasivo diseñado para reducir grasa localizada y mejorar la apariencia de la piel sin agujas. Ampollas con cafeína y vitaminas aplicadas mediante tecnología virtual.",
+      "incluye": [
+        "Reducción de grasa localizada",
+        "Mejora firmeza y elasticidad",
+        "Estimula circulación y drenaje linfático",
+        "Tonifica y suaviza la piel",
+        "Indoloro y sin tiempo de recuperación"
+      ],
+      "duracion": "30 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "90 €" }]
+    },
+    {
+      "slug": "velo-colageno-puro",
+      "imagen": "velo-colageno-puro.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Velo de Colágeno Puro",
+      "descripcion": "Tratamiento intensivo que aplica un velo de colágeno marino 100% puro para restaurar elasticidad, firmeza y efecto rejuvenecedor inmediato.",
+      "incluye": [
+        "Hidratación profunda y duradera",
+        "Piel más suave, luminosa y saludable",
+        "Mejora elasticidad y firmeza",
+        "Revitalización visible",
+        "Ideal para pieles apagadas o deshidratadas"
+      ],
+      "duracion": "90 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "150 €" }]
+    },
+    {
+      "slug": "dermapen-hidratacion",
+      "imagen": "dermapen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermapen + Hidratación Facial",
+      "descripcion": "Tratamiento combinado que potencia la regeneración y revitalización de la piel con microagujas e hidratación profunda.",
+      "incluye": [
+        "Piel más tersa, suave y rejuvenecida",
+        "Reducción de líneas finas y arrugas",
+        "Mayor absorción de activos",
+        "Tono y textura uniforme",
+        "Rostro revitalizado"
+      ],
+      "duracion": "75 minutos",
+      "precios": [
+        { "concepto": "Sesión", "precio": "150 €" },
+        { "concepto": "Pack 6 sesiones", "precio": "800 €" }
+      ]
+    },
+    {
+      "slug": "dermapen-cicatrices",
+      "imagen": "dermapen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermapen Cicatrices",
+      "descripcion": "Tratamiento avanzado con microagujas que estimula la regeneración natural de la piel, restaurando colágeno y elastina para mejorar cicatrices de acné.",
+      "incluye": [
+        "Reducción de cicatrices de acné",
+        "Estimulación de colágeno y elastina",
+        "Mejora textura y suavidad",
+        "Tono más uniforme y rejuvenecido",
+        "Mínimamente invasivo"
+      ],
+      "duracion": "60 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "75 €" }]
+    },
+    {
+      "slug": "peeling-antimanchas",
+      "imagen": "peeling-antimanchas.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Peeling Anti-Manchas",
+      "descripcion": "Tratamiento avanzado y no quirúrgico para eliminar manchas, mejorar la textura y rejuvenecer el rostro. Peeling químico despigmentante + radiofrecuencia.",
+      "incluye": [
+        "4 sesiones completas",
+        "Eliminación progresiva de manchas",
+        "Renovación profunda",
+        "Estimulación de matriz dérmica",
+        "Piel más uniforme y luminosa"
+      ],
+      "duracion": "60 minutos/sesión",
+      "precios": [
+        { "concepto": "Sesión", "precio": "175 €" },
+        { "concepto": "Pack 5 sesiones", "precio": "800 €" }
+      ]
+    },
+    {
+      "slug": "peeling-quimico-facial",
+      "imagen": "peeling-quimico-facial.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Peeling Químico Facial",
+      "descripcion": "Exfoliación profunda sin fricción, mediante solución química, elimina células dañadas y estimula regeneración celular.",
+      "incluye": [
+        "Elimina hiperpigmentación y daño solar",
+        "Reduce cicatrices de acné",
+        "Suaviza líneas de expresión",
+        "Aporta luminosidad inmediata",
+        "Estimula producción de colágeno"
+      ],
+      "duracion": "45 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "150 €" }]
+    },
+    {
+      "slug": "dermaplaning-facial",
+      "imagen": "dermaplaning-facial.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermaplaning Facial",
+      "descripcion": "Técnica de exfoliación mecánica que elimina células muertas y vello facial, revelando una piel más luminosa y suave.",
+      "incluye": [
+        "Elimina células muertas y vello facial",
+        "Mejora luminosidad y suavidad",
+        "Favorece absorción de tratamientos",
+        "Ideal para todo tipo de piel"
+      ],
+      "duracion": "45 minutos",
+      "precios": [
+        { "concepto": "Sesión", "precio": "50 €" },
+        { "concepto": "Pack 10 sesiones", "precio": "400 €" }
+      ]
+    },
+    {
+      "slug": "anti-acne",
+      "imagen": "anti-acne.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Tratamiento Anti-Acné",
+      "descripcion": "Cuidado facial especializado para combatir el acné, calmar la piel y prevenir futuras imperfecciones.",
+      "incluye": [
+        "Limpieza facial profunda",
+        "Activos específicos anti-acné",
+        "Alta frecuencia (anti-inflamatorio y cicatrizante)",
+        "Reduce rojeces e inflamación",
+        "Ayuda a disminuir puntos negros y espinillas"
+      ],
+      "duracion": "45 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "75 €" }]
+    },
+    {
+      "slug": "laser-plasma-pen",
+      "imagen": "laser-plasma-pen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Láser de Plasma Pen",
+      "descripcion": "Procedimiento avanzado para pequeñas imperfecciones (verrugas, manchas, fibromas) mediante energía de plasma, sin cirugía.",
+      "incluye": [
+        "Eliminación precisa de imperfecciones",
+        "Estimula regeneración de la piel",
+        "Mejora textura y apariencia",
+        "Procedimiento no quirúrgico",
+        "Resultados visibles desde primera sesión"
+      ],
+      "duracion": "30 minutos",
+      "precios": [{ "concepto": "Desde", "precio": "95 €" }]
+    },
+    {
+      "slug": "ultherapy-hifu",
+      "imagen": "ultherapy-hifu.png",
+      "categoria": "lifting-antiaging",
+      "nombre": "Ultherapy HIFU – Lifting sin Cirugía",
+      "descripcion": "Ultrasonido focalizado que reafirma, moldea y rejuvenece. Estimula la producción natural de colágeno y elastina para lifting sin cirugía.",
+      "incluye": [
+        "Reafirmación visible sin cirugía",
+        "Reducción de la flacidez",
+        "Efecto lifting natural y progresivo",
+        "Remodelación del contorno facial y corporal",
+        "Resultados duraderos"
+      ],
+      "duracion": "Variable según zona",
+      "precios": [
+        { "concepto": "Facial completo (120 min)", "precio": "350 €" },
+        { "concepto": "Ojeras (20 min)", "precio": "160 €" },
+        { "concepto": "Cuello (60 min)", "precio": "250 €" },
+        { "concepto": "Escote (60 min)", "precio": "250 €" },
+        { "concepto": "Brazos (60 min)", "precio": "350 €" },
+        { "concepto": "Manos (30 min)", "precio": "200 €" },
+        { "concepto": "Abdomen (60 min por zona)", "precio": "350 €" },
+        { "concepto": "Medias piernas (45 min por zona)", "precio": "350 €" },
+        { "concepto": "Tratamiento vaginal (45 min)", "precio": "495 €" }
+      ]
+    },
+    {
+      "slug": "radiofrecuencia-indiba",
+      "imagen": "radiofrecuencia-indiba.png",
+      "categoria": "lifting-antiaging",
+      "nombre": "Radiofrecuencia INDIBA – Anti-Edad",
+      "descripcion": "Tecnología INDIBA que actúa en profundidad estimulando colágeno y elastina en las tres capas de la piel. Efecto lifting visible desde las primeras sesiones.",
+      "incluye": [
+        "Reafirma y tonifica rostro y cuerpo",
+        "Reduce flacidez y líneas de expresión",
+        "Mejora elasticidad y firmeza",
+        "Efecto lifting natural",
+        "Piel más luminosa y saludable"
+      ],
+      "duracion": "45 minutos",
+      "precios": [
+        { "concepto": "Facial", "precio": "65 €" },
+        { "concepto": "Corporal por zona", "precio": "65 €" },
+        { "concepto": "Pack 5 sesiones (30 min)", "precio": "225 €" },
+        { "concepto": "Pack 10 sesiones (30 min)", "precio": "400 €" }
+      ]
+    },
+    {
+      "slug": "botox-zona",
+      "imagen": "botox-zona.png",
+      "categoria": "inyectables",
+      "nombre": "Bótox por Zona",
+      "descripcion": "Tratamiento estético mediante inyección de toxina botulínica para bloquear temporalmente la contracción muscular responsable de arrugas dinámicas.",
+      "incluye": [
+        "Reduce arrugas dinámicas",
+        "Previene aparición de nuevas líneas",
+        "Efecto natural y armonioso",
+        "Procedimiento rápido y mínimamente invasivo",
+        "Resultados desde la primera sesión"
+      ],
+      "duracion": "30 minutos",
+      "precios": [{ "concepto": "Por zona", "precio": "300 €" }]
+    },
+    {
+      "slug": "acido-hialuronico",
+      "imagen": "acido-hialuronico.png",
+      "categoria": "inyectables",
+      "nombre": "Relleno con Ácido Hialurónico",
+      "descripcion": "Tratamiento estético mínimamente invasivo que remodela y rejuvenece contornos del rostro y labios, devolviendo volumen a zonas afectadas por el envejecimiento.",
+      "incluye": [
+        "Remodela y define el rostro",
+        "Devuelve volumen a zonas envejecidas",
+        "Suaviza surcos y líneas de expresión",
+        "Mejora la armonía facial",
+        "Resultados visibles e inmediatos"
+      ],
+      "duracion": "30 minutos",
+      "precios": [
+        { "concepto": "Surco nasogeniano", "precio": "300 €" },
+        { "concepto": "Rinomodelación", "precio": "450 €" },
+        { "concepto": "Labios", "precio": "350 €" }
+      ]
+    },
+    {
+      "slug": "hilos-tensores",
+      "imagen": "hilos-tensores.png",
+      "categoria": "inyectables",
+      "nombre": "Hilos Tensores",
+      "descripcion": "Medicina estética que utiliza hilos finos para rejuvenecer y tensar el rostro de manera natural. Permiten mejorar la firmeza, suavizar arrugas y redefinir contornos faciales.",
+      "incluye": [
+        "Reafirma y tensa la piel",
+        "Efecto lifting sin cirugía",
+        "Estimula colágeno natural",
+        "Define contornos faciales",
+        "Resultados visibles desde primera sesión"
+      ],
+      "duracion": "60 minutos",
+      "precios": [
+        { "concepto": "4 hilos espiculados", "precio": "395 €" },
+        { "concepto": "6 hilos espiculados", "precio": "595 €" },
+        { "concepto": "4 hilos espiculados + 12 hilos PDO", "precio": "495 €" },
+        { "concepto": "6 hilos espiculados + 16 hilos PDO", "precio": "725 €" }
+      ]
+    },
+    {
+      "slug": "prp-plasma",
+      "imagen": "prp-plasma.png",
+      "categoria": "inyectables",
+      "nombre": "Plasma Rico en Plaquetas (PRP)",
+      "descripcion": "Tratamiento avanzado de bioestimulación que utiliza tu propio plasma para rejuvenecer la piel de forma natural. Reactiva tu propia capacidad regenerativa.",
+      "incluye": [
+        "Regeneración y revitalización de la piel",
+        "Mejora firmeza y elasticidad",
+        "Reducción de arrugas finas",
+        "Estimula producción de colágeno",
+        "Resultados progresivos y duraderos"
+      ],
+      "duracion": "60 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "275 €" }]
+    },
+    {
+      "slug": "maderoterapia",
+      "imagen": "maderoterapia.png",
+      "categoria": "corporal",
+      "nombre": "Maderoterapia",
+      "descripcion": "Masaje estético con utensilios de madera diseñados para estimular la circulación, tonificar y reafirmar la piel. Efectivo para zonas con grasa localizada, flacidez o celulitis.",
+      "incluye": [
+        "Reduce grasa localizada y volumen",
+        "Mejora circulación y drenaje",
+        "Tonifica y reafirma",
+        "Estimula colágeno y elastina",
+        "Contribuye a reducir celulitis"
+      ],
+      "duracion": "30 minutos",
+      "precios": [
+        { "concepto": "Sesión", "precio": "40 €" },
+        { "concepto": "Pack 10 sesiones", "precio": "360 €" }
+      ]
+    },
+    {
+      "slug": "presoterapia",
+      "imagen": "presoterapia.png",
+      "categoria": "corporal",
+      "nombre": "Presoterapia",
+      "descripcion": "Tratamiento no invasivo que aplica presión secuencial sobre piernas, abdomen y brazos para estimular el drenaje linfático, mejorar la circulación y favorecer la regeneración celular.",
+      "incluye": [
+        "Favorece eliminación de líquidos retenidos",
+        "Mejora elasticidad de la piel",
+        "Reduce sensación de piernas cansadas",
+        "Estimula circulación sanguínea",
+        "Cómodo, relajante, sin efectos adversos"
+      ],
+      "duracion": "30 minutos",
+      "precios": [
+        { "concepto": "Sesión", "precio": "25 €" },
+        { "concepto": "Pack 5 sesiones", "precio": "100 €" }
+      ]
+    },
+    {
+      "slug": "drenaje-linfatico-postop",
+      "imagen": "drenaje-linfatico-postop.png",
+      "categoria": "corporal",
+      "nombre": "Drenaje Linfático Postoperatorio",
+      "descripcion": "Tratamiento especializado indicado tras intervenciones quirúrgicas para favorecer la recuperación, reducir inflamación y mejorar los resultados estéticos y médicos.",
+      "incluye": [
+        "Reduce inflamación y edemas",
+        "Disminuye hematomas y molestias",
+        "Previene fibrosis y endurecimientos",
+        "Favorece cicatrización y recuperación",
+        "Acelera recuperación postoperatoria"
+      ],
+      "duracion": "45 o 60 minutos",
+      "precios": [
+        { "concepto": "Sesión 45 min", "precio": "65 €" },
+        { "concepto": "Sesión 60 min", "precio": "75 €" },
+        { "concepto": "Pack 10 sesiones 45 min", "precio": "600 €" },
+        { "concepto": "Pack 10 sesiones 60 min", "precio": "700 €" }
+      ]
+    },
+    {
+      "slug": "dolor-muscular-corporal",
+      "imagen": "masajes.png",
+      "categoria": "corporal",
+      "nombre": "Di Adiós al Dolor Muscular",
+      "descripcion": "Tratamiento corporal no invasivo para hombros, espalda, zona lumbar, rodillas o piernas cansadas. Relaja musculatura, alivia tensión y favorece recuperación.",
+      "incluye": [
+        "Reduce dolor muscular desde primeras sesiones",
+        "Favorece relajación y bienestar",
+        "Mejora circulación y recuperación",
+        "Alivia piernas cansadas",
+        "Cómodo, no invasivo y seguro"
+      ],
+      "duracion": "45 minutos por zona",
+      "precios": [
+        { "concepto": "Sesión corporal (45 min por zona)", "precio": "65 €" },
+        { "concepto": "Pack 5 sesiones (30 min)", "precio": "225 €" },
+        { "concepto": "Pack 10 sesiones (30 min)", "precio": "400 €" }
+      ]
+    },
+    {
+      "slug": "masaje-corporal",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Masaje Corporal",
+      "descripcion": "Tratamiento sobre el sistema músculo-esquelético para liberar tensiones, relajar músculos y producir un efecto sedante y revitalizante.",
+      "incluye": [
+        "Libera tensiones musculares",
+        "Relaja y tonifica el cuerpo",
+        "Estimula sistema nervioso (efecto sedante)",
+        "Mejora circulación sanguínea",
+        "Reduce estrés y fatiga corporal"
+      ],
+      "duracion": "15 a 60 minutos",
+      "precios": [
+        { "concepto": "60 minutos", "precio": "85 €" },
+        { "concepto": "50 minutos", "precio": "85 €" },
+        { "concepto": "45 minutos", "precio": "75 €" },
+        { "concepto": "30 minutos", "precio": "55 €" },
+        { "concepto": "15 minutos", "precio": "35 €" }
+      ]
+    },
+    {
+      "slug": "masaje-relajante",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Masaje Relajante",
+      "descripcion": "Masaje con aceites vegetales y esenciales 100% naturales. Ideal para aliviar estrés, tensión muscular y contracturas.",
+      "incluye": [
+        "Alivia estrés, ansiedad y nerviosismo",
+        "Suaviza contracturas",
+        "Estimula circulación sanguínea",
+        "Facilita eliminación de toxinas",
+        "Experiencia relajante y reconfortante"
+      ],
+      "duracion": "15 a 60 minutos",
+      "precios": [
+        { "concepto": "60 minutos", "precio": "75 €" },
+        { "concepto": "45 minutos", "precio": "65 €" },
+        { "concepto": "30 minutos", "precio": "45 €" },
+        { "concepto": "15 minutos", "precio": "25 €" }
+      ]
+    },
+    {
+      "slug": "masaje-craneo-facial-cervical",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Masaje Cráneo-Facial-Cervical",
+      "descripcion": "Combina técnicas de masaje en cara, cabeza, cuello, trapecios y cuero cabelludo con aceites esenciales. Libera estrés y mejora movilidad de la zona.",
+      "incluye": [
+        "Libera estrés y ansiedad",
+        "Relaja musculatura facial y cervical",
+        "Mejora movilidad y tono muscular",
+        "Alivia tensión en cuello y hombros",
+        "Estimula circulación"
+      ],
+      "duracion": "30 o 45 minutos",
+      "precios": [
+        { "concepto": "30 minutos", "precio": "50 €" },
+        { "concepto": "45 minutos", "precio": "75 €" }
+      ]
+    },
+    {
+      "slug": "masaje-podal",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Masaje Podal",
+      "descripcion": "Masaje diseñado para revitalizar y aliviar los pies, mejorar la circulación y proporcionar bienestar en todo el cuerpo.",
+      "incluye": [
+        "Revitaliza pies cansados",
+        "Mejora circulación sanguínea y linfática",
+        "Alivia tensión en piernas, brazos y cuello",
+        "Relaja y disminuye estrés",
+        "Estimula energía y bienestar general"
+      ],
+      "duracion": "30 o 45 minutos",
+      "precios": [
+        { "concepto": "45 minutos", "precio": "65 €" },
+        { "concepto": "30 minutos", "precio": "45 €" }
+      ]
+    },
+    {
+      "slug": "masaje-piernas-cansadas",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Masaje Piernas Cansadas",
+      "descripcion": "Masaje especializado para aliviar piernas cansadas, pesadas o hinchadas. Estimula circulación y drenaje linfático.",
+      "incluye": [
+        "Alivia sensación de piernas cansadas",
+        "Reduce hinchazón y edemas",
+        "Mejora circulación sanguínea y linfática",
+        "Favorece eliminación de toxinas",
+        "Relaja y tonifica piernas"
+      ],
+      "duracion": "30 o 45 minutos",
+      "precios": [
+        { "concepto": "45 minutos", "precio": "65 €" },
+        { "concepto": "30 minutos", "precio": "45 €" }
+      ]
+    },
+    {
+      "slug": "masaje-aloe-vera",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Masaje Hidratante con Aloe Vera",
+      "descripcion": "Envoltura y masaje corporal con aloe vera puro para hidratar, calmar y regenerar la piel. Ideal para pieles sensibilizadas, secas o tras exposición solar.",
+      "incluye": [
+        "Hidrata profundamente la piel",
+        "Calma enrojecimientos",
+        "Favorece regeneración cutánea",
+        "Relaja y suaviza los músculos",
+        "Recupera la piel tras exposición solar"
+      ],
+      "duracion": "45 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "75 €" }]
+    },
+    {
+      "slug": "masaje-facial-colageno",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Masaje Facial con Colágeno",
+      "descripcion": "Masaje profesional con sérum de colágeno marino. Ideal para pieles maduras o deshidratadas, aporta hidratación profunda y efecto anti-envejecimiento.",
+      "incluye": [
+        "Hidratación profunda y duradera",
+        "Reafirma y mejora elasticidad",
+        "Reduce arrugas y líneas de expresión",
+        "Suaviza y repara el relieve cutáneo",
+        "Promueve piel luminosa y joven"
+      ],
+      "duracion": "35 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "60 €" }]
+    },
+    {
+      "slug": "masaje-facial-vitamina-c",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Masaje Facial con Vitamina C",
+      "descripcion": "Masaje con concentrado de Vitamina C de alta potencia. Ideal para pieles apagadas, cansadas o estresadas. Aporta antioxidantes que combaten radicales libres.",
+      "incluye": [
+        "Devuelve luminosidad y tono a la piel",
+        "Reafirma y mejora elasticidad",
+        "Acción antioxidante y regeneradora",
+        "Suaviza líneas finas y fatiga cutánea",
+        "Mejora textura y vitalidad"
+      ],
+      "duracion": "35 minutos",
+      "precios": [{ "concepto": "Sesión", "precio": "50 €" }]
+    },
+    {
+      "slug": "pestanas-pelo-a-pelo",
+      "imagen": "pestanas-pelo-a-pelo.png",
+      "categoria": "estetica-decorativa",
+      "nombre": "Pestañas Pelo a Pelo",
+      "descripcion": "Extensión de pestañas que consiste en colocar una pestaña artificial sobre cada pestaña natural, logrando un efecto más largo, definido y natural.",
+      "incluye": [
+        "Alarga y define las pestañas",
+        "Aporta volumen y densidad",
+        "Efecto semipermanente",
+        "Evita el uso diario de máscara",
+        "Resultado personalizado según tu estilo"
+      ],
+      "duracion": "120 minutos",
+      "precios": [
+        { "concepto": "Clásicas (puesta nueva)", "precio": "70 €" },
+        { "concepto": "Hawaiano (puesta nueva)", "precio": "70 €" },
+        { "concepto": "Mega Volumen (puesta nueva)", "precio": "80 €" },
+        { "concepto": "Foxy Eyes (puesta nueva)", "precio": "80 €" },
+        { "concepto": "Wispy (puesta nueva)", "precio": "80 €" },
+        { "concepto": "Retoque Clásicas / Hawaiano / Volumen 3D", "precio": "35 €" },
+        { "concepto": "Retoque Mega Volumen / Foxy Eyes / Wispy", "precio": "40 €" }
+      ]
+    },
+    {
+      "slug": "micropigmentacion",
+      "imagen": "micropigmentacion.png",
+      "categoria": "estetica-decorativa",
+      "nombre": "Micropigmentación (Maquillaje Semipermanente)",
+      "descripcion": "Maquillaje semipermanente que realza cejas, labios y ojos con resultados naturales y duraderos. Pigmentos especiales y técnicas avanzadas.",
+      "incluye": [
+        "Resultados visibles desde primera sesión",
+        "Ahorro de tiempo en maquillaje diario",
+        "Mejora simetría y definición",
+        "Efecto natural y duradero",
+        "Revisión incluida a los 30 días"
+      ],
+      "duracion": "120 minutos",
+      "precios": [
+        { "concepto": "Ojos", "precio": "300 €" },
+        { "concepto": "Labios", "precio": "300 €" },
+        { "concepto": "Cejas", "precio": "300 €" }
+      ]
+    },
+    {
+      "slug": "depilacion-ipl",
+      "imagen": "depilacion-ipl.png",
+      "categoria": "depilacion",
+      "nombre": "Depilación IPL",
+      "descripcion": "Luz Pulsada Intensa que actúa directamente desde la raíz del vello, debilitándolo progresivamente hasta lograr una piel suave y libre de irritaciones. Segura, cómoda y duradera.",
+      "incluye": [
+        "Reducción progresiva y duradera del vello",
+        "Piel más suave sin irritación",
+        "Tratamiento rápido y prácticamente indoloro",
+        "Apto para diferentes zonas del cuerpo",
+        "Resultados visibles desde las primeras sesiones"
+      ],
+      "duracion": "Variable según zona",
+      "precios": [
+        { "concepto": "Zonas pequeñas (labio, mentón, patillas, areola, dedos, cuello, manos, entrecejo, sienes, orejas, mejillas)", "precio": "12 €" },
+        { "concepto": "Zonas medianas (facial completo, axilas, ingles, línea interglútea, antebrazos, pubis, hombros)", "precio": "25 €" },
+        { "concepto": "Zonas grandes (media pierna, zona íntima completa, brazos, glúteos, abdomen, tórax, espalda)", "precio": "35 €" },
+        { "concepto": "Zonas extra grandes (piernas completas, espalda completa)", "precio": "55 €" },
+        { "concepto": "Cuerpo completo", "precio": "125 €" },
+        { "concepto": "Medio cuerpo (superior o inferior)", "precio": "80 €" },
+        { "concepto": "OFERTA: axilas + media pierna + bikini completo", "precio": "85 €" },
+        { "concepto": "Pack 10 sesiones (oferta)", "precio": "800 €" }
+      ]
+    }
+  ]
+}
