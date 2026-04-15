@@ -258,8 +258,12 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
 
     {% set catSharedImage = catTrats | length > 1 and catTrats[0].imagen == catTrats[1].imagen %}
     {% if catSharedImage %}
+    {% set catImg0 = catTrats[0].imagen %}
     <div class="cat-visual">
-      <img src="{{ ('/images/tratamientos/' + catTrats[0].imagen) | url }}" alt="{{ cat.nombre }}" loading="lazy" />
+      <picture>
+        <source srcset="{{ ('/images/tratamientos/' + catImg0.replace('.png', '.webp')) | url }}" type="image/webp">
+        <img src="{{ ('/images/tratamientos/' + catImg0) | url }}" alt="{{ cat.nombre }}" loading="lazy" decoding="async" />
+      </picture>
     </div>
     {% endif %}
 
@@ -267,14 +271,18 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
       {% for trat in catTrats %}
       <article class="trat-card{% if catSharedImage %} trat-card--bare{% endif %}">
         {% if not catSharedImage %}
-        <img
-          src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-          alt="{{ trat.nombre }}"
-          class="trat-card-img"
-          loading="lazy"
-          width="400"
-          height="200"
-        />
+        <picture>
+          <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
+          <img
+            src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
+            alt="{{ trat.nombre }}"
+            class="trat-card-img"
+            loading="lazy"
+            decoding="async"
+            width="400"
+            height="200"
+          />
+        </picture>
         {% endif %}
         <div class="trat-card-body">
           <h3 class="trat-card-name">{{ trat.nombre }}</h3>
