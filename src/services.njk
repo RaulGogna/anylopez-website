@@ -8,17 +8,29 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
   /* ─── CATEGORY NAV ─────────────────────────────────────────────── */
   .cat-nav {
     position: sticky;
-    top: 72px;
+    top: 127px; /* logo(110) + padding(16) + borde(1) */
     z-index: 100;
     background: #fff;
     border-bottom: 1px solid var(--bg-light);
     padding: 0;
   }
+  /* fade derecho para indicar que hay más pills */
+  .cat-nav::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 48px;
+    background: linear-gradient(to right, transparent, #fff);
+    pointer-events: none;
+    z-index: 1;
+  }
   .cat-nav-inner {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 12px 24px;
+    padding: 12px 48px 12px 24px; /* padding-right amplio para no quedar bajo el fade */
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -51,7 +63,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
   /* ─── CATEGORY SECTION ─────────────────────────────────────────── */
   .cat-section {
     padding: 64px 0 80px;
-    scroll-margin-top: 120px;
+    scroll-margin-top: 185px; /* nav(127) + cat-nav(~58) */
   }
   .cat-section:nth-child(even) { background: var(--bg-cream); }
   .cat-header {
@@ -354,21 +366,38 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     const sections = Array.from(document.querySelectorAll('.cat-section'));
     if (!pills.length || !sections.length) return;
 
+    const navInner = document.querySelector('.cat-nav-inner');
+
+    function setActivePill(id) {
+      pills.forEach((p) => {
+        const isActive = p.getAttribute('href') === '#' + id;
+        p.classList.toggle('active', isActive);
+        if (isActive && navInner) {
+          p.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      });
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            pills.forEach((p) => {
-              p.classList.toggle('active', p.getAttribute('href') === '#' + id);
-            });
-          }
+          if (entry.isIntersecting) setActivePill(entry.target.id);
         });
       },
       { rootMargin: '-30% 0px -60% 0px' }
     );
 
     sections.forEach((s) => observer.observe(s));
+
+    /* Scroll horizontal con rueda del ratón sobre el nav de pills */
+    if (navInner) {
+      navInner.addEventListener('wheel', (e) => {
+        if (e.deltaY !== 0) {
+          e.preventDefault();
+          navInner.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+    }
 
     /* Smooth scroll for pill clicks */
     pills.forEach((pill) => {
