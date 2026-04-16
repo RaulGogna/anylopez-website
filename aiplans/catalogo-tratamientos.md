@@ -2,7 +2,7 @@
 
 **Proyecto:** anylopez-website
 **Rama:** feature/catalogo-tratamientos
-**Estado:** EN PROGRESO
+**Estado:** COMPLETADO (5a16f5f — 2026-04-15)
 **Modelo:** Opus 4.6
 
 ## Objetivo
@@ -17,7 +17,7 @@ Rediseñar la sección de servicios/tratamientos usando como fuente el catálogo
 - [x] Actualizar enlaces/navegación si es necesario — todos los links correctos, añadido `noreferrer` al CTA de WhatsApp
 - [x] Build + test local — build limpio 0.96s, página carga y se ve perfecta
 - [x] Revisar gaps — SEO ✓, a11y ✓, lazy loading ✓, alt texts ✓, h1→h2→h3 ✓. Solo gap: `rel="noopener noreferrer"` corregido
-- [ ] Commit + push + merge a master
+- [x] Commit + push + merge a master
 
 ## Notas e inconvenientes
 - Las fotos originales en `images/fotoscatalogoanylopez/` son screenshots completos con chrome de WhatsApp — no usables tal cual. Solo sirve el contenido textual y (tras recorte manual del usuario) la imagen de portada.
