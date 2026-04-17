@@ -148,6 +148,7 @@ body::before {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 9998; height: var(--header-h);
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  background: linear-gradient(to bottom, rgba(15,10,5,0.58) 0%, transparent 100%);
 }
 .site-header.scrolled {
   background: rgba(248,243,237,0.97);
@@ -511,7 +512,16 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
   color: var(--gold); font-size: 13px; font-weight: 600;
   padding: 8px 16px; margin-bottom: 28px;
 }
-.oferta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.oferta-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.btn-oferta-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border: 1px solid rgba(248,243,237,0.3);
+  color: rgba(248,243,237,0.85); background: transparent;
+  font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-oferta-outline:hover { border-color: var(--ivory); color: var(--ivory); }
 .countdown-box { text-align: center; flex-shrink: 0; }
 .countdown-label {
   font-size: 10px; font-weight: 600; letter-spacing: 0.18em;
@@ -727,7 +737,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 /* ═══════════════════════════════════════════════════
    INSTAGRAM
    ═══════════════════════════════════════════════════ */
-.ig-section { padding: 120px 0; background: var(--ivory); }
+.ig-section { padding: 80px 0 60px; background: var(--ivory); }
 .ig-header { text-align: center; margin-bottom: 48px; }
 .ig-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 400; color: var(--dark); }
 .ig-handle { color: var(--terra); font-style: italic; }
@@ -755,7 +765,8 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
   display: flex; align-items: center; justify-content: center;
 }
 .ig-cell svg { width: 28px; height: 28px; opacity: 0.45; }
-.ig-footer { text-align: center; }
+.ig-footer { text-align: center; margin-top: 32px; }
+.ig-footer a { display: inline-flex; align-items: center; gap: 8px; }
 
 /* ═══════════════════════════════════════════════════
    CTA FINAL — Dark box
@@ -800,6 +811,30 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 }
 .cta-wa-btn:hover { background: #20b857; transform: translateY(-1px); }
 .cta-wa-btn svg { width: 18px; height: 18px; }
+
+/* ═══════════════════════════════════════════════════
+   DÓNDE ESTAMOS
+   ═══════════════════════════════════════════════════ */
+.donde-section { padding: 100px 0 120px; background: var(--sand); }
+.donde-header { text-align: center; margin-bottom: 64px; }
+.donde-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 56px; align-items: start;
+}
+.donde-map {
+  width: 100%; height: 460px; border: none; display: block;
+  filter: grayscale(15%) contrast(1.05);
+}
+.donde-info { display: flex; flex-direction: column; gap: 28px; }
+.donde-info-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 400; color: var(--dark); margin-bottom: 6px;
+}
+.donde-info > p { font-size: 14px; color: var(--text-mid); margin-bottom: 8px; }
+.donde-form { display: flex; flex-direction: column; gap: 14px; }
+.donde-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.donde-form-success { display: none; text-align: center; padding: 24px; }
+.donde-form-success p { color: var(--terra); font-weight: 600; font-size: 15px; margin-top: 8px; }
 
 /* ═══════════════════════════════════════════════════
    FEATURE STRIP (stats)
@@ -1088,33 +1123,36 @@ button[type="submit"] {
 /* Trust strip: texto heredado es oscuro sobre fondo terra */
 .trust-text strong { color: #fff; }
 
-/* Lead strip form: grid correcto (label + form flex) */
+/* Lead strip form */
 .lead-strip-inner {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 24px; align-items: center;
+  gap: 32px; align-items: center;
+  max-width: 1140px; margin: 0 auto;
 }
 .lead-form {
-  display: flex; gap: 10px; align-items: stretch;
+  display: flex; gap: 12px; align-items: stretch; flex-wrap: nowrap;
 }
 .lead-form input:not([type="hidden"]),
 .lead-form select {
   flex: 1; min-width: 0;
-  background: var(--ivory); border: 1px solid var(--border);
-  padding: 11px 14px; font-size: 14px; color: var(--text);
+  background: #fff; border: 1.5px solid var(--border);
+  padding: 13px 16px; font-size: 14px; color: var(--text);
   outline: none; transition: border-color 0.2s;
   -webkit-appearance: none; appearance: none;
   font-family: 'Jost', sans-serif;
+  border-radius: 0;
 }
 .lead-form input:focus,
-.lead-form select:focus { border-color: var(--terra); }
+.lead-form select:focus { border-color: var(--terra); outline: none; box-shadow: none; }
 .lead-form select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B87254' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 14px center;
-  padding-right: 36px; cursor: pointer; background-color: var(--ivory);
+  padding-right: 36px; cursor: pointer; background-color: #fff;
 }
-.lead-form .btn { flex-shrink: 0; }
-.lead-form .btn::after { display: none; } /* sin flecha extra en el botón del form */
+.lead-form .btn { flex-shrink: 0; white-space: nowrap; padding: 13px 28px; }
+.lead-form .btn::after { display: none; }
+#leadFormMsg { display:none; font-size:13px; color: var(--terra); font-weight:600; margin-top:10px; }
 
 /* ═══════════════════════════════════════════════════
    RESPONSIVE
@@ -1193,6 +1231,9 @@ button[type="submit"] {
   .testi-grid { grid-template-columns: 1fr; }
   .ig-grid { grid-template-columns: repeat(3,1fr); }
   .cta-box { padding: 48px 24px; }
+  .donde-grid { grid-template-columns: 1fr; }
+  .donde-map { height: 280px; }
+  .donde-form-row { grid-template-columns: 1fr; }
   .oferta-grid { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: repeat(2,1fr); }
   .stats-grid { grid-template-columns: repeat(2,1fr); }

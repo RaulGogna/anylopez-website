@@ -17,7 +17,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
     <div class="scroll-hint" aria-hidden="true"><span class="scroll-hint-line"></span></div>
   </div>
   <div class="hero-right">
-    <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="none" class="hero-video" aria-hidden="true">
       <source src="{{ '/images/InShot_20240813_141525723.mp4' | url }}" type="video/mp4" />
     </video>
     <div class="hero-video-overlay"></div>
@@ -32,7 +32,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
 <section class="lead-strip">
   <div class="lead-strip-inner rv">
     <p class="lead-strip-label">Consulta gratuita,<br>sin compromiso</p>
-    <form class="lead-form" action="https://formspree.io/f/xrerbgdw" method="POST" style="display:contents">
+    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xrerbgdw" method="POST">
       <input type="hidden" name="_subject" value="Consulta desde lead strip homepage" />
       <input type="text" name="nombre" placeholder="Tu nombre" required aria-label="Nombre" />
       <input type="tel" name="telefono" placeholder="Teléfono" required aria-label="Teléfono" />
@@ -47,6 +47,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
       </select>
       <button type="submit" class="btn btn-terra">Solicitar cita</button>
     </form>
+    <p id="leadFormMsg">✓ Recibido — te contactamos pronto.</p>
   </div>
 </section>
 
@@ -87,7 +88,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         <img src="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.png' | url }}" alt="INDIBA Activ" class="svc-card-img" loading="lazy" />
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
-          <span class="svc-num">Desde 60€</span>
+          <span class="svc-num">Consultar</span>
           <h3 class="svc-title">INDIBA Activ</h3>
           <p class="svc-desc">Radiofrecuencia de alta precisión para reafirmar, drenar y regenerar la piel facial y corporal sin cirugía.</p>
           <a href="{{ '/radiofrecuencia/' | url }}" class="svc-link">Descubrir</a>
@@ -97,7 +98,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         <img src="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.png' | url }}" alt="HIFU Lifting" class="svc-card-img" loading="lazy" />
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
-          <span class="svc-num">Desde 120€</span>
+          <span class="svc-num">Consultar</span>
           <h3 class="svc-title">HIFU Lifting</h3>
           <p class="svc-desc">Ultrasonido microfocalizado para tensar y elevar rostro y cuello. Efecto lifting sin bisturí ni recuperación.</p>
           <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
@@ -107,7 +108,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         <img src="{{ '/images/fotoscatalogoanylopez/botox.png' | url }}" alt="Botox y Rellenos" class="svc-card-img" loading="lazy" />
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
-          <span class="svc-num">Desde 150€</span>
+          <span class="svc-num">Consultar</span>
           <h3 class="svc-title">Botox &amp; Rellenos</h3>
           <p class="svc-desc">Tratamientos de medicina estética para suavizar arrugas y restaurar volúmenes de forma natural y armónica.</p>
           <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
@@ -117,7 +118,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         <img src="{{ '/images/fotoscatalogoanylopez/limpiezafacial.png' | url }}" alt="Limpieza Facial" class="svc-card-img" loading="lazy" />
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
-          <span class="svc-num">Desde 45€</span>
+          <span class="svc-num">Consultar</span>
           <h3 class="svc-title">Limpieza Facial</h3>
           <p class="svc-desc">Higiene profunda adaptada a cada tipo de piel. Extracción, exfoliación e hidratación profesional.</p>
           <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
@@ -127,7 +128,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         <img src="{{ '/images/fotoscatalogoanylopez/dermapen.png' | url }}" alt="Dermapen" class="svc-card-img" loading="lazy" />
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
-          <span class="svc-num">Desde 80€</span>
+          <span class="svc-num">Consultar</span>
           <h3 class="svc-title">Dermapen</h3>
           <p class="svc-desc">Microagujas que estimulan colágeno y elastina para reducir cicatrices, manchas y signos de edad.</p>
           <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
@@ -137,7 +138,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         <img src="{{ '/images/fotoscatalogoanylopez/rellenoacidohialuronico.png' | url }}" alt="Ácido Hialurónico" class="svc-card-img" loading="lazy" />
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
-          <span class="svc-num">Desde 200€</span>
+          <span class="svc-num">Consultar</span>
           <h3 class="svc-title">Ácido Hialurónico</h3>
           <p class="svc-desc">Relleno dérmico para labios, ojeras y surcos. Resultados inmediatos con aspecto completamente natural.</p>
           <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
@@ -160,7 +161,11 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         <p class="oferta-desc">Trata la flacidez y la celulitis con la tecnología más avanzada. Resultados visibles desde la primera sesión.</p>
         <p class="oferta-plazas">⚡ Solo 8 plazas disponibles</p>
         <div class="oferta-actions">
-          <a href="https://wa.me/34656306167?text=Hola%2C%20quiero%20aprovechar%20la%20oferta%20de%20INDIBA%20-30%25." class="btn btn-terra" target="_blank" rel="noopener">Aprovechar oferta</a>
+          <a href="https://wa.me/34656306167?text=Hola%2C%20quiero%20aprovechar%20la%20oferta%20de%20INDIBA%20-30%25." class="btn-wa-cta" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347ZM12.05 21.785h-.01a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 0 1 2.16 12.04C2.16 6.58 6.58 2.16 12.05 2.16c2.66 0 5.16 1.036 7.04 2.92a9.88 9.88 0 0 1 2.91 7.04c-.004 5.46-4.424 9.88-9.88 9.88ZM20.52 3.449C18.24 1.245 15.24 0 12.05 0 5.464 0 .104 5.334.1 11.893c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.422-8.449Z"/></svg>
+            Aprovechar oferta
+          </a>
+          <a href="{{ '/contact/' | url }}" class="btn-oferta-outline">O escríbenos →</a>
         </div>
       </div>
       <div class="countdown-box">
@@ -254,66 +259,42 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
 <!-- TESTIMONIOS -->
 <section class="testi-section">
   <div class="container">
-    <div class="section-header rv" style="color:#fff;">
-      <span class="section-label" style="color:var(--gold)">Opiniones reales</span>
-      <h2 class="section-title" style="color:#fff;">Lo que dicen nuestras clientas</h2>
-      <div class="testi-google-badge">
-        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <span style="color:var(--gold); font-weight:600;">5.0</span>
-        <span style="color:#FFD700;">★★★★★</span>
-        <span style="color:rgba(255,255,255,0.6); font-size:0.85rem;">216 reseñas verificadas</span>
+    <div class="testi-head rv">
+      <div>
+        <div class="google-pill">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <div>
+            <span class="g-rating-big">5.0</span>
+            <div class="g-stars">★★★★★</div>
+            <div class="g-count">216 reseñas verificadas</div>
+          </div>
+        </div>
+        <h2 class="rv d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;color:var(--ivory);line-height:1.1;">Lo que dicen<br><em style="font-style:italic;color:var(--gold);">nuestras clientas</em></h2>
+      </div>
+      <div class="rv d2" style="display:flex;flex-direction:column;justify-content:flex-end;gap:16px;">
+        <p style="font-size:15px;font-weight:300;color:rgba(248,243,237,0.5);line-height:1.8;">Más de 216 personas confían en nosotras para cuidar su piel. Su satisfacción es nuestro mayor logro.</p>
+        <a href="https://www.google.com/search?q=AnyLopez+Clinica+Estetica+Benidorm&hl=es" target="_blank" rel="noopener" class="btn btn-outline-light" style="align-self:flex-start;">Ver todas las reseñas →</a>
       </div>
     </div>
-
-    <div class="reviews-carousel" id="reviewsCarousel">
-      <div class="testimonial is-active">
-        <div class="stars">★★★★★</div>
-        <p>«Es un centro espectacular. Andrea es muy profesional, es de 10. Un trato personalizado que se nota desde el primer momento.»</p>
-        <div class="testimonial-author">
-          <strong>Cris</strong>
-          <span>INDIBA facial · Enero 2026</span>
-        </div>
+    <div class="testi-grid rv">
+      <div class="t-card featured">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">«Es un centro espectacular. Andrea es muy profesional, es de 10. Un trato personalizado que se nota desde el primer momento.»</p>
+        <div class="t-name">Cris</div>
+        <div class="t-service">INDIBA facial · Enero 2026</div>
       </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>«Mi cutis rejuvenció treinta años. Trato formidable y profesionalidad a prueba de dudas. Volveré sin ninguna duda.»</p>
-        <div class="testimonial-author">
-          <strong>Pedro</strong>
-          <span>Limpieza facial · Marzo 2026</span>
-        </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">«Mi cutis rejuvenció treinta años. Trato formidable y profesionalidad a prueba de dudas. Volveré sin ninguna duda.»</p>
+        <div class="t-name">Pedro</div>
+        <div class="t-service">Limpieza facial · Marzo 2026</div>
       </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>«Para mí los mejores en atención y calidad. Muy amables y profesionales. El resultado del tratamiento ha sido increíble.»</p>
-        <div class="testimonial-author">
-          <strong>María</strong>
-          <span>Lifting de pestañas · Enero 2026</span>
-        </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">«Para mí los mejores en atención y calidad. Muy amables y profesionales. El resultado del tratamiento ha sido increíble.»</p>
+        <div class="t-name">María</div>
+        <div class="t-service">Lifting de pestañas · Enero 2026</div>
       </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>«Estoy muy satisfecha. Me encantan los tratamientos, y todos son muy amables. 100% recomendado.»</p>
-        <div class="testimonial-author">
-          <strong>Eli</strong>
-          <span>Hilos espiculados · Abril 2026</span>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>«Muy atentos y puntuales. El tratamiento INDIBA facial ha sido una maravilla. Repetiré sin dudarlo.»</p>
-        <div class="testimonial-author">
-          <strong>Andy</strong>
-          <span>INDIBA facial · Abril 2026</span>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-controls">
-      <button class="carousel-prev" aria-label="Anterior">&#8592;</button>
-      <div class="carousel-dots" id="carouselDots"></div>
-      <button class="carousel-next" aria-label="Siguiente">&#8594;</button>
-    </div>
-    <div class="testi-footer rv">
-      <a href="https://www.google.com/search?q=AnyLopez+Clinica+Estetica+Benidorm&hl=es" target="_blank" rel="noopener" class="btn btn-outline-light">Ver 216 reseñas en Google →</a>
     </div>
   </div>
 </section>
@@ -392,14 +373,14 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
     <div class="ig-header rv">
       <div>
         <span class="section-label">Síguenos</span>
-        <h2 class="section-title">@anylopez.estetica</h2>
+        <h2 class="ig-title">@<span class="ig-handle">anylopez.estetica</span></h2>
       </div>
       <a href="https://www.instagram.com/anylopez.estetica/" class="btn btn-terra" target="_blank" rel="noopener">Ver perfil →</a>
     </div>
-    <div class="ig-grid rv">
+    <div class="ig-grid rv d1">
       <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c1" target="_blank" rel="noopener" aria-label="Instagram">
         <div class="ig-cell-inner">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7ZM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </div>
       </a>
       <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c2" target="_blank" rel="noopener" aria-label="Instagram"></a>
@@ -408,27 +389,177 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
       <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c5" target="_blank" rel="noopener" aria-label="Instagram"></a>
       <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c6" target="_blank" rel="noopener" aria-label="Instagram"></a>
     </div>
+    <div class="ig-footer rv d2">
+      <a href="https://www.instagram.com/anylopez.estetica/" class="btn btn-outline-terra" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Seguirnos en Instagram →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DÓNDE ESTAMOS -->
+<section class="donde-section">
+  <div class="container">
+    <div class="donde-header rv">
+      <span class="section-label">Dónde estamos</span>
+      <h2 class="section-title">Visítanos en <em style="font-style:italic;color:var(--terra);">Benidorm</em></h2>
+    </div>
+    <div class="donde-grid">
+      <iframe
+        class="donde-map rv"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.1234567890123!2d-0.1317!3d38.5335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6317b0c9b9f6ed%3A0x4c123456789abc!2sCalle%20Marqu%C3%A9s%20de%20Comillas%2C%204%2C%2003501%20Benidorm!5e0!3m2!1ses!2ses!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación AnyLopez Benidorm"
+      ></iframe>
+      <div class="donde-info rv d1">
+        <div>
+          <h3 class="donde-info-title">Escríbenos</h3>
+          <p class="donde-info-desc">Respondemos en menos de 24 horas. También puedes llamarnos o venir directamente.</p>
+          <div style="margin-top:16px; display:flex; flex-direction:column; gap:6px;">
+            <span style="font-size:13px; color:var(--text-mid);">📍 C/ Marqués de Comillas 4, Local 6 — Benidorm</span>
+            <span style="font-size:13px; color:var(--text-mid);">🕐 Lun–Vie 10:00–14:00 / 16:00–20:00</span>
+            <a href="tel:656306167" style="font-size:13px; color:var(--terra); font-weight:600;">📞 656 306 167</a>
+          </div>
+        </div>
+        <div id="dondeFormWrap">
+          <form id="dondeForm" class="donde-form" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Consulta desde sección Dónde Estamos" />
+            <div class="donde-form-row">
+              <div class="form-field">
+                <label for="d-nombre">Nombre</label>
+                <input type="text" id="d-nombre" name="nombre" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-field">
+                <label for="d-tel">Teléfono</label>
+                <input type="tel" id="d-tel" name="telefono" placeholder="6XX XXX XXX" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="d-serv">Tratamiento de interés</label>
+              <select id="d-serv" name="tratamiento">
+                <option value="" disabled selected>Selecciona un tratamiento</option>
+                <option>INDIBA Radiofrecuencia</option>
+                <option>HIFU Lifting</option>
+                <option>Botox &amp; Rellenos</option>
+                <option>Limpieza Facial</option>
+                <option>Dermapen</option>
+                <option>Otro / Consulta general</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="d-msg">Mensaje</label>
+              <textarea id="d-msg" name="mensaje" rows="3" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+            </div>
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <button type="submit" class="btn btn-terra" style="width:100%; justify-content:center;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Enviar mensaje
+            </button>
+          </form>
+          <div id="dondeFormSuccess" class="donde-form-success">
+            <div style="font-size:36px;">✅</div>
+            <p>¡Mensaje recibido! Te contactamos pronto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="cta-section">
   <div class="container">
-    <div class="cta-box rv">
-      <div class="cta-text">
-        <span class="section-label" style="color:var(--gold)">¿Lista para empezar?</span>
-        <h2 class="cta-title">Tu primera consulta<br><em>es gratuita.</em></h2>
-        <p>Llámanos al <a href="tel:656306167" style="color:var(--gold); font-weight:600;">656 306 167</a> o escríbenos y te atendemos hoy mismo.</p>
+    <div class="cta-box">
+      <div>
+        <h2 class="cta-title rv">Tu piel merece<br><em>lo mejor.</em></h2>
+        <p class="cta-sub rv d1">Llámanos hoy y empieza tu transformación con una consulta gratuita sin compromiso.</p>
+        <div class="cta-actions rv d2">
+          <a href="{{ '/contact/' | url }}" class="btn btn-terra">Solicitar consulta gratuita</a>
+          <a href="https://wa.me/34656306167?text=Hola%2C%20quisiera%20pedir%20una%20consulta%20gratuita" target="_blank" rel="noopener" class="btn-wa-cta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347ZM12.05 21.785h-.01a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 0 1 2.16 12.04C2.16 6.58 6.58 2.16 12.05 2.16c2.66 0 5.16 1.036 7.04 2.92a9.88 9.88 0 0 1 2.91 7.04c-.004 5.46-4.424 9.88-9.88 9.88ZM20.52 3.449C18.24 1.245 15.24 0 12.05 0 5.464 0 .104 5.334.1 11.893c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.422-8.449Z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="cta-info-list rv d3">
+          <div class="cta-info-item"><div class="cta-info-dot"></div>C/ Marqués de Comillas 4, Local 6, Benidorm</div>
+          <div class="cta-info-item"><div class="cta-info-dot"></div>Lun–Vie 10:00–14:00 / 16:00–20:00</div>
+          <div class="cta-info-item"><div class="cta-info-dot"></div>info@anylopez.com</div>
+        </div>
       </div>
-      <div class="cta-actions">
-        <a href="{{ '/contact/' | url }}" class="btn btn-terra" style="font-size:1.1rem; padding:16px 36px;">Reservar cita →</a>
-        <a href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20consulta%20gratuita." class="btn btn-outline-light" target="_blank" rel="noopener">WhatsApp →</a>
+      <div class="cta-right rv d2">
+        <p class="cta-phone-label">Llámanos ahora</p>
+        <a href="tel:656306167" class="cta-phone">656 306 167</a>
+        <a href="tel:865710769" class="cta-phone">865 710 769</a>
+        <a href="https://wa.me/34656306167?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="cta-wa-btn">
+          <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347ZM12.05 21.785h-.01a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 0 1 2.16 12.04C2.16 6.58 6.58 2.16 12.05 2.16c2.66 0 5.16 1.036 7.04 2.92a9.88 9.88 0 0 1 2.91 7.04c-.004 5.46-4.424 9.88-9.88 9.88ZM20.52 3.449C18.24 1.245 15.24 0 12.05 0 5.464 0 .104 5.334.1 11.893c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.422-8.449Z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <script>
+  /* ── Donde form AJAX ── */
+  const dondeForm = document.getElementById('dondeForm');
+  if (dondeForm) {
+    dondeForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = dondeForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      fetch(dondeForm.action, {
+        method: 'POST',
+        body: new FormData(dondeForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(r => {
+        if (r.ok) {
+          dondeForm.style.display = 'none';
+          document.getElementById('dondeFormSuccess').style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Enviar mensaje';
+        }
+      }).catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Enviar mensaje';
+      });
+    });
+  }
+
+  /* ── Lead form AJAX (evitar redirect a Formspree) ── */
+  const leadForm = document.getElementById('leadForm');
+  const leadMsg  = document.getElementById('leadFormMsg');
+  if (leadForm) {
+    leadForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = leadForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      fetch(leadForm.action, {
+        method: 'POST',
+        body: new FormData(leadForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(r => {
+        if (r.ok) {
+          leadForm.style.display = 'none';
+          leadMsg.style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Solicitar cita';
+          alert('Error al enviar. Llámanos al 656 306 167.');
+        }
+      }).catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Solicitar cita';
+        alert('Error al enviar. Llámanos al 656 306 167.');
+      });
+    });
+  }
+
   /* ── Video sound toggle ── */
   const video = document.querySelector('.hero-video');
   const soundBtn = document.getElementById('soundToggle');
