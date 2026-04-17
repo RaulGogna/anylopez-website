@@ -2,7 +2,7 @@
 
 **Proyecto:** anylopez-website
 **Rama:** feature/redesign-v3
-**Estado:** COMPLETADO (ver hash tras commit — 2026-04-17)
+**Estado:** COMPLETADO (1625d6f — 2026-04-17)
 **Modelo:** claude-sonnet-4-6
 
 ## Objetivo
