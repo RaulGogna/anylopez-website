@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnyLopez Clínica Estética — Prototipo V3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   VARIABLES & RESET
+   ============================================================ */
+:root {
+  --ivory:      #F8F3ED;
+  --sand:       #EDE4D8;
+  --sand-mid:   #D9CCBE;
+  --terra:      #B87254;
+  --terra-dk:   #8C5238;
+  --gold:       #C9A870;
+  --dark:       #1A1208;
+  --dark-mid:   #2D2016;
+  --text:       #2A1F14;
+  --text-mid:   #6B5540;
+  --text-light: #9B8573;
+  --border:     #DDD0C2;
+  --ease:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --proto-bar-h: 32px;
+  --header-h:    88px;
+  --offset:      calc(var(--proto-bar-h) + var(--header-h));
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--ivory);
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a  { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--dark);
+}
+button, input, select, textarea { font-family: 'Jost', sans-serif; }
+
+/* Grain overlay */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 9990; opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.rv {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+.rv.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.12s; }
+.d2 { transition-delay: 0.24s; }
+.d3 { transition-delay: 0.36s; }
+.d4 { transition-delay: 0.48s; }
+
+/* ============================================================
+   UTILS
+   ============================================================ */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+.section    { padding: 120px 0; }
+.eyebrow {
+  font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--terra);
+  display: block; margin-bottom: 16px;
+}
+
+/* ── Botones ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 32px;
+  font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  cursor: pointer; border: none; transition: all 0.3s var(--ease);
+}
+.btn::after { content: '→'; font-size: 13px; transition: transform 0.3s var(--ease); }
+.btn:hover::after { transform: translateX(4px); }
+.btn-no-arrow::after { display: none; }
+.btn-terra { background: var(--terra); color: #fff; }
+.btn-terra:hover { background: var(--terra-dk); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(184,114,84,.3); }
+.btn-dark  { background: var(--dark); color: #fff; }
+.btn-dark:hover  { background: var(--dark-mid); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--dark); border: 1px solid var(--dark); }
+.btn-outline:hover { background: var(--dark); color: #fff; }
+.btn-outline-light { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+.btn-outline-light:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+.btn-outline-terra { background: transparent; color: var(--terra); border: 1.5px solid var(--terra); }
+.btn-outline-terra:hover { background: var(--terra); color: #fff; }
+.btn-wa {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #25D366; color: #fff;
+  padding: 14px 32px;
+  font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  cursor: pointer; border: none; transition: background 0.2s, transform 0.15s;
+}
+.btn-wa:hover { background: #20b857; transform: translateY(-1px); }
+.btn-wa::after { display: none; }
+
+/* ============================================================
+   1. PROTO-BAR
+   ============================================================ */
+#proto-bar {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--proto-bar-h); z-index: 9999;
+  background: var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Jost', sans-serif; font-size: 10px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(248,243,237,0.4);
+}
+#proto-bar strong { color: var(--terra); margin: 0 6px; }
+
+/* ============================================================
+   2. HEADER
+   ============================================================ */
+#header {
+  position: fixed; top: var(--proto-bar-h); left: 0; right: 0;
+  z-index: 9998;
+  transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+#header.scrolled {
+  background: rgba(248,243,237,0.97);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--border);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: var(--header-h); padding: 0 48px;
+}
+.header-logo-img {
+  height: 72px; width: auto;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,.4));
+  transition: transform 0.3s var(--ease), filter 0.3s;
+}
+.header-logo-img:hover { transform: scale(1.04); }
+#header:not(.scrolled) .header-logo-img {
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,.55)) drop-shadow(0 0 20px rgba(255,255,255,0.06));
+}
+
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a {
+  font-size: 11px; font-weight: 400;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(248,243,237,0.85);
+  transition: color 0.2s; position: relative;
+}
+#header.scrolled .nav-links a { color: var(--text); }
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 1px; background: var(--terra);
+  transform: scaleX(0); transition: transform 0.3s var(--ease);
+}
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-links a:hover { color: var(--terra) !important; }
+
+.header-ctas { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-google {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 300;
+  color: rgba(248,243,237,0.6); white-space: nowrap;
+  transition: color 0.2s;
+}
+#header.scrolled .header-google { color: var(--text-mid); }
+.header-google-stars { color: #F9C23C; font-size: 11px; letter-spacing: 1px; }
+.header-wa-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; background: #25D366; border-radius: 50%;
+  transition: transform 0.2s;
+}
+.header-wa-btn:hover { transform: scale(1.08); }
+.header-wa-btn svg { width: 18px; height: 18px; }
+
+/* ============================================================
+   3. HERO (V1 style — dark left + video right)
+   ============================================================ */
+#hero {
+  height: 100vh; min-height: 680px;
+  display: grid; grid-template-columns: 45% 55%;
+  padding-top: var(--proto-bar-h);
+  overflow: hidden;
+}
+
+/* Panel izquierdo */
+.hero-left {
+  background: var(--dark);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 0 72px 80px 72px;
+  position: relative; overflow: hidden;
+}
+.hero-bg-text {
+  position: absolute; bottom: -30px; left: -10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 260px; font-weight: 300; line-height: 1;
+  color: rgba(255,255,255,0.025);
+  pointer-events: none; user-select: none; white-space: nowrap;
+}
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400;
+  letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 28px;
+}
+.hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(58px, 7vw, 100px);
+  font-weight: 300; line-height: 1.0; letter-spacing: -0.02em;
+  color: var(--ivory); margin-bottom: 28px;
+}
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-desc {
+  font-size: 16px; font-weight: 300; line-height: 1.85;
+  color: rgba(248,243,237,0.58); max-width: 380px; margin-bottom: 44px;
+}
+.hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+.scroll-hint {
+  position: absolute; bottom: 36px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.scroll-hint-line {
+  width: 1px; height: 44px;
+  background: linear-gradient(to bottom, rgba(201,168,112,0.6), transparent);
+  animation: lineGrow 2.2s ease infinite;
+}
+.scroll-hint-label {
+  font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(201,168,112,0.5);
+}
+@keyframes lineGrow {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* Panel derecho: VIDEO */
+.hero-right {
+  position: relative; overflow: hidden; background: var(--dark);
+}
+.hero-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; opacity: 0.9;
+}
+.hero-video-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(26,18,8,0.5) 0%, transparent 25%),
+              linear-gradient(to top,   rgba(26,18,8,0.25) 0%, transparent 40%);
+}
+.hero-badge {
+  position: absolute; bottom: 52px; left: 40px;
+  background: rgba(248,243,237,0.95); backdrop-filter: blur(10px);
+  padding: 18px 28px; border-left: 3px solid var(--terra);
+}
+.hero-badge-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 300;
+  line-height: 1; color: var(--dark);
+}
+.hero-badge-lbl {
+  font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--text-mid); margin-top: 2px;
+}
+.video-sound-btn {
+  position: absolute; bottom: 52px; right: 32px; z-index: 10;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(248,243,237,0.15); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s, transform 0.2s;
+}
+.video-sound-btn:hover { background: rgba(248,243,237,0.28); transform: scale(1.08); }
+.video-sound-btn svg { width: 20px; height: 20px; }
+
+/* ============================================================
+   4. LEAD STRIP — Mini-form horizontal debajo del hero
+   ============================================================ */
+#lead-strip {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 36px 0;
+}
+.lead-strip-inner {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+.lead-strip-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 500;
+  color: var(--dark); white-space: nowrap;
+  padding-right: 8px;
+  border-right: 1px solid var(--border);
+}
+.lead-strip-label span { display: block; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terra); margin-bottom: 2px; }
+.form-field {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.form-field label {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-light);
+}
+.form-field input,
+.form-field select {
+  background: var(--ivory); border: 1px solid var(--border);
+  padding: 11px 14px; font-size: 14px; color: var(--text);
+  outline: none; transition: border-color 0.2s;
+  width: 100%; -webkit-appearance: none; appearance: none;
+}
+.form-field input:focus,
+.form-field select:focus { border-color: var(--terra); }
+.form-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B87254' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px; cursor: pointer;
+  background-color: var(--ivory);
+}
+
+/* ============================================================
+   5. TRUST STRIP
+   ============================================================ */
+#trust-strip {
+  background: var(--terra); padding: 0;
+}
+.trust-inner {
+  display: flex; align-items: stretch;
+  max-width: 1280px; margin: 0 auto;
+}
+.trust-item {
+  flex: 1; padding: 22px 32px;
+  display: flex; align-items: center; gap: 10px;
+  border-right: 1px solid rgba(255,255,255,0.18);
+  transition: background 0.3s;
+}
+.trust-item:last-child { border-right: none; }
+.trust-item:hover { background: rgba(255,255,255,0.08); }
+.trust-stars { color: #fff; font-size: 13px; letter-spacing: 1px; }
+.trust-text { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.9); white-space: nowrap; }
+.trust-badge {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #fff; border: 1px solid rgba(255,255,255,0.5);
+  padding: 3px 8px;
+}
+
+/* ============================================================
+   6. SERVICIOS (V1 style — fotos reales)
+   ============================================================ */
+#servicios { background: var(--ivory); }
+.services-intro-inner {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding: 120px 0 56px;
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 3px; background: var(--border);
+}
+.svc-card {
+  position: relative; overflow: hidden; cursor: pointer;
+  aspect-ratio: 4/5; background: var(--sand);
+}
+.svc-card-img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+.svc-card:hover .svc-card-img { transform: scale(1.07); }
+.svc-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top,
+    rgba(26,18,8,0.88) 0%,
+    rgba(26,18,8,0.35) 45%,
+    rgba(26,18,8,0.05) 100%);
+  transition: opacity 0.4s;
+}
+.svc-card-body {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 28px 28px 32px;
+}
+.svc-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 11px;
+  letter-spacing: 0.18em; color: var(--gold); margin-bottom: 8px;
+}
+.svc-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 30px;
+  font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 0;
+}
+.svc-title em { font-style: italic; color: var(--gold); }
+.svc-desc {
+  font-size: 13px; font-weight: 300;
+  color: rgba(255,255,255,0.72); line-height: 1.6;
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height 0.5s var(--ease), opacity 0.4s, margin 0.4s;
+}
+.svc-card:hover .svc-desc { max-height: 60px; opacity: 1; margin-top: 10px; }
+.svc-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.4s 0.08s, transform 0.4s 0.08s var(--ease);
+  margin-top: 14px;
+}
+.svc-link::after { content: '→'; transition: transform 0.3s; }
+.svc-card:hover .svc-link { opacity: 1; transform: translateY(0); }
+.svc-card:hover .svc-link::after { transform: translateX(4px); }
+
+/* Placeholder si la imagen no carga */
+.svc-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.svc-placeholder-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; font-style: italic;
+  color: rgba(255,255,255,0.2); font-weight: 300;
+}
+
+/* Colores de placeholder por servicio */
+.svc-c1 { background: linear-gradient(135deg, #c9947a, #e8b89e); }
+.svc-c2 { background: linear-gradient(135deg, #b8849a, #d4a8bc); }
+.svc-c3 { background: linear-gradient(135deg, #8a9cba, #b0bfd4); }
+.svc-c4 { background: linear-gradient(135deg, #9ab8a0, #c0d4c4); }
+.svc-c5 { background: linear-gradient(135deg, #c9a870, #e0c890); }
+.svc-c6 { background: linear-gradient(135deg, #a8b0c8, #c8d0e0); }
+
+/* ============================================================
+   7. OFERTA DEL MES
+   ============================================================ */
+#oferta {
+  padding: 120px 0;
+  background: var(--dark);
+  position: relative; overflow: hidden;
+}
+#oferta::before {
+  content: 'INDIBA';
+  position: absolute; top: 50%; right: -40px;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(120px, 18vw, 200px); font-weight: 300;
+  color: rgba(255,255,255,0.025); letter-spacing: -5px;
+  pointer-events: none; white-space: nowrap; line-height: 1;
+}
+.oferta-grid {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 80px; align-items: center;
+  position: relative; z-index: 1;
+}
+.oferta-pill {
+  display: inline-block; padding: 6px 16px; background: var(--terra);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase; color: #fff; margin-bottom: 24px;
+}
+.oferta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4.5vw, 60px); font-weight: 300;
+  line-height: 1.1; color: var(--ivory); margin-bottom: 16px;
+}
+.oferta-title em { font-style: italic; color: var(--gold); }
+.oferta-desc {
+  font-size: 15px; font-weight: 300;
+  color: rgba(248,243,237,0.55); max-width: 520px;
+  line-height: 1.85; margin-bottom: 32px;
+}
+.oferta-plazas {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,168,112,0.15);
+  border: 1px solid rgba(201,168,112,0.3);
+  color: var(--gold); font-size: 13px; font-weight: 600;
+  padding: 8px 16px; margin-bottom: 28px;
+}
+.oferta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Countdown */
+.countdown-box { text-align: center; flex-shrink: 0; }
+.countdown-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
+  margin-bottom: 20px; display: block;
+}
+.countdown {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.cd-unit {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 16px; text-align: center;
+}
+.cd-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem; font-weight: 600;
+  color: var(--gold); line-height: 1; display: block;
+}
+.cd-label {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.15em;
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
+  margin-top: 8px; display: block;
+}
+
+/* ============================================================
+   8. POR QUÉ ELEGIRNOS
+   ============================================================ */
+#por-que { padding: 120px 0; background: var(--ivory); }
+.pq-header { text-align: center; margin-bottom: 64px; }
+.pq-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 5vw, 60px); font-weight: 400;
+  line-height: 1.1; color: var(--dark);
+}
+.pq-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+.pq-card {
+  background: #fff; padding: 48px 36px;
+  border-top: 3px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.pq-card:hover { border-color: var(--terra); box-shadow: 0 8px 32px rgba(26,18,8,0.08); }
+.pq-icon {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--terra), var(--gold));
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+}
+.pq-icon svg { width: 24px; height: 24px; }
+.pq-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px; font-weight: 300;
+  color: var(--sand-mid); line-height: 1; margin-bottom: 16px;
+  transition: color 0.3s;
+}
+.pq-card:hover .pq-num { color: var(--terra); }
+.pq-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--dark); margin-bottom: 12px; }
+.pq-desc { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+
+/* ============================================================
+   9. PROCESO (V1 editorial style)
+   ============================================================ */
+#proceso { padding: 120px 0; background: var(--sand); }
+.process-head {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: end; margin-bottom: 80px;
+}
+.process-steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  margin-bottom: 60px;
+}
+.p-step {
+  padding: 48px 36px 48px 0;
+  border-right: 1px solid var(--border);
+}
+.p-step:last-child { border-right: none; padding-right: 0; }
+.p-step:not(:first-child) { padding-left: 36px; }
+.p-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px; font-weight: 300;
+  color: var(--sand-mid); line-height: 1; margin-bottom: 20px;
+  transition: color 0.35s;
+}
+.p-step:hover .p-num { color: var(--terra); }
+.p-step-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; font-weight: 400; color: var(--dark); margin-bottom: 12px;
+}
+.p-step-desc { font-size: 14px; font-weight: 300; color: var(--text-mid); line-height: 1.75; }
+.process-cta { text-align: center; }
+
+/* ============================================================
+   10. TESTIMONIOS (V1 dark editorial style)
+   ============================================================ */
+#testimonios {
+  background: var(--dark-mid); padding: 120px 0;
+  position: relative; overflow: hidden;
+}
+#testimonios::before {
+  content: '"';
+  position: absolute; top: -80px; left: -20px;
+  font-family: 'Cormorant Garamond', serif; font-size: 480px;
+  line-height: 1; color: rgba(255,255,255,0.025); pointer-events: none;
+}
+.testi-head {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: start; margin-bottom: 64px;
+}
+.google-pill {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 12px 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1); margin-bottom: 24px;
+}
+.g-rating-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px; font-weight: 300; color: #fff; line-height: 1;
+}
+.g-stars { color: #F9C23C; font-size: 14px; letter-spacing: 2px; }
+.g-count {
+  font-size: 11px; font-weight: 300;
+  color: rgba(248,243,237,0.4); margin-top: 2px;
+}
+.testi-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 2px; background: rgba(255,255,255,0.04);
+}
+.t-card {
+  padding: 40px; background: var(--dark-mid);
+  transition: background 0.3s;
+}
+.t-card:hover { background: rgba(255,255,255,0.04); }
+.t-card.featured { background: var(--terra); }
+.t-card.featured:hover { background: var(--terra-dk); }
+.t-stars { color: #F9C23C; font-size: 13px; margin-bottom: 20px; }
+.t-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 300; font-style: italic;
+  line-height: 1.65; color: rgba(248,243,237,0.88); margin-bottom: 28px;
+}
+.t-card.featured .t-quote { color: #fff; font-size: 26px; }
+.t-name {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold);
+}
+.t-card.featured .t-name { color: rgba(255,255,255,0.9); }
+.t-service {
+  font-size: 11px; font-weight: 300;
+  color: rgba(248,243,237,0.38); margin-top: 4px;
+}
+.t-card.featured .t-service { color: rgba(255,255,255,0.55); }
+
+/* ============================================================
+   11. FAQ
+   ============================================================ */
+#faq { padding: 120px 0; background: #fff; }
+.faq-header { text-align: center; margin-bottom: 64px; }
+.faq-list {
+  max-width: 800px; margin: 0 auto;
+  border: 1px solid var(--border);
+}
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item input[type="checkbox"] { display: none; }
+.faq-label {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 32px;
+  cursor: pointer; font-size: 15px; font-weight: 400;
+  color: var(--dark); transition: background 0.2s; user-select: none;
+}
+.faq-label:hover { background: var(--ivory); }
+.faq-icon {
+  width: 24px; height: 24px;
+  border: 1.5px solid var(--terra); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background 0.2s, transform 0.3s;
+}
+.faq-icon::after {
+  content: '+'; font-size: 16px; color: var(--terra); line-height: 1;
+}
+.faq-answer {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease; padding: 0 32px;
+}
+.faq-answer p {
+  font-size: 14px; color: var(--text-mid); line-height: 1.8; padding-bottom: 24px;
+}
+.faq-item input:checked ~ .faq-label .faq-icon { background: var(--terra); transform: rotate(45deg); }
+.faq-item input:checked ~ .faq-label .faq-icon::after { color: #fff; }
+.faq-item input:checked ~ .faq-answer { max-height: 200px; }
+.faq-item input:checked ~ .faq-label { background: var(--ivory); color: var(--terra); }
+
+/* ============================================================
+   12. INSTAGRAM
+   ============================================================ */
+#instagram { padding: 120px 0; background: var(--ivory); }
+.ig-header { text-align: center; margin-bottom: 48px; }
+.ig-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 48px); font-weight: 400; color: var(--dark);
+}
+.ig-handle { color: var(--terra); font-style: italic; }
+.ig-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 4px; margin-bottom: 40px;
+}
+.ig-cell {
+  aspect-ratio: 1; overflow: hidden;
+  position: relative; cursor: pointer;
+}
+.ig-cell::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(26,18,8,0);
+  transition: background 0.3s;
+}
+.ig-cell:hover::after { background: rgba(26,18,8,0.28); }
+.ig-c1 { background: linear-gradient(135deg, #d4a898, #e8c0b0); }
+.ig-c2 { background: linear-gradient(135deg, #c9b898, #ddd0b8); }
+.ig-c3 { background: linear-gradient(135deg, #b8a898, #ccc0b0); }
+.ig-c4 { background: linear-gradient(135deg, #c8b8a0, #e0d0b8); }
+.ig-c5 { background: linear-gradient(135deg, #d4c0a8, #e8d8c0); }
+.ig-c6 { background: linear-gradient(135deg, #c0a890, #d8c0a8); }
+.ig-cell-inner {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.ig-cell svg { width: 28px; height: 28px; opacity: 0.45; }
+.ig-footer { text-align: center; }
+
+/* ============================================================
+   13. MAPA Y CONTACTO
+   ============================================================ */
+#contacto { padding: 120px 0; background: var(--sand); }
+.contacto-header { text-align: center; margin-bottom: 64px; }
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+
+.mapa-placeholder {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  height: 460px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px; padding: 48px; text-align: center;
+}
+.mapa-pin {
+  width: 52px; height: 52px;
+  background: var(--terra);
+  border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 8px;
+}
+.mapa-pin::after {
+  content: ''; width: 20px; height: 20px;
+  background: var(--ivory); border-radius: 50%;
+  transform: rotate(45deg);
+}
+.mapa-dir {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; font-weight: 500; color: var(--dark); line-height: 1.5;
+}
+.mapa-sub { font-size: 13px; color: var(--text-mid); }
+.mapa-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--terra); margin-top: 8px;
+}
+
+.contacto-form-wrap h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 400; color: var(--dark); margin-bottom: 6px;
+}
+.contacto-form-wrap > p { font-size: 14px; color: var(--text-mid); margin-bottom: 28px; }
+.contacto-form { display: flex; flex-direction: column; gap: 16px; }
+.contacto-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ============================================================
+   14. CTA FINAL (V1 dark box style)
+   ============================================================ */
+#cta-final { padding: 80px 0 120px; }
+.cta-box {
+  background: var(--dark); padding: 96px;
+  display: grid; grid-template-columns: 1fr auto; gap: 80px;
+  align-items: center; position: relative; overflow: hidden;
+}
+.cta-box::before {
+  content: '';
+  position: absolute; bottom: -100px; right: -100px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(184,114,84,.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 4.5vw, 56px); font-weight: 300;
+  color: var(--ivory); line-height: 1.1; margin-bottom: 16px;
+}
+.cta-title em { font-style: italic; color: var(--gold); }
+.cta-sub {
+  font-size: 14px; font-weight: 300;
+  color: rgba(248,243,237,0.5); margin-bottom: 36px; max-width: 480px;
+}
+.cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.cta-info-list { margin-top: 32px; display: flex; flex-direction: column; gap: 10px; }
+.cta-info-item {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 13px; font-weight: 300;
+  color: rgba(248,243,237,0.45);
+}
+.cta-info-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--terra); flex-shrink: 0; }
+.cta-right { text-align: center; flex-shrink: 0; }
+.cta-phone-label {
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: rgba(248,243,237,0.35); margin-bottom: 12px;
+}
+.cta-phone {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3vw, 36px); font-weight: 300;
+  color: var(--ivory); display: block; margin-bottom: 8px; white-space: nowrap;
+  transition: color 0.2s;
+}
+.cta-phone:hover { color: var(--gold); }
+.cta-wa-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: #25D366; color: #fff;
+  padding: 16px 32px; margin-top: 24px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s; cursor: pointer; border: none;
+  width: 100%;
+}
+.cta-wa-btn:hover { background: #20b857; transform: translateY(-1px); }
+.cta-wa-btn svg { width: 18px; height: 18px; }
+
+/* ============================================================
+   15. FOOTER
+   ============================================================ */
+#footer { background: #110d05; padding: 64px 0 0; }
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr;
+  gap: 48px; padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo-img { height: 56px; width: auto; opacity: 0.85; margin-bottom: 16px; filter: brightness(0) invert(1); }
+.footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.8; max-width: 240px; }
+.footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a, .footer-links span { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.4; transition: color 0.2s; }
+.footer-links a:hover { color: var(--ivory); }
+.footer-social { display: flex; gap: 10px; margin-top: 4px; }
+.footer-social a {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.06); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.footer-social a:hover { background: var(--terra); }
+.footer-social svg { width: 16px; height: 16px; }
+.footer-bottom { padding: 24px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.22); }
+
+/* ============================================================
+   16. WHATSAPP FLOTANTE
+   ============================================================ */
+#wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 9980; }
+#wa-float a {
+  display: flex; align-items: center; justify-content: center;
+  width: 58px; height: 58px; background: #25D366; border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.42);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#wa-float a:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+#wa-float svg { width: 28px; height: 28px; }
+
+/* ============================================================
+   17. MOBILE STICKY BAR
+   ============================================================ */
+#mobile-bar {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 9981; background: var(--dark);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 12px 16px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.mb-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 13px; border-radius: 4px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  transition: background 0.2s;
+}
+.mb-call { background: rgba(255,255,255,0.1); color: var(--ivory); border: 1px solid rgba(255,255,255,0.2); }
+.mb-call:hover { background: rgba(255,255,255,0.18); }
+.mb-wa { background: #25D366; color: #fff; }
+.mb-wa:hover { background: #20b857; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .pq-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .lead-strip-inner { grid-template-columns: 1fr 1fr 1fr; }
+  .lead-strip-label { display: none; }
+}
+
+@media (max-width: 768px) {
+  :root { --header-h: 64px; }
+  .nav-links { display: none; }
+  .header-inner { padding: 0 24px; }
+  #hero { grid-template-columns: 1fr; height: auto; min-height: auto; }
+  .hero-left { padding: 80px 32px 64px; min-height: 60vh; }
+  .hero-right { height: 50vh; }
+  .lead-strip-inner { grid-template-columns: 1fr; }
+  .trust-inner { flex-wrap: nowrap; overflow-x: auto; padding: 0 16px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .oferta-grid { grid-template-columns: 1fr; gap: 40px; }
+  .pq-grid { grid-template-columns: 1fr; }
+  .process-head { grid-template-columns: 1fr; gap: 24px; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .testi-head { grid-template-columns: 1fr; gap: 24px; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .ig-grid { grid-template-columns: repeat(3, 1fr); }
+  .contacto-grid { grid-template-columns: 1fr; }
+  .cta-box { grid-template-columns: 1fr; padding: 56px 32px; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  #wa-float { bottom: 80px; }
+  #mobile-bar { display: grid; }
+  .container { padding: 0 24px; }
+}
+
+@media (max-width: 480px) {
+  .hero-left { padding: 64px 24px 48px; }
+  .hero-title { font-size: clamp(44px, 12vw, 62px); }
+  .lead-strip-inner { grid-template-columns: 1fr; }
+  .countdown { grid-template-columns: repeat(2, 1fr); }
+  .process-steps { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- 1. PROTO-BAR -->
+<div id="proto-bar">
+  AnyLopez · <strong>Prototipo V3</strong> · Fusión V1 + V2
+</div>
+
+<!-- 2. HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#">
+      <img src="images/logo-color-sin-fondo.png" alt="AnyLopez Clínica Estética" class="header-logo-img">
+    </a>
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#por-que">Nosotras</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-ctas">
+      <span class="header-google">
+        <svg width="12" height="12" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57C21.36 18.5 22.56 15.68 22.56 12.25z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="header-google-stars">★★★★★</span>
+        <span>5.0 · 216 reseñas</span>
+      </span>
+      <a href="#lead-strip" class="btn btn-terra btn-no-arrow" style="padding:10px 22px;font-size:10px;">Reservar cita</a>
+      <a href="https://wa.me/34656306167" target="_blank" class="header-wa-btn" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- 3. HERO (V1 style: dark left + real video right) -->
+<section id="hero">
+  <!-- Panel izquierdo: texto editorial oscuro -->
+  <div class="hero-left">
+    <div class="hero-bg-text" aria-hidden="true">35</div>
+    <div class="hero-eyebrow">Bienvenidos a AnyLopez · Benidorm</div>
+    <h1 class="hero-title">
+      Bienestar<br><em>en tu Piel</em>
+    </h1>
+    <p class="hero-desc">
+      Tratamientos integrales y personalizados con tecnología de última generación y más de 35 años de experiencia en el corazón de Benidorm.
+    </p>
+    <div class="hero-actions">
+      <a href="#lead-strip" class="btn btn-terra">Solicitar consulta gratuita</a>
+      <a href="#servicios" class="btn btn-outline-light btn-no-arrow">Ver tratamientos</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-hint-line"></div>
+      <span class="scroll-hint-label">Scroll</span>
+    </div>
+  </div>
+
+  <!-- Panel derecho: video real con sonido -->
+  <div class="hero-right">
+    <video
+      id="heroVideo"
+      class="hero-video"
+      src="images/InShot_20240813_141525723.mp4"
+      autoplay muted loop playsinline
+      poster="images/fotoscatalogoanylopez/radiofrecuenciafacial.png"
+    ></video>
+    <div class="hero-video-overlay"></div>
+
+    <!-- Botón mute/unmute -->
+    <button class="video-sound-btn" id="soundBtn" aria-label="Activar sonido">
+      <svg id="iconMuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+      </svg>
+      <svg id="iconSound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M15.54 8.46a5 5 0 010 7.07"/>
+        <path d="M19.07 4.93a10 10 0 010 14.14"/>
+      </svg>
+    </button>
+
+    <!-- Badge experiencia -->
+    <div class="hero-badge">
+      <div class="hero-badge-num">35+</div>
+      <div class="hero-badge-lbl">Años de experiencia</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. LEAD STRIP — Mini-form captación horizontal -->
+<section id="lead-strip">
+  <div class="container">
+    <div class="lead-strip-inner">
+      <div class="lead-strip-label">
+        <span>Consulta gratuita</span>
+        Te llamamos hoy
+      </div>
+      <div class="form-field">
+        <label for="ls-nombre">Nombre</label>
+        <input type="text" id="ls-nombre" placeholder="Tu nombre" required>
+      </div>
+      <div class="form-field">
+        <label for="ls-tel">Teléfono</label>
+        <input type="tel" id="ls-tel" placeholder="6XX XXX XXX" required>
+      </div>
+      <div class="form-field">
+        <label for="ls-trat">Tratamiento</label>
+        <select id="ls-trat">
+          <option value="">¿Qué te interesa?</option>
+          <option>INDIBA Radiofrecuencia</option>
+          <option>HIFU Ultrasonidos</option>
+          <option>Botox</option>
+          <option>Limpieza Facial</option>
+          <option>Dermapen</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-terra btn-no-arrow">
+        Solicitar consulta
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TRUST STRIP -->
+<section id="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-stars">★★★★★</div>
+      <span class="trust-text">5.0 Google · 216 reseñas</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-badge">INDIBA</span>
+      <span class="trust-text">Centro oficial</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-badge">HIFU</span>
+      <span class="trust-text">Tecnología avanzada</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-badge">DERMAPEN</span>
+      <span class="trust-text">Microagujas pro</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-badge">BOTOX</span>
+      <span class="trust-text">Tratamiento médico</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-text" style="color:rgba(255,255,255,0.7);">35 años · Benidorm</span>
+    </div>
+  </div>
+</section>
+
+<!-- 6. SERVICIOS (V1 style: fotos reales + overlay hover) -->
+<section id="servicios">
+  <div class="container">
+    <div class="services-intro-inner">
+      <div>
+        <span class="eyebrow rv">Especialidades</span>
+        <h2 class="section-title rv d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,64px);font-weight:400;">
+          Nuestros Tratamientos<br><em style="font-style:italic;color:var(--terra);">de Excelencia</em>
+        </h2>
+      </div>
+      <a href="#contacto" class="btn btn-outline rv d2 btn-no-arrow">Ver catálogo completo →</a>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card rv">
+      <div class="svc-placeholder svc-c1">
+        <img class="svc-card-img" src="images/fotoscatalogoanylopez/limpiezafacial.png" alt="Limpieza Facial" style="position:absolute;inset:0;" onerror="this.parentElement.classList.add('svc-c1')">
+      </div>
+      <div class="svc-overlay"></div>
+      <div class="svc-card-body">
+        <div class="svc-num">01</div>
+        <h3 class="svc-title">Limpieza<br>Facial</h3>
+        <p class="svc-desc">Limpieza profunda adaptada a cada tipo de piel con protocolos exclusivos para una renovación completa.</p>
+        <span class="svc-link">Ver tratamiento</span>
+      </div>
+    </div>
+
+    <div class="svc-card rv d1">
+      <div class="svc-placeholder svc-c2">
+        <img class="svc-card-img" src="images/fotoscatalogoanylopez/radiofrecuenciafacial.png" alt="INDIBA Radiofrecuencia" style="position:absolute;inset:0;" onerror="this.parentElement.classList.add('svc-c2')">
+      </div>
+      <div class="svc-overlay"></div>
+      <div class="svc-card-body">
+        <div class="svc-num">02</div>
+        <h3 class="svc-title">Radiofrecuencia<br><em>INDIBA</em></h3>
+        <p class="svc-desc">Tecnología exclusiva que estimula colágeno desde el interior para un efecto lifting natural y duradero.</p>
+        <span class="svc-link">Ver tratamiento</span>
+      </div>
+    </div>
+
+    <div class="svc-card rv d2">
+      <div class="svc-placeholder svc-c3">
+        <img class="svc-card-img" src="images/fotoscatalogoanylopez/ultherapyfacial.png" alt="HIFU Ultrasonidos" style="position:absolute;inset:0;" onerror="this.parentElement.classList.add('svc-c3')">
+      </div>
+      <div class="svc-overlay"></div>
+      <div class="svc-card-body">
+        <div class="svc-num">03</div>
+        <h3 class="svc-title">HIFU<br><em>Ultrasonidos</em></h3>
+        <p class="svc-desc">Lifting sin cirugía mediante ultrasonidos focalizados de alta intensidad con resultados desde la primera sesión.</p>
+        <span class="svc-link">Ver tratamiento</span>
+      </div>
+    </div>
+
+    <div class="svc-card rv">
+      <div class="svc-placeholder svc-c4">
+        <img class="svc-card-img" src="images/fotoscatalogoanylopez/botox.png" alt="Botox" style="position:absolute;inset:0;" onerror="this.parentElement.classList.add('svc-c4')">
+      </div>
+      <div class="svc-overlay"></div>
+      <div class="svc-card-body">
+        <div class="svc-num">04</div>
+        <h3 class="svc-title">Botox</h3>
+        <p class="svc-desc">Tratamiento médico para suavizar arrugas de expresión y obtener un aspecto natural y rejuvenecido.</p>
+        <span class="svc-link">Ver tratamiento</span>
+      </div>
+    </div>
+
+    <div class="svc-card rv d1">
+      <div class="svc-placeholder svc-c5">
+        <img class="svc-card-img" src="images/fotoscatalogoanylopez/dermapen.png" alt="Dermapen" style="position:absolute;inset:0;" onerror="this.parentElement.classList.add('svc-c5')">
+      </div>
+      <div class="svc-overlay"></div>
+      <div class="svc-card-body">
+        <div class="svc-num">05</div>
+        <h3 class="svc-title">Dermapen</h3>
+        <p class="svc-desc">Microagujas de precisión que estimulan el colágeno natural para mejorar textura, poros y manchas.</p>
+        <span class="svc-link">Ver tratamiento</span>
+      </div>
+    </div>
+
+    <div class="svc-card rv d2">
+      <div class="svc-placeholder svc-c6">
+        <img class="svc-card-img" src="images/fotoscatalogoanylopez/radiofrecuenciacorporal.png" alt="Radiofrecuencia Corporal" style="position:absolute;inset:0;" onerror="this.parentElement.classList.add('svc-c6')">
+      </div>
+      <div class="svc-overlay"></div>
+      <div class="svc-card-body">
+        <div class="svc-num">06</div>
+        <h3 class="svc-title">Radiofrecuencia<br>Corporal</h3>
+        <p class="svc-desc">Reafirmación y remodelación del cuerpo con tecnología de radiofrecuencia de última generación.</p>
+        <span class="svc-link">Ver tratamiento</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. OFERTA DEL MES -->
+<section id="oferta">
+  <div class="container">
+    <div class="oferta-grid">
+      <div>
+        <div class="oferta-pill rv">⚡ Oferta del mes</div>
+        <h2 class="oferta-title rv d1">INDIBA con <em>30% de descuento</em> este mes</h2>
+        <p class="oferta-desc rv d2">Aprovecha nuestro tratamiento estrella a precio especial. Radiofrecuencia profunda para reafirmar y rejuvenecer tu piel. Solo hasta fin de mes.</p>
+        <div class="oferta-plazas rv d3">⚡ Quedan solo 8 plazas disponibles</div>
+        <div class="oferta-actions rv d4">
+          <a href="https://wa.me/34656306167?text=Hola,%20me%20interesa%20la%20oferta%20INDIBA%20con%20descuento" target="_blank" class="btn-wa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Aprovechar oferta
+          </a>
+          <a href="#contacto" class="btn btn-outline-light btn-no-arrow">O escríbenos →</a>
+        </div>
+      </div>
+      <div class="countdown-box rv d2">
+        <span class="countdown-label">Tiempo restante hasta fin de mes</span>
+        <div class="countdown">
+          <div class="cd-unit"><span class="cd-number" id="cd-days">--</span><span class="cd-label">Días</span></div>
+          <div class="cd-unit"><span class="cd-number" id="cd-hours">--</span><span class="cd-label">Horas</span></div>
+          <div class="cd-unit"><span class="cd-number" id="cd-mins">--</span><span class="cd-label">Min</span></div>
+          <div class="cd-unit"><span class="cd-number" id="cd-secs">--</span><span class="cd-label">Seg</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. POR QUÉ ELEGIRNOS -->
+<section id="por-que">
+  <div class="container">
+    <div class="pq-header">
+      <span class="eyebrow rv">Por qué elegirnos</span>
+      <h2 class="pq-section-title rv d1">Comprometidas con<br><em style="font-style:italic;color:var(--terra);">tu bienestar</em></h2>
+    </div>
+    <div class="pq-grid">
+      <div class="pq-card rv">
+        <div class="pq-num">01</div>
+        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <h3 class="pq-title">35 años de experiencia</h3>
+        <p class="pq-desc">Más de tres décadas dedicadas a la estética avanzada en Benidorm. Conocemos tu piel mejor que nadie.</p>
+      </div>
+      <div class="pq-card rv d1">
+        <div class="pq-num">02</div>
+        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="pq-title">Tecnología certificada</h3>
+        <p class="pq-desc">Centro oficial INDIBA y HIFU con equipos de última generación y certificación profesional garantizada.</p>
+      </div>
+      <div class="pq-card rv d2">
+        <div class="pq-num">03</div>
+        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h3 class="pq-title">Atención personalizada</h3>
+        <p class="pq-desc">Cada tratamiento se adapta a tus necesidades específicas. Tu plan es único, igual que tú.</p>
+      </div>
+      <div class="pq-card rv d3">
+        <div class="pq-num">04</div>
+        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3 class="pq-title">Resultados garantizados</h3>
+        <p class="pq-desc">216 reseñas de 5 estrellas avalan nuestro trabajo. Resultados visibles desde las primeras sesiones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. PROCESO (V1 editorial style) -->
+<section id="proceso">
+  <div class="container">
+    <div class="process-head">
+      <div>
+        <span class="eyebrow rv">Cómo trabajamos</span>
+        <h2 class="rv d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:400;">Tu camino hacia<br><em style="font-style:italic;color:var(--terra);">los resultados</em></h2>
+      </div>
+      <p class="rv d2" style="font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.8;">Desde la primera consulta hasta el seguimiento final, estamos contigo en cada paso. Sin prisas, sin compromisos.</p>
+    </div>
+    <div class="process-steps">
+      <div class="p-step rv">
+        <div class="p-num">01</div>
+        <h3 class="p-step-title">Consulta gratuita</h3>
+        <p class="p-step-desc">Analizamos tu piel y escuchamos tus objetivos sin ningún compromiso.</p>
+      </div>
+      <div class="p-step rv d1">
+        <div class="p-num">02</div>
+        <h3 class="p-step-title">Plan personalizado</h3>
+        <p class="p-step-desc">Diseñamos el protocolo ideal: tratamientos, sesiones y calendario adaptados a ti.</p>
+      </div>
+      <div class="p-step rv d2">
+        <div class="p-num">03</div>
+        <h3 class="p-step-title">Tratamiento</h3>
+        <p class="p-step-desc">Aplicamos la tecnología con precisión y cuidado en cada sesión.</p>
+      </div>
+      <div class="p-step rv d3">
+        <div class="p-num">04</div>
+        <h3 class="p-step-title">Seguimiento</h3>
+        <p class="p-step-desc">Monitorizamos tu evolución y ajustamos el plan para mantener tus resultados.</p>
+      </div>
+    </div>
+    <div class="process-cta">
+      <a href="#lead-strip" class="btn btn-terra">Empieza hoy — consulta gratuita</a>
+    </div>
+  </div>
+</section>
+
+<!-- 10. TESTIMONIOS (V1 dark editorial style) -->
+<section id="testimonios">
+  <div class="container">
+    <div class="testi-head">
+      <div>
+        <div class="google-pill rv">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57C21.36 18.5 22.56 15.68 22.56 12.25z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <div>
+            <span class="g-rating-big">5.0</span>
+            <div class="g-stars">★★★★★</div>
+            <div class="g-count">216 reseñas verificadas</div>
+          </div>
+        </div>
+        <h2 class="rv d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;color:var(--ivory);line-height:1.1;">Lo que dicen<br><em style="font-style:italic;color:var(--gold);">nuestras clientas</em></h2>
+      </div>
+      <div class="rv d2" style="display:flex;flex-direction:column;justify-content:flex-end;gap:16px;">
+        <p style="font-size:15px;font-weight:300;color:rgba(248,243,237,0.5);line-height:1.8;">Más de 216 personas confían en nosotras para cuidar su piel. Su satisfacción es nuestro mayor logro.</p>
+        <a href="https://www.google.com/maps/search/AnyLopez+Clinica+Estetica+Benidorm" target="_blank" class="btn btn-outline-light btn-no-arrow" style="align-self:flex-start;">Ver todas las reseñas →</a>
+      </div>
+    </div>
+    <div class="testi-grid rv">
+      <div class="t-card featured">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Llevo años yendo a Anylopez y siempre salgo encantada. Son profesionales de verdad. El trato es excepcional y los resultados hablan por sí solos."</p>
+        <div class="t-name">Cris</div>
+        <div class="t-service">INDIBA Radiofrecuencia · Reseña Google</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Mi mujer y yo somos clientes desde hace tiempo. El trato es excelente y los resultados muy visibles. Totalmente recomendable."</p>
+        <div class="t-name">Pedro</div>
+        <div class="t-service">Reseña Google</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"La mejor clínica estética de Benidorm sin duda. INDIBA ha cambiado mi piel completamente. Profesionalidad garantizada."</p>
+        <div class="t-name">María</div>
+        <div class="t-service">INDIBA · Reseña Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <span class="eyebrow rv">Preguntas frecuentes</span>
+      <h2 class="rv d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:400;">Todo lo que necesitas<br><em style="font-style:italic;color:var(--terra);">saber</em></h2>
+    </div>
+    <div class="faq-list rv d2">
+      <div class="faq-item">
+        <input type="checkbox" id="faq1">
+        <label class="faq-label" for="faq1">¿Duele el tratamiento INDIBA?<div class="faq-icon"></div></label>
+        <div class="faq-answer"><p>No, el tratamiento INDIBA es completamente indoloro y muy relajante. Muchos pacientes lo describen como una sensación de calor agradable. Puedes incorporarte a tu actividad diaria inmediatamente después.</p></div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq2">
+        <label class="faq-label" for="faq2">¿Cuántas sesiones necesito?<div class="faq-icon"></div></label>
+        <div class="faq-answer"><p>Depende del tratamiento y tus objetivos. Generalmente trabajamos con protocolos de entre 6 y 10 sesiones para obtener resultados óptimos y duraderos. En la consulta inicial te indicaremos el número exacto para tu caso.</p></div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq3">
+        <label class="faq-label" for="faq3">¿Desde qué edad se puede tratar?<div class="faq-icon"></div></label>
+        <div class="faq-answer"><p>A partir de 18 años podemos realizar todos los tratamientos sin restricciones. Para menores de edad, algunos tratamientos requieren autorización del tutor legal.</p></div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq4">
+        <label class="faq-label" for="faq4">¿Cuánto duran los resultados?<div class="faq-icon"></div></label>
+        <div class="faq-answer"><p>Los resultados se mantienen entre 6 y 12 meses dependiendo del tratamiento, tipo de piel y cuidados en casa. Con sesiones de mantenimiento periódicas, los resultados se prolongan considerablemente.</p></div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq5">
+        <label class="faq-label" for="faq5">¿Hay que pedir cita previa?<div class="faq-icon"></div></label>
+        <div class="faq-answer"><p>Sí, trabajamos exclusivamente con cita previa para garantizar la atención personalizada que mereces. Puedes reservar por teléfono, WhatsApp o mediante el formulario de esta página.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. INSTAGRAM (nuevo en V2, mantenido en V3) -->
+<section id="instagram">
+  <div class="container">
+    <div class="ig-header rv">
+      <span class="eyebrow">Síguenos en Instagram</span>
+      <h2 class="ig-title">@<span class="ig-handle">anylopez.estetica</span></h2>
+    </div>
+    <div class="ig-grid rv d1">
+      <div class="ig-cell ig-c1"><div class="ig-cell-inner"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-cell ig-c2"><div class="ig-cell-inner"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-cell ig-c3"><div class="ig-cell-inner"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-cell ig-c4"><div class="ig-cell-inner"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-cell ig-c5"><div class="ig-cell-inner"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="ig-cell ig-c6"><div class="ig-cell-inner"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+    </div>
+    <div class="ig-footer rv d2">
+      <a href="https://www.instagram.com/anylopez.estetica/" target="_blank" class="btn btn-outline-terra btn-no-arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Seguirnos en Instagram →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 13. MAPA Y CONTACTO -->
+<section id="contacto">
+  <div class="container">
+    <div class="contacto-header">
+      <span class="eyebrow rv">Dónde estamos</span>
+      <h2 class="rv d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:400;">Visítanos en<br><em style="font-style:italic;color:var(--terra);">Benidorm</em></h2>
+    </div>
+    <div class="contacto-grid">
+      <div class="mapa-placeholder rv">
+        <div class="mapa-pin"></div>
+        <div class="mapa-dir">C/ Marqués de Comillas 4,<br>Local 6, Benidorm</div>
+        <p class="mapa-sub">Alicante, España</p>
+        <p class="mapa-sub" style="margin-top:8px;">Lun–Vie 10:00–14:00 / 16:00–20:00</p>
+        <a href="https://maps.google.com/?q=Marques+de+Comillas+4+Benidorm" target="_blank" class="mapa-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ver en Google Maps
+        </a>
+      </div>
+      <div class="rv d1">
+        <div class="contacto-form-wrap">
+          <h3>Escríbenos</h3>
+          <p>Responderemos en menos de 24 horas</p>
+          <div class="contacto-form">
+            <div class="form-field">
+              <label for="c-nombre">Nombre completo</label>
+              <input type="text" id="c-nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="c-email">Email</label>
+                <input type="email" id="c-email" placeholder="tu@email.com" required>
+              </div>
+              <div class="form-field">
+                <label for="c-tel">Teléfono</label>
+                <input type="tel" id="c-tel" placeholder="6XX XXX XXX">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="c-serv">Servicio de interés</label>
+              <select id="c-serv">
+                <option value="">Selecciona un tratamiento</option>
+                <option>INDIBA Radiofrecuencia</option>
+                <option>HIFU Ultrasonidos</option>
+                <option>Botox</option>
+                <option>Limpieza Facial</option>
+                <option>Dermapen</option>
+                <option>Radiofrecuencia Corporal</option>
+                <option>Otro / Consulta general</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="c-msg">Mensaje</label>
+              <textarea id="c-msg" rows="4" placeholder="Cuéntanos en qué podemos ayudarte..." style="background:var(--ivory);border:1px solid var(--border);padding:11px 14px;font-size:14px;color:var(--text);outline:none;transition:border-color 0.2s;width:100%;resize:vertical;font-family:'Jost',sans-serif;"></textarea>
+            </div>
+            <button type="button" class="btn btn-terra btn-no-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Enviar mensaje →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14. CTA FINAL (V1 dark box style) -->
+<section id="cta-final">
+  <div class="container">
+    <div class="cta-box">
+      <div>
+        <h2 class="cta-title rv">Tu piel merece<br><em>lo mejor.</em></h2>
+        <p class="cta-sub rv d1">Llámanos hoy y empieza tu transformación con una consulta gratuita sin compromiso.</p>
+        <div class="cta-actions rv d2">
+          <a href="#lead-strip" class="btn btn-terra">Solicitar consulta gratuita</a>
+          <a href="https://wa.me/34656306167?text=Hola%2C%20quisiera%20pedir%20una%20consulta%20gratuita" target="_blank" class="btn-wa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="cta-info-list rv d3">
+          <div class="cta-info-item"><div class="cta-info-dot"></div>C/ Marqués de Comillas 4, Local 6, Benidorm</div>
+          <div class="cta-info-item"><div class="cta-info-dot"></div>Lun–Vie 10:00–14:00 / 16:00–20:00</div>
+          <div class="cta-info-item"><div class="cta-info-dot"></div>info@anylopez.com</div>
+        </div>
+      </div>
+      <div class="cta-right rv d2">
+        <p class="cta-phone-label">Llámanos ahora</p>
+        <a href="tel:656306167" class="cta-phone">656 306 167</a>
+        <a href="tel:865710769" class="cta-phone">865 710 769</a>
+        <a href="https://wa.me/34656306167?text=Hola%2C%20quiero%20más%20información" target="_blank" class="cta-wa-btn">
+          <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 15. FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo-color-sin-fondo.png" alt="AnyLopez" class="footer-logo-img">
+        <p class="footer-desc">Clínica estética avanzada en Benidorm. 35 años de experiencia, tecnología INDIBA y HIFU certificada, atención personalizada.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="#">INDIBA Radiofrecuencia</a></li>
+          <li><a href="#">HIFU Ultrasonidos</a></li>
+          <li><a href="#">Botox</a></li>
+          <li><a href="#">Limpieza Facial</a></li>
+          <li><a href="#">Dermapen</a></li>
+          <li><a href="#">Radiofrecuencia Corporal</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contacto</div>
+        <ul class="footer-links">
+          <li><span>C/ Marqués de Comillas 4, Local 6</span></li>
+          <li><span>Benidorm, Alicante</span></li>
+          <li><a href="tel:656306167">656 306 167</a></li>
+          <li><a href="tel:865710769">865 710 769</a></li>
+          <li><a href="mailto:info@anylopez.com">info@anylopez.com</a></li>
+          <li><span>Lun–Vie 10:00–14:00 / 16:00–20:00</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Redes sociales</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/anylopez.estetica/" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/anylopezclinica" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/34656306167" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 AnyLopez Clínica Estética · C/ Marqués de Comillas 4, Local 6, Benidorm ·
+      <a href="mailto:info@anylopez.com" style="color:inherit;">info@anylopez.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- 16. WHATSAPP FLOTANTE -->
+<div id="wa-float">
+  <a href="https://wa.me/34656306167" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- 17. MOBILE STICKY BAR -->
+<div id="mobile-bar">
+  <a href="tel:656306167" class="mb-btn mb-call">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.2 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    📞 Llamar
+  </a>
+  <a href="https://wa.me/34656306167" target="_blank" class="mb-btn mb-wa">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    💬 WhatsApp
+  </a>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+// Scroll Reveal
+(function() {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.rv').forEach(function(el) { obs.observe(el); });
+})();
+
+// Header scrolled
+(function() {
+  var header = document.getElementById('header');
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+})();
+
+// Video sound toggle
+(function() {
+  var btn      = document.getElementById('soundBtn');
+  var video    = document.getElementById('heroVideo');
+  var iconMute = document.getElementById('iconMuted');
+  var iconSnd  = document.getElementById('iconSound');
+  if (!btn || !video) return;
+  btn.addEventListener('click', function() {
+    video.muted = !video.muted;
+    iconMute.style.display = video.muted ? '' : 'none';
+    iconSnd.style.display  = video.muted ? 'none' : '';
+  });
+})();
+
+// Countdown hasta fin de mes
+(function() {
+  function tick() {
+    var now = new Date();
+    var end = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+    var diff = Math.max(0, end - now);
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var el;
+    if (el = document.getElementById('cd-days'))  el.textContent = String(d).padStart(2,'0');
+    if (el = document.getElementById('cd-hours')) el.textContent = String(h).padStart(2,'0');
+    if (el = document.getElementById('cd-mins'))  el.textContent = String(m).padStart(2,'0');
+    if (el = document.getElementById('cd-secs'))  el.textContent = String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+
+</body>
+</html>

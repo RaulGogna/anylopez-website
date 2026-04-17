@@ -1,263 +1,461 @@
 ---
 layout: base.njk
 title: "AnyLopez — Clínica Estética Benidorm"
-description: "AnyLopez Clínica Estética — Tratamientos faciales, corporales y medicina estética en Benidorm. Radiofrecuencia, Ultherapy, Higienes Faciales y más."
-preloadHero: true
+description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, Limpieza facial y más en Benidorm. Más de 35 años de experiencia."
 ---
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <p class="hero-label">Bienvenidos a AnyLopez</p>
-        <h1>Bienestar<br>en tu Piel</h1>
-        <p>Realizamos tratamientos integrales y personalizados con productos de la más alta calidad y aparatología de última generación.</p>
-        <div class="hero-actions">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reserva tu Cita</a>
-          <a href="{{ '/services/' | url }}" class="btn btn-outline-white">Ver Servicios</a>
-        </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left rv">
+    <span class="hero-eyebrow">Benidorm · Desde 1989</span>
+    <h1 class="hero-title">Tu piel<br><em>merece</em><br>lo mejor.</h1>
+    <p class="hero-desc">Clínica estética con más de 35 años de experiencia. Tecnología certificada INDIBA &amp; HIFU. Atención completamente personalizada.</p>
+    <div class="hero-actions">
+      <a href="{{ '/contact/' | url }}" class="btn btn-terra">Reservar cita gratuita</a>
+      <a href="{{ '/services/' | url }}" class="btn btn-outline-light">Ver tratamientos</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span class="scroll-hint-line"></span></div>
+  </div>
+  <div class="hero-right">
+    <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
+      <source src="{{ '/images/InShot_20240813_141525723.mp4' | url }}" type="video/mp4" />
+    </video>
+    <div class="hero-video-overlay"></div>
+    <button class="video-sound-btn" id="soundToggle" aria-label="Activar sonido">
+      <svg class="icon-muted" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+      <svg class="icon-sound" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- LEAD STRIP -->
+<section class="lead-strip">
+  <div class="lead-strip-inner rv">
+    <p class="lead-strip-label">Consulta gratuita,<br>sin compromiso</p>
+    <form class="lead-form" action="https://formspree.io/f/xrerbgdw" method="POST" style="display:contents">
+      <input type="hidden" name="_subject" value="Consulta desde lead strip homepage" />
+      <input type="text" name="nombre" placeholder="Tu nombre" required aria-label="Nombre" />
+      <input type="tel" name="telefono" placeholder="Teléfono" required aria-label="Teléfono" />
+      <select name="tratamiento" aria-label="Tratamiento de interés">
+        <option value="" disabled selected>¿Qué te interesa?</option>
+        <option value="INDIBA">INDIBA Activ</option>
+        <option value="HIFU">HIFU Lifting</option>
+        <option value="Botox">Botox &amp; Rellenos</option>
+        <option value="Limpieza Facial">Limpieza Facial</option>
+        <option value="Dermapen">Dermapen</option>
+        <option value="Otro">Otro tratamiento</option>
+      </select>
+      <button type="submit" class="btn btn-terra">Solicitar cita</button>
+    </form>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.9)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span class="trust-text"><strong>5.0</strong> Google · 216 reseñas</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-badge">INDIBA</span><span class="trust-text"> Certified</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-badge">HIFU</span><span class="trust-text"> Certified</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-badge">Dermapen</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-text"><strong style="color:#fff">35 años</strong> de experiencia</span>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- SERVICIOS DESTACADOS -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Lo que ofrecemos</span>
-        <h2 class="section-title">Expertos en Tratamientos Faciales</h2>
-        <p class="section-subtitle">Cuida y consiente tu piel para lucir radiante con nuestros tratamientos especializados.</p>
-      </div>
-      <div class="grid-3">
-        <div class="service-icon-card">
-          <div class="service-icon">✨</div>
-          <h3>Higienes Faciales</h3>
-          <p>Limpia en profundidad tu piel y renuévala con nuestros protocolos adaptados a cada tipo de piel.</p>
-          <br>
-          <a href="{{ '/services/' | url }}" class="btn btn-outline" style="font-size:11px; padding:10px 20px;">Ver más</a>
-        </div>
-        <div class="service-icon-card">
-          <div class="service-icon">⚡</div>
-          <h3>Radiofrecuencia</h3>
-          <p>Activa la producción de colágeno y elastina en tu piel para lograr lucir joven y radiante.</p>
-          <br>
-          <a href="{{ '/radiofrecuencia/' | url }}" class="btn btn-outline" style="font-size:11px; padding:10px 20px;">Ver más</a>
-        </div>
-        <div class="service-icon-card">
-          <div class="service-icon">🌿</div>
-          <h3>Ultherapy</h3>
-          <p>Logra eliminar por completo la flacidez en tu piel con ultrasonido microfocalizado.</p>
-          <br>
-          <a href="{{ '/services/' | url }}" class="btn btn-outline" style="font-size:11px; padding:10px 20px;">Ver más</a>
-        </div>
-      </div>
+<!-- SERVICIOS DESTACADOS -->
+<section class="section services-section">
+  <div class="container">
+    <div class="section-header rv">
+      <span class="section-label">Nuestros tratamientos</span>
+      <h2 class="section-title">Estética de precisión</h2>
+      <p class="section-subtitle">Tecnología de vanguardia y manos expertas para transformar tu piel.</p>
     </div>
-  </section>
-
-  <!-- OFERTA DEL MES -->
-  <section class="section section--bg">
-    <div class="container">
-      <div class="offer-banner">
-        <div class="offer-badge">30%<br><span style="font-size:24px;">Descuento</span></div>
-        <div class="offer-text">
-          <h3>Oferta del Mes</h3>
-          <p>Si tienes flacidez y celulitis no dudes en disfrutar de nuestra oferta del mes con más del 30% de descuento en <strong>Radiofrecuencia Sistema Indiba</strong>.</p>
+    <div class="services-grid">
+      <article class="svc-card rv d1">
+        <img src="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.png' | url }}" alt="INDIBA Activ" class="svc-card-img" loading="lazy" />
+        <div class="svc-overlay"></div>
+        <div class="svc-card-body">
+          <span class="svc-num">Desde 60€</span>
+          <h3 class="svc-title">INDIBA Activ</h3>
+          <p class="svc-desc">Radiofrecuencia de alta precisión para reafirmar, drenar y regenerar la piel facial y corporal sin cirugía.</p>
+          <a href="{{ '/radiofrecuencia/' | url }}" class="svc-link">Descubrir</a>
         </div>
-        <a href="{{ '/contact/' | url }}" class="btn btn-outline-white">Aprovecha la oferta</a>
-      </div>
+      </article>
+      <article class="svc-card rv d2">
+        <img src="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.png' | url }}" alt="HIFU Lifting" class="svc-card-img" loading="lazy" />
+        <div class="svc-overlay"></div>
+        <div class="svc-card-body">
+          <span class="svc-num">Desde 120€</span>
+          <h3 class="svc-title">HIFU Lifting</h3>
+          <p class="svc-desc">Ultrasonido microfocalizado para tensar y elevar rostro y cuello. Efecto lifting sin bisturí ni recuperación.</p>
+          <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
+        </div>
+      </article>
+      <article class="svc-card rv d3">
+        <img src="{{ '/images/fotoscatalogoanylopez/botox.png' | url }}" alt="Botox y Rellenos" class="svc-card-img" loading="lazy" />
+        <div class="svc-overlay"></div>
+        <div class="svc-card-body">
+          <span class="svc-num">Desde 150€</span>
+          <h3 class="svc-title">Botox &amp; Rellenos</h3>
+          <p class="svc-desc">Tratamientos de medicina estética para suavizar arrugas y restaurar volúmenes de forma natural y armónica.</p>
+          <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
+        </div>
+      </article>
+      <article class="svc-card rv d1">
+        <img src="{{ '/images/fotoscatalogoanylopez/limpiezafacial.png' | url }}" alt="Limpieza Facial" class="svc-card-img" loading="lazy" />
+        <div class="svc-overlay"></div>
+        <div class="svc-card-body">
+          <span class="svc-num">Desde 45€</span>
+          <h3 class="svc-title">Limpieza Facial</h3>
+          <p class="svc-desc">Higiene profunda adaptada a cada tipo de piel. Extracción, exfoliación e hidratación profesional.</p>
+          <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
+        </div>
+      </article>
+      <article class="svc-card rv d2">
+        <img src="{{ '/images/fotoscatalogoanylopez/dermapen.png' | url }}" alt="Dermapen" class="svc-card-img" loading="lazy" />
+        <div class="svc-overlay"></div>
+        <div class="svc-card-body">
+          <span class="svc-num">Desde 80€</span>
+          <h3 class="svc-title">Dermapen</h3>
+          <p class="svc-desc">Microagujas que estimulan colágeno y elastina para reducir cicatrices, manchas y signos de edad.</p>
+          <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
+        </div>
+      </article>
+      <article class="svc-card rv d3">
+        <img src="{{ '/images/fotoscatalogoanylopez/rellenoacidohialuronico.png' | url }}" alt="Ácido Hialurónico" class="svc-card-img" loading="lazy" />
+        <div class="svc-overlay"></div>
+        <div class="svc-card-body">
+          <span class="svc-num">Desde 200€</span>
+          <h3 class="svc-title">Ácido Hialurónico</h3>
+          <p class="svc-desc">Relleno dérmico para labios, ojeras y surcos. Resultados inmediatos con aspecto completamente natural.</p>
+          <a href="{{ '/services/' | url }}" class="svc-link">Descubrir</a>
+        </div>
+      </article>
     </div>
-  </section>
-
-  <!-- CLÍNICA EN IMÁGENES -->
-  <section class="section" style="background: var(--bg-cream);">
-    <div class="container">
-      <div class="grid-2">
-        <div class="img-text-visual">
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/image-and-text-2.jpg"
-            alt="Interior Clínica AnyLopez Benidorm"
-            onerror="this.style.background='var(--bg-light)'; this.removeAttribute('src');"
-          />
-        </div>
-        <div style="display:flex; flex-direction:column; justify-content:center; gap:20px;">
-          <span class="section-label">La Clínica</span>
-          <h2 class="section-title">Tu espacio de bienestar en Benidorm</h2>
-          <p style="color:var(--text-mid);">Cada detalle de nuestro espacio ha sido pensado para ofrecerte la mejor experiencia. Un entorno cálido, elegante y profesional donde tu piel está en las mejores manos.</p>
-          <p style="color:var(--text-mid);">Más de 35 años de experiencia avalan cada tratamiento, siempre con tecnología de última generación y productos de la más alta calidad.</p>
-          <div>
-            <a href="{{ '/about/' | url }}" class="btn btn-primary">Conocer la clínica</a>
-          </div>
-        </div>
-      </div>
+    <div class="section-cta rv">
+      <a href="{{ '/services/' | url }}" class="btn btn-terra">Ver todos los tratamientos</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CÓMO FUNCIONA -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Proceso</span>
-        <h2 class="section-title">¿Cómo comenzamos?</h2>
-        <p class="section-subtitle">Tu camino hacia la piel que mereces en cuatro pasos sencillos.</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Cita de Diagnóstico</h3>
-          <p>Evaluamos tu piel y diseñamos un plan personalizado.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Preparación de Piel</h3>
-          <p>Acondicionamos tu piel para el tratamiento elegido.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Estimulación de Colágeno</h3>
-          <p>Aplicamos el tratamiento para activar la regeneración celular.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <h3>Formulación de Cosméticos</h3>
-          <p>Prescribimos los productos para mantener los resultados en casa.</p>
+<!-- OFERTA DEL MES -->
+<section class="oferta-section">
+  <div class="container">
+    <div class="oferta-grid rv">
+      <div>
+        <span class="oferta-pill">Oferta del mes</span>
+        <h2 class="oferta-title">INDIBA Activ<br><em>−30% este mes</em></h2>
+        <p class="oferta-desc">Trata la flacidez y la celulitis con la tecnología más avanzada. Resultados visibles desde la primera sesión.</p>
+        <p class="oferta-plazas">⚡ Solo 8 plazas disponibles</p>
+        <div class="oferta-actions">
+          <a href="https://wa.me/34656306167?text=Hola%2C%20quiero%20aprovechar%20la%20oferta%20de%20INDIBA%20-30%25." class="btn btn-terra" target="_blank" rel="noopener">Aprovechar oferta</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- RESEÑAS GOOGLE -->
-  <section class="section section--bg" id="reviewsSection">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Opiniones</span>
-        <h2 class="section-title">Lo que dicen nuestros pacientes</h2>
-      </div>
-
-      <div class="google-reviews-badge">
-        <svg class="google-logo" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <span class="google-rating">5.0</span>
-        <span class="google-stars" aria-label="5 estrellas">★★★★★</span>
-        <span class="google-count">216 reseñas verificadas</span>
-        <a href="https://www.google.com/search?sca_esv=089c91361eed6c29&hl=es&authuser=0&sxsrf=ANbL-n6cg7IYQEbtv-WD9B8rIOLzHCx38w:1776090354311&q=AnyLopez+Clinica+Est%C3%A9tica&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOXyK1RFfex9EIZ6L3iUSu5IcDdH9WdMYYgCg_1KIu00JNGF7xoTWsns8o7y56Hy4EBeck2c%3D&uds=ALYpb_n4BwUhK1uaN1SPx2VrIkEtLkZ3xVeAZMxA6EJEb8F3bmU1Jlm1g1jsaXz3F3aoc33X8aeIWEEmcyzOsCvQYsz1xD6GTinQllBXRXtuzIOg039fN_BgYe4kwSMb2j7dC0uhDOGU&sa=X&ved=2ahUKEwjOj6GVhOuTAxW_OfsDHTOcBOEQ3PALegQIGBAE" target="_blank" rel="noopener" class="google-link">Ver en Google →</a>
-      </div>
-
-      <div class="reviews-carousel" id="reviewsCarousel">
-        <div class="testimonial is-active">
-          <div class="testimonial-header">
-            <div class="stars">★★★★★</div>
-          </div>
-          <p>Mi cutis rejuvenció treinta años. Trato formidable y profesionalidad a prueba de dudas.</p>
-          <div class="testimonial-author">
-            <strong>Pedro</strong>
-            <span>Limpieza facial · Marzo 2026</span>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-header">
-            <div class="stars">★★★★★</div>
-          </div>
-          <p>Estoy muy satisfecha. No es la primera vez que he estado aquí. Me encantan los tratamientos, y todos son muy amables. Recomiendo.</p>
-          <div class="testimonial-author">
-            <strong>Eli</strong>
-            <span>Hilos espiculados · Abril 2026</span>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-header">
-            <div class="stars">★★★★★</div>
-          </div>
-          <p>Es un centro espectacular. Andrea es muy profesional, es de 10. Un trato personalizado que se nota desde el primer momento.</p>
-          <div class="testimonial-author">
-            <strong>Cris</strong>
-            <span>INDIBA facial · Enero 2026</span>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-header">
-            <div class="stars">★★★★★</div>
-          </div>
-          <p>Recomendado. Muy personalizado y eficaz con todos sus tratamientos, además de muy amables. Volveré sin duda.</p>
-          <div class="testimonial-author">
-            <strong>Rocío</strong>
-            <span>Limpieza facial · Diciembre 2025</span>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-header">
-            <div class="stars">★★★★★</div>
-          </div>
-          <p>Para mí los mejores en atención y calidad. Muy amables y profesionales. El resultado del tratamiento ha sido increíble.</p>
-          <div class="testimonial-author">
-            <strong>María</strong>
-            <span>Lifting de pestañas · Enero 2026</span>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-header">
-            <div class="stars">★★★★★</div>
-          </div>
-          <p>Muy atentos y puntuales. Nos atendieron a la hora acordada. El tratamiento INDIBA facial ha sido una maravilla.</p>
-          <div class="testimonial-author">
-            <strong>Andy</strong>
-            <span>INDIBA facial · Abril 2026</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-controls">
-        <button class="carousel-prev" aria-label="Anterior">&#8592;</button>
-        <div class="carousel-dots" id="carouselDots"></div>
-        <button class="carousel-next" aria-label="Siguiente">&#8594;</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURE STRIP -->
-  <div class="feature-strip">
-    <div class="container">
-      <div class="feature-strip-grid">
-        <div class="feature-strip-item">
-          <span class="fs-number">35+</span>
-          <span class="fs-label">Años de Experiencia</span>
-        </div>
-        <div class="feature-strip-item">
-          <span class="fs-number">500+</span>
-          <span class="fs-label">Clientes Satisfechas</span>
-        </div>
-        <div class="feature-strip-item">
-          <span class="fs-number">20+</span>
-          <span class="fs-label">Tratamientos</span>
-        </div>
-        <div class="feature-strip-item">
-          <span class="fs-number">100%</span>
-          <span class="fs-label">Personalizado</span>
+      <div class="countdown-box">
+        <span class="countdown-label">La oferta termina en</span>
+        <div class="countdown" id="countdown">
+          <div class="cd-unit"><span class="cd-number" id="cd-days">00</span><span class="cd-label">días</span></div>
+          <div class="cd-unit"><span class="cd-number" id="cd-hours">00</span><span class="cd-label">horas</span></div>
+          <div class="cd-unit"><span class="cd-number" id="cd-mins">00</span><span class="cd-label">min</span></div>
+          <div class="cd-unit"><span class="cd-number" id="cd-secs">00</span><span class="cd-label">seg</span></div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- GALERÍA FOTOGRÁFICA -->
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="https://anylopez.com/wp-content/uploads/2024/08/5.png" alt="Tratamiento estético" loading="lazy" onerror="this.parentElement.style.background='var(--bg-light)';" />
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="section porque-section">
+  <div class="container">
+    <div class="section-header rv">
+      <span class="section-label">¿Por qué AnyLopez?</span>
+      <h2 class="section-title">Nuestra diferencia</h2>
     </div>
-    <div class="gallery-item">
-      <img src="https://anylopez.com/wp-content/uploads/2024/08/6.png" alt="Tratamiento estético" loading="lazy" onerror="this.parentElement.style.background='var(--bg-light)';" />
-    </div>
-    <div class="gallery-item">
-      <img src="https://anylopez.com/wp-content/uploads/2024/08/7.png" alt="Tratamiento estético" loading="lazy" onerror="this.parentElement.style.background='var(--bg-light)';" />
-    </div>
-    <div class="gallery-item">
-      <img src="https://anylopez.com/wp-content/uploads/2024/08/8.png" alt="Tratamiento estético" loading="lazy" onerror="this.parentElement.style.background='var(--bg-light)';" />
+    <div class="porque-grid">
+      <div class="porque-card rv d1">
+        <div class="porque-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <h3>35 años de experiencia</h3>
+        <p>Desde 1989 transformando pieles en Benidorm con rigor, dedicación y resultados comprobados.</p>
+      </div>
+      <div class="porque-card rv d2">
+        <div class="porque-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <h3>Tecnología certificada</h3>
+        <p>Equipos INDIBA &amp; HIFU con certificación médica. Seguridad y eficacia respaldadas por la ciencia.</p>
+      </div>
+      <div class="porque-card rv d3">
+        <div class="porque-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3>Atención personalizada</h3>
+        <p>Cada tratamiento se diseña a medida para tus necesidades, objetivos y tipo de piel. Sin protocolos genéricos.</p>
+      </div>
+      <div class="porque-card rv d4">
+        <div class="porque-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+        </div>
+        <h3>Resultados garantizados</h3>
+        <p>216 reseñas de 5 estrellas en Google lo avalan. Si no estás satisfecha, buscamos la solución contigo.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- CTA FINAL -->
-  <section class="section section--dark">
-    <div class="container text-center">
-      <span class="section-label" style="color: var(--accent);">¿Lista para empezar?</span>
-      <h2 class="section-title" style="color:#fff; margin-bottom:16px;">Llámanos al 656 306 167</h2>
-      <p style="color:rgba(255,255,255,0.8); margin-bottom:32px; font-size:17px;">También puedes escribirnos a info@anylopez.com o visitarnos en Calle Marqués de Comillas 4 Local 6, Benidorm.</p>
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reserva tu Cita Ahora</a>
+<!-- PROCESO -->
+<section class="section proceso-section">
+  <div class="container">
+    <div class="section-header rv">
+      <span class="section-label">Cómo funciona</span>
+      <h2 class="section-title">Tu camino hacia la piel que mereces</h2>
     </div>
-  </section>
+    <div class="proceso-steps">
+      <div class="proceso-step rv d1">
+        <span class="p-num">01</span>
+        <h3>Consulta gratuita</h3>
+        <p>Analizamos tu piel y escuchamos tus objetivos sin compromiso.</p>
+      </div>
+      <div class="proceso-step rv d2">
+        <span class="p-num">02</span>
+        <h3>Plan personalizado</h3>
+        <p>Diseñamos un protocolo adaptado a tu piel, ritmo de vida y presupuesto.</p>
+      </div>
+      <div class="proceso-step rv d3">
+        <span class="p-num">03</span>
+        <h3>Tratamiento</h3>
+        <p>Aplicamos la tecnología más avanzada con precisión y cuidado experto.</p>
+      </div>
+      <div class="proceso-step rv d4">
+        <span class="p-num">04</span>
+        <h3>Seguimiento</h3>
+        <p>Te acompañamos para mantener y potenciar los resultados a largo plazo.</p>
+      </div>
+    </div>
+    <div class="section-cta rv">
+      <a href="{{ '/contact/' | url }}" class="btn btn-terra">Empieza hoy — consulta gratuita</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testi-section">
+  <div class="container">
+    <div class="section-header rv" style="color:#fff;">
+      <span class="section-label" style="color:var(--gold)">Opiniones reales</span>
+      <h2 class="section-title" style="color:#fff;">Lo que dicen nuestras clientas</h2>
+      <div class="testi-google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span style="color:var(--gold); font-weight:600;">5.0</span>
+        <span style="color:#FFD700;">★★★★★</span>
+        <span style="color:rgba(255,255,255,0.6); font-size:0.85rem;">216 reseñas verificadas</span>
+      </div>
+    </div>
+
+    <div class="reviews-carousel" id="reviewsCarousel">
+      <div class="testimonial is-active">
+        <div class="stars">★★★★★</div>
+        <p>«Es un centro espectacular. Andrea es muy profesional, es de 10. Un trato personalizado que se nota desde el primer momento.»</p>
+        <div class="testimonial-author">
+          <strong>Cris</strong>
+          <span>INDIBA facial · Enero 2026</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>«Mi cutis rejuvenció treinta años. Trato formidable y profesionalidad a prueba de dudas. Volveré sin ninguna duda.»</p>
+        <div class="testimonial-author">
+          <strong>Pedro</strong>
+          <span>Limpieza facial · Marzo 2026</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>«Para mí los mejores en atención y calidad. Muy amables y profesionales. El resultado del tratamiento ha sido increíble.»</p>
+        <div class="testimonial-author">
+          <strong>María</strong>
+          <span>Lifting de pestañas · Enero 2026</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>«Estoy muy satisfecha. Me encantan los tratamientos, y todos son muy amables. 100% recomendado.»</p>
+        <div class="testimonial-author">
+          <strong>Eli</strong>
+          <span>Hilos espiculados · Abril 2026</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>«Muy atentos y puntuales. El tratamiento INDIBA facial ha sido una maravilla. Repetiré sin dudarlo.»</p>
+        <div class="testimonial-author">
+          <strong>Andy</strong>
+          <span>INDIBA facial · Abril 2026</span>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-prev" aria-label="Anterior">&#8592;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-next" aria-label="Siguiente">&#8594;</button>
+    </div>
+    <div class="testi-footer rv">
+      <a href="https://www.google.com/search?q=AnyLopez+Clinica+Estetica+Benidorm&hl=es" target="_blank" rel="noopener" class="btn btn-outline-light">Ver 216 reseñas en Google →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="container">
+    <div class="section-header rv">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2 class="section-title">Todo lo que necesitas saber</h2>
+    </div>
+    <div class="faq-list rv">
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq1" class="faq-check" />
+        <label class="faq-label" for="faq1">
+          ¿Duele el tratamiento INDIBA?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </label>
+        <div class="faq-answer">
+          <p>No, el INDIBA Activ es completamente indoloro. Muchas clientas lo describen como una sensación de calor agradable y relajante. Es apto para todo tipo de pieles, incluyendo las más sensibles.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq2" class="faq-check" />
+        <label class="faq-label" for="faq2">
+          ¿Cuántas sesiones necesito?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </label>
+        <div class="faq-answer">
+          <p>Depende del tratamiento y del objetivo. Normalmente se recomiendan entre 6 y 10 sesiones para obtener resultados óptimos. En la consulta gratuita te diseñamos un plan personalizado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq3" class="faq-check" />
+        <label class="faq-label" for="faq3">
+          ¿Desde qué edad se puede tratar?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </label>
+        <div class="faq-answer">
+          <p>A partir de 18 años. Para menores de edad es necesaria la autorización y presencia de un tutor legal en la consulta inicial.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq4" class="faq-check" />
+        <label class="faq-label" for="faq4">
+          ¿Cuánto duran los resultados?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </label>
+        <div class="faq-answer">
+          <p>Los resultados varían según el tratamiento y los cuidados en casa, pero generalmente se mantienen entre 6 y 12 meses. Con sesiones de mantenimiento periódicas los resultados pueden ser permanentes.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq5" class="faq-check" />
+        <label class="faq-label" for="faq5">
+          ¿Hay que pedir cita previa?
+          <span class="faq-icon" aria-hidden="true"></span>
+        </label>
+        <div class="faq-answer">
+          <p>Sí, trabajamos exclusivamente con cita previa para garantizar la atención personalizada que cada clienta merece. Puedes reservar por teléfono, WhatsApp o a través del formulario de contacto.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="ig-section">
+  <div class="container">
+    <div class="ig-header rv">
+      <div>
+        <span class="section-label">Síguenos</span>
+        <h2 class="section-title">@anylopez.estetica</h2>
+      </div>
+      <a href="https://www.instagram.com/anylopez.estetica/" class="btn btn-terra" target="_blank" rel="noopener">Ver perfil →</a>
+    </div>
+    <div class="ig-grid rv">
+      <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c1" target="_blank" rel="noopener" aria-label="Instagram">
+        <div class="ig-cell-inner">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7ZM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c2" target="_blank" rel="noopener" aria-label="Instagram"></a>
+      <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c3" target="_blank" rel="noopener" aria-label="Instagram"></a>
+      <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c4" target="_blank" rel="noopener" aria-label="Instagram"></a>
+      <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c5" target="_blank" rel="noopener" aria-label="Instagram"></a>
+      <a href="https://www.instagram.com/anylopez.estetica/" class="ig-cell ig-c6" target="_blank" rel="noopener" aria-label="Instagram"></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box rv">
+      <div class="cta-text">
+        <span class="section-label" style="color:var(--gold)">¿Lista para empezar?</span>
+        <h2 class="cta-title">Tu primera consulta<br><em>es gratuita.</em></h2>
+        <p>Llámanos al <a href="tel:656306167" style="color:var(--gold); font-weight:600;">656 306 167</a> o escríbenos y te atendemos hoy mismo.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="{{ '/contact/' | url }}" class="btn btn-terra" style="font-size:1.1rem; padding:16px 36px;">Reservar cita →</a>
+        <a href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20consulta%20gratuita." class="btn btn-outline-light" target="_blank" rel="noopener">WhatsApp →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  /* ── Video sound toggle ── */
+  const video = document.querySelector('.hero-video');
+  const soundBtn = document.getElementById('soundToggle');
+  if (video && soundBtn) {
+    soundBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      soundBtn.querySelector('.icon-muted').style.display = video.muted ? '' : 'none';
+      soundBtn.querySelector('.icon-sound').style.display = video.muted ? 'none' : '';
+    });
+  }
+
+  /* ── Countdown fin de mes ── */
+  function updateCountdown() {
+    const now = new Date();
+    const end = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+    let diff = Math.max(0, end - now);
+    const days  = Math.floor(diff / 86400000); diff -= days  * 86400000;
+    const hours = Math.floor(diff / 3600000);  diff -= hours * 3600000;
+    const mins  = Math.floor(diff / 60000);    diff -= mins  * 60000;
+    const secs  = Math.floor(diff / 1000);
+    const pad = n => String(n).padStart(2, '0');
+    const el = (id) => document.getElementById(id);
+    if (el('cd-days'))  el('cd-days').textContent  = pad(days);
+    if (el('cd-hours')) el('cd-hours').textContent = pad(hours);
+    if (el('cd-mins'))  el('cd-mins').textContent  = pad(mins);
+    if (el('cd-secs'))  el('cd-secs').textContent  = pad(secs);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
