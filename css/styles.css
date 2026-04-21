@@ -241,8 +241,8 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 
 .hero-left {
   background: var(--dark);
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 0 72px 80px 72px;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 72px 80px 72px;
   position: relative; overflow: hidden;
 }
 .hero-bg-text {
