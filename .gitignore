@@ -1,4 +1,5 @@
 node_modules/
 _site/
-lighthouse-*.report.*
+lighthouse-*
 images/InShot_*.mp4
+images/hero-video.mp4
