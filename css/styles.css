@@ -1206,7 +1206,7 @@ button[type="submit"] {
   .menu-toggle { display: flex; }
 
   .hero { grid-template-columns: 1fr; height: auto; min-height: auto; }
-  .hero-left { padding: 64px 32px 64px; min-height: 65vh; }
+  .hero-left { padding: 80px 32px 64px; min-height: 65vh; justify-content: flex-start; }
   .hero-right { height: 50vh; }
 
   .lead-strip-inner { grid-template-columns: 1fr; }
@@ -1249,7 +1249,7 @@ button[type="submit"] {
 }
 
 @media (max-width: 480px) {
-  .hero-left { padding: 48px 20px 48px; }
+  .hero-left { padding: 72px 20px 40px; }
   .hero-title { font-size: clamp(44px, 12vw, 62px); }
   .container { padding: 0 20px; }
   .services-intro-wrap { padding-left: 20px; padding-right: 20px; }
