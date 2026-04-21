@@ -17,8 +17,8 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
     <div class="scroll-hint" aria-hidden="true"><span class="scroll-hint-line"></span></div>
   </div>
   <div class="hero-right">
+    <img src="{{ '/images/hero-poster.webp' | url }}" alt="" class="hero-poster" fetchpriority="high" decoding="sync" width="720" height="1280" aria-hidden="true" />
     <video muted loop playsinline class="hero-video" aria-hidden="true"
-           poster="{{ '/images/hero-poster.webp' | url }}"
            data-src="{{ '/images/hero-video-720.mp4' | url }}">
     </video>
     <div class="hero-video-overlay"></div>
@@ -581,16 +581,19 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
 
   /* ── Video: cargar tras window.load (no bloquea LCP) ── */
   const video = document.querySelector('.hero-video[data-src]');
+  const heroPoster = document.querySelector('.hero-poster');
   window.addEventListener('load', () => {
     if (!video) return;
     setTimeout(() => {
-      const src = video.dataset.src;
       const source = document.createElement('source');
-      source.src = src;
+      source.src = video.dataset.src;
       source.type = 'video/mp4';
       video.appendChild(source);
       video.load();
       video.play().catch(() => {});
+      video.addEventListener('playing', () => {
+        if (heroPoster) heroPoster.classList.add('hidden');
+      }, { once: true });
     }, 800);
   });
 
