@@ -7,7 +7,12 @@
   <title>{{ title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" /></noscript>
+  {% if page.url == "/" or page.url == "/anylopez-website/" %}
+  <link rel="preload" as="image" href="{{ '/images/hero-poster.webp' | url }}" type="image/webp" fetchpriority="high" />
+  {% endif %}
   <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
 </head>
 <body>
@@ -16,7 +21,10 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="{{ '/' | url }}" class="logo-link" aria-label="AnyLopez Clínica Estética">
-        <img src="{{ '/images/logo-color-sin-fondo.png' | url }}" alt="AnyLopez" class="logo-img" width="120" height="60" fetchpriority="high" />
+        <picture>
+          <source srcset="{{ '/images/logo-color-sin-fondo.webp' | url }}" type="image/webp">
+          <img src="{{ '/images/logo-color-sin-fondo.png' | url }}" alt="AnyLopez" class="logo-img" width="120" height="60" fetchpriority="high" decoding="async" />
+        </picture>
       </a>
 
       <nav class="nav-links" id="navMenu">
@@ -49,7 +57,10 @@
 
         <div class="footer-brand">
           <a href="{{ '/' | url }}" aria-label="AnyLopez">
-            <img src="{{ '/images/logo-color-sin-fondo.png' | url }}" alt="AnyLopez" class="footer-logo-img" width="140" height="70" />
+            <picture>
+              <source srcset="{{ '/images/logo-color-sin-fondo.webp' | url }}" type="image/webp">
+              <img src="{{ '/images/logo-color-sin-fondo.png' | url }}" alt="AnyLopez" class="footer-logo-img" width="140" height="70" loading="lazy" decoding="async" />
+            </picture>
           </a>
           <p>Clínica estética facial y corporal en Benidorm. Más de 35 años de experiencia con tecnología certificada INDIBA &amp; HIFU.</p>
           <div class="social-links">

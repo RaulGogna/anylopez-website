@@ -1,2 +1,5 @@
 node_modules/
 _site/
+lighthouse-*
+images/InShot_*.mp4
+images/hero-video.mp4

@@ -17,8 +17,9 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
     <div class="scroll-hint" aria-hidden="true"><span class="scroll-hint-line"></span></div>
   </div>
   <div class="hero-right">
-    <video autoplay muted loop playsinline preload="none" class="hero-video" aria-hidden="true">
-      <source src="{{ '/images/InShot_20240813_141525723.mp4' | url }}" type="video/mp4" />
+    <video muted loop playsinline class="hero-video" aria-hidden="true"
+           poster="{{ '/images/hero-poster.webp' | url }}"
+           data-src="{{ '/images/hero-video-720.mp4' | url }}">
     </video>
     <div class="hero-video-overlay"></div>
     <button class="video-sound-btn" id="soundToggle" aria-label="Activar sonido">
@@ -85,7 +86,10 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
     </div>
     <div class="services-grid">
       <article class="svc-card rv d1">
-        <img src="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.png' | url }}" alt="INDIBA Activ" class="svc-card-img" loading="lazy" />
+        <picture>
+          <source srcset="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.webp' | url }}" type="image/webp">
+          <img src="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.png' | url }}" alt="INDIBA Activ" class="svc-card-img" width="800" height="800" loading="lazy" decoding="async" />
+        </picture>
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
           <span class="svc-num">Consultar</span>
@@ -95,7 +99,10 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         </div>
       </article>
       <article class="svc-card rv d2">
-        <img src="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.png' | url }}" alt="HIFU Lifting" class="svc-card-img" loading="lazy" />
+        <picture>
+          <source srcset="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.webp' | url }}" type="image/webp">
+          <img src="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.png' | url }}" alt="HIFU Lifting" class="svc-card-img" width="800" height="800" loading="lazy" decoding="async" />
+        </picture>
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
           <span class="svc-num">Consultar</span>
@@ -105,7 +112,10 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         </div>
       </article>
       <article class="svc-card rv d3">
-        <img src="{{ '/images/fotoscatalogoanylopez/botox.png' | url }}" alt="Botox y Rellenos" class="svc-card-img" loading="lazy" />
+        <picture>
+          <source srcset="{{ '/images/fotoscatalogoanylopez/botox.webp' | url }}" type="image/webp">
+          <img src="{{ '/images/fotoscatalogoanylopez/botox.png' | url }}" alt="Botox y Rellenos" class="svc-card-img" width="800" height="800" loading="lazy" decoding="async" />
+        </picture>
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
           <span class="svc-num">Consultar</span>
@@ -115,7 +125,10 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         </div>
       </article>
       <article class="svc-card rv d1">
-        <img src="{{ '/images/fotoscatalogoanylopez/limpiezafacial.png' | url }}" alt="Limpieza Facial" class="svc-card-img" loading="lazy" />
+        <picture>
+          <source srcset="{{ '/images/fotoscatalogoanylopez/limpiezafacial.webp' | url }}" type="image/webp">
+          <img src="{{ '/images/fotoscatalogoanylopez/limpiezafacial.png' | url }}" alt="Limpieza Facial" class="svc-card-img" width="800" height="800" loading="lazy" decoding="async" />
+        </picture>
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
           <span class="svc-num">Consultar</span>
@@ -125,7 +138,10 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         </div>
       </article>
       <article class="svc-card rv d2">
-        <img src="{{ '/images/fotoscatalogoanylopez/dermapen.png' | url }}" alt="Dermapen" class="svc-card-img" loading="lazy" />
+        <picture>
+          <source srcset="{{ '/images/fotoscatalogoanylopez/dermapen.webp' | url }}" type="image/webp">
+          <img src="{{ '/images/fotoscatalogoanylopez/dermapen.png' | url }}" alt="Dermapen" class="svc-card-img" width="800" height="800" loading="lazy" decoding="async" />
+        </picture>
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
           <span class="svc-num">Consultar</span>
@@ -135,7 +151,10 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
         </div>
       </article>
       <article class="svc-card rv d3">
-        <img src="{{ '/images/fotoscatalogoanylopez/rellenoacidohialuronico.png' | url }}" alt="Ácido Hialurónico" class="svc-card-img" loading="lazy" />
+        <picture>
+          <source srcset="{{ '/images/fotoscatalogoanylopez/rellenoacidohialuronico.webp' | url }}" type="image/webp">
+          <img src="{{ '/images/fotoscatalogoanylopez/rellenoacidohialuronico.png' | url }}" alt="Ácido Hialurónico" class="svc-card-img" width="800" height="800" loading="lazy" decoding="async" />
+        </picture>
         <div class="svc-overlay"></div>
         <div class="svc-card-body">
           <span class="svc-num">Consultar</span>
@@ -560,8 +579,22 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
     });
   }
 
+  /* ── Video: cargar tras window.load (no bloquea LCP) ── */
+  const video = document.querySelector('.hero-video[data-src]');
+  window.addEventListener('load', () => {
+    if (!video) return;
+    setTimeout(() => {
+      const src = video.dataset.src;
+      const source = document.createElement('source');
+      source.src = src;
+      source.type = 'video/mp4';
+      video.appendChild(source);
+      video.load();
+      video.play().catch(() => {});
+    }, 800);
+  });
+
   /* ── Video sound toggle ── */
-  const video = document.querySelector('.hero-video');
   const soundBtn = document.getElementById('soundToggle');
   if (video && soundBtn) {
     soundBtn.addEventListener('click', () => {

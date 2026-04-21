@@ -39,10 +39,10 @@ anylopez-website/
 │   └── contact.njk            # Formspree xrerbgdw
 ├── css/styles.css             # Sistema de diseño V3 (ver .claude/css-variables.md)
 ├── images/
-│   ├── logo-color-sin-fondo.png
-│   ├── InShot_20240813_141525723.mp4   # Video hero homepage
-│   ├── fondo-web-2.png
-│   └── tratamientos/          # 22 imágenes en PNG + WebP
+│   ├── logo-color-sin-fondo.{png,webp}  # Logo (WebP para web, PNG fallback)
+│   ├── InShot_20240813_141525723.mp4    # Video hero homepage (pendiente optimizar)
+│   ├── fotoscatalogoanylopez/ # 6 fotos hero index.njk (PNG originales + WebP servidas)
+│   └── tratamientos/          # Imágenes catálogo services.njk (PNG + WebP, algunas con overlays — revisar calidad en aiplan futuro)
 ├── js/
 ├── .eleventy.js               # pathPrefix + byCategory filter
 └── scripts/optimize-images.sh # PNG→WebP batch (ver offload-deterministic)
@@ -70,7 +70,7 @@ Para CSS variables completas: `.claude/css-variables.md`
 ## Gotchas conocidos
 
 - `byCategory` filter está en `.eleventy.js` — necesario para `services.njk`
-- Las imágenes originales en `images/fotoscatalogoanylopez/` son screenshots de WhatsApp, **no usar directamente**; las imágenes limpias están en `images/tratamientos/`
+- `images/fotoscatalogoanylopez/` contiene las **fotos hero reales** usadas en la homepage (`src/index.njk`). Servir siempre la versión `.webp` vía `<picture>` con fallback PNG. Las imágenes de `images/tratamientos/` son las del catálogo (`services.njk`) y algunas tienen overlays/compresión — pendiente auditoría de calidad en aiplan futuro.
 - El video hero solo existe en formato `.mp4` (no WebP/optimizado)
 - Las imágenes de `images/tratamientos/` existen en PNG y WebP — usar WebP en HTML
 - `rel="noopener noreferrer"` en todos los `target="_blank"`
