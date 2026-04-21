@@ -592,6 +592,7 @@ description: "AnyLopez Clínica Estética — Tratamientos INDIBA, HIFU, Botox, 
       video.load();
       video.play().catch(() => {});
       video.addEventListener('playing', () => {
+        video.style.opacity = '0.92';
         if (heroPoster) heroPoster.classList.add('hidden');
       }, { once: true });
     }, 800);

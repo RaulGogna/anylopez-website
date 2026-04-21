@@ -296,13 +296,16 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 .hero-right { position: relative; overflow: hidden; background: var(--dark); }
 .hero-poster {
   position: absolute; inset: 0;
-  width: 100%; height: 100%; object-fit: cover; opacity: 0.9;
-  transition: opacity 0.4s;
+  width: 100%; height: 100%; object-fit: cover; opacity: 1;
+  transition: opacity 0.5s;
+  z-index: 1;
 }
 .hero-poster.hidden { opacity: 0; pointer-events: none; }
 .hero-video {
   position: absolute; inset: 0;
-  width: 100%; height: 100%; object-fit: cover; opacity: 0.9;
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity 0.5s;
+  z-index: 2;
 }
 .hero-video-overlay {
   position: absolute; inset: 0;
