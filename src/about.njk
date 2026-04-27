@@ -14,7 +14,7 @@ description: "Conoce la historia y el equipo de AnyLopez Clínica Estética en B
   </div>
 
   <!-- PAGE HERO -->
-  <section class="page-hero" style="position:relative; background-image:url('https://anylopez.com/wp-content/uploads/2024/08/fondo-web-2.png'); background-size:cover; background-position:center;">
+  <section class="page-hero" style="position:relative; background-image:url('{{ "/images/about/fondo-web-2.webp" | url }}'); background-size:cover; background-position:center;">
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(28,26,24,0.78) 0%,rgba(28,26,24,0.52) 100%);"></div>
     <div class="container" style="position:relative;z-index:2;">
       <span class="section-label" style="color:var(--accent)">Sobre Nosotros</span>
@@ -35,12 +35,16 @@ description: "Conoce la historia y el equipo de AnyLopez Clínica Estética en B
           <a href="{{ '/contact/' | url }}" class="btn btn-primary">Conoce la clínica</a>
         </div>
         <div style="position:relative;">
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/image-and-text-1.jpg"
-            alt="Clínica AnyLopez"
-            style="border-radius:16px; width:100%; object-fit:cover; height:420px;"
-            onerror="this.style.background='var(--bg-light)'; this.alt='Imagen no disponible';"
-          />
+          <picture>
+            <source srcset="{{ '/images/about/image-and-text-1.webp' | url }}" type="image/webp">
+            <img
+              src="{{ '/images/about/image-and-text-1.jpg' | url }}"
+              alt="Clínica AnyLopez"
+              loading="lazy"
+              decoding="async"
+              style="border-radius:16px; width:100%; object-fit:cover; height:420px;"
+            />
+          </picture>
         </div>
       </div>
     </div>
@@ -107,42 +111,58 @@ description: "Conoce la historia y el equipo de AnyLopez Clínica Estética en B
       </div>
       <div class="grid-4">
         <div class="team-card">
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/kumar-gafas-fondo-blanco-hombro.png"
-            alt="Gogna Kumar"
-            class="team-img"
-            onerror="this.src='https://anylopez.com/wp-content/uploads/2024/10/doctor.png';"
-          />
+          <picture>
+            <source srcset="{{ '/images/kumar-bata-sonrisa-elegancia.webp' | url }}" type="image/webp">
+            <img
+              src="{{ '/images/kumar-bata-sonrisa-elegancia.jpeg' | url }}"
+              alt="Gogna Kumar"
+              class="team-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <h3 class="team-name">Gogna Kumar</h3>
           <p class="team-role">Gerente General</p>
         </div>
         <div class="team-card">
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/team-member-3.jpg"
-            alt="Eilen Vanessa Cardenas"
-            class="team-img"
-            onerror="this.style.background='var(--bg-light)';"
-          />
+          <picture>
+            <source srcset="{{ '/images/about/team-member-3.webp' | url }}" type="image/webp">
+            <img
+              src="{{ '/images/about/team-member-3.jpg' | url }}"
+              alt="Eilen Vanessa Cardenas"
+              class="team-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <h3 class="team-name">Eilen Vanessa Cardenas</h3>
           <p class="team-role">Esteticista Cosmetóloga</p>
         </div>
         <div class="team-card">
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/doctor-2.png"
-            alt="Dr. Jose Rius"
-            class="team-img"
-            onerror="this.style.background='var(--bg-light)';"
-          />
+          <picture>
+            <source srcset="{{ '/images/about/doctor-2.webp' | url }}" type="image/webp">
+            <img
+              src="{{ '/images/about/doctor-2.png' | url }}"
+              alt="Dr. Jose Rius"
+              class="team-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <h3 class="team-name">Dr. Jose Rius</h3>
           <p class="team-role">Medicina Estética</p>
         </div>
         <div class="team-card">
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/team-member-5.jpg"
-            alt="Olga Topchevod"
-            class="team-img"
-            onerror="this.style.background='var(--bg-light)';"
-          />
+          <picture>
+            <source srcset="{{ '/images/about/team-member-5.webp' | url }}" type="image/webp">
+            <img
+              src="{{ '/images/about/team-member-5.jpg' | url }}"
+              alt="Olga Topchevod"
+              class="team-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <h3 class="team-name">Olga Topchevod</h3>
           <p class="team-role">Bióloga Especialista en Recuperación Celular</p>
         </div>
