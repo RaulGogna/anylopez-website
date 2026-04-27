@@ -1,0 +1,23 @@
+---
+layout: base.njk
+permalink: /404.html
+eleventyExcludeFromCollections: true
+title: "Página no encontrada — AnyLopez Clínica Estética"
+description: "Esta página no existe en AnyLopez. Vuelve al inicio o contacta con nosotras por WhatsApp."
+---
+
+<section class="section" style="text-align:center; padding: 96px 24px;">
+  <div class="container" style="max-width:640px;">
+    <p class="section-label" style="color: var(--accent); margin-bottom: 12px;">Error 404</p>
+    <h1 class="section-title" style="margin-bottom: 18px;">Esta página se ha perdido</h1>
+    <p style="font-size: 17px; color: var(--text-mid); margin-bottom: 36px; line-height: 1.6;">
+      No encontramos lo que buscabas, pero seguimos aquí para ayudarte.
+      ¿Te enseñamos nuestros tratamientos o prefieres pedir cita directamente?
+    </p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+      <a href="{{ '/' | url }}" class="btn btn-terra">Volver al inicio</a>
+      <a href="{{ '/radiofrecuencia/' | url }}" class="btn btn-outline-dark">Ver Pack INDIBA</a>
+      <a href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n." class="btn btn-accent" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>

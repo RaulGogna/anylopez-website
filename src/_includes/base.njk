@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{{ description }}" />
   <title>{{ title }}</title>
+
+  {%- set canonicalUrl = site.url + page.url -%}
+  {%- set ogImageRel = ogImage or "/images/hero-poster.webp" -%}
+  {%- set ogImageAbs = site.url + ogImageRel -%}
+  <link rel="canonical" href="{{ canonicalUrl }}" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+  <meta property="og:locale" content="{{ site.locale }}" />
+  <meta property="og:title" content="{{ ogTitle or title }}" />
+  <meta property="og:description" content="{{ ogDescription or description }}" />
+  <meta property="og:url" content="{{ canonicalUrl }}" />
+  <meta property="og:image" content="{{ ogImageAbs }}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ ogTitle or title }}" />
+  <meta name="twitter:description" content="{{ ogDescription or description }}" />
+  <meta name="twitter:image" content="{{ ogImageAbs }}" />
+  <meta name="theme-color" content="#7a3a1f" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" />
@@ -14,6 +37,113 @@
   <link rel="preload" as="image" href="{{ '/images/hero-poster.webp' | url }}" type="image/webp" fetchpriority="high" />
   {% endif %}
   <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
+
+  {%- set crumbs = {
+    "/about/": "Nosotras",
+    "/services/": "Servicios",
+    "/radiofrecuencia/": "INDIBA",
+    "/contact/": "Contacto"
+  } -%}
+  {%- if crumbs[page.url] -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "{{ site.url }}/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ crumbs[page.url] }}",
+        "item": "{{ site.url }}{{ page.url }}"
+      }
+    ]
+  }
+  </script>
+  {%- endif %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://raulgogna.github.io/anylopez-website/#clinic",
+        "name": "AnyLopez Clínica Estética",
+        "alternateName": "AnyLopez Benidorm",
+        "description": "Clínica estética facial y corporal en Benidorm con 35+ años de experiencia. Especialistas en radiofrecuencia INDIBA, HIFU, dermapen, depilación láser, botox y rellenos.",
+        "url": "https://raulgogna.github.io/anylopez-website/",
+        "logo": "https://raulgogna.github.io/anylopez-website/images/logo-color-sin-fondo.png",
+        "image": "https://raulgogna.github.io/anylopez-website/images/hero-poster.webp",
+        "telephone": "+34656306167",
+        "email": "info@anylopez.com",
+        "priceRange": "€€",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Cash, Credit Card, Bizum, Bank Transfer, Financing",
+        "medicalSpecialty": "Dermatologic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "C/ Marqués de Comillas 4, Local 6",
+          "addressLocality": "Benidorm",
+          "addressRegion": "Alicante",
+          "postalCode": "03501",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.53795,
+          "longitude": -0.13245
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "10:00",
+            "closes": "14:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "16:00",
+            "closes": "20:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "216",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "sameAs": [
+          "https://www.instagram.com/anylopez.estetica/",
+          "https://www.facebook.com/anylopezclinica",
+          "https://g.page/r/anylopez"
+        ],
+        "areaServed": [
+          { "@type": "City", "name": "Benidorm" },
+          { "@type": "City", "name": "Altea" },
+          { "@type": "City", "name": "Alfaz del Pi" },
+          { "@type": "City", "name": "La Nucía" },
+          { "@type": "City", "name": "Villajoyosa" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://raulgogna.github.io/anylopez-website/#website",
+        "url": "https://raulgogna.github.io/anylopez-website/",
+        "name": "AnyLopez Clínica Estética",
+        "publisher": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" },
+        "inLanguage": "es-ES"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
