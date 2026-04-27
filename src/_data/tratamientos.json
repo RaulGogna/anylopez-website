@@ -1,4 +1,5 @@
 {
+  "garantiaDefault": "Valoración personalizada sin compromiso. Si tras la primera sesión consideramos que no es el tratamiento adecuado para ti, te orientamos hacia la alternativa más eficaz para tu caso.",
   "categorias": [
     {
       "id": "limpiezas-faciales",
@@ -48,15 +49,31 @@
       "categoria": "limpiezas-faciales",
       "nombre": "Limpieza Facial GOLD",
       "descripcion": "Tratamiento esencial, delicado y efectivo, ideal para mantener la piel limpia, equilibrada y saludable sin procedimientos agresivos.",
-      "incluye": [
-        "Higiene facial profunda adaptada a todo tipo de piel",
-        "Extracción cuidadosa de comedones e impurezas",
-        "Eliminación de células muertas",
-        "Mejora de textura y apariencia",
-        "Previene obstrucción de poros"
+      "paraQuien": "Para quien busca un mantenimiento básico pero efectivo, y quiere prevenir imperfecciones antes de que aparezcan.",
+      "comoFunciona": [
+        "Higiene facial profunda adaptada a tu tipo de piel: limpieza, exfoliación suave y tonificación.",
+        "Extracción cuidadosa de comedones y puntos negros para liberar los poros.",
+        "Eliminación de células muertas para favorecer la renovación cutánea natural."
       ],
+      "beneficios": [
+        "Higiene facial profunda adaptada a todo tipo de piel",
+        "Extracción cuidadosa de comedones e impurezas acumuladas",
+        "Eliminación de células muertas",
+        "Mejora visible de textura y apariencia",
+        "Previene obstrucción de poros y futuras imperfecciones",
+        "Aporta frescura, suavidad y aspecto uniforme"
+      ],
+      "incluye": [
+        "Higiene facial profunda",
+        "Extracción de comedones",
+        "Eliminación de células muertas",
+        "Mejora textura y apariencia"
+      ],
+      "idealPara": "Mantenimiento regular o como primer paso antes de tratamientos más avanzados.",
+      "recomendaciones": "Repetir cada 4-6 semanas para mantener la piel limpia y equilibrada.",
       "duracion": "45 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "50 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "50 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "limpieza-facial-platinum",
@@ -64,16 +81,32 @@
       "categoria": "limpiezas-faciales",
       "nombre": "Limpieza Facial PLATINUM",
       "descripcion": "Tratamiento avanzado que combina limpieza profunda con una potente hidratación para devolverle a tu piel luminosidad, frescura y vitalidad.",
+      "paraQuien": "Para pieles deshidratadas o apagadas que necesitan recuperar luminosidad sin procedimientos invasivos.",
+      "comoFunciona": [
+        "Limpieza facial profunda elimina impurezas, exceso de grasa y residuos acumulados.",
+        "Exfoliación suave que favorece la renovación celular y mejora la textura.",
+        "Hidratación intensiva con ácido hialurónico que aporta efecto relleno y retiene la humedad.",
+        "Aplicación de vitamina C antioxidante para iluminar y combatir signos de fatiga."
+      ],
+      "beneficios": [
+        "Limpieza facial profunda",
+        "Exfoliación suave que renueva la piel",
+        "Hidratación intensiva con ácido hialurónico",
+        "Vitamina C antioxidante e iluminadora",
+        "Mejora elasticidad, suavidad y uniformidad del tono",
+        "Crema facial final que sella la hidratación"
+      ],
       "incluye": [
         "Limpieza facial profunda",
         "Exfoliación suave",
         "Hidratación intensiva con ácido hialurónico",
         "Aplicación de vitamina C antioxidante",
-        "Mejora elasticidad y uniformidad",
         "Crema facial final"
       ],
+      "idealPara": "Pieles deshidratadas, apagadas o con falta de luminosidad que buscan un efecto rejuvenecedor sin procedimientos invasivos.",
       "duracion": "60 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "75 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "75 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "limpieza-facial-detox",
@@ -81,15 +114,31 @@
       "categoria": "limpiezas-faciales",
       "nombre": "Limpieza Facial DETOX",
       "descripcion": "Higiene detox + peeling con nanoagujas. Innovador, purifica y revitaliza la piel desde el interior.",
+      "paraQuien": "Para pieles congestionadas, apagadas o con impurezas que necesitan un reset profundo.",
+      "comoFunciona": [
+        "Higiene facial profunda elimina toxinas, impurezas y exceso de grasa.",
+        "Peeling con nanoagujas estimula la regeneración celular sin dañar la piel.",
+        "Mascarilla detoxificante purifica, calma y equilibra la piel.",
+        "El conjunto mejora la absorción de activos y potencia los efectos posteriores."
+      ],
+      "beneficios": [
+        "Piel más luminosa y fresca desde la primera sesión",
+        "Textura más uniforme y suave",
+        "Poros más limpios y menos visibles",
+        "Estimula la renovación cutánea",
+        "Rostro revitalizado y con aspecto saludable"
+      ],
       "incluye": [
         "Higiene facial profunda",
         "Peeling con nanoagujas",
-        "Mejora la absorción de activos",
+        "Mejora absorción de activos",
         "Mascarilla detoxificante",
         "Renovación cutánea"
       ],
+      "idealPara": "Pieles apagadas, congestionadas, con impurezas o falta de vitalidad.",
       "duracion": "90 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "150 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "150 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "limpieza-facial-diamond",
@@ -97,6 +146,20 @@
       "categoria": "limpiezas-faciales",
       "nombre": "Limpieza Facial DIAMOND",
       "descripcion": "Tratamiento completo para lograr una piel limpia, hidratada y radiante.",
+      "paraQuien": "Para quien busca un cuidado completo que combine limpieza profunda, hidratación con aparatología y exfoliación intensiva.",
+      "comoFunciona": [
+        "Limpieza facial profunda preparatoria.",
+        "Hidratación con aparatología facial avanzada que potencia la absorción.",
+        "Aplicación de tres exfoliantes para renovar la piel a distintos niveles.",
+        "Serum nutritivo, mascarilla personalizada y crema final sellan el tratamiento."
+      ],
+      "beneficios": [
+        "Piel limpia, hidratada y radiante",
+        "Renovación celular profunda",
+        "Mejora visible de textura y luminosidad",
+        "Hidratación duradera",
+        "Resultado rejuvenecedor desde la primera sesión"
+      ],
       "incluye": [
         "Limpieza facial profunda",
         "Aparatología facial avanzada",
@@ -105,8 +168,10 @@
         "Mascarilla adaptada",
         "Crema hidratante duradera"
       ],
+      "idealPara": "Quien busca una piel más luminosa, suave y rejuvenecida con un tratamiento completo.",
       "duracion": "90 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "150 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "150 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "limpieza-facial-elite",
@@ -114,15 +179,32 @@
       "categoria": "limpiezas-faciales",
       "nombre": "Limpieza Facial ELITE",
       "descripcion": "Tratamiento exclusivo diseñado para renovar, hidratar y revitalizar tu piel al máximo nivel.",
+      "paraQuien": "Para quien busca el tratamiento más completo de la casa, con yesoterapia y aparatología premium.",
+      "comoFunciona": [
+        "Limpieza facial profunda preparatoria.",
+        "Hidratación intensiva con aparatología facial avanzada.",
+        "Exfoliantes premium que renuevan la piel en distintas capas.",
+        "Máscara de yesoterapia con efecto reafirmante y revitalizante.",
+        "Crema facial nutritiva y protector solar finalizan el ritual."
+      ],
+      "beneficios": [
+        "Renovación, hidratación y revitalización máxima",
+        "Efecto reafirmante visible",
+        "Piel radiante desde la primera sesión",
+        "Máscara de yesoterapia exclusiva",
+        "Cuidado premium completo"
+      ],
       "incluye": [
         "Limpieza facial profunda",
         "Aparatología facial avanzada",
         "Exfoliantes premium",
         "Máscara de yesoterapia reafirmante",
-        "Crema facial nutritiva y protección solar"
+        "Crema facial y protector solar"
       ],
+      "idealPara": "Quien quiere darle a su piel el cuidado más exclusivo y lucir un rostro radiante.",
       "duracion": "120 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "200 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "200 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "mesoterapia-virtual",
@@ -130,6 +212,19 @@
       "categoria": "tratamientos-faciales",
       "nombre": "Mesoterapia Virtual",
       "descripcion": "Tratamiento no invasivo diseñado para reducir grasa localizada y mejorar la apariencia de la piel sin agujas. Ampollas con cafeína y vitaminas aplicadas mediante tecnología virtual.",
+      "paraQuien": "Para quien tiene grasa localizada o flacidez ligera y busca mejorar la tonicidad sin agujas ni recuperación.",
+      "comoFunciona": [
+        "La cafeína acelera la circulación sanguínea y linfática, favoreciendo la movilización de grasa acumulada en los adipocitos.",
+        "Las vitaminas y nutrientes nutren, revitalizan y reafirman la piel desde el interior.",
+        "La tecnología virtual asegura la absorción de los activos sin dolor, estimulando el metabolismo natural para quemar la grasa liberada."
+      ],
+      "beneficios": [
+        "Reducción de grasa localizada",
+        "Mejora la firmeza y elasticidad de la piel",
+        "Estimula la circulación y el drenaje linfático",
+        "Tonifica y suaviza la piel",
+        "Procedimiento seguro, indoloro y sin tiempo de recuperación"
+      ],
       "incluye": [
         "Reducción de grasa localizada",
         "Mejora firmeza y elasticidad",
@@ -137,8 +232,10 @@
         "Tonifica y suaviza la piel",
         "Indoloro y sin tiempo de recuperación"
       ],
+      "idealPara": "Personas con grasa localizada, flacidez ligera o que buscan mejorar la tonicidad y apariencia de la piel sin procedimientos invasivos.",
       "duracion": "30 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "90 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "90 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "velo-colageno-puro",
@@ -146,6 +243,19 @@
       "categoria": "tratamientos-faciales",
       "nombre": "Velo de Colágeno Puro",
       "descripcion": "Tratamiento intensivo que aplica un velo de colágeno marino 100% puro para restaurar elasticidad, firmeza y efecto rejuvenecedor inmediato.",
+      "paraQuien": "Para pieles apagadas, deshidratadas o con signos de fatiga que necesitan un boost inmediato de hidratación y firmeza.",
+      "comoFunciona": [
+        "Se aplica un velo de colágeno puro 100% de origen marino directamente sobre el rostro.",
+        "El colágeno marino restaura la elasticidad y mejora la firmeza desde la primera sesión.",
+        "Favorece la regeneración celular y protege la piel frente a signos de fatiga y envejecimiento."
+      ],
+      "beneficios": [
+        "Hidratación profunda y duradera",
+        "Piel más suave, luminosa y saludable",
+        "Mejora la elasticidad y firmeza",
+        "Limpieza y revitalización de la piel",
+        "Efecto rejuvenecedor inmediato"
+      ],
       "incluye": [
         "Hidratación profunda y duradera",
         "Piel más suave, luminosa y saludable",
@@ -153,8 +263,10 @@
         "Revitalización visible",
         "Ideal para pieles apagadas o deshidratadas"
       ],
+      "idealPara": "Todo tipo de piel, especialmente apagadas, deshidratadas o con signos de cansancio.",
       "duracion": "90 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "150 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "150 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "dermapen-hidratacion",
@@ -162,18 +274,33 @@
       "categoria": "tratamientos-faciales",
       "nombre": "Dermapen + Hidratación Facial",
       "descripcion": "Tratamiento combinado que potencia la regeneración y revitalización de la piel con microagujas e hidratación profunda.",
-      "incluye": [
+      "paraQuien": "Para quien quiere reafirmar, suavizar líneas finas y rejuvenecer el rostro de manera natural y progresiva.",
+      "comoFunciona": [
+        "El Dermapen realiza micropunciones controladas sobre la piel.",
+        "Estas micropunciones estimulan los fibroblastos, responsables de producir colágeno y elastina.",
+        "Tras la limpieza facial profunda preparatoria, se aplica una hidratación intensiva con ácido hialurónico y vitaminas para potenciar la luminosidad y elasticidad."
+      ],
+      "beneficios": [
         "Piel más tersa, suave y rejuvenecida",
         "Reducción de líneas finas y arrugas",
-        "Mayor absorción de activos",
-        "Tono y textura uniforme",
+        "Mejora la absorción de activos hidratantes",
+        "Mejora textura, firmeza y tono",
+        "Rostro revitalizado y con apariencia saludable"
+      ],
+      "incluye": [
+        "Limpieza facial profunda",
+        "Micropunciones con Dermapen",
+        "Hidratación intensiva con ácido hialurónico y vitaminas",
+        "Mejora textura, firmeza y tono",
         "Rostro revitalizado"
       ],
+      "idealPara": "Pieles con líneas finas, falta de firmeza o necesidad de regeneración profunda.",
       "duracion": "75 minutos",
       "precios": [
         { "concepto": "Sesión", "precio": "150 €" },
         { "concepto": "Pack 6 sesiones", "precio": "800 €" }
-      ]
+      ],
+      "packDestacado": 1
     },
     {
       "slug": "dermapen-cicatrices",
@@ -181,15 +308,31 @@
       "categoria": "tratamientos-faciales",
       "nombre": "Dermapen Cicatrices",
       "descripcion": "Tratamiento avanzado con microagujas que estimula la regeneración natural de la piel, restaurando colágeno y elastina para mejorar cicatrices de acné.",
+      "paraQuien": "Para quien convive con cicatrices de acné o marcas superficiales y quiere recuperar una piel más uniforme.",
+      "comoFunciona": [
+        "El Dermapen realiza microperforaciones controladas en la piel.",
+        "Estas microperforaciones activan el proceso natural de reparación del cuerpo.",
+        "Se restaura colágeno y elastina, mejorando cicatrices existentes y fortaleciendo la estructura de la piel."
+      ],
+      "beneficios": [
+        "Reducción de cicatrices de acné y marcas superficiales",
+        "Estimulación de colágeno y elastina",
+        "Mejora la textura y suavidad de la piel",
+        "Tono más uniforme y aspecto rejuvenecido",
+        "Procedimiento mínimamente invasivo"
+      ],
       "incluye": [
         "Reducción de cicatrices de acné",
         "Estimulación de colágeno y elastina",
         "Mejora textura y suavidad",
-        "Tono más uniforme y rejuvenecido",
+        "Tono más uniforme",
         "Mínimamente invasivo"
       ],
+      "idealPara": "Pieles con cicatrices de acné o marcas superficiales, todo tipo de piel.",
+      "recomendaciones": "Pueden requerirse varias sesiones según la profundidad de las cicatrices. Es clave usar productos calmantes y protección solar después.",
       "duracion": "60 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "75 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "75 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "peeling-antimanchas",
@@ -197,6 +340,20 @@
       "categoria": "tratamientos-faciales",
       "nombre": "Peeling Anti-Manchas",
       "descripcion": "Tratamiento avanzado y no quirúrgico para eliminar manchas, mejorar la textura y rejuvenecer el rostro. Peeling químico despigmentante + radiofrecuencia.",
+      "paraQuien": "Para mujeres con manchas solares acumuladas, hiperpigmentación o tono desigual que buscan un cambio progresivo y duradero.",
+      "comoFunciona": [
+        "Peeling químico despigmentante con combinación de 4 ácidos que actúa eliminando capas superficiales de forma controlada.",
+        "Combinado con radiofrecuencia, que estimula la producción de colágeno y mejora la firmeza de la piel.",
+        "Programa de 4 sesiones completas que renuevan la piel a nivel profundo y estimulan la matriz dérmica."
+      ],
+      "beneficios": [
+        "Eliminación progresiva de manchas e imperfecciones",
+        "Renovación de la piel a nivel profundo",
+        "Estimulación de la matriz dérmica",
+        "Piel más uniforme y luminosa",
+        "Reducción visible de arrugas y manchas",
+        "Mejora la firmeza y elasticidad"
+      ],
       "incluye": [
         "4 sesiones completas",
         "Eliminación progresiva de manchas",
@@ -204,45 +361,81 @@
         "Estimulación de matriz dérmica",
         "Piel más uniforme y luminosa"
       ],
-      "duracion": "60 minutos/sesión",
+      "idealPara": "Manchas y tono desigual, arrugas faciales, cicatrices de acné, piel envejecida o con falta de firmeza.",
+      "duracion": "60 minutos por sesión",
       "precios": [
         { "concepto": "Sesión", "precio": "175 €" },
         { "concepto": "Pack 5 sesiones", "precio": "800 €" }
-      ]
+      ],
+      "packDestacado": 1
     },
     {
       "slug": "peeling-quimico-facial",
       "imagen": "peeling-quimico-facial.png",
       "categoria": "tratamientos-faciales",
       "nombre": "Peeling Químico Facial",
-      "descripcion": "Exfoliación profunda sin fricción, mediante solución química, elimina células dañadas y estimula regeneración celular.",
+      "descripcion": "Exfoliación profunda sin fricción mediante solución química. Elimina células dañadas y estimula la regeneración celular.",
+      "paraQuien": "Para quien quiere renovar la piel en profundidad, mejorar el tono y suavizar líneas finas en una sola sesión.",
+      "comoFunciona": [
+        "Limpieza previa del rostro para preparar la piel.",
+        "Aplicación de una solución química adaptada a tu tipo de piel, sin fricción mecánica.",
+        "Productos calmantes y protectores potencian los resultados y protegen la piel renovada."
+      ],
+      "beneficios": [
+        "Estimula la producción de colágeno",
+        "Mejora visiblemente la textura y el tono",
+        "Aporta luminosidad inmediata",
+        "Piel más suave, uniforme y rejuvenecida",
+        "Reduce poros dilatados"
+      ],
       "incluye": [
-        "Elimina hiperpigmentación y daño solar",
+        "Trata hiperpigmentación y daño solar",
         "Reduce cicatrices de acné",
         "Suaviza líneas de expresión",
         "Aporta luminosidad inmediata",
-        "Estimula producción de colágeno"
+        "Estimula colágeno"
       ],
+      "idealPara": "Manchas cutáneas, marcas de acné, líneas de expresión, poros dilatados, piel apagada o con signos de envejecimiento.",
+      "recomendaciones": "Tras el tratamiento puede aparecer un leve enrojecimiento o descamación (parte del proceso de renovación). Usar protector solar y seguir las recomendaciones.",
       "duracion": "45 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "150 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "150 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "dermaplaning-facial",
       "imagen": "dermaplaning-facial.png",
       "categoria": "tratamientos-faciales",
       "nombre": "Dermaplaning Facial",
-      "descripcion": "Técnica de exfoliación mecánica que elimina células muertas y vello facial, revelando una piel más luminosa y suave.",
+      "descripcion": "Técnica de exfoliación mecánica que elimina células muertas y vello facial fino, revelando una piel más luminosa y suave.",
+      "paraQuien": "Para quien quiere una piel inmediatamente más luminosa, suave al tacto y libre del vello fino que apaga el rostro.",
+      "comoFunciona": [
+        "Se utiliza un bisturí quirúrgico especial que se desliza suavemente sobre la piel limpia y seca.",
+        "Retira cuidadosamente las capas superficiales: células muertas, impurezas y vellus (vello fino que opaca la piel).",
+        "La piel se renueva de forma natural y los cosméticos posteriores penetran mejor, potenciando su eficacia."
+      ],
+      "beneficios": [
+        "Elimina células muertas y vello fino del rostro",
+        "Mejora la luminosidad y suavidad de la piel",
+        "Favorece la absorción de tratamientos posteriores",
+        "Uniformiza el tono y la textura",
+        "Procedimiento seguro, rápido y sin dolor",
+        "Apto para todo tipo de piel, incluso sensible"
+      ],
       "incluye": [
         "Elimina células muertas y vello facial",
         "Mejora luminosidad y suavidad",
         "Favorece absorción de tratamientos",
-        "Ideal para todo tipo de piel"
+        "Uniformiza tono y textura",
+        "Apto para piel sensible"
       ],
+      "idealPara": "Todo tipo de piel, incluso sensible, que busca luminosidad inmediata sin descamación.",
+      "recomendaciones": "Repetir cada 4-6 semanas. Evitar exposición solar directa inmediatamente después y aplicar protección solar.",
       "duracion": "45 minutos",
       "precios": [
         { "concepto": "Sesión", "precio": "50 €" },
         { "concepto": "Pack 10 sesiones", "precio": "400 €" }
-      ]
+      ],
+      "packDestacado": 1
     },
     {
       "slug": "anti-acne",
@@ -250,15 +443,31 @@
       "categoria": "tratamientos-faciales",
       "nombre": "Tratamiento Anti-Acné",
       "descripcion": "Cuidado facial especializado para combatir el acné, calmar la piel y prevenir futuras imperfecciones.",
+      "paraQuien": "Para adolescentes y adultos con acné activo, tendencia grasa o brotes inflamatorios recurrentes.",
+      "comoFunciona": [
+        "Limpieza facial profunda elimina impurezas, grasa y residuos acumulados en los poros.",
+        "Aplicación de activos específicos anti-acné que regulan el sebo y combaten bacterias.",
+        "Sesión de alta frecuencia que reduce inflamación, acelera la cicatrización y previene nuevos brotes."
+      ],
+      "beneficios": [
+        "Piel más limpia y purificada",
+        "Menos rojeces e inflamación",
+        "Tono más uniforme",
+        "Apariencia más fresca y saludable",
+        "Estimula renovación celular",
+        "Reduce puntos negros, espinillas y marcas recientes"
+      ],
       "incluye": [
         "Limpieza facial profunda",
-        "Activos específicos anti-acné",
-        "Alta frecuencia (anti-inflamatorio y cicatrizante)",
+        "Activos anti-acné específicos",
+        "Alta frecuencia anti-inflamatoria",
         "Reduce rojeces e inflamación",
-        "Ayuda a disminuir puntos negros y espinillas"
+        "Disminuye puntos negros y espinillas"
       ],
+      "idealPara": "Pieles con acné activo, tendencia grasa o inflamatoria.",
       "duracion": "45 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "75 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "75 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "laser-plasma-pen",
@@ -266,15 +475,32 @@
       "categoria": "tratamientos-faciales",
       "nombre": "Láser de Plasma Pen",
       "descripcion": "Procedimiento avanzado para pequeñas imperfecciones (verrugas, manchas, fibromas) mediante energía de plasma, sin cirugía.",
+      "paraQuien": "Para quien tiene pequeñas imperfecciones localizadas (pecas, manchas, verrugas) y quiere eliminarlas sin cirugía.",
+      "comoFunciona": [
+        "El láser genera un pequeño punto de energía en la superficie de la piel, creando una micro-quemadura controlada.",
+        "Esta acción precisa elimina la lesión sin dañar los tejidos circundantes.",
+        "Estimula la regeneración natural de la piel y la producción de colágeno, mejorando calidad y firmeza."
+      ],
+      "beneficios": [
+        "Elimina o minimiza imperfecciones de forma precisa",
+        "No daña los tejidos cercanos",
+        "Estimula la regeneración de la piel",
+        "Mejora la textura y apariencia general",
+        "Procedimiento no quirúrgico",
+        "Resultados visibles desde las primeras sesiones"
+      ],
       "incluye": [
         "Eliminación precisa de imperfecciones",
-        "Estimula regeneración de la piel",
+        "Estimula regeneración",
         "Mejora textura y apariencia",
-        "Procedimiento no quirúrgico",
-        "Resultados visibles desde primera sesión"
+        "No quirúrgico",
+        "Resultados desde la primera sesión"
       ],
+      "idealPara": "Pecas, manchas, verrugas, pequeñas lesiones cutáneas e imperfecciones localizadas.",
+      "recomendaciones": "Tras el tratamiento puede aparecer una leve costra temporal (proceso natural). No manipular la zona y usar protección solar.",
       "duracion": "30 minutos",
-      "precios": [{ "concepto": "Desde", "precio": "95 €" }]
+      "precios": [{ "concepto": "Desde", "precio": "95 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "ultherapy-hifu",
@@ -282,13 +508,28 @@
       "categoria": "lifting-antiaging",
       "nombre": "Ultherapy HIFU – Lifting sin Cirugía",
       "descripcion": "Ultrasonido focalizado que reafirma, moldea y rejuvenece. Estimula la producción natural de colágeno y elastina para lifting sin cirugía.",
-      "incluye": [
+      "paraQuien": "Para quien busca un efecto lifting natural sin quirófano, sin anestesia y sin tiempo de recuperación.",
+      "comoFunciona": [
+        "El ultrasonido focalizado actúa en las capas profundas de la piel, allí donde un cirujano corta para hacer un lifting.",
+        "Activa la regeneración natural y estimula la producción de colágeno y elastina desde el interior.",
+        "Los resultados son progresivos: mejora visible desde el primer mes y resultado óptimo a los 3-6 meses, con duración prolongada."
+      ],
+      "beneficios": [
         "Reafirmación visible sin cirugía",
         "Reducción de la flacidez",
-        "Efecto lifting natural y progresivo",
+        "Eliminación de grasa localizada",
         "Remodelación del contorno facial y corporal",
+        "Piel más firme, elástica y joven",
+        "Resultados duraderos y progresivos"
+      ],
+      "incluye": [
+        "Reafirmación visible sin cirugía",
+        "Reducción de flacidez",
+        "Efecto lifting natural",
+        "Remodelación de contornos",
         "Resultados duraderos"
       ],
+      "idealPara": "Personas con flacidez facial o corporal que buscan un lifting natural sin quirófano.",
       "duracion": "Variable según zona",
       "precios": [
         { "concepto": "Facial completo (120 min)", "precio": "350 €" },
@@ -300,7 +541,8 @@
         { "concepto": "Abdomen (60 min por zona)", "precio": "350 €" },
         { "concepto": "Medias piernas (45 min por zona)", "precio": "350 €" },
         { "concepto": "Tratamiento vaginal (45 min)", "precio": "495 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "radiofrecuencia-indiba",
@@ -308,172 +550,321 @@
       "categoria": "lifting-antiaging",
       "nombre": "Radiofrecuencia INDIBA – Anti-Edad",
       "descripcion": "Tecnología INDIBA que actúa en profundidad estimulando colágeno y elastina en las tres capas de la piel. Efecto lifting visible desde las primeras sesiones.",
-      "incluye": [
-        "Reafirma y tonifica rostro y cuerpo",
-        "Reduce flacidez y líneas de expresión",
-        "Mejora elasticidad y firmeza",
-        "Efecto lifting natural",
-        "Piel más luminosa y saludable"
+      "paraQuien": "Para quien tiene flacidez, pérdida de firmeza o signos de envejecimiento en rostro y cuerpo y quiere resultados progresivos sin invasión.",
+      "comoFunciona": [
+        "La radiofrecuencia INDIBA emite ondas de alta frecuencia que actúan simultáneamente en las tres capas de la piel.",
+        "Estimula la producción de colágeno y elastina, reafirmando los tejidos desde el interior.",
+        "Mejora la oxigenación celular y la microcirculación, traduciéndose en piel más luminosa y firme."
       ],
+      "beneficios": [
+        "Reafirma y tonifica rostro y cuerpo",
+        "Reduce flacidez, arrugas y líneas de expresión",
+        "Mejora la elasticidad y firmeza",
+        "Efecto lifting natural",
+        "Piel más luminosa, hidratada y saludable",
+        "Resultados progresivos y duraderos"
+      ],
+      "incluye": [
+        "Reafirma y tonifica",
+        "Reduce flacidez y líneas",
+        "Mejora elasticidad",
+        "Efecto lifting natural",
+        "Piel más luminosa"
+      ],
+      "idealPara": "Personas con flacidez, pérdida de firmeza o signos de envejecimiento en rostro y cuerpo.",
       "duracion": "45 minutos",
       "precios": [
         { "concepto": "Facial", "precio": "65 €" },
         { "concepto": "Corporal por zona", "precio": "65 €" },
         { "concepto": "Pack 5 sesiones (30 min)", "precio": "225 €" },
         { "concepto": "Pack 10 sesiones (30 min)", "precio": "400 €" }
-      ]
+      ],
+      "packDestacado": 3
     },
     {
       "slug": "botox-zona",
       "imagen": "botox-zona.png",
       "categoria": "inyectables",
       "nombre": "Bótox por Zona",
-      "descripcion": "Tratamiento estético mediante inyección de toxina botulínica para bloquear temporalmente la contracción muscular responsable de arrugas dinámicas.",
-      "incluye": [
+      "descripcion": "Inyección de toxina botulínica para bloquear temporalmente la contracción muscular responsable de arrugas dinámicas.",
+      "paraQuien": "Para quien quiere suavizar arrugas de la frente, entrecejo o patas de gallo manteniendo expresividad natural.",
+      "comoFunciona": [
+        "Se aplican microinyecciones precisas en los músculos que generan líneas de expresión.",
+        "La toxina botulínica bloquea temporalmente las señales nerviosas que contraen estos músculos.",
+        "Las arrugas se suavizan y se previene la formación de nuevas líneas. Efecto natural y relajado."
+      ],
+      "beneficios": [
         "Reduce arrugas dinámicas",
-        "Previene aparición de nuevas líneas",
+        "Previene la aparición de nuevas líneas de expresión",
         "Efecto natural y armonioso",
         "Procedimiento rápido y mínimamente invasivo",
-        "Resultados desde la primera sesión"
+        "Resultados visibles en pocos días"
       ],
+      "incluye": [
+        "Reduce arrugas dinámicas",
+        "Previene nuevas líneas",
+        "Efecto natural",
+        "Mínimamente invasivo",
+        "Resultados desde primera sesión"
+      ],
+      "idealPara": "Quien busca suavizar arrugas de frente, entrecejo o patas de gallo con un resultado natural.",
+      "recomendaciones": "Evitar masajes, saunas o ejercicio intenso en las primeras 24 horas tras la aplicación.",
       "duracion": "30 minutos",
-      "precios": [{ "concepto": "Por zona", "precio": "300 €" }]
+      "precios": [{ "concepto": "Por zona", "precio": "300 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "acido-hialuronico",
       "imagen": "acido-hialuronico.png",
       "categoria": "inyectables",
       "nombre": "Relleno con Ácido Hialurónico",
-      "descripcion": "Tratamiento estético mínimamente invasivo que remodela y rejuvenece contornos del rostro y labios, devolviendo volumen a zonas afectadas por el envejecimiento.",
-      "incluye": [
+      "descripcion": "Tratamiento mínimamente invasivo que remodela y rejuvenece contornos del rostro y labios, devolviendo volumen a zonas afectadas por el envejecimiento.",
+      "paraQuien": "Para quien quiere recuperar volumen en zonas concretas (surcos, labios) o redefinir contornos sin cirugía.",
+      "comoFunciona": [
+        "Se aplican inyecciones precisas de ácido hialurónico en zonas específicas según el objetivo.",
+        "El ácido hialurónico atrae agua e integra los tejidos, rellenando surcos o aumentando volumen de labios de forma natural.",
+        "Una revisión a los 15-30 días asegura el resultado óptimo y permite ajustar si es necesario."
+      ],
+      "beneficios": [
         "Remodela y define el rostro",
         "Devuelve volumen a zonas envejecidas",
         "Suaviza surcos y líneas de expresión",
         "Mejora la armonía facial",
+        "Procedimiento seguro y rápido",
         "Resultados visibles e inmediatos"
       ],
+      "incluye": [
+        "Remodela y define el rostro",
+        "Devuelve volumen",
+        "Suaviza surcos",
+        "Mejora armonía facial",
+        "Resultados inmediatos"
+      ],
+      "idealPara": "Quien quiere remodelar contornos, suavizar surcos o aumentar volumen de labios.",
+      "recomendaciones": "Evitar masajes intensos, sol prolongado o saunas durante los primeros días. Acudir a la revisión.",
       "duracion": "30 minutos",
       "precios": [
         { "concepto": "Surco nasogeniano", "precio": "300 €" },
         { "concepto": "Rinomodelación", "precio": "450 €" },
         { "concepto": "Labios", "precio": "350 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "hilos-tensores",
       "imagen": "hilos-tensores.png",
       "categoria": "inyectables",
       "nombre": "Hilos Tensores",
-      "descripcion": "Medicina estética que utiliza hilos finos para rejuvenecer y tensar el rostro de manera natural. Permiten mejorar la firmeza, suavizar arrugas y redefinir contornos faciales.",
-      "incluye": [
+      "descripcion": "Medicina estética que utiliza hilos finos para rejuvenecer y tensar el rostro de manera natural. Mejoran la firmeza, suavizan arrugas y redefinen contornos.",
+      "paraQuien": "Para quien tiene flacidez moderada, óvalo facial caído o quiere redefinir mandíbula sin cirugía.",
+      "comoFunciona": [
+        "Los hilos se insertan bajo la piel mediante técnicas precisas y mínimamente invasivas.",
+        "Proporcionan un efecto tensor inmediato al elevar y reposicionar los tejidos.",
+        "Estimulan la producción natural de colágeno, mejorando firmeza y calidad de la piel a largo plazo."
+      ],
+      "beneficios": [
         "Reafirma y tensa la piel",
         "Efecto lifting sin cirugía",
         "Estimula colágeno natural",
-        "Define contornos faciales",
-        "Resultados visibles desde primera sesión"
+        "Mejora la definición de contornos faciales",
+        "Eleva cejas y redefine mandíbula",
+        "Resultados visibles desde la primera sesión"
       ],
+      "incluye": [
+        "Reafirma y tensa",
+        "Lifting sin cirugía",
+        "Estimula colágeno",
+        "Define contornos",
+        "Resultados desde primera sesión"
+      ],
+      "idealPara": "Flacidez facial moderada, óvalo caído o quien busca efecto lifting sin quirófano.",
+      "recomendaciones": "Evitar masajes intensos y esfuerzos físicos durante los primeros días.",
       "duracion": "60 minutos",
       "precios": [
         { "concepto": "4 hilos espiculados", "precio": "395 €" },
         { "concepto": "6 hilos espiculados", "precio": "595 €" },
         { "concepto": "4 hilos espiculados + 12 hilos PDO", "precio": "495 €" },
         { "concepto": "6 hilos espiculados + 16 hilos PDO", "precio": "725 €" }
-      ]
+      ],
+      "packDestacado": 2
     },
     {
       "slug": "prp-plasma",
       "imagen": "prp-plasma.png",
       "categoria": "inyectables",
       "nombre": "Plasma Rico en Plaquetas (PRP)",
-      "descripcion": "Tratamiento avanzado de bioestimulación que utiliza tu propio plasma para rejuvenecer la piel de forma natural. Reactiva tu propia capacidad regenerativa.",
-      "incluye": [
-        "Regeneración y revitalización de la piel",
-        "Mejora firmeza y elasticidad",
-        "Reducción de arrugas finas",
-        "Estimula producción de colágeno",
-        "Resultados progresivos y duraderos"
+      "descripcion": "Bioestimulación que utiliza tu propio plasma para rejuvenecer la piel de forma natural. Reactiva tu propia capacidad regenerativa.",
+      "paraQuien": "Para quien quiere un tratamiento 100% natural usando su propio plasma, ideal para pieles con signos de envejecimiento o flacidez.",
+      "comoFunciona": [
+        "Se extrae una pequeña muestra de sangre del paciente.",
+        "Se centrifuga para separar el plasma rico en plaquetas, concentrando los factores de crecimiento.",
+        "Este concentrado se aplica en la piel, estimulando la regeneración celular y la producción de colágeno y elastina."
       ],
+      "beneficios": [
+        "Regeneración y revitalización de la piel",
+        "Mejora de la textura y luminosidad",
+        "Reducción de arrugas finas y líneas de expresión",
+        "Mayor firmeza y elasticidad",
+        "Piel más hidratada y rejuvenecida",
+        "Tratamiento natural con tu propio plasma"
+      ],
+      "incluye": [
+        "Tratamiento natural con tu propio plasma",
+        "Estimula colágeno y elastina",
+        "Mejora calidad y apariencia",
+        "Resultados progresivos",
+        "Procedimiento seguro y biocompatible"
+      ],
+      "idealPara": "Pieles con signos de envejecimiento, falta de luminosidad, flacidez o deshidratación.",
+      "recomendaciones": "Pueden requerirse varias sesiones según las necesidades de la piel. Seguir cuidados posteriores.",
       "duracion": "60 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "275 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "275 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "maderoterapia",
       "imagen": "maderoterapia.png",
       "categoria": "corporal",
       "nombre": "Maderoterapia",
-      "descripcion": "Masaje estético con utensilios de madera diseñados para estimular la circulación, tonificar y reafirmar la piel. Efectivo para zonas con grasa localizada, flacidez o celulitis.",
+      "descripcion": "Masaje estético con utensilios de madera diseñados para estimular la circulación, tonificar y reafirmar la piel. Efectivo para grasa localizada, flacidez o celulitis.",
+      "paraQuien": "Para quien tiene celulitis, flacidez corporal o grasa localizada y busca un tratamiento manual, no invasivo y relajante.",
+      "comoFunciona": [
+        "Mediante movimientos precisos con rodillos y otros utensilios de madera, se activa la circulación sanguínea y linfática.",
+        "Mejora la oxigenación de los tejidos y estimula la producción de colágeno y elastina.",
+        "Favorece la firmeza, elasticidad de la piel y la movilización de grasa acumulada."
+      ],
+      "beneficios": [
+        "Reduce grasa localizada y volumen abdominal",
+        "Mejora la circulación sanguínea y linfática",
+        "Tonifica y reafirma la piel",
+        "Estimula colágeno y elastina",
+        "Contribuye a la reducción de celulitis",
+        "Relajante y revitalizante"
+      ],
       "incluye": [
-        "Reduce grasa localizada y volumen",
+        "Reduce grasa localizada",
         "Mejora circulación y drenaje",
         "Tonifica y reafirma",
-        "Estimula colágeno y elastina",
-        "Contribuye a reducir celulitis"
+        "Estimula colágeno",
+        "Reduce celulitis"
       ],
+      "idealPara": "Personas con celulitis, flacidez corporal o grasa localizada en abdomen, glúteos o piernas.",
+      "recomendaciones": "Combinar con hidratación, alimentación equilibrada y ejercicio para potenciar resultados.",
       "duracion": "30 minutos",
       "precios": [
         { "concepto": "Sesión", "precio": "40 €" },
         { "concepto": "Pack 10 sesiones", "precio": "360 €" }
-      ]
+      ],
+      "packDestacado": 1
     },
     {
       "slug": "presoterapia",
       "imagen": "presoterapia.png",
       "categoria": "corporal",
       "nombre": "Presoterapia",
-      "descripcion": "Tratamiento no invasivo que aplica presión secuencial sobre piernas, abdomen y brazos para estimular el drenaje linfático, mejorar la circulación y favorecer la regeneración celular.",
-      "incluye": [
-        "Favorece eliminación de líquidos retenidos",
-        "Mejora elasticidad de la piel",
-        "Reduce sensación de piernas cansadas",
-        "Estimula circulación sanguínea",
-        "Cómodo, relajante, sin efectos adversos"
+      "descripcion": "Tratamiento no invasivo que aplica presión secuencial sobre piernas, abdomen y brazos para estimular el drenaje linfático, la circulación y la regeneración celular.",
+      "paraQuien": "Para personas con piernas cansadas, retención de líquidos, mala circulación o que pasan muchas horas de pie/sentadas.",
+      "comoFunciona": [
+        "Se aplican presiones de aire de forma secuencial sobre piernas, abdomen, brazos u otras áreas.",
+        "Estimula el drenaje linfático y la circulación sanguínea, ayudando a eliminar toxinas y líquidos retenidos.",
+        "Favorece la oxigenación de los tejidos y la elasticidad de la piel, dejando una sensación inmediata de ligereza."
       ],
+      "beneficios": [
+        "Favorece la eliminación de líquidos y toxinas",
+        "Mejora la elasticidad y firmeza de la piel",
+        "Reduce sensación de pesadez en piernas",
+        "Estimula la circulación y oxigenación",
+        "Procedimiento cómodo, seguro y sin dolor",
+        "Efecto relajante y revitalizante"
+      ],
+      "incluye": [
+        "Elimina líquidos retenidos",
+        "Mejora elasticidad",
+        "Reduce piernas cansadas",
+        "Estimula circulación",
+        "Cómodo y relajante"
+      ],
+      "idealPara": "Personas que buscan mejorar circulación, drenaje linfático y reducir retención de líquidos.",
       "duracion": "30 minutos",
       "precios": [
         { "concepto": "Sesión", "precio": "25 €" },
         { "concepto": "Pack 5 sesiones", "precio": "100 €" }
-      ]
+      ],
+      "packDestacado": 1
     },
     {
       "slug": "drenaje-linfatico-postop",
       "imagen": "drenaje-linfatico-postop.png",
       "categoria": "corporal",
       "nombre": "Drenaje Linfático Postoperatorio",
-      "descripcion": "Tratamiento especializado indicado tras intervenciones quirúrgicas para favorecer la recuperación, reducir inflamación y mejorar los resultados estéticos y médicos.",
+      "descripcion": "Tratamiento especializado tras intervenciones quirúrgicas para acelerar la recuperación, reducir inflamación y mejorar los resultados estéticos.",
+      "paraQuien": "Para pacientes recién operadas (lipo, abdominoplastia, aumento pecho, lifting) o personas con edemas y retención severa.",
+      "comoFunciona": [
+        "Se realizan maniobras suaves, lentas y precisas que estimulan el sistema linfático.",
+        "Ayuda a eliminar líquidos retenidos, toxinas y restos de anestesia acumulados tras la cirugía.",
+        "Favorece la desinflamación de los tejidos, previene fibrosis y mejora visiblemente la cicatrización."
+      ],
+      "beneficios": [
+        "Reduce la inflamación y edemas",
+        "Disminuye hematomas y molestias",
+        "Previene la fibrosis y endurecimientos",
+        "Mejora la cicatrización",
+        "Acelera la recuperación postoperatoria",
+        "Mejora los resultados estéticos finales"
+      ],
       "incluye": [
         "Reduce inflamación y edemas",
-        "Disminuye hematomas y molestias",
-        "Previene fibrosis y endurecimientos",
-        "Favorece cicatrización y recuperación",
-        "Acelera recuperación postoperatoria"
+        "Disminuye hematomas",
+        "Previene fibrosis",
+        "Mejora cicatrización",
+        "Acelera recuperación"
       ],
+      "idealPara": "Postoperatorios de liposucción, abdominoplastia, aumento de pecho, lifting u otros procedimientos estéticos. También para retención de líquidos o edemas.",
+      "recomendaciones": "Iniciar según indicación médica. Beber abundante agua y seguir las pautas profesionales para una recuperación óptima.",
       "duracion": "45 o 60 minutos",
       "precios": [
         { "concepto": "Sesión 45 min", "precio": "65 €" },
         { "concepto": "Sesión 60 min", "precio": "75 €" },
         { "concepto": "Pack 10 sesiones 45 min", "precio": "600 €" },
         { "concepto": "Pack 10 sesiones 60 min", "precio": "700 €" }
-      ]
+      ],
+      "packDestacado": 2
     },
     {
       "slug": "dolor-muscular-corporal",
       "imagen": "masajes.png",
       "categoria": "corporal",
       "nombre": "Di Adiós al Dolor Muscular",
-      "descripcion": "Tratamiento corporal no invasivo para hombros, espalda, zona lumbar, rodillas o piernas cansadas. Relaja musculatura, alivia tensión y favorece recuperación.",
-      "incluye": [
-        "Reduce dolor muscular desde primeras sesiones",
-        "Favorece relajación y bienestar",
-        "Mejora circulación y recuperación",
-        "Alivia piernas cansadas",
-        "Cómodo, no invasivo y seguro"
+      "descripcion": "Tratamiento corporal no invasivo para hombros, espalda, lumbar, rodillas o piernas cansadas. Relaja musculatura, alivia tensión y favorece recuperación.",
+      "paraQuien": "Para quien sufre dolor muscular crónico, tensión acumulada por trabajo o sobrecarga en zonas concretas del cuerpo.",
+      "comoFunciona": [
+        "Aplicación de técnicas combinadas que actúan sobre la musculatura tensa y los puntos de dolor.",
+        "Mejora la circulación local, oxigena los tejidos y relaja las fibras musculares contraídas.",
+        "Programa progresivo: con varias sesiones, el alivio se sostiene y la zona recupera funcionalidad."
       ],
+      "beneficios": [
+        "Reduce la sensación de dolor muscular desde las primeras sesiones",
+        "Favorece la relajación y el bienestar general",
+        "Mejora la circulación y la recuperación de las zonas tratadas",
+        "Alivia piernas cansadas o con sensación de pesadez",
+        "Procedimiento cómodo, no invasivo y seguro",
+        "Resultados visibles con varias sesiones"
+      ],
+      "incluye": [
+        "Reduce dolor muscular",
+        "Favorece relajación",
+        "Mejora circulación",
+        "Alivia piernas cansadas",
+        "Cómodo y seguro"
+      ],
+      "idealPara": "Personas con molestias musculares, tensión acumulada o sobrecarga en distintas zonas del cuerpo.",
       "duracion": "45 minutos por zona",
       "precios": [
         { "concepto": "Sesión corporal (45 min por zona)", "precio": "65 €" },
         { "concepto": "Pack 5 sesiones (30 min)", "precio": "225 €" },
         { "concepto": "Pack 10 sesiones (30 min)", "precio": "400 €" }
-      ]
+      ],
+      "packDestacado": 2
     },
     {
       "slug": "masaje-corporal",
@@ -481,13 +872,28 @@
       "categoria": "masajes",
       "nombre": "Masaje Corporal",
       "descripcion": "Tratamiento sobre el sistema músculo-esquelético para liberar tensiones, relajar músculos y producir un efecto sedante y revitalizante.",
-      "incluye": [
-        "Libera tensiones musculares",
-        "Relaja y tonifica el cuerpo",
-        "Estimula sistema nervioso (efecto sedante)",
-        "Mejora circulación sanguínea",
+      "paraQuien": "Para quien acumula tensión por trabajo, deporte o estrés y necesita una desconexión profunda del cuerpo y la mente.",
+      "comoFunciona": [
+        "Técnicas activas y precisas que trabajan sobre músculos, tendones y articulaciones.",
+        "Estimulan el sistema nervioso para promover la relajación profunda.",
+        "Mejoran la circulación sanguínea y tonifican la musculatura, dejando una sensación revitalizante."
+      ],
+      "beneficios": [
+        "Libera tensiones musculares acumuladas",
+        "Relaja y tonifica todo el cuerpo",
+        "Estimula el sistema nervioso (efecto sedante)",
+        "Mejora la circulación sanguínea",
         "Reduce estrés y fatiga corporal"
       ],
+      "incluye": [
+        "Libera tensiones",
+        "Relaja y tonifica",
+        "Efecto sedante",
+        "Mejora circulación",
+        "Reduce estrés"
+      ],
+      "idealPara": "Quien busca aliviar molestias, contracturas o desconectar y relajarse profundamente.",
+      "recomendaciones": "Complementar con hidratación y estiramientos suaves tras el masaje.",
       "duracion": "15 a 60 minutos",
       "precios": [
         { "concepto": "60 minutos", "precio": "85 €" },
@@ -495,7 +901,8 @@
         { "concepto": "45 minutos", "precio": "75 €" },
         { "concepto": "30 minutos", "precio": "55 €" },
         { "concepto": "15 minutos", "precio": "35 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "masaje-relajante",
@@ -503,58 +910,106 @@
       "categoria": "masajes",
       "nombre": "Masaje Relajante",
       "descripcion": "Masaje con aceites vegetales y esenciales 100% naturales. Ideal para aliviar estrés, tensión muscular y contracturas.",
-      "incluye": [
+      "paraQuien": "Para quien busca desconexión total, alivio del estrés y una experiencia sensorial relajante.",
+      "comoFunciona": [
+        "Movimientos amplios y precisos sobre piernas, brazos, cuello y espalda con aceites vegetales y esenciales naturales.",
+        "Liberan la tensión acumulada y proporcionan una sensación profunda de bienestar físico y mental.",
+        "Los aceites esenciales potencian el efecto relajante a través del olfato y el contacto con la piel."
+      ],
+      "beneficios": [
         "Alivia estrés, ansiedad y nerviosismo",
-        "Suaviza contracturas",
-        "Estimula circulación sanguínea",
-        "Facilita eliminación de toxinas",
+        "Suaviza contracturas y tensión muscular",
+        "Estimula la circulación sanguínea",
+        "Facilita la eliminación de toxinas",
         "Experiencia relajante y reconfortante"
       ],
+      "incluye": [
+        "Alivia estrés",
+        "Suaviza contracturas",
+        "Estimula circulación",
+        "Facilita eliminación de toxinas",
+        "Experiencia relajante"
+      ],
+      "idealPara": "Sesiones periódicas de relajación o después de jornadas intensas.",
+      "recomendaciones": "Combinar con hidratación y respiración profunda para potenciar los efectos.",
       "duracion": "15 a 60 minutos",
       "precios": [
         { "concepto": "60 minutos", "precio": "75 €" },
         { "concepto": "45 minutos", "precio": "65 €" },
         { "concepto": "30 minutos", "precio": "45 €" },
         { "concepto": "15 minutos", "precio": "25 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "masaje-craneo-facial-cervical",
       "imagen": "masajes.png",
       "categoria": "masajes",
       "nombre": "Masaje Cráneo-Facial-Cervical",
-      "descripcion": "Combina técnicas de masaje en cara, cabeza, cuello, trapecios y cuero cabelludo con aceites esenciales. Libera estrés y mejora movilidad de la zona.",
-      "incluye": [
+      "descripcion": "Combina técnicas de masaje en cara, cabeza, cuello, trapecios y cuero cabelludo con aceites esenciales. Libera estrés y mejora movilidad.",
+      "paraQuien": "Para quien sufre cefaleas tensionales, contracturas cervicales o estrés mental acumulado.",
+      "comoFunciona": [
+        "Movimientos suaves y precisos sobre rostro, cráneo, cervicales y hombros con aceites esenciales.",
+        "Liberan contracturas en zonas especialmente sensibles al estrés.",
+        "Estimulan la circulación local y mejoran la movilidad y el tono de la musculatura cervical."
+      ],
+      "beneficios": [
         "Libera estrés y ansiedad",
+        "Relaja la musculatura facial y cervical",
+        "Mejora la movilidad y el tono muscular",
+        "Alivia tensión en cuello, hombros y cabeza",
+        "Estimula circulación y bienestar general"
+      ],
+      "incluye": [
+        "Libera estrés",
         "Relaja musculatura facial y cervical",
-        "Mejora movilidad y tono muscular",
-        "Alivia tensión en cuello y hombros",
+        "Mejora movilidad",
+        "Alivia tensión",
         "Estimula circulación"
       ],
+      "idealPara": "Quien busca alivio de cefaleas tensionales, contracturas cervicales o estrés mental.",
+      "recomendaciones": "Evitar actividad física intensa inmediatamente después del masaje para prolongar los efectos.",
       "duracion": "30 o 45 minutos",
       "precios": [
         { "concepto": "30 minutos", "precio": "50 €" },
         { "concepto": "45 minutos", "precio": "75 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "masaje-podal",
       "imagen": "masajes.png",
       "categoria": "masajes",
       "nombre": "Masaje Podal",
-      "descripcion": "Masaje diseñado para revitalizar y aliviar los pies, mejorar la circulación y proporcionar bienestar en todo el cuerpo.",
+      "descripcion": "Masaje que revitaliza y alivia los pies, mejora la circulación y proporciona bienestar en todo el cuerpo.",
+      "paraQuien": "Para quien pasa muchas horas de pie, deportistas o personas con pies cansados/hinchados.",
+      "comoFunciona": [
+        "Técnicas de presión y movimientos precisos sobre toda la planta y empeine del pie.",
+        "Estimulan la circulación sanguínea y linfática local.",
+        "Sus efectos se extienden a piernas, brazos y cuello, generando una sensación general de relajación."
+      ],
+      "beneficios": [
+        "Revitaliza pies cansados",
+        "Mejora la circulación sanguínea y linfática",
+        "Alivia tensión en piernas, brazos y cuello",
+        "Relaja y disminuye el estrés",
+        "Estimula la energía y el bienestar general"
+      ],
       "incluye": [
         "Revitaliza pies cansados",
-        "Mejora circulación sanguínea y linfática",
-        "Alivia tensión en piernas, brazos y cuello",
-        "Relaja y disminuye estrés",
-        "Estimula energía y bienestar general"
+        "Mejora circulación",
+        "Alivia tensión en piernas",
+        "Relaja",
+        "Estimula bienestar general"
       ],
+      "idealPara": "Personas que pasan muchas horas de pie, deportistas o pies hinchados.",
+      "recomendaciones": "Realizar de forma regular para mantener la circulación activa. Combinar con hidratación y estiramientos.",
       "duracion": "30 o 45 minutos",
       "precios": [
         { "concepto": "45 minutos", "precio": "65 €" },
         { "concepto": "30 minutos", "precio": "45 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "masaje-piernas-cansadas",
@@ -562,18 +1017,34 @@
       "categoria": "masajes",
       "nombre": "Masaje Piernas Cansadas",
       "descripcion": "Masaje especializado para aliviar piernas cansadas, pesadas o hinchadas. Estimula circulación y drenaje linfático.",
-      "incluye": [
-        "Alivia sensación de piernas cansadas",
-        "Reduce hinchazón y edemas",
-        "Mejora circulación sanguínea y linfática",
-        "Favorece eliminación de toxinas",
-        "Relaja y tonifica piernas"
+      "paraQuien": "Para mujeres con retención, varices ligeras, embarazadas o personas con sensación de pesadez crónica.",
+      "comoFunciona": [
+        "Movimientos rítmicos y precisos sobre toda la pierna, desde el tobillo hacia la cadera.",
+        "Promueven la eliminación de líquidos retenidos y mejoran el retorno venoso y linfático.",
+        "Reducen la sensación de pesadez e hinchazón, dejando las piernas inmediatamente más ligeras."
       ],
+      "beneficios": [
+        "Alivia la sensación de piernas cansadas",
+        "Reduce hinchazón y edemas",
+        "Mejora la circulación sanguínea y linfática",
+        "Favorece la eliminación de toxinas",
+        "Relaja y tonifica los músculos de las piernas"
+      ],
+      "incluye": [
+        "Alivia piernas cansadas",
+        "Reduce hinchazón",
+        "Mejora circulación",
+        "Elimina toxinas",
+        "Relaja y tonifica"
+      ],
+      "idealPara": "Mujeres con retención, embarazadas, personas con pesadez crónica o que pasan muchas horas sentadas.",
+      "recomendaciones": "Hidratarse, caminar y elevar las piernas después del masaje para mantener resultados.",
       "duracion": "30 o 45 minutos",
       "precios": [
         { "concepto": "45 minutos", "precio": "65 €" },
         { "concepto": "30 minutos", "precio": "45 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "masaje-aloe-vera",
@@ -581,15 +1052,31 @@
       "categoria": "masajes",
       "nombre": "Masaje Hidratante con Aloe Vera",
       "descripcion": "Envoltura y masaje corporal con aloe vera puro para hidratar, calmar y regenerar la piel. Ideal para pieles sensibilizadas, secas o tras exposición solar.",
-      "incluye": [
-        "Hidrata profundamente la piel",
-        "Calma enrojecimientos",
-        "Favorece regeneración cutánea",
-        "Relaja y suaviza los músculos",
-        "Recupera la piel tras exposición solar"
+      "paraQuien": "Para pieles sensibilizadas, secas, tras exposición solar intensa o con tirantez generalizada.",
+      "comoFunciona": [
+        "Se aplica una envoltura con Aloe Vera puro sobre todo el cuerpo, aprovechando sus propiedades calmantes y regeneradoras.",
+        "Posteriormente, se realiza un masaje que facilita la absorción del aloe.",
+        "Mejora la circulación y restaura el equilibrio natural de la piel."
       ],
+      "beneficios": [
+        "Hidrata profundamente la piel",
+        "Calma enrojecimientos y sensibilidad",
+        "Favorece la regeneración cutánea",
+        "Relaja y suaviza los músculos",
+        "Recupera el estado natural de la piel tras la exposición solar"
+      ],
+      "incluye": [
+        "Hidratación profunda",
+        "Calma enrojecimientos",
+        "Regeneración cutánea",
+        "Relaja músculos",
+        "Recupera tras el sol"
+      ],
+      "idealPara": "Pieles secas, irritadas o tras exposición solar intensa.",
+      "recomendaciones": "Complementar con protección solar y cuidados hidratantes diarios.",
       "duracion": "45 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "75 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "75 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "masaje-facial-colageno",
@@ -597,15 +1084,31 @@
       "categoria": "masajes",
       "nombre": "Masaje Facial con Colágeno",
       "descripcion": "Masaje profesional con sérum de colágeno marino. Ideal para pieles maduras o deshidratadas, aporta hidratación profunda y efecto anti-envejecimiento.",
-      "incluye": [
+      "paraQuien": "Para pieles maduras o deshidratadas que quieren un efecto rejuvenecedor manual, sin agujas ni aparatología.",
+      "comoFunciona": [
+        "El masaje estimula la circulación y el drenaje facial, despertando la microcirculación.",
+        "El colágeno marino penetra en la piel, ayudando a mantener firmeza, suavidad y tono natural.",
+        "Favorece la regeneración cutánea y alisa arrugas y líneas de expresión visiblemente."
+      ],
+      "beneficios": [
         "Hidratación profunda y duradera",
-        "Reafirma y mejora elasticidad",
+        "Reafirma y mejora la elasticidad",
         "Reduce arrugas y líneas de expresión",
         "Suaviza y repara el relieve cutáneo",
-        "Promueve piel luminosa y joven"
+        "Promueve una piel más luminosa y joven"
       ],
+      "incluye": [
+        "Hidratación profunda",
+        "Reafirma y mejora elasticidad",
+        "Reduce arrugas",
+        "Suaviza relieve",
+        "Piel luminosa y joven"
+      ],
+      "idealPara": "Pieles maduras, deshidratadas o con líneas de expresión.",
+      "recomendaciones": "Complementar con rutina de cuidado facial y protección solar para prolongar resultados.",
       "duracion": "35 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "60 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "60 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "masaje-facial-vitamina-c",
@@ -613,29 +1116,60 @@
       "categoria": "masajes",
       "nombre": "Masaje Facial con Vitamina C",
       "descripcion": "Masaje con concentrado de Vitamina C de alta potencia. Ideal para pieles apagadas, cansadas o estresadas. Aporta antioxidantes que combaten radicales libres.",
-      "incluye": [
+      "paraQuien": "Para pieles apagadas, fumadoras, expuestas a contaminación o con tono desigual que necesitan luminosidad.",
+      "comoFunciona": [
+        "El masaje estimula la circulación sanguínea y linfática del rostro, despertando la oxigenación.",
+        "El concentrado de Vitamina C penetra en la piel aportando antioxidantes que combaten radicales libres.",
+        "Favorece la regeneración celular y devuelve luminosidad y tono uniforme."
+      ],
+      "beneficios": [
         "Devuelve luminosidad y tono a la piel",
-        "Reafirma y mejora elasticidad",
+        "Reafirma y mejora la elasticidad",
         "Acción antioxidante y regeneradora",
         "Suaviza líneas finas y fatiga cutánea",
+        "Mejora la textura y vitalidad del rostro"
+      ],
+      "incluye": [
+        "Devuelve luminosidad",
+        "Reafirma y mejora elasticidad",
+        "Acción antioxidante",
+        "Suaviza líneas finas",
         "Mejora textura y vitalidad"
       ],
+      "idealPara": "Pieles apagadas, cansadas o estresadas, con tono desigual o exposición a contaminación.",
+      "recomendaciones": "Aplicar protección solar después del tratamiento para maximizar resultados y proteger la piel.",
       "duracion": "35 minutos",
-      "precios": [{ "concepto": "Sesión", "precio": "50 €" }]
+      "precios": [{ "concepto": "Sesión", "precio": "50 €" }],
+      "packDestacado": 0
     },
     {
       "slug": "pestanas-pelo-a-pelo",
       "imagen": "pestanas-pelo-a-pelo.png",
       "categoria": "estetica-decorativa",
       "nombre": "Pestañas Pelo a Pelo",
-      "descripcion": "Extensión de pestañas que consiste en colocar una pestaña artificial sobre cada pestaña natural, logrando un efecto más largo, definido y natural.",
-      "incluye": [
-        "Alarga y define las pestañas",
+      "descripcion": "Extensión de pestañas que coloca una pestaña artificial sobre cada pestaña natural, logrando un efecto más largo, definido y natural.",
+      "paraQuien": "Para quien quiere despertarse maquillada, ahorrar tiempo cada mañana y realzar la mirada de forma duradera.",
+      "comoFunciona": [
+        "Se realiza una aplicación individualizada sobre cada vello natural, una a una.",
+        "Se respeta la forma de tu ojo y el estilo deseado (clásico, volumen, foxy, wispy, hawaiano).",
+        "El resultado es una mirada más intensa, con mayor volumen y longitud, manteniendo un acabado elegante y natural."
+      ],
+      "beneficios": [
+        "Alarga y define las pestañas de forma natural",
         "Aporta volumen y densidad",
         "Efecto semipermanente",
-        "Evita el uso diario de máscara",
+        "Evita el uso diario de máscara de pestañas",
         "Resultado personalizado según tu estilo"
       ],
+      "incluye": [
+        "Alarga y define pestañas",
+        "Aporta volumen y densidad",
+        "Efecto semipermanente",
+        "Evita máscara diaria",
+        "Resultado personalizado"
+      ],
+      "idealPara": "Quien quiere realzar la mirada sin maquillaje diario, con estilo personalizado.",
+      "recomendaciones": "Retoque cada 15-20 días al 50% del precio. Si pasas más tiempo, el precio puede variar según el estado.",
       "duracion": "120 minutos",
       "precios": [
         { "concepto": "Clásicas (puesta nueva)", "precio": "70 €" },
@@ -645,7 +1179,8 @@
         { "concepto": "Wispy (puesta nueva)", "precio": "80 €" },
         { "concepto": "Retoque Clásicas / Hawaiano / Volumen 3D", "precio": "35 €" },
         { "concepto": "Retoque Mega Volumen / Foxy Eyes / Wispy", "precio": "40 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "micropigmentacion",
@@ -653,33 +1188,66 @@
       "categoria": "estetica-decorativa",
       "nombre": "Micropigmentación (Maquillaje Semipermanente)",
       "descripcion": "Maquillaje semipermanente que realza cejas, labios y ojos con resultados naturales y duraderos. Pigmentos especiales y técnicas avanzadas.",
-      "incluye": [
-        "Resultados visibles desde primera sesión",
+      "paraQuien": "Para quien quiere ahorrar tiempo de maquillaje cada día, definir cejas asimétricas o realzar labios y ojos de forma duradera.",
+      "comoFunciona": [
+        "Se realiza un diseño previo personalizado adaptado a cada rostro, garantizando un resultado armonioso.",
+        "Se implantan pigmentos en la piel mediante una técnica segura y prácticamente indolora.",
+        "En cejas se pueden realizar técnicas de efecto pelo a pelo o sombreado, según el estilo deseado.",
+        "Revisión incluida a los 30 días para perfeccionar el resultado."
+      ],
+      "beneficios": [
+        "Resultados visibles desde la primera sesión",
         "Ahorro de tiempo en maquillaje diario",
-        "Mejora simetría y definición",
-        "Efecto natural y duradero",
+        "Mejora la simetría y definición",
+        "Efecto natural y duradero (más de un año)",
+        "Procedimiento seguro y cómodo",
         "Revisión incluida a los 30 días"
       ],
+      "incluye": [
+        "Resultados desde primera sesión",
+        "Ahorro de tiempo diario",
+        "Mejora simetría",
+        "Efecto natural duradero",
+        "Revisión a los 30 días"
+      ],
+      "idealPara": "Quien quiere ahorrar maquillaje, definir cejas, labios u ojos con efecto duradero.",
+      "recomendaciones": "Seguir cuidados posteriores indicados para correcta cicatrización y prolongar la duración del pigmento.",
       "duracion": "120 minutos",
       "precios": [
         { "concepto": "Ojos", "precio": "300 €" },
         { "concepto": "Labios", "precio": "300 €" },
         { "concepto": "Cejas", "precio": "300 €" }
-      ]
+      ],
+      "packDestacado": 0
     },
     {
       "slug": "depilacion-ipl",
       "imagen": "depilacion-ipl.png",
       "categoria": "depilacion",
       "nombre": "Depilación IPL",
-      "descripcion": "Luz Pulsada Intensa que actúa directamente desde la raíz del vello, debilitándolo progresivamente hasta lograr una piel suave y libre de irritaciones. Segura, cómoda y duradera.",
-      "incluye": [
+      "descripcion": "Luz Pulsada Intensa que actúa desde la raíz del vello, debilitándolo progresivamente. Segura, cómoda y duradera.",
+      "paraQuien": "Para quien quiere olvidarse de cuchillas, cera y láser doloroso. Ideal para todo tipo de zonas, todo tipo de piel.",
+      "comoFunciona": [
+        "La tecnología IPL emite pulsos de luz que son absorbidos por la melanina del vello.",
+        "Esta energía actúa directamente desde la raíz, debilitando el folículo piloso de forma progresiva.",
+        "Tras varias sesiones, el vello se reduce drásticamente y la piel queda suave, sin irritación."
+      ],
+      "beneficios": [
         "Reducción progresiva y duradera del vello",
-        "Piel más suave sin irritación",
+        "Piel más suave, sin irritación",
         "Tratamiento rápido y prácticamente indoloro",
-        "Apto para diferentes zonas del cuerpo",
+        "Apto para múltiples zonas del cuerpo",
         "Resultados visibles desde las primeras sesiones"
       ],
+      "incluye": [
+        "Reducción progresiva del vello",
+        "Piel más suave",
+        "Rápido e indoloro",
+        "Múltiples zonas",
+        "Resultados desde primeras sesiones"
+      ],
+      "idealPara": "Hombres y mujeres que buscan eliminación duradera del vello en cualquier zona.",
+      "recomendaciones": "Evita el sol antes y después del tratamiento. Respeta los tiempos entre sesiones para mejores resultados.",
       "duracion": "Variable según zona",
       "precios": [
         { "concepto": "Zonas pequeñas (labio, mentón, patillas, areola, dedos, cuello, manos, entrecejo, sienes, orejas, mejillas)", "precio": "12 €" },
@@ -690,7 +1258,8 @@
         { "concepto": "Medio cuerpo (superior o inferior)", "precio": "80 €" },
         { "concepto": "OFERTA: axilas + media pierna + bikini completo", "precio": "85 €" },
         { "concepto": "Pack 10 sesiones (oferta)", "precio": "800 €" }
-      ]
+      ],
+      "packDestacado": 7
     }
   ]
 }
