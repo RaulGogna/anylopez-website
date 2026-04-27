@@ -1171,6 +1171,20 @@ button[type="submit"] {
 
   .header-inner { padding: 0 24px; }
   .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column; gap: 0;
+    position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
+    background: var(--dark); z-index: 9997; padding: 32px 24px; overflow-y: auto;
+  }
+  .nav-links.open a {
+    display: block; padding: 16px 0; font-size: 20px;
+    color: rgba(248,243,237,0.85) !important; letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-links.open a::after { display: none; }
+  .menu-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   nav ul.nav-menu {
     display: none; flex-direction: column; gap: 0;
     position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
@@ -1234,4 +1248,191 @@ button[type="submit"] {
   .services-intro-wrap { padding-left: 20px; padding-right: 20px; }
   .ig-grid { grid-template-columns: repeat(2,1fr); }
   .feature-strip-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Landing copy rework: Hero microgarantía ── */
+.hero-guarantee {
+  margin-top: 14px;
+  font-size: 13px;
+  color: rgba(248, 243, 237, 0.7);
+  font-style: italic;
+}
+
+/* ── Pack INDIBA ── */
+.pack-indiba-section { background: var(--ivory); scroll-margin-top: 80px; }
+.pack-indiba-section .section-title em,
+.legado-section .section-title em { font-style: italic; color: var(--terra); }
+
+.pack-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.pack-include h3,
+.pack-table h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.pack-include ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.pack-include li { display: flex; gap: 12px; align-items: flex-start; }
+.pack-include li .pack-bullet { color: var(--terra); font-weight: 700; flex-shrink: 0; }
+
+.pack-value {
+  margin-top: 32px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.04);
+  border-left: 3px solid var(--terra);
+}
+.pack-value .pack-value-line {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: var(--text-mid);
+}
+.pack-value .pack-value-price {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.pack-value .pack-value-price strong {
+  color: var(--terra);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.pack-table table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.pack-table thead tr { border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+.pack-table th { text-align: left; padding: 12px 8px; font-weight: 600; }
+.pack-table th.num,
+.pack-table td.num { text-align: right; }
+.pack-table tbody tr { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+.pack-table td { padding: 12px 8px; }
+.pack-table tr.pack-row-highlight { background: rgba(193, 123, 84, 0.08); }
+.pack-table tr.pack-row-highlight td {
+  padding: 14px 8px;
+  font-weight: 700;
+}
+.pack-table tr.pack-row-highlight td.terra { color: var(--terra); }
+.pack-table .pack-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-mid);
+  font-style: italic;
+  line-height: 1.6;
+}
+.pack-table .pack-reason {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+.pack-cta { margin-top: 48px; }
+
+/* ── Otros tratamientos ── */
+.otros-tratamientos-section { padding-top: 40px; padding-bottom: 40px; }
+.otros-wrap { max-width: 900px; margin: 0 auto; text-align: center; }
+.otros-intro {
+  font-size: 16px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.otros-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.otros-chip {
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.otros-chip:hover { background: rgba(193, 123, 84, 0.08); border-color: var(--terra); }
+
+/* ── Legado + Equipo ── */
+.legado-section { background: var(--ivory); }
+.legado-grid { max-width: 780px; margin: 0 auto 64px; }
+.legado-grid p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+.legado-grid p:last-child { margin-bottom: 0; }
+
+.equipo-block { max-width: 900px; margin: 0 auto; }
+.equipo-header { text-align: center; margin-bottom: 32px; }
+.equipo-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: center;
+  background: #fff;
+  padding: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+.equipo-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.equipo-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 4px 0;
+}
+.equipo-info .equipo-rol {
+  font-size: 14px;
+  color: var(--terra);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 20px 0;
+}
+.equipo-info p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+.equipo-info p.equipo-bio-last { margin-bottom: 24px; }
+
+@media (max-width: 860px) {
+  .pack-grid { grid-template-columns: 1fr; gap: 32px; }
+  .equipo-card { grid-template-columns: 1fr; gap: 24px; padding: 24px; text-align: center; }
+  .equipo-photo { max-width: 220px; margin: 0 auto; }
+  .equipo-info h3 { font-size: 28px; }
+}
+
+@media (max-width: 560px) {
+  .pack-table table { font-size: 13px; }
+  .pack-table th,
+  .pack-table td { padding: 10px 4px; }
+  .pack-table tr.pack-row-highlight td { padding: 12px 4px; }
+  .pack-value { padding: 16px; }
+  .pack-value .pack-value-price { font-size: 16px; }
+  .pack-value .pack-value-price strong { font-size: 22px; }
+  .otros-chips { gap: 8px; }
+  .otros-chip { font-size: 13px; padding: 6px 12px; }
+  .legado-section .section-title { font-size: 32px; }
+  .hero-guarantee { font-size: 12px; }
 }
