@@ -94,7 +94,7 @@ description: "Radiofrecuencia Sistema Indiba en AnyLopez Benidorm. Elimina la fl
   </div>
 
   <!-- HERO DE SERVICIO -->
-  <section style="background:url('https://anylopez.com/wp-content/uploads/2024/10/5796413057692451908.jpg') center/cover no-repeat var(--primary); padding:80px 0; position:relative; overflow:hidden;">
+  <section style="background:url('{{ "/images/radiofrecuencia/5796413057692451908.webp" | url }}') center/cover no-repeat var(--primary); padding:80px 0; position:relative; overflow:hidden;">
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(28,26,24,0.72) 0%,rgba(28,26,24,0.45) 100%);"></div>
     <div class="container" style="position:relative;z-index:2;">
       <div style="max-width:680px;">
@@ -134,12 +134,16 @@ description: "Radiofrecuencia Sistema Indiba en AnyLopez Benidorm. Elimina la fl
           <p style="color:var(--text-mid);">Compatible con otros tratamientos como Ultherapy/HIFU, maderoterapia y mesoterapia para potenciar sus efectos.</p>
         </div>
         <div>
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/5796413057692451909.jpg"
-            alt="Radiofrecuencia Sistema Indiba"
-            style="border-radius:16px; width:100%; object-fit:cover; height:420px;"
-            onerror="this.style.background='var(--bg-light)';"
-          />
+          <picture>
+            <source srcset="{{ '/images/radiofrecuencia/5796413057692451909.webp' | url }}" type="image/webp">
+            <img
+              src="{{ '/images/radiofrecuencia/5796413057692451909.jpg' | url }}"
+              alt="Radiofrecuencia Sistema Indiba"
+              loading="lazy"
+              decoding="async"
+              style="border-radius:16px; width:100%; object-fit:cover; height:420px;"
+            />
+          </picture>
         </div>
       </div>
     </div>
@@ -154,12 +158,16 @@ description: "Radiofrecuencia Sistema Indiba en AnyLopez Benidorm. Elimina la fl
       </div>
       <div class="grid-2">
         <div class="card">
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/112.png"
-            alt="Indiba Facial"
-            class="card-img"
-            onerror="this.style.background='var(--bg-light)';"
-          />
+          <picture>
+            <source srcset="{{ '/images/radiofrecuencia/112.webp' | url }}" type="image/webp">
+            <img
+              src="{{ '/images/radiofrecuencia/112.png' | url }}"
+              alt="Indiba Facial"
+              class="card-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="card-body">
             <h3>Indiba Facial</h3>
             <p>Rejuvenece la piel, reduce las pequeñas arrugas, aporta firmeza, reduce la flacidez facial, crea un aspecto luminoso e hidratado. Ideal para el contorno del rostro, cuello y escote.</p>
@@ -173,12 +181,16 @@ description: "Radiofrecuencia Sistema Indiba en AnyLopez Benidorm. Elimina la fl
           </div>
         </div>
         <div class="card">
-          <img
-            src="https://anylopez.com/wp-content/uploads/2024/10/111.png"
-            alt="Indiba Corporal"
-            class="card-img"
-            onerror="this.style.background='var(--bg-light)';"
-          />
+          <picture>
+            <source srcset="{{ '/images/radiofrecuencia/111.webp' | url }}" type="image/webp">
+            <img
+              src="{{ '/images/radiofrecuencia/111.png' | url }}"
+              alt="Indiba Corporal"
+              class="card-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="card-body">
             <h3>Indiba Corporal</h3>
             <p>Combate la celulitis, reduce la grasa localizada y trata la flacidez en abdomen, brazos y piernas. Se puede combinar con maderoterapia o mesoterapia para resultados aún más visibles.</p>
