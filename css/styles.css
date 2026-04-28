@@ -1436,3 +1436,301 @@ button[type="submit"] {
   .legado-section .section-title { font-size: 32px; }
   .hero-guarantee { font-size: 12px; }
 }
+
+/* ─── TREATMENT CARD INTERACTIVE ───────────────────────────────── */
+.trat-card { cursor: pointer; }
+.trat-card:focus-within { box-shadow: 0 0 0 3px rgba(192,98,48,.35), var(--shadow); }
+.trat-card-trigger {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: color 0.2s;
+}
+.trat-card-trigger:hover { color: var(--primary); }
+.trat-card-trigger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+/* ─── TREATMENT MODAL ──────────────────────────────────────────── */
+.trat-modal {
+  border: none;
+  padding: 0;
+  margin: auto;
+  width: min(720px, calc(100vw - 32px));
+  max-height: 90vh;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--primary);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.trat-modal::backdrop {
+  background: rgba(28,18,8,.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+@keyframes trat-modal-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.trat-modal[open] { animation: trat-modal-in 280ms cubic-bezier(.16,1,.3,1); }
+@media (prefers-reduced-motion: reduce) {
+  .trat-modal[open] { animation: none; }
+}
+
+.trat-modal-close-form { margin: 0; }
+.trat-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  color: var(--primary);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  transition: background 0.2s, transform 0.2s;
+}
+.trat-modal-close:hover { background: #fff; transform: scale(1.05); }
+
+.trat-modal-body {
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.trat-modal-hero {
+  position: relative;
+  background: var(--bg-cream);
+}
+.trat-modal-img,
+.trat-modal-img img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+.trat-modal-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(28,18,8,.75) 100%);
+  pointer-events: none;
+}
+.trat-modal-hero-text {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 24px 32px;
+  color: #fff;
+  z-index: 2;
+}
+.trat-modal-cat {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 6px;
+}
+#trat-modal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: #fff;
+}
+.trat-modal-paraquien {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  color: rgba(255,255,255,0.92);
+  max-width: 540px;
+}
+
+.trat-modal-section {
+  padding: 28px 32px 8px;
+}
+.trat-modal-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  color: var(--primary);
+}
+
+.trat-modal-beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+}
+.trat-modal-beneficios li {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-mid);
+  padding-left: 22px;
+  position: relative;
+}
+.trat-modal-beneficios li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.trat-modal-comofunciona p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  margin: 0 0 12px;
+}
+.trat-modal-comofunciona p:last-child { margin-bottom: 0; }
+
+.trat-modal-precios-section { background: var(--bg-cream); padding-bottom: 28px; }
+.precio-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff;
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 12px rgba(192,98,48,.10);
+}
+.precio-hero-concepto {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-mid);
+}
+.precio-hero-precio {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+.trat-modal-precios-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+.trat-modal-precios-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(107,85,64,.15);
+  font-size: 14px;
+  color: var(--text-mid);
+}
+.trat-modal-precios-list li:last-child { border-bottom: none; }
+.trat-modal-precios-list .precio-monto {
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+}
+.trat-modal-duracion {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  margin: 4px 0 0;
+}
+.trat-modal-duracion svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--accent);
+}
+
+.trat-modal-extras { display: flex; flex-direction: column; gap: 16px; }
+.trat-modal-extras p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin: 0;
+}
+
+.trat-modal-garantia {
+  margin: 8px 32px 0;
+  padding: 14px 18px;
+  background: var(--bg-light);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
+.trat-modal-garantia strong { color: var(--primary); }
+
+.trat-modal-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 24px 32px 28px;
+}
+.trat-modal-ctas .btn {
+  flex: 1 1 auto;
+  min-width: 200px;
+  text-align: center;
+}
+.trat-modal-cta-tel { white-space: nowrap; }
+.trat-modal-permalink {
+  flex-basis: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  text-decoration: none;
+  text-align: center;
+  padding-top: 4px;
+  transition: color 0.2s;
+}
+.trat-modal-permalink:hover { color: var(--accent); }
+
+@media (max-width: 640px) {
+  .trat-modal {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    margin: 0;
+  }
+  .trat-modal-body { max-height: 100vh; }
+  .trat-modal-img,
+  .trat-modal-img img { height: 200px; }
+  .trat-modal-hero-text { padding: 20px 20px; }
+  .trat-modal-section { padding: 22px 20px 4px; }
+  .trat-modal-beneficios { grid-template-columns: 1fr; }
+  .trat-modal-garantia { margin: 8px 20px 0; }
+  .trat-modal-ctas { padding: 20px; }
+  .trat-modal-ctas .btn { flex: 1 1 100%; }
+}

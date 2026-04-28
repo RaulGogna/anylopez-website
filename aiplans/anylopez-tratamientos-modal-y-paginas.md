@@ -41,14 +41,22 @@ Añadir a cada uno de los 35 tratamientos los campos:
 
 Fuente: `docs/info/tratamientos-catalogo.md`. Sanear duplicados (Diamond/Elite/Dermaplaning aparecen dobles en el .md). Mantener `precios[]` actual (ya correcto).
 
-### 2. Modal `<dialog>` en `src/services.njk` (Sonnet)
+### 2. Modal `<dialog>` en `src/services.njk` (Sonnet) — ✅ COMPLETADO
+
+Estado: card clicable con `data-slug` + CTA `Ver detalles →` (botón). `<dialog id="trat-modal">` con plantilla data-field. JSON inline (`<script id="trat-data">`). Variables PATH desde Nunjucks. Nuevo `js/treatment-modal.js` (hidratación, deep-link por hash, ESC/backdrop close, tracking `?src=modal-{slug}`).
+
+
 - Hacer la `.trat-card` entera clicable (botón overlay con `aria-label`, `data-slug`). Mantener "Reservar cita" como CTA secundaria abajo.
 - Al final del template, un único `<dialog id="trat-modal">` con plantilla vacía (slots con `data-field`).
 - Inyectar JSON del catálogo enriquecido al pie de página vía `<script type="application/json" id="trat-data">{{ tratamientos.tratamientos | dump | safe }}</script>` (Eleventy ya lo serializa).
 - Script `js/treatment-modal.js` (nuevo): al click → busca slug → rellena slots → `dialog.showModal()`. Cierre con `<form method="dialog">`, ESC nativo, click en `::backdrop`.
 - Deep-linking: si `location.hash` matchea un slug al cargar, abrir el modal. Cerrar limpia el hash con `history.replaceState`.
 
-### 3. Estructura del modal (Sonnet)
+### 3. Estructura del modal (Sonnet) — ✅ COMPLETADO
+
+Estado: bloque CSS añadido a `css/styles.css`. Hero con imagen + gradient overlay, título Cormorant, paraQuien cursiva. Beneficios grid 2col con ✓ accent. Pack hero destacado con borde accent. Lista precios secundarios con border-bottom. Garantía callout. CTAs duales (WhatsApp + Tel) + permalink. ::backdrop blur, animación slide-up cubic-bezier, mobile fullscreen, prefers-reduced-motion respetado.
+
+
 Orden visible (estructura Godin → Hormozi):
 1. **Hero**: imagen tratamiento (picture WebP+PNG), badge categoría, título Cormorant, `paraQuien` como subtítulo cursiva.
 2. **Beneficios** (lista con ✓ accent).
