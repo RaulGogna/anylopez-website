@@ -450,11 +450,12 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
       "@type": "ListItem",
       "position": {{ loop.index }},
       "item": {
-        "@type": "MedicalProcedure",
+        "@type": ["MedicalProcedure", "Service"],
         "name": {{ trat.nombre | dump | safe }},
         "description": {{ trat.descripcion | dump | safe }},
         "url": "https://raulgogna.github.io/anylopez-website/services/#{{ trat.slug }}",
         "procedureType": "https://schema.org/NoninvasiveProcedure",
+        "serviceType": {{ trat.nombre | dump | safe }},
         "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" },
         "offers": {
           "@type": "Offer",
