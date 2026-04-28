@@ -14,7 +14,6 @@
 
   const WA_NUMBER = '34656306167';
   const IMG_BASE = window.__TRAT_IMG_BASE || '/images/tratamientos/';
-  const PERMA_BASE = window.__TRAT_PERMA_BASE || '/tratamientos/';
 
   const catById = Object.fromEntries(CATS.map((c) => [c.id, c]));
   const tratBySlug = Object.fromEntries(TRATS.map((t) => [t.slug, t]));
@@ -96,9 +95,6 @@
     const wa = dialog.querySelector('[data-field="cta-wa"]');
     const text = 'Hola, vengo de la web. Me interesa ' + trat.nombre + ' — ¿podríais ayudarme a reservar?';
     wa.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text) + '&src=modal-' + trat.slug;
-
-    const perma = dialog.querySelector('[data-field="permalink"]');
-    perma.href = PERMA_BASE + trat.slug + '/';
   }
 
   function setOptional(field, wrapField, value) {

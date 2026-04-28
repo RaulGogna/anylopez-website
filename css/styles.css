@@ -1701,19 +1701,6 @@ button[type="submit"] {
   text-align: center;
 }
 .trat-modal-cta-tel { white-space: nowrap; }
-.trat-modal-permalink {
-  flex-basis: 100%;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: var(--text-mid);
-  text-decoration: none;
-  text-align: center;
-  padding-top: 4px;
-  transition: color 0.2s;
-}
-.trat-modal-permalink:hover { color: var(--accent); }
 
 @media (max-width: 640px) {
   .trat-modal {

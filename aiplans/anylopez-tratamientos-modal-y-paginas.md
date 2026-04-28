@@ -74,7 +74,13 @@ CSS nuevo en `css/styles.css` bajo bloque `/* ─── TREATMENT MODAL ──�
 - `prefers-reduced-motion` → sin animación.
 - Mobile (≤640px): full-screen, esquinas a 0.
 
-### 4. Páginas individuales por tratamiento (Sonnet)
+### 4. Páginas individuales por tratamiento (Sonnet) — ❌ DESCARTADO
+
+Razón (complexity-review + decisión usuario 2026-04-29): el modal ya muestra TODA la información (paraQuien, beneficios, cómo funciona, precios, garantía, CTAs). Crear 35 páginas finas con el mismo template fragmenta autoridad SEO y duplica mantenimiento. El SEO local (Benidorm) se gana con Google Business + reseñas + schema MedicalClinic — no con 35 long-tail flacos. Si en el futuro 1-2 tratamientos hero (Ultherapy HIFU, INDIBA) merecen landing dedicada, hacer en aiplan separado.
+
+Implicaciones aplicadas: removido `<a class="trat-modal-permalink">` del modal, removida lógica `PERMA_BASE` del JS y la inyección desde Nunjucks. CSS `.trat-modal-permalink` removido.
+
+### 4-bis. (Plan original conservado para referencia futura)
 - Crear `src/tratamientos.njk` con frontmatter Eleventy de paginación:
   ```yaml
   pagination:
@@ -96,11 +102,10 @@ CSS nuevo en `css/styles.css` bajo bloque `/* ─── TREATMENT MODAL ──�
 - Texto WhatsApp prepoblado: `"Hola, vengo de {nombre tratamiento}. Querría reservar / consultar disponibilidad."` urlencoded.
 - Sustituir el texto genérico actual `"...consultar el precio de..."` por el reserva-orientado.
 
-### 6. SEO + redirects (Haiku)
-- Actualizar `src/sitemap.njk` para que la paginación de tratamientos quede incluida.
-- `meta description` por tratamiento: `descripcion` + " · Desde X € · AnyLopez Benidorm".
-- `og:image` = imagen del tratamiento.
-- En `services.njk`, JSON-LD `ItemList` con los 35 tratamientos linkando a sus permalinks.
+### 6. SEO (Haiku) — alcance reducido
+Tras descartar páginas individuales:
+- En `services.njk` añadir JSON-LD `ItemList` con los 35 tratamientos. Sin permalinks (los items apuntan a `#slug` deep-link en la propia página de servicios).
+- Actualizar `meta description` de services para reflejar que ahora se ven precios y detalles.
 - Mantener anclas `#categoria-id` en services para no romper enlaces.
 
 ### 7. Verificación end-to-end
