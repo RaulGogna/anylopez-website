@@ -67,14 +67,19 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
           </div>
 
           <!-- MAPA -->
-          <iframe
-            class="map-embed"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.287002259318!2d-0.1328964!3d38.5376696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6205c0952b0439%3A0xc134f6679c32e94c!2sAnyLopez%20Clinica%20Est%C3%A9tica!5e1!3m2!1ses!2ses!4v1777313701234!5m2!1ses!2ses"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Ubicación AnyLopez Benidorm"
-          ></iframe>
+          <div class="map-embed donde-map-link-wrap">
+            <a
+              href="https://maps.google.com/?q=Calle+Marqués+de+Comillas+4,+Benidorm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="donde-map-link"
+              aria-label="Ver AnyLopez Clínica Estética en Google Maps (abre en nueva pestaña)"
+            >
+              <span class="donde-map-icon" aria-hidden="true">📍</span>
+              <span class="donde-map-text">Ver en Google Maps</span>
+              <span class="donde-map-addr">C/ Marqués de Comillas 4, Local 6 — Benidorm</span>
+            </a>
+          </div>
         </div>
 
         <!-- FORMULARIO -->
@@ -131,12 +136,19 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
 
               <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
+              <div class="form-group form-consent">
+                <label class="consent-label">
+                  <input type="checkbox" name="_consent" required />
+                  <span>He leído y acepto la <a href="{{ '/privacidad/' | url }}" target="_blank" rel="noopener noreferrer">política de privacidad</a></span>
+                </label>
+              </div>
+
               <button type="submit" class="btn btn-primary" style="width:100%; font-size:13px; padding:16px;">
                 Enviar Solicitud
               </button>
 
               <p style="font-size:12px; color:var(--text-light); margin-top:16px; text-align:center;">
-                Al enviar este formulario aceptas nuestra política de privacidad. Respondemos en menos de 24h.
+                Respondemos en menos de 24h.
               </p>
             </form>
 

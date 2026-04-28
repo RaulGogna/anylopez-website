@@ -391,6 +391,10 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
   resize: vertical; min-height: 100px; line-height: 1.6;
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 0; }
+.form-consent { margin-top: 4px; }
+.consent-label { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+.consent-label input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; accent-color: var(--terra); width: 16px; height: 16px; cursor: pointer; }
+.consent-label a { color: var(--terra); text-decoration: underline; text-underline-offset: 2px; }
 
 /* ═══════════════════════════════════════════════════
    TRUST STRIP
@@ -876,6 +880,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 .footer-bottom { padding: 24px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.22); }
 .footer-bottom a { color: inherit; }
 .footer-bottom a:hover { color: var(--ivory); }
+.footer-legal-links { margin-top: 6px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 
 /* ═══════════════════════════════════════════════════
    WHATSAPP FLOTANTE
