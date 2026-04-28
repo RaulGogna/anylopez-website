@@ -435,6 +435,41 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
 </script>
 <script src="{{ '/js/treatment-modal.js' | url }}" defer></script>
 
+<!-- JSON-LD: ItemList of treatments linked to the MedicalClinic schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Catálogo de tratamientos AnyLopez",
+  "numberOfItems": {{ tratamientos.tratamientos | length }},
+  "itemListElement": [
+    {%- for trat in tratamientos.tratamientos -%}
+    {%- set idx = trat.packDestacado or 0 -%}
+    {%- set priceClean = trat.precios[idx].precio | replace(' €','') | replace('Desde ','') | replace('.','') | trim -%}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "MedicalProcedure",
+        "name": {{ trat.nombre | dump | safe }},
+        "description": {{ trat.descripcion | dump | safe }},
+        "url": "https://raulgogna.github.io/anylopez-website/services/#{{ trat.slug }}",
+        "procedureType": "https://schema.org/NoninvasiveProcedure",
+        "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ priceClean }}",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://raulgogna.github.io/anylopez-website/services/#{{ trat.slug }}"
+        }
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+
 <script>
   /* Active pill highlight on scroll */
   (function () {

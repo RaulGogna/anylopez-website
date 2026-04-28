@@ -102,11 +102,9 @@ Implicaciones aplicadas: removido `<a class="trat-modal-permalink">` del modal, 
 - Texto WhatsApp prepoblado: `"Hola, vengo de {nombre tratamiento}. Querría reservar / consultar disponibilidad."` urlencoded.
 - Sustituir el texto genérico actual `"...consultar el precio de..."` por el reserva-orientado.
 
-### 6. SEO (Haiku) — alcance reducido
-Tras descartar páginas individuales:
-- En `services.njk` añadir JSON-LD `ItemList` con los 35 tratamientos. Sin permalinks (los items apuntan a `#slug` deep-link en la propia página de servicios).
-- Actualizar `meta description` de services para reflejar que ahora se ven precios y detalles.
-- Mantener anclas `#categoria-id` en services para no romper enlaces.
+### 6. SEO (Haiku) — ✅ COMPLETADO
+
+Estado: añadido JSON-LD `ItemList` en `services.njk` con los 35 tratamientos. Cada item es `MedicalProcedure` con name, description, url (deep-link `#slug`), procedureType=NoninvasiveProcedure, provider conectado al `MedicalClinic` existente vía `@id`, y `Offer` con precio limpio (sin "€"/"Desde") y EUR. Validado: JSON parsea correctamente, 35 items generados desde `tratamientos.json`. Habilita rich snippets de servicios en SERPs y mejor comprensión por IAs.
 
 ### 7. Verificación end-to-end
 1. `npm run build` sin errores → revisar `_site/tratamientos/<slug>/index.html` para 5 tratamientos muestra (Mesoterapia Virtual, Ultherapy HIFU facial, Bótox, IPL, Limpieza GOLD).
