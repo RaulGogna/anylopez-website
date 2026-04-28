@@ -34,6 +34,7 @@
   <link rel="preload" as="image" href="{{ '/images/hero-poster.webp' | url }}" type="image/webp" fetchpriority="high" />
   {% endif %}
   <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
+  {% if legalPage %}<link rel="stylesheet" href="{{ '/assets/css/legal.css' | url }}" />{% endif %}
 
   {%- set crumbs = {
     "/about/": "Nosotras",
