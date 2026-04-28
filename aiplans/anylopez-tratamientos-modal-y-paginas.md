@@ -1,5 +1,8 @@
 # Modal de tratamiento + páginas individuales — anylopez-website
 
+**Estado:** ✅ COMPLETADO — 2026-04-29 · merge a master pendiente al final del checklist
+
+
 ## Context
 
 La página `src/services.njk` muestra 35 tratamientos en grid pero la card solo expone descripción corta + bullets + duración. El catálogo completo (`docs/info/tratamientos-catalogo.md`) tiene "¿Cómo funciona?", beneficios detallados, "ideal para", recomendaciones y precios — información que hoy no llega al usuario.
