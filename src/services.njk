@@ -281,7 +281,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
 
     <div class="trat-grid">
       {% for trat in catTrats %}
-      <article class="trat-card{% if catSharedImage %} trat-card--bare{% endif %}">
+      <article class="trat-card{% if catSharedImage %} trat-card--bare{% endif %}" data-slug="{{ trat.slug }}">
         {% if not catSharedImage %}
         <picture>
           <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
@@ -315,12 +315,12 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
               </svg>
               {{ trat.duracion }}
             </span>
-            <a
-              href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20el%20precio%20de%20{{ trat.nombre | urlencode }}."
-              class="trat-cta"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Consultar precio →</a>
+            <button
+              type="button"
+              class="trat-cta trat-card-trigger"
+              data-slug="{{ trat.slug }}"
+              aria-label="Ver detalles de {{ trat.nombre }}"
+            >Ver detalles →</button>
           </div>
         </div>
       </article>
@@ -358,6 +358,117 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reserva tu Cita</a>
   </div>
 </section>
+
+<!-- TREATMENT MODAL (single instance, hydrated from JSON inline below) -->
+<dialog id="trat-modal" class="trat-modal" aria-labelledby="trat-modal-title">
+  <form method="dialog" class="trat-modal-close-form">
+    <button type="submit" class="trat-modal-close" aria-label="Cerrar ficha">&times;</button>
+  </form>
+
+  <article class="trat-modal-body">
+    <header class="trat-modal-hero">
+      <picture class="trat-modal-img">
+        <source data-field="imagen-webp" type="image/webp">
+        <img data-field="imagen-png" alt="" loading="lazy" decoding="async" />
+      </picture>
+      <div class="trat-modal-hero-text">
+        <span class="trat-modal-cat" data-field="categoria"></span>
+        <h2 id="trat-modal-title" data-field="nombre"></h2>
+        <p class="trat-modal-paraquien" data-field="paraQuien"></p>
+      </div>
+    </header>
+
+    <section class="trat-modal-section">
+      <h3>Beneficios</h3>
+      <ul class="trat-modal-beneficios" data-field="beneficios"></ul>
+    </section>
+
+    <section class="trat-modal-section">
+      <h3>¿Cómo funciona?</h3>
+      <div class="trat-modal-comofunciona" data-field="comoFunciona"></div>
+    </section>
+
+    <section class="trat-modal-section trat-modal-precios-section">
+      <h3>Precios</h3>
+      <div class="trat-modal-pack-hero" data-field="packDestacado"></div>
+      <ul class="trat-modal-precios-list" data-field="precios"></ul>
+      <p class="trat-modal-duracion">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span data-field="duracion"></span>
+      </p>
+    </section>
+
+    <section class="trat-modal-section trat-modal-extras" data-field="extras">
+      <div class="trat-modal-idealpara" data-field="idealPara-wrap" hidden>
+        <h3>Ideal para</h3>
+        <p data-field="idealPara"></p>
+      </div>
+      <div class="trat-modal-recomendaciones" data-field="recomendaciones-wrap" hidden>
+        <h3>Recomendaciones</h3>
+        <p data-field="recomendaciones"></p>
+      </div>
+    </section>
+
+    <aside class="trat-modal-garantia">
+      <strong>Sin compromiso —</strong> <span data-field="garantia"></span>
+    </aside>
+
+    <footer class="trat-modal-ctas">
+      <a class="btn btn-accent trat-modal-cta-wa" data-field="cta-wa" target="_blank" rel="noopener noreferrer">
+        Reservar por WhatsApp →
+      </a>
+      <a class="btn btn-outline trat-modal-cta-tel" href="tel:+34656306167">
+        Llamar 656 306 167
+      </a>
+    </footer>
+  </article>
+</dialog>
+
+<script id="trat-data" type="application/json">
+{{ tratamientos | dump | safe }}
+</script>
+
+<script>
+  window.__TRAT_IMG_BASE = "{{ '/images/tratamientos/' | url }}";
+</script>
+<script src="{{ '/js/treatment-modal.js' | url }}" defer></script>
+
+<!-- JSON-LD: ItemList of treatments linked to the MedicalClinic schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Catálogo de tratamientos AnyLopez",
+  "numberOfItems": {{ tratamientos.tratamientos | length }},
+  "itemListElement": [
+    {%- for trat in tratamientos.tratamientos -%}
+    {%- set idx = trat.packDestacado or 0 -%}
+    {%- set priceClean = trat.precios[idx].precio | replace(' €','') | replace('Desde ','') | replace('.','') | trim -%}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "MedicalProcedure",
+        "name": {{ trat.nombre | dump | safe }},
+        "description": {{ trat.descripcion | dump | safe }},
+        "url": "https://raulgogna.github.io/anylopez-website/services/#{{ trat.slug }}",
+        "procedureType": "https://schema.org/NoninvasiveProcedure",
+        "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ priceClean }}",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://raulgogna.github.io/anylopez-website/services/#{{ trat.slug }}"
+        }
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
 
 <script>
   /* Active pill highlight on scroll */
