@@ -548,38 +548,36 @@
       "slug": "radiofrecuencia-indiba",
       "imagen": "radiofrecuencia-indiba.png",
       "categoria": "lifting-antiaging",
-      "nombre": "Radiofrecuencia INDIBA – Anti-Edad",
-      "descripcion": "Tecnología INDIBA que actúa en profundidad estimulando colágeno y elastina en las tres capas de la piel. Efecto lifting visible desde las primeras sesiones.",
-      "paraQuien": "Para quien tiene flacidez, pérdida de firmeza o signos de envejecimiento en rostro y cuerpo y quiere resultados progresivos sin invasión.",
+      "nombre": "Radiofrecuencia INDIBA Facial y Corporal",
+      "descripcion": "Tecnología INDIBA que trabaja desde el interior de la célula para estimular colágeno y elastina. Piel más firme, luminosa y rejuvenecida desde la primera sesión.",
+      "paraQuien": "Para quien tiene flacidez, pérdida de firmeza o signos de envejecimiento en rostro y cuerpo y quiere resultados visibles desde la primera sesión sin invasión.",
       "comoFunciona": [
         "La radiofrecuencia INDIBA emite ondas de alta frecuencia que actúan simultáneamente en las tres capas de la piel.",
         "Estimula la producción de colágeno y elastina, reafirmando los tejidos desde el interior.",
-        "Mejora la oxigenación celular y la microcirculación, traduciéndose en piel más luminosa y firme."
+        "Mejora la circulación y elimina toxinas, traduciéndose en piel más luminosa, firme y saludable."
       ],
       "beneficios": [
-        "Reafirma y tonifica rostro y cuerpo",
-        "Reduce flacidez, arrugas y líneas de expresión",
+        "Efecto lifting sin cirugía",
         "Mejora la elasticidad y firmeza",
-        "Efecto lifting natural",
-        "Piel más luminosa, hidratada y saludable",
-        "Resultados progresivos y duraderos"
+        "Reduce arrugas y flacidez",
+        "Activa la regeneración celular",
+        "Mejora la circulación y elimina toxinas",
+        "Resultados visibles desde la 1.ª sesión"
       ],
       "incluye": [
-        "Reafirma y tonifica",
-        "Reduce flacidez y líneas",
-        "Mejora elasticidad",
-        "Efecto lifting natural",
-        "Piel más luminosa"
+        "Efecto lifting sin cirugía",
+        "Mejora elasticidad y firmeza",
+        "Reduce arrugas y flacidez",
+        "Activa regeneración celular",
+        "Sin dolor, sin recuperación"
       ],
       "idealPara": "Personas con flacidez, pérdida de firmeza o signos de envejecimiento en rostro y cuerpo.",
       "duracion": "45 minutos",
       "precios": [
-        { "concepto": "Facial", "precio": "65 €" },
-        { "concepto": "Corporal por zona", "precio": "65 €" },
-        { "concepto": "Pack 5 sesiones (30 min)", "precio": "225 €" },
-        { "concepto": "Pack 10 sesiones (30 min)", "precio": "400 €" }
+        { "concepto": "1 sesión", "precio": "65 €" },
+        { "concepto": "Pack 10 sesiones", "precio": "350 €" }
       ],
-      "packDestacado": 3
+      "packDestacado": 1
     },
     {
       "slug": "botox-zona",
