@@ -416,9 +416,8 @@ description: "Clínica estética en Benidorm especializada en radiofrecuencia IN
       <div class="donde-map-wrap rv">
         <iframe
           class="donde-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195.05200463471965!2d-0.13294496084974686!3d38.53763894033556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6205c0952b0439%3A0xc134f6679c32e94c!2sAnyLopez%20Clinica%20Est%C3%A9tica!5e0!3m2!1ses!2ses!4v1777479067286!5m2!1ses!2ses"
+          data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195.05200463471965!2d-0.13294496084974686!3d38.53763894033556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6205c0952b0439%3A0xc134f6679c32e94c!2sAnyLopez%20Clinica%20Est%C3%A9tica!5e0!3m2!1ses!2ses!4v1777479067286!5m2!1ses!2ses"
           title="Mapa de AnyLopez Clínica Estética — C/ Marqués de Comillas 4 Local 6, Benidorm"
-          loading="lazy"
           allowfullscreen
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
@@ -533,6 +532,24 @@ description: "Clínica estética en Benidorm especializada en radiofrecuencia IN
 </section>
 
 <script>
+  /* ── Lazy-load mapa Google Maps (IntersectionObserver) ── */
+  (function() {
+    var iframe = document.querySelector('.donde-map[data-src]');
+    if (!iframe) return;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(entries, obs) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.src = e.target.dataset.src;
+            obs.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '300px' }).observe(iframe);
+    } else {
+      iframe.src = iframe.dataset.src;
+    }
+  })();
+
   /* ── Donde form AJAX ── */
   const dondeForm = document.getElementById('dondeForm');
   if (dondeForm) {
