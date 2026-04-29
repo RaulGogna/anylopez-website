@@ -11,7 +11,7 @@ permalink: /privacidad/
 
 | Campo | Dato |
 |---|---|
-| Razón social | Gogna Groups SL |
+| Razón social | GOGNA GROUP, S.L. |
 | CIF | B54467972 |
 | Domicilio | C/ Marqués de Comillas 4, 03501 Benidorm (Alicante) |
 | Teléfono | 656 306 167 |
