@@ -370,6 +370,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 }
 .form-field input,
 .form-field select,
+.form-field textarea,
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -827,7 +828,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
   transition: background .2s, opacity .2s;
   white-space: nowrap;
 }
-.donde-map-cta:hover { background: var(--dark); }
+.donde-map-cta:hover { background: var(--terra-dk); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(184,114,84,.35); }
 /* Info column */
 .donde-info { display: flex; flex-direction: column; gap: 28px; }
 .donde-info-title {
