@@ -413,28 +413,49 @@ description: "Clínica estética en Benidorm especializada en radiofrecuencia IN
       <h2 class="section-title">Visítanos en <em style="font-style:italic;color:var(--terra);">Benidorm</em></h2>
     </div>
     <div class="donde-grid">
-      <div class="donde-map rv donde-map-link-wrap">
+      <div class="donde-map-wrap rv">
+        <iframe
+          class="donde-map"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1370%2C38.5400%2C-0.1290%2C38.5435&amp;layer=mapnik&amp;marker=38.5418%2C-0.1330"
+          title="Mapa de AnyLopez Clínica Estética — C/ Marqués de Comillas 4, Benidorm"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
         <a
           href="https://maps.google.com/?q=Calle+Marqués+de+Comillas+4,+Benidorm"
           target="_blank"
           rel="noopener noreferrer"
-          class="donde-map-link"
-          aria-label="Ver AnyLopez Clínica Estética en Google Maps (abre en nueva pestaña)"
+          class="donde-map-cta"
+          aria-label="Ver en Google Maps (abre en nueva pestaña)"
         >
-          <span class="donde-map-icon" aria-hidden="true">📍</span>
-          <span class="donde-map-text">Ver en Google Maps</span>
-          <span class="donde-map-addr">C/ Marqués de Comillas 4, Local 6 — Benidorm</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Abrir en Google Maps
         </a>
       </div>
       <div class="donde-info rv d1">
         <div>
           <h3 class="donde-info-title">Escríbenos</h3>
           <p class="donde-info-desc">Respondemos en menos de 24 horas. También puedes llamarnos o venir directamente.</p>
-          <div style="margin-top:16px; display:flex; flex-direction:column; gap:6px;">
-            <span style="font-size:13px; color:var(--text-mid);">📍 C/ Marqués de Comillas 4, Local 6 — Benidorm</span>
-            <span style="font-size:13px; color:var(--text-mid);">🕐 Lun–Vie 10:00–14:00 / 16:00–20:00</span>
-            <a href="tel:656306167" style="font-size:13px; color:var(--terra); font-weight:600;">📞 656 306 167</a>
-          </div>
+          <ul class="donde-meta">
+            <li class="donde-meta-item">
+              <span class="donde-meta-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span>C/ Marqués de Comillas 4, Local 6 — Benidorm</span>
+            </li>
+            <li class="donde-meta-item">
+              <span class="donde-meta-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <span>Lun–Vie · 10:00–14:00 / 16:00–20:00</span>
+            </li>
+            <li class="donde-meta-item donde-meta-phone">
+              <span class="donde-meta-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.4 2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <a href="tel:656306167">656 306 167</a>
+            </li>
+          </ul>
         </div>
         <div id="dondeFormWrap">
           <form id="dondeForm" class="donde-form" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate>

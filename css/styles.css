@@ -809,18 +809,46 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 .donde-header { text-align: center; margin-bottom: 64px; }
 .donde-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 56px; align-items: start;
+  gap: 56px; align-items: stretch;
 }
+/* Map wrapper */
+.donde-map-wrap { border-radius: 4px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.10); display: flex; flex-direction: column; }
 .donde-map {
-  width: 100%; height: 460px; border: none; display: block;
-  filter: grayscale(15%) contrast(1.05);
+  width: 100%; height: 0; flex: 1 1 auto; min-height: 320px; border: none; display: block;
+  filter: grayscale(20%) contrast(1.05) sepia(10%);
+  transition: filter .3s ease;
 }
+.donde-map-wrap:hover .donde-map { filter: grayscale(5%) contrast(1.05); }
+.donde-map-cta {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  background: var(--dark); color: var(--cream);
+  font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+  padding: 13px 20px;
+  transition: background .2s;
+  white-space: nowrap;
+}
+.donde-map-cta:hover { background: var(--terra); }
+/* Info column */
 .donde-info { display: flex; flex-direction: column; gap: 28px; }
 .donde-info-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem; font-weight: 400; color: var(--dark); margin-bottom: 6px;
 }
 .donde-info > p { font-size: 14px; color: var(--text-mid); margin-bottom: 8px; }
+/* Meta list */
+.donde-meta { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.donde-meta-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 16px;
+  font-family: 'Jost', sans-serif; font-size: 13px; color: var(--text-mid);
+  border-bottom: 1px solid var(--border);
+}
+.donde-meta-item:last-child { border-bottom: none; }
+.donde-meta-icon { flex-shrink: 0; color: var(--terra); display: flex; }
+.donde-meta-phone { background: var(--cream-dark, var(--sand)); }
+.donde-meta-phone a { color: var(--terra); font-weight: 700; font-size: 14px; text-decoration: none; letter-spacing: .02em; }
+.donde-meta-phone a:hover { text-decoration: underline; }
+/* Form */
 .donde-form { display: flex; flex-direction: column; gap: 14px; }
 .donde-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .donde-form-success { display: none; text-align: center; padding: 24px; }
