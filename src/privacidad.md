@@ -5,7 +5,7 @@ description: Política de privacidad de AnyLopez Clínica Estética — informac
 permalink: /privacidad/
 ---
 
-<p class="legal-meta">Última actualización: abril 2026</p>
+<p class="legal-meta">Última actualización: 29 de abril de 2026</p>
 
 ## 1. Responsable del tratamiento
 
@@ -39,6 +39,8 @@ Sus datos podrán ser comunicados a los siguientes proveedores de servicios que 
 
 - **Formspree, Inc.** (EE.UU.) — servicio de gestión de formularios web. La transferencia internacional se ampara en las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea.
 - **GitHub, Inc.** (EE.UU.) — servicio de alojamiento del sitio web (GitHub Pages). Procesa únicamente metadatos técnicos de acceso (logs). La transferencia internacional se ampara en las Cláusulas Contractuales Tipo.
+
+- **Anthropic, PBC** (EE.UU.) — proveedor del asistente virtual de inteligencia artificial integrado en esta web. Los mensajes que envíe a través del chat son procesados por los servidores de Anthropic para generar una respuesta y **no se almacenan** una vez finalizada la conversación. Anthropic no utiliza los datos de la API para entrenar sus modelos. La transferencia internacional se ampara en las Cláusulas Contractuales Tipo. El uso del asistente virtual requiere su consentimiento previo, que se solicita al abrir el chat por primera vez.
 
 No cedemos ni vendemos sus datos a terceros.
 
