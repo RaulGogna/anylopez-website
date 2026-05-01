@@ -200,7 +200,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--terra-dk);
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -237,7 +237,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
 </section>
 
 <!-- OFERTA PRIMER TRATAMIENTO -->
-<div style="background:var(--accent); padding:14px 0; text-align:center;">
+<div style="background:var(--terra-dk); padding:14px 0; text-align:center;">
   <div class="container">
     <p style="color:#fff; font-size:13px; font-weight:600; letter-spacing:1px;">
       10% de descuento en tu primera Higiene Facial — ¡Reserva hoy!
@@ -274,7 +274,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     <div class="cat-visual">
       <picture>
         <source srcset="{{ ('/images/tratamientos/' + catImg0.replace('.png', '.webp')) | url }}" type="image/webp">
-        <img src="{{ ('/images/tratamientos/' + catImg0) | url }}" alt="{{ cat.nombre }}" loading="lazy" decoding="async" />
+        <img src="{{ ('/images/tratamientos/' + catImg0) | url }}" alt="{{ cat.nombre }}" loading="{{ 'eager' if loop.first else 'lazy' }}" decoding="async" />
       </picture>
     </div>
     {% endif %}
@@ -416,7 +416,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     </aside>
 
     <footer class="trat-modal-ctas">
-      <a class="btn btn-accent trat-modal-cta-wa" data-field="cta-wa" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-accent trat-modal-cta-wa" href="https://wa.me/34656306167" data-field="cta-wa" target="_blank" rel="noopener noreferrer">
         Reservar por WhatsApp →
       </a>
       <a class="btn btn-outline trat-modal-cta-tel" href="tel:+34656306167">

@@ -98,7 +98,7 @@ body::before {
   display: block; margin-bottom: 16px;
 }
 /* alias */
-.section-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--terra); display: block; margin-bottom: 16px; }
+.section-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--terra-dk); display: block; margin-bottom: 16px; }
 
 .section-title { font-size: clamp(28px, 4vw, 56px); margin-bottom: 20px; }
 .section-subtitle { font-size: 16px; color: var(--text-mid); max-width: 600px; margin-bottom: 40px; }
@@ -117,11 +117,11 @@ body::before {
 .btn-no-arrow::after { display: none; }
 
 .btn-primary, .btn-terra, .btn-accent {
-  background: var(--terra); color: #fff;
+  background: var(--terra-dk); color: #fff;
 }
 .btn-primary:hover, .btn-terra:hover, .btn-accent:hover {
-  background: var(--terra-dk); transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(184,114,84,.3);
+  background: #6b3d27; transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(140,82,56,.3);
 }
 .btn-dark { background: var(--dark); color: #fff; }
 .btn-dark:hover { background: var(--dark-mid); transform: translateY(-1px); }
@@ -129,6 +129,7 @@ body::before {
 .btn-outline:hover { background: var(--dark); color: #fff; }
 .btn-outline-white, .btn-outline-light { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
 .btn-outline-white:hover, .btn-outline-light:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+.offer-banner .btn-outline-white { background: var(--terra-dk); }
 .btn-outline-terra { background: transparent; color: var(--terra); border: 1.5px solid var(--terra); }
 .btn-outline-terra:hover { background: var(--terra); color: #fff; }
 .btn-wa-cta {
@@ -400,7 +401,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 /* ═══════════════════════════════════════════════════
    TRUST STRIP
    ═══════════════════════════════════════════════════ */
-.trust-strip { background: var(--terra); padding: 0; }
+.trust-strip { background: var(--terra-dk); padding: 0; }
 .trust-inner {
   display: flex; align-items: stretch;
   max-width: 1280px; margin: 0 auto;
@@ -539,14 +540,14 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 /* Also support old offer-banner class */
 .offer-banner {
   display: grid; grid-template-columns: auto 1fr auto; gap: 40px;
-  align-items: center; background: var(--terra); padding: 40px 48px;
+  align-items: center; background: var(--terra-dk); padding: 40px 48px;
 }
 .offer-badge {
   font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300;
   color: #fff; line-height: 1; text-align: center;
 }
 .offer-text h3 { font-size: 24px; color: #fff; margin-bottom: 8px; }
-.offer-text p { font-size: 14px; color: rgba(255,255,255,0.8); }
+.offer-text p { font-size: 14px; color: #fff; }
 
 /* ═══════════════════════════════════════════════════
    POR QUÉ ELEGIRNOS
@@ -892,12 +893,13 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
   height: 56px; width: auto; opacity: 0.85; margin-bottom: 16px;
   filter: brightness(0) invert(1);
 }
-.footer-brand p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.8; max-width: 240px; margin-bottom: 24px; }
-.footer-col h4 { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.footer-brand p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 240px; margin-bottom: 24px; }
+.footer-col h4, .footer-col .footer-heading { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
 .footer-col ul li a, .footer-col p {
-  font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.4; transition: color 0.2s;
+  font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.4; transition: color 0.2s;
 }
+.footer-col p > a { display: inline-flex; align-items: center; min-height: 36px; }
 .footer-col ul li a:hover { color: var(--ivory); }
 .social-links, .footer-social { display: flex; gap: 10px; margin-top: 4px; }
 .social-link, .footer-social a {
@@ -906,7 +908,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
   transition: background 0.2s; color: rgba(255,255,255,0.7);
 }
 .social-link:hover, .footer-social a:hover { background: var(--terra); color: #fff; }
-.footer-bottom { padding: 24px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.22); }
+.footer-bottom { padding: 24px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.5); }
 .footer-bottom a { color: inherit; }
 .footer-bottom a:hover { color: var(--ivory); }
 .footer-legal-links { margin-top: 6px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
@@ -958,7 +960,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 .breadcrumb .container { display: flex; gap: 8px; align-items: center; }
 .breadcrumb a { font-size: 12px; color: var(--text-mid); transition: color 0.2s; }
 .breadcrumb a:hover { color: var(--terra); }
-.breadcrumb span { font-size: 12px; color: var(--text-light); }
+.breadcrumb span { font-size: 12px; color: var(--text-mid); }
 
 .page-hero {
   background: var(--dark); padding: 80px 0;
@@ -1052,7 +1054,7 @@ button[type="submit"] {
   background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.2);
 }
 .mobile-bar-btn:first-child { background: rgba(255,255,255,0.10); }
-.mobile-bar-btn:last-child { background: #25D366; border-color: transparent; color: #fff; }
+.mobile-bar-btn:last-child { background: #25D366; border-color: transparent; color: var(--dark); }
 .mobile-bar-btn:hover { opacity: 0.88; }
 
 /* Footer extras */
@@ -1083,7 +1085,7 @@ button[type="submit"] {
 .team-card { text-align: center; }
 .team-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; margin-bottom: 16px; }
 .team-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--dark); margin-bottom: 4px; }
-.team-role { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--terra); }
+.team-role { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--terra-dk); }
 
 /* Generic card (Radiofrecuencia page) */
 .card { background: #fff; overflow: hidden; box-shadow: var(--shadow); }
@@ -1485,7 +1487,7 @@ button[type="submit"] {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--terra-dk);
   transition: color 0.2s;
 }
 .trat-card-trigger:hover { color: var(--primary); }
