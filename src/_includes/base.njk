@@ -45,6 +45,7 @@
   <link rel="preload" as="image" href="{{ '/images/hero-poster.webp' | url }}" type="image/webp" fetchpriority="high" />
   {% endif %}
   <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
+  <style>.lang-dropdown li a[data-lang="{{ lang or 'es' }}"] { color: var(--terra, #8b3a1a); font-weight: 600; }</style>
   {% if legalPage %}<link rel="stylesheet" href="{{ '/assets/css/legal.css' | url }}" />{% endif %}
 
   {%- set crumbs = {

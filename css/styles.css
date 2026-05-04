@@ -1809,7 +1809,3 @@ button[type="submit"] {
   transition: background 0.15s;
 }
 .lang-dropdown li a:hover { background: rgba(200,168,130,0.15); }
-.lang-dropdown li a[data-lang="{{ lang or 'es' }}"] {
-  color: var(--terra, #8b3a1a);
-  font-weight: 600;
-}
