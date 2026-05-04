@@ -232,8 +232,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
    HERO — Dark left + Video right
    ═══════════════════════════════════════════════════ */
 .hero {
-  height: calc(100vh - var(--header-h));
-  min-height: 600px;
+  min-height: calc(100vh - var(--header-h));
   display: grid;
   grid-template-columns: 45% 55%;
   overflow: hidden;
@@ -342,7 +341,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
    LEAD STRIP
    ═══════════════════════════════════════════════════ */
 .lead-strip {
-  background: #fff;
+  background: var(--sand);
   border-bottom: 1px solid var(--border);
   padding: 32px 0;
 }

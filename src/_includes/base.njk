@@ -199,8 +199,8 @@
             🌐 {{ 'EN' if lang == 'en' else 'ES' }} <span class="lang-arrow">▾</span>
           </button>
           <ul class="lang-dropdown" id="langDropdown" role="menu">
-            <li role="menuitem"><a href="{{ site.url }}{{ _esUrl }}" data-lang="es">🇪🇸 Español</a></li>
-            <li role="menuitem"><a href="{{ site.url }}{{ _enUrl }}" data-lang="en">🇬🇧 English</a></li>
+            <li role="menuitem"><a href="{{ _esUrl | url }}" data-lang="es">🇪🇸 Español</a></li>
+            <li role="menuitem"><a href="{{ _enUrl | url }}" data-lang="en">🇬🇧 English</a></li>
           </ul>
         </div>
         {% if lang == 'en' %}
