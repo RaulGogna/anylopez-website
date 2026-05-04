@@ -169,7 +169,7 @@
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
-      <a href="{{ '/' | url }}" class="logo-link" aria-label="AnyLopez Clínica Estética">
+      <a href="{{ ('/en/' if lang == 'en' else '/') | url }}" class="logo-link" aria-label="AnyLopez Clínica Estética">
         <picture>
           <source srcset="{{ '/images/logo-color-sin-fondo.webp' | url }}" type="image/webp">
           <img src="{{ '/images/logo-color-sin-fondo.png' | url }}" alt="AnyLopez" class="logo-img" width="120" height="60" fetchpriority="high" decoding="async" />
@@ -204,7 +204,7 @@
         </a>
       </div>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <button class="menu-toggle" id="menuToggle" aria-label="{{ 'Open menu' if lang == 'en' else 'Abrir menú' }}">
         <span></span><span></span><span></span>
       </button>
     </div>
