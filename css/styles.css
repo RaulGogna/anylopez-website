@@ -232,8 +232,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
    HERO — Dark left + Video right
    ═══════════════════════════════════════════════════ */
 .hero {
-  height: calc(100vh - var(--header-h));
-  min-height: 600px;
+  min-height: calc(100vh - var(--header-h));
   display: grid;
   grid-template-columns: 45% 55%;
   overflow: hidden;
@@ -342,7 +341,7 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
    LEAD STRIP
    ═══════════════════════════════════════════════════ */
 .lead-strip {
-  background: #fff;
+  background: var(--sand);
   border-bottom: 1px solid var(--border);
   padding: 32px 0;
 }
@@ -1757,3 +1756,55 @@ button[type="submit"] {
   .trat-modal-ctas { padding: 20px; }
   .trat-modal-ctas .btn { flex: 1 1 100%; }
 }
+
+/* ─── LANG SWITCHER ─────────────────────────────────────── */
+.lang-switcher { position: relative; }
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  padding: 5px 10px;
+  white-space: nowrap;
+  transition: border-color 0.2s;
+}
+.lang-btn:hover { border-color: var(--terra); }
+.lang-arrow { font-size: 0.65em; transition: transform 0.2s; }
+.lang-btn[aria-expanded="true"] .lang-arrow { transform: rotate(180deg); }
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--charcoal, #1a1a1a);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  list-style: none;
+  margin: 0;
+  min-width: 130px;
+  overflow: hidden;
+  padding: 0;
+  z-index: 200;
+}
+.lang-dropdown.open { display: block; }
+.lang-dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ivory, #f5f0e8);
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.lang-dropdown li a:hover { background: rgba(200,168,130,0.15); }

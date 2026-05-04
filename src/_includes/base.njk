@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ lang or 'es' }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ site.name }}" />
-  <meta property="og:locale" content="{{ site.locale }}" />
+  <meta property="og:locale" content="{{ locale or site.locale }}" />
   <meta property="og:title" content="{{ ogTitle or title }}" />
   <meta property="og:description" content="{{ ogDescription or description }}" />
   <meta property="og:url" content="{{ canonicalUrl }}" />
@@ -29,6 +29,15 @@
   <meta name="theme-color" content="#7a3a1f" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
 
+  {%- set _esUrl = page.url | replace('/en/', '/') -%}
+  {%- set _enUrl = '/en' + (page.url | replace('/en/', '/')) -%}
+  {%- set _langPages = ['/', '/about/', '/services/', '/radiofrecuencia/', '/contact/'] -%}
+  {%- if _esUrl in _langPages %}
+  <link rel="alternate" hreflang="es"        href="{{ site.url }}{{ _esUrl }}" />
+  <link rel="alternate" hreflang="en-GB"     href="{{ site.url }}{{ _enUrl }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ _esUrl }}" />
+  {%- endif %}
+
   <link rel="preconnect" href="https://maps.googleapis.com" />
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}" />
@@ -36,13 +45,18 @@
   <link rel="preload" as="image" href="{{ '/images/hero-poster.webp' | url }}" type="image/webp" fetchpriority="high" />
   {% endif %}
   <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
+  <style>.lang-dropdown li a[data-lang="{{ lang or 'es' }}"] { color: var(--terra, #8b3a1a); font-weight: 600; }</style>
   {% if legalPage %}<link rel="stylesheet" href="{{ '/assets/css/legal.css' | url }}" />{% endif %}
 
   {%- set crumbs = {
     "/about/": "Nosotras",
     "/services/": "Servicios",
     "/radiofrecuencia/": "INDIBA",
-    "/contact/": "Contacto"
+    "/contact/": "Contacto",
+    "/en/about/": "About Us",
+    "/en/services/": "Treatments",
+    "/en/radiofrecuencia/": "INDIBA",
+    "/en/contact/": "Contact"
   } -%}
   {%- if crumbs[page.url] -%}
   <script type="application/ld+json">
@@ -53,8 +67,8 @@
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Inicio",
-        "item": "{{ site.url }}/"
+        "name": "{{ 'Home' if lang == 'en' else 'Inicio' }}",
+        "item": "{{ site.url }}{{ '/en/' if lang == 'en' else '/' }}"
       },
       {
         "@type": "ListItem",
@@ -91,6 +105,7 @@
         "currenciesAccepted": "EUR",
         "paymentAccepted": "Cash, Credit Card, Bizum, Bank Transfer, Financing",
         "medicalSpecialty": "Dermatologic",
+        "availableLanguage": ["Spanish", "English"],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "C/ Marqués de Comillas 4, Local 6",
@@ -144,7 +159,7 @@
         "url": "https://raulgogna.github.io/anylopez-website/",
         "name": "AnyLopez Clínica Estética",
         "publisher": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" },
-        "inLanguage": "es-ES"
+        "inLanguage": ["es-ES", "en-GB"]
       }
     ]
   }
@@ -155,7 +170,7 @@
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
-      <a href="{{ '/' | url }}" class="logo-link" aria-label="AnyLopez Clínica Estética">
+      <a href="{{ ('/en/' if lang == 'en' else '/') | url }}" class="logo-link" aria-label="AnyLopez Clínica Estética">
         <picture>
           <source srcset="{{ '/images/logo-color-sin-fondo.webp' | url }}" type="image/webp">
           <img src="{{ '/images/logo-color-sin-fondo.png' | url }}" alt="AnyLopez" class="logo-img" width="120" height="60" fetchpriority="high" decoding="async" />
@@ -163,21 +178,43 @@
       </a>
 
       <nav class="nav-links" id="navMenu">
-        <a href="{{ '/' | url }}" class="{{ 'active' if page.url == '/' }}">Inicio</a>
-        <a href="{{ '/about/' | url }}" class="{{ 'active' if page.url == '/about/' }}">Nosotras</a>
-        <a href="{{ '/services/' | url }}" class="{{ 'active' if page.url == '/services/' }}">Servicios</a>
+        {% if lang == 'en' %}
+        <a href="{{ '/en/' | url }}"              class="{{ 'active' if page.url == '/en/' }}">Home</a>
+        <a href="{{ '/en/about/' | url }}"        class="{{ 'active' if page.url == '/en/about/' }}">About Us</a>
+        <a href="{{ '/en/services/' | url }}"     class="{{ 'active' if page.url == '/en/services/' }}">Treatments</a>
+        <a href="{{ '/en/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/en/radiofrecuencia/' }}">INDIBA</a>
+        <a href="{{ '/en/contact/' | url }}"      class="{{ 'active' if page.url == '/en/contact/' }}">Contact</a>
+        {% else %}
+        <a href="{{ '/' | url }}"                 class="{{ 'active' if page.url == '/' }}">Inicio</a>
+        <a href="{{ '/about/' | url }}"           class="{{ 'active' if page.url == '/about/' }}">Nosotras</a>
+        <a href="{{ '/services/' | url }}"        class="{{ 'active' if page.url == '/services/' }}">Servicios</a>
         <a href="{{ '/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/radiofrecuencia/' }}">INDIBA</a>
-        <a href="{{ '/contact/' | url }}" class="{{ 'active' if page.url == '/contact/' }}">Contacto</a>
+        <a href="{{ '/contact/' | url }}"         class="{{ 'active' if page.url == '/contact/' }}">Contacto</a>
+        {% endif %}
       </nav>
 
       <div class="header-ctas">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" aria-label="Select language" aria-expanded="false" id="langBtn">
+            🌐 {{ 'EN' if lang == 'en' else 'ES' }} <span class="lang-arrow">▾</span>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="menu">
+            <li role="menuitem"><a href="{{ _esUrl | url }}" data-lang="es">🇪🇸 Español</a></li>
+            <li role="menuitem"><a href="{{ _enUrl | url }}" data-lang="en">🇬🇧 English</a></li>
+          </ul>
+        </div>
+        {% if lang == 'en' %}
+        <a href="{{ '/en/contact/' | url }}" class="btn btn-terra">Book appointment</a>
+        <a href="https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20a%20free%20consultation." class="header-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        {% else %}
         <a href="{{ '/contact/' | url }}" class="btn btn-terra">Reservar cita</a>
         <a href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios." class="header-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        {% endif %}
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347ZM12.05 21.785h-.01a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 0 1 2.16 12.04C2.16 6.58 6.58 2.16 12.05 2.16c2.66 0 5.16 1.036 7.04 2.92a9.88 9.88 0 0 1 2.91 7.04c-.004 5.46-4.424 9.88-9.88 9.88l-.07-.015ZM20.52 3.449C18.24 1.245 15.24 0 12.05 0 5.464 0 .104 5.334.1 11.893c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.422-8.449Z"/></svg>
         </a>
       </div>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <button class="menu-toggle" id="menuToggle" aria-label="{{ 'Open menu' if lang == 'en' else 'Abrir menú' }}">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -191,13 +228,17 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="{{ '/' | url }}" aria-label="AnyLopez">
+          <a href="{{ ('/en/' if lang == 'en' else '/') | url }}" aria-label="AnyLopez">
             <picture>
               <source srcset="{{ '/images/logo-color-sin-fondo.webp' | url }}" type="image/webp">
               <img src="{{ '/images/logo-color-sin-fondo.png' | url }}" alt="AnyLopez" class="footer-logo-img" width="140" height="70" loading="lazy" decoding="async" />
             </picture>
           </a>
+          {% if lang == 'en' %}
+          <p>Aesthetic clinic in Benidorm. 35+ years of expertise with certified INDIBA &amp; HIFU technology.</p>
+          {% else %}
           <p>Clínica estética facial y corporal en Benidorm. Más de 35 años de experiencia con tecnología certificada INDIBA &amp; HIFU.</p>
+          {% endif %}
           <div class="social-links">
             <a href="https://www.instagram.com/anylopez.estetica/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7ZM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
@@ -209,6 +250,17 @@
         </div>
 
         <div class="footer-col">
+          {% if lang == 'en' %}
+          <p class="footer-heading">Treatments</p>
+          <ul>
+            <li><a href="{{ '/en/services/' | url }}">INDIBA Activ</a></li>
+            <li><a href="{{ '/en/services/' | url }}">HIFU</a></li>
+            <li><a href="{{ '/en/services/' | url }}">Botox &amp; Fillers</a></li>
+            <li><a href="{{ '/en/services/' | url }}">Facials</a></li>
+            <li><a href="{{ '/en/services/' | url }}">Dermapen</a></li>
+            <li><a href="{{ '/en/services/' | url }}">IPL Hair Removal</a></li>
+          </ul>
+          {% else %}
           <p class="footer-heading">Servicios</p>
           <ul>
             <li><a href="{{ '/services/' | url }}">INDIBA Activ</a></li>
@@ -218,9 +270,19 @@
             <li><a href="{{ '/services/' | url }}">Dermapen</a></li>
             <li><a href="{{ '/services/' | url }}">Depilación Láser</a></li>
           </ul>
+          {% endif %}
         </div>
 
         <div class="footer-col">
+          {% if lang == 'en' %}
+          <p class="footer-heading">Information</p>
+          <ul>
+            <li><a href="{{ '/en/' | url }}">Home</a></li>
+            <li><a href="{{ '/en/about/' | url }}">About Us</a></li>
+            <li><a href="{{ '/en/radiofrecuencia/' | url }}">INDIBA Activ</a></li>
+            <li><a href="{{ '/en/contact/' | url }}">Contact</a></li>
+          </ul>
+          {% else %}
           <p class="footer-heading">Información</p>
           <ul>
             <li><a href="{{ '/' | url }}">Inicio</a></li>
@@ -228,29 +290,30 @@
             <li><a href="{{ '/radiofrecuencia/' | url }}">INDIBA Activ</a></li>
             <li><a href="{{ '/contact/' | url }}">Contacto</a></li>
           </ul>
+          {% endif %}
           <div style="margin-top:1.2rem;">
             <a href="https://maps.app.goo.gl/v1Hvp48bfh3E7d86A" target="_blank" rel="noopener noreferrer" class="footer-google-link">
-              <span class="footer-stars">★★★★★</span> 216 reseñas en Google
+              <span class="footer-stars">★★★★★</span> {% if lang == 'en' %}216 Google reviews{% else %}216 reseñas en Google{% endif %}
             </a>
           </div>
         </div>
 
         <div class="footer-col">
-          <p class="footer-heading">Contacto</p>
+          <p class="footer-heading">{% if lang == 'en' %}Contact{% else %}Contacto{% endif %}</p>
           <p>C/ Marqués de Comillas 4<br>Local 6, Benidorm</p>
           <p><a href="tel:656306167">656 306 167</a></p>
           <p><a href="tel:865710769">865 710 769</a></p>
           <p><a href="mailto:info@anylopez.com">info@anylopez.com</a></p>
-          <p>Lun–Vie: 10–14h / 16–20h</p>
+          <p>{% if lang == 'en' %}Mon–Fri: 10am–2pm / 4–8pm{% else %}Lun–Vie: 10–14h / 16–20h{% endif %}</p>
         </div>
 
       </div>
       <div class="footer-bottom">
-        <p>© 2026 AnyLopez Clínica Estética · Benidorm · Todos los derechos reservados.</p>
+        <p>© 2026 AnyLopez Clínica Estética · Benidorm · {% if lang == 'en' %}All rights reserved.{% else %}Todos los derechos reservados.{% endif %}</p>
         <p class="footer-legal-links">
-          <a href="{{ '/privacidad/' | url }}">Política de privacidad</a>
+          <a href="{{ '/privacidad/' | url }}">{% if lang == 'en' %}Privacy policy{% else %}Política de privacidad{% endif %}</a>
           <span aria-hidden="true">·</span>
-          <a href="{{ '/aviso-legal/' | url }}">Aviso legal</a>
+          <a href="{{ '/aviso-legal/' | url }}">{% if lang == 'en' %}Legal notice{% else %}Aviso legal{% endif %}</a>
         </p>
       </div>
     </div>
@@ -261,9 +324,9 @@
   <div class="mobile-bar">
     <a href="tel:656306167" class="mobile-bar-btn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      Llamar
+      {% if lang == 'en' %}Call{% else %}Llamar{% endif %}
     </a>
-    <a href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios." class="mobile-bar-btn" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/34656306167?text={% if lang == 'en' %}Hello%2C%20I%20would%20like%20to%20book%20a%20free%20consultation.{% else %}Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios.{% endif %}" class="mobile-bar-btn" target="_blank" rel="noopener noreferrer">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347ZM12.05 21.785h-.01a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 0 1 2.16 12.04C2.16 6.58 6.58 2.16 12.05 2.16c2.66 0 5.16 1.036 7.04 2.92a9.88 9.88 0 0 1 2.91 7.04c-.004 5.46-4.424 9.88-9.88 9.88l-.07-.015ZM20.52 3.449C18.24 1.245 15.24 0 12.05 0 5.464 0 .104 5.334.1 11.893c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.422-8.449Z"/></svg>
       WhatsApp
     </a>
@@ -287,6 +350,31 @@
       menu.classList.remove('open');
       toggle.classList.remove('open');
     }));
+
+    /* ── Lang switcher dropdown ── */
+    (function() {
+      var btn = document.getElementById('langBtn');
+      var dropdown = document.getElementById('langDropdown');
+      if (!btn || !dropdown) return;
+
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = dropdown.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function() {
+        dropdown.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+
+      dropdown.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          var chosenLang = a.getAttribute('data-lang');
+          localStorage.setItem('anylopez-lang', chosenLang);
+        });
+      });
+    })();
 
     /* ── Scroll reveal ── */
     const observer = new IntersectionObserver((entries) => {
@@ -341,5 +429,29 @@
 
   <anylopez-chat data-endpoint="https://anylopez-chat.anylopez.workers.dev"></anylopez-chat>
   <script src="{{ '/assets/chat/widget.min.js' | url }}" defer></script>
+
+  <script>
+    /* ── Language auto-detect ── */
+    (function() {
+      var stored = localStorage.getItem('anylopez-lang');
+      if (stored) return;
+      var lang = (navigator.language || (navigator.languages && navigator.languages[0]) || '').toLowerCase();
+      if (!lang.startsWith('en')) return;
+      var isEnPage = location.pathname.indexOf('/en/') !== -1;
+      if (isEnPage) { localStorage.setItem('anylopez-lang', 'en'); return; }
+      var map = {
+        '/anylopez-website/':                '/anylopez-website/en/',
+        '/anylopez-website/about/':          '/anylopez-website/en/about/',
+        '/anylopez-website/services/':       '/anylopez-website/en/services/',
+        '/anylopez-website/radiofrecuencia/':'/anylopez-website/en/radiofrecuencia/',
+        '/anylopez-website/contact/':        '/anylopez-website/en/contact/'
+      };
+      var target = map[location.pathname];
+      if (target) {
+        localStorage.setItem('anylopez-lang', 'en');
+        location.replace(target);
+      }
+    })();
+  </script>
 </body>
 </html>

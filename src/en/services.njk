@@ -1,0 +1,523 @@
+---
+layout: base.njk
+title: "Aesthetic Treatments Benidorm — Facials, HIFU, Botox & More"
+description: "Full catalogue of treatments at AnyLopez Aesthetic Clinic in Benidorm: facials, body treatments, injectables, massages, IPL hair removal and more."
+---
+
+<style>
+  /* ─── CATEGORY NAV ─────────────────────────────────────────────── */
+  .cat-nav {
+    position: sticky;
+    top: 88px; /* --header-h V3 */
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid var(--bg-light);
+    padding: 0;
+  }
+  /* fade right to indicate more pills */
+  .cat-nav::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 48px;
+    background: linear-gradient(to right, transparent, #fff);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .cat-nav-inner {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 12px 48px 12px 24px; /* padding-right wide so content doesn't hide under fade */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .cat-nav-inner::-webkit-scrollbar { display: none; }
+  .cat-nav-pills {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .cat-nav-pill {
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1.5px solid var(--bg-light);
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+  }
+  .cat-nav-pill:hover,
+  .cat-nav-pill.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  /* ─── CATEGORY SECTION ─────────────────────────────────────────── */
+  .cat-section {
+    padding: 64px 0 80px;
+    scroll-margin-top: 150px; /* header(88) + cat-nav(~58) + 4px */
+  }
+  .cat-section:nth-child(even) { background: var(--bg-cream); }
+  .cat-header {
+    margin-bottom: 48px;
+  }
+  .cat-header .section-label { margin-bottom: 8px; }
+  .cat-header h2 { font-size: clamp(24px, 4vw, 36px); margin-bottom: 10px; }
+  .cat-header p { color: var(--text-mid); font-size: 15px; max-width: 560px; }
+
+  /* ─── CATEGORY VISUAL BANNER ───────────────────────────────────── */
+  .cat-visual {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .cat-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .cat-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(28,26,24,0.35) 0%, transparent 60%);
+    border-radius: 8px;
+  }
+
+  /* ─── TREATMENT GRID ────────────────────────────────────────────── */
+  .trat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  /* ─── TREATMENT CARD ────────────────────────────────────────────── */
+  .trat-card {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .trat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(28,26,24,.14);
+  }
+  .trat-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: var(--bg-light);
+  }
+  .trat-card--bare {
+    border-top: 3px solid var(--accent);
+  }
+  .trat-card-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .trat-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--primary);
+    margin: 0;
+  }
+  .trat-card-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text-mid);
+    margin: 0;
+  }
+  .trat-card-incluye {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .trat-card-incluye li {
+    font-size: 12px;
+    color: var(--text-mid);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .trat-card-incluye li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .trat-card-meta {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .trat-duracion {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+  .trat-duracion svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    stroke: var(--accent);
+  }
+  .trat-cta {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--terra-dk);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .trat-cta:hover { color: var(--primary); }
+
+  /* ─── RESPONSIVE ────────────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .trat-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .trat-grid { grid-template-columns: 1fr; }
+    .cat-section { padding: 48px 0 64px; }
+    .cat-header { margin-bottom: 32px; }
+    .cat-visual { height: 180px; }
+  }
+</style>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="{{ '/en/' | url }}">Home</a>
+    <span>›</span>
+    <span>Treatments</span>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">Full Catalogue</span>
+    <h1>Our Treatments</h1>
+    <p>{{ en.tratamientos.tratamientos | length }} treatments across {{ en.tratamientos.categorias | length }} specialities — Designed and delivered by professionals in Benidorm</p>
+  </div>
+</section>
+
+<!-- FIRST-TREATMENT OFFER BANNER -->
+<div style="background:var(--terra-dk); padding:14px 0; text-align:center;">
+  <div class="container">
+    <p style="color:#fff; font-size:13px; font-weight:600; letter-spacing:1px;">
+      10% off your first Facial Deep Cleanse — Book today!
+      <a href="{{ '/en/contact/' | url }}" style="color:#fff; text-decoration:underline; margin-left:12px;">Book now →</a>
+    </p>
+  </div>
+</div>
+
+<!-- CATEGORY NAV -->
+<nav class="cat-nav" aria-label="Treatment categories">
+  <div class="cat-nav-inner">
+    <div class="cat-nav-pills">
+      {% for cat in en.tratamientos.categorias %}
+      <a href="#{{ cat.id }}" class="cat-nav-pill">{{ cat.nombre }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>
+
+<!-- TREATMENT CATEGORIES -->
+{% for cat in en.tratamientos.categorias %}
+{% set catTrats = en.tratamientos.tratamientos | byCategory(cat.id) %}
+<section class="cat-section" id="{{ cat.id }}">
+  <div class="container">
+    <div class="cat-header">
+      <span class="section-label">{{ loop.index }} / {{ en.tratamientos.categorias | length }}</span>
+      <h2>{{ cat.nombre }}</h2>
+      <p>{{ cat.descripcion }}</p>
+    </div>
+
+    {% set catSharedImage = catTrats | length > 1 and catTrats[0].imagen == catTrats[1].imagen %}
+    {% if catSharedImage %}
+    {% set catImg0 = catTrats[0].imagen %}
+    <div class="cat-visual">
+      <picture>
+        <source srcset="{{ ('/images/tratamientos/' + catImg0.replace('.png', '.webp')) | url }}" type="image/webp">
+        <img src="{{ ('/images/tratamientos/' + catImg0) | url }}" alt="{{ cat.nombre }}" loading="{{ 'eager' if loop.first else 'lazy' }}" decoding="async" />
+      </picture>
+    </div>
+    {% endif %}
+
+    <div class="trat-grid">
+      {% for trat in catTrats %}
+      <article class="trat-card{% if catSharedImage %} trat-card--bare{% endif %}" data-slug="{{ trat.slug }}">
+        {% if not catSharedImage %}
+        <picture>
+          <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
+          <img
+            src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
+            alt="{{ trat.nombre }}"
+            class="trat-card-img"
+            loading="lazy"
+            decoding="async"
+            width="400"
+            height="200"
+          />
+        </picture>
+        {% endif %}
+        <div class="trat-card-body">
+          <h3 class="trat-card-name">{{ trat.nombre }}</h3>
+          <p class="trat-card-desc">{{ trat.descripcion }}</p>
+
+          {% if trat.incluye %}
+          <ul class="trat-card-incluye">
+            {% for item in trat.incluye %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          <div class="trat-card-meta">
+            <span class="trat-duracion">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              {{ trat.duracion }}
+            </span>
+            <button
+              type="button"
+              class="trat-cta trat-card-trigger"
+              data-slug="{{ trat.slug }}"
+              aria-label="View details for {{ trat.nombre }}"
+            >View details →</button>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<!-- CTA OFFER -->
+<section class="section section--bg">
+  <div class="container">
+    <div class="offer-banner">
+      <div class="offer-badge">30%<br><span style="font-size:24px;">Off</span></div>
+      <div class="offer-text">
+        <h3>Treatment of the Month — INDIBA Radiofrequency</h3>
+        <p>If you have skin laxity or cellulite, take advantage of our treatment of the month with over 30% off INDIBA System Radiofrequency.</p>
+      </div>
+      <a href="{{ '/en/contact/' | url }}" class="btn btn-outline-white">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK CONTACT -->
+<section class="section section--dark">
+  <div class="container text-center">
+    <span class="section-label" style="color:var(--accent)">Information</span>
+    <h2 class="section-title" style="color:#fff; margin-bottom:24px;">Visit Us in Benidorm</h2>
+    <div style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap; color:rgba(255,255,255,0.85); font-size:15px; margin-bottom:32px;">
+      <div>📍 Calle Marqués de Comillas 4, Local 6, C.P. 03501</div>
+      <div>📞 656 306 167 / 865 710 769</div>
+      <div>✉️ info@anylopez.com</div>
+      <div>🕐 Mon–Fri 10:00–14:00 / 16:00–20:00</div>
+    </div>
+    <a href="{{ '/en/contact/' | url }}" class="btn btn-accent">Book Your Appointment</a>
+  </div>
+</section>
+
+<!-- TREATMENT MODAL (single instance, hydrated from JSON inline below) -->
+<dialog id="trat-modal" class="trat-modal" aria-labelledby="trat-modal-title">
+  <form method="dialog" class="trat-modal-close-form">
+    <button type="submit" class="trat-modal-close" aria-label="Close treatment details">&times;</button>
+  </form>
+
+  <article class="trat-modal-body">
+    <header class="trat-modal-hero">
+      <picture class="trat-modal-img">
+        <source data-field="imagen-webp" type="image/webp">
+        <img data-field="imagen-png" alt="" loading="lazy" decoding="async" />
+      </picture>
+      <div class="trat-modal-hero-text">
+        <span class="trat-modal-cat" data-field="categoria"></span>
+        <h2 id="trat-modal-title" data-field="nombre"></h2>
+        <p class="trat-modal-paraquien" data-field="paraQuien"></p>
+      </div>
+    </header>
+
+    <section class="trat-modal-section">
+      <h3>Benefits</h3>
+      <ul class="trat-modal-beneficios" data-field="beneficios"></ul>
+    </section>
+
+    <section class="trat-modal-section">
+      <h3>How it works</h3>
+      <div class="trat-modal-comofunciona" data-field="comoFunciona"></div>
+    </section>
+
+    <section class="trat-modal-section trat-modal-precios-section">
+      <h3>Prices</h3>
+      <div class="trat-modal-pack-hero" data-field="packDestacado"></div>
+      <ul class="trat-modal-precios-list" data-field="precios"></ul>
+      <p class="trat-modal-duracion">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span data-field="duracion"></span>
+      </p>
+    </section>
+
+    <section class="trat-modal-section trat-modal-extras" data-field="extras">
+      <div class="trat-modal-idealpara" data-field="idealPara-wrap" hidden>
+        <h3>Ideal for</h3>
+        <p data-field="idealPara"></p>
+      </div>
+      <div class="trat-modal-recomendaciones" data-field="recomendaciones-wrap" hidden>
+        <h3>Recommendations</h3>
+        <p data-field="recomendaciones"></p>
+      </div>
+    </section>
+
+    <aside class="trat-modal-garantia">
+      <strong>No commitment —</strong> <span data-field="garantia"></span>
+    </aside>
+
+    <footer class="trat-modal-ctas">
+      <a class="btn btn-accent trat-modal-cta-wa" href="https://wa.me/34656306167" data-field="cta-wa" target="_blank" rel="noopener noreferrer">
+        Book on WhatsApp →
+      </a>
+      <a class="btn btn-outline trat-modal-cta-tel" href="tel:+34656306167">
+        Call 656 306 167
+      </a>
+    </footer>
+  </article>
+</dialog>
+
+<script id="trat-data" type="application/json">
+{{ en.tratamientos | dump | safe }}
+</script>
+
+<script>
+  window.__TRAT_IMG_BASE = "{{ '/images/tratamientos/' | url }}";
+</script>
+<script src="{{ '/js/treatment-modal.js' | url }}" defer></script>
+
+<!-- JSON-LD: ItemList of treatments linked to the MedicalClinic schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "AnyLopez Aesthetic Clinic Treatments Catalogue",
+  "numberOfItems": {{ en.tratamientos.tratamientos | length }},
+  "itemListElement": [
+    {%- for trat in en.tratamientos.tratamientos -%}
+    {%- set idx = trat.packDestacado or 0 -%}
+    {%- set priceClean = trat.precios[idx].precio | replace(' €','') | replace('From ','') | replace('.','') | trim -%}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": ["MedicalProcedure", "Service"],
+        "name": {{ trat.nombre | dump | safe }},
+        "description": {{ trat.descripcion | dump | safe }},
+        "url": "https://raulgogna.github.io/anylopez-website/en/services/#{{ trat.slug }}",
+        "procedureType": "https://schema.org/NoninvasiveProcedure",
+        "serviceType": {{ trat.nombre | dump | safe }},
+        "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ priceClean }}",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://raulgogna.github.io/anylopez-website/en/services/#{{ trat.slug }}"
+        }
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+
+<script>
+  /* Active pill highlight on scroll */
+  (function () {
+    const pills = document.querySelectorAll('.cat-nav-pill');
+    const sections = Array.from(document.querySelectorAll('.cat-section'));
+    if (!pills.length || !sections.length) return;
+
+    const navInner = document.querySelector('.cat-nav-inner');
+
+    function setActivePill(id) {
+      pills.forEach((p) => {
+        const isActive = p.getAttribute('href') === '#' + id;
+        p.classList.toggle('active', isActive);
+        if (isActive && navInner) {
+          p.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActivePill(entry.target.id);
+        });
+      },
+      { rootMargin: '-30% 0px -60% 0px' }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+
+    /* Horizontal scroll with mouse wheel over the pills nav */
+    if (navInner) {
+      navInner.addEventListener('wheel', (e) => {
+        if (e.deltaY !== 0) {
+          e.preventDefault();
+          navInner.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+    }
+
+    /* Smooth scroll for pill clicks */
+    pills.forEach((pill) => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(pill.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  })();
+</script>
