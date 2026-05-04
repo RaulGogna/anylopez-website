@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ lang or 'es' }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ site.name }}" />
-  <meta property="og:locale" content="{{ site.locale }}" />
+  <meta property="og:locale" content="{{ locale or site.locale }}" />
   <meta property="og:title" content="{{ ogTitle or title }}" />
   <meta property="og:description" content="{{ ogDescription or description }}" />
   <meta property="og:url" content="{{ canonicalUrl }}" />
@@ -29,6 +29,15 @@
   <meta name="theme-color" content="#7a3a1f" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
 
+  {%- set _esUrl = page.url | replace('/en/', '/') -%}
+  {%- set _enUrl = '/en' + (page.url | replace('/en/', '/')) -%}
+  {%- set _langPages = ['/', '/about/', '/services/', '/radiofrecuencia/', '/contact/'] -%}
+  {%- if _esUrl in _langPages %}
+  <link rel="alternate" hreflang="es"        href="{{ site.url }}{{ _esUrl }}" />
+  <link rel="alternate" hreflang="en-GB"     href="{{ site.url }}{{ _enUrl }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ _esUrl }}" />
+  {%- endif %}
+
   <link rel="preconnect" href="https://maps.googleapis.com" />
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}" />
@@ -42,7 +51,11 @@
     "/about/": "Nosotras",
     "/services/": "Servicios",
     "/radiofrecuencia/": "INDIBA",
-    "/contact/": "Contacto"
+    "/contact/": "Contacto",
+    "/en/about/": "About Us",
+    "/en/services/": "Treatments",
+    "/en/radiofrecuencia/": "INDIBA",
+    "/en/contact/": "Contact"
   } -%}
   {%- if crumbs[page.url] -%}
   <script type="application/ld+json">
@@ -53,8 +66,8 @@
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Inicio",
-        "item": "{{ site.url }}/"
+        "name": "{{ 'Home' if lang == 'en' else 'Inicio' }}",
+        "item": "{{ site.url }}{{ '/en/' if lang == 'en' else '/' }}"
       },
       {
         "@type": "ListItem",
@@ -91,6 +104,7 @@
         "currenciesAccepted": "EUR",
         "paymentAccepted": "Cash, Credit Card, Bizum, Bank Transfer, Financing",
         "medicalSpecialty": "Dermatologic",
+        "availableLanguage": ["Spanish", "English"],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "C/ Marqués de Comillas 4, Local 6",
