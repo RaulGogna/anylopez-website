@@ -1,0 +1,1231 @@
+{
+  "garantiaDefault": "Personalised assessment with no commitment. If after the first session we consider it's not the right treatment for you, we'll guide you to the most effective alternative for your case.",
+  "categorias": [
+    { "id": "limpiezas-faciales",   "nombre": "Facials & Deep Cleanse",                    "descripcion": "Facial care at different levels of depth and sophistication." },
+    { "id": "tratamientos-faciales","nombre": "Advanced Facials",                           "descripcion": "Peels, mesotherapy, dermapen and regeneration technology." },
+    { "id": "lifting-antiaging",    "nombre": "Lifting & Anti-Ageing",                     "descripcion": "Non-surgical firming with Ultherapy HIFU and INDIBA radiofrequency." },
+    { "id": "inyectables",          "nombre": "Botox & Fillers",                           "descripcion": "Botox, hyaluronic acid, thread lifts and PRP." },
+    { "id": "corporal",             "nombre": "Body Treatments",                           "descripcion": "Wood therapy, pressotherapy, drainage and muscle recovery." },
+    { "id": "masajes",              "nombre": "Massages",                                  "descripcion": "Relaxing, therapeutic, facial and specialist massages." },
+    { "id": "estetica-decorativa",  "nombre": "Lash Extensions & Semi-Permanent Make-up", "descripcion": "Individual lash extensions and semi-permanent pigmentation." },
+    { "id": "depilacion",           "nombre": "IPL Hair Removal",                         "descripcion": "Intense pulsed light, safe and comfortable for all skin types." }
+  ],
+  "tratamientos": [
+    {
+      "slug": "limpieza-facial-gold",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "GOLD Facial",
+      "descripcion": "An essential, gentle and effective treatment — ideal for keeping skin clean, balanced and healthy without aggressive procedures.",
+      "paraQuien": "For those looking for basic but effective maintenance and who want to prevent blemishes before they appear.",
+      "comoFunciona": [
+        "Deep facial cleanse adapted to your skin type: cleansing, gentle exfoliation and toning.",
+        "Careful extraction of comedones and blackheads to unclog pores.",
+        "Removal of dead skin cells to promote natural cell renewal."
+      ],
+      "beneficios": [
+        "Deep facial cleanse adapted to all skin types",
+        "Careful extraction of comedones and impurities",
+        "Removal of dead skin cells",
+        "Visible improvement in texture and appearance",
+        "Prevents clogged pores and future blemishes",
+        "Leaves skin fresh, smooth and even-toned"
+      ],
+      "incluye": [
+        "Deep facial cleanse",
+        "Comedone extraction",
+        "Dead skin cell removal",
+        "Improved texture and appearance"
+      ],
+      "idealPara": "Regular maintenance or as a first step before more advanced treatments.",
+      "recomendaciones": "Repeat every 4–6 weeks to keep skin clean and balanced.",
+      "duracion": "45 minutes",
+      "precios": [{ "concepto": "Session", "precio": "50 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "limpieza-facial-platinum",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "PLATINUM Hydrating Facial",
+      "descripcion": "An advanced treatment combining deep cleansing with powerful hydration to restore radiance, freshness and vitality to your skin.",
+      "paraQuien": "For dehydrated or dull skin that needs to regain radiance without invasive procedures.",
+      "comoFunciona": [
+        "Deep facial cleanse removes impurities, excess oil and accumulated residues.",
+        "Gentle exfoliation to promote cell renewal and improve texture.",
+        "Intensive hydration with hyaluronic acid for a plumping effect and moisture retention.",
+        "Antioxidant vitamin C to brighten and combat signs of fatigue."
+      ],
+      "beneficios": [
+        "Deep facial cleanse",
+        "Gentle exfoliation that renews the skin",
+        "Intensive hydration with hyaluronic acid",
+        "Antioxidant and brightening vitamin C",
+        "Improved elasticity, smoothness and even tone",
+        "Final face cream to lock in hydration"
+      ],
+      "incluye": [
+        "Deep facial cleanse",
+        "Gentle exfoliation",
+        "Intensive hydration with hyaluronic acid",
+        "Antioxidant vitamin C application",
+        "Final face cream"
+      ],
+      "idealPara": "Dehydrated, dull or lacklustre skin seeking a rejuvenating effect without invasive procedures.",
+      "duracion": "60 minutes",
+      "precios": [{ "concepto": "Session", "precio": "75 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "limpieza-facial-detox",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "DETOX Facial",
+      "descripcion": "Detox cleanse + nano-needle peel. Innovative — purifies and revitalises skin from within.",
+      "paraQuien": "For congested, dull or blemish-prone skin that needs a deep reset.",
+      "comoFunciona": [
+        "Deep facial cleanse removes toxins, impurities and excess oil.",
+        "Nano-needle peel stimulates cell renewal without damaging the skin.",
+        "Detoxifying mask purifies, soothes and balances the skin.",
+        "The combination improves active absorption and enhances subsequent results."
+      ],
+      "beneficios": [
+        "Brighter, fresher skin from the first session",
+        "More even and smooth texture",
+        "Cleaner, less visible pores",
+        "Stimulates cell renewal",
+        "Revitalised, healthy-looking complexion"
+      ],
+      "incluye": [
+        "Deep facial cleanse",
+        "Nano-needle peel",
+        "Improved active absorption",
+        "Detoxifying mask",
+        "Skin cell renewal"
+      ],
+      "idealPara": "Dull, congested, blemish-prone or devitalised skin.",
+      "duracion": "90 minutes",
+      "precios": [{ "concepto": "Session", "precio": "150 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "limpieza-facial-diamond",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "DIAMOND Facial",
+      "descripcion": "A complete treatment to achieve clean, hydrated and radiant skin.",
+      "paraQuien": "For those seeking complete care combining deep cleansing, device-assisted hydration and intensive exfoliation.",
+      "comoFunciona": [
+        "Preparatory deep facial cleanse.",
+        "Advanced facial device hydration to boost absorption.",
+        "Three exfoliants applied to renew skin at different levels.",
+        "Nourishing serum, personalised mask and final cream seal the treatment."
+      ],
+      "beneficios": [
+        "Clean, hydrated and radiant skin",
+        "Deep cell renewal",
+        "Visible improvement in texture and radiance",
+        "Long-lasting hydration",
+        "Rejuvenating result from the first session"
+      ],
+      "incluye": [
+        "Deep facial cleanse",
+        "Advanced facial device",
+        "Three exfoliants",
+        "Nourishing serum",
+        "Customised mask",
+        "Long-lasting moisturiser"
+      ],
+      "idealPara": "Those looking for brighter, smoother and more youthful skin with a complete treatment.",
+      "duracion": "90 minutes",
+      "precios": [{ "concepto": "Session", "precio": "150 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "limpieza-facial-elite",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "ELITE Facial",
+      "descripcion": "An exclusive treatment designed to renew, hydrate and revitalise your skin to the highest level.",
+      "paraQuien": "For those seeking the most complete in-house treatment, with gypsum therapy and premium devices.",
+      "comoFunciona": [
+        "Preparatory deep facial cleanse.",
+        "Intensive hydration with advanced facial devices.",
+        "Premium exfoliants renewing the skin at different layers.",
+        "Gypsum therapy mask with a firming and revitalising effect.",
+        "Nourishing face cream and sunscreen complete the ritual."
+      ],
+      "beneficios": [
+        "Maximum renewal, hydration and revitalisation",
+        "Visible firming effect",
+        "Radiant skin from the first session",
+        "Exclusive gypsum therapy mask",
+        "Complete premium care"
+      ],
+      "incluye": [
+        "Deep facial cleanse",
+        "Advanced facial devices",
+        "Premium exfoliants",
+        "Firming gypsum therapy mask",
+        "Face cream and sunscreen"
+      ],
+      "idealPara": "Those who want to give their skin the most exclusive care and show a radiant complexion.",
+      "duracion": "120 minutes",
+      "precios": [{ "concepto": "Session", "precio": "200 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "mesoterapia-virtual",
+      "imagen": "mesoterapia-virtual.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Virtual Mesotherapy (Caffeine + Vitamins)",
+      "descripcion": "A non-invasive treatment designed to reduce localised fat and improve skin appearance without needles. Ampoules with caffeine and vitamins applied via virtual technology.",
+      "paraQuien": "For those with localised fat or mild sagging looking to improve skin tone without needles or downtime.",
+      "comoFunciona": [
+        "Caffeine accelerates blood and lymphatic circulation, promoting mobilisation of fat stored in adipocytes.",
+        "Vitamins and nutrients nourish, revitalise and firm the skin from within.",
+        "Virtual technology ensures painless absorption of active ingredients, stimulating the natural metabolism to burn released fat."
+      ],
+      "beneficios": [
+        "Reduction of localised fat",
+        "Improved skin firmness and elasticity",
+        "Stimulates circulation and lymphatic drainage",
+        "Tones and smooths the skin",
+        "Safe, painless procedure with no downtime"
+      ],
+      "incluye": [
+        "Localised fat reduction",
+        "Improved firmness and elasticity",
+        "Stimulates circulation and lymphatic drainage",
+        "Tones and smooths skin",
+        "Painless, no downtime"
+      ],
+      "idealPara": "People with localised fat, mild sagging or those looking to improve skin tone and appearance without invasive procedures.",
+      "duracion": "30 minutes",
+      "precios": [{ "concepto": "Session", "precio": "90 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "velo-colageno-puro",
+      "imagen": "velo-colageno-puro.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Pure Marine Collagen Veil",
+      "descripcion": "An intensive treatment applying a 100% pure marine collagen veil to restore elasticity, firmness and immediate rejuvenation.",
+      "paraQuien": "For dull, dehydrated or fatigued skin that needs an immediate boost of hydration and firmness.",
+      "comoFunciona": [
+        "A 100% pure marine-origin collagen veil is applied directly to the face.",
+        "Marine collagen restores elasticity and improves firmness from the first session.",
+        "Promotes cell regeneration and protects skin against signs of fatigue and ageing."
+      ],
+      "beneficios": [
+        "Deep, long-lasting hydration",
+        "Softer, brighter and healthier skin",
+        "Improved elasticity and firmness",
+        "Skin cleansing and revitalisation",
+        "Immediate rejuvenating effect"
+      ],
+      "incluye": [
+        "Deep, long-lasting hydration",
+        "Softer, brighter and healthier skin",
+        "Improved elasticity and firmness",
+        "Visible revitalisation",
+        "Ideal for dull or dehydrated skin"
+      ],
+      "idealPara": "All skin types, especially dull, dehydrated or tired-looking skin.",
+      "duracion": "90 minutes",
+      "precios": [{ "concepto": "Session", "precio": "150 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "dermapen-hidratacion",
+      "imagen": "dermapen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermapen + Deep Facial Hydration",
+      "descripcion": "A combined treatment boosting skin regeneration and revitalisation with microneedles and deep hydration.",
+      "paraQuien": "For those wanting to firm, smooth fine lines and rejuvenate the face naturally and progressively.",
+      "comoFunciona": [
+        "The Dermapen creates controlled micro-punctures in the skin.",
+        "These micro-punctures stimulate fibroblasts, responsible for producing collagen and elastin.",
+        "After a preparatory deep facial cleanse, intensive hydration with hyaluronic acid and vitamins is applied to boost radiance and elasticity."
+      ],
+      "beneficios": [
+        "Firmer, smoother and more youthful skin",
+        "Reduction of fine lines and wrinkles",
+        "Improved absorption of hydrating actives",
+        "Improved texture, firmness and tone",
+        "Revitalised, healthy-looking complexion"
+      ],
+      "incluye": [
+        "Deep facial cleanse",
+        "Dermapen micro-punctures",
+        "Intensive hydration with hyaluronic acid and vitamins",
+        "Improved texture, firmness and tone",
+        "Revitalised complexion"
+      ],
+      "idealPara": "Skin with fine lines, lack of firmness or need for deep regeneration.",
+      "duracion": "75 minutes",
+      "precios": [
+        { "concepto": "Session", "precio": "150 €" },
+        { "concepto": "Pack 6 sessions", "precio": "800 €" }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "dermapen-cicatrices",
+      "imagen": "dermapen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermapen Acne Scar Treatment",
+      "descripcion": "An advanced microneedling treatment that stimulates the skin's natural regeneration, restoring collagen and elastin to improve acne scarring.",
+      "paraQuien": "For those living with acne scars or superficial marks wanting to achieve a more even skin tone.",
+      "comoFunciona": [
+        "The Dermapen creates controlled micro-perforations in the skin.",
+        "These micro-perforations activate the body's natural repair process.",
+        "Collagen and elastin are restored, improving existing scars and strengthening the skin structure."
+      ],
+      "beneficios": [
+        "Reduction of acne scars and superficial marks",
+        "Stimulation of collagen and elastin",
+        "Improved skin texture and smoothness",
+        "More even tone and rejuvenated appearance",
+        "Minimally invasive procedure"
+      ],
+      "incluye": [
+        "Acne scar reduction",
+        "Collagen and elastin stimulation",
+        "Improved texture and smoothness",
+        "More even skin tone",
+        "Minimally invasive"
+      ],
+      "idealPara": "Skin with acne scars or superficial marks, all skin types.",
+      "recomendaciones": "Several sessions may be required depending on scar depth. Using soothing products and sun protection afterwards is essential.",
+      "duracion": "60 minutes",
+      "precios": [{ "concepto": "Session", "precio": "75 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "peeling-antimanchas",
+      "imagen": "peeling-antimanchas.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Anti-Pigmentation Chemical Peel",
+      "descripcion": "An advanced, non-surgical treatment to eliminate dark spots, improve texture and rejuvenate the face. Depigmenting chemical peel + radiofrequency.",
+      "paraQuien": "For women with accumulated sun spots, hyperpigmentation or uneven tone seeking a progressive, long-lasting improvement.",
+      "comoFunciona": [
+        "Depigmenting chemical peel with a combination of 4 acids, controlled removal of superficial layers.",
+        "Combined with radiofrequency to stimulate collagen production and improve skin firmness.",
+        "Programme of 4 full sessions that deeply renew skin and stimulate the dermal matrix."
+      ],
+      "beneficios": [
+        "Progressive elimination of spots and blemishes",
+        "Deep skin renewal",
+        "Stimulation of the dermal matrix",
+        "More even and radiant skin",
+        "Visible reduction of wrinkles and spots",
+        "Improved firmness and elasticity"
+      ],
+      "incluye": [
+        "4 complete sessions",
+        "Progressive spot elimination",
+        "Deep renewal",
+        "Dermal matrix stimulation",
+        "More even and radiant skin"
+      ],
+      "idealPara": "Spots and uneven tone, facial wrinkles, acne scars, aged or lacking-firmness skin.",
+      "duracion": "60 minutes per session",
+      "precios": [
+        { "concepto": "Session", "precio": "175 €" },
+        { "concepto": "Pack 5 sessions", "precio": "800 €" }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "peeling-quimico-facial",
+      "imagen": "peeling-quimico-facial.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Facial Chemical Peel",
+      "descripcion": "Deep friction-free exfoliation using a chemical solution. Removes damaged cells and stimulates cell regeneration.",
+      "paraQuien": "For those wanting to deeply renew skin, improve tone and smooth fine lines in one session.",
+      "comoFunciona": [
+        "Prior facial cleanse to prepare the skin.",
+        "Application of a chemical solution adapted to your skin type, without mechanical friction.",
+        "Soothing and protective products enhance results and protect the renewed skin."
+      ],
+      "beneficios": [
+        "Stimulates collagen production",
+        "Visibly improves texture and tone",
+        "Provides immediate radiance",
+        "Smoother, more even and rejuvenated skin",
+        "Reduces enlarged pores"
+      ],
+      "incluye": [
+        "Treats hyperpigmentation and sun damage",
+        "Reduces acne scars",
+        "Smooths expression lines",
+        "Provides immediate radiance",
+        "Stimulates collagen"
+      ],
+      "idealPara": "Skin blemishes, acne marks, expression lines, enlarged pores, dull or ageing skin.",
+      "recomendaciones": "Mild redness or flaking may appear after treatment (part of the renewal process). Use sunscreen and follow recommendations.",
+      "duracion": "45 minutes",
+      "precios": [{ "concepto": "Session", "precio": "150 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "dermaplaning-facial",
+      "imagen": "dermaplaning-facial.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermaplaning Facial",
+      "descripcion": "A mechanical exfoliation technique that removes dead skin cells and fine facial hair, revealing brighter and smoother skin.",
+      "paraQuien": "For those wanting immediately brighter, soft-to-touch skin free of the fine hair that dulls the complexion.",
+      "comoFunciona": [
+        "A specialist surgical scalpel glides gently over clean, dry skin.",
+        "Carefully removes superficial layers: dead cells, impurities and vellus hair (fine hair that dullens the skin).",
+        "Skin renews naturally and subsequent skincare products penetrate better, enhancing their efficacy."
+      ],
+      "beneficios": [
+        "Removes dead cells and fine facial hair",
+        "Improves skin radiance and smoothness",
+        "Boosts absorption of subsequent treatments",
+        "Evens tone and texture",
+        "Safe, quick and painless procedure",
+        "Suitable for all skin types, including sensitive"
+      ],
+      "incluye": [
+        "Removes dead cells and facial hair",
+        "Improves radiance and smoothness",
+        "Boosts treatment absorption",
+        "Evens tone and texture",
+        "Suitable for sensitive skin"
+      ],
+      "idealPara": "All skin types, including sensitive, seeking immediate radiance without peeling.",
+      "recomendaciones": "Repeat every 4–6 weeks. Avoid direct sun exposure immediately after and apply sun protection.",
+      "duracion": "45 minutes",
+      "precios": [
+        { "concepto": "Session", "precio": "50 €" },
+        { "concepto": "Pack 10 sessions", "precio": "400 €" }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "anti-acne",
+      "imagen": "anti-acne.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Anti-Acne Facial Treatment",
+      "descripcion": "A specialist facial care to combat acne, calm the skin and prevent future breakouts.",
+      "paraQuien": "For teenagers and adults with active acne, oily-prone or recurring inflammatory breakouts.",
+      "comoFunciona": [
+        "Deep facial cleanse removes impurities, oil and residues accumulated in pores.",
+        "Application of specific anti-acne actives that regulate sebum and combat bacteria.",
+        "High-frequency session that reduces inflammation, speeds healing and prevents new breakouts."
+      ],
+      "beneficios": [
+        "Cleaner and purified skin",
+        "Less redness and inflammation",
+        "More even tone",
+        "Fresher and healthier appearance",
+        "Stimulates cell renewal",
+        "Reduces blackheads, spots and recent marks"
+      ],
+      "incluye": [
+        "Deep facial cleanse",
+        "Specific anti-acne actives",
+        "Anti-inflammatory high frequency",
+        "Reduces redness and inflammation",
+        "Reduces blackheads and spots"
+      ],
+      "idealPara": "Skin with active acne, oily or inflammatory tendency.",
+      "duracion": "45 minutes",
+      "precios": [{ "concepto": "Session", "precio": "75 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "laser-plasma-pen",
+      "imagen": "laser-plasma-pen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Plasma Pen (Skin Tag & Blemish Removal)",
+      "descripcion": "An advanced procedure for small imperfections (warts, spots, fibromas) using plasma energy — no surgery.",
+      "paraQuien": "For those with small localised imperfections (freckles, spots, warts) wanting to remove them without surgery.",
+      "comoFunciona": [
+        "The laser generates a small point of energy on the skin surface, creating a controlled micro-burn.",
+        "This precise action removes the lesion without damaging surrounding tissue.",
+        "Stimulates the skin's natural regeneration and collagen production, improving quality and firmness."
+      ],
+      "beneficios": [
+        "Precisely removes or minimises imperfections",
+        "Does not damage surrounding tissue",
+        "Stimulates skin regeneration",
+        "Improves overall texture and appearance",
+        "Non-surgical procedure",
+        "Visible results from the first sessions"
+      ],
+      "incluye": [
+        "Precise blemish removal",
+        "Stimulates regeneration",
+        "Improved texture and appearance",
+        "Non-surgical",
+        "Results from first session"
+      ],
+      "idealPara": "Freckles, spots, warts, small skin lesions and localised imperfections.",
+      "recomendaciones": "A light temporary scab may appear after treatment (natural process). Do not touch the area and use sun protection.",
+      "duracion": "30 minutes",
+      "precios": [{ "concepto": "From", "precio": "95 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "ultherapy-hifu",
+      "imagen": "ultherapy-hifu.png",
+      "categoria": "lifting-antiaging",
+      "nombre": "Ultherapy HIFU Non-Surgical Facelift",
+      "descripcion": "Focused ultrasound that firms, sculpts and rejuvenates. Stimulates natural collagen and elastin production for a non-surgical facelift.",
+      "paraQuien": "For those seeking a natural lifting effect without surgery, anaesthesia or downtime.",
+      "comoFunciona": [
+        "Focused ultrasound acts on the deep layers of the skin — exactly where a surgeon cuts for a facelift.",
+        "Activates natural regeneration and stimulates collagen and elastin production from within.",
+        "Results are progressive: visible improvement from the first month, optimal result at 3–6 months, long-lasting."
+      ],
+      "beneficios": [
+        "Visible firming without surgery",
+        "Reduction of sagging",
+        "Elimination of localised fat",
+        "Facial and body contour remodelling",
+        "Firmer, more elastic and youthful skin",
+        "Long-lasting and progressive results"
+      ],
+      "incluye": [
+        "Visible firming without surgery",
+        "Sagging reduction",
+        "Natural lifting effect",
+        "Contour remodelling",
+        "Long-lasting results"
+      ],
+      "idealPara": "People with facial or body sagging looking for a natural facelift without surgery.",
+      "duracion": "Variable by area",
+      "precios": [
+        { "concepto": "Full face (120 min)", "precio": "350 €" },
+        { "concepto": "Under-eyes (20 min)", "precio": "160 €" },
+        { "concepto": "Neck (60 min)", "precio": "250 €" },
+        { "concepto": "Décolletage (60 min)", "precio": "250 €" },
+        { "concepto": "Arms (60 min)", "precio": "350 €" },
+        { "concepto": "Hands (30 min)", "precio": "200 €" },
+        { "concepto": "Abdomen (60 min per area)", "precio": "350 €" },
+        { "concepto": "Half legs (45 min per area)", "precio": "350 €" },
+        { "concepto": "Vaginal treatment (45 min)", "precio": "495 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "radiofrecuencia-indiba",
+      "imagen": "radiofrecuencia-indiba.png",
+      "categoria": "lifting-antiaging",
+      "nombre": "INDIBA Radiofrequency (Face & Body)",
+      "descripcion": "INDIBA technology working from within the cell to stimulate collagen and elastin. Firmer, brighter and more rejuvenated skin from the first session.",
+      "paraQuien": "For those with sagging, loss of firmness or signs of ageing on the face and body wanting visible results from the first session without invasion.",
+      "comoFunciona": [
+        "INDIBA radiofrequency emits high-frequency waves acting simultaneously on the three layers of the skin.",
+        "Stimulates collagen and elastin production, firming tissue from within.",
+        "Improves circulation and eliminates toxins, resulting in brighter, firmer and healthier skin."
+      ],
+      "beneficios": [
+        "Non-surgical lifting effect",
+        "Improved elasticity and firmness",
+        "Reduces wrinkles and sagging",
+        "Activates cell regeneration",
+        "Improves circulation and eliminates toxins",
+        "Visible results from the 1st session"
+      ],
+      "incluye": [
+        "Non-surgical lifting effect",
+        "Improved elasticity and firmness",
+        "Reduces wrinkles and sagging",
+        "Activates cell regeneration",
+        "Painless, no downtime"
+      ],
+      "idealPara": "People with sagging, loss of firmness or signs of ageing on the face and body.",
+      "duracion": "45 minutes",
+      "precios": [
+        { "concepto": "1 session", "precio": "65 €" },
+        { "concepto": "Pack 10 sessions", "precio": "350 €" }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "botox-zona",
+      "imagen": "botox-zona.png",
+      "categoria": "inyectables",
+      "nombre": "Botox by Area",
+      "descripcion": "Botulinum toxin injection to temporarily block the muscle contractions responsible for dynamic wrinkles.",
+      "paraQuien": "For those wanting to soften forehead, frown line or crow's feet wrinkles while maintaining natural expressiveness.",
+      "comoFunciona": [
+        "Precise micro-injections are applied to the muscles that create expression lines.",
+        "Botulinum toxin temporarily blocks the nerve signals that contract these muscles.",
+        "Wrinkles soften and the formation of new lines is prevented. Natural, relaxed result."
+      ],
+      "beneficios": [
+        "Reduces dynamic wrinkles",
+        "Prevents new expression lines from forming",
+        "Natural and harmonious result",
+        "Quick, minimally invasive procedure",
+        "Visible results within days"
+      ],
+      "incluye": [
+        "Reduces dynamic wrinkles",
+        "Prevents new lines",
+        "Natural result",
+        "Minimally invasive",
+        "Results from first session"
+      ],
+      "idealPara": "Those looking to soften forehead, frown line or crow's feet wrinkles with a natural result.",
+      "recomendaciones": "Avoid massages, saunas or intense exercise in the first 24 hours after application.",
+      "duracion": "30 minutes",
+      "precios": [{ "concepto": "Per area", "precio": "300 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "acido-hialuronico",
+      "imagen": "acido-hialuronico.png",
+      "categoria": "inyectables",
+      "nombre": "Hyaluronic Acid Filler",
+      "descripcion": "A minimally invasive treatment that remodels and rejuvenates facial and lip contours, restoring volume to areas affected by ageing.",
+      "paraQuien": "For those wanting to restore volume in specific areas (folds, lips) or redefine contours without surgery.",
+      "comoFunciona": [
+        "Precise hyaluronic acid injections are applied to specific areas according to the objective.",
+        "Hyaluronic acid attracts water and integrates with tissue, filling folds or adding lip volume naturally.",
+        "A review at 15–30 days ensures the optimal result and allows adjustment if needed."
+      ],
+      "beneficios": [
+        "Remodels and defines the face",
+        "Restores volume to aged areas",
+        "Smooths folds and expression lines",
+        "Improves facial harmony",
+        "Safe and quick procedure",
+        "Visible and immediate results"
+      ],
+      "incluye": [
+        "Remodels and defines the face",
+        "Restores volume",
+        "Smooths folds",
+        "Improved facial harmony",
+        "Immediate results"
+      ],
+      "idealPara": "Those wanting to remodel contours, soften folds or add lip volume.",
+      "recomendaciones": "Avoid intense massages, prolonged sun or saunas during the first days. Attend the review appointment.",
+      "duracion": "30 minutes",
+      "precios": [
+        { "concepto": "Nasolabial folds", "precio": "300 €" },
+        { "concepto": "Nose reshaping", "precio": "450 €" },
+        { "concepto": "Lips", "precio": "350 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "hilos-tensores",
+      "imagen": "hilos-tensores.png",
+      "categoria": "inyectables",
+      "nombre": "Thread Lift",
+      "descripcion": "Aesthetic medicine using fine threads to rejuvenate and tighten the face naturally. Improves firmness, softens wrinkles and redefines contours.",
+      "paraQuien": "For those with moderate sagging, dropped facial oval or wanting to redefine the jawline without surgery.",
+      "comoFunciona": [
+        "Threads are inserted under the skin using precise, minimally invasive techniques.",
+        "They provide an immediate lifting effect by elevating and repositioning tissue.",
+        "Stimulate natural collagen production, improving skin firmness and quality long-term."
+      ],
+      "beneficios": [
+        "Firms and tightens skin",
+        "Non-surgical lifting effect",
+        "Stimulates natural collagen",
+        "Improved facial contour definition",
+        "Lifts brows and redefines the jawline",
+        "Visible results from the first session"
+      ],
+      "incluye": [
+        "Firms and tightens",
+        "Non-surgical lift",
+        "Stimulates collagen",
+        "Defines contours",
+        "Results from first session"
+      ],
+      "idealPara": "Moderate facial sagging, dropped facial oval or those seeking a lifting effect without surgery.",
+      "recomendaciones": "Avoid intense massages and physical exertion during the first days.",
+      "duracion": "60 minutes",
+      "precios": [
+        { "concepto": "4 spiculated threads", "precio": "395 €" },
+        { "concepto": "6 spiculated threads", "precio": "595 €" },
+        { "concepto": "4 spiculated + 12 PDO threads", "precio": "495 €" },
+        { "concepto": "6 spiculated + 16 PDO threads", "precio": "725 €" }
+      ],
+      "packDestacado": 2
+    },
+    {
+      "slug": "prp-plasma",
+      "imagen": "prp-plasma.png",
+      "categoria": "inyectables",
+      "nombre": "PRP Platelet-Rich Plasma",
+      "descripcion": "Biostimulation using your own plasma to rejuvenate skin naturally. Reactivates your own regenerative capacity.",
+      "paraQuien": "For those wanting a 100% natural treatment using their own plasma, ideal for skin with signs of ageing or sagging.",
+      "comoFunciona": [
+        "A small blood sample is taken from the patient.",
+        "It is centrifuged to separate platelet-rich plasma, concentrating growth factors.",
+        "This concentrate is applied to the skin, stimulating cell regeneration and the production of collagen and elastin."
+      ],
+      "beneficios": [
+        "Skin regeneration and revitalisation",
+        "Improved texture and radiance",
+        "Reduction of fine lines and expression lines",
+        "Greater firmness and elasticity",
+        "More hydrated and rejuvenated skin",
+        "Natural treatment using your own plasma"
+      ],
+      "incluye": [
+        "Natural treatment with your own plasma",
+        "Stimulates collagen and elastin",
+        "Improved quality and appearance",
+        "Progressive results",
+        "Safe and biocompatible procedure"
+      ],
+      "idealPara": "Skin with signs of ageing, lack of radiance, sagging or dehydration.",
+      "recomendaciones": "Several sessions may be required depending on skin needs. Follow aftercare instructions.",
+      "duracion": "60 minutes",
+      "precios": [{ "concepto": "Session", "precio": "275 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "maderoterapia",
+      "imagen": "maderoterapia.png",
+      "categoria": "corporal",
+      "nombre": "Wood Therapy (Maderoterapia)",
+      "descripcion": "Aesthetic massage with wooden tools designed to stimulate circulation, tone and firm the skin. Effective for localised fat, sagging or cellulite.",
+      "paraQuien": "For those with cellulite, body sagging or localised fat seeking a manual, non-invasive and relaxing treatment.",
+      "comoFunciona": [
+        "Precise movements with rollers and other wooden tools activate blood and lymphatic circulation.",
+        "Improves tissue oxygenation and stimulates collagen and elastin production.",
+        "Promotes skin firmness, elasticity and mobilisation of accumulated fat."
+      ],
+      "beneficios": [
+        "Reduces localised fat and abdominal volume",
+        "Improves blood and lymphatic circulation",
+        "Tones and firms the skin",
+        "Stimulates collagen and elastin",
+        "Helps reduce cellulite",
+        "Relaxing and revitalising"
+      ],
+      "incluye": [
+        "Reduces localised fat",
+        "Improves circulation and drainage",
+        "Tones and firms",
+        "Stimulates collagen",
+        "Reduces cellulite"
+      ],
+      "idealPara": "People with cellulite, body sagging or localised fat on abdomen, buttocks or legs.",
+      "recomendaciones": "Combine with hydration, balanced diet and exercise to enhance results.",
+      "duracion": "30 minutes",
+      "precios": [
+        { "concepto": "Session", "precio": "40 €" },
+        { "concepto": "Pack 10 sessions", "precio": "360 €" }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "presoterapia",
+      "imagen": "presoterapia.png",
+      "categoria": "corporal",
+      "nombre": "Pressotherapy — Lymphatic Drainage",
+      "descripcion": "A non-invasive treatment applying sequential pressure on legs, abdomen and arms to stimulate lymphatic drainage, circulation and cell regeneration.",
+      "paraQuien": "For people with tired legs, fluid retention, poor circulation or those who spend many hours standing or sitting.",
+      "comoFunciona": [
+        "Sequential air pressures are applied to legs, abdomen, arms or other areas.",
+        "Stimulates lymphatic drainage and blood circulation, helping to eliminate retained toxins and fluids.",
+        "Promotes tissue oxygenation and skin elasticity, leaving an immediate feeling of lightness."
+      ],
+      "beneficios": [
+        "Promotes elimination of fluids and toxins",
+        "Improves skin elasticity and firmness",
+        "Reduces heavy leg sensation",
+        "Stimulates circulation and oxygenation",
+        "Comfortable, safe and painless procedure",
+        "Relaxing and revitalising effect"
+      ],
+      "incluye": [
+        "Eliminates retained fluids",
+        "Improved elasticity",
+        "Reduces tired legs",
+        "Stimulates circulation",
+        "Comfortable and relaxing"
+      ],
+      "idealPara": "People looking to improve circulation, lymphatic drainage and reduce fluid retention.",
+      "duracion": "30 minutes",
+      "precios": [
+        { "concepto": "Session", "precio": "25 €" },
+        { "concepto": "Pack 5 sessions", "precio": "100 €" }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "drenaje-linfatico-postop",
+      "imagen": "drenaje-linfatico-postop.png",
+      "categoria": "corporal",
+      "nombre": "Post-Op Lymphatic Drainage Massage",
+      "descripcion": "A specialist treatment after surgery to speed recovery, reduce inflammation and improve aesthetic results.",
+      "paraQuien": "For patients who have recently undergone surgery (lipo, tummy tuck, breast augmentation, facelift) or people with severe oedema and retention.",
+      "comoFunciona": [
+        "Gentle, slow and precise movements stimulate the lymphatic system.",
+        "Helps eliminate retained fluids, toxins and anaesthetic residues accumulated after surgery.",
+        "Promotes tissue de-inflammation, prevents fibrosis and visibly improves scarring."
+      ],
+      "beneficios": [
+        "Reduces inflammation and oedema",
+        "Reduces bruising and discomfort",
+        "Prevents fibrosis and hardening",
+        "Improves scarring",
+        "Speeds post-operative recovery",
+        "Improves final aesthetic results"
+      ],
+      "incluye": [
+        "Reduces inflammation and oedema",
+        "Reduces bruising",
+        "Prevents fibrosis",
+        "Improves scarring",
+        "Speeds recovery"
+      ],
+      "idealPara": "Post-op from liposuction, tummy tuck, breast augmentation, facelift or other aesthetic procedures. Also for fluid retention or oedema.",
+      "recomendaciones": "Begin as advised by your doctor. Drink plenty of water and follow professional guidelines for optimal recovery.",
+      "duracion": "45 or 60 minutes",
+      "precios": [
+        { "concepto": "Session 45 min", "precio": "65 €" },
+        { "concepto": "Session 60 min", "precio": "75 €" },
+        { "concepto": "Pack 10 sessions 45 min", "precio": "600 €" },
+        { "concepto": "Pack 10 sessions 60 min", "precio": "700 €" }
+      ],
+      "packDestacado": 2
+    },
+    {
+      "slug": "dolor-muscular-corporal",
+      "imagen": "masajes.png",
+      "categoria": "corporal",
+      "nombre": "Muscle Pain Relief Treatment",
+      "descripcion": "A non-invasive body treatment for shoulders, back, lower back, knees or tired legs. Relaxes muscles, relieves tension and promotes recovery.",
+      "paraQuien": "For those suffering from chronic muscle pain, accumulated tension from work or overload in specific body areas.",
+      "comoFunciona": [
+        "Application of combined techniques acting on tense muscles and pain points.",
+        "Improves local circulation, oxygenates tissue and relaxes contracted muscle fibres.",
+        "Progressive programme: with several sessions, relief is sustained and the area regains functionality."
+      ],
+      "beneficios": [
+        "Reduces muscle pain sensation from the first sessions",
+        "Promotes relaxation and general wellbeing",
+        "Improves circulation and recovery in treated areas",
+        "Relieves tired or heavy legs",
+        "Comfortable, non-invasive and safe procedure",
+        "Visible results with several sessions"
+      ],
+      "incluye": [
+        "Reduces muscle pain",
+        "Promotes relaxation",
+        "Improves circulation",
+        "Relieves tired legs",
+        "Comfortable and safe"
+      ],
+      "idealPara": "People with muscle discomfort, accumulated tension or overload in different body areas.",
+      "duracion": "45 minutes per area",
+      "precios": [
+        { "concepto": "Body session (45 min per area)", "precio": "65 €" },
+        { "concepto": "Pack 5 sessions (30 min)", "precio": "225 €" },
+        { "concepto": "Pack 10 sessions (30 min)", "precio": "400 €" }
+      ],
+      "packDestacado": 2
+    },
+    {
+      "slug": "masaje-corporal",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Full Body Massage",
+      "descripcion": "A treatment on the musculoskeletal system to release tension, relax muscles and produce a sedative and revitalising effect.",
+      "paraQuien": "For those accumulating tension from work, sport or stress needing a deep disconnection of body and mind.",
+      "comoFunciona": [
+        "Active and precise techniques working on muscles, tendons and joints.",
+        "Stimulate the nervous system to promote deep relaxation.",
+        "Improve blood circulation and tone muscles, leaving a revitalising sensation."
+      ],
+      "beneficios": [
+        "Releases accumulated muscle tension",
+        "Relaxes and tones the whole body",
+        "Stimulates the nervous system (sedative effect)",
+        "Improves blood circulation",
+        "Reduces stress and body fatigue"
+      ],
+      "incluye": [
+        "Releases tension",
+        "Relaxes and tones",
+        "Sedative effect",
+        "Improves circulation",
+        "Reduces stress"
+      ],
+      "idealPara": "Those looking to relieve discomfort, contractures or deeply unwind and relax.",
+      "recomendaciones": "Complement with hydration and gentle stretching after the massage.",
+      "duracion": "15 to 60 minutes",
+      "precios": [
+        { "concepto": "60 minutes", "precio": "85 €" },
+        { "concepto": "50 minutes", "precio": "85 €" },
+        { "concepto": "45 minutes", "precio": "75 €" },
+        { "concepto": "30 minutes", "precio": "55 €" },
+        { "concepto": "15 minutes", "precio": "35 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-relajante",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Relaxing Aromatherapy Massage",
+      "descripcion": "Massage with 100% natural vegetable and essential oils. Ideal for relieving stress, muscle tension and contractures.",
+      "paraQuien": "For those seeking total disconnection, stress relief and a relaxing sensory experience.",
+      "comoFunciona": [
+        "Wide and precise movements on legs, arms, neck and back with natural vegetable and essential oils.",
+        "Release accumulated tension and provide a deep sense of physical and mental wellbeing.",
+        "Essential oils enhance the relaxing effect through scent and skin contact."
+      ],
+      "beneficios": [
+        "Relieves stress, anxiety and nervousness",
+        "Softens contractures and muscle tension",
+        "Stimulates blood circulation",
+        "Facilitates toxin elimination",
+        "Relaxing and comforting experience"
+      ],
+      "incluye": [
+        "Relieves stress",
+        "Softens contractures",
+        "Stimulates circulation",
+        "Facilitates toxin elimination",
+        "Relaxing experience"
+      ],
+      "idealPara": "Periodic relaxation sessions or after intense days.",
+      "recomendaciones": "Combine with hydration and deep breathing to enhance effects.",
+      "duracion": "15 to 60 minutes",
+      "precios": [
+        { "concepto": "60 minutes", "precio": "75 €" },
+        { "concepto": "45 minutes", "precio": "65 €" },
+        { "concepto": "30 minutes", "precio": "45 €" },
+        { "concepto": "15 minutes", "precio": "25 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-craneo-facial-cervical",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Head, Face & Neck Massage",
+      "descripcion": "Combines massage techniques on face, head, neck, trapezius and scalp with essential oils. Releases stress and improves mobility.",
+      "paraQuien": "For those suffering from tension headaches, cervical contractures or accumulated mental stress.",
+      "comoFunciona": [
+        "Gentle and precise movements on face, skull, cervicals and shoulders with essential oils.",
+        "Release contractures in areas especially sensitive to stress.",
+        "Stimulate local circulation and improve mobility and tone of cervical muscles."
+      ],
+      "beneficios": [
+        "Releases stress and anxiety",
+        "Relaxes facial and cervical muscles",
+        "Improves mobility and muscle tone",
+        "Relieves tension in neck, shoulders and head",
+        "Stimulates circulation and general wellbeing"
+      ],
+      "incluye": [
+        "Releases stress",
+        "Relaxes facial and cervical muscles",
+        "Improves mobility",
+        "Relieves tension",
+        "Stimulates circulation"
+      ],
+      "idealPara": "Those seeking relief from tension headaches, cervical contractures or mental stress.",
+      "recomendaciones": "Avoid intense physical activity immediately after the massage to prolong its effects.",
+      "duracion": "30 or 45 minutes",
+      "precios": [
+        { "concepto": "30 minutes", "precio": "50 €" },
+        { "concepto": "45 minutes", "precio": "75 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-podal",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Foot Massage & Reflexology",
+      "descripcion": "A massage that revitalises and soothes the feet, improves circulation and provides wellbeing throughout the body.",
+      "paraQuien": "For those who spend many hours on their feet, athletes or people with tired or swollen feet.",
+      "comoFunciona": [
+        "Pressure techniques and precise movements over the entire sole and instep of the foot.",
+        "Stimulate local blood and lymphatic circulation.",
+        "Their effects extend to legs, arms and neck, generating a general feeling of relaxation."
+      ],
+      "beneficios": [
+        "Revitalises tired feet",
+        "Improves blood and lymphatic circulation",
+        "Relieves tension in legs, arms and neck",
+        "Relaxes and reduces stress",
+        "Stimulates energy and general wellbeing"
+      ],
+      "incluye": [
+        "Revitalises tired feet",
+        "Improves circulation",
+        "Relieves leg tension",
+        "Relaxes",
+        "Stimulates general wellbeing"
+      ],
+      "idealPara": "People who spend many hours on their feet, athletes or those with swollen feet.",
+      "recomendaciones": "Perform regularly to keep circulation active. Combine with hydration and stretching.",
+      "duracion": "30 or 45 minutes",
+      "precios": [
+        { "concepto": "45 minutes", "precio": "65 €" },
+        { "concepto": "30 minutes", "precio": "45 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-piernas-cansadas",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Tired Legs Massage",
+      "descripcion": "A specialist massage to relieve tired, heavy or swollen legs. Stimulates circulation and lymphatic drainage.",
+      "paraQuien": "For women with fluid retention, mild varicose veins, pregnant women or those with chronic heaviness.",
+      "comoFunciona": [
+        "Rhythmic and precise movements over the entire leg, from ankle to hip.",
+        "Promote elimination of retained fluids and improve venous and lymphatic return.",
+        "Reduce the feeling of heaviness and swelling, leaving legs immediately lighter."
+      ],
+      "beneficios": [
+        "Relieves tired leg sensation",
+        "Reduces swelling and oedema",
+        "Improves blood and lymphatic circulation",
+        "Promotes toxin elimination",
+        "Relaxes and tones leg muscles"
+      ],
+      "incluye": [
+        "Relieves tired legs",
+        "Reduces swelling",
+        "Improves circulation",
+        "Eliminates toxins",
+        "Relaxes and tones"
+      ],
+      "idealPara": "Women with retention, pregnant women, people with chronic heaviness or those who sit for long hours.",
+      "recomendaciones": "Stay hydrated, walk and elevate legs after the massage to maintain results.",
+      "duracion": "30 or 45 minutes",
+      "precios": [
+        { "concepto": "45 minutes", "precio": "65 €" },
+        { "concepto": "30 minutes", "precio": "45 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-aloe-vera",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Aloe Vera Moisturising Body Massage",
+      "descripcion": "Body wrap and massage with pure aloe vera to hydrate, soothe and regenerate skin. Ideal for sensitive, dry or sun-exposed skin.",
+      "paraQuien": "For sensitised, dry skin, after intense sun exposure or with general tightness.",
+      "comoFunciona": [
+        "A pure Aloe Vera wrap is applied to the whole body, harnessing its soothing and regenerating properties.",
+        "A massage follows to facilitate aloe absorption.",
+        "Improves circulation and restores the skin's natural balance."
+      ],
+      "beneficios": [
+        "Deeply hydrates the skin",
+        "Soothes redness and sensitivity",
+        "Promotes skin cell regeneration",
+        "Relaxes and softens muscles",
+        "Restores skin's natural state after sun exposure"
+      ],
+      "incluye": [
+        "Deep hydration",
+        "Soothes redness",
+        "Skin cell regeneration",
+        "Relaxes muscles",
+        "Restores after sun"
+      ],
+      "idealPara": "Dry, irritated or sun-exposed skin.",
+      "recomendaciones": "Complement with sun protection and daily moisturising care.",
+      "duracion": "45 minutes",
+      "precios": [{ "concepto": "Session", "precio": "75 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-facial-colageno",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Collagen Facial Massage",
+      "descripcion": "Professional massage with marine collagen serum. Ideal for mature or dehydrated skin, providing deep hydration and anti-ageing effect.",
+      "paraQuien": "For mature or dehydrated skin wanting a rejuvenating manual effect, without needles or devices.",
+      "comoFunciona": [
+        "The massage stimulates facial circulation and drainage, awakening microcirculation.",
+        "Marine collagen penetrates the skin, helping to maintain firmness, smoothness and natural tone.",
+        "Promotes skin cell regeneration and visibly smooths wrinkles and expression lines."
+      ],
+      "beneficios": [
+        "Deep and long-lasting hydration",
+        "Firms and improves elasticity",
+        "Reduces wrinkles and expression lines",
+        "Smooths and repairs skin relief",
+        "Promotes brighter and more youthful skin"
+      ],
+      "incluye": [
+        "Deep hydration",
+        "Firms and improves elasticity",
+        "Reduces wrinkles",
+        "Smooths skin relief",
+        "Brighter and more youthful skin"
+      ],
+      "idealPara": "Mature, dehydrated skin or skin with expression lines.",
+      "recomendaciones": "Complement with a facial care routine and sun protection to prolong results.",
+      "duracion": "35 minutes",
+      "precios": [{ "concepto": "Session", "precio": "60 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-facial-vitamina-c",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Vitamin C Brightening Facial Massage",
+      "descripcion": "Massage with high-potency Vitamin C concentrate. Ideal for dull, tired or stressed skin. Provides antioxidants that combat free radicals.",
+      "paraQuien": "For dull skin, smokers, those exposed to pollution or with uneven tone needing radiance.",
+      "comoFunciona": [
+        "The massage stimulates facial blood and lymphatic circulation, awakening oxygenation.",
+        "The Vitamin C concentrate penetrates the skin providing antioxidants that combat free radicals.",
+        "Promotes cell regeneration and restores radiance and even tone."
+      ],
+      "beneficios": [
+        "Restores radiance and skin tone",
+        "Firms and improves elasticity",
+        "Antioxidant and regenerating action",
+        "Smooths fine lines and skin fatigue",
+        "Improves facial texture and vitality"
+      ],
+      "incluye": [
+        "Restores radiance",
+        "Firms and improves elasticity",
+        "Antioxidant action",
+        "Smooths fine lines",
+        "Improves texture and vitality"
+      ],
+      "idealPara": "Dull, tired or stressed skin, with uneven tone or pollution exposure.",
+      "recomendaciones": "Apply sun protection after treatment to maximise results and protect skin.",
+      "duracion": "35 minutes",
+      "precios": [{ "concepto": "Session", "precio": "50 €" }],
+      "packDestacado": 0
+    },
+    {
+      "slug": "pestanas-pelo-a-pelo",
+      "imagen": "pestanas-pelo-a-pelo.png",
+      "categoria": "estetica-decorativa",
+      "nombre": "Individual Lash Extensions",
+      "descripcion": "Lash extensions placing an artificial lash on each natural lash, achieving a longer, more defined and natural effect.",
+      "paraQuien": "For those wanting to wake up with make-up on, save time each morning and enhance their look for longer.",
+      "comoFunciona": [
+        "Individual application on each natural lash, one by one.",
+        "Respects your eye shape and desired style (classic, volume, foxy, wispy, Hawaiian).",
+        "The result is a more intense look with greater volume and length, maintaining an elegant and natural finish."
+      ],
+      "beneficios": [
+        "Lengthens and defines lashes naturally",
+        "Adds volume and density",
+        "Semi-permanent effect",
+        "Avoids daily mascara use",
+        "Personalised result to your style"
+      ],
+      "incluye": [
+        "Lengthens and defines lashes",
+        "Adds volume and density",
+        "Semi-permanent effect",
+        "Avoids daily mascara",
+        "Personalised result"
+      ],
+      "idealPara": "Those wanting to enhance their look without daily make-up, with personalised style.",
+      "recomendaciones": "Touch-up every 15–20 days at 50% of the price. If longer between appointments, price may vary depending on condition.",
+      "duracion": "120 minutes",
+      "precios": [
+        { "concepto": "Classic (new set)", "precio": "70 €" },
+        { "concepto": "Hawaiian (new set)", "precio": "70 €" },
+        { "concepto": "Mega Volume (new set)", "precio": "80 €" },
+        { "concepto": "Foxy Eyes (new set)", "precio": "80 €" },
+        { "concepto": "Wispy (new set)", "precio": "80 €" },
+        { "concepto": "Classic / Hawaiian / 3D Volume touch-up", "precio": "35 €" },
+        { "concepto": "Mega Volume / Foxy Eyes / Wispy touch-up", "precio": "40 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "micropigmentacion",
+      "imagen": "micropigmentacion.png",
+      "categoria": "estetica-decorativa",
+      "nombre": "Semi-Permanent Make-up (Eyebrows, Lips & Eyes)",
+      "descripcion": "Semi-permanent make-up that enhances eyebrows, lips and eyes with natural, long-lasting results. Special pigments and advanced techniques.",
+      "paraQuien": "For those wanting to save time on daily make-up, define asymmetric brows or enhance lips and eyes for longer.",
+      "comoFunciona": [
+        "A personalised prior design is created adapted to each face, ensuring a harmonious result.",
+        "Pigments are implanted in the skin using a safe and virtually painless technique.",
+        "For brows, hair-stroke or shading techniques can be used, depending on the desired style.",
+        "A review is included at 30 days to perfect the result."
+      ],
+      "beneficios": [
+        "Visible results from the first session",
+        "Saves time on daily make-up",
+        "Improves symmetry and definition",
+        "Natural and long-lasting effect (over a year)",
+        "Safe and comfortable procedure",
+        "Review included at 30 days"
+      ],
+      "incluye": [
+        "Results from first session",
+        "Daily time saving",
+        "Improved symmetry",
+        "Natural long-lasting effect",
+        "30-day review included"
+      ],
+      "idealPara": "Those wanting to save on make-up, define brows, lips or eyes with a long-lasting effect.",
+      "recomendaciones": "Follow aftercare instructions for correct healing and to prolong pigment duration.",
+      "duracion": "120 minutes",
+      "precios": [
+        { "concepto": "Eyes", "precio": "300 €" },
+        { "concepto": "Lips", "precio": "300 €" },
+        { "concepto": "Eyebrows", "precio": "300 €" }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "depilacion-ipl",
+      "imagen": "depilacion-ipl.png",
+      "categoria": "depilacion",
+      "nombre": "IPL Intense Pulsed Light Hair Removal",
+      "descripcion": "Intense Pulsed Light acting from the hair root, progressively weakening it. Safe, comfortable and long-lasting.",
+      "paraQuien": "For those wanting to forget razors, wax and painful laser. Ideal for all body areas, all skin types.",
+      "comoFunciona": [
+        "IPL technology emits light pulses that are absorbed by hair melanin.",
+        "This energy acts directly from the root, progressively weakening the hair follicle.",
+        "After several sessions, hair is drastically reduced and skin is left smooth, without irritation."
+      ],
+      "beneficios": [
+        "Progressive and long-lasting hair reduction",
+        "Smoother skin, without irritation",
+        "Quick and virtually painless treatment",
+        "Suitable for multiple body areas",
+        "Visible results from the first sessions"
+      ],
+      "incluye": [
+        "Progressive hair reduction",
+        "Smoother skin",
+        "Quick and painless",
+        "Multiple areas",
+        "Results from first sessions"
+      ],
+      "idealPara": "Men and women seeking long-lasting hair removal on any area.",
+      "recomendaciones": "Avoid sun before and after treatment. Respect the time between sessions for best results.",
+      "duracion": "Variable by area",
+      "precios": [
+        { "concepto": "Small areas (lip, chin, sideburns, areola, fingers, neck, hands, between brows, temples, ears, cheeks)", "precio": "12 €" },
+        { "concepto": "Medium areas (full face, underarms, groin, intergluteal line, forearms, pubis, shoulders)", "precio": "25 €" },
+        { "concepto": "Large areas (half leg, full intimate, arms, buttocks, abdomen, chest, back)", "precio": "35 €" },
+        { "concepto": "Extra-large areas (full legs, full back)", "precio": "55 €" },
+        { "concepto": "Full body", "precio": "125 €" },
+        { "concepto": "Half body (upper or lower)", "precio": "80 €" },
+        { "concepto": "OFFER: underarms + half leg + full bikini", "precio": "85 €" },
+        { "concepto": "Pack 10 sessions (offer)", "precio": "800 €" }
+      ],
+      "packDestacado": 7
+    }
+  ]
+}
