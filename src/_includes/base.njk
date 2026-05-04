@@ -193,6 +193,15 @@
       </nav>
 
       <div class="header-ctas">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" aria-label="Select language" aria-expanded="false" id="langBtn">
+            🌐 {{ 'EN' if lang == 'en' else 'ES' }} <span class="lang-arrow">▾</span>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="menu">
+            <li role="menuitem"><a href="{{ site.url }}{{ _esUrl }}" data-lang="es">🇪🇸 Español</a></li>
+            <li role="menuitem"><a href="{{ site.url }}{{ _enUrl }}" data-lang="en">🇬🇧 English</a></li>
+          </ul>
+        </div>
         {% if lang == 'en' %}
         <a href="{{ '/en/contact/' | url }}" class="btn btn-terra">Book appointment</a>
         <a href="https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20a%20free%20consultation." class="header-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -340,6 +349,31 @@
       menu.classList.remove('open');
       toggle.classList.remove('open');
     }));
+
+    /* ── Lang switcher dropdown ── */
+    (function() {
+      var btn = document.getElementById('langBtn');
+      var dropdown = document.getElementById('langDropdown');
+      if (!btn || !dropdown) return;
+
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = dropdown.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function() {
+        dropdown.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+
+      dropdown.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          var chosenLang = a.getAttribute('data-lang');
+          localStorage.setItem('anylopez-lang', chosenLang);
+        });
+      });
+    })();
 
     /* ── Scroll reveal ── */
     const observer = new IntersectionObserver((entries) => {
