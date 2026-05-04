@@ -1,0 +1,213 @@
+---
+layout: base.njk
+title: "Book Appointment — AnyLopez Benidorm Aesthetic Clinic"
+description: "Contact AnyLopez Aesthetic Clinic in Benidorm. C/ Marqués de Comillas 4, Local 6. Tel: 656 306 167. Mon–Fri 10am–2pm / 4–8pm."
+---
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="{{ '/en/' | url }}">Home</a>
+      <span>›</span>
+      <span>Contact</span>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:var(--accent)">Get in Touch</span>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Book your appointment or ask us anything.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT MAIN -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- INFO -->
+        <div>
+          <span class="section-label">Information</span>
+          <h2 class="section-title">Ready to take the next step?</h2>
+          <p style="color:var(--text-mid); margin-bottom:40px;">We're happy to answer any questions you may have. Book your appointment or visit us directly at our clinic in Benidorm.</p>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>Calle Marqués de Comillas 4, Local 6<br>C.P. 03501, Benidorm (Alicante)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:656306167" style="display:block; color:var(--secondary);">656 306 167</a>
+              <a href="tel:865710769" style="display:block; color:var(--secondary);">865 710 769</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@anylopez.com" style="color:var(--secondary);">info@anylopez.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Opening Hours</h4>
+              <p>Mon–Fri: 10am–2pm / 4–8pm</p>
+            </div>
+          </div>
+
+          <!-- MAP -->
+          <div class="map-embed donde-map-link-wrap">
+            <a
+              href="https://maps.google.com/?q=Calle+Marqués+de+Comillas+4,+Benidorm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="donde-map-link"
+              aria-label="View AnyLopez Aesthetic Clinic on Google Maps (opens in new tab)"
+            >
+              <span class="donde-map-icon" aria-hidden="true">📍</span>
+              <span class="donde-map-text">View on Google Maps →</span>
+              <span class="donde-map-addr">C/ Marqués de Comillas 4, Local 6 — Benidorm</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div>
+          <div style="background:#fff; padding:40px; border-radius:16px; box-shadow:var(--shadow);">
+            <span class="section-label">Enquiry Form</span>
+            <h2 class="section-title" style="font-size:28px;">Book Your Appointment</h2>
+            <p style="color:var(--text-mid); margin-bottom:32px; font-size:15px;">Fill in the form and we'll get back to you as soon as possible.</p>
+
+            <form id="contactForm" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">First name *</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Your first name" required />
+                </div>
+                <div class="form-group">
+                  <label for="apellidos">Last name *</label>
+                  <input type="text" id="apellidos" name="apellidos" placeholder="Your last name" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Phone</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Your phone number" />
+              </div>
+
+              <div class="form-group">
+                <label for="tratamiento">Treatment of Interest</label>
+                <select id="tratamiento" name="tratamiento">
+                  <option value="">Select a treatment...</option>
+                  <option value="higiene-facial">Facial Cleanse</option>
+                  <option value="radiofrecuencia-facial">Facial Radiofrequency</option>
+                  <option value="radiofrecuencia-corporal">Body Radiofrequency</option>
+                  <option value="radiofrecuencia-indiba">INDIBA Radiofrequency System</option>
+                  <option value="ultherapy">Ultherapy (HIFU)</option>
+                  <option value="dermapen">Dermapen</option>
+                  <option value="botox">Botox</option>
+                  <option value="acido-hialuronico">Hyaluronic Acid Filler</option>
+                  <option value="vitaminas-exosomas">Vitamins + Exosomes</option>
+                  <option value="micropigmentacion">Micropigmentation</option>
+                  <option value="otro">Other / General enquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Message or comments</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Tell us how we can help you..."></textarea>
+              </div>
+
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+              <div class="form-group form-consent">
+                <label class="consent-label">
+                  <input type="checkbox" name="_consent" required />
+                  <span>I have read and accept the <a href="{{ '/privacidad/' | url }}" target="_blank" rel="noopener noreferrer">privacy policy</a></span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; font-size:13px; padding:16px;">
+                Send Message
+              </button>
+
+              <p style="font-size:12px; color:var(--text-light); margin-top:16px; text-align:center;">
+                We reply within 24 hours.
+              </p>
+            </form>
+
+            <div id="formSuccess" style="display:none; text-align:center; padding:32px 0;">
+              <div style="font-size:48px; margin-bottom:16px;">✅</div>
+              <h3 style="color:var(--primary); margin-bottom:8px;">Message sent!</h3>
+              <p style="color:var(--text-mid);">Thank you! We'll be in touch shortly.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT CONTACT -->
+  <section class="section section--dark">
+    <div class="container text-center">
+      <span class="section-label" style="color:var(--accent)">Book on WhatsApp</span>
+      <h2 class="section-title" style="color:#fff; margin-bottom:16px;">Or book directly on WhatsApp</h2>
+      <p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">Prefer to speak with us directly? Send us a message on WhatsApp during our opening hours.</p>
+      <a href="https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment." class="btn btn-accent" target="_blank" rel="noopener noreferrer" aria-label="Book an appointment on WhatsApp (opens in new tab)">Book on WhatsApp</a>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = this;
+      const nombre = document.getElementById('nombre').value.trim();
+      const apellidos = document.getElementById('apellidos').value.trim();
+      const email  = document.getElementById('email').value.trim();
+      if (!nombre || !apellidos || !email) {
+        alert('Please fill in the required fields (first name, last name and email).');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          throw new Error('Server error');
+        }
+      }).catch(function() {
+        alert('There was an error sending your message. Please try again or call us on 656 306 167.');
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      });
+    });
+  </script>
