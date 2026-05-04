@@ -429,5 +429,29 @@
 
   <anylopez-chat data-endpoint="https://anylopez-chat.anylopez.workers.dev"></anylopez-chat>
   <script src="{{ '/assets/chat/widget.min.js' | url }}" defer></script>
+
+  <script>
+    /* ── Language auto-detect ── */
+    (function() {
+      var stored = localStorage.getItem('anylopez-lang');
+      if (stored) return;
+      var lang = (navigator.language || (navigator.languages && navigator.languages[0]) || '').toLowerCase();
+      if (!lang.startsWith('en')) return;
+      var isEnPage = location.pathname.indexOf('/en/') !== -1;
+      if (isEnPage) { localStorage.setItem('anylopez-lang', 'en'); return; }
+      var map = {
+        '/anylopez-website/':                '/anylopez-website/en/',
+        '/anylopez-website/about/':          '/anylopez-website/en/about/',
+        '/anylopez-website/services/':       '/anylopez-website/en/services/',
+        '/anylopez-website/radiofrecuencia/':'/anylopez-website/en/radiofrecuencia/',
+        '/anylopez-website/contact/':        '/anylopez-website/en/contact/'
+      };
+      var target = map[location.pathname];
+      if (target) {
+        localStorage.setItem('anylopez-lang', 'en');
+        location.replace(target);
+      }
+    })();
+  </script>
 </body>
 </html>
