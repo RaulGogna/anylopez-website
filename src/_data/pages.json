@@ -1,0 +1,65 @@
+[
+  {
+    "es": "/",
+    "en": "/en/",
+    "priority_es": "1.0",
+    "priority_en": "0.9",
+    "changefreq": "weekly",
+    "crumb_es": null,
+    "crumb_en": null
+  },
+  {
+    "es": "/about/",
+    "en": "/en/about/",
+    "priority_es": "0.7",
+    "priority_en": "0.6",
+    "changefreq": "monthly",
+    "crumb_es": "Nosotras",
+    "crumb_en": "About Us"
+  },
+  {
+    "es": "/services/",
+    "en": "/en/services/",
+    "priority_es": "0.9",
+    "priority_en": "0.8",
+    "changefreq": "weekly",
+    "crumb_es": "Servicios",
+    "crumb_en": "Treatments"
+  },
+  {
+    "es": "/radiofrecuencia/",
+    "en": "/en/radiofrecuencia/",
+    "priority_es": "0.9",
+    "priority_en": "0.8",
+    "changefreq": "weekly",
+    "crumb_es": "INDIBA",
+    "crumb_en": "INDIBA"
+  },
+  {
+    "es": "/contact/",
+    "en": "/en/contact/",
+    "priority_es": "0.6",
+    "priority_en": "0.5",
+    "changefreq": "monthly",
+    "crumb_es": "Contacto",
+    "crumb_en": "Contact"
+  },
+  {
+    "es": "/privacidad/",
+    "en": null,
+    "priority_es": "0.3",
+    "priority_en": null,
+    "changefreq": "yearly",
+    "crumb_es": null,
+    "crumb_en": null
+  },
+  {
+    "es": "/aviso-legal/",
+    "en": null,
+    "priority_es": "0.3",
+    "priority_en": null,
+    "changefreq": "yearly",
+    "crumb_es": null,
+    "crumb_en": null
+  }
+]

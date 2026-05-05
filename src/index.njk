@@ -41,27 +41,7 @@ description: "Clínica estética en Benidorm especializada en radiofrecuencia IN
 </section>
 
 <!-- LEAD STRIP -->
-<section class="lead-strip">
-  <div class="lead-strip-inner rv">
-    <p class="lead-strip-label">¿Fuera de horario de WhatsApp?<br>Déjanos tus datos y te llamamos en menos de 24h.</p>
-    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xrerbgdw" method="POST">
-      <input type="hidden" name="_subject" value="Consulta desde lead strip homepage" />
-      <input type="text" name="nombre" placeholder="Tu nombre" required aria-label="Nombre" />
-      <input type="tel" name="telefono" placeholder="Teléfono" required aria-label="Teléfono" />
-      <select name="tratamiento" aria-label="Tratamiento de interés">
-        <option value="" disabled selected>¿Qué te interesa?</option>
-        <option value="INDIBA">INDIBA Activ</option>
-        <option value="HIFU">HIFU Lifting</option>
-        <option value="Botox">Botox &amp; Rellenos</option>
-        <option value="Limpieza Facial">Limpieza Facial</option>
-        <option value="Dermapen">Dermapen</option>
-        <option value="Otro">Otro tratamiento</option>
-      </select>
-      <button type="submit" class="btn btn-terra">Solicitar cita</button>
-    </form>
-    <p id="leadFormMsg">✓ Recibido — te contactamos pronto.</p>
-  </div>
-</section>
+{% include "lead-strip.njk" %}
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">

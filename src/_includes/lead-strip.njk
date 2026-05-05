@@ -1,0 +1,45 @@
+{% if lang == 'en' %}
+<section class="lead-strip">
+  <div class="lead-strip-inner rv">
+    <p class="lead-strip-label">Outside WhatsApp hours?<br>Leave your details and we'll call you within 24 hours.</p>
+    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xrerbgdw" method="POST">
+      <input type="hidden" name="_subject" value="Enquiry from EN homepage lead strip" />
+      <input type="text" name="nombre" placeholder="Your name" required aria-label="Name" />
+      <input type="tel" name="telefono" placeholder="Phone number" required aria-label="Phone number" />
+      <select name="tratamiento" aria-label="Treatment of interest">
+        <option value="" disabled selected>What are you interested in?</option>
+        <option value="INDIBA">INDIBA Activ</option>
+        <option value="HIFU">HIFU Lifting</option>
+        <option value="Botox">Botox &amp; Fillers</option>
+        <option value="Limpieza Facial">Facial Cleanse</option>
+        <option value="Dermapen">Dermapen</option>
+        <option value="Otro">Other treatment</option>
+      </select>
+      <button type="submit" class="btn btn-terra">Book appointment</button>
+    </form>
+    <p id="leadFormMsg">✓ Received — we'll be in touch shortly.</p>
+  </div>
+</section>
+{% else %}
+<section class="lead-strip">
+  <div class="lead-strip-inner rv">
+    <p class="lead-strip-label">¿Fuera de horario de WhatsApp?<br>Déjanos tus datos y te llamamos en menos de 24h.</p>
+    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xrerbgdw" method="POST">
+      <input type="hidden" name="_subject" value="Consulta desde lead strip homepage" />
+      <input type="text" name="nombre" placeholder="Tu nombre" required aria-label="Nombre" />
+      <input type="tel" name="telefono" placeholder="Teléfono" required aria-label="Teléfono" />
+      <select name="tratamiento" aria-label="Tratamiento de interés">
+        <option value="" disabled selected>¿Qué te interesa?</option>
+        <option value="INDIBA">INDIBA Activ</option>
+        <option value="HIFU">HIFU Lifting</option>
+        <option value="Botox">Botox &amp; Rellenos</option>
+        <option value="Limpieza Facial">Limpieza Facial</option>
+        <option value="Dermapen">Dermapen</option>
+        <option value="Otro">Otro tratamiento</option>
+      </select>
+      <button type="submit" class="btn btn-terra">Solicitar cita</button>
+    </form>
+    <p id="leadFormMsg">✓ Recibido — te contactamos pronto.</p>
+  </div>
+</section>
+{% endif %}

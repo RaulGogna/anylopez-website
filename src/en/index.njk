@@ -43,27 +43,7 @@ ogDescription: "Award-winning aesthetic clinic in Benidorm. INDIBA, HIFU, Botox,
 </section>
 
 <!-- LEAD STRIP -->
-<section class="lead-strip">
-  <div class="lead-strip-inner rv">
-    <p class="lead-strip-label">Outside WhatsApp hours?<br>Leave your details and we'll call you within 24 hours.</p>
-    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xrerbgdw" method="POST">
-      <input type="hidden" name="_subject" value="Enquiry from EN homepage lead strip" />
-      <input type="text" name="nombre" placeholder="Your name" required aria-label="Name" />
-      <input type="tel" name="telefono" placeholder="Phone number" required aria-label="Phone number" />
-      <select name="tratamiento" aria-label="Treatment of interest">
-        <option value="" disabled selected>What are you interested in?</option>
-        <option value="INDIBA">INDIBA Activ</option>
-        <option value="HIFU">HIFU Lifting</option>
-        <option value="Botox">Botox &amp; Fillers</option>
-        <option value="Limpieza Facial">Facial Cleanse</option>
-        <option value="Dermapen">Dermapen</option>
-        <option value="Otro">Other treatment</option>
-      </select>
-      <button type="submit" class="btn btn-terra">Book appointment</button>
-    </form>
-    <p id="leadFormMsg">✓ Received — we'll be in touch shortly.</p>
-  </div>
-</section>
+{% include "lead-strip.njk" %}
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">
