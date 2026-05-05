@@ -153,7 +153,6 @@ body::before {
 }
 .site-header.scrolled {
   background: rgba(248,243,237,0.97);
-  backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 var(--border);
 }
 .header-inner {
