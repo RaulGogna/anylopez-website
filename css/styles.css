@@ -1421,7 +1421,8 @@ button[type="submit"] {
   display: flex;
   flex-direction: column;
 }
-.pack-stack-item {
+.pack-include .pack-stack-item {
+  display: block;
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
 }
