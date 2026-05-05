@@ -508,7 +508,8 @@
         { "concepto": "Hands (30 min)", "precio": "200 €" },
         { "concepto": "Abdomen (60 min per area)", "precio": "350 €" },
         { "concepto": "Half legs (45 min per area)", "precio": "350 €" },
-        { "concepto": "Vaginal treatment (45 min)", "precio": "495 €" }
+        { "concepto": "Vaginal treatment (45 min)", "precio": "495 €" },
+        { "concepto": "Pack of 3 sessions (areas combinable)", "precio": "900 €" }
       ],
       "packDestacado": 0
     },
