@@ -1233,6 +1233,11 @@ button[type="submit"] {
   nav ul.nav-menu .nav-cta { border: none; padding-top: 24px; }
   .menu-toggle { display: flex; }
 
+  /* Menú móvil abierto: bloquea scroll del body y oculta superposiciones que podrían aparecer por encima */
+  body.menu-open { overflow: hidden; }
+  body.menu-open .mobile-bar,
+  body.menu-open anylopez-chat { display: none !important; }
+
   .hero { grid-template-columns: 1fr; height: auto; min-height: auto; }
   .hero-left { padding: 80px 32px 64px; min-height: 65vh; justify-content: flex-start; }
   .hero-right { height: 50vh; }

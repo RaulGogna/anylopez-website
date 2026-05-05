@@ -342,14 +342,13 @@
     /* ── Mobile hamburger ── */
     const toggle = document.getElementById('menuToggle');
     const menu   = document.getElementById('navMenu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
-      toggle.classList.toggle('open');
-    });
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      menu.classList.remove('open');
-      toggle.classList.remove('open');
-    }));
+    const setMenu = (open) => {
+      menu.classList.toggle('open', open);
+      toggle.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
+    };
+    toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
     /* ── Lang switcher dropdown ── */
     (function() {
