@@ -1,0 +1,68 @@
+<section class="calcom-section" id="reservar">
+  <div class="container">
+    <div class="calcom-header rv">
+      {% if lang == 'en' %}
+      <span class="calcom-eyebrow">Real-time availability</span>
+      <h2 class="calcom-title">Book your <em>free consultation</em></h2>
+      <p class="calcom-subtitle">Pick a day and time that works for you. 30 minutes, no commitment — we'll discuss your goals and recommend the best protocol.</p>
+      {% else %}
+      <span class="calcom-eyebrow">Disponibilidad en tiempo real</span>
+      <h2 class="calcom-title">Reserva tu <em>consulta gratuita</em></h2>
+      <p class="calcom-subtitle">Elige el día y la hora que mejor te venga. 30 minutos sin compromiso — valoramos tu caso y te recomendamos el mejor protocolo.</p>
+      {% endif %}
+    </div>
+    <div class="calcom-embed-wrap rv">
+      <div id="cal-inline" class="calcom-loading" data-cal-link="anylopez-clinica-estetica/consulta-gratuita">
+        {% if lang == 'en' %}Loading calendar…{% else %}Cargando calendario…{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+/* Cal.com lazy-loader — carga el script solo cuando la sección entra en viewport (no penaliza LCP) */
+(function() {
+  var target = document.getElementById('cal-inline');
+  if (!target) return;
+  var loaded = false;
+
+  var loadCal = function() {
+    if (loaded) return;
+    loaded = true;
+    target.innerHTML = '';
+    target.classList.remove('calcom-loading');
+    (function (C, A, L) {
+      var p = function (a, ar) { a.q.push(ar); };
+      var d = C.document;
+      C.Cal = C.Cal || function () {
+        var cal = C.Cal; var ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+        if (ar[0] === L) {
+          var api = function () { p(api, arguments); };
+          var namespace = ar[1]; api.q = api.q || [];
+          if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); }
+          else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "consulta-gratuita", { origin: "https://cal.com" });
+    Cal.ns["consulta-gratuita"]("inline", {
+      elementOrSelector: "#cal-inline",
+      config: { layout: "month_view" },
+      calLink: "anylopez-clinica-estetica/consulta-gratuita"
+    });
+    Cal.ns["consulta-gratuita"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
+  };
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { loadCal(); io.disconnect(); } });
+    }, { rootMargin: '300px 0px' });
+    io.observe(target);
+  } else {
+    loadCal();
+  }
+})();
+</script>
