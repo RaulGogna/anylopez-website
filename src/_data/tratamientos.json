@@ -540,7 +540,8 @@
         { "concepto": "Manos (30 min)", "precio": "200 €" },
         { "concepto": "Abdomen (60 min por zona)", "precio": "350 €" },
         { "concepto": "Medias piernas (45 min por zona)", "precio": "350 €" },
-        { "concepto": "Tratamiento vaginal (45 min)", "precio": "495 €" }
+        { "concepto": "Tratamiento vaginal (45 min)", "precio": "495 €" },
+        { "concepto": "Pack 3 sesiones (zonas combinables)", "precio": "900 €" }
       ],
       "packDestacado": 0
     },
