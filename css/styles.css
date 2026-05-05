@@ -1202,7 +1202,11 @@ button[type="submit"] {
   :root { --header-h: 64px; }
   body { padding-top: var(--header-h); }
 
-  .header-inner { padding: 0 24px; }
+  .header-inner { padding: 0 20px; gap: 12px; }
+  .logo-link { flex-shrink: 0; }
+  .logo-img, .header-logo-img { height: 44px; width: auto; }
+  .header-ctas .btn-terra,
+  .header-ctas .header-wa-btn { display: none; }
   .nav-links { display: none; }
   .nav-links.open {
     display: flex; flex-direction: column; gap: 0;
