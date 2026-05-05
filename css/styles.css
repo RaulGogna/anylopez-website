@@ -337,6 +337,76 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 .video-sound-btn svg { width: 20px; height: 20px; }
 
 /* ═══════════════════════════════════════════════════
+   DOLOR → SOLUCIÓN AFLUENTE (Slice 3)
+   ═══════════════════════════════════════════════════ */
+.dolor-solucion-section {
+  background: var(--ivory);
+  padding: 88px 0;
+  border-bottom: 1px solid var(--border);
+}
+.dolor-solucion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.ds-col { display: flex; flex-direction: column; }
+.ds-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 16px;
+}
+.ds-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 3.4vw, 2.2rem);
+  font-weight: 500; line-height: 1.18;
+  color: var(--dark); margin: 0 0 24px;
+}
+.ds-title em { font-style: italic; color: var(--terra); }
+.ds-body {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem; line-height: 1.7;
+  color: var(--text); margin: 0 0 18px;
+}
+.ds-body.ds-emphasis {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem; font-style: italic;
+  color: var(--text); line-height: 1.5;
+  margin-top: 8px;
+}
+.ds-body.ds-emphasis strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-weight: 600;
+  color: var(--terra-dk);
+}
+.ds-bullets {
+  list-style: none; padding: 0; margin: 8px 0 0;
+  display: flex; flex-direction: column; gap: 22px;
+}
+.ds-bullets li {
+  display: flex; flex-direction: column;
+  padding-left: 18px;
+  border-left: 2px solid var(--terra);
+}
+.ds-bullets li strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 600;
+  color: var(--dark); margin-bottom: 4px;
+  font-style: italic;
+}
+.ds-bullets li span {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.94rem; line-height: 1.55;
+  color: var(--text-mid);
+}
+@media (max-width: 860px) {
+  .dolor-solucion-section { padding: 64px 0 56px; }
+  .dolor-solucion-grid { grid-template-columns: 1fr; gap: 56px; }
+}
+
+/* ═══════════════════════════════════════════════════
    CAL.COM EMBED
    ═══════════════════════════════════════════════════ */
 .calcom-section {
