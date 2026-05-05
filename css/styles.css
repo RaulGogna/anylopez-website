@@ -337,6 +337,57 @@ nav ul.nav-menu .nav-cta { margin-left: 8px; }
 .video-sound-btn svg { width: 20px; height: 20px; }
 
 /* ═══════════════════════════════════════════════════
+   CAL.COM EMBED
+   ═══════════════════════════════════════════════════ */
+.calcom-section {
+  background: var(--cream, #f8f3ed);
+  padding: 64px 0 56px;
+  border-bottom: 1px solid var(--border);
+}
+.calcom-section .container { max-width: 1080px; }
+.calcom-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 32px;
+}
+.calcom-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--terra); display: block; margin-bottom: 12px;
+}
+.calcom-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  font-weight: 500; line-height: 1.15;
+  color: var(--dark); margin: 0 0 12px;
+}
+.calcom-title em { font-style: italic; color: var(--terra); }
+.calcom-subtitle {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem; line-height: 1.55;
+  color: var(--ink-soft, #5a5048); margin: 0;
+}
+.calcom-embed-wrap {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 600px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.calcom-loading {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 600px;
+  font-family: 'Jost', sans-serif;
+  color: var(--ink-soft, #5a5048); font-size: 0.95rem;
+}
+@media (max-width: 720px) {
+  .calcom-section { padding: 48px 0 40px; }
+  .calcom-embed-wrap, .calcom-loading { min-height: 720px; }
+}
+
+/* ═══════════════════════════════════════════════════
    LEAD STRIP
    ═══════════════════════════════════════════════════ */
 .lead-strip {
