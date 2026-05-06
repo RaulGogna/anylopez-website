@@ -112,6 +112,7 @@ description: "Full catalogue of treatments at AnyLopez Aesthetic Clinic in Benid
     display: flex;
     flex-direction: column;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    scroll-margin-top: 160px; /* header(88) + cat-nav(~58) + buffer */
   }
   .trat-card:hover {
     transform: translateY(-4px);
@@ -281,7 +282,7 @@ description: "Full catalogue of treatments at AnyLopez Aesthetic Clinic in Benid
 
     <div class="trat-grid">
       {% for trat in catTrats %}
-      <article class="trat-card{% if catSharedImage %} trat-card--bare{% endif %}" data-slug="{{ trat.slug }}">
+      <article id="{{ trat.slug }}" class="trat-card{% if catSharedImage %} trat-card--bare{% endif %}" data-slug="{{ trat.slug }}">
         {% if not catSharedImage %}
         <picture>
           <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
