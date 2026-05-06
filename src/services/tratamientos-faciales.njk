@@ -1,0 +1,844 @@
+---
+layout: base.njk
+title: "Tratamientos faciales avanzados en Benidorm — AnyLopez"
+description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y más. Tratamientos faciales avanzados en AnyLopez Clínica Estética, Benidorm. 9 protocolos, diagnóstico inicial gratuito."
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalSpecialty",
+  "name": "Tratamientos faciales avanzados",
+  "alternateName": "Estética facial avanzada AnyLopez",
+  "description": "Catálogo de tratamientos faciales avanzados en AnyLopez Clínica Estética (Benidorm): peelings químicos, dermapen, mesoterapia virtual, dermaplaning, anti-acné, plasma pen y más. 9 protocolos con diagnóstico inicial gratuito.",
+  "url": "https://raulgogna.github.io/anylopez-website/services/tratamientos-faciales/",
+  "relevantSpecialty": ["https://schema.org/Dermatologic", "https://schema.org/PlasticSurgery"],
+  "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cómo sé si lo mío es peeling o dermapen?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del problema. Las manchas y daño solar responden mejor a peelings químicos despigmentantes; las cicatrices, líneas finas y textura irregular responden mejor a dermapen. En el diagnóstico gratuito vemos exactamente qué necesita tu piel." } },
+    { "@type": "Question", "name": "¿Cuánto tiempo de baja necesito?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tratamiento. Dermaplaning y mesoterapia virtual: cero. Hidratación con dermapen y peelings suaves: 24-48h con leve enrojecimiento. Peelings químicos profundos: 4-7 días de descamación controlada. Te lo explicamos al detalle antes de elegir protocolo." } },
+    { "@type": "Question", "name": "¿Cuándo voy a ver resultados?", "acceptedAnswer": { "@type": "Answer", "text": "Tratamientos como velo de colágeno o dermaplaning dan luminosidad inmediata desde la primera sesión. Peelings antimanchas y dermapen para cicatrices son progresivos: notas mejoría al mes y resultado pleno entre 3-5 sesiones según el caso." } },
+    { "@type": "Question", "name": "¿Puedo combinar varios tratamientos?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, y muchas veces es la mejor estrategia. Dermapen + hidratación, peeling + radiofrecuencia, mesoterapia + velo de colágeno son combinaciones habituales. En el plan personalizado te diseñamos la secuencia óptima." } },
+    { "@type": "Question", "name": "Tengo piel sensible, rosácea o estoy embarazada. ¿Hay alternativas?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tenemos protocolos específicos para piel sensible y reactiva. Si estás embarazada o lactando, algunos tratamientos están contraindicados pero otros son perfectamente seguros — te lo decimos en la valoración con honestidad clínica." } }
+  ]
+}
+</script>
+
+<style>
+  /* ─── HERO CINEMATIC ──────────────────────────────── */
+  .cat-page-hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .cat-page-hero-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .cat-page-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+  .cat-page-hero-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(26,18,8,0.78) 0%, rgba(26,18,8,0.55) 50%, rgba(26,18,8,0.25) 100%);
+  }
+  .cat-page-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 120px 0;
+  }
+  .cat-page-hero-content { max-width: 720px; }
+  .cat-page-hero h1 {
+    color: #fff;
+    font-size: clamp(40px, 6.5vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 16px 0 20px;
+  }
+  .cat-page-hero h1 em { font-style: italic; color: var(--gold); }
+  .cat-page-hero .lead {
+    color: rgba(255,255,255,0.88);
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.65;
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+  .cat-page-hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .cat-page-hero-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgba(255,255,255,0.78);
+    font-size: 13px;
+  }
+  .cat-page-hero-meta strong { color: #fff; }
+  .cat-page-hero-meta .stars { color: var(--gold); letter-spacing: 1px; font-size: 14px; }
+  .cat-page-hero-meta .dot { color: rgba(255,255,255,0.35); }
+
+  /* ─── PAIN POINTS ─────────────────────────────────── */
+  .cat-page-pain {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-pain-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .cat-page-pain-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-pain-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .cat-page-pain-item {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 36px 32px;
+    transition: border-color 0.3s var(--ease);
+  }
+  .cat-page-pain-item:hover { border-color: var(--terra); }
+  .cat-page-pain-item h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: var(--dark);
+  }
+  .cat-page-pain-item p { color: var(--text-mid); font-size: 14px; line-height: 1.6; }
+
+  /* ─── WHY IT WORKS — 6 reasons numbered ───────────── */
+  .cat-page-why {
+    background: var(--sand);
+    padding: 96px 0;
+  }
+  .cat-page-why-head { max-width: 680px; margin: 0 auto 64px; text-align: center; }
+  .cat-page-why-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-why-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .cat-page-reason { display: flex; gap: 20px; }
+  .cat-page-reason-num {
+    flex-shrink: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--terra);
+    font-weight: 500;
+    margin-top: -4px;
+  }
+  .cat-page-reason-body h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    color: var(--dark);
+  }
+  .cat-page-reason-body p { color: var(--text-mid); font-size: 14.5px; line-height: 1.65; }
+
+  /* ─── TREATMENTS GRID ─────────────────────────────── */
+  .cat-page-grid-section {
+    padding: 96px 0;
+    background: var(--ivory);
+  }
+  .cat-page-grid-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+  .cat-page-grid-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-grid-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .trat-card {
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    scroll-margin-top: 160px;
+    cursor: pointer;
+  }
+  .trat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .trat-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: var(--bg-light);
+  }
+  .trat-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .trat-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--dark);
+    margin: 0;
+  }
+  .trat-card-desc { font-size: 13px; line-height: 1.65; color: var(--text-mid); margin: 0; }
+  .trat-card-incluye { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+  .trat-card-incluye li {
+    font-size: 12px;
+    color: var(--text-mid);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .trat-card-incluye li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--terra);
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .trat-card-meta {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .trat-duracion {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+  .trat-duracion svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--terra); }
+  .trat-cta {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--terra-dk);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+  }
+  .trat-cta:hover { color: var(--terra); }
+
+  /* ─── CROSS-SELL BAND ─────────────────────────────── */
+  .cat-page-cross {
+    background: var(--dark);
+    color: #fff;
+    padding: 96px 0;
+  }
+  .cat-page-cross-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+  .cat-page-cross-head .eyebrow { color: var(--gold); }
+  .cat-page-cross-head h2 {
+    color: #fff;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.1;
+    margin: 12px 0 12px;
+  }
+  .cat-page-cross-head h2 em { font-style: italic; color: var(--gold); }
+  .cat-page-cross-head p { color: rgba(255,255,255,0.78); font-size: 16px; }
+  .cat-page-cross-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .cat-page-cross-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 2px;
+    padding: 36px 32px;
+    text-decoration: none;
+    color: #fff;
+    transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cat-page-cross-card:hover {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.06);
+  }
+  .cat-page-cross-card .eyebrow { color: var(--gold); }
+  .cat-page-cross-card h3 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0 0 4px;
+  }
+  .cat-page-cross-card h3 em { font-style: italic; color: var(--gold); }
+  .cat-page-cross-card p { color: rgba(255,255,255,0.78); font-size: 14px; line-height: 1.6; margin: 0; }
+  .cat-page-cross-card .arrow {
+    margin-top: auto;
+    padding-top: 16px;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ─── TESTIMONIOS ────────────────────────────────── */
+  .cat-page-tests {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-tests-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+  .cat-page-tests-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-tests-head p { color: var(--text-mid); font-size: 15px; }
+  .cat-page-tests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .cat-page-test {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cat-page-test-stars { color: var(--gold); font-size: 16px; letter-spacing: 1px; margin-bottom: 16px; }
+  .cat-page-test-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--dark);
+    font-style: italic;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .cat-page-test-author {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .cat-page-test-meta { font-size: 12px; color: var(--text-mid); letter-spacing: 0.04em; }
+
+  /* ─── PROCESS ─────────────────────────────────────── */
+  .cat-page-process {
+    background: var(--sand);
+    padding: 96px 0;
+  }
+  .cat-page-process-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .cat-page-process-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-process-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-steps { max-width: 800px; margin: 0 auto; }
+  .cat-page-step {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-page-step:last-child { border-bottom: none; }
+  .cat-page-step-num {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--terra);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .cat-page-step-body h3 { font-size: 22px; margin-bottom: 8px; color: var(--dark); }
+  .cat-page-step-body p { color: var(--text-mid); font-size: 15px; line-height: 1.6; }
+
+  /* ─── FAQ ─────────────────────────────────────────── */
+  .cat-page-faq {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-faq-head { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+  .cat-page-faq-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0;
+  }
+  .cat-page-faq-list { max-width: 800px; margin: 0 auto; }
+  .cat-page-faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-page-faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--dark);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    line-height: 1.3;
+  }
+  .cat-page-faq-q .icon {
+    flex-shrink: 0;
+    font-size: 22px;
+    color: var(--terra);
+    transition: transform 0.3s var(--ease);
+  }
+  .cat-page-faq-item.open .cat-page-faq-q .icon { transform: rotate(45deg); }
+  .cat-page-faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease), padding 0.4s var(--ease);
+    color: var(--text-mid);
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+  .cat-page-faq-item.open .cat-page-faq-a {
+    max-height: 600px;
+    padding: 0 0 28px;
+  }
+
+  /* ─── FINAL CTA ───────────────────────────────────── */
+  .cat-page-final {
+    padding: 120px 0;
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+  }
+  .cat-page-final h2 {
+    color: #fff;
+    font-size: clamp(34px, 4.5vw, 56px);
+    line-height: 1.05;
+    max-width: 760px;
+    margin: 0 auto 20px;
+  }
+  .cat-page-final h2 em { font-style: italic; color: var(--gold); }
+  .cat-page-final p {
+    color: rgba(255,255,255,0.78);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .cat-page-final-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .cat-page-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 900px) {
+    .cat-page-pain-grid { grid-template-columns: 1fr; gap: 20px; }
+    .cat-page-why-grid { grid-template-columns: 1fr; gap: 32px; }
+    .cat-page-tests-grid { grid-template-columns: 1fr; }
+    .cat-page-cross-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .cat-page-hero-inner { padding: 80px 0; }
+    .cat-page-pain, .cat-page-why, .cat-page-grid-section, .cat-page-cross, .cat-page-tests, .cat-page-process, .cat-page-faq, .cat-page-final { padding: 64px 0; }
+    .cat-page-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="{{ '/' | url }}">Inicio</a>
+    <span>›</span>
+    <a href="{{ '/services/' | url }}">Servicios</a>
+    <span>›</span>
+    <span>Tratamientos Faciales Avanzados</span>
+  </div>
+</div>
+
+<!-- HERO CINEMATIC -->
+<section class="cat-page-hero">
+  <div class="cat-page-hero-img">
+    <picture>
+      <source srcset="{{ '/images/fotoscatalogoanylopez/dermapen.webp' | url }}" type="image/webp">
+      <img
+        src="{{ '/images/fotoscatalogoanylopez/dermapen.png' | url }}"
+        alt="Tratamientos faciales avanzados en AnyLopez Benidorm"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+      />
+    </picture>
+  </div>
+  <div class="cat-page-hero-inner">
+    <div class="container">
+      <div class="cat-page-hero-content">
+        <span class="eyebrow" style="color: var(--gold);">Tratamientos faciales avanzados · 9 protocolos</span>
+        <h1>Tu rostro merece más que <em>una crema más</em>.</h1>
+        <p class="lead">Si llevas años invirtiendo en cosmética y aun así el espejo te devuelve manchas, líneas finas o cicatrices que no terminan de irse, no es que no te cuides. Es que esos problemas viven más profundo de donde llega un sérum.</p>
+        <div class="cat-page-hero-ctas">
+          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+        </div>
+        <div class="cat-page-hero-meta">
+          <span class="stars">★★★★★</span>
+          <strong>5.0 · 216 reseñas Google</strong>
+          <span class="dot">·</span>
+          <span>Diagnóstico inicial sin coste</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="cat-page-pain">
+  <div class="container">
+    <div class="cat-page-pain-head">
+      <span class="eyebrow">¿Te suena alguna de estas?</span>
+      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
+      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+    </div>
+    <div class="cat-page-pain-grid">
+      <div class="cat-page-pain-item">
+        <h3>Has gastado en cremas de gama alta y las manchas siguen ahí.</h3>
+        <p>Las hiperpigmentaciones, manchas solares y melasma no se borran con cosmética. Necesitan tecnología que llegue al pigmento donde está.</p>
+      </div>
+      <div class="cat-page-pain-item">
+        <h3>Tu piel "ya no es la de antes" y los productos no devuelven la luminosidad.</h3>
+        <p>Líneas finas, textura irregular, poros más visibles. La cosmética mantiene; renovar es otra liga — peelings, dermapen, mesoterapia.</p>
+      </div>
+      <div class="cat-page-pain-item">
+        <h3>Marcas y cicatrices que arrastras desde el acné juvenil.</h3>
+        <p>Las llevas años aceptando porque "ya no se quitan". Sí se mejoran — solo no con sérums; con dermapen, peelings progresivos y plasma pen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="cat-page-why">
+  <div class="container">
+    <div class="cat-page-why-head">
+      <span class="eyebrow">Por qué los faciales avanzados funcionan</span>
+      <h2>Seis razones por las que estos tratamientos cambian el juego.</h2>
+      <p>No es marketing — es tecnología clínica aplicada con criterio.</p>
+    </div>
+    <div class="cat-page-why-grid">
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-body">
+          <h3>Tecnología que llega donde la cosmética no.</h3>
+          <p>Peelings químicos, dermapen con micropunción controlada, plasma pen, mesoterapia virtual. Trabajan en dermis, no en superficie.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">02</div>
+        <div class="cat-page-reason-body">
+          <h3>Diagnóstico personalizado, no menú.</h3>
+          <p>No te vendemos el tratamiento de moda. Vemos tu piel, tu historial, tu objetivo y diseñamos protocolo. A veces es un peeling. A veces no.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">03</div>
+        <div class="cat-page-reason-body">
+          <h3>Combinables entre sí.</h3>
+          <p>Dermapen + hidratación. Peeling + radiofrecuencia. La sinergia entre tratamientos multiplica resultados que ninguno por separado consigue.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">04</div>
+        <div class="cat-page-reason-body">
+          <h3>Resultados graduales, naturales, propios.</h3>
+          <p>Nada de "máscara tirante". Tu piel se renueva desde dentro y se nota como mejor versión de ti, no como otra cara.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">05</div>
+        <div class="cat-page-reason-body">
+          <h3>Sin baja prolongada.</h3>
+          <p>La mayoría de tratamientos te dejan reanudar tu vida en horas o pocos días. Diseñados para encajar en tu agenda real.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">06</div>
+        <div class="cat-page-reason-body">
+          <h3>Lo aplica quien firma el resultado.</h3>
+          <p>Mismo principio que en toda la clínica: te atiende quien tiene la experiencia para decirte qué funciona en tu caso y qué no.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS GRID -->
+<section class="cat-page-grid-section">
+  <div class="container">
+    <div class="cat-page-grid-head">
+      <span class="eyebrow">9 protocolos faciales</span>
+      <h2>El catálogo facial avanzado, al detalle.</h2>
+      <p>Pulsa cualquier tratamiento para ver beneficios, cómo funciona, precios y duración. Si dudas cuál es el tuyo, te lo decimos en el diagnóstico gratuito.</p>
+    </div>
+    <div class="cat-page-grid">
+      {%- set facialTrats = tratamientos.tratamientos | byCategory("tratamientos-faciales") -%}
+      {% for trat in facialTrats %}
+      <article id="{{ trat.slug }}" class="trat-card trat-card-trigger" data-slug="{{ trat.slug }}" role="button" tabindex="0" aria-label="Ver detalles de {{ trat.nombre }}">
+        <picture>
+          <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
+          <img
+            src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
+            alt="{{ trat.nombre }}"
+            class="trat-card-img"
+            loading="lazy"
+            decoding="async"
+            width="400"
+            height="200"
+          />
+        </picture>
+        <div class="trat-card-body">
+          <h3 class="trat-card-name">{{ trat.nombre }}</h3>
+          <p class="trat-card-desc">{{ trat.descripcion }}</p>
+
+          {% if trat.incluye %}
+          <ul class="trat-card-incluye">
+            {% for item in trat.incluye %}{% if loop.index <= 3 %}
+            <li>{{ item }}</li>
+            {% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+
+          <div class="trat-card-meta">
+            <span class="trat-duracion">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              {{ trat.duracion }}
+            </span>
+            <button
+              type="button"
+              class="trat-cta trat-card-trigger"
+              data-slug="{{ trat.slug }}"
+              aria-label="Ver detalles de {{ trat.nombre }}"
+            >Ver detalles →</button>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CROSS-SELL BAND -->
+<section class="cat-page-cross">
+  <div class="container">
+    <div class="cat-page-cross-head">
+      <span class="eyebrow">Si lo tuyo va más allá</span>
+      <h2>Si tu caso necesita <em>más que un facial avanzado</em>…</h2>
+      <p>Cada problema tiene su tecnología. Si lo tuyo no encaja aquí, te orientamos hacia la especialidad que sí lo resuelve.</p>
+    </div>
+    <div class="cat-page-cross-grid">
+      <a href="{{ '/radiofrecuencia/' | url }}" class="cat-page-cross-card">
+        <span class="eyebrow">Reafirmación profunda</span>
+        <h3>Necesitas reafirmación profunda → <em>INDIBA</em></h3>
+        <p>Flacidez, óvalo caído, piel "cansada" pese a cuidarte. Radiofrecuencia INDIBA Activ trabaja en hipodermis donde la cosmética y los faciales superficiales no llegan.</p>
+        <span class="arrow">Conocer INDIBA →</span>
+      </a>
+      <a href="{{ '/services/#inyectables' | url }}" class="cat-page-cross-card">
+        <span class="eyebrow">Volumen y relleno</span>
+        <h3>Buscas volumen o relleno → <em>Inyectables</em></h3>
+        <p>Pérdida de volumen en pómulos, surcos marcados, labios o arrugas dinámicas. Ácido hialurónico, botox y bioestimuladores aplicados con criterio médico-estético.</p>
+        <span class="arrow">Ver inyectables →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="cat-page-tests">
+  <div class="container">
+    <div class="cat-page-tests-head">
+      <span class="eyebrow">Pacientes reales</span>
+      <h2>Resultados que se notan, y se cuentan.</h2>
+      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+    </div>
+    <div class="cat-page-tests-grid">
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"Después de años intentando borrar las manchas con cremas carísimas, en cinco sesiones de peeling antimanchas tengo la piel que recuerdo de los treinta."</p>
+        <div class="cat-page-test-author">María José L.</div>
+        <div class="cat-page-test-meta">Paciente · Peeling Anti-Manchas</div>
+      </div>
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"El dermapen me ha mejorado las cicatrices del acné mucho más de lo que esperaba. Los resultados son progresivos y naturales — nada agresivo."</p>
+        <div class="cat-page-test-author">Cristina A.</div>
+        <div class="cat-page-test-meta">Paciente · Dermapen</div>
+      </div>
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"Vine pensando que necesitaba ácido hialurónico y me hicieron un diagnóstico honesto: lo mío era hidratación profunda. La diferencia es brutal y me he ahorrado un dineral."</p>
+        <div class="cat-page-test-author">Paciente verificada</div>
+        <div class="cat-page-test-meta">Reseña Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="cat-page-process">
+  <div class="container">
+    <div class="cat-page-process-head">
+      <span class="eyebrow">¿Cómo lo empezamos?</span>
+      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
+      <p>Desde tu primer mensaje hasta la primera sesión pasan menos de dos semanas.</p>
+    </div>
+    <div class="cat-page-steps">
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-body">
+          <h3>Reservas tu diagnóstico gratuito</h3>
+          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">2</div>
+        <div class="cat-page-step-body">
+          <h3>Diagnóstico personalizado en clínica</h3>
+          <p>Vemos tu piel, hablamos de tu historial y de tu objetivo real. Te decimos qué tratamiento(s) tienen sentido para ti — y cuál NO.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">3</div>
+        <div class="cat-page-step-body">
+          <h3>Plan a medida con protocolo y frecuencia</h3>
+          <p>Diseñamos el plan: cuántas sesiones, qué orden, qué combinaciones. Todo claro antes de empezar.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">4</div>
+        <div class="cat-page-step-body">
+          <h3>Seguimiento real durante el plan</h3>
+          <p>WhatsApp directo entre sesiones para dudas, ajustes o pos-tratamiento. No desaparecemos cuando empiezas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="cat-page-faq">
+  <div class="container">
+    <div class="cat-page-faq-head">
+      <span class="eyebrow">Dudas frecuentes</span>
+      <h2>Lo que más nos preguntan sobre faciales avanzados.</h2>
+    </div>
+    <div class="cat-page-faq-list">
+      <div class="cat-page-faq-item open">
+        <button class="cat-page-faq-q" type="button">¿Cómo sé si lo mío es peeling o dermapen? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Depende del problema. Las manchas y daño solar responden mejor a peelings químicos despigmentantes; las cicatrices, líneas finas y textura irregular responden mejor a dermapen. En el diagnóstico gratuito vemos exactamente qué necesita tu piel.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿Cuánto tiempo de baja necesito? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Depende del tratamiento. Dermaplaning y mesoterapia virtual: cero. Hidratación con dermapen y peelings suaves: 24-48h con leve enrojecimiento. Peelings químicos profundos: 4-7 días de descamación controlada. Te lo explicamos al detalle antes de elegir protocolo.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿Cuándo voy a ver resultados? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Tratamientos como velo de colágeno o dermaplaning dan luminosidad inmediata desde la primera sesión. Peelings antimanchas y dermapen para cicatrices son progresivos: notas mejoría al mes y resultado pleno entre 3-5 sesiones según el caso.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿Puedo combinar varios tratamientos? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Sí, y muchas veces es la mejor estrategia. Dermapen + hidratación, peeling + radiofrecuencia, mesoterapia + velo de colágeno son combinaciones habituales. En el plan personalizado te diseñamos la secuencia óptima.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">Tengo piel sensible / rosácea / estoy embarazada. ¿Hay alternativas? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Sí. Tenemos protocolos específicos para piel sensible y reactiva. Si estás embarazada o lactando, algunos tratamientos están contraindicados pero otros son perfectamente seguros — te lo decimos en la valoración con honestidad clínica.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cat-page-final">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
+    <h2>Reserva un diagnóstico gratuito. <em>Empieza por saber qué necesita tu piel</em>.</h2>
+    <p>Treinta minutos en clínica con quien lleva décadas viendo pieles. Si lo tuyo no es ningún tratamiento avanzado, te lo decimos de frente y te orientamos.</p>
+    <div class="cat-page-final-row">
+      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT MODAL PARTIAL -->
+{% include "treatment-modal.njk" %}
+
+<script>
+  /* FAQ accordion */
+  document.querySelectorAll('.cat-page-faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.cat-page-faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.cat-page-faq-item').forEach((i) => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>

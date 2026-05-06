@@ -1,0 +1,802 @@
+---
+layout: base.njk
+title: "Tratamientos corporales en Benidorm — Maderoterapia, drenaje y recuperación · AnyLopez"
+description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y recuperación muscular en AnyLopez Clínica Estética Benidorm. Manualidad experta y diagnóstico personalizado."
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalSpecialty",
+  "name": "Tratamientos corporales AnyLopez",
+  "alternateName": "Estética corporal manual",
+  "description": "Catálogo de tratamientos corporales en AnyLopez Clínica Estética Benidorm: maderoterapia, presoterapia, drenaje linfático postoperatorio y recuperación de dolor muscular. Manualidad experta, protocolos validados y diagnóstico personalizado.",
+  "url": "https://raulgogna.github.io/anylopez-website/services/corporal/",
+  "relevantSpecialty": [
+    "Maderoterapia",
+    "Presoterapia",
+    "Drenaje Linfático Postoperatorio",
+    "Recuperación Muscular"
+  ],
+  "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cuántas sesiones de drenaje postoperatorio necesito?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la cirugía y de la fase de recuperación, pero el protocolo habitual son 8-12 sesiones repartidas en las primeras 4-6 semanas postop. En el diagnóstico vemos tu parte médico, fecha de cirugía y diseñamos el plan exacto." } },
+    { "@type": "Question", "name": "¿La maderoterapia funciona contra la celulitis?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, especialmente combinada con constancia (alimentación, hidratación, movimiento). La maderoterapia mejora visiblemente la apariencia de la celulitis al estimular circulación y drenaje. No es magia, es trabajo manual sostenido — y los resultados se ven." } },
+    { "@type": "Question", "name": "¿Presoterapia y maderoterapia se complementan?", "acceptedAnswer": { "@type": "Answer", "text": "Mucho. La maderoterapia trabaja manualmente la fascia y la grasa subcutánea; la presoterapia drena el líquido linfático con presión secuencial. Combinadas en una misma sesión los resultados se multiplican — es uno de los protocolos que más recomendamos para piernas pesadas y celulitis." } },
+    { "@type": "Question", "name": "¿Después de una liposucción cuándo puedo empezar el drenaje?", "acceptedAnswer": { "@type": "Answer", "text": "Habitualmente entre 5 y 10 días tras la cirugía, según indicación de tu cirujano. Lo importante: drenaje específico postoperatorio (no masaje genérico) lo antes que el médico autorice. Cuanto antes empiezas, mejor evolución." } },
+    { "@type": "Question", "name": "¿La manipulación me dolerá?", "acceptedAnswer": { "@type": "Answer", "text": "El drenaje linfático es muy suave — no duele. La maderoterapia y la recuperación muscular tienen una intensidad media-alta dependiendo de tu tolerancia, pero siempre dentro del umbral terapéutico. Si en algún momento es demasiado, ajustamos. No tratamos a nadie aguantando dolor." } }
+  ]
+}
+</script>
+
+<style>
+  /* ─── HERO CINEMATIC ──────────────────────────────── */
+  .cat-page-hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .cat-page-hero-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .cat-page-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+  .cat-page-hero-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(26,18,8,0.78) 0%, rgba(26,18,8,0.55) 50%, rgba(26,18,8,0.25) 100%);
+  }
+  .cat-page-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 120px 0;
+  }
+  .cat-page-hero-content { max-width: 720px; }
+  .cat-page-hero h1 {
+    color: #fff;
+    font-size: clamp(40px, 6.5vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 16px 0 20px;
+  }
+  .cat-page-hero h1 em { font-style: italic; color: var(--gold); }
+  .cat-page-hero .lead {
+    color: rgba(255,255,255,0.88);
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.65;
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+  .cat-page-hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .cat-page-hero-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgba(255,255,255,0.78);
+    font-size: 13px;
+  }
+  .cat-page-hero-meta strong { color: #fff; }
+  .cat-page-hero-meta .stars { color: var(--gold); letter-spacing: 1px; font-size: 14px; }
+  .cat-page-hero-meta .dot { color: rgba(255,255,255,0.35); }
+
+  /* ─── PAIN POINTS ─────────────────────────────────── */
+  .cat-page-pain {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-pain-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .cat-page-pain-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-pain-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .cat-page-pain-item {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 36px 32px;
+    transition: border-color 0.3s var(--ease);
+  }
+  .cat-page-pain-item:hover { border-color: var(--terra); }
+  .cat-page-pain-item h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: var(--dark);
+  }
+  .cat-page-pain-item p { color: var(--text-mid); font-size: 14px; line-height: 1.6; }
+
+  /* ─── WHY IT WORKS — 6 reasons numbered ───────────── */
+  .cat-page-why {
+    background: var(--sand);
+    padding: 96px 0;
+  }
+  .cat-page-why-head { max-width: 680px; margin: 0 auto 64px; text-align: center; }
+  .cat-page-why-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-why-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .cat-page-reason { display: flex; gap: 20px; }
+  .cat-page-reason-num {
+    flex-shrink: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--terra);
+    font-weight: 500;
+    margin-top: -4px;
+  }
+  .cat-page-reason-body h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    color: var(--dark);
+  }
+  .cat-page-reason-body p { color: var(--text-mid); font-size: 14.5px; line-height: 1.65; }
+
+  /* ─── TREATMENTS GRID ─────────────────────────────── */
+  .cat-page-section {
+    padding: 96px 0;
+    background: var(--ivory);
+  }
+  .cat-page-section-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+  .cat-page-section-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-section-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  /* Reused card styles from services.njk (renamed namespace where needed) */
+  .trat-card {
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    scroll-margin-top: 160px;
+  }
+  .trat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .trat-card-img { width: 100%; height: 220px; object-fit: cover; display: block; background: var(--bg-light); }
+  .trat-card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .trat-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--dark);
+    margin: 0;
+  }
+  .trat-card-desc { font-size: 14px; line-height: 1.65; color: var(--text-mid); margin: 0; }
+  .trat-card-incluye { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; }
+  .trat-card-incluye li {
+    font-size: 13px;
+    color: var(--text-mid);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .trat-card-incluye li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--terra);
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .trat-card-meta {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .trat-duracion {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+  .trat-duracion svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--terra); }
+  .trat-cta {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--terra-dk);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+    text-align: left;
+  }
+  .trat-cta:hover { color: var(--terra); }
+
+  /* ─── CROSS-SELL BAND (toward INDIBA) ─────────────── */
+  .cat-page-xsell {
+    background: var(--dark);
+    color: #fff;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-page-xsell-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cat-page-xsell .eyebrow { color: var(--gold); }
+  .cat-page-xsell h2 {
+    color: #fff;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.05;
+    margin: 12px 0 20px;
+  }
+  .cat-page-xsell h2 em { font-style: italic; color: var(--gold); }
+  .cat-page-xsell p {
+    color: rgba(255,255,255,0.82);
+    font-size: 17px;
+    line-height: 1.65;
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+
+  /* ─── TESTIMONIOS ────────────────────────────────── */
+  .cat-page-tests {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-tests-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+  .cat-page-tests-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-tests-head p { color: var(--text-mid); font-size: 15px; }
+  .cat-page-tests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .cat-page-test {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cat-page-test-stars { color: var(--gold); font-size: 16px; letter-spacing: 1px; margin-bottom: 16px; }
+  .cat-page-test-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--dark);
+    font-style: italic;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .cat-page-test-author {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .cat-page-test-meta { font-size: 12px; color: var(--text-mid); letter-spacing: 0.04em; }
+
+  /* ─── PROCESS ─────────────────────────────────────── */
+  .cat-page-process {
+    background: var(--sand);
+    padding: 96px 0;
+  }
+  .cat-page-process-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .cat-page-process-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-process-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-steps { max-width: 800px; margin: 0 auto; }
+  .cat-page-step {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-page-step:last-child { border-bottom: none; }
+  .cat-page-step-num {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--terra);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .cat-page-step-body h3 { font-size: 22px; margin-bottom: 8px; color: var(--dark); }
+  .cat-page-step-body p { color: var(--text-mid); font-size: 15px; line-height: 1.6; }
+
+  /* ─── FAQ ─────────────────────────────────────────── */
+  .cat-page-faq {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-faq-head { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+  .cat-page-faq-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0;
+  }
+  .cat-page-faq-list { max-width: 800px; margin: 0 auto; }
+  .cat-page-faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-page-faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--dark);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    line-height: 1.3;
+  }
+  .cat-page-faq-q .icon {
+    flex-shrink: 0;
+    font-size: 22px;
+    color: var(--terra);
+    transition: transform 0.3s var(--ease);
+  }
+  .cat-page-faq-item.open .cat-page-faq-q .icon { transform: rotate(45deg); }
+  .cat-page-faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease), padding 0.4s var(--ease);
+    color: var(--text-mid);
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+  .cat-page-faq-item.open .cat-page-faq-a {
+    max-height: 600px;
+    padding: 0 0 28px;
+  }
+
+  /* ─── FINAL CTA ───────────────────────────────────── */
+  .cat-page-final {
+    padding: 120px 0;
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+  }
+  .cat-page-final h2 {
+    color: #fff;
+    font-size: clamp(34px, 4.5vw, 56px);
+    line-height: 1.05;
+    max-width: 760px;
+    margin: 0 auto 20px;
+  }
+  .cat-page-final h2 em { font-style: italic; color: var(--gold); }
+  .cat-page-final p {
+    color: rgba(255,255,255,0.78);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .cat-page-final-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 900px) {
+    .cat-page-pain-grid { grid-template-columns: 1fr; gap: 20px; }
+    .cat-page-why-grid { grid-template-columns: 1fr; gap: 32px; }
+    .cat-page-grid { grid-template-columns: 1fr; }
+    .cat-page-tests-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .cat-page-hero-inner { padding: 80px 0; }
+    .cat-page-pain, .cat-page-why, .cat-page-section, .cat-page-xsell, .cat-page-tests, .cat-page-process, .cat-page-faq, .cat-page-final { padding: 64px 0; }
+  }
+</style>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="{{ '/' | url }}">Inicio</a>
+    <span>›</span>
+    <a href="{{ '/services/' | url }}">Servicios</a>
+    <span>›</span>
+    <span>Tratamientos Corporales</span>
+  </div>
+</div>
+
+<!-- HERO CINEMATIC -->
+<section class="cat-page-hero">
+  <div class="cat-page-hero-img">
+    <picture>
+      <source srcset="{{ '/images/tratamientos/maderoterapia.webp' | url }}" type="image/webp">
+      <img
+        src="{{ '/images/tratamientos/maderoterapia.png' | url }}"
+        alt="Tratamientos corporales en AnyLopez Clínica Estética Benidorm"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+      />
+    </picture>
+  </div>
+  <div class="cat-page-hero-inner">
+    <div class="container">
+      <div class="cat-page-hero-content">
+        <span class="eyebrow" style="color: var(--gold);">Tratamientos corporales · 4 protocolos</span>
+        <h1>Tu cuerpo no necesita una máquina más. <em>Necesita manos que sepan dónde insistir.</em></h1>
+        <p class="lead">Retención, piernas pesadas, recuperación postquirúrgica, tensión muscular crónica. Cosas que no se arreglan con un masaje genérico ni con una máquina sin criterio. Aquí trabajamos con técnica manual experta y protocolos específicos para cada caso.</p>
+        <div class="cat-page-hero-ctas">
+          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+        </div>
+        <div class="cat-page-hero-meta">
+          <span class="stars">★★★★★</span>
+          <strong>5.0 · 216 reseñas Google</strong>
+          <span class="dot">·</span>
+          <span>Diagnóstico inicial sin coste</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="cat-page-pain">
+  <div class="container">
+    <div class="cat-page-pain-head">
+      <span class="eyebrow">¿Te suena alguna de estas?</span>
+      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
+      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+    </div>
+    <div class="cat-page-pain-grid">
+      <div class="cat-page-pain-item">
+        <h3>Sientes las piernas cargadas y la circulación lenta.</h3>
+        <p>Pese al deporte y a la dieta. Es retención y mala microcirculación. El gimnasio no la arregla — el drenaje sí.</p>
+      </div>
+      <div class="cat-page-pain-item">
+        <h3>Te has operado y la recuperación va lenta.</h3>
+        <p>Cirugía estética, quirúrgica abdominal, ortopédica. Sin drenaje específico postoperatorio se acumula inflamación que ralentiza tu vuelta a la normalidad.</p>
+      </div>
+      <div class="cat-page-pain-item">
+        <h3>Vives con tensión muscular crónica.</h3>
+        <p>Horas frente al ordenador o entrenamientos intensos. Lumbar, cervicales, piernas. Un masaje genérico te alivia un día — un protocolo serio te suelta de verdad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="cat-page-why">
+  <div class="container">
+    <div class="cat-page-why-head">
+      <span class="eyebrow">Por qué los corporales en AnyLopez funcionan</span>
+      <h2>Seis razones por las que aquí funcionan donde otros sitios no.</h2>
+      <p>No es marketing. Es manualidad experta, criterio y protocolos validados.</p>
+    </div>
+    <div class="cat-page-why-grid">
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-body">
+          <h3>Manualidad experta de quien lleva décadas</h3>
+          <p>Las máquinas ayudan; las manos diagnostican mientras tratan. Aquí no contratamos becarios para ahorrar costes — te atiende quien sabe.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">02</div>
+        <div class="cat-page-reason-body">
+          <h3>Combinable con INDIBA si hay flacidez asociada</h3>
+          <p>No vendemos solo lo nuestro. Si tu caso necesita radiofrecuencia profunda además del manual, lo decimos y combinamos protocolos.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">03</div>
+        <div class="cat-page-reason-body">
+          <h3>Drenaje linfático con técnica validada</h3>
+          <p>No es masaje suave con nombre fancy. Es protocolo Vodder/Leduc adaptado a tu caso, con presiones y ritmo específicos.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">04</div>
+        <div class="cat-page-reason-body">
+          <h3>Recuperación postquirúrgica con protocolos serios</h3>
+          <p>Tras una cirugía estética o de otro tipo, no improvisamos. Sabemos cuándo empezar, qué intensidad, qué frecuencia y por qué.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">05</div>
+        <div class="cat-page-reason-body">
+          <h3>Sesiones que se sienten desde la primera</h3>
+          <p>No tienes que esperar 10 sesiones para notar algo. Drenaje, maderoterapia y recuperación muscular dan sensación inmediata.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">06</div>
+        <div class="cat-page-reason-body">
+          <h3>Sin pinchazos, sin recuperación, compatibles con tu rutina</h3>
+          <p>Sales y sigues con tu vida. Nada de baja, nada de marcas visibles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS GRID -->
+<section class="cat-page-section">
+  <div class="container">
+    <div class="cat-page-section-head">
+      <span class="eyebrow">Cuatro protocolos · una sola filosofía</span>
+      <h2>Los tratamientos corporales del catálogo.</h2>
+      <p>Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.</p>
+    </div>
+
+    {% set catTrats = tratamientos.tratamientos | byCategory("corporal") %}
+    <div class="cat-page-grid">
+      {% for trat in catTrats %}
+      <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
+        <picture>
+          <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
+          <img
+            src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
+            alt="{{ trat.nombre }} en AnyLopez Benidorm"
+            class="trat-card-img"
+            loading="lazy"
+            decoding="async"
+            width="540"
+            height="220"
+          />
+        </picture>
+        <div class="trat-card-body">
+          <h3 class="trat-card-name">{{ trat.nombre }}</h3>
+          <p class="trat-card-desc">{{ trat.descripcion }}</p>
+
+          {% if trat.incluye %}
+          <ul class="trat-card-incluye">
+            {% for item in trat.incluye %}
+              {% if loop.index <= 3 %}
+              <li>{{ item }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          <div class="trat-card-meta">
+            <span class="trat-duracion">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              {{ trat.duracion }}
+            </span>
+            <button
+              type="button"
+              class="trat-cta trat-card-trigger"
+              data-slug="{{ trat.slug }}"
+              aria-label="Ver detalles de {{ trat.nombre }}"
+            >Ver detalles →</button>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CROSS-SELL BAND (to INDIBA) -->
+<section class="cat-page-xsell">
+  <div class="container">
+    <div class="cat-page-xsell-inner">
+      <span class="eyebrow">Cuando cuerpo y piel van juntos</span>
+      <h2>Si tu caso combina cuerpo y <em>flacidez profunda</em>…</h2>
+      <p>Muchos protocolos corporales se potencian combinándolos con radiofrecuencia INDIBA. Si tu objetivo incluye reafirmación de piel además de drenaje o tonicidad, lo combinamos en el diagnóstico gratuito.</p>
+      <a href="{{ '/radiofrecuencia/' | url }}" class="btn btn-accent">Conocer INDIBA →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="cat-page-tests">
+  <div class="container">
+    <div class="cat-page-tests-head">
+      <span class="eyebrow">Pacientes reales</span>
+      <h2>Resultados que se notan, y se cuentan.</h2>
+      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+    </div>
+    <div class="cat-page-tests-grid">
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"Operada de abdominoplastia, las primeras semanas pensaba que no iba a recuperarme nunca. Diez sesiones de drenaje postoperatorio y la diferencia es noche y día — la inflamación bajó muchísimo más rápido que cualquier expectativa."</p>
+        <div class="cat-page-test-author">Carmen R.</div>
+        <div class="cat-page-test-meta">Paciente · Drenaje Postoperatorio</div>
+      </div>
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"Llevaba años con dolor lumbar de oficina. Probé fisio, gimnasio, hasta acupuntura. La recuperación muscular aquí me ha soltado de verdad — no es un masaje agradable, es trabajo terapéutico serio."</p>
+        <div class="cat-page-test-author">Javier M.</div>
+        <div class="cat-page-test-meta">Paciente · Recuperación Muscular</div>
+      </div>
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"La maderoterapia me ha cambiado la celulitis de las piernas más que cualquier crema reductora. Combinado con un poco de constancia, los resultados son visibles."</p>
+        <div class="cat-page-test-author">Paciente verificada</div>
+        <div class="cat-page-test-meta">Reseña Google · Maderoterapia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="cat-page-process">
+  <div class="container">
+    <div class="cat-page-process-head">
+      <span class="eyebrow">¿Cómo lo empezamos?</span>
+      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
+      <p>Desde tu primer mensaje hasta que ves la primera mejora pasan menos de dos semanas.</p>
+    </div>
+    <div class="cat-page-steps">
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-body">
+          <h3>Reservas tu diagnóstico gratuito</h3>
+          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">2</div>
+        <div class="cat-page-step-body">
+          <h3>Diagnóstico personalizado en clínica</h3>
+          <p>Te valoramos: zona, antecedentes, objetivo. Si vienes posquirúrgica, vemos parte médico. Si es retención, palpamos para ver qué tipo. Si es tensión muscular, evaluamos cadena postural.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">3</div>
+        <div class="cat-page-step-body">
+          <h3>Protocolo a medida con sesiones y frecuencia</h3>
+          <p>No "vienes 10 veces". Diseñamos cuántas sesiones realmente necesitas y con qué cadencia. Y si lo tuyo se resuelve en 4 te lo decimos.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">4</div>
+        <div class="cat-page-step-body">
+          <h3>Seguimiento real entre sesiones</h3>
+          <p>WhatsApp directo para dudas, ajustes y guía pos-tratamiento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="cat-page-faq">
+  <div class="container">
+    <div class="cat-page-faq-head">
+      <span class="eyebrow">Dudas frecuentes</span>
+      <h2>Lo que más nos preguntan sobre los corporales.</h2>
+    </div>
+    <div class="cat-page-faq-list">
+      <div class="cat-page-faq-item open">
+        <button class="cat-page-faq-q" type="button">¿Cuántas sesiones de drenaje postoperatorio necesito? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Depende de la cirugía y de la fase de recuperación, pero el protocolo habitual son 8-12 sesiones repartidas en las primeras 4-6 semanas postop. En el diagnóstico vemos tu parte médico, fecha de cirugía y diseñamos el plan exacto.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿La maderoterapia funciona contra la celulitis? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Sí, especialmente combinada con constancia (alimentación, hidratación, movimiento). La maderoterapia mejora visiblemente la apariencia de la celulitis al estimular circulación y drenaje. No es magia, es trabajo manual sostenido — y los resultados se ven.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿Presoterapia y maderoterapia se complementan? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Mucho. La maderoterapia trabaja manualmente la fascia y la grasa subcutánea; la presoterapia drena el líquido linfático con presión secuencial. Combinadas en una misma sesión los resultados se multiplican — es uno de los protocolos que más recomendamos para piernas pesadas y celulitis.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿Después de una liposucción cuándo puedo empezar el drenaje? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Habitualmente entre 5 y 10 días tras la cirugía, según indicación de tu cirujano. Lo importante: drenaje específico postoperatorio (no masaje genérico) lo antes que el médico autorice. Cuanto antes empiezas, mejor evolución.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿La manipulación me dolerá? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>El drenaje linfático es muy suave — no duele. La maderoterapia y la recuperación muscular tienen una intensidad media-alta dependiendo de tu tolerancia, pero siempre dentro del umbral terapéutico. Si en algún momento es demasiado, ajustamos. No tratamos a nadie aguantando dolor.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cat-page-final">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
+    <h2>Reserva tu diagnóstico gratuito. <em>Empieza por saber qué necesita tu cuerpo</em>.</h2>
+    <p>Treinta minutos en clínica con quien lleva décadas con manos. Si lo tuyo es derivable a fisio, traumatólogo u otro especialista, te lo decimos.</p>
+    <div class="cat-page-final-row">
+      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{% include "treatment-modal.njk" %}
+
+<script>
+  document.querySelectorAll('.cat-page-faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.cat-page-faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.cat-page-faq-item').forEach((i) => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
