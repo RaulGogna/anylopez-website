@@ -131,6 +131,7 @@
         btn.classList.add("has-slots");
         btn.addEventListener("click", () => selectDay(iso));
       }
+      if (date.getTime() === today.getTime()) btn.classList.add("today");
       if (state.selectedDay === iso) btn.classList.add("selected");
       els.days.appendChild(btn);
     }
