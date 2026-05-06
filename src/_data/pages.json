@@ -37,75 +37,75 @@
   },
   {
     "es": "/services/limpiezas-faciales/",
-    "en": null,
+    "en": "/en/services/limpiezas-faciales/",
     "priority_es": "0.85",
-    "priority_en": null,
+    "priority_en": "0.75",
     "changefreq": "monthly",
     "crumb_es": "Limpiezas Faciales",
-    "crumb_en": null
+    "crumb_en": "Facials & Deep Cleanse"
   },
   {
     "es": "/services/tratamientos-faciales/",
-    "en": null,
+    "en": "/en/services/tratamientos-faciales/",
     "priority_es": "0.85",
-    "priority_en": null,
+    "priority_en": "0.75",
     "changefreq": "monthly",
     "crumb_es": "Tratamientos Faciales Avanzados",
-    "crumb_en": null
+    "crumb_en": "Advanced Facials"
   },
   {
     "es": "/services/lifting-antiaging/",
-    "en": null,
+    "en": "/en/services/lifting-antiaging/",
     "priority_es": "0.85",
-    "priority_en": null,
+    "priority_en": "0.75",
     "changefreq": "monthly",
     "crumb_es": "Lifting y Antiaging",
-    "crumb_en": null
+    "crumb_en": "Lifting & Anti-Ageing"
   },
   {
     "es": "/services/inyectables/",
-    "en": null,
+    "en": "/en/services/inyectables/",
     "priority_es": "0.85",
-    "priority_en": null,
+    "priority_en": "0.75",
     "changefreq": "monthly",
     "crumb_es": "Medicina Estética Inyectable",
-    "crumb_en": null
+    "crumb_en": "Botox & Fillers"
   },
   {
     "es": "/services/corporal/",
-    "en": null,
+    "en": "/en/services/corporal/",
     "priority_es": "0.85",
-    "priority_en": null,
+    "priority_en": "0.75",
     "changefreq": "monthly",
     "crumb_es": "Tratamientos Corporales",
-    "crumb_en": null
+    "crumb_en": "Body Treatments"
   },
   {
     "es": "/services/masajes/",
-    "en": null,
+    "en": "/en/services/masajes/",
     "priority_es": "0.85",
-    "priority_en": null,
+    "priority_en": "0.75",
     "changefreq": "monthly",
     "crumb_es": "Masajes",
-    "crumb_en": null
+    "crumb_en": "Massages"
   },
   {
     "es": "/services/estetica-decorativa/",
-    "en": null,
+    "en": "/en/services/estetica-decorativa/",
     "priority_es": "0.85",
-    "priority_en": null,
+    "priority_en": "0.75",
     "changefreq": "monthly",
     "crumb_es": "Estética Decorativa",
-    "crumb_en": null
+    "crumb_en": "Lash Extensions & Semi-Permanent Make-up"
   },
   {
     "es": "/services/depilacion/",
-    "en": null,
+    "en": "/en/services/depilacion/",
     "priority_es": "0.85",
-    "priority_en": null,
+    "priority_en": "0.75",
     "changefreq": "monthly",
     "crumb_es": "Depilación IPL",
-    "crumb_en": null
+    "crumb_en": "IPL Hair Removal"
   },
   {
     "es": "/contact/",
