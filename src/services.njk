@@ -1,20 +1,303 @@
 ---
 layout: base.njk
-title: "Tratamientos Estéticos en Benidorm — AnyLopez Clínica Estética"
-description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética en Benidorm: faciales, corporales, inyectables, masajes, depilación IPL y mucho más."
+title: "Tratamientos en AnyLopez Clínica Estética — Benidorm"
+description: "Ocho especialidades, un único oficio. Catálogo editorial de tratamientos faciales, corporales, inyectables y aparatología en AnyLopez Clínica Estética, Benidorm."
 ---
 
 <style>
-  /* ─── CATEGORY NAV ─────────────────────────────────────────────── */
+  /* ─── HERO ─────────────────────────────────────────── */
+  .svc-hero {
+    padding: 96px 0 72px;
+    background: var(--ivory);
+    text-align: center;
+  }
+  .svc-hero h1 {
+    font-size: clamp(40px, 6.5vw, 76px);
+    line-height: 1.05;
+    margin: 12px auto 24px;
+    max-width: 880px;
+    letter-spacing: -0.01em;
+  }
+  .svc-hero h1 em {
+    font-style: italic;
+    color: var(--terra);
+  }
+  .svc-hero p.lead {
+    font-size: clamp(16px, 2vw, 19px);
+    color: var(--text-mid);
+    max-width: 620px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+  .svc-hero-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--text-mid);
+    margin-top: 28px;
+  }
+  .svc-hero-meta strong { color: var(--text); font-weight: 600; }
+  .svc-hero-meta span.dot { color: var(--sand-mid); }
+  .svc-hero-stars { color: var(--gold); letter-spacing: 1px; font-size: 15px; }
+
+  /* ─── INDEX GRID ──────────────────────────────────── */
+  .svc-index {
+    padding: 24px 0 96px;
+    background: var(--ivory);
+  }
+  .svc-index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  /* ─── CATEGORY CARD (editorial) ───────────────────── */
+  .svc-cat {
+    position: relative;
+    display: block;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+  }
+  .svc-cat:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--terra);
+  }
+  .svc-cat-img {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+  }
+  .svc-cat-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s var(--ease);
+  }
+  .svc-cat:hover .svc-cat-img img { transform: scale(1.04); }
+  .svc-cat-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(26,18,8,0) 0%, rgba(26,18,8,0.45) 100%);
+  }
+  .svc-cat-num {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    z-index: 2;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.85);
+  }
+  .svc-cat-flag {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    z-index: 2;
+    background: var(--terra);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 2px;
+  }
+  .svc-cat-body {
+    padding: 32px 32px 36px;
+  }
+  .svc-cat-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .svc-cat-name {
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.15;
+    margin-bottom: 14px;
+    color: var(--dark);
+  }
+  .svc-cat-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-mid);
+    margin-bottom: 20px;
+  }
+  .svc-cat-trat-list {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .svc-cat-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terra-dk);
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 4px;
+    transition: gap 0.25s var(--ease), color 0.25s var(--ease);
+  }
+  .svc-cat:hover .svc-cat-cta {
+    gap: 14px;
+    color: var(--terra);
+  }
+
+  /* ─── FLAGSHIP BAND (INDIBA) ──────────────────────── */
+  .svc-flagship {
+    background: var(--dark);
+    color: #fff;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .svc-flagship-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .svc-flagship-img {
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4 / 5;
+  }
+  .svc-flagship-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .svc-flagship h2 {
+    color: #fff;
+    font-size: clamp(34px, 4.5vw, 56px);
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+  .svc-flagship h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .svc-flagship p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+  .svc-flagship-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .svc-flagship-meta-item {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+  }
+  .svc-flagship-meta-item strong {
+    display: block;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  /* ─── TRUST STRIP ─────────────────────────────────── */
+  .svc-trust {
+    background: var(--sand);
+    padding: 56px 0;
+    text-align: center;
+  }
+  .svc-trust-stars { color: var(--gold); font-size: 22px; letter-spacing: 2px; margin-bottom: 12px; }
+  .svc-trust-rating {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+  .svc-trust-rating strong { color: var(--terra); font-weight: 500; }
+  .svc-trust-sub { font-size: 13px; color: var(--text-mid); letter-spacing: 0.04em; }
+
+  /* ─── FINAL CTA ───────────────────────────────────── */
+  .svc-final-cta {
+    padding: 120px 0;
+    text-align: center;
+    background: var(--ivory);
+  }
+  .svc-final-cta h2 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.1;
+    max-width: 720px;
+    margin: 0 auto 20px;
+  }
+  .svc-final-cta p {
+    font-size: 17px;
+    color: var(--text-mid);
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .svc-final-cta-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ─── LEGACY SEPARATOR ────────────────────────────── */
+  .svc-legacy-divider {
+    background: var(--ivory);
+    padding: 64px 0 0;
+    text-align: center;
+  }
+  .svc-legacy-divider .eyebrow { margin-bottom: 16px; }
+  .svc-legacy-divider h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .svc-legacy-divider p {
+    color: var(--text-mid);
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  /* ─── LEGACY CATALOG (preservado para anchors + detalle) ─── */
   .cat-nav {
     position: sticky;
-    top: 88px; /* --header-h V3 */
+    top: 88px;
     z-index: 100;
-    background: #fff;
-    border-bottom: 1px solid var(--bg-light);
+    background: var(--ivory);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     padding: 0;
+    margin-top: 56px;
   }
-  /* fade derecho para indicar que hay más pills */
   .cat-nav::after {
     content: '';
     position: absolute;
@@ -22,7 +305,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     top: 0;
     bottom: 0;
     width: 48px;
-    background: linear-gradient(to right, transparent, #fff);
+    background: linear-gradient(to right, transparent, var(--ivory));
     pointer-events: none;
     z-index: 1;
   }
@@ -30,20 +313,16 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 12px 48px 12px 24px; /* padding-right amplio para no quedar bajo el fade */
-    max-width: 1200px;
+    padding: 12px 48px 12px 24px;
+    max-width: 1280px;
     margin: 0 auto;
   }
   .cat-nav-inner::-webkit-scrollbar { display: none; }
-  .cat-nav-pills {
-    display: flex;
-    gap: 8px;
-    white-space: nowrap;
-  }
+  .cat-nav-pills { display: flex; gap: 8px; white-space: nowrap; }
   .cat-nav-pill {
     display: inline-block;
     padding: 6px 16px;
-    border: 1.5px solid var(--bg-light);
+    border: 1.5px solid var(--border);
     border-radius: 40px;
     font-size: 12px;
     font-weight: 600;
@@ -53,109 +332,70 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     transition: background 0.2s, color 0.2s, border-color 0.2s;
     flex-shrink: 0;
   }
-  .cat-nav-pill:hover,
-  .cat-nav-pill.active {
-    background: var(--primary);
+  .cat-nav-pill:hover, .cat-nav-pill.active {
+    background: var(--terra);
     color: #fff;
-    border-color: var(--primary);
+    border-color: var(--terra);
   }
 
-  /* ─── CATEGORY SECTION ─────────────────────────────────────────── */
   .cat-section {
     padding: 64px 0 80px;
-    scroll-margin-top: 150px; /* header(88) + cat-nav(~58) + 4px */
+    scroll-margin-top: 150px;
   }
-  .cat-section:nth-child(even) { background: var(--bg-cream); }
-  .cat-header {
-    margin-bottom: 48px;
-  }
-  .cat-header .section-label { margin-bottom: 8px; }
+  .cat-section:nth-child(even) { background: var(--sand); }
+  .cat-header { margin-bottom: 48px; }
+  .cat-header .eyebrow { margin-bottom: 8px; }
   .cat-header h2 { font-size: clamp(24px, 4vw, 36px); margin-bottom: 10px; }
   .cat-header p { color: var(--text-mid); font-size: 15px; max-width: 560px; }
 
-  /* ─── CATEGORY VISUAL BANNER ───────────────────────────────────── */
   .cat-visual {
     width: 100%;
     height: 260px;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 2px;
     margin-bottom: 32px;
     position: relative;
   }
-  .cat-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+  .cat-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .cat-visual::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(28,26,24,0.35) 0%, transparent 60%);
-    border-radius: 8px;
+    background: linear-gradient(to right, rgba(26,18,8,0.35) 0%, transparent 60%);
+    border-radius: 2px;
   }
 
-  /* ─── TREATMENT GRID ────────────────────────────────────────────── */
   .trat-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
   }
-
-  /* ─── TREATMENT CARD ────────────────────────────────────────────── */
   .trat-card {
     background: #fff;
-    border-radius: 4px;
+    border-radius: 2px;
     overflow: hidden;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    scroll-margin-top: 160px; /* header(88) + cat-nav(~58) + buffer */
+    scroll-margin-top: 160px;
   }
   .trat-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(28,26,24,.14);
+    box-shadow: var(--shadow-lg);
   }
-  .trat-card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    background: var(--bg-light);
-  }
-  .trat-card--bare {
-    border-top: 3px solid var(--accent);
-  }
-  .trat-card-body {
-    padding: 24px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+  .trat-card-img { width: 100%; height: 200px; object-fit: cover; display: block; background: var(--bg-light); }
+  .trat-card--bare { border-top: 3px solid var(--terra); }
+  .trat-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
   .trat-card-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px;
     line-height: 1.3;
-    color: var(--primary);
+    color: var(--dark);
     margin: 0;
   }
-  .trat-card-desc {
-    font-size: 13px;
-    line-height: 1.65;
-    color: var(--text-mid);
-    margin: 0;
-  }
-  .trat-card-incluye {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
+  .trat-card-desc { font-size: 13px; line-height: 1.65; color: var(--text-mid); margin: 0; }
+  .trat-card-incluye { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
   .trat-card-incluye li {
     font-size: 12px;
     color: var(--text-mid);
@@ -167,14 +407,14 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--accent);
+    color: var(--terra);
     font-weight: 700;
     font-size: 11px;
   }
   .trat-card-meta {
     margin-top: auto;
     padding-top: 16px;
-    border-top: 1px solid var(--bg-light);
+    border-top: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -189,12 +429,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     color: var(--text-mid);
     text-transform: uppercase;
   }
-  .trat-duracion svg {
-    width: 13px;
-    height: 13px;
-    flex-shrink: 0;
-    stroke: var(--accent);
-  }
+  .trat-duracion svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--terra); }
   .trat-cta {
     display: inline-block;
     font-size: 11px;
@@ -203,15 +438,27 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     text-transform: uppercase;
     color: var(--terra-dk);
     text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
     transition: color 0.2s;
   }
-  .trat-cta:hover { color: var(--primary); }
+  .trat-cta:hover { color: var(--terra); }
 
-  /* ─── RESPONSIVE ────────────────────────────────────────────────── */
-  @media (max-width: 1024px) {
-    .trat-grid { grid-template-columns: repeat(2, 1fr); }
+  /* ─── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 1024px) { .trat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px) {
+    .svc-index-grid { grid-template-columns: 1fr; gap: 24px; }
+    .svc-flagship-grid { grid-template-columns: 1fr; gap: 40px; }
+    .svc-flagship-img { aspect-ratio: 16/10; }
+    .svc-cat-img { height: 220px; }
+    .svc-cat-body { padding: 24px 24px 28px; }
   }
   @media (max-width: 640px) {
+    .svc-hero { padding: 64px 0 48px; }
+    .svc-flagship { padding: 64px 0; }
+    .svc-final-cta { padding: 80px 0; }
     .trat-grid { grid-template-columns: 1fr; }
     .cat-section { padding: 48px 0 64px; }
     .cat-header { margin-bottom: 32px; }
@@ -228,26 +475,148 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
   </div>
 </div>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
+<!-- HERO -->
+<section class="svc-hero">
   <div class="container">
-    <span class="section-label" style="color:var(--accent)">Catálogo Completo</span>
-    <h1>Nuestros Tratamientos</h1>
-    <p>{{ tratamientos.tratamientos | length }} tratamientos en {{ tratamientos.categorias | length }} especialidades — Diseñados y ejecutados por profesionales en Benidorm</p>
+    <span class="eyebrow">Catálogo · 8 especialidades</span>
+    <h1>Ocho especialidades,<br><em>un único oficio.</em></h1>
+    <p class="lead">Tres generaciones diseñando, ejecutando y supervisando cada tratamiento. Aquí no contratamos becarios ni encadenamos sesiones por horarios apretados — cuando reservas, te atiende quien firma el resultado.</p>
+    <div class="svc-hero-meta">
+      <span class="svc-hero-stars">★★★★★</span>
+      <strong>5.0 sobre 216 reseñas en Google</strong>
+      <span class="dot">·</span>
+      <span>{{ tratamientos.tratamientos | length }} tratamientos disponibles</span>
+      <span class="dot">·</span>
+      <span>Diagnóstico inicial gratuito</span>
+    </div>
   </div>
 </section>
 
-<!-- OFERTA PRIMER TRATAMIENTO -->
-<div style="background:var(--terra-dk); padding:14px 0; text-align:center;">
+<!-- INDEX GRID -->
+<section class="svc-index">
   <div class="container">
-    <p style="color:#fff; font-size:13px; font-weight:600; letter-spacing:1px;">
-      10% de descuento en tu primera Higiene Facial — ¡Reserva hoy!
-      <a href="{{ '/contact/' | url }}" style="color:#fff; text-decoration:underline; margin-left:12px;">Reservar →</a>
-    </p>
-  </div>
-</div>
+    <div class="svc-index-grid">
 
-<!-- CATEGORY NAV -->
+      {%- set catImages = {
+        "limpiezas-faciales":   { "img": "fotoscatalogoanylopez/limpiezafacial",         "label": "Higiene + cuidado regular" },
+        "tratamientos-faciales":{ "img": "fotoscatalogoanylopez/dermapen",               "label": "Renovación · Anti-acné · Manchas" },
+        "lifting-antiaging":    { "img": "fotoscatalogoanylopez/ultherapyfacial",        "label": "Reafirmación sin cirugía" },
+        "inyectables":          { "img": "fotoscatalogoanylopez/rellenoacidohialuronico","label": "Medicina estética avanzada" },
+        "corporal":             { "img": "tratamientos/maderoterapia",                   "label": "Cuerpo · Tonicidad · Recuperación" },
+        "masajes":              { "img": "tratamientos/masajes",                         "label": "Manual · Terapéutico · Drenaje" },
+        "estetica-decorativa":  { "img": "tratamientos/micropigmentacion",               "label": "Pestañas · Micropigmentación" },
+        "depilacion":           { "img": "tratamientos/depilacion-ipl",                  "label": "IPL · Pieles cómodas" }
+      } -%}
+
+      {% for cat in tratamientos.categorias %}
+        {%- set catTrats = tratamientos.tratamientos | byCategory(cat.id) -%}
+        {%- set imgInfo = catImages[cat.id] -%}
+        {%- set imgPath = imgInfo.img -%}
+        {%- set isFlag = cat.id == "lifting-antiaging" -%}
+        {%- set padded = "0" + (loop.index | string) if loop.index < 10 else (loop.index | string) -%}
+        {%- set total = "0" + (tratamientos.categorias | length | string) if (tratamientos.categorias | length) < 10 else (tratamientos.categorias | length | string) -%}
+
+        <a href="#{{ cat.id }}" class="svc-cat" data-cat="{{ cat.id }}">
+          <div class="svc-cat-img">
+            <span class="svc-cat-num">{{ padded }} / {{ total }}</span>
+            {% if isFlag %}<span class="svc-cat-flag">Especialidad estrella</span>{% endif %}
+            <picture>
+              <source srcset="{{ ('/images/' + imgPath + '.webp') | url }}" type="image/webp">
+              <img
+                src="{{ ('/images/' + imgPath + '.png') | url }}"
+                alt="{{ cat.nombre }} en AnyLopez Benidorm"
+                loading="{{ 'eager' if loop.index <= 2 else 'lazy' }}"
+                decoding="async"
+                width="640"
+                height="360"
+              />
+            </picture>
+          </div>
+          <div class="svc-cat-body">
+            <span class="svc-cat-eyebrow">{{ imgInfo.label }}</span>
+            <h2 class="svc-cat-name">{{ cat.nombre }}</h2>
+            <p class="svc-cat-desc">{{ cat.descripcion }}</p>
+            <p class="svc-cat-trat-list">
+              {%- set tratNamesStr = "" -%}
+              {%- for t in catTrats -%}
+                {%- if loop.first -%}
+                  {%- set tratNamesStr = t.nombre -%}
+                {%- else -%}
+                  {%- set tratNamesStr = tratNamesStr + " · " + t.nombre -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {{ catTrats | length }} tratamiento{{ "s" if catTrats | length > 1 else "" }} ·
+              {{ tratNamesStr | truncate(110, true, "…") }}
+            </p>
+            <span class="svc-cat-cta">Ver tratamientos <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="svc-trust">
+  <div class="container">
+    <div class="svc-trust-stars">★★★★★</div>
+    <div class="svc-trust-rating"><strong>5.0</strong> · 216 reseñas verificadas en Google</div>
+    <div class="svc-trust-sub">Más de 30 años acompañando pacientes en Benidorm</div>
+  </div>
+</section>
+
+<!-- FLAGSHIP — INDIBA -->
+<section class="svc-flagship">
+  <div class="container">
+    <div class="svc-flagship-grid">
+      <div class="svc-flagship-img">
+        <picture>
+          <source srcset="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.webp' | url }}" type="image/webp">
+          <img
+            src="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.png' | url }}"
+            alt="Radiofrecuencia INDIBA en AnyLopez Benidorm"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="1000"
+          />
+        </picture>
+      </div>
+      <div>
+        <span class="eyebrow" style="color: var(--gold);">Tratamiento bandera</span>
+        <h2>Radiofrecuencia INDIBA — <em>el lifting que no se nota</em>.</h2>
+        <p>Si has cuidado tu piel toda la vida pero los espejos te devuelven flacidez, INDIBA es la respuesta sin quirófano. Tecnología CRet/RES que estimula tu propio colágeno desde la primera sesión. Indoloro, sin recuperación, compatible con todo lo demás.</p>
+        <div class="svc-flagship-meta">
+          <div class="svc-flagship-meta-item">
+            <strong>350 €</strong>
+            Pack 10 sesiones
+          </div>
+          <div class="svc-flagship-meta-item">
+            <strong>525 €</strong>
+            Ahorro vs sesión suelta
+          </div>
+          <div class="svc-flagship-meta-item">
+            <strong>1ª sesión</strong>
+            Resultados visibles
+          </div>
+        </div>
+        <a href="{{ '/radiofrecuencia/' | url }}" class="btn btn-accent">Conocer INDIBA →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGACY DIVIDER -->
+<section class="svc-legacy-divider">
+  <div class="container">
+    <span class="eyebrow">Catálogo completo</span>
+    <h2>Listado por especialidad</h2>
+    <p>Mientras estrenamos las páginas dedicadas de cada especialidad, aquí tienes el catálogo completo con detalle de cada tratamiento.</p>
+  </div>
+</section>
+
+<!-- LEGACY CATEGORY NAV -->
 <nav class="cat-nav" aria-label="Categorías de tratamientos">
   <div class="cat-nav-inner">
     <div class="cat-nav-pills">
@@ -258,13 +627,13 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
   </div>
 </nav>
 
-<!-- TREATMENT CATEGORIES -->
+<!-- LEGACY TREATMENT CATEGORIES (preserved for anchor links and full detail) -->
 {% for cat in tratamientos.categorias %}
 {% set catTrats = tratamientos.tratamientos | byCategory(cat.id) %}
 <section class="cat-section" id="{{ cat.id }}">
   <div class="container">
     <div class="cat-header">
-      <span class="section-label">{{ loop.index }} / {{ tratamientos.categorias | length }}</span>
+      <span class="eyebrow">{{ loop.index }} / {{ tratamientos.categorias | length }}</span>
       <h2>{{ cat.nombre }}</h2>
       <p>{{ cat.descripcion }}</p>
     </div>
@@ -275,7 +644,7 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
     <div class="cat-visual">
       <picture>
         <source srcset="{{ ('/images/tratamientos/' + catImg0.replace('.png', '.webp')) | url }}" type="image/webp">
-        <img src="{{ ('/images/tratamientos/' + catImg0) | url }}" alt="{{ cat.nombre }}" loading="{{ 'eager' if loop.first else 'lazy' }}" decoding="async" />
+        <img src="{{ ('/images/tratamientos/' + catImg0) | url }}" alt="{{ cat.nombre }}" loading="lazy" decoding="async" />
       </picture>
     </div>
     {% endif %}
@@ -331,41 +700,24 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
 </section>
 {% endfor %}
 
-<!-- CTA OFERTA -->
-<section class="section section--bg">
+<!-- FINAL CTA -->
+<section class="svc-final-cta">
   <div class="container">
-    <div class="offer-banner">
-      <div class="offer-badge">30%<br><span style="font-size:24px;">Descuento</span></div>
-      <div class="offer-text">
-        <h3>Oferta del Mes — Radiofrecuencia Indiba</h3>
-        <p>Si tienes flacidez y celulitis no dudes en disfrutar de nuestra oferta del mes con más del 30% de descuento en Radiofrecuencia Sistema Indiba.</p>
-      </div>
-      <a href="{{ '/contact/' | url }}" class="btn btn-outline-white">Reservar Ahora</a>
+    <span class="eyebrow">¿No sabes por dónde empezar?</span>
+    <h2>Reserva un diagnóstico gratuito y te decimos qué necesitas — y qué no.</h2>
+    <p>Treinta minutos sin compromiso. Si no es para ti, te lo decimos de frente y te orientamos. Honestidad antes que carrito.</p>
+    <div class="svc-final-cta-row">
+      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
+      <a href="https://wa.me/34656306167" class="btn btn-outline" target="_blank" rel="noopener noreferrer">WhatsApp 656 306 167</a>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO RÁPIDO -->
-<section class="section section--dark">
-  <div class="container text-center">
-    <span class="section-label" style="color:var(--accent)">Información</span>
-    <h2 class="section-title" style="color:#fff; margin-bottom:24px;">Visítanos en Benidorm</h2>
-    <div style="display:flex; justify-content:center; gap:48px; flex-wrap:wrap; color:rgba(255,255,255,0.85); font-size:15px; margin-bottom:32px;">
-      <div>📍 Calle Marqués de Comillas 4, Local 6, C.P. 03501</div>
-      <div>📞 656 306 167 / 865 710 769</div>
-      <div>✉️ info@anylopez.com</div>
-      <div>🕐 Lun–Vie 10:00–14:00 / 16:00–20:00</div>
-    </div>
-    <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reserva tu Cita</a>
-  </div>
-</section>
-
-<!-- TREATMENT MODAL (single instance, hydrated from JSON inline below) -->
+<!-- TREATMENT MODAL (preserved from legacy) -->
 <dialog id="trat-modal" class="trat-modal" aria-labelledby="trat-modal-title">
   <form method="dialog" class="trat-modal-close-form">
     <button type="submit" class="trat-modal-close" aria-label="Cerrar ficha">&times;</button>
   </form>
-
   <article class="trat-modal-body">
     <header class="trat-modal-hero">
       <picture class="trat-modal-img">
@@ -378,17 +730,14 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
         <p class="trat-modal-paraquien" data-field="paraQuien"></p>
       </div>
     </header>
-
     <section class="trat-modal-section">
       <h3>Beneficios</h3>
       <ul class="trat-modal-beneficios" data-field="beneficios"></ul>
     </section>
-
     <section class="trat-modal-section">
       <h3>¿Cómo funciona?</h3>
       <div class="trat-modal-comofunciona" data-field="comoFunciona"></div>
     </section>
-
     <section class="trat-modal-section trat-modal-precios-section">
       <h3>Precios</h3>
       <div class="trat-modal-pack-hero" data-field="packDestacado"></div>
@@ -400,7 +749,6 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
         <span data-field="duracion"></span>
       </p>
     </section>
-
     <section class="trat-modal-section trat-modal-extras" data-field="extras">
       <div class="trat-modal-idealpara" data-field="idealPara-wrap" hidden>
         <h3>Ideal para</h3>
@@ -411,11 +759,9 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
         <p data-field="recomendaciones"></p>
       </div>
     </section>
-
     <aside class="trat-modal-garantia">
       <strong>Sin compromiso —</strong> <span data-field="garantia"></span>
     </aside>
-
     <footer class="trat-modal-ctas">
       <a class="btn btn-accent trat-modal-cta-wa" href="https://wa.me/34656306167" data-field="cta-wa" target="_blank" rel="noopener noreferrer">
         Reservar por WhatsApp →
@@ -499,10 +845,8 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
       },
       { rootMargin: '-30% 0px -60% 0px' }
     );
-
     sections.forEach((s) => observer.observe(s));
 
-    /* Scroll horizontal con rueda del ratón sobre el nav de pills */
     if (navInner) {
       navInner.addEventListener('wheel', (e) => {
         if (e.deltaY !== 0) {
@@ -512,7 +856,6 @@ description: "Catálogo completo de tratamientos de AnyLopez Clínica Estética 
       }, { passive: false });
     }
 
-    /* Smooth scroll for pill clicks */
     pills.forEach((pill) => {
       pill.addEventListener('click', (e) => {
         e.preventDefault();
