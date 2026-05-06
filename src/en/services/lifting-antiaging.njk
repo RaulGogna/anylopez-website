@@ -1,0 +1,849 @@
+---
+layout: base.njk
+title: "Non-surgical Lifting & Anti-Ageing in Benidorm — Ultherapy + INDIBA · AnyLopez"
+description: "Facial and body firming without surgery: Ultherapy HIFU and INDIBA Activ at AnyLopez Aesthetic Clinic Benidorm. Free initial consultation."
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalSpecialty",
+  "name": "AnyLopez Lifting & Anti-Ageing",
+  "alternateName": "Non-surgical Firming",
+  "description": "Catalogue of non-surgical lifting and anti-ageing treatments at AnyLopez Aesthetic Clinic Benidorm: Ultherapy HIFU and INDIBA Activ radiofrequency. Deep collagen and elastin stimulation, no surgery, no downtime.",
+  "url": "https://raulgogna.github.io/anylopez-website/en/services/lifting-antiaging/",
+  "relevantSpecialty": [
+    "Ultherapy HIFU",
+    "INDIBA Radiofrequency"
+  ],
+  "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "HIFU or INDIBA — which one to choose?", "acceptedAnswer": { "@type": "Answer", "text": "It depends. HIFU is a shock treatment (1-2 sessions, results at 3-6 months). INDIBA is progressive (10-session package, results from the 1st session). HIFU suits moderate-to-significant laxity. INDIBA suits maintenance and gradual firming. We confirm the right choice during your consultation." } },
+    { "@type": "Question", "name": "How many HIFU sessions do I need?", "acceptedAnswer": { "@type": "Answer", "text": "1-2 sessions depending on the area and degree of laxity. Sessions are spaced 6-12 months apart for maintenance. INDIBA is a 10-session package run on a weekly cadence." } },
+    { "@type": "Question", "name": "How long do the results last?", "acceptedAnswer": { "@type": "Answer", "text": "Ultherapy: 12-18 months once the full effect develops at 3-6 months. INDIBA: long-lasting effect with monthly maintenance after the package." } },
+    { "@type": "Question", "name": "At what age should I start?", "acceptedAnswer": { "@type": "Answer", "text": "When you notice loss of firmness in the jawline, typically from 35-45 years onward. Better sooner than later: stimulating collagen works best while you still have reserves." } },
+    { "@type": "Question", "name": "What is the post-session care?", "acceptedAnswer": { "@type": "Answer", "text": "Minimal: topical hydration, strict sun protection over the following days, avoid saunas/extreme heat for 48h. We hand you written guidance after every session." } }
+  ]
+}
+</script>
+
+<style>
+  /* ─── HERO CINEMATIC ──────────────────────────────── */
+  .cat-page-hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .cat-page-hero-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .cat-page-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+  .cat-page-hero-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(26,18,8,0.78) 0%, rgba(26,18,8,0.55) 50%, rgba(26,18,8,0.25) 100%);
+  }
+  .cat-page-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 120px 0;
+  }
+  .cat-page-hero-content { max-width: 720px; }
+  .cat-page-hero h1 {
+    color: #fff;
+    font-size: clamp(40px, 6.5vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 16px 0 20px;
+  }
+  .cat-page-hero h1 em { font-style: italic; color: var(--gold); }
+  .cat-page-hero .lead {
+    color: rgba(255,255,255,0.88);
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.65;
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+  .cat-page-hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .cat-page-hero-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgba(255,255,255,0.78);
+    font-size: 13px;
+  }
+  .cat-page-hero-meta strong { color: #fff; }
+  .cat-page-hero-meta .stars { color: var(--gold); letter-spacing: 1px; font-size: 14px; }
+  .cat-page-hero-meta .dot { color: rgba(255,255,255,0.35); }
+
+  /* ─── PAIN POINTS ─────────────────────────────────── */
+  .cat-page-pain {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-pain-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .cat-page-pain-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-pain-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .cat-page-pain-item {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 36px 32px;
+    transition: border-color 0.3s var(--ease);
+  }
+  .cat-page-pain-item:hover { border-color: var(--terra); }
+  .cat-page-pain-item h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: var(--dark);
+  }
+  .cat-page-pain-item p { color: var(--text-mid); font-size: 14px; line-height: 1.6; }
+
+  /* ─── WHY IT WORKS — 6 reasons numbered ───────────── */
+  .cat-page-why {
+    background: var(--sand);
+    padding: 96px 0;
+  }
+  .cat-page-why-head { max-width: 680px; margin: 0 auto 64px; text-align: center; }
+  .cat-page-why-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-why-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .cat-page-reason { display: flex; gap: 20px; }
+  .cat-page-reason-num {
+    flex-shrink: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--terra);
+    font-weight: 500;
+    margin-top: -4px;
+  }
+  .cat-page-reason-body h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    color: var(--dark);
+  }
+  .cat-page-reason-body p { color: var(--text-mid); font-size: 14.5px; line-height: 1.65; }
+
+  /* ─── TREATMENTS GRID ─────────────────────────────── */
+  .cat-page-section {
+    padding: 96px 0;
+    background: var(--ivory);
+  }
+  .cat-page-section-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+  .cat-page-section-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-section-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .trat-card {
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    scroll-margin-top: 160px;
+  }
+  .trat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .trat-card-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+  .trat-card-img { width: 100%; height: 220px; object-fit: cover; display: block; background: var(--bg-light); }
+  .trat-card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .trat-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--dark);
+    margin: 0;
+  }
+  .trat-card-desc { font-size: 14px; line-height: 1.65; color: var(--text-mid); margin: 0; }
+  .trat-card-incluye { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; }
+  .trat-card-incluye li {
+    font-size: 13px;
+    color: var(--text-mid);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .trat-card-incluye li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--terra);
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .trat-card-meta {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .trat-duracion {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+  .trat-duracion svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--terra); }
+  .trat-cta {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--terra-dk);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+    text-align: left;
+  }
+  .trat-cta:hover { color: var(--terra); }
+
+  /* ─── CROSS-SELL BAND (toward INDIBA flagship) ────── */
+  .cat-page-xsell {
+    background: var(--dark);
+    color: #fff;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-page-xsell-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cat-page-xsell .eyebrow { color: var(--gold); }
+  .cat-page-xsell h2 {
+    color: #fff;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.05;
+    margin: 12px 0 20px;
+  }
+  .cat-page-xsell h2 em { font-style: italic; color: var(--gold); }
+  .cat-page-xsell p {
+    color: rgba(255,255,255,0.82);
+    font-size: 17px;
+    line-height: 1.65;
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+
+  /* ─── TESTIMONIOS ────────────────────────────────── */
+  .cat-page-tests {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-tests-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+  .cat-page-tests-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-tests-head p { color: var(--text-mid); font-size: 15px; }
+  .cat-page-tests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .cat-page-test {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cat-page-test-stars { color: var(--gold); font-size: 16px; letter-spacing: 1px; margin-bottom: 16px; }
+  .cat-page-test-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--dark);
+    font-style: italic;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .cat-page-test-author {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .cat-page-test-meta { font-size: 12px; color: var(--text-mid); letter-spacing: 0.04em; }
+
+  /* ─── PROCESS ─────────────────────────────────────── */
+  .cat-page-process {
+    background: var(--sand);
+    padding: 96px 0;
+  }
+  .cat-page-process-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .cat-page-process-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-process-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-steps { max-width: 800px; margin: 0 auto; }
+  .cat-page-step {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-page-step:last-child { border-bottom: none; }
+  .cat-page-step-num {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--terra);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .cat-page-step-body h3 { font-size: 22px; margin-bottom: 8px; color: var(--dark); }
+  .cat-page-step-body p { color: var(--text-mid); font-size: 15px; line-height: 1.6; }
+
+  /* ─── FAQ ─────────────────────────────────────────── */
+  .cat-page-faq {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-faq-head { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+  .cat-page-faq-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0;
+  }
+  .cat-page-faq-list { max-width: 800px; margin: 0 auto; }
+  .cat-page-faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-page-faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--dark);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    line-height: 1.3;
+  }
+  .cat-page-faq-q .icon {
+    flex-shrink: 0;
+    font-size: 22px;
+    color: var(--terra);
+    transition: transform 0.3s var(--ease);
+  }
+  .cat-page-faq-item.open .cat-page-faq-q .icon { transform: rotate(45deg); }
+  .cat-page-faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease), padding 0.4s var(--ease);
+    color: var(--text-mid);
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+  .cat-page-faq-item.open .cat-page-faq-a {
+    max-height: 600px;
+    padding: 0 0 28px;
+  }
+
+  /* ─── FINAL CTA ───────────────────────────────────── */
+  .cat-page-final {
+    padding: 120px 0;
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+  }
+  .cat-page-final h2 {
+    color: #fff;
+    font-size: clamp(34px, 4.5vw, 56px);
+    line-height: 1.05;
+    max-width: 760px;
+    margin: 0 auto 20px;
+  }
+  .cat-page-final h2 em { font-style: italic; color: var(--gold); }
+  .cat-page-final p {
+    color: rgba(255,255,255,0.78);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .cat-page-final-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 900px) {
+    .cat-page-pain-grid { grid-template-columns: 1fr; gap: 20px; }
+    .cat-page-why-grid { grid-template-columns: 1fr; gap: 32px; }
+    .cat-page-grid { grid-template-columns: 1fr; }
+    .cat-page-tests-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .cat-page-hero-inner { padding: 80px 0; }
+    .cat-page-pain, .cat-page-why, .cat-page-section, .cat-page-xsell, .cat-page-tests, .cat-page-process, .cat-page-faq, .cat-page-final { padding: 64px 0; }
+  }
+</style>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="{{ '/en/' | url }}">Home</a>
+    <span>›</span>
+    <a href="{{ '/en/services/' | url }}">Services</a>
+    <span>›</span>
+    <span>Lifting & Anti-Ageing</span>
+  </div>
+</div>
+
+<!-- HERO CINEMATIC -->
+<section class="cat-page-hero">
+  <div class="cat-page-hero-img">
+    <picture>
+      <source srcset="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.webp' | url }}" type="image/webp">
+      <img
+        src="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.png' | url }}"
+        alt="Non-surgical lifting and anti-ageing at AnyLopez Aesthetic Clinic Benidorm"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+      />
+    </picture>
+  </div>
+  <div class="cat-page-hero-inner">
+    <div class="container">
+      <div class="cat-page-hero-content">
+        <span class="eyebrow" style="color: var(--gold);">Lifting & Anti-Ageing · 2 complementary technologies</span>
+        <h1>Firm with technology, <em>not with a scalpel.</em></h1>
+        <p class="lead">If you have ruled out surgery — out of fear, risk or weeks of downtime — and firming creams still aren't restoring tone, the answer lies in deep aesthetic technology. Ultherapy HIFU and INDIBA reach where a surgeon would cut. Without cutting.</p>
+        <div class="cat-page-hero-ctas">
+          <a href="{{ '/en/contact/' | url }}" class="btn btn-accent">Book your free consultation →</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">Call 656 306 167</a>
+        </div>
+        <div class="cat-page-hero-meta">
+          <span class="stars">★★★★★</span>
+          <strong>5.0 · 216 Google reviews</strong>
+          <span class="dot">·</span>
+          <span>Free initial consultation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="cat-page-pain">
+  <div class="container">
+    <div class="cat-page-pain-head">
+      <span class="eyebrow">Does any of this sound familiar?</span>
+      <h2>Most patients who come here have been through the same thing.</h2>
+      <p>You're not arriving from nowhere. You're arriving after trying other things that didn't quite work.</p>
+    </div>
+    <div class="cat-page-pain-grid">
+      <div class="cat-page-pain-item">
+        <h3>The mirror keeps showing more laxity in your jawline, décolletage and arms.</h3>
+        <p>Firming creams promised and held the line — but didn't bring back what was lost. The skin needs deep stimulation, not serums.</p>
+      </div>
+      <div class="cat-page-pain-item">
+        <h3>You've ruled out surgery for the risk and the recovery time.</h3>
+        <p>You don't want anaesthesia, weeks off work, or a result that looks artificial. But you won't settle for cosmetics either.</p>
+      </div>
+      <div class="cat-page-pain-item">
+        <h3>You've tried "cosmetic liftings" elsewhere that promised and didn't deliver.</h3>
+        <p>Devices used without judgement, sessions without diagnosis, cheap equipment. Technology without craft doesn't work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="cat-page-why">
+  <div class="container">
+    <div class="cat-page-why-head">
+      <span class="eyebrow">Why non-surgical lifting at AnyLopez works</span>
+      <h2>Six reasons it works here where it doesn't elsewhere.</h2>
+      <p>Not marketing. Deep technology, clinical judgement and decades of craft.</p>
+    </div>
+    <div class="cat-page-why-grid">
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-body">
+          <h3>Two deep, complementary technologies</h3>
+          <p>Ultherapy HIFU works at the SMAS layer (the same layer a surgeon cuts to perform a lifting). INDIBA Activ at 448 kHz penetrates down to the hypodermis. Each targets different layers.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">02</div>
+        <div class="cat-page-reason-body">
+          <h3>Combinable with genuine synergy</h3>
+          <p>If your case calls for it, we combine HIFU + INDIBA in a sequenced plan. Not a sales pitch — a clinical protocol.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">03</div>
+        <div class="cat-page-reason-body">
+          <h3>No surgery, no anaesthesia, no downtime</h3>
+          <p>You walk out and carry on with your life. No marks, no medication, no month indoors.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">04</div>
+        <div class="cat-page-reason-body">
+          <h3>Gradual, lasting results</h3>
+          <p>Not instant magic. We stimulate your own collagen and elastin, which take 3-6 months to reach full effect and last 12-18 months.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">05</div>
+        <div class="cat-page-reason-body">
+          <h3>Honest clinical diagnosis</h3>
+          <p>We tell you which one (or both) is right for you. If your case truly needs injectables or surgery instead, we tell you that too.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">06</div>
+        <div class="cat-page-reason-body">
+          <h3>Performed by the person signing off the result</h3>
+          <p>Decades with this technology. Knows where to insist and where to ease off in each case.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS GRID -->
+<section class="cat-page-section">
+  <div class="container">
+    <div class="cat-page-section-head">
+      <span class="eyebrow">Two technologies · one philosophy</span>
+      <h2>The lifting and anti-ageing treatments in our catalogue.</h2>
+      <p>Tap any card to see full benefits, prices and packages.</p>
+    </div>
+
+    {% set catTrats = en.tratamientos.tratamientos | byCategory("lifting-antiaging") %}
+    <div class="cat-page-grid">
+      {% for trat in catTrats %}
+        {% if trat.slug == "radiofrecuencia-indiba" %}
+        <a href="{{ '/en/radiofrecuencia/' | url }}" class="trat-card trat-card-link" id="{{ trat.slug }}">
+          <picture>
+            <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
+            <img
+              src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
+              alt="{{ trat.nombre }} at AnyLopez Benidorm"
+              class="trat-card-img"
+              loading="lazy"
+              decoding="async"
+              width="540"
+              height="220"
+            />
+          </picture>
+          <div class="trat-card-body">
+            <h3 class="trat-card-name">{{ trat.nombre }}</h3>
+            <p class="trat-card-desc">{{ trat.descripcion }}</p>
+
+            {% if trat.incluye %}
+            <ul class="trat-card-incluye">
+              {% for item in trat.incluye %}
+                {% if loop.index <= 3 %}
+                <li>{{ item }}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+            {% endif %}
+
+            <div class="trat-card-meta">
+              <span class="trat-duracion">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                {{ trat.duracion }}
+              </span>
+              <span class="trat-cta">View full page →</span>
+            </div>
+          </div>
+        </a>
+        {% else %}
+        <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
+          <picture>
+            <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
+            <img
+              src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
+              alt="{{ trat.nombre }} at AnyLopez Benidorm"
+              class="trat-card-img"
+              loading="lazy"
+              decoding="async"
+              width="540"
+              height="220"
+            />
+          </picture>
+          <div class="trat-card-body">
+            <h3 class="trat-card-name">{{ trat.nombre }}</h3>
+            <p class="trat-card-desc">{{ trat.descripcion }}</p>
+
+            {% if trat.incluye %}
+            <ul class="trat-card-incluye">
+              {% for item in trat.incluye %}
+                {% if loop.index <= 3 %}
+                <li>{{ item }}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+            {% endif %}
+
+            <div class="trat-card-meta">
+              <span class="trat-duracion">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                {{ trat.duracion }}
+              </span>
+              <button
+                type="button"
+                class="trat-cta trat-card-trigger"
+                data-slug="{{ trat.slug }}"
+                aria-label="View details for {{ trat.nombre }}"
+              >View details →</button>
+            </div>
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CROSS-SELL BAND (to INDIBA flagship) -->
+<section class="cat-page-xsell">
+  <div class="container">
+    <div class="cat-page-xsell-inner">
+      <span class="eyebrow">INDIBA is our flagship</span>
+      <h2>If your case calls for INDIBA, <em>we have a dedicated page.</em></h2>
+      <p>INDIBA Activ is our flagship treatment. Dedicated page with the 10-session package, facial and body modalities, and the full clinical detail.</p>
+      <a href="{{ '/en/radiofrecuencia/' | url }}" class="btn btn-accent">View the full INDIBA page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="cat-page-tests">
+  <div class="container">
+    <div class="cat-page-tests-head">
+      <span class="eyebrow">Real patients</span>
+      <h2>Results you can see — and that people talk about.</h2>
+      <p>Verified Google reviews. No actors, no pills, no photoshopped before-and-afters.</p>
+    </div>
+    <div class="cat-page-tests-grid">
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"One Ultherapy session and three months later my jawline has the contour it had ten years ago. No surgery, no downtime. I'm amazed."</p>
+        <div class="cat-page-test-author">Cristina M.</div>
+        <div class="cat-page-test-meta">Patient · Ultherapy HIFU</div>
+      </div>
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"We combined Ultherapy with the INDIBA package and the results reinforce each other. Honest diagnosis from the first day."</p>
+        <div class="cat-page-test-author">Pilar R.</div>
+        <div class="cat-page-test-meta">Patient · HIFU + INDIBA</div>
+      </div>
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"I came in thinking I needed thread lifts and they made me see my case was actually HIFU + Botox. The difference between selling a treatment and solving a problem."</p>
+        <div class="cat-page-test-author">Verified patient</div>
+        <div class="cat-page-test-meta">Google review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="cat-page-process">
+  <div class="container">
+    <div class="cat-page-process-head">
+      <span class="eyebrow">How do we start?</span>
+      <h2>Four steps. No surprises, no small print.</h2>
+      <p>From your first message to seeing the first improvement is less than two weeks.</p>
+    </div>
+    <div class="cat-page-steps">
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-body">
+          <h3>You book your free consultation</h3>
+          <p>Call/WhatsApp to find a slot. 30 minutes at the clinic, no cost, no commitment.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">2</div>
+        <div class="cat-page-step-body">
+          <h3>Clinical assessment of the case</h3>
+          <p>We assess area, degree of laxity, skin quality and goal. We decide whether your case is HIFU, INDIBA, both combined, or whether — given its features — another solution would suit you better.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">3</div>
+        <div class="cat-page-step-body">
+          <h3>Personalised HIFU / INDIBA / combined plan</h3>
+          <p>You don't just "come in for a session". We design the protocol: number of sessions, cadence, what to combine and why. And if your case can be resolved with less than expected, we say so.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">4</div>
+        <div class="cat-page-step-body">
+          <h3>Follow-up over the months after the session</h3>
+          <p>HIFU's result is progressive: not visible today, visible at 3-6 months. Direct WhatsApp for questions, adjustments and guidance until you see the final effect.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="cat-page-faq">
+  <div class="container">
+    <div class="cat-page-faq-head">
+      <span class="eyebrow">Frequently asked questions</span>
+      <h2>What patients ask us most about lifting and anti-ageing.</h2>
+    </div>
+    <div class="cat-page-faq-list">
+      <div class="cat-page-faq-item open">
+        <button class="cat-page-faq-q" type="button">HIFU or INDIBA — which one to choose? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>It depends. HIFU is a shock treatment (1-2 sessions, results at 3-6 months). INDIBA is progressive (10-session package, results from the 1st session). HIFU suits moderate-to-significant laxity. INDIBA suits maintenance and gradual firming. We confirm the right choice during your consultation.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">How many HIFU sessions do I need? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>1-2 sessions depending on the area and degree of laxity. Sessions are spaced 6-12 months apart for maintenance. INDIBA is a 10-session package run on a weekly cadence.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">How long do the results last? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Ultherapy: 12-18 months once the full effect develops at 3-6 months. INDIBA: long-lasting effect with monthly maintenance after the package.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">At what age should I start? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>When you notice loss of firmness in the jawline, typically from 35-45 years onward. Better sooner than later: stimulating collagen works best while you still have reserves.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">What is the post-session care? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Minimal: topical hydration, strict sun protection over the following days, avoid saunas/extreme heat for 48h. We hand you written guidance after every session.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cat-page-final">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--gold);">No commitment</span>
+    <h2>Book a free consultation. <em>We'll tell you which technology is right for you</em>.</h2>
+    <p>Thirty minutes at the clinic with someone who has spent decades with HIFU and INDIBA. If your case calls for something else (injectables, threads, surgery), we'll say so honestly.</p>
+    <div class="cat-page-final-row">
+      <a href="{{ '/en/contact/' | url }}" class="btn btn-accent">Book your assessment →</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">Call 656 306 167</a>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{% set tratamientos = en.tratamientos %}
+{% include "treatment-modal.njk" %}
+
+<script>
+  document.querySelectorAll('.cat-page-faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.cat-page-faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.cat-page-faq-item').forEach((i) => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+</content>
+</invoke>
