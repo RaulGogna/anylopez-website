@@ -138,7 +138,7 @@
   }
 
   function selectDay(iso) {
-    state.selectedDay = iso;
+    state.selectedDay = state.selectedDay === iso ? null : iso;
     renderMonth();
     renderSlots();
   }
