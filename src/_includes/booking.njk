@@ -1,0 +1,118 @@
+{# anylopez-website/src/_includes/booking.njk #}
+{% set lang = lang or "es" %}
+{% set L = {
+  es: {
+    title: "Reserva tu consulta gratuita",
+    subtitle: "30 minutos · diagnóstico personalizado · sin compromiso",
+    prevMonth: "Mes anterior",
+    nextMonth: "Mes siguiente",
+    weekdays: ["L", "M", "X", "J", "V", "S", "D"],
+    pickDay: "Selecciona un día",
+    noSlots: "No hay huecos este día",
+    formName: "Nombre",
+    formPhone: "Teléfono",
+    formTreatment: "¿Qué tratamiento te interesa?",
+    formNotes: "Notas (opcional)",
+    submit: "Confirmar y abrir WhatsApp",
+    success: "Te hemos abierto WhatsApp para confirmar tu cita.",
+    error: "No hemos podido cargar la disponibilidad. Llámanos al +34 656 306 167 o usa WhatsApp.",
+    fallbackHref: "https://wa.me/34656306167",
+    fallbackText: "Escríbenos por WhatsApp",
+    treatments: ["Consulta general", "INDIBA", "Diagnóstico facial", "Limpieza facial", "Depilación", "Otro"]
+  },
+  en: {
+    title: "Book your free consultation",
+    subtitle: "30 minutes · personalised diagnosis · no commitment",
+    prevMonth: "Previous month",
+    nextMonth: "Next month",
+    weekdays: ["M", "T", "W", "T", "F", "S", "S"],
+    pickDay: "Pick a day",
+    noSlots: "No slots available this day",
+    formName: "Name",
+    formPhone: "Phone",
+    formTreatment: "Which treatment interests you?",
+    formNotes: "Notes (optional)",
+    submit: "Confirm and open WhatsApp",
+    success: "We've opened WhatsApp for you to confirm your booking.",
+    error: "We couldn't load availability. Call us at +34 656 306 167 or use WhatsApp.",
+    fallbackHref: "https://wa.me/34656306167",
+    fallbackText: "Message us on WhatsApp",
+    treatments: ["General consultation", "INDIBA", "Facial diagnosis", "Facial cleansing", "Hair removal", "Other"]
+  }
+}[lang] %}
+
+<section class="booking-section" id="booking" data-api="https://api.anylopez.com/booking/availability">
+  <div class="booking-container">
+    <header class="booking-header">
+      <h2>{{ L.title }}</h2>
+      <p class="booking-subtitle">{{ L.subtitle }}</p>
+    </header>
+
+    <div class="booking-body" hidden>
+      <div class="booking-calendar">
+        <div class="booking-month-nav">
+          <button class="booking-nav-btn" data-action="prev" aria-label="{{ L.prevMonth }}">◀</button>
+          <h3 class="booking-month-label" data-bind="month-label"></h3>
+          <button class="booking-nav-btn" data-action="next" aria-label="{{ L.nextMonth }}">▶</button>
+        </div>
+        <div class="booking-weekdays">
+          {% for d in L.weekdays %}<span>{{ d }}</span>{% endfor %}
+        </div>
+        <div class="booking-days" data-bind="days"></div>
+      </div>
+
+      <aside class="booking-slots">
+        <h4 data-bind="day-label">{{ L.pickDay }}</h4>
+        <ul class="booking-slot-list" data-bind="slots"></ul>
+        <p class="booking-no-slots" data-bind="no-slots" hidden>{{ L.noSlots }}</p>
+      </aside>
+    </div>
+
+    <div class="booking-loading" data-bind="loading">
+      <span class="booking-spinner"></span>
+    </div>
+
+    <div class="booking-error" data-bind="error" hidden>
+      <p>{{ L.error }}</p>
+      <a href="{{ L.fallbackHref }}" class="booking-fallback-cta">{{ L.fallbackText }}</a>
+    </div>
+  </div>
+
+  <dialog class="booking-modal" data-bind="modal">
+    <form class="booking-form" data-bind="form">
+      <h3 data-bind="modal-title"></h3>
+      <input type="hidden" name="slot" data-bind="form-slot">
+      <label>
+        <span>{{ L.formName }}</span>
+        <input type="text" name="name" required minlength="2">
+      </label>
+      <label>
+        <span>{{ L.formPhone }}</span>
+        <input type="tel" name="phone" required pattern="[0-9 +\-]{6,}">
+      </label>
+      <label>
+        <span>{{ L.formTreatment }}</span>
+        <select name="treatment" required>
+          <option value="" disabled selected></option>
+          {% for t in L.treatments %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>
+        <span>{{ L.formNotes }}</span>
+        <textarea name="notes" maxlength="300" rows="2"></textarea>
+      </label>
+      <div class="booking-form-actions">
+        <button type="button" class="booking-btn-cancel" data-action="cancel">✕</button>
+        <button type="submit" class="booking-btn-submit">{{ L.submit }}</button>
+      </div>
+    </form>
+    <p class="booking-success" data-bind="success" hidden>{{ L.success }}</p>
+  </dialog>
+</section>
+
+<script>
+  window.__BOOKING_LANG__ = "{{ lang }}";
+  window.__BOOKING_TXT__ = {{ L | dump | safe }};
+</script>
+<link rel="stylesheet" href="/css/booking.css">
+<script src="/js/booking.js" defer></script>
