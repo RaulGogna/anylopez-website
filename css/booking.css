@@ -1,4 +1,6 @@
 /* booking.css — calendar UX similar a cal.com / crislorente */
+.booking-section [hidden] { display: none !important; }
+
 .booking-section {
   padding: 64px 16px;
   background: #FAF7F0;
@@ -60,6 +62,13 @@
 .booking-day.has-slots { background: #f6efde; color: #1a1a1a; font-weight: 600; }
 .booking-day.has-slots:hover { background: #ecdcb5; }
 .booking-day.selected { background: #b88a3a; color: #fff; }
+.booking-day.today { position: relative; }
+.booking-day.today::after {
+  content: "";
+  position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
+  width: 4px; height: 4px; border-radius: 50%; background: #b88a3a;
+}
+.booking-day.today.selected::after { background: #fff; }
 
 .booking-slots h4 { margin: 0 0 12px; font-size: 1rem; color: #444; }
 .booking-slot-list {
