@@ -36,6 +36,24 @@
     "crumb_en": "INDIBA"
   },
   {
+    "es": "/services/tratamientos-faciales/",
+    "en": null,
+    "priority_es": "0.85",
+    "priority_en": null,
+    "changefreq": "monthly",
+    "crumb_es": "Tratamientos Faciales Avanzados",
+    "crumb_en": null
+  },
+  {
+    "es": "/services/corporal/",
+    "en": null,
+    "priority_es": "0.85",
+    "priority_en": null,
+    "changefreq": "monthly",
+    "crumb_es": "Tratamientos Corporales",
+    "crumb_en": null
+  },
+  {
     "es": "/contact/",
     "en": "/en/contact/",
     "priority_es": "0.6",

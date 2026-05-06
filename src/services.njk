@@ -508,6 +508,11 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
         "depilacion":           { "img": "tratamientos/depilacion-ipl",                  "label": "IPL · Pieles cómodas" }
       } -%}
 
+      {%- set catSubpages = {
+        "tratamientos-faciales": "/services/tratamientos-faciales/",
+        "corporal": "/services/corporal/"
+      } -%}
+
       {% for cat in tratamientos.categorias %}
         {%- set catTrats = tratamientos.tratamientos | byCategory(cat.id) -%}
         {%- set imgInfo = catImages[cat.id] -%}
@@ -515,8 +520,10 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
         {%- set isFlag = cat.id == "lifting-antiaging" -%}
         {%- set padded = "0" + (loop.index | string) if loop.index < 10 else (loop.index | string) -%}
         {%- set total = "0" + (tratamientos.categorias | length | string) if (tratamientos.categorias | length) < 10 else (tratamientos.categorias | length | string) -%}
+        {%- set subUrl = catSubpages[cat.id] -%}
+        {%- set catHref = (subUrl | url) if subUrl else ("#" + cat.id) -%}
 
-        <a href="#{{ cat.id }}" class="svc-cat" data-cat="{{ cat.id }}">
+        <a href="{{ catHref }}" class="svc-cat" data-cat="{{ cat.id }}">
           <div class="svc-cat-img">
             <span class="svc-cat-num">{{ padded }} / {{ total }}</span>
             {% if isFlag %}<span class="svc-cat-flag">Especialidad estrella</span>{% endif %}
