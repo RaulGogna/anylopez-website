@@ -40,8 +40,9 @@ description: "Clínica estética en Benidorm especializada en radiofrecuencia IN
   </div>
 </section>
 
-<!-- CAL.COM EMBED — booking primario -->
-{% include "calcom-embed.njk" %}
+<!-- BOOKING CUSTOM — primario (sustituye Cal.com) -->
+{% set lang = "es" %}
+{% include "booking.njk" %}
 
 <!-- LEAD STRIP — fallback fuera de horario -->
 {% include "lead-strip.njk" %}
