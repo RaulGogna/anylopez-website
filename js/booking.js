@@ -199,6 +199,7 @@
         phone: fd.get("phone"),
         treatment: fd.get("treatment"),
         notes: fd.get("notes") || "",
+        source: "booking-custom",
       };
       const t = new Date(payload.slot);
       const fechaTxt = t.toLocaleDateString(LANG === "en" ? "en-GB" : "es-ES", {
