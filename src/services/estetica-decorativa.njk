@@ -1,0 +1,801 @@
+---
+layout: base.njk
+title: "Pestañas pelo a pelo y micropigmentación en Benidorm — AnyLopez"
+description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyeliner en clínica estética AnyLopez Benidorm. Diseño previo y técnica conservadora que envejece bien."
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalSpecialty",
+  "name": "Estética decorativa AnyLopez",
+  "alternateName": "Pestañas y micropigmentación",
+  "description": "Catálogo de estética decorativa en AnyLopez Clínica Estética Benidorm: pestañas pelo a pelo y micropigmentación de cejas, labios y eyeliner. Diseño previo, pigmentos hipoalergénicos durables y técnica conservadora que envejece bien.",
+  "url": "https://raulgogna.github.io/anylopez-website/services/estetica-decorativa/",
+  "relevantSpecialty": [
+    "Pestañas Pelo a Pelo",
+    "Micropigmentación de Cejas",
+    "Micropigmentación de Labios",
+    "Eyeliner Micropigmentado"
+  ],
+  "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cuánto duran las pestañas pelo a pelo?", "acceptedAnswer": { "@type": "Answer", "text": "Entre 3 y 4 semanas según tu ciclo natural de pestaña. Te agendamos retoque cada 3-4 semanas para mantener volumen constante. Sin agresión a tu pestaña natural." } },
+    { "@type": "Question", "name": "¿La micropigmentación duele?", "acceptedAnswer": { "@type": "Answer", "text": "Sensación de molestia ligera, no dolor. Aplicamos crema anestésica antes y durante. La mayoría de pacientes describe la sensación como cosquilleo o pellizco breve." } },
+    { "@type": "Question", "name": "¿Cuándo retocar la micropigmentación?", "acceptedAnswer": { "@type": "Answer", "text": "Retoque inicial a las 4-6 semanas (después del proceso de cicatrización) para perfeccionar. Después, retoques anuales para mantener color e intensidad." } },
+    { "@type": "Question", "name": "¿Alergias?", "acceptedAnswer": { "@type": "Answer", "text": "Pigmentos hipoalergénicos pero hacemos prueba de alergia antes en zona pequeña. Si reaccionas, no aplicamos." } },
+    { "@type": "Question", "name": "¿Hago deporte / tomo el sol?", "acceptedAnswer": { "@type": "Answer", "text": "Después de la sesión: 7 días sin sol directo, sin saunas, sin agua de mar/piscina, sin maquillaje sobre la zona. Después puedes hacer vida normal — protector solar diario es clave para que el pigmento dure." } }
+  ]
+}
+</script>
+
+<style>
+  /* ─── HERO CINEMATIC ──────────────────────────────── */
+  .cat-page-hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .cat-page-hero-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .cat-page-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+  .cat-page-hero-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(26,18,8,0.78) 0%, rgba(26,18,8,0.55) 50%, rgba(26,18,8,0.25) 100%);
+  }
+  .cat-page-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 120px 0;
+  }
+  .cat-page-hero-content { max-width: 720px; }
+  .cat-page-hero h1 {
+    color: #fff;
+    font-size: clamp(40px, 6.5vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 16px 0 20px;
+  }
+  .cat-page-hero h1 em { font-style: italic; color: var(--gold); }
+  .cat-page-hero .lead {
+    color: rgba(255,255,255,0.88);
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.65;
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+  .cat-page-hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .cat-page-hero-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgba(255,255,255,0.78);
+    font-size: 13px;
+  }
+  .cat-page-hero-meta strong { color: #fff; }
+  .cat-page-hero-meta .stars { color: var(--gold); letter-spacing: 1px; font-size: 14px; }
+  .cat-page-hero-meta .dot { color: rgba(255,255,255,0.35); }
+
+  /* ─── PAIN POINTS ─────────────────────────────────── */
+  .cat-page-pain {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-pain-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .cat-page-pain-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-pain-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .cat-page-pain-item {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 36px 32px;
+    transition: border-color 0.3s var(--ease);
+  }
+  .cat-page-pain-item:hover { border-color: var(--terra); }
+  .cat-page-pain-item h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: var(--dark);
+  }
+  .cat-page-pain-item p { color: var(--text-mid); font-size: 14px; line-height: 1.6; }
+
+  /* ─── WHY IT WORKS — 6 reasons numbered ───────────── */
+  .cat-page-why {
+    background: var(--sand);
+    padding: 96px 0;
+  }
+  .cat-page-why-head { max-width: 680px; margin: 0 auto 64px; text-align: center; }
+  .cat-page-why-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-why-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .cat-page-reason { display: flex; gap: 20px; }
+  .cat-page-reason-num {
+    flex-shrink: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--terra);
+    font-weight: 500;
+    margin-top: -4px;
+  }
+  .cat-page-reason-body h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    color: var(--dark);
+  }
+  .cat-page-reason-body p { color: var(--text-mid); font-size: 14.5px; line-height: 1.65; }
+
+  /* ─── TREATMENTS GRID ─────────────────────────────── */
+  .cat-page-section {
+    padding: 96px 0;
+    background: var(--ivory);
+  }
+  .cat-page-section-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+  .cat-page-section-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-section-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .trat-card {
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    scroll-margin-top: 160px;
+  }
+  .trat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .trat-card-img { width: 100%; height: 220px; object-fit: cover; display: block; background: var(--bg-light); }
+  .trat-card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .trat-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--dark);
+    margin: 0;
+  }
+  .trat-card-desc { font-size: 14px; line-height: 1.65; color: var(--text-mid); margin: 0; }
+  .trat-card-incluye { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; }
+  .trat-card-incluye li {
+    font-size: 13px;
+    color: var(--text-mid);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .trat-card-incluye li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--terra);
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .trat-card-meta {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .trat-duracion {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+  .trat-duracion svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--terra); }
+  .trat-cta {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--terra-dk);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+    text-align: left;
+  }
+  .trat-cta:hover { color: var(--terra); }
+
+  /* ─── CROSS-SELL BAND ─────────────────────────────── */
+  .cat-page-xsell {
+    background: var(--dark);
+    color: #fff;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-page-xsell-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cat-page-xsell .eyebrow { color: var(--gold); }
+  .cat-page-xsell h2 {
+    color: #fff;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.05;
+    margin: 12px 0 20px;
+  }
+  .cat-page-xsell h2 em { font-style: italic; color: var(--gold); }
+  .cat-page-xsell p {
+    color: rgba(255,255,255,0.82);
+    font-size: 17px;
+    line-height: 1.65;
+    max-width: 640px;
+    margin: 0 auto 32px;
+  }
+
+  /* ─── TESTIMONIOS ────────────────────────────────── */
+  .cat-page-tests {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-tests-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+  .cat-page-tests-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-tests-head p { color: var(--text-mid); font-size: 15px; }
+  .cat-page-tests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .cat-page-test {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cat-page-test-stars { color: var(--gold); font-size: 16px; letter-spacing: 1px; margin-bottom: 16px; }
+  .cat-page-test-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--dark);
+    font-style: italic;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .cat-page-test-author {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .cat-page-test-meta { font-size: 12px; color: var(--text-mid); letter-spacing: 0.04em; }
+
+  /* ─── PROCESS ─────────────────────────────────────── */
+  .cat-page-process {
+    background: var(--sand);
+    padding: 96px 0;
+  }
+  .cat-page-process-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .cat-page-process-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+  }
+  .cat-page-process-head p { color: var(--text-mid); font-size: 16px; }
+  .cat-page-steps { max-width: 800px; margin: 0 auto; }
+  .cat-page-step {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-page-step:last-child { border-bottom: none; }
+  .cat-page-step-num {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--terra);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .cat-page-step-body h3 { font-size: 22px; margin-bottom: 8px; color: var(--dark); }
+  .cat-page-step-body p { color: var(--text-mid); font-size: 15px; line-height: 1.6; }
+
+  /* ─── FAQ ─────────────────────────────────────────── */
+  .cat-page-faq {
+    background: var(--ivory);
+    padding: 96px 0;
+  }
+  .cat-page-faq-head { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+  .cat-page-faq-head h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0;
+  }
+  .cat-page-faq-list { max-width: 800px; margin: 0 auto; }
+  .cat-page-faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-page-faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--dark);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    line-height: 1.3;
+  }
+  .cat-page-faq-q .icon {
+    flex-shrink: 0;
+    font-size: 22px;
+    color: var(--terra);
+    transition: transform 0.3s var(--ease);
+  }
+  .cat-page-faq-item.open .cat-page-faq-q .icon { transform: rotate(45deg); }
+  .cat-page-faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease), padding 0.4s var(--ease);
+    color: var(--text-mid);
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+  .cat-page-faq-item.open .cat-page-faq-a {
+    max-height: 600px;
+    padding: 0 0 28px;
+  }
+
+  /* ─── FINAL CTA ───────────────────────────────────── */
+  .cat-page-final {
+    padding: 120px 0;
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+  }
+  .cat-page-final h2 {
+    color: #fff;
+    font-size: clamp(34px, 4.5vw, 56px);
+    line-height: 1.05;
+    max-width: 760px;
+    margin: 0 auto 20px;
+  }
+  .cat-page-final h2 em { font-style: italic; color: var(--gold); }
+  .cat-page-final p {
+    color: rgba(255,255,255,0.78);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .cat-page-final-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 900px) {
+    .cat-page-pain-grid { grid-template-columns: 1fr; gap: 20px; }
+    .cat-page-why-grid { grid-template-columns: 1fr; gap: 32px; }
+    .cat-page-grid { grid-template-columns: 1fr; }
+    .cat-page-tests-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .cat-page-hero-inner { padding: 80px 0; }
+    .cat-page-pain, .cat-page-why, .cat-page-section, .cat-page-xsell, .cat-page-tests, .cat-page-process, .cat-page-faq, .cat-page-final { padding: 64px 0; }
+  }
+</style>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="{{ '/' | url }}">Inicio</a>
+    <span>›</span>
+    <a href="{{ '/services/' | url }}">Servicios</a>
+    <span>›</span>
+    <span>Estética Decorativa</span>
+  </div>
+</div>
+
+<!-- HERO CINEMATIC -->
+<section class="cat-page-hero">
+  <div class="cat-page-hero-img">
+    <picture>
+      <source srcset="{{ '/images/tratamientos/micropigmentacion.webp' | url }}" type="image/webp">
+      <img
+        src="{{ '/images/tratamientos/micropigmentacion.png' | url }}"
+        alt="Estética decorativa: pestañas y micropigmentación en AnyLopez Clínica Estética Benidorm"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+      />
+    </picture>
+  </div>
+  <div class="cat-page-hero-inner">
+    <div class="container">
+      <div class="cat-page-hero-content">
+        <span class="eyebrow" style="color: var(--gold);">Estética decorativa · Pestañas + Micropigmentación</span>
+        <h1>Detalles que se notan, <em>no que llaman la atención.</em></h1>
+        <p class="lead">Despertar con la cara hecha. Pestañas pelo a pelo y cejas/labios/eyeliner micropigmentados — pero hechos con criterio: diseño previo, pigmentos durables, técnica conservadora que envejece bien y se retoca, no que se borre con la edad.</p>
+        <div class="cat-page-hero-ctas">
+          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+        </div>
+        <div class="cat-page-hero-meta">
+          <span class="stars">★★★★★</span>
+          <strong>5.0 · 216 reseñas Google</strong>
+          <span class="dot">·</span>
+          <span>Diagnóstico inicial sin coste</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="cat-page-pain">
+  <div class="container">
+    <div class="cat-page-pain-head">
+      <span class="eyebrow">¿Te suena alguna de estas?</span>
+      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
+      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+    </div>
+    <div class="cat-page-pain-grid">
+      <div class="cat-page-pain-item">
+        <h3>Te despiertas y antes de cualquier rutina ya pareces cansada.</h3>
+        <p>Cejas claras, pestañas escasas, labios apagados. Sales sin maquillaje y la cara no te representa.</p>
+      </div>
+      <div class="cat-page-pain-item">
+        <h3>Pintarte cejas y labios cada mañana te roba minutos que no tienes.</h3>
+        <p>Y aun así nunca queda igual que ayer. Buscas algo que dure y se vea natural.</p>
+      </div>
+      <div class="cat-page-pain-item">
+        <h3>Has visto trabajos mal hechos que te asustan.</h3>
+        <p>Cejas postizas tipo Sharpie. Labios sobrepintados. Eyeliner permanente que envejece raro. Por eso no te has lanzado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="cat-page-why">
+  <div class="container">
+    <div class="cat-page-why-head">
+      <span class="eyebrow">Por qué la estética decorativa en AnyLopez funciona</span>
+      <h2>Seis razones por las que aquí funciona donde otros sitios no.</h2>
+      <p>No es marketing. Es diseño previo, técnica conservadora y pigmentos que envejecen bien.</p>
+    </div>
+    <div class="cat-page-why-grid">
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-body">
+          <h3>Diseño previo siempre.</h3>
+          <p>Antes de aplicar nada, dibujamos sobre tu piel y validamos forma. Si no te convence, no empezamos.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">02</div>
+        <div class="cat-page-reason-body">
+          <h3>Pestañas pelo a pelo (no abanicos artificiales).</h3>
+          <p>Una pestaña sintética por cada pestaña natural. Volumen real, mirada natural — no efecto "pestaña de muñeca".</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">03</div>
+        <div class="cat-page-reason-body">
+          <h3>Pigmentos hipoalergénicos durables.</h3>
+          <p>Marcas registradas con trazabilidad, no pigmento de tienda online. Color que evoluciona bien — no vira a rojo o gris con los años.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">04</div>
+        <div class="cat-page-reason-body">
+          <h3>Técnica conservadora.</h3>
+          <p>Mejor poco pigmento ahora y retoque que sobrecargar. Mejor pestañas que respetan tu pestaña natural que extensiones que la dañan.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">05</div>
+        <div class="cat-page-reason-body">
+          <h3>Mantenimiento programado.</h3>
+          <p>Te agendamos retoques con cadencia (pestañas cada 3-4 semanas, micropigmentación retoque anual). No te abandonamos tras la venta.</p>
+        </div>
+      </div>
+      <div class="cat-page-reason">
+        <div class="cat-page-reason-num">06</div>
+        <div class="cat-page-reason-body">
+          <h3>Aplica profesional certificada con experiencia.</h3>
+          <p>Misma exigencia que en toda la clínica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS GRID -->
+<section class="cat-page-section">
+  <div class="container">
+    <div class="cat-page-section-head">
+      <span class="eyebrow">Dos protocolos · una sola filosofía</span>
+      <h2>Los tratamientos de estética decorativa del catálogo.</h2>
+      <p>Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.</p>
+    </div>
+
+    {% set catTrats = tratamientos.tratamientos | byCategory("estetica-decorativa") %}
+    <div class="cat-page-grid">
+      {% for trat in catTrats %}
+      <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
+        <picture>
+          <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
+          <img
+            src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
+            alt="{{ trat.nombre }} en AnyLopez Benidorm"
+            class="trat-card-img"
+            loading="lazy"
+            decoding="async"
+            width="540"
+            height="220"
+          />
+        </picture>
+        <div class="trat-card-body">
+          <h3 class="trat-card-name">{{ trat.nombre }}</h3>
+          <p class="trat-card-desc">{{ trat.descripcion }}</p>
+
+          {% if trat.incluye %}
+          <ul class="trat-card-incluye">
+            {% for item in trat.incluye %}
+              {% if loop.index <= 3 %}
+              <li>{{ item }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          <div class="trat-card-meta">
+            <span class="trat-duracion">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              {{ trat.duracion }}
+            </span>
+            <button
+              type="button"
+              class="trat-cta trat-card-trigger"
+              data-slug="{{ trat.slug }}"
+              aria-label="Ver detalles de {{ trat.nombre }}"
+            >Ver detalles →</button>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CROSS-SELL BAND -->
+<section class="cat-page-xsell">
+  <div class="container">
+    <div class="cat-page-xsell-inner">
+      <span class="eyebrow">Para potenciar la base</span>
+      <h2>La estética decorativa luce mejor <em>sobre piel cuidada.</em></h2>
+      <p>Cejas y labios destacan más sobre piel limpia y luminosa. Si quieres que el conjunto se vea integral, las limpiezas faciales periódicas hacen la diferencia.</p>
+      <a href="{{ '/services/limpiezas-faciales/' | url }}" class="btn btn-accent">Ver limpiezas faciales →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="cat-page-tests">
+  <div class="container">
+    <div class="cat-page-tests-head">
+      <span class="eyebrow">Pacientes reales</span>
+      <h2>Resultados que se notan, y se cuentan.</h2>
+      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+    </div>
+    <div class="cat-page-tests-grid">
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"Llevaba años huyendo de la micropigmentación por trabajos terribles que había visto. Aquí me hicieron diseño antes y técnica de pelo a pelo. Mis cejas parecen mías — solo más definidas."</p>
+        <div class="cat-page-test-author">Inmaculada R.</div>
+        <div class="cat-page-test-meta">Paciente · Micropigmentación cejas</div>
+      </div>
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"Pestañas pelo a pelo cada 4 semanas y mi rutina matinal se ha reducido a la mitad. Sin abanicos artificiales — son mías mejoradas."</p>
+        <div class="cat-page-test-author">Sandra L.</div>
+        <div class="cat-page-test-meta">Paciente · Pestañas</div>
+      </div>
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">"Eyeliner micropigmentado tras estudio de forma y validación. Despierto con la mirada lista. Ningún trabajo de los que había visto en Instagram me convencía hasta este."</p>
+        <div class="cat-page-test-author">Paciente verificada</div>
+        <div class="cat-page-test-meta">Reseña Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="cat-page-process">
+  <div class="container">
+    <div class="cat-page-process-head">
+      <span class="eyebrow">¿Cómo lo empezamos?</span>
+      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
+      <p>Diseñamos antes de aplicar. Si no te convence, no empezamos.</p>
+    </div>
+    <div class="cat-page-steps">
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-body">
+          <h3>Reservas tu valoración</h3>
+          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">2</div>
+        <div class="cat-page-step-body">
+          <h3>Diseño previo sobre tu piel + validación tuya</h3>
+          <p>Dibujamos forma, color y proporción directamente sobre tu rostro. Lo miras al espejo, lo ajustamos contigo. Si no te convence al 100%, no empezamos.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">3</div>
+        <div class="cat-page-step-body">
+          <h3>Aplicación</h3>
+          <p>Pestañas pelo a pelo o micropigmentación con técnica conservadora. Crema anestésica si aplica. Tiempo y mimo.</p>
+        </div>
+      </div>
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">4</div>
+        <div class="cat-page-step-body">
+          <h3>Retoque programado</h3>
+          <p>Pestañas cada 3-4 semanas. Micropigmentación: retoque inicial 4-6 semanas y anual. Mantenimiento real, no abandono postventa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="cat-page-faq">
+  <div class="container">
+    <div class="cat-page-faq-head">
+      <span class="eyebrow">Dudas frecuentes</span>
+      <h2>Lo que más nos preguntan sobre estética decorativa.</h2>
+    </div>
+    <div class="cat-page-faq-list">
+      <div class="cat-page-faq-item open">
+        <button class="cat-page-faq-q" type="button">¿Cuánto duran las pestañas pelo a pelo? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Entre 3 y 4 semanas según tu ciclo natural de pestaña. Te agendamos retoque cada 3-4 semanas para mantener volumen constante. Sin agresión a tu pestaña natural.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿La micropigmentación duele? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Sensación de molestia ligera, no dolor. Aplicamos crema anestésica antes y durante. La mayoría de pacientes describe la sensación como cosquilleo o pellizco breve.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿Cuándo retocar la micropigmentación? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Retoque inicial a las 4-6 semanas (después del proceso de cicatrización) para perfeccionar. Después, retoques anuales para mantener color e intensidad.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿Alergias? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Pigmentos hipoalergénicos pero hacemos prueba de alergia antes en zona pequeña. Si reaccionas, no aplicamos.</p></div>
+      </div>
+      <div class="cat-page-faq-item">
+        <button class="cat-page-faq-q" type="button">¿Hago deporte / tomo el sol? <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>Después de la sesión: 7 días sin sol directo, sin saunas, sin agua de mar/piscina, sin maquillaje sobre la zona. Después puedes hacer vida normal — protector solar diario es clave para que el pigmento dure.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cat-page-final">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
+    <h2>Reserva una valoración. <em>Diseñamos antes de aplicar</em>.</h2>
+    <p>Treinta minutos para ver tu rostro, hablar de qué buscas y dibujar sobre tu piel. Si el diseño no te convence al 100%, no empezamos.</p>
+    <div class="cat-page-final-row">
+      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{% include "treatment-modal.njk" %}
+
+<script>
+  document.querySelectorAll('.cat-page-faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.cat-page-faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.cat-page-faq-item').forEach((i) => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
