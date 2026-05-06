@@ -42,8 +42,9 @@ ogDescription: "Award-winning aesthetic clinic in Benidorm. INDIBA, HIFU, Botox,
   </div>
 </section>
 
-<!-- CAL.COM EMBED — primary booking -->
-{% include "calcom-embed.njk" %}
+<!-- BOOKING CUSTOM — primary booking (replaces Cal.com) -->
+{% set lang = "en" %}
+{% include "booking.njk" %}
 
 <!-- LEAD STRIP — out-of-hours fallback -->
 {% include "lead-strip.njk" %}
