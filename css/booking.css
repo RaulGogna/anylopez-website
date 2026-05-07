@@ -112,12 +112,15 @@
   border: 0; border-radius: 18px; padding: 32px 28px;
   background: #FAF7F0;
   box-shadow: 0 24px 64px rgba(48, 30, 10, 0.22);
+  overflow: auto;
+  overflow-x: hidden;
 }
 .booking-modal::backdrop {
   background: rgba(36, 24, 8, 0.55);
   backdrop-filter: blur(2px);
 }
-.booking-form { display: grid; gap: 14px; }
+.booking-form { display: grid; gap: 14px; min-width: 0; }
+.booking-form label { min-width: 0; }
 .booking-form h3 {
   margin: 0 0 4px;
   font-family: var(--font-display, "Cormorant Garamond", "Playfair Display", serif);
@@ -131,9 +134,15 @@
   color: #6b5a3a; text-transform: uppercase; letter-spacing: 0.06em;
 }
 .booking-form input, .booking-form select, .booking-form textarea {
+  width: 100%; max-width: 100%; box-sizing: border-box;
   border: 1px solid #e2d3a8; border-radius: 10px; padding: 11px 14px;
   font-size: 1rem; font-family: inherit; color: #1a1208;
   background: #fff; transition: border-color .15s, box-shadow .15s;
+}
+.booking-form select {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus {
   outline: none; border-color: #b88a3a;
