@@ -2,16 +2,21 @@
 .booking-section [hidden] { display: none !important; }
 
 .booking-section {
-  padding: 64px 16px;
-  background: #FAF7F0;
+  padding: 72px 16px;
+  background: var(--ivory, #F8F3ED);
 }
 .booking-container {
   max-width: 920px;
   margin: 0 auto;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
-  padding: 32px;
+  background: #FBF7F1;
+  border: 1px solid rgba(221, 208, 194, 0.6);
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow:
+    0 1px 1px rgba(42, 31, 20, 0.03),
+    0 6px 14px rgba(42, 31, 20, 0.05),
+    0 18px 40px rgba(42, 31, 20, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 .booking-header { text-align: center; margin-bottom: 24px; }
 .booking-header h2 {
