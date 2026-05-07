@@ -1265,12 +1265,15 @@ button[type="submit"] {
 
 /* Lead strip form */
 .lead-strip-inner {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 32px; align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
   max-width: 1140px; margin: 0 auto;
   padding: 0 48px;
 }
+.lead-strip-inner .lead-form { flex: 0 1 auto; }
 .lead-form {
   display: flex; gap: 12px; align-items: stretch; flex-wrap: nowrap;
 }
@@ -1302,7 +1305,7 @@ button[type="submit"] {
   .porque-grid { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .services-grid { grid-template-columns: repeat(2,1fr); }
-  .lead-strip-inner { grid-template-columns: 1fr; padding: 0 24px; }
+  .lead-strip-inner { padding: 0 24px; }
   .lead-strip-label { display: none; }
   .grid-4 { grid-template-columns: repeat(2,1fr); }
   .stats-grid { grid-template-columns: repeat(2,1fr); }
