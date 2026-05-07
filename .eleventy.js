@@ -8,6 +8,10 @@ module.exports = function (eleventyConfig) {
     treatments.filter((t) => t.categoria === categoryId)
   );
 
+  eleventyConfig.addFilter("startsWith", (str, prefix) =>
+    typeof str === "string" && str.startsWith(prefix)
+  );
+
   return {
     pathPrefix: "/anylopez-website/",
     dir: {

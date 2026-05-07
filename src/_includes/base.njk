@@ -184,13 +184,13 @@
         {% if lang == 'en' %}
         <a href="{{ '/en/' | url }}"              class="{{ 'active' if page.url == '/en/' }}">Home</a>
         <a href="{{ '/en/about/' | url }}"        class="{{ 'active' if page.url == '/en/about/' }}">About Us</a>
-        <a href="{{ '/en/services/' | url }}"     class="{{ 'active' if page.url == '/en/services/' }}">Treatments</a>
+        <a href="{{ '/en/services/' | url }}"     class="{{ 'active' if (page.url | startsWith('/en/services/')) }}">Treatments</a>
         <a href="{{ '/en/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/en/radiofrecuencia/' }}">INDIBA</a>
         <a href="{{ '/en/contact/' | url }}"      class="{{ 'active' if page.url == '/en/contact/' }}">Contact</a>
         {% else %}
         <a href="{{ '/' | url }}"                 class="{{ 'active' if page.url == '/' }}">Inicio</a>
         <a href="{{ '/about/' | url }}"           class="{{ 'active' if page.url == '/about/' }}">Nosotras</a>
-        <a href="{{ '/services/' | url }}"        class="{{ 'active' if page.url == '/services/' }}">Servicios</a>
+        <a href="{{ '/services/' | url }}"        class="{{ 'active' if (page.url | startsWith('/services/')) }}">Servicios</a>
         <a href="{{ '/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/radiofrecuencia/' }}">INDIBA</a>
         <a href="{{ '/contact/' | url }}"         class="{{ 'active' if page.url == '/contact/' }}">Contacto</a>
         {% endif %}
@@ -256,22 +256,22 @@
           {% if lang == 'en' %}
           <p class="footer-heading">Treatments</p>
           <ul>
-            <li><a href="{{ '/en/services/' | url }}">INDIBA Activ</a></li>
-            <li><a href="{{ '/en/services/' | url }}">HIFU</a></li>
-            <li><a href="{{ '/en/services/' | url }}">Botox &amp; Fillers</a></li>
-            <li><a href="{{ '/en/services/' | url }}">Facials</a></li>
-            <li><a href="{{ '/en/services/' | url }}">Dermapen</a></li>
-            <li><a href="{{ '/en/services/' | url }}">IPL Hair Removal</a></li>
+            <li><a href="{{ '/en/radiofrecuencia/' | url }}">INDIBA Activ</a></li>
+            <li><a href="{{ '/en/services/lifting-antiaging/' | url }}">HIFU</a></li>
+            <li><a href="{{ '/en/services/inyectables/' | url }}">Botox &amp; Fillers</a></li>
+            <li><a href="{{ '/en/services/limpiezas-faciales/' | url }}">Facials</a></li>
+            <li><a href="{{ '/en/services/tratamientos-faciales/' | url }}">Dermapen</a></li>
+            <li><a href="{{ '/en/services/depilacion/' | url }}">IPL Hair Removal</a></li>
           </ul>
           {% else %}
           <p class="footer-heading">Servicios</p>
           <ul>
-            <li><a href="{{ '/services/' | url }}">INDIBA Activ</a></li>
-            <li><a href="{{ '/services/' | url }}">HIFU</a></li>
-            <li><a href="{{ '/services/' | url }}">Botox &amp; Rellenos</a></li>
-            <li><a href="{{ '/services/' | url }}">Limpieza Facial</a></li>
-            <li><a href="{{ '/services/' | url }}">Dermapen</a></li>
-            <li><a href="{{ '/services/' | url }}">Depilación Láser</a></li>
+            <li><a href="{{ '/radiofrecuencia/' | url }}">INDIBA Activ</a></li>
+            <li><a href="{{ '/services/lifting-antiaging/' | url }}">HIFU</a></li>
+            <li><a href="{{ '/services/inyectables/' | url }}">Botox &amp; Rellenos</a></li>
+            <li><a href="{{ '/services/limpiezas-faciales/' | url }}">Limpieza Facial</a></li>
+            <li><a href="{{ '/services/tratamientos-faciales/' | url }}">Dermapen</a></li>
+            <li><a href="{{ '/services/depilacion/' | url }}">Depilación IPL</a></li>
           </ul>
           {% endif %}
         </div>
