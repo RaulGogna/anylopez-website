@@ -95,12 +95,18 @@
   color: #fff; font-weight: 500;
 }
 .booking-day.today { position: relative; }
+.booking-day.today.has-slots {
+  background: #FFFFFF;
+  border-color: var(--terra, #B87254);
+  font-weight: 600;
+}
 .booking-day.today::after {
   content: "";
   position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
   width: 4px; height: 4px; border-radius: 50%;
   background: var(--terra, #B87254);
 }
+.booking-day.today.selected { background: var(--terra, #B87254); border-color: var(--terra, #B87254); }
 .booking-day.today.selected::after { background: #fff; }
 
 .booking-slots h4 {
