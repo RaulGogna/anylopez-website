@@ -87,8 +87,8 @@
   color: var(--text, #2A1F14); font-weight: 500;
 }
 .booking-day.has-slots:hover {
-  background: rgba(184, 114, 84, 0.10);
-  border-color: var(--terra, #B87254);
+  background: var(--sand, #EDE4D8);
+  border-color: var(--sand-mid, #D9CCBE);
 }
 .booking-day.selected {
   background: var(--terra, #B87254);
@@ -124,8 +124,9 @@
   transition: background 0.18s, color 0.18s, border-color 0.18s;
 }
 .booking-slot:hover {
-  background: var(--terra, #B87254); color: #fff;
-  border-color: var(--terra, #B87254);
+  background: var(--sand, #EDE4D8);
+  color: var(--text, #2A1F14);
+  border-color: var(--sand-mid, #D9CCBE);
 }
 .booking-no-slots { color: var(--text-light, #9B8573); font-size: 0.9rem; }
 
