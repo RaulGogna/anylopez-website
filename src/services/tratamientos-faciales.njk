@@ -640,7 +640,7 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
     <div class="cat-page-grid">
       {%- set facialTrats = tratamientos.tratamientos | byCategory("tratamientos-faciales") -%}
       {% for trat in facialTrats %}
-      <article id="{{ trat.slug }}" class="trat-card trat-card-trigger" data-slug="{{ trat.slug }}" role="button" tabindex="0" aria-label="Ver detalles de {{ trat.nombre }}">
+      <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
         <picture>
           <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
           <img
