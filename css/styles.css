@@ -1269,6 +1269,7 @@ button[type="submit"] {
   grid-template-columns: auto 1fr;
   gap: 32px; align-items: center;
   max-width: 1140px; margin: 0 auto;
+  padding: 0 48px;
 }
 .lead-form {
   display: flex; gap: 12px; align-items: stretch; flex-wrap: nowrap;
@@ -1301,7 +1302,7 @@ button[type="submit"] {
   .porque-grid { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .services-grid { grid-template-columns: repeat(2,1fr); }
-  .lead-strip-inner { grid-template-columns: 1fr; }
+  .lead-strip-inner { grid-template-columns: 1fr; padding: 0 24px; }
   .lead-strip-label { display: none; }
   .grid-4 { grid-template-columns: repeat(2,1fr); }
   .stats-grid { grid-template-columns: repeat(2,1fr); }
