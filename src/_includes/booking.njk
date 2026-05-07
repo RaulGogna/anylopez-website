@@ -18,7 +18,12 @@
     error: "No hemos podido cargar la disponibilidad. Llámanos al +34 656 306 167 o usa WhatsApp.",
     fallbackHref: "https://wa.me/34656306167",
     fallbackText: "Escríbenos por WhatsApp",
-    treatments: ["Consulta general", "INDIBA", "Diagnóstico facial", "Limpieza facial", "Depilación", "Otro"]
+    consultation: "Consulta gratuita",
+    starLabel: "Tratamiento estrella",
+    star: "INDIBA Activ — Radiofrecuencia",
+    groupLabel: "Tratamientos",
+    groups: ["Limpiezas faciales", "Tratamientos faciales avanzados", "Lifting y antiaging", "Medicina estética inyectable", "Tratamientos corporales", "Masajes", "Estética decorativa", "Depilación IPL"],
+    other: "Otro"
   },
   en: {
     title: "Book your free consultation",
@@ -37,7 +42,12 @@
     error: "We couldn't load availability. Call us at +34 656 306 167 or use WhatsApp.",
     fallbackHref: "https://wa.me/34656306167",
     fallbackText: "Message us on WhatsApp",
-    treatments: ["General consultation", "INDIBA", "Facial diagnosis", "Facial cleansing", "Hair removal", "Other"]
+    consultation: "Free consultation",
+    starLabel: "Featured treatment",
+    star: "INDIBA Activ — Radiofrequency",
+    groupLabel: "Treatments",
+    groups: ["Facials & deep cleanse", "Advanced facials", "Lifting & anti-ageing", "Botox & fillers", "Body treatments", "Massages", "Lash extensions & semi-permanent make-up", "IPL hair removal"],
+    other: "Other"
   }
 }[lang] %}
 
@@ -97,7 +107,14 @@
         <span>{{ L.formTreatment }}</span>
         <select name="treatment" required>
           <option value="" disabled selected></option>
-          {% for t in L.treatments %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
+          <option value="{{ L.consultation }}">{{ L.consultation }}</option>
+          <optgroup label="{{ L.starLabel }}">
+            <option value="{{ L.star }}">{{ L.star }}</option>
+          </optgroup>
+          <optgroup label="{{ L.groupLabel }}">
+            {% for t in L.groups %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
+          </optgroup>
+          <option value="{{ L.other }}">{{ L.other }}</option>
         </select>
       </label>
       <label>
