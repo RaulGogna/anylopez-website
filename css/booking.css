@@ -3,7 +3,7 @@
 
 .booking-section {
   padding: 80px 16px;
-  background: var(--sand, #EDE4D8);
+  background: #E5D8C2;
   border-top: 1px solid var(--border, #DDD0C2);
   border-bottom: 1px solid var(--border, #DDD0C2);
 }
