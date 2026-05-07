@@ -3,7 +3,9 @@
 
 .booking-section {
   padding: 80px 16px;
-  background: var(--ivory, #F8F3ED);
+  background: var(--sand, #EDE4D8);
+  border-top: 1px solid var(--border, #DDD0C2);
+  border-bottom: 1px solid var(--border, #DDD0C2);
 }
 .booking-container {
   max-width: 920px;
