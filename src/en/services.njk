@@ -453,7 +453,7 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
         "@type": "MedicalSpecialty",
         "name": {{ cat.nombre | dump | safe }},
         "description": {{ cat.descripcion | dump | safe }},
-        "url": "https://raulgogna.github.io/anylopez-website/en/services/{{ cat.id }}/"
+        "url": "{{ site.url }}/en/services/{{ cat.id }}/"
       }
     }{% if not loop.last %},{% endif %}
     {%- endfor %}

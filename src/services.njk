@@ -453,7 +453,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
         "@type": "MedicalSpecialty",
         "name": {{ cat.nombre | dump | safe }},
         "description": {{ cat.descripcion | dump | safe }},
-        "url": "https://raulgogna.github.io/anylopez-website/services/{{ cat.id }}/"
+        "url": "{{ site.url }}/services/{{ cat.id }}/"
       }
     }{% if not loop.last %},{% endif %}
     {%- endfor %}
