@@ -1,7 +1,8 @@
-{# Treatment modal partial — include in any category page that needs the JS-driven detail modal #}
+{# Treatment modal partial — include in any category page that needs the JS-driven detail modal.
+   Uses `lang` from page context (es | en) to localise headings and CTAs. #}
 <dialog id="trat-modal" class="trat-modal" aria-labelledby="trat-modal-title">
   <form method="dialog" class="trat-modal-close-form">
-    <button type="submit" class="trat-modal-close" aria-label="Cerrar ficha">&times;</button>
+    <button type="submit" class="trat-modal-close" aria-label="{{ 'Close' if lang == 'en' else 'Cerrar ficha' }}">&times;</button>
   </form>
   <article class="trat-modal-body">
     <header class="trat-modal-hero">
@@ -16,15 +17,15 @@
       </div>
     </header>
     <section class="trat-modal-section">
-      <h3>Beneficios</h3>
+      <h3>{{ 'Benefits' if lang == 'en' else 'Beneficios' }}</h3>
       <ul class="trat-modal-beneficios" data-field="beneficios"></ul>
     </section>
     <section class="trat-modal-section">
-      <h3>¿Cómo funciona?</h3>
+      <h3>{{ 'How does it work?' if lang == 'en' else '¿Cómo funciona?' }}</h3>
       <div class="trat-modal-comofunciona" data-field="comoFunciona"></div>
     </section>
     <section class="trat-modal-section trat-modal-precios-section">
-      <h3>Precios</h3>
+      <h3>{{ 'Pricing' if lang == 'en' else 'Precios' }}</h3>
       <div class="trat-modal-pack-hero" data-field="packDestacado"></div>
       <ul class="trat-modal-precios-list" data-field="precios"></ul>
       <p class="trat-modal-duracion">
@@ -36,24 +37,33 @@
     </section>
     <section class="trat-modal-section trat-modal-extras" data-field="extras">
       <div class="trat-modal-idealpara" data-field="idealPara-wrap" hidden>
-        <h3>Ideal para</h3>
+        <h3>{{ 'Ideal for' if lang == 'en' else 'Ideal para' }}</h3>
         <p data-field="idealPara"></p>
       </div>
       <div class="trat-modal-recomendaciones" data-field="recomendaciones-wrap" hidden>
-        <h3>Recomendaciones</h3>
+        <h3>{{ 'Recommendations' if lang == 'en' else 'Recomendaciones' }}</h3>
         <p data-field="recomendaciones"></p>
       </div>
     </section>
     <aside class="trat-modal-garantia">
-      <strong>Sin compromiso —</strong> <span data-field="garantia"></span>
+      <strong>{{ 'No commitment —' if lang == 'en' else 'Sin compromiso —' }}</strong> <span data-field="garantia"></span>
     </aside>
     <footer class="trat-modal-ctas">
-      <a class="btn btn-accent trat-modal-cta-wa" href="https://wa.me/34656306167" data-field="cta-wa" target="_blank" rel="noopener noreferrer">
+      {% if lang == 'en' %}
+      <a class="btn btn-accent trat-modal-cta-wa" href="https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20a%20free%20consultation." data-field="cta-wa" target="_blank" rel="noopener noreferrer">
+        Book via WhatsApp →
+      </a>
+      <a class="btn btn-outline trat-modal-cta-tel" href="tel:+34656306167">
+        Call 656 306 167
+      </a>
+      {% else %}
+      <a class="btn btn-accent trat-modal-cta-wa" href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios." data-field="cta-wa" target="_blank" rel="noopener noreferrer">
         Reservar por WhatsApp →
       </a>
       <a class="btn btn-outline trat-modal-cta-tel" href="tel:+34656306167">
         Llamar 656 306 167
       </a>
+      {% endif %}
     </footer>
   </article>
 </dialog>
