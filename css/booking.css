@@ -12,6 +12,7 @@
   border: 1px solid var(--border, #DDD0C2);
   border-radius: 20px;
   padding: 36px 32px;
+  box-sizing: border-box;
   box-shadow:
     0 1px 1px rgba(42, 31, 20, 0.03),
     0 6px 14px rgba(42, 31, 20, 0.05),
