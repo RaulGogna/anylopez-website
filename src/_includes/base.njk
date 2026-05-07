@@ -45,6 +45,7 @@
 
   <link rel="preconnect" href="https://maps.googleapis.com" />
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-latin-300.woff2' | url }}" crossorigin />
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}" />
   {% if page.url == "/" or page.url == "/anylopez-website/" %}
   <link rel="preload" as="image" href="{{ '/images/hero-poster.webp' | url }}" type="image/webp" fetchpriority="high" />
@@ -90,17 +91,17 @@
     "@graph": [
       {
         "@type": "MedicalClinic",
-        "@id": "https://raulgogna.github.io/anylopez-website/#clinic",
+        "@id": "{{ site.url }}/#clinic",
         "name": "AnyLopez Clínica Estética",
         "alternateName": "AnyLopez Benidorm",
         "description": "Clínica estética facial y corporal en Benidorm con 35+ años de experiencia. Especialistas en radiofrecuencia INDIBA, HIFU, dermapen, depilación láser, botox y rellenos.",
-        "url": "https://raulgogna.github.io/anylopez-website/",
-        "logo": "https://raulgogna.github.io/anylopez-website/images/logo-color-sin-fondo.png",
+        "url": "{{ site.url }}/",
+        "logo": "{{ site.url }}/images/logo-color-sin-fondo.png",
         "image": [
-          "https://raulgogna.github.io/anylopez-website/images/hero-poster.webp",
-          "https://raulgogna.github.io/anylopez-website/images/clinica/recepcion.jpeg",
-          "https://raulgogna.github.io/anylopez-website/images/clinica/cabina2.jpeg",
-          "https://raulgogna.github.io/anylopez-website/images/clinica/salaespera.jpeg"
+          "{{ site.url }}/images/hero-poster.webp",
+          "{{ site.url }}/images/clinica/recepcion.jpeg",
+          "{{ site.url }}/images/clinica/cabina2.jpeg",
+          "{{ site.url }}/images/clinica/salaespera.jpeg"
         ],
         "telephone": "+34656306167",
         "email": "info@anylopez.com",
@@ -158,10 +159,10 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://raulgogna.github.io/anylopez-website/#website",
-        "url": "https://raulgogna.github.io/anylopez-website/",
+        "@id": "{{ site.url }}/#website",
+        "url": "{{ site.url }}/",
         "name": "AnyLopez Clínica Estética",
-        "publisher": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" },
+        "publisher": { "@id": "{{ site.url }}/#clinic" },
         "inLanguage": ["es-ES", "en-GB"]
       }
     ]
