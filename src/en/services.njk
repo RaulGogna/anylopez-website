@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: "Treatments at AnyLopez Aesthetic Clinic — Benidorm"
-description: "Eight specialities, one craft. Editorial catalogue of facial, body, injectable and technology-based treatments at AnyLopez Aesthetic Clinic, Benidorm."
+title: "Aesthetic Treatments at AnyLopez Clinic — Benidorm"
+description: "Eight specialities, one craft. Editorial catalogue of facial, body, injectable and apparatology treatments at AnyLopez Aesthetic Clinic, Benidorm."
 ---
 
 <style>
@@ -268,186 +268,7 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
     flex-wrap: wrap;
   }
 
-  /* ─── LEGACY SEPARATOR ────────────────────────────── */
-  .svc-legacy-divider {
-    background: var(--ivory);
-    padding: 64px 0 0;
-    text-align: center;
-  }
-  .svc-legacy-divider .eyebrow { margin-bottom: 16px; }
-  .svc-legacy-divider h2 {
-    font-size: clamp(28px, 4vw, 44px);
-    line-height: 1.1;
-    margin-bottom: 12px;
-  }
-  .svc-legacy-divider p {
-    color: var(--text-mid);
-    max-width: 540px;
-    margin: 0 auto;
-    font-size: 15px;
-  }
-
-  /* ─── LEGACY CATALOG (preserved for anchors + detail) ─── */
-  .cat-nav {
-    position: sticky;
-    top: 88px;
-    z-index: 100;
-    background: var(--ivory);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 0;
-    margin-top: 56px;
-  }
-  .cat-nav::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 48px;
-    background: linear-gradient(to right, transparent, var(--ivory));
-    pointer-events: none;
-    z-index: 1;
-  }
-  .cat-nav-inner {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 12px 48px 12px 24px;
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-  .cat-nav-inner::-webkit-scrollbar { display: none; }
-  .cat-nav-pills { display: flex; gap: 8px; white-space: nowrap; }
-  .cat-nav-pill {
-    display: inline-block;
-    padding: 6px 16px;
-    border: 1.5px solid var(--border);
-    border-radius: 40px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: var(--text-mid);
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s, border-color 0.2s;
-    flex-shrink: 0;
-  }
-  .cat-nav-pill:hover, .cat-nav-pill.active {
-    background: var(--terra);
-    color: #fff;
-    border-color: var(--terra);
-  }
-
-  .cat-section {
-    padding: 64px 0 80px;
-    scroll-margin-top: 150px;
-  }
-  .cat-section:nth-child(even) { background: var(--sand); }
-  .cat-header { margin-bottom: 48px; }
-  .cat-header .eyebrow { margin-bottom: 8px; }
-  .cat-header h2 { font-size: clamp(24px, 4vw, 36px); margin-bottom: 10px; }
-  .cat-header p { color: var(--text-mid); font-size: 15px; max-width: 560px; }
-
-  .cat-visual {
-    width: 100%;
-    height: 260px;
-    overflow: hidden;
-    border-radius: 2px;
-    margin-bottom: 32px;
-    position: relative;
-  }
-  .cat-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .cat-visual::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(26,18,8,0.35) 0%, transparent 60%);
-    border-radius: 2px;
-  }
-
-  .trat-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
-  .trat-card {
-    background: #fff;
-    border-radius: 2px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    scroll-margin-top: 160px;
-  }
-  .trat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-  .trat-card-img { width: 100%; height: 200px; object-fit: cover; display: block; background: var(--bg-light); }
-  .trat-card--bare { border-top: 3px solid var(--terra); }
-  .trat-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
-  .trat-card-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    line-height: 1.3;
-    color: var(--dark);
-    margin: 0;
-  }
-  .trat-card-desc { font-size: 13px; line-height: 1.65; color: var(--text-mid); margin: 0; }
-  .trat-card-incluye { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
-  .trat-card-incluye li {
-    font-size: 12px;
-    color: var(--text-mid);
-    padding-left: 14px;
-    position: relative;
-    line-height: 1.5;
-  }
-  .trat-card-incluye li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--terra);
-    font-weight: 700;
-    font-size: 11px;
-  }
-  .trat-card-meta {
-    margin-top: auto;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .trat-duracion {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: var(--text-mid);
-    text-transform: uppercase;
-  }
-  .trat-duracion svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--terra); }
-  .trat-cta {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--terra-dk);
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.2s;
-  }
-  .trat-cta:hover { color: var(--terra); }
-
   /* ─── RESPONSIVE ──────────────────────────────────── */
-  @media (max-width: 1024px) { .trat-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 900px) {
     .svc-index-grid { grid-template-columns: 1fr; gap: 24px; }
     .svc-flagship-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -459,10 +280,6 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
     .svc-hero { padding: 64px 0 48px; }
     .svc-flagship { padding: 64px 0; }
     .svc-final-cta { padding: 80px 0; }
-    .trat-grid { grid-template-columns: 1fr; }
-    .cat-section { padding: 48px 0 64px; }
-    .cat-header { margin-bottom: 32px; }
-    .cat-visual { height: 180px; }
   }
 </style>
 
@@ -508,17 +325,6 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
         "depilacion":           { "img": "tratamientos/depilacion-ipl",                  "label": "IPL · Comfortable for sensitive skin" }
       } -%}
 
-      {%- set catSubpages = {
-        "limpiezas-faciales":    "/en/services/limpiezas-faciales/",
-        "tratamientos-faciales": "/en/services/tratamientos-faciales/",
-        "lifting-antiaging":     "/en/services/lifting-antiaging/",
-        "inyectables":           "/en/services/inyectables/",
-        "corporal":              "/en/services/corporal/",
-        "masajes":               "/en/services/masajes/",
-        "estetica-decorativa":   "/en/services/estetica-decorativa/",
-        "depilacion":            "/en/services/depilacion/"
-      } -%}
-
       {% for cat in en.tratamientos.categorias %}
         {%- set catTrats = en.tratamientos.tratamientos | byCategory(cat.id) -%}
         {%- set imgInfo = catImages[cat.id] -%}
@@ -526,10 +332,8 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
         {%- set isFlag = cat.id == "lifting-antiaging" -%}
         {%- set padded = "0" + (loop.index | string) if loop.index < 10 else (loop.index | string) -%}
         {%- set total = "0" + (en.tratamientos.categorias | length | string) if (en.tratamientos.categorias | length) < 10 else (en.tratamientos.categorias | length | string) -%}
-        {%- set subUrl = catSubpages[cat.id] -%}
-        {%- set catHref = (subUrl | url) if subUrl else ("#" + cat.id) -%}
 
-        <a href="{{ catHref }}" class="svc-cat" data-cat="{{ cat.id }}">
+        <a href="{{ ('/en/services/' + cat.id + '/') | url }}" class="svc-cat" data-cat="{{ cat.id }}">
           <div class="svc-cat-img">
             <span class="svc-cat-num">{{ padded }} / {{ total }}</span>
             {% if isFlag %}<span class="svc-cat-flag">Flagship speciality</span>{% endif %}
@@ -620,99 +424,6 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
   </div>
 </section>
 
-<!-- LEGACY DIVIDER -->
-<section class="svc-legacy-divider">
-  <div class="container">
-    <span class="eyebrow">Full catalogue</span>
-    <h2>By speciality</h2>
-    <p>While we roll out the dedicated pages for each speciality, here's the full catalogue with the detail of every treatment.</p>
-  </div>
-</section>
-
-<!-- LEGACY CATEGORY NAV -->
-<nav class="cat-nav" aria-label="Treatment categories">
-  <div class="cat-nav-inner">
-    <div class="cat-nav-pills">
-      {% for cat in en.tratamientos.categorias %}
-      <a href="#{{ cat.id }}" class="cat-nav-pill">{{ cat.nombre }}</a>
-      {% endfor %}
-    </div>
-  </div>
-</nav>
-
-<!-- LEGACY TREATMENT CATEGORIES (preserved for anchor links and full detail) -->
-{% for cat in en.tratamientos.categorias %}
-{% set catTrats = en.tratamientos.tratamientos | byCategory(cat.id) %}
-<section class="cat-section" id="{{ cat.id }}">
-  <div class="container">
-    <div class="cat-header">
-      <span class="eyebrow">{{ loop.index }} / {{ en.tratamientos.categorias | length }}</span>
-      <h2>{{ cat.nombre }}</h2>
-      <p>{{ cat.descripcion }}</p>
-    </div>
-
-    {% set catSharedImage = catTrats | length > 1 and catTrats[0].imagen == catTrats[1].imagen %}
-    {% if catSharedImage %}
-    {% set catImg0 = catTrats[0].imagen %}
-    <div class="cat-visual">
-      <picture>
-        <source srcset="{{ ('/images/tratamientos/' + catImg0.replace('.png', '.webp')) | url }}" type="image/webp">
-        <img src="{{ ('/images/tratamientos/' + catImg0) | url }}" alt="{{ cat.nombre }}" loading="lazy" decoding="async" />
-      </picture>
-    </div>
-    {% endif %}
-
-    <div class="trat-grid">
-      {% for trat in catTrats %}
-      <article id="{{ trat.slug }}" class="trat-card{% if catSharedImage %} trat-card--bare{% endif %}" data-slug="{{ trat.slug }}">
-        {% if not catSharedImage %}
-        <picture>
-          <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
-          <img
-            src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-            alt="{{ trat.nombre }}"
-            class="trat-card-img"
-            loading="lazy"
-            decoding="async"
-            width="400"
-            height="200"
-          />
-        </picture>
-        {% endif %}
-        <div class="trat-card-body">
-          <h3 class="trat-card-name">{{ trat.nombre }}</h3>
-          <p class="trat-card-desc">{{ trat.descripcion }}</p>
-
-          {% if trat.incluye %}
-          <ul class="trat-card-incluye">
-            {% for item in trat.incluye %}
-            <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-
-          <div class="trat-card-meta">
-            <span class="trat-duracion">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-              </svg>
-              {{ trat.duracion }}
-            </span>
-            <button
-              type="button"
-              class="trat-cta trat-card-trigger"
-              data-slug="{{ trat.slug }}"
-              aria-label="View details of {{ trat.nombre }}"
-            >View details →</button>
-          </div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endfor %}
-
 <!-- FINAL CTA -->
 <section class="svc-final-cta">
   <div class="container">
@@ -726,98 +437,26 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
   </div>
 </section>
 
-{% set tratamientos = en.tratamientos %}
-{% include "treatment-modal.njk" %}
-
-<script id="trat-data" type="application/json">
-{{ en.tratamientos | dump | safe }}
-</script>
-
-<script>
-  window.__TRAT_IMG_BASE = "{{ '/images/tratamientos/' | url }}";
-</script>
-<script src="{{ '/js/treatment-modal.js' | url }}" defer></script>
-
-<!-- JSON-LD: ItemList of treatments linked to the MedicalClinic schema -->
+<!-- JSON-LD: ItemList of categories -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "AnyLopez treatments catalogue",
-  "numberOfItems": {{ en.tratamientos.tratamientos | length }},
+  "name": "AnyLopez Aesthetic Clinic specialities",
+  "numberOfItems": {{ en.tratamientos.categorias | length }},
   "itemListElement": [
-    {%- for trat in en.tratamientos.tratamientos -%}
-    {%- set idx = trat.packDestacado or 0 -%}
-    {%- set priceClean = trat.precios[idx].precio | replace(' €','') | replace('€','') | replace('From ','') | replace('Desde ','') | replace('.','') | trim -%}
+    {%- for cat in en.tratamientos.categorias -%}
     {
       "@type": "ListItem",
       "position": {{ loop.index }},
       "item": {
-        "@type": ["MedicalProcedure", "Service"],
-        "name": {{ trat.nombre | dump | safe }},
-        "description": {{ trat.descripcion | dump | safe }},
-        "url": "https://raulgogna.github.io/anylopez-website/en/services/#{{ trat.slug }}",
-        "procedureType": "https://schema.org/NoninvasiveProcedure",
-        "serviceType": {{ trat.nombre | dump | safe }},
-        "provider": { "@id": "https://raulgogna.github.io/anylopez-website/#clinic" },
-        "offers": {
-          "@type": "Offer",
-          "price": "{{ priceClean }}",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "url": "https://raulgogna.github.io/anylopez-website/en/services/#{{ trat.slug }}"
-        }
+        "@type": "MedicalSpecialty",
+        "name": {{ cat.nombre | dump | safe }},
+        "description": {{ cat.descripcion | dump | safe }},
+        "url": "https://raulgogna.github.io/anylopez-website/en/services/{{ cat.id }}/"
       }
     }{% if not loop.last %},{% endif %}
     {%- endfor %}
   ]
 }
-</script>
-
-<script>
-  /* Active pill highlight on scroll */
-  (function () {
-    const pills = document.querySelectorAll('.cat-nav-pill');
-    const sections = Array.from(document.querySelectorAll('.cat-section'));
-    if (!pills.length || !sections.length) return;
-
-    const navInner = document.querySelector('.cat-nav-inner');
-
-    function setActivePill(id) {
-      pills.forEach((p) => {
-        const isActive = p.getAttribute('href') === '#' + id;
-        p.classList.toggle('active', isActive);
-        if (isActive && navInner) {
-          p.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
-      });
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActivePill(entry.target.id);
-        });
-      },
-      { rootMargin: '-30% 0px -60% 0px' }
-    );
-    sections.forEach((s) => observer.observe(s));
-
-    if (navInner) {
-      navInner.addEventListener('wheel', (e) => {
-        if (e.deltaY !== 0) {
-          e.preventDefault();
-          navInner.scrollLeft += e.deltaY;
-        }
-      }, { passive: false });
-    }
-
-    pills.forEach((pill) => {
-      pill.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(pill.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-  })();
 </script>
