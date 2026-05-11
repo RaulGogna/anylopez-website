@@ -45,8 +45,8 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
             <div class="contact-icon">📞</div>
             <div>
               <h4>Teléfonos</h4>
-              <a href="tel:656306167" style="display:block; color:var(--secondary);">656 306 167</a>
-              <a href="tel:865710769" style="display:block; color:var(--secondary);">865 710 769</a>
+              <a href="tel:656306167" style="display:block; color:var(--secondary);" data-ga-event="phone_clicked" data-ga-props='{"location":"contact-page","number":"656306167"}'>656 306 167</a>
+              <a href="tel:865710769" style="display:block; color:var(--secondary);" data-ga-event="phone_clicked" data-ga-props='{"location":"contact-page","number":"865710769"}'>865 710 769</a>
             </div>
           </div>
 
@@ -89,7 +89,7 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
             <h2 class="section-title" style="font-size:28px;">Reserva Tu Cita</h2>
             <p style="color:var(--text-mid); margin-bottom:32px; font-size:15px;">Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
 
-            <form id="contactForm" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate>
+            <form id="contactForm" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate data-form-name="contact">
               <div class="form-row">
                 <div class="form-group">
                   <label for="nombre">Nombre *</label>
@@ -170,7 +170,7 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
       <span class="section-label" style="color:var(--accent)">Llamada directa</span>
       <h2 class="section-title" style="color:#fff; margin-bottom:16px;">Llámanos al 656 306 167</h2>
       <p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">Si prefieres hablar directamente con nosotros, llámanos en nuestro horario de atención.</p>
-      <a href="tel:656306167" class="btn btn-accent">Llamar Ahora</a>
+      <a href="tel:656306167" class="btn btn-accent" data-ga-event="phone_clicked" data-ga-props='{"location":"contact-page-bottom","number":"656306167"}'>Llamar Ahora</a>
     </div>
   </section>
 

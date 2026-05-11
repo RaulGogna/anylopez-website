@@ -45,8 +45,8 @@ description: "Contact AnyLopez Aesthetic Clinic in Benidorm. C/ Marqués de Comi
             <div class="contact-icon">📞</div>
             <div>
               <h4>Phone</h4>
-              <a href="tel:656306167" style="display:block; color:var(--secondary);">656 306 167</a>
-              <a href="tel:865710769" style="display:block; color:var(--secondary);">865 710 769</a>
+              <a href="tel:656306167" style="display:block; color:var(--secondary);" data-ga-event="phone_clicked" data-ga-props='{"location":"contact-page","number":"656306167"}'>656 306 167</a>
+              <a href="tel:865710769" style="display:block; color:var(--secondary);" data-ga-event="phone_clicked" data-ga-props='{"location":"contact-page","number":"865710769"}'>865 710 769</a>
             </div>
           </div>
 
@@ -89,7 +89,7 @@ description: "Contact AnyLopez Aesthetic Clinic in Benidorm. C/ Marqués de Comi
             <h2 class="section-title" style="font-size:28px;">Book Your Appointment</h2>
             <p style="color:var(--text-mid); margin-bottom:32px; font-size:15px;">Fill in the form and we'll get back to you as soon as possible.</p>
 
-            <form id="contactForm" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate>
+            <form id="contactForm" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate data-form-name="contact">
               <div class="form-row">
                 <div class="form-group">
                   <label for="nombre">First name *</label>
@@ -170,7 +170,7 @@ description: "Contact AnyLopez Aesthetic Clinic in Benidorm. C/ Marqués de Comi
       <span class="section-label" style="color:var(--accent)">Book on WhatsApp</span>
       <h2 class="section-title" style="color:#fff; margin-bottom:16px;">Or book directly on WhatsApp</h2>
       <p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">Prefer to speak with us directly? Send us a message on WhatsApp during our opening hours.</p>
-      <a href="https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment." class="btn btn-accent" target="_blank" rel="noopener noreferrer" aria-label="Book an appointment on WhatsApp (opens in new tab)">Book on WhatsApp</a>
+      <a href="https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment." class="btn btn-accent" target="_blank" rel="noopener noreferrer" aria-label="Book an appointment on WhatsApp (opens in new tab)" data-ga-event="whatsapp_clicked" data-ga-props='{"location":"contact-page-bottom"}'>Book on WhatsApp</a>
     </div>
   </section>
 
