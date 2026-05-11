@@ -123,6 +123,9 @@
       history.replaceState(null, '', '#' + slug);
     }
     dialog.scrollTop = 0;
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'treatment_modal_opened', { treatment_slug: slug });
+    }
   }
 
   function close() {
