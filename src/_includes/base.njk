@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://anylopez-chat.anylopez.workers.dev; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://anylopez-chat.anylopez.workers.dev https://formspree.io; frame-src https://www.google.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;" />
   <meta name="google-site-verification" content="0dnEAfvtuu2DYhE3smoUjH2t21n3CexTdg11IIdslxM" />
   <meta name="description" content="{{ description }}" />
   <title>{{ title }}</title>
@@ -336,127 +337,19 @@
     </a>
   </div>
 
-  <script>
-    /* ── Header scroll ── */
-    const header = document.getElementById('siteHeader');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-    /* ── Mobile hamburger ── */
-    const toggle = document.getElementById('menuToggle');
-    const menu   = document.getElementById('navMenu');
-    const setMenu = (open) => {
-      menu.classList.toggle('open', open);
-      toggle.classList.toggle('open', open);
-      document.body.classList.toggle('menu-open', open);
-    };
-    toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-
-    /* ── Lang switcher dropdown ── */
-    (function() {
-      var btn = document.getElementById('langBtn');
-      var dropdown = document.getElementById('langDropdown');
-      if (!btn || !dropdown) return;
-
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var isOpen = dropdown.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-
-      document.addEventListener('click', function() {
-        dropdown.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-
-      dropdown.querySelectorAll('a').forEach(function(a) {
-        a.addEventListener('click', function() {
-          var chosenLang = a.getAttribute('data-lang');
-          localStorage.setItem('anylopez-lang', chosenLang);
-        });
-      });
-    })();
-
-    /* ── Scroll reveal ── */
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.rv').forEach(el => observer.observe(el));
-
-    /* ── Testimonios carousel (compat) ── */
-    (function() {
-      const carousel = document.getElementById('reviewsCarousel');
-      if (!carousel) return;
-      const prev = document.querySelector('.carousel-prev');
-      const next = document.querySelector('.carousel-next');
-      const dotsContainer = document.getElementById('carouselDots');
-      if (!prev || !next || !dotsContainer) return;
-      const cards = carousel.querySelectorAll('.testimonial');
-      const AUTOPLAY_DELAY = 5000;
-      let autoplayTimer = null;
-      let currentIndex = 0;
-      const total = cards.length;
-
-      const goTo = (index) => {
-        currentIndex = (index + total) % total;
-        cards.forEach((c, i) => c.classList.toggle('is-active', i === currentIndex));
-        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) =>
-          d.classList.toggle('active', i === currentIndex)
-        );
-      };
-
-      cards.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', 'Reseña ' + (i + 1));
-        dotsContainer.appendChild(dot);
-        dot.addEventListener('click', () => { goTo(i); resetAutoplay(); });
-      });
-
-      prev.addEventListener('click', () => { goTo(currentIndex - 1); resetAutoplay(); });
-      next.addEventListener('click', () => { goTo(currentIndex + 1); resetAutoplay(); });
-
-      const startAutoplay = () => { autoplayTimer = setInterval(() => goTo(currentIndex + 1), AUTOPLAY_DELAY); };
-      const resetAutoplay = () => { clearInterval(autoplayTimer); startAutoplay(); };
-
-      carousel.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
-      carousel.addEventListener('mouseleave', startAutoplay);
-      carousel.addEventListener('touchstart', () => clearInterval(autoplayTimer), { passive: true });
-      carousel.addEventListener('touchend', resetAutoplay, { passive: true });
-
-      startAutoplay();
-    })();
-  </script>
+  <script id="pages-i18n-map" type="application/json">{
+    {%- set _first = true -%}
+    {%- for p in pages -%}
+      {%- if p.en -%}
+        {%- if not _first %},{% endif -%}
+        "{{ p.es | url }}": "{{ p.en | url }}"
+        {%- set _first = false -%}
+      {%- endif -%}
+    {%- endfor %}
+  }</script>
 
   <anylopez-chat data-endpoint="https://anylopez-chat.anylopez.workers.dev"></anylopez-chat>
   <script src="{{ '/assets/chat/widget.min.js' | url }}" defer></script>
-
-  <script src="{{ '/assets/js/vitals-beacon.js' | url }}" defer></script>
-
-  <script>
-    /* ── Language auto-detect ── */
-    (function() {
-      var stored = localStorage.getItem('anylopez-lang');
-      if (stored) return;
-      var lang = (navigator.language || (navigator.languages && navigator.languages[0]) || '').toLowerCase();
-      if (!lang.startsWith('en')) return;
-      var isEnPage = location.pathname.indexOf('/en/') !== -1;
-      if (isEnPage) { localStorage.setItem('anylopez-lang', 'en'); return; }
-      var map = {
-        {%- for p in pages -%}
-          {%- if p.en %}
-        '{{ p.es | url }}': '{{ p.en | url }}'{% if not loop.last %},{% endif %}
-          {%- endif -%}
-        {%- endfor %}
-      };
-      var target = map[location.pathname];
-      if (target) {
-        localStorage.setItem('anylopez-lang', 'en');
-        location.replace(target);
-      }
-    })();
-  </script>
+  <script src="{{ '/assets/js/base.js' | url }}" defer></script>
 </body>
 </html>
