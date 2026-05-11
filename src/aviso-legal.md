@@ -49,7 +49,7 @@ Los enlaces externos incluidos en el Sitio se ofrecen únicamente a título info
 
 ## 6. Protección de datos
 
-El tratamiento de datos personales derivado del uso del Sitio se rige por la [Política de Privacidad](/privacidad/).
+El tratamiento de datos personales derivado del uso del Sitio se rige por la [Política de Privacidad]({{ '/privacidad/' | url }}).
 
 ## 7. Legislación aplicable y jurisdicción
 
