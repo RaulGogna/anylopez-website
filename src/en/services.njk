@@ -349,6 +349,7 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
                 src="{{ ('/images/' + imgPath + '.png') | url }}"
                 alt="{{ cat.nombre }} at AnyLopez Benidorm"
                 loading="{{ 'eager' if loop.index <= 2 else 'lazy' }}"
+                {% if loop.index == 1 %}fetchpriority="high"{% endif %}
                 decoding="async"
                 width="640"
                 height="360"
