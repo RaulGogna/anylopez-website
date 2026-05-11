@@ -1929,3 +1929,42 @@ button[type="submit"] {
   transition: background 0.15s;
 }
 .lang-dropdown li a:hover { background: rgba(200,168,130,0.15); }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   PERF: content-visibility en secciones below-the-fold del Home
+   ──────────────────────────────────────────────────────────────────────────
+   Reduce el Layout inicial del Home (~600-1100ms en mobile) aplazando layout
+   y paint de las secciones below-the-fold hasta que entran en viewport.
+   `contain-intrinsic-size` calibrado con alturas reales medidas a Moto G4
+   (360x640, DPR 3) para minimizar CLS. NO tocar `.hero` (above-the-fold).
+   Las clases son exclusivas del Home (index.njk + en/index.njk).
+   Compat: Chrome 85+, Safari 18.2+, Firefox 125+.
+*/
+.booking-section,
+.lead-strip,
+.dolor-solucion-section,
+.pack-indiba-section,
+.otros-tratamientos-section,
+.porque-section,
+.legado-section,
+.proceso-section,
+.testi-section,
+.faq-section,
+.ig-section,
+.donde-section,
+.cta-section {
+  content-visibility: auto;
+}
+.booking-section            { contain-intrinsic-size: auto 667px; }
+.lead-strip                 { contain-intrinsic-size: auto 370px; }
+.dolor-solucion-section     { contain-intrinsic-size: auto 1363px; }
+.pack-indiba-section        { contain-intrinsic-size: auto 2008px; }
+.otros-tratamientos-section { contain-intrinsic-size: auto 470px; }
+.porque-section             { contain-intrinsic-size: auto 1425px; }
+.legado-section             { contain-intrinsic-size: auto 1746px; }
+.proceso-section            { contain-intrinsic-size: auto 1458px; }
+.testi-section              { contain-intrinsic-size: auto 1902px; }
+.faq-section                { contain-intrinsic-size: auto 1258px; }
+.ig-section                 { contain-intrinsic-size: auto 526px; }
+.donde-section              { contain-intrinsic-size: auto 1693px; }
+.cta-section                { contain-intrinsic-size: auto 1152px; }
