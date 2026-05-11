@@ -47,11 +47,14 @@
   <link rel="preconnect" href="https://maps.googleapis.com" />
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-latin-300.woff2' | url }}" crossorigin />
-  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}" />
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2' | url }}" crossorigin />
+  <link rel="preload" href="{{ '/assets/css/fonts.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}" /></noscript>
   {% if page.url == "/" or page.url == "/anylopez-website/" %}
   <link rel="preload" as="image" href="{{ '/images/hero-image.webp' | url }}" type="image/webp" fetchpriority="high" />
   {% endif %}
-  <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
+  <link rel="preload" href="{{ '/css/styles.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="{{ '/css/styles.css' | url }}" /></noscript>
   <style>.lang-dropdown li a[data-lang="{{ lang or 'es' }}"] { color: var(--terra, #8b3a1a); font-weight: 600; }</style>
   {% if legalPage %}<link rel="stylesheet" href="{{ '/assets/css/legal.css' | url }}" />{% endif %}
 
