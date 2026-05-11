@@ -4,9 +4,12 @@
   /* ── Header scroll ── */
   var header = document.getElementById('siteHeader');
   if (header) {
-    window.addEventListener('scroll', function () {
+    var syncHeader = function () {
       header.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
+    };
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, { passive: true });
+    window.addEventListener('pageshow', syncHeader);
   }
 
   /* ── Mobile hamburger ── */
@@ -63,52 +66,6 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.rv').forEach(function (el) { observer.observe(el); });
   }
-
-  /* ── Testimonios carousel (compat) ── */
-  (function () {
-    var carousel = document.getElementById('reviewsCarousel');
-    if (!carousel) return;
-    var prev = document.querySelector('.carousel-prev');
-    var next = document.querySelector('.carousel-next');
-    var dotsContainer = document.getElementById('carouselDots');
-    if (!prev || !next || !dotsContainer) return;
-    var cards = carousel.querySelectorAll('.testimonial');
-    var AUTOPLAY_DELAY = 5000;
-    var autoplayTimer = null;
-    var currentIndex = 0;
-    var total = cards.length;
-
-    var goTo = function (index) {
-      currentIndex = (index + total) % total;
-      cards.forEach(function (c, i) { c.classList.toggle('is-active', i === currentIndex); });
-      dotsContainer.querySelectorAll('.carousel-dot').forEach(function (d, i) {
-        d.classList.toggle('active', i === currentIndex);
-      });
-    };
-
-    var startAutoplay = function () {
-      autoplayTimer = setInterval(function () { goTo(currentIndex + 1); }, AUTOPLAY_DELAY);
-    };
-    var resetAutoplay = function () { clearInterval(autoplayTimer); startAutoplay(); };
-
-    cards.forEach(function (_, i) {
-      var dot = document.createElement('button');
-      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Reseña ' + (i + 1));
-      dotsContainer.appendChild(dot);
-      dot.addEventListener('click', function () { goTo(i); resetAutoplay(); });
-    });
-
-    prev.addEventListener('click', function () { goTo(currentIndex - 1); resetAutoplay(); });
-    next.addEventListener('click', function () { goTo(currentIndex + 1); resetAutoplay(); });
-
-    carousel.addEventListener('mouseenter', function () { clearInterval(autoplayTimer); });
-    carousel.addEventListener('mouseleave', startAutoplay);
-    carousel.addEventListener('touchstart', function () { clearInterval(autoplayTimer); }, { passive: true });
-    carousel.addEventListener('touchend', resetAutoplay, { passive: true });
-
-    startAutoplay();
-  })();
 
   /* ── Language auto-detect ──
    * Lee el mapa ES↔EN inyectado como <script id="pages-i18n-map" type="application/json"> */

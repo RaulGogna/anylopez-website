@@ -1,6 +1,4 @@
 /* booking.css — calendar UX similar a cal.com / crislorente */
-.booking-section [hidden] { display: none !important; }
-
 .booking-section {
   padding: 72px 16px;
   background: var(--ivory, #F8F3ED);

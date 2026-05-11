@@ -672,33 +672,15 @@ body::before {
 .t-service { font-size: 11px; font-weight: 300; color: rgba(248,243,237,0.38); margin-top: 4px; }
 .t-card.featured .t-service { color: rgba(255,255,255,0.55); }
 
-.reviews-carousel { position: relative; min-height: 200px; }
 .testimonial {
-  display: none; padding: 40px; background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
+  padding: 40px;
+  background: var(--ivory);
+  border: 1px solid var(--border);
 }
-.testimonial.is-active { display: block; }
 .testimonial-header .stars { color: #F9C23C; font-size: 14px; margin-bottom: 16px; }
-.testimonial p { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; line-height: 1.7; color: rgba(248,243,237,0.88); margin-bottom: 24px; }
-.testimonial-author strong { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
-.testimonial-author span { font-size: 12px; color: rgba(248,243,237,0.38); display: block; margin-top: 4px; }
-
-.carousel-controls {
-  display: flex; align-items: center; gap: 20px;
-  justify-content: center; margin-top: 32px;
-}
-.carousel-prev, .carousel-next {
-  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.7); font-size: 18px; width: 44px; height: 44px;
-  cursor: pointer; transition: background 0.2s; display: flex; align-items: center; justify-content: center;
-}
-.carousel-prev:hover, .carousel-next:hover { background: var(--terra); color: #fff; }
-.carousel-dots { display: flex; gap: 8px; }
-.carousel-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: rgba(255,255,255,0.2); border: none; cursor: pointer; transition: background 0.2s;
-}
-.carousel-dot.active { background: var(--terra); }
+.testimonial p { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; line-height: 1.7; color: var(--text); margin-bottom: 24px; }
+.testimonial-author strong { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--terra); }
+.testimonial-author span { font-size: 12px; color: var(--text-mid); display: block; margin-top: 4px; }
 
 /* ═══════════════════════════════════════════════════
    FAQ — Accordion CSS puro
@@ -862,30 +844,6 @@ body::before {
 .donde-form-success p { color: var(--terra); font-weight: 600; font-size: 15px; margin-top: 8px; }
 
 /* ═══════════════════════════════════════════════════
-   FEATURE STRIP (stats)
-   ═══════════════════════════════════════════════════ */
-.feature-strip { background: var(--terra); }
-.feature-strip-grid {
-  display: grid; grid-template-columns: repeat(4,1fr);
-  max-width: 1280px; margin: 0 auto;
-}
-.feature-strip-item {
-  padding: 28px 40px; text-align: center;
-  border-right: 1px solid rgba(255,255,255,0.18);
-  transition: background 0.3s;
-}
-.feature-strip-item:last-child { border-right: none; }
-.feature-strip-item:hover { background: rgba(255,255,255,0.08); }
-.fs-number { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: #fff; line-height: 1; display: block; }
-.fs-label { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.78); display: block; margin-top: 6px; }
-
-/* Gallery strip */
-.gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 3px; background: var(--border); }
-.gallery-item { aspect-ratio: 4/3; overflow: hidden; background: var(--sand); }
-.gallery-item img { width:100%; height:100%; object-fit:cover; transition: transform 0.7s var(--ease); }
-.gallery-item:hover img { transform: scale(1.06); }
-
-/* ═══════════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════════ */
 .site-footer { background: #110d05; padding: 64px 0 0; }
@@ -1012,10 +970,6 @@ body::before {
 button[type="submit"] {
   cursor: pointer;
 }
-
-/* Image grid */
-.img-text-visual { overflow: hidden; }
-.img-text-visual img { width:100%; height:100%; object-fit:cover; }
 
 /* ═══════════════════════════════════════════════════
    UTILITIES / ALIASES — Index & Inner pages
@@ -1255,8 +1209,6 @@ button[type="submit"] {
   .services-intro-wrap { flex-direction: column; align-items: flex-start; gap: 16px; padding-top: 64px; }
   .proceso-steps { grid-template-columns: 1fr; }
   .porque-grid { grid-template-columns: 1fr; }
-  .feature-strip-grid { grid-template-columns: repeat(2,1fr); }
-  .gallery-grid { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .form-row { grid-template-columns: 1fr; }
   .section { padding: 80px 0; }
@@ -1286,7 +1238,6 @@ button[type="submit"] {
   .container { padding: 0 20px; }
   .services-intro-wrap { padding-left: 20px; padding-right: 20px; }
   .ig-grid { grid-template-columns: repeat(2,1fr); }
-  .feature-strip-grid { grid-template-columns: 1fr; }
 }
 
 /* ── Hero stack: rating + chips (Slice 1 inspiración crislorente) ── */
@@ -1657,7 +1608,6 @@ button[type="submit"] {
 .trat-modal::backdrop {
   background: rgba(28,18,8,.55);
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 @keyframes trat-modal-in {
   from { opacity: 0; transform: translateY(20px); }

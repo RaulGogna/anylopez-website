@@ -9,7 +9,6 @@
   const FORMSPREE_ID = root.getAttribute("data-formspree") || "PLACEHOLDER_FORMSPREE_ID";
   const WA_NUMBER = (root.getAttribute("data-wa") || "34XXXXXXXXX").replace(/\D/g, "");
 
-  const $ = (sel) => root.querySelector(sel);
   const els = {
     body:      root.querySelector(".booking-body"),
     loading:   root.querySelector('[data-bind="loading"]'),
