@@ -123,8 +123,8 @@
       history.replaceState(null, '', '#' + slug);
     }
     dialog.scrollTop = 0;
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'treatment_modal_opened', { treatment_slug: slug });
+    if (window.umami && typeof window.umami.track === 'function') {
+      window.umami.track('treatment_modal_opened', { treatment_slug: slug });
     }
   }
 
