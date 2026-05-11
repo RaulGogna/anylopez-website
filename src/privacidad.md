@@ -42,6 +42,8 @@ Sus datos podrán ser comunicados a los siguientes proveedores de servicios que 
 
 - **Anthropic, PBC** (EE.UU.) — proveedor del asistente virtual de inteligencia artificial integrado en esta web. Los mensajes que envíe a través del chat son procesados por los servidores de Anthropic para generar una respuesta y **no se almacenan** una vez finalizada la conversación. Anthropic no utiliza los datos de la API para entrenar sus modelos. La transferencia internacional se ampara en las Cláusulas Contractuales Tipo. El uso del asistente virtual requiere su consentimiento previo, que se solicita al abrir el chat por primera vez.
 
+- **Umami Software, Inc.** (UE) — proveedor de analítica web sin cookies. Recoge métricas anónimas y agregadas de visitas (página vista, referrer, tipo de dispositivo, país) sin almacenar identificadores personales, sin cookies y sin dirección IP. Este tratamiento se realiza en interés legítimo del responsable (art. 6.1.f RGPD) para mejorar la calidad del sitio y no requiere consentimiento del usuario. Servidores ubicados en la UE.
+
 No cedemos ni vendemos sus datos a terceros.
 
 ## 5. Plazos de conservación
