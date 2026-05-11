@@ -30,15 +30,8 @@ ogDescription: "Award-winning aesthetic clinic in Benidorm. INDIBA, HIFU, Botox,
     <div class="scroll-hint" aria-hidden="true"><span class="scroll-hint-line"></span></div>
   </div>
   <div class="hero-right">
-    <img src="{{ '/images/hero-poster.webp' | url }}" alt="" class="hero-poster" fetchpriority="high" decoding="sync" width="720" height="1280" aria-hidden="true" />
-    <video muted loop playsinline class="hero-video" aria-hidden="true"
-           data-src="{{ '/images/hero-video-720.mp4' | url }}">
-    </video>
+    <img src="{{ '/images/hero-image.webp' | url }}" alt="" class="hero-image" fetchpriority="high" decoding="sync" width="400" height="600" aria-hidden="true" />
     <div class="hero-video-overlay"></div>
-    <button class="video-sound-btn" id="soundToggle" aria-label="Enable sound">
-      <svg class="icon-muted" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-      <svg class="icon-sound" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-    </button>
   </div>
 </section>
 
@@ -799,33 +792,5 @@ ogDescription: "Award-winning aesthetic clinic in Benidorm. INDIBA, HIFU, Botox,
     });
   }
 
-  /* ── Video: load after window.load (doesn't block LCP) ── */
-  const video = document.querySelector('.hero-video[data-src]');
-  const heroPoster = document.querySelector('.hero-poster');
-  window.addEventListener('load', () => {
-    if (!video) return;
-    setTimeout(() => {
-      const source = document.createElement('source');
-      source.src = video.dataset.src;
-      source.type = 'video/mp4';
-      video.appendChild(source);
-      video.load();
-      video.play().catch(() => {});
-      video.addEventListener('playing', () => {
-        video.style.opacity = '0.92';
-        if (heroPoster) heroPoster.classList.add('hidden');
-      }, { once: true });
-    }, 800);
-  });
-
-  /* ── Video sound toggle ── */
-  const soundBtn = document.getElementById('soundToggle');
-  if (video && soundBtn) {
-    soundBtn.addEventListener('click', () => {
-      video.muted = !video.muted;
-      soundBtn.querySelector('.icon-muted').style.display = video.muted ? '' : 'none';
-      soundBtn.querySelector('.icon-sound').style.display = video.muted ? 'none' : '';
-    });
-  }
 
 </script>
