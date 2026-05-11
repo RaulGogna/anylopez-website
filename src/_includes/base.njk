@@ -13,6 +13,10 @@
   {%- set ogImageAbs = site.url + ogImageRel -%}
   <link rel="canonical" href="{{ canonicalUrl }}" />
 
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32.png' | url }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16.png' | url }}" />
+  <link rel="apple-touch-icon" href="{{ '/images/favicon-32.png' | url }}" />
+
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ site.name }}" />
   <meta property="og:locale" content="{{ locale or site.locale }}" />
