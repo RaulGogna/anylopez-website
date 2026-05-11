@@ -808,6 +808,27 @@ body::before {
   transition: filter .3s ease;
 }
 .donde-map-wrap:hover .donde-map { filter: grayscale(5%) contrast(1.05); }
+.donde-map-placeholder {
+  width: 100%; min-height: 320px; flex: 1 1 auto; border: none; display: flex;
+  flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  cursor: pointer; padding: 32px 20px; font-family: inherit; text-align: center;
+  background: linear-gradient(135deg, #efe7dc 0%, #e2d4bf 100%);
+  color: var(--terra-dk, #6e2e15);
+  transition: background .25s ease;
+}
+.donde-map-placeholder:hover,
+.donde-map-placeholder:focus-visible {
+  background: linear-gradient(135deg, #f5ede1 0%, #e7d8c3 100%);
+  outline: none;
+}
+.donde-map-placeholder-icon { color: var(--terra, #8b3a1a); }
+.donde-map-placeholder-text {
+  font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+}
+.donde-map-placeholder-hint {
+  font-size: 13px; opacity: .7; max-width: 280px; line-height: 1.4;
+}
 .donde-map-cta {
   display: flex; align-items: center; justify-content: center; gap: 7px;
   background: var(--terra); color: #fff;
