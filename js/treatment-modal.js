@@ -122,7 +122,8 @@
     if (location.hash !== '#' + slug) {
       history.replaceState(null, '', '#' + slug);
     }
-    dialog.scrollTop = 0;
+    const body = dialog.querySelector('.trat-modal-body');
+    if (body) body.scrollTop = 0;
     if (window.umami && typeof window.umami.track === 'function') {
       window.umami.track('treatment_modal_opened', { treatment_slug: slug });
     }
@@ -135,29 +136,24 @@
     }
   }
 
-  // Click delegation: abre modal cuando se pulsa una card o el botón "Ver detalles"
   document.addEventListener('click', (e) => {
     const trigger = e.target.closest('[data-slug]');
     if (!trigger) return;
-    if (dialog.contains(trigger)) return; // ignorar clicks dentro del propio modal
+    if (dialog.contains(trigger)) return;
     e.preventDefault();
     open(trigger.dataset.slug);
   });
 
-  // Click en backdrop cierra (los clicks fuera de .trat-modal-body)
   dialog.addEventListener('click', (e) => {
     if (e.target === dialog) close();
   });
 
-  // El form method=dialog ya gestiona ESC y submit del botón close,
-  // pero limpiamos el hash al cerrar.
   dialog.addEventListener('close', () => {
     if (location.hash) {
       history.replaceState(null, '', location.pathname + location.search);
     }
   });
 
-  // Deep-link al cargar
   function openFromHash() {
     const slug = (location.hash || '').replace(/^#/, '');
     if (slug && tratBySlug[slug]) open(slug);
