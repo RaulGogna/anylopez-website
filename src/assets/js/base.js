@@ -12,6 +12,13 @@
     window.addEventListener('pageshow', syncHeader);
   }
 
+  /* ── Remove preload guard after first paint to enable transitions ── */
+  window.addEventListener('load', function () {
+    requestAnimationFrame(function () {
+      document.body.classList.remove('preload');
+    });
+  });
+
   /* ── Mobile hamburger ── */
   var toggle = document.getElementById('menuToggle');
   var menu = document.getElementById('navMenu');

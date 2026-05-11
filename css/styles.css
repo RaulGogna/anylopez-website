@@ -149,6 +149,8 @@ body::before {
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease);
   background: linear-gradient(to bottom, rgba(15,10,5,0.58) 0%, transparent 100%);
 }
+.preload .site-header,
+.preload .site-header * { transition: none !important; }
 .site-header.scrolled {
   background: rgba(248,243,237,0.97);
   box-shadow: 0 1px 0 var(--border);
