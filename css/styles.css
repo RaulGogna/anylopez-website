@@ -1968,3 +1968,13 @@ button[type="submit"] {
 .ig-section                 { contain-intrinsic-size: auto 526px; }
 .donde-section              { contain-intrinsic-size: auto 1693px; }
 .cta-section                { contain-intrinsic-size: auto 1152px; }
+
+/* Services (/services/) — below-fold sections */
+.svc-trust,
+.svc-flagship,
+.svc-final-cta {
+  content-visibility: auto;
+}
+.svc-trust                  { contain-intrinsic-size: auto 326px; }
+.svc-flagship               { contain-intrinsic-size: auto 1050px; }
+.svc-final-cta              { contain-intrinsic-size: auto 566px; }
