@@ -25,6 +25,9 @@
 }
 .booking-subtitle { color: #6b6b6b; margin: 0; }
 
+.booking-body[hidden],
+.booking-loading[hidden] { display: none; }
+
 .booking-body {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
