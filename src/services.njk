@@ -349,6 +349,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
                 src="{{ ('/images/' + imgPath + '.png') | url }}"
                 alt="{{ cat.nombre }} en AnyLopez Benidorm"
                 loading="{{ 'eager' if loop.index <= 2 else 'lazy' }}"
+                {% if loop.index == 1 %}fetchpriority="high"{% endif %}
                 decoding="async"
                 width="640"
                 height="360"
