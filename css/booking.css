@@ -24,6 +24,12 @@
   margin: 0 0 8px;
 }
 .booking-subtitle { color: #6b6b6b; margin: 0; }
+.booking-scarcity-note {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--ink-soft, #6b6357);
+  margin: 6px 0 0;
+}
 
 .booking-body[hidden],
 .booking-loading[hidden] { display: none; }
