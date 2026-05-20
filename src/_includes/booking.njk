@@ -140,9 +140,9 @@
       </label>
       <div class="booking-form-actions">
         <button type="button" class="booking-btn-cancel" data-action="cancel">✕</button>
-        <button type="submit" class="booking-btn-submit">{{ L.submit }}</button>
+        <button type="submit" class="booking-btn-submit" aria-describedby="booking-submit-hint">{{ L.submit }}</button>
       </div>
-      <p class="booking-submit-hint">{{ L.submitHint }}</p>
+      <p id="booking-submit-hint" class="booking-submit-hint">{{ L.submitHint }}</p>
     </form>
     <p class="booking-success" data-bind="success" hidden>{{ L.success }}</p>
   </dialog>
