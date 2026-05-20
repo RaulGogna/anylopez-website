@@ -59,6 +59,9 @@
   --weight-light:  300;
   --weight-body:   400;
   --weight-strong: 500;
+
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Jost', sans-serif;
 }
 
 /* ── Reset ────────────────────────────────────────── */
