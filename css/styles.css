@@ -35,6 +35,30 @@
 
   /* Layout */
   --header-h:   88px;
+
+  /* ── Sistema tipográfico (Wave 0 — tokens sin aplicar aún) ────
+     Escala modular base 16px · ratio 1.2 (perfect fourth).
+     Aplicación gradual por componente en waves siguientes.
+     Outliers documentados: números decorativos 260px/480px,
+     hero clamp(58px,7vw,100px), no entran en la escala. */
+  --fs-3xs:     0.694rem;   /* 11.1px — eyebrow/labels uppercase */
+  --fs-2xs:     0.833rem;   /* 13.3px — meta, hint, footer link */
+  --fs-xs:      1rem;       /* 16px   — body */
+  --fs-sm:      1.2rem;     /* 19.2px — lead, intro */
+  --fs-md:      1.44rem;    /* 23px   — h4, card titles */
+  --fs-lg:      1.728rem;   /* 27.6px — h3 */
+  --fs-xl:      2.074rem;   /* 33.2px — h2 */
+  --fs-2xl:     2.488rem;   /* 39.8px — h1 sección */
+  --fs-display: clamp(2.5rem, 6vw, 4.3rem); /* hero (fuera de scope esta wave) */
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.08em;
+  --tracking-widest:  0.2em;
+
+  --weight-light:  300;
+  --weight-body:   400;
+  --weight-strong: 500;
 }
 
 /* ── Reset ────────────────────────────────────────── */
