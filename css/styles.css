@@ -1099,6 +1099,9 @@ button[type="submit"] {
 
 /* Testimonios: .stars sin .testimonial-header wrapper */
 .testimonial .stars { color: #F9C23C; font-size: 14px; letter-spacing: 1px; display: block; margin-bottom: 16px; }
+.testimonial-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.testimonial-header .stars { margin-bottom: 0; }
+.testimonial-header .google-icon { flex: 0 0 auto; width: 20px; height: 20px; }
 
 /* CTA final: texto sobre fondo oscuro */
 .cta-text p { font-size: 15px; font-weight: 300; color: rgba(248,243,237,0.55); margin-bottom: 12px; }
