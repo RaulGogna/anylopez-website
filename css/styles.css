@@ -959,9 +959,9 @@ body::before {
   border-bottom: 1px solid var(--border);
 }
 .breadcrumb .container { display: flex; gap: 8px; align-items: center; }
-.breadcrumb a { font-size: 12px; color: var(--text-mid); transition: color 0.2s; }
+.breadcrumb a { font-size: var(--fs-2xs); color: var(--text-mid); transition: color 0.2s; }
 .breadcrumb a:hover { color: var(--terra); }
-.breadcrumb span { font-size: 12px; color: var(--text-mid); }
+.breadcrumb span { font-size: var(--fs-2xs); color: var(--text-mid); }
 
 .page-hero {
   background: var(--dark); padding: 80px 0;
