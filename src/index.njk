@@ -28,7 +28,10 @@ description: "Clínica estética en Benidorm especializada en radiofrecuencia IN
     <div class="scroll-hint" aria-hidden="true"><span class="scroll-hint-line"></span></div>
   </div>
   <div class="hero-right">
-    <img src="{{ '/images/hero-image.webp' | url }}" alt="" class="hero-image" fetchpriority="high" decoding="sync" width="400" height="600" aria-hidden="true" />
+    <picture>
+      <source media="(max-width: 768px)" srcset="{{ '/images/hero-image-mobile.webp' | url }}" />
+      <img src="{{ '/images/hero-image.webp' | url }}" alt="" class="hero-image" fetchpriority="high" decoding="sync" width="400" height="600" aria-hidden="true" />
+    </picture>
     <div class="hero-video-overlay"></div>
   </div>
 </section>

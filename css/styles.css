@@ -1220,7 +1220,8 @@ button[type="submit"] {
 
   .hero { grid-template-columns: 1fr; height: auto; min-height: auto; }
   .hero-left { padding: 80px 32px 64px; min-height: 65vh; justify-content: flex-start; }
-  .hero-right { height: 50vh; }
+  .hero-right { height: auto; aspect-ratio: 3 / 2; }
+  .hero-image { object-position: center 50%; }
 
   .lead-strip-inner { grid-template-columns: 1fr; }
   .lead-form { flex-direction: column; }
