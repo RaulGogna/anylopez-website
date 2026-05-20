@@ -14,8 +14,9 @@
     formPhone: "Teléfono",
     formTreatment: "¿Qué tratamiento te interesa?",
     formNotes: "Notas (opcional)",
-    submit: "Confirmar y abrir WhatsApp",
-    success: "Te hemos abierto WhatsApp para confirmar tu cita.",
+    submit: "Reservar cita y avisar por WhatsApp",
+    submitHint: "Abriremos WhatsApp con tu reserva escrita. AnyLopez te confirma en menos de 2 h.",
+    success: "Hemos recibido tu reserva. AnyLopez te confirma por WhatsApp en menos de 2 h (horario de clínica).",
     error: "No hemos podido cargar la disponibilidad. Llámanos al +34 656 306 167 o usa WhatsApp.",
     fallbackHref: "https://wa.me/34656306167",
     fallbackText: "Escríbenos por WhatsApp",
@@ -45,8 +46,9 @@
     formPhone: "Phone",
     formTreatment: "Which treatment interests you?",
     formNotes: "Notes (optional)",
-    submit: "Confirm and open WhatsApp",
-    success: "We've opened WhatsApp for you to confirm your booking.",
+    submit: "Book and notify via WhatsApp",
+    submitHint: "We'll open WhatsApp with your booking written. AnyLopez confirms within 2 h.",
+    success: "We've received your booking. AnyLopez will confirm via WhatsApp within 2 h (clinic hours).",
     error: "We couldn't load availability. Call us at +34 656 306 167 or use WhatsApp.",
     fallbackHref: "https://wa.me/34656306167",
     fallbackText: "Message us on WhatsApp",
@@ -140,6 +142,7 @@
         <button type="button" class="booking-btn-cancel" data-action="cancel">✕</button>
         <button type="submit" class="booking-btn-submit">{{ L.submit }}</button>
       </div>
+      <p class="booking-submit-hint">{{ L.submitHint }}</p>
     </form>
     <p class="booking-success" data-bind="success" hidden>{{ L.success }}</p>
   </dialog>

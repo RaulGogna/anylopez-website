@@ -208,9 +208,12 @@
       const horaTxt = t.toLocaleTimeString(LANG === "en" ? "en-GB" : "es-ES", {
         hour: "2-digit", minute: "2-digit",
       });
+      const notesFragment = payload.notes
+        ? (LANG === "en" ? ` Notes: ${payload.notes}.` : ` Notas: ${payload.notes}.`)
+        : "";
       const msg = LANG === "en"
-        ? `Hi! I'd like to book ${fechaTxt} at ${horaTxt} for ${payload.treatment}. My name: ${payload.name}. Notes: ${payload.notes}`
-        : `Hola, quiero reservar el ${fechaTxt} a las ${horaTxt} para ${payload.treatment}. Mi nombre: ${payload.name}. Notas: ${payload.notes}`;
+        ? `Hi! I've just booked ${fechaTxt} at ${horaTxt} for ${payload.treatment}. My name: ${payload.name}.${notesFragment} Looking forward to your confirmation, thanks!`
+        : `Hola, acabo de reservar el ${fechaTxt} a las ${horaTxt} para ${payload.treatment}. Mi nombre: ${payload.name}.${notesFragment} Espero vuestra confirmación, ¡gracias!`;
       const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 
       // Lead a Formspree (no bloquear si falla)
