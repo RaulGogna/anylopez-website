@@ -894,11 +894,11 @@ body::before {
   height: 56px; width: auto; opacity: 0.85; margin-bottom: 16px;
   filter: brightness(0) invert(1);
 }
-.footer-brand p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 240px; margin-bottom: 24px; }
-.footer-col h4, .footer-col .footer-heading { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.footer-brand p { font-size: var(--fs-2xs); color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 240px; margin-bottom: 24px; }
+.footer-col h4, .footer-col .footer-heading { font-family: 'Jost', sans-serif; font-size: var(--fs-3xs); font-weight: var(--weight-strong); letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
 .footer-col ul li a, .footer-col p {
-  font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.4; transition: color 0.2s;
+  font-size: var(--fs-2xs); color: rgba(255,255,255,0.65); line-height: 1.4; transition: color 0.2s;
 }
 .footer-col p > a { display: inline-flex; align-items: center; min-height: 36px; }
 .footer-col ul li a:hover { color: var(--ivory); }
@@ -909,7 +909,7 @@ body::before {
   transition: background 0.2s; color: rgba(255,255,255,0.7);
 }
 .social-link:hover, .footer-social a:hover { background: var(--terra); color: #fff; }
-.footer-bottom { padding: 24px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.5); }
+.footer-bottom { padding: 24px 0; text-align: center; font-size: var(--fs-2xs); color: rgba(255,255,255,0.5); }
 .footer-bottom a { color: inherit; }
 .footer-bottom a:hover { color: var(--ivory); }
 .footer-legal-links { margin-top: 6px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
@@ -1055,7 +1055,7 @@ button[type="submit"] {
 .mobile-bar-btn:hover { opacity: 0.88; }
 
 /* Footer extras */
-.footer-google-link { font-size: 12px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.footer-google-link { font-size: var(--fs-2xs); color: rgba(255,255,255,0.45); transition: color 0.2s; }
 .footer-google-link:hover { color: var(--gold); }
 .footer-stars { color: #FFD700; margin-right: 4px; }
 
