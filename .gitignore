@@ -1,6 +1,10 @@
 node_modules/
 _site/
 lighthouse-*
+lh-mobile*.json
+header-*.png
+*-closeup.png
+docs/*.pdf
 images/InShot_*.mp4
 images/hero-video.mp4
 docs/info/
