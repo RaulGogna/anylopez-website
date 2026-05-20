@@ -117,6 +117,22 @@ Números decorativos y elementos editoriales que NO deben mapearse a la escala:
 
 Hero, secciones generales (.section-*), testimonials, CTA, FAQ, donde-*, porque-*, paso-*, services, index, radiofrecuencia, about, legal.css.
 
+### ⚠️ Gotcha: `text-transform: capitalize` rompe i18n
+
+**Nunca** aplicar `text-transform: capitalize` (CSS) sobre strings producidos por `toLocaleString` / `toLocaleDateString`. En español "de" debe permanecer en minúscula dentro de una fecha ("20 de mayo de 2026"), y `capitalize` lo convierte en "20 De Mayo De 2026" — gramaticalmente roto.
+
+Si necesitas estética sentence-case (primera letra inicial en mayúscula), helper JS sobre el output del locale:
+
+```js
+const capFirst = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+el.textContent = capFirst(date.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' }));
+// → "Miércoles, 20 de mayo"  (correcto)
+```
+
+**Caso histórico:** Booking modal — bug detectado durante Wave 2c (commits `c8eeaea` + `fe5388a`). El título del modal mostraba "Miércoles, 20 De Mayo, 19:00" por culpa del CSS capitalize. Fix: quitar CSS + `capFirst()` en `js/booking.js` (`renderMonth`, `renderSlots`, `openModal`).
+
+---
+
 ### Reglas para nuevo CSS
 
 1. Siempre `var(--fs-*)`, nunca px/rem literal en `font-size` salvo outliers documentados arriba.
