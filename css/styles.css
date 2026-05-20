@@ -35,6 +35,33 @@
 
   /* Layout */
   --header-h:   88px;
+
+  /* ── Sistema tipográfico (Wave 0 — tokens sin aplicar aún) ────
+     Escala modular base 16px · ratio 1.2 (perfect fourth).
+     Aplicación gradual por componente en waves siguientes.
+     Outliers documentados: números decorativos 260px/480px,
+     hero clamp(58px,7vw,100px), no entran en la escala. */
+  --fs-3xs:     0.694rem;   /* 11.1px — eyebrow/labels uppercase */
+  --fs-2xs:     0.833rem;   /* 13.3px — meta, hint, footer link */
+  --fs-xs:      1rem;       /* 16px   — body */
+  --fs-sm:      1.2rem;     /* 19.2px — lead, intro */
+  --fs-md:      1.44rem;    /* 23px   — h4, card titles */
+  --fs-lg:      1.728rem;   /* 27.6px — h3 */
+  --fs-xl:      2.074rem;   /* 33.2px — h2 */
+  --fs-2xl:     2.488rem;   /* 39.8px — h1 sección */
+  --fs-display: clamp(2.5rem, 6vw, 4.3rem); /* hero (fuera de scope esta wave) */
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.08em;
+  --tracking-widest:  0.2em;
+
+  --weight-light:  300;
+  --weight-body:   400;
+  --weight-strong: 500;
+
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Jost', sans-serif;
 }
 
 /* ── Reset ────────────────────────────────────────── */
@@ -870,11 +897,11 @@ body::before {
   height: 56px; width: auto; opacity: 0.85; margin-bottom: 16px;
   filter: brightness(0) invert(1);
 }
-.footer-brand p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 240px; margin-bottom: 24px; }
-.footer-col h4, .footer-col .footer-heading { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.footer-brand p { font-size: var(--fs-2xs); color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 240px; margin-bottom: 24px; }
+.footer-col h4, .footer-col .footer-heading { font-family: 'Jost', sans-serif; font-size: var(--fs-3xs); font-weight: var(--weight-strong); letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
 .footer-col ul li a, .footer-col p {
-  font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.4; transition: color 0.2s;
+  font-size: var(--fs-2xs); color: rgba(255,255,255,0.65); line-height: 1.4; transition: color 0.2s;
 }
 .footer-col p > a { display: inline-flex; align-items: center; min-height: 36px; }
 .footer-col ul li a:hover { color: var(--ivory); }
@@ -885,7 +912,7 @@ body::before {
   transition: background 0.2s; color: rgba(255,255,255,0.7);
 }
 .social-link:hover, .footer-social a:hover { background: var(--terra); color: #fff; }
-.footer-bottom { padding: 24px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.5); }
+.footer-bottom { padding: 24px 0; text-align: center; font-size: var(--fs-2xs); color: rgba(255,255,255,0.5); }
 .footer-bottom a { color: inherit; }
 .footer-bottom a:hover { color: var(--ivory); }
 .footer-legal-links { margin-top: 6px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
@@ -935,9 +962,9 @@ body::before {
   border-bottom: 1px solid var(--border);
 }
 .breadcrumb .container { display: flex; gap: 8px; align-items: center; }
-.breadcrumb a { font-size: 12px; color: var(--text-mid); transition: color 0.2s; }
+.breadcrumb a { font-size: var(--fs-2xs); color: var(--text-mid); transition: color 0.2s; }
 .breadcrumb a:hover { color: var(--terra); }
-.breadcrumb span { font-size: 12px; color: var(--text-mid); }
+.breadcrumb span { font-size: var(--fs-2xs); color: var(--text-mid); }
 
 .page-hero {
   background: var(--dark); padding: 80px 0;
@@ -1031,7 +1058,7 @@ button[type="submit"] {
 .mobile-bar-btn:hover { opacity: 0.88; }
 
 /* Footer extras */
-.footer-google-link { font-size: 12px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.footer-google-link { font-size: var(--fs-2xs); color: rgba(255,255,255,0.45); transition: color 0.2s; }
 .footer-google-link:hover { color: var(--gold); }
 .footer-stars { color: #FFD700; margin-right: 4px; }
 

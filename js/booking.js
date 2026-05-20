@@ -8,6 +8,7 @@
   const API = root.getAttribute("data-api");
   const FORMSPREE_ID = root.getAttribute("data-formspree") || "PLACEHOLDER_FORMSPREE_ID";
   const WA_NUMBER = (root.getAttribute("data-wa") || "34XXXXXXXXX").replace(/\D/g, "");
+  const capFirst = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
 
   const els = {
     body:      root.querySelector(".booking-body"),
@@ -103,9 +104,9 @@
 
   function renderMonth() {
     const monthStart = startOfMonth(state.cursor);
-    els.monthLbl.textContent = monthStart.toLocaleDateString(LANG === "en" ? "en-GB" : "es-ES", {
+    els.monthLbl.textContent = capFirst(monthStart.toLocaleDateString(LANG === "en" ? "en-GB" : "es-ES", {
       month: "long", year: "numeric",
-    });
+    }));
 
     els.days.innerHTML = "";
     const firstDow = (monthStart.getDay() + 6) % 7; // L=0
@@ -151,9 +152,9 @@
     }
     const slots = state.slotsByDay.get(state.selectedDay) || [];
     const date = new Date(state.selectedDay + "T00:00:00");
-    els.dayLbl.textContent = date.toLocaleDateString(LANG === "en" ? "en-GB" : "es-ES", {
+    els.dayLbl.textContent = capFirst(date.toLocaleDateString(LANG === "en" ? "en-GB" : "es-ES", {
       weekday: "long", day: "numeric", month: "long",
-    });
+    }));
     if (slots.length === 0) {
       els.noSlots.hidden = false;
       return;
@@ -177,9 +178,9 @@
   function openModal(slot) {
     els.formSlot.value = slot.start;
     const t = new Date(slot.start);
-    els.modalTtl.textContent = t.toLocaleString(LANG === "en" ? "en-GB" : "es-ES", {
+    els.modalTtl.textContent = capFirst(t.toLocaleString(LANG === "en" ? "en-GB" : "es-ES", {
       weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit",
-    });
+    }));
     els.success.hidden = true;
     els.form.hidden = false;
     if (typeof els.modal.showModal === "function") els.modal.showModal();
