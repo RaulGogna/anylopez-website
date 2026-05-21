@@ -45,6 +45,7 @@ A diferencia de los aiplans de feature (que se cierran), este se actualiza conti
 | K13 | **`rel="noopener noreferrer"`** | Todos los `target="_blank"` deben tenerlo. Error detectado en catálogo (corregido en review de `feature/catalogo-tratamientos`). |
 | K14 | **Jerarquía de headings: h1→h2→h3** | Verificado en todas las páginas. No romper el orden al añadir secciones nuevas. |
 | K15 | **Lazy loading en imágenes del catálogo** | `loading="lazy"` en cards de tratamientos. No añadirlo en imágenes above-the-fold (hero, logo). |
+| K16 | **Schema.org `sameAs` debe coincidir 1:1 con perfiles del GBP** | Cuando se añaden/cambian perfiles sociales en `_includes/base.njk` (`sameAs`), verificar que cada URL coincide EXACTAMENTE con la que figura en Google Business Profile (Información → Perfiles sociales). Mismatch resta autoridad SEO local — Google no relaciona perfiles "no oficiales". Caso real 2026-05-21: `facebook.com/anylopezclinica` en schema vs `facebook.com/anylopez.benidormespana` en GBP — corregido en commit `a2cf743`. |
 
 ---
 
