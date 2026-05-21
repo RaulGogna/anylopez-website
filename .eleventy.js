@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   );
 
   return {
-    pathPrefix: "/anylopez-website/",
+    pathPrefix: process.env.PATH_PREFIX || "/",
     dir: {
       input: "src",
       output: "_site",

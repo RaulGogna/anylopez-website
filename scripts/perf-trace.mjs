@@ -1,6 +1,6 @@
 // Chrome DevTools Performance trace · Playwright + CDP Tracing
 // Uso: node scripts/perf-trace.mjs [url] [outfile]
-// Default: http://localhost:8080/anylopez-website/ → ./trace-home.json
+// Default: http://localhost:8080/ → ./trace-home.json
 //
 // Throttling: mobile Moto G4 viewport, CPU 4x slowdown, Slow 4G network.
 // El JSON resultante se carga en DevTools → Performance → Load profile.
@@ -8,7 +8,7 @@
 import { chromium, devices } from 'playwright';
 import { writeFileSync } from 'fs';
 
-const url = process.argv[2] || 'http://localhost:8080/anylopez-website/';
+const url = process.argv[2] || 'http://localhost:8080/';
 const out = process.argv[3] || './trace-home.json';
 
 const browser = await chromium.launch({ headless: true });

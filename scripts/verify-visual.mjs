@@ -2,7 +2,7 @@
 // Útil tras aplicar `content-visibility:auto` o cambios que afecten layout.
 //
 // Uso: node scripts/verify-visual.mjs [url] [out-prefix?]
-//   Default url:        http://localhost:8080/anylopez-website/
+//   Default url:        http://localhost:8080/
 //   Default out-prefix: ./visual
 //
 // Genera <prefix>-fold.png, <prefix>-mid.png, <prefix>-bottom.png
@@ -10,7 +10,7 @@
 
 import { chromium, devices } from 'playwright';
 
-const url = process.argv[2] || 'http://localhost:8080/anylopez-website/';
+const url = process.argv[2] || 'http://localhost:8080/';
 const prefix = process.argv[3] || './visual';
 
 const browser = await chromium.launch({ headless: true });

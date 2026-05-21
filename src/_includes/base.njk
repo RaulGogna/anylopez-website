@@ -54,7 +54,7 @@
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2' | url }}" crossorigin />
   <link rel="preload" href="{{ '/assets/css/fonts.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}" /></noscript>
-  {% if page.url == "/" or page.url == "/anylopez-website/" %}
+  {% if page.url == "/" %}
   <link rel="preload" as="image" href="{{ '/images/hero-image.webp' | url }}" type="image/webp" fetchpriority="high" />
   {% endif %}
   <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />

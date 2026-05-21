@@ -1,0 +1,46 @@
+name: Deploy to Hostalia (FTP)
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: "hostalia-deploy"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with Eleventy
+        run: npm run build
+
+      - name: Deploy to Hostalia via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTALIA_FTP_HOST }}
+          username: ${{ secrets.HOSTALIA_FTP_USER }}
+          password: ${{ secrets.HOSTALIA_FTP_PASSWORD }}
+          server-dir: ${{ secrets.HOSTALIA_FTP_DIR }}
+          local-dir: ./_site/
+          protocol: ftps
+          security: loose
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**

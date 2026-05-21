@@ -5,14 +5,14 @@
 //
 // Uso:
 //   node scripts/measure-sections.mjs [url] [selector?]
-//   Default url:      http://localhost:8080/anylopez-website/
+//   Default url:      http://localhost:8080/
 //   Default selector: section[class]
 //
 // Salida: tabla con className → height(px), copiable a CSS.
 
 import { chromium, devices } from 'playwright';
 
-const url = process.argv[2] || 'http://localhost:8080/anylopez-website/';
+const url = process.argv[2] || 'http://localhost:8080/';
 const selector = process.argv[3] || 'section[class]';
 
 const browser = await chromium.launch({ headless: true });
