@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/BingSiteAuth.xml": "BingSiteAuth.xml" });
+  eleventyConfig.addPassthroughCopy({ "src/.htaccess": ".htaccess" });
 
   eleventyConfig.addFilter("byCategory", (treatments, categoryId) =>
     treatments.filter((t) => t.categoria === categoryId)
