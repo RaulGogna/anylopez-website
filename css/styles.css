@@ -121,7 +121,7 @@ body::before {
 
 .eyebrow {
   font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
-  letter-spacing: 0.22em; text-transform: uppercase; color: var(--terra);
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--terra-dk);
   display: block; margin-bottom: 16px;
 }
 /* alias */
@@ -325,11 +325,12 @@ body::before {
   margin: 0 auto;
 }
 .ds-col { display: flex; flex-direction: column; }
+/* WCAG AA: terra → terra-dk sobre fondos claros en text uppercase 11px */
 .ds-eyebrow {
   font-family: 'Jost', sans-serif;
   font-size: 11px; font-weight: 600;
   letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--terra); margin-bottom: 16px;
+  color: var(--terra-dk); margin-bottom: 16px;
 }
 .ds-title {
   font-family: 'Cormorant Garamond', serif;
@@ -397,7 +398,7 @@ body::before {
   font-family: 'Jost', sans-serif;
   font-size: 11px; font-weight: 600;
   letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--terra); display: block; margin-bottom: 12px;
+  color: var(--terra-dk); display: block; margin-bottom: 12px;
 }
 .calcom-title {
   font-family: 'Cormorant Garamond', serif;
@@ -995,7 +996,7 @@ body::before {
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
 .contact-info-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px; }
 .contact-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
-.contact-info-item h4 { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); margin-bottom: 4px; }
+.contact-info-item h4 { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra-dk); margin-bottom: 4px; }
 .contact-info-item p, .contact-info-item a { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
 .contact-info-item a:hover { color: var(--terra); }
 .map-embed {
