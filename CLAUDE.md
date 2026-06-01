@@ -78,6 +78,21 @@ Para CSS variables completas: `.claude/css-variables.md`
 
 ---
 
+## Convención de copy — negaciones
+
+En zonas de oferta/pricing/garantía, evitar negaciones de DUDA: el cerebro
+procesa el marco antes que la negación ("no es tomar fotos" evoca tomar fotos;
+"si algo no funciona" instala la duda del fracaso). Reescribir en positivo o
+en certeza.
+
+Sí conservar negaciones de CONTRASTE/posicionamiento fuera del pricing
+("No vendemos sesiones de más", "No tratamos lo que no necesitas") — crean
+diferenciación anti-franquicia, no duda.
+
+Origen: feedback asesora 2026-05-13, auditado con billion-dollar-ai-team.
+
+---
+
 ## Workflow de features
 
 Seguir el proceso completo del CLAUDE.md del workspace padre:  
