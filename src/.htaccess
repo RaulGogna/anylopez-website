@@ -32,4 +32,7 @@
   # Canonicalización www → non-www
   RewriteCond %{HTTP_HOST} ^www\.anylopez\.com$ [NC]
   RewriteRule ^ https://anylopez.com%{REQUEST_URI} [L,R=301]
+
+  # Fantasma del WordPress viejo: /es/ raíz → home (el español vive en /)
+  RewriteRule ^es/?$ / [R=301,L]
 </IfModule>
