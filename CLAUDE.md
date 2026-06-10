@@ -75,6 +75,8 @@ Para CSS variables completas: `.claude/css-variables.md`
 - Las imágenes de `images/tratamientos/` existen en PNG y WebP — usar WebP en HTML
 - `rel="noopener noreferrer"` en todos los `target="_blank"`
 - `scroll-margin-top` necesario en secciones ancladas (ver catálogo con nav sticky)
+- **GitHub Actions: secrets vs vars.** Datos sensibles (API keys) → `secrets.NOMBRE` (`${{ secrets.X }}`). Datos no sensibles configurables (IDs, flags) → `vars.NOMBRE` (`${{ vars.X }}`). Mezclarlos (crear un ID como secret e intentar leerlo con `vars.`) devuelve string vacío silenciosamente → el script falla con "variable no definida".
+- **Nunjucks en front matter no se renderiza.** Si un campo YAML necesita `{{ reviews.count }}` u otra variable dinámica, moverlo a `eleventyComputed:` dentro del mismo front matter. Ejemplo: `ogDescription` en `en/index.njk`. El build no avisa — produce `{{ reviews.count }}` literal en el HTML generado.
 
 ---
 
