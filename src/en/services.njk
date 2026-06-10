@@ -306,7 +306,7 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
     <p class="lead">Three generations designing, delivering and overseeing every treatment. We don't hire trainees or rush back-to-back sessions to fit a tight schedule — when you book, you're seen by the person who signs off the result.</p>
     <div class="svc-hero-meta">
       <span class="svc-hero-stars">★★★★★</span>
-      <strong>5.0 from 216 Google reviews</strong>
+      <strong>{{ reviews.rating }} from {{ reviews.count }} Google reviews</strong>
       <span class="dot">·</span>
       <span>{{ en.tratamientos.tratamientos | length }} treatments available</span>
       <span class="dot">·</span>
@@ -385,7 +385,7 @@ description: "Eight specialities, one craft. Editorial catalogue of facial, body
 <section class="svc-trust">
   <div class="container">
     <div class="svc-trust-stars">★★★★★</div>
-    <div class="svc-trust-rating"><strong>5.0</strong> · 216 verified Google reviews</div>
+    <div class="svc-trust-rating"><strong>{{ reviews.rating }}</strong> · {{ reviews.count }} verified Google reviews</div>
     <div class="svc-trust-sub">More than 30 years caring for patients in Benidorm</div>
   </div>
 </section>

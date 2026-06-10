@@ -86,11 +86,11 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
           <div class="stat-label">Años de experiencia</div>
         </div>
         <div>
-          <div class="stat-number">5.0 ★</div>
+          <div class="stat-number">{{ reviews.rating }} ★</div>
           <div class="stat-label">Valoración en Google</div>
         </div>
         <div>
-          <div class="stat-number">216</div>
+          <div class="stat-number">{{ reviews.count }}</div>
           <div class="stat-label">Reseñas verificadas</div>
         </div>
         <div>
@@ -209,7 +209,7 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
     <div class="container text-center">
       <h2 class="section-title" style="color:#fff; margin-bottom:16px;">¿Quieres conocernos?</h2>
       <p style="color:rgba(255,255,255,0.8); margin-bottom:12px;">Ven a visitarnos a nuestra clínica en Benidorm o llámanos para resolver cualquier duda.</p>
-      <p style="color:rgba(255,255,255,0.55); font-size:14px; margin-bottom:32px;">Antes de venir, lee lo que dicen las <a href="https://www.google.com/maps/place/AnyLopez+Clinica+Est%C3%A9tica/@38.5376389,-0.1329449,19z?utm_source=anylopez-web&utm_medium=about-cta" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">216 personas que ya pasaron por aquí en Google &rarr;</a></p>
+      <p style="color:rgba(255,255,255,0.55); font-size:14px; margin-bottom:32px;">Antes de venir, lee lo que dicen las <a href="https://www.google.com/maps/place/AnyLopez+Clinica+Est%C3%A9tica/@38.5376389,-0.1329449,19z?utm_source=anylopez-web&utm_medium=about-cta" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">{{ reviews.count }} personas que ya pasaron por aquí en Google &rarr;</a></p>
       <a href="{{ '/contact/' | url }}" class="btn btn-accent">Contactar</a>
     </div>
   </section>

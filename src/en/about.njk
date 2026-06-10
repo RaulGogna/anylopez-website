@@ -86,11 +86,11 @@ description: "Meet the team and facilities at AnyLopez Aesthetic Clinic in Benid
           <div class="stat-label">Years of experience</div>
         </div>
         <div>
-          <div class="stat-number">5.0 ★</div>
+          <div class="stat-number">{{ reviews.rating }} ★</div>
           <div class="stat-label">Google rating</div>
         </div>
         <div>
-          <div class="stat-number">216</div>
+          <div class="stat-number">{{ reviews.count }}</div>
           <div class="stat-label">Verified reviews</div>
         </div>
         <div>
@@ -209,7 +209,7 @@ description: "Meet the team and facilities at AnyLopez Aesthetic Clinic in Benid
     <div class="container text-center">
       <h2 class="section-title" style="color:#fff; margin-bottom:16px;">Would you like to visit us?</h2>
       <p style="color:rgba(255,255,255,0.8); margin-bottom:12px;">Come and visit our clinic in Benidorm or get in touch to answer any questions you may have.</p>
-      <p style="color:rgba(255,255,255,0.55); font-size:14px; margin-bottom:32px;">Before you come, read what the <a href="https://www.google.com/maps/place/AnyLopez+Clinica+Est%C3%A9tica/@38.5376389,-0.1329449,19z?utm_source=anylopez-web&utm_medium=about-cta-en" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">216 people who&apos;ve already been here say on Google &rarr;</a></p>
+      <p style="color:rgba(255,255,255,0.55); font-size:14px; margin-bottom:32px;">Before you come, read what the <a href="https://www.google.com/maps/place/AnyLopez+Clinica+Est%C3%A9tica/@38.5376389,-0.1329449,19z?utm_source=anylopez-web&utm_medium=about-cta-en" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">{{ reviews.count }} people who&apos;ve already been here say on Google &rarr;</a></p>
       <a href="https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20treatments." class="btn btn-accent" target="_blank" rel="noopener noreferrer" aria-label="Book your consultation on WhatsApp">Book your consultation on WhatsApp</a>
     </div>
   </section>

@@ -306,7 +306,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
     <p class="lead">Tres generaciones diseñando, ejecutando y supervisando cada tratamiento. Aquí no contratamos becarios ni encadenamos sesiones por horarios apretados — cuando reservas, te atiende quien firma el resultado.</p>
     <div class="svc-hero-meta">
       <span class="svc-hero-stars">★★★★★</span>
-      <strong>5.0 sobre 216 reseñas en Google</strong>
+      <strong>{{ reviews.rating }} sobre {{ reviews.count }} reseñas en Google</strong>
       <span class="dot">·</span>
       <span>{{ tratamientos.tratamientos | length }} tratamientos disponibles</span>
       <span class="dot">·</span>
@@ -385,7 +385,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
 <section class="svc-trust">
   <div class="container">
     <div class="svc-trust-stars">★★★★★</div>
-    <div class="svc-trust-rating"><strong>5.0</strong> · 216 reseñas verificadas en Google</div>
+    <div class="svc-trust-rating"><strong>{{ reviews.rating }}</strong> · {{ reviews.count }} reseñas verificadas en Google</div>
     <div class="svc-trust-sub">Más de 30 años acompañando pacientes en Benidorm</div>
   </div>
 </section>
