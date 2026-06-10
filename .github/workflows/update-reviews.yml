@@ -1,0 +1,50 @@
+name: Update Google reviews count
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 04:00 CET / 05:00 CEST (cron es UTC, sin DST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "update-reviews"
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Tests de la lógica
+        run: node --test scripts/update-reviews.test.mjs
+
+      - name: Fetch reviews + actualizar JSON si cambió
+        env:
+          PLACES_API_KEY: ${{ secrets.PLACES_API_KEY }}
+          PLACE_ID: ${{ vars.PLACE_ID }}
+        run: node scripts/update-reviews.mjs
+
+      - name: Commit y disparar deploys si hubo cambio
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet src/_data/reviews.json; then
+            echo "Sin cambios — no se redesplega."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/_data/reviews.json
+          git commit -m "chore(reviews): actualizar contador Google [auto]"
+          git push
+          gh workflow run deploy.yml --ref master
+          gh workflow run deploy-hostalia.yml --ref master
+          echo "Deploys disparados."
