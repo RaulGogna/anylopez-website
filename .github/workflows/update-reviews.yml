@@ -29,7 +29,7 @@ jobs:
       - name: Fetch reviews + actualizar JSON si cambió
         env:
           PLACES_API_KEY: ${{ secrets.PLACES_API_KEY }}
-          PLACE_ID: ${{ vars.PLACE_ID }}
+          PLACE_ID: ${{ secrets.PLACE_ID }}
         run: node scripts/update-reviews.mjs
 
       - name: Commit y disparar deploys si hubo cambio
