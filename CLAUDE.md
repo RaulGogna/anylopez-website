@@ -77,6 +77,7 @@ Para CSS variables completas: `.claude/css-variables.md`
 - `scroll-margin-top` necesario en secciones ancladas (ver catálogo con nav sticky)
 - **GitHub Actions: secrets vs vars.** Datos sensibles (API keys) → `secrets.NOMBRE` (`${{ secrets.X }}`). Datos no sensibles configurables (IDs, flags) → `vars.NOMBRE` (`${{ vars.X }}`). Mezclarlos (crear un ID como secret e intentar leerlo con `vars.`) devuelve string vacío silenciosamente → el script falla con "variable no definida".
 - **Nunjucks en front matter no se renderiza.** Si un campo YAML necesita `{{ reviews.count }}` u otra variable dinámica, moverlo a `eleventyComputed:` dentro del mismo front matter. Ejemplo: `ogDescription` en `en/index.njk`. El build no avisa — produce `{{ reviews.count }}` literal en el HTML generado.
+- **Footer = las 8 categorías de servicio.** El `footer-col` "Servicios/Treatments" en `base.njk` es el único enlace site-wide a las páginas de `/services/`. Si lista menos de las 8 categorías, las omitidas quedan huérfanas (solo enlazadas desde el hub) → Google las marca "Duplicada: canónica diferente" en GSC. Al crear una categoría nueva, añadirla SIEMPRE al footer (ES+EN). Incidente: jun-2026, masajes/corporal/estetica-decorativa quedaron fuera y cayeron en indexación.
 
 ---
 
