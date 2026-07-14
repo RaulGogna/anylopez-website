@@ -7,7 +7,7 @@
     var syncHeader = function () {
       header.classList.toggle('scrolled', window.scrollY > 60);
     };
-    syncHeader();
+    requestAnimationFrame(syncHeader);
     window.addEventListener('scroll', syncHeader, { passive: true });
     window.addEventListener('pageshow', syncHeader);
   }

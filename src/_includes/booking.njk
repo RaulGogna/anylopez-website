@@ -152,5 +152,6 @@
   window.__BOOKING_LANG__ = "{{ lang }}";
   window.__BOOKING_TXT__ = {{ L | dump | safe }};
 </script>
-<link rel="stylesheet" href="{{ '/css/booking.css' | url }}">
+<link rel="stylesheet" href="{{ '/css/booking.css' | url }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{{ '/css/booking.css' | url }}"></noscript>
 <script src="{{ '/js/booking.js' | url }}" defer></script>
