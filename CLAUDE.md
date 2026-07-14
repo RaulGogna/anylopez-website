@@ -77,6 +77,16 @@ Para CSS variables completas: `.claude/css-variables.md`
 - `scroll-margin-top` necesario en secciones ancladas (ver catálogo con nav sticky)
 - **GitHub Actions: secrets vs vars.** Datos sensibles (API keys) → `secrets.NOMBRE` (`${{ secrets.X }}`). Datos no sensibles configurables (IDs, flags) → `vars.NOMBRE` (`${{ vars.X }}`). Mezclarlos (crear un ID como secret e intentar leerlo con `vars.`) devuelve string vacío silenciosamente → el script falla con "variable no definida".
 - **Nunjucks en front matter no se renderiza.** Si un campo YAML necesita `{{ reviews.count }}` u otra variable dinámica, moverlo a `eleventyComputed:` dentro del mismo front matter. Ejemplo: `ogDescription` en `en/index.njk`. El build no avisa — produce `{{ reviews.count }}` literal en el HTML generado.
+- **Animaciones CSS: no cambiar `transform-origin` dentro de un `@keyframes`.** Aunque solo se anime `transform`, si `transform-origin` cambia a mitad de la animación (ej. de `top` a `bottom`) el navegador saca la animación del compositor y la ejecuta en el hilo principal (Lighthouse: "Evita las animaciones no compuestas"). Fix: fijar `transform-origin` como propiedad estática en la regla base del elemento, no dentro del keyframe. Incidente: jul-2026, `.scroll-hint-line`.
+- **Redimensionar un WebP existente sin PNG original:** `scripts/optimize-images.sh` solo convierte PNG/JPG→WebP, no cubre reescalar un WebP ya generado. En Windows sin ImageMagick, usar Python+PIL vía PowerShell:
+  ```powershell
+  python -c @'
+  from PIL import Image
+  im = Image.open("images/foo.webp")
+  im.resize((W,H), Image.LANCZOS).save("images/foo.webp", "webp", quality=82, method=6)
+  '@
+  ```
+  Ajustar `quality` si el resultado pesa más que el original (puede pasar con `quality` alto en imágenes ya comprimidas). `libwebp` (`cwebp`/`dwebp`) también disponible en `~/.local/tools/libwebp-*/bin/` como alternativa.
 - **Footer = las 8 categorías de servicio.** El `footer-col` "Servicios/Treatments" en `base.njk` es el único enlace site-wide a las páginas de `/services/`. Si lista menos de las 8 categorías, las omitidas quedan huérfanas (solo enlazadas desde el hub) → Google las marca "Duplicada: canónica diferente" en GSC. Al crear una categoría nueva, añadirla SIEMPRE al footer (ES+EN). Incidente: jun-2026, masajes/corporal/estetica-decorativa quedaron fuera y cayeron en indexación.
 
 ---
