@@ -7,8 +7,17 @@
     var syncHeader = function () {
       header.classList.toggle('scrolled', window.scrollY > 60);
     };
+    var scrollTicking = false;
+    var onScroll = function () {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(function () {
+        syncHeader();
+        scrollTicking = false;
+      });
+    };
     requestAnimationFrame(syncHeader);
-    window.addEventListener('scroll', syncHeader, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('pageshow', syncHeader);
   }
 
