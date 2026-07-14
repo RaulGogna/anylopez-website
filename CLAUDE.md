@@ -87,6 +87,12 @@ Para CSS variables completas: `.claude/css-variables.md`
   '@
   ```
   Ajustar `quality` si el resultado pesa más que el original (puede pasar con `quality` alto en imágenes ya comprimidas). `libwebp` (`cwebp`/`dwebp`) también disponible en `~/.local/tools/libwebp-*/bin/` como alternativa.
+- **CSS no crítico (widgets/secciones fuera del LCP): patrón loadCSS.** Para no bloquear el render con un `<link rel="stylesheet">` de una sección que no forma parte del contenido inicial visible (ej. `booking.css`), cargarlo como:
+  ```html
+  <link rel="stylesheet" href="{{ '/css/foo.css' | url }}" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ '/css/foo.css' | url }}"></noscript>
+  ```
+  El navegador no bloquea el render por un stylesheet `media="print"`; el `onload` lo activa (`media='all'`) una vez descargado. El `<noscript>` cubre navegadores sin JS. Verificar siempre visualmente que no hay FOUC en la sección afectada. Incidente: jul-2026, `booking.njk`.
 - **Footer = las 8 categorías de servicio.** El `footer-col` "Servicios/Treatments" en `base.njk` es el único enlace site-wide a las páginas de `/services/`. Si lista menos de las 8 categorías, las omitidas quedan huérfanas (solo enlazadas desde el hub) → Google las marca "Duplicada: canónica diferente" en GSC. Al crear una categoría nueva, añadirla SIEMPRE al footer (ES+EN). Incidente: jun-2026, masajes/corporal/estetica-decorativa quedaron fuera y cayeron en indexación.
 
 ---
