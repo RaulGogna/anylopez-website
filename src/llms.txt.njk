@@ -1,0 +1,24 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+layout: null
+---
+# {{ site.name }}
+
+> Clínica de estética y medicina estética en Benidorm (Alicante, España). {{ reviews.rating }}★ con {{ reviews.count }} reseñas verificadas en Google. Especialistas en tratamientos faciales, corporales, medicina estética inyectable, radiofrecuencia INDIBA y depilación IPL. Trato cercano, sin sesiones de más.
+
+## Servicios
+{% for p in pages -%}
+{%- if ('/services/' in p.es) and (p.es != '/services/') and p.crumb_es %}
+- [{{ p.crumb_es }}]({{ site.url }}{{ p.es }})
+{%- endif -%}
+{%- endfor %}
+- [Radiofrecuencia INDIBA]({{ site.url }}/radiofrecuencia/)
+
+## Información
+- [Sobre nosotras]({{ site.url }}/about/)
+- [Contacto y reservas]({{ site.url }}/contact/)
+
+## English
+- [Home]({{ site.url }}/en/)
+- [Treatments]({{ site.url }}/en/services/)
