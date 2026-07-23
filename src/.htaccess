@@ -6,6 +6,8 @@
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  # HSTS: apex + www ya fuerzan HTTPS. Sin includeSubDomains/preload a propósito (evita romper subdominios y es reversible).
+  Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
 
 <IfModule mod_deflate.c>
