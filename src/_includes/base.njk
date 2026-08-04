@@ -54,14 +54,14 @@
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-latin-300.woff2' | url }}" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2' | url }}" crossorigin />
-  <link rel="preload" href="{{ '/assets/css/fonts.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}" /></noscript>
+  <link rel="preload" href="{{ '/assets/css/fonts.css' | url | bust }}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url | bust }}" /></noscript>
   {% if page.url == "/" %}
   <link rel="preload" as="image" href="{{ '/images/hero-image.webp' | url }}" type="image/webp" fetchpriority="high" />
   {% endif %}
-  <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
+  <link rel="stylesheet" href="{{ '/css/styles.css' | url | bust }}" />
   <style>.lang-dropdown li a[data-lang="{{ lang or 'es' }}"] { color: var(--terra, #8b3a1a); font-weight: 600; }</style>
-  {% if legalPage %}<link rel="stylesheet" href="{{ '/assets/css/legal.css' | url }}" />{% endif %}
+  {% if legalPage %}<link rel="stylesheet" href="{{ '/assets/css/legal.css' | url | bust }}" />{% endif %}
 
   {%- set _crumbName = null -%}
   {%- if _currentPair -%}
@@ -366,9 +366,9 @@
   }</script>
 
   <anylopez-chat data-endpoint="https://anylopez-chat.anylopez.workers.dev"></anylopez-chat>
-  <script src="{{ '/assets/chat/widget.min.js' | url }}" defer></script>
-  <script src="{{ '/assets/js/base.js' | url }}" defer></script>
+  <script src="{{ '/assets/chat/widget.min.js' | url | bust }}" defer></script>
+  <script src="{{ '/assets/js/base.js' | url | bust }}" defer></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiWebsiteId }}"></script>
-  <script src="{{ '/assets/js/tracking.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/tracking.js' | url | bust }}" defer></script>
 </body>
 </html>
