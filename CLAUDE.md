@@ -15,13 +15,24 @@ URL live: https://raulgogna.github.io/anylopez-website/
    ```
    Sin él, los paths se rompen en producción por `pathPrefix: "/anylopez-website/"`.
 
-2. **Las páginas viven en `src/`**, el output generado en `_site/` (nunca editar `_site/`).
+2. **Filtro `| bust` obligatorio en CSS y JS**, siempre después de `| url`:
+   ```njk
+   <link rel="stylesheet" href="{{ '/css/styles.css' | url | bust }}" />
+   <script src="{{ '/assets/js/base.js' | url | bust }}" defer></script>
+   ```
+   Añade `?v=<md5 corto>` del contenido. Sin él, `src/.htaccess` cachea el asset **1 mes** y
+   el cambio no llega a quien ya visitó la web (incidente ago-2026: el fix del chat widget se
+   quedó atrapado en la caché de Cloudflare 5 días). Solo para CSS/JS; las imágenes no lo
+   necesitan porque se sustituyen creando archivos nuevos. Si el filtro no encuentra el asset,
+   avisa por consola en el build y lo sirve sin versionar.
 
-3. **`_site/` está en `.gitignore`** — no comitear archivos generados.
+3. **Las páginas viven en `src/`**, el output generado en `_site/` (nunca editar `_site/`).
 
-4. **Formspree ID**: `xrerbgdw` — formulario de contacto en `src/contact.njk`.
+4. **`_site/` está en `.gitignore`** — no comitear archivos generados.
 
-5. **WhatsApp**: `+34 656 306 167` — URL: `https://wa.me/34656306167?text=...`
+5. **Formspree ID**: `xrerbgdw` — formulario de contacto en `src/contact.njk`.
+
+6. **WhatsApp**: `+34 656 306 167` — URL: `https://wa.me/34656306167?text=...`
 
 ---
 
