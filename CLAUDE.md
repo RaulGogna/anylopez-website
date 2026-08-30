@@ -110,6 +110,12 @@ Para CSS variables completas: `.claude/css-variables.md`
 
 ---
 
+## Convención de copy — marca INDIBA
+
+**La palabra INDIBA SIEMPRE va precedida de "Radiofrecuencia"** en texto visible ES ("Radiofrecuencia INDIBA"); en EN se empareja como "INDIBA Radiofrequency". Nunca "INDIBA" a secas ni "INDIBA Activ" (nombre retirado ago-2026). Excepciones: atributos no visibles (`value="INDIBA"`), slugs/anchors (`pack-indiba`, `radiofrecuencia-indiba`) y la variante "Radiofrecuencia profunda INDIBA". En URLs de WhatsApp usar `%20` (`Pack%20Radiofrecuencia%20INDIBA`). Regla dictada por el cliente 2026-08-31.
+
+⚠️ Al alargar labels/options, revisar responsive: los `<option>` largos ensanchan el `<select>` y los grid items sin `min-width:0` desbordan el track `1fr` (incidente lead-strip ago-2026); los badges/nav con textos largos necesitan comprobación a 375/768/1024.
+
 ## Convención de copy — negaciones
 
 En zonas de oferta/pricing/garantía, evitar negaciones de DUDA: el cerebro

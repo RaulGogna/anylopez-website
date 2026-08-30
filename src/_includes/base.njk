@@ -198,13 +198,13 @@
         <a href="{{ '/en/' | url }}"              class="{{ 'active' if page.url == '/en/' }}">Home</a>
         <a href="{{ '/en/about/' | url }}"        class="{{ 'active' if page.url == '/en/about/' }}">About Us</a>
         <a href="{{ '/en/services/' | url }}"     class="{{ 'active' if (page.url | startsWith('/en/services/')) }}">Treatments</a>
-        <a href="{{ '/en/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/en/radiofrecuencia/' }}">INDIBA</a>
+        <a href="{{ '/en/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/en/radiofrecuencia/' }}">INDIBA Radiofrequency</a>
         <a href="{{ '/en/contact/' | url }}"      class="{{ 'active' if page.url == '/en/contact/' }}">Contact</a>
         {% else %}
         <a href="{{ '/' | url }}"                 class="{{ 'active' if page.url == '/' }}">Inicio</a>
         <a href="{{ '/about/' | url }}"           class="{{ 'active' if page.url == '/about/' }}">Nosotras</a>
         <a href="{{ '/services/' | url }}"        class="{{ 'active' if (page.url | startsWith('/services/')) }}">Servicios</a>
-        <a href="{{ '/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/radiofrecuencia/' }}">INDIBA</a>
+        <a href="{{ '/radiofrecuencia/' | url }}" class="{{ 'active' if page.url == '/radiofrecuencia/' }}">Radiofrecuencia INDIBA</a>
         <a href="{{ '/contact/' | url }}"         class="{{ 'active' if page.url == '/contact/' }}">Contacto</a>
         {% endif %}
       </nav>
@@ -251,9 +251,9 @@
             </picture>
           </a>
           {% if lang == 'en' %}
-          <p>Aesthetic clinic in Benidorm. 35+ years of expertise with INDIBA &amp; Ultherapy HIFU technology.</p>
+          <p>Aesthetic clinic in Benidorm. 35+ years of expertise with INDIBA Radiofrequency &amp; Ultherapy HIFU technology.</p>
           {% else %}
-          <p>Clínica estética facial y corporal en Benidorm. Más de 35 años de experiencia con tecnología INDIBA &amp; Ultherapy HIFU.</p>
+          <p>Clínica estética facial y corporal en Benidorm. Más de 35 años de experiencia con tecnología Radiofrecuencia INDIBA &amp; Ultherapy HIFU.</p>
           {% endif %}
           <div class="social-links">
             <a href="https://www.instagram.com/anylopez.estetica/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
