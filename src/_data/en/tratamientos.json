@@ -543,10 +543,15 @@
       "idealPara": "People with sagging, loss of firmness or signs of ageing on the face and body.",
       "duracion": "45 minutes",
       "precios": [
-        { "concepto": "1 session", "precio": "65 €" },
-        { "concepto": "Pack 10 sessions", "precio": "350 €" }
+        { "concepto": "Facial or body session (30 min)", "precio": "45 €" },
+        { "concepto": "Facial session (45 min)", "precio": "65 €" },
+        { "concepto": "Body session (60 min, per area)", "precio": "85 €" },
+        { "concepto": "Vaginal session (60 min)", "precio": "85 €" },
+        { "concepto": "5-session pack (30 min)", "precio": "250 €" },
+        { "concepto": "10-session pack (30 min)", "precio": "350 €" },
+        { "concepto": "10-session pack (45 min)", "precio": "500 €" }
       ],
-      "packDestacado": 1
+      "packDestacado": 6
     },
     {
       "slug": "botox-zona",
@@ -833,6 +838,41 @@
         { "concepto": "Pack 10 sessions (30 min)", "precio": "400 €" }
       ],
       "packDestacado": 2
+    },
+    {
+      "slug": "triple-accion-anticelulitica",
+      "imagen": "triple-accion-anticelulitica.png",
+      "categoria": "corporal",
+      "nombre": "Triple-Action Anti-Cellulite & Firming",
+      "descripcion": "Synergistic combination of INDIBA radiofrequency, thermal Gua Sha and sequential pressotherapy in a single session. Breaks down fibrous septa, stimulates collagen and drains fluid retention.",
+      "paraQuien": "For anyone wanting to treat cellulite, orange-peel skin and body laxity with a combined protocol that targets cause, texture and retention in one session.",
+      "comoFunciona": [
+        "INDIBA radiofrequency: boosts cell metabolism, oxygenates fatty tissue and promotes collagen synthesis.",
+        "Thermal Gua Sha: advanced manual technique with a heated head that breaks down fibrous septa and smooths orange-peel skin.",
+        "Sequential pressotherapy: pneumatic massage that mobilises released fluids and toxins, activating deep lymphatic drainage."
+      ],
+      "beneficios": [
+        "Three technologies in a single combined session",
+        "Breaks down the fibrous septa behind cellulite",
+        "Stimulates collagen production and firms the skin",
+        "Activates lymphatic drainage and reduces retention",
+        "Smooths orange-peel skin and improves texture",
+        "More defined contour and restored firmness"
+      ],
+      "incluye": [
+        "30 min per area: massage + INDIBA + thermal Gua Sha",
+        "30 min of sequential pressotherapy",
+        "Phase 1 (sessions 1-3): deep drainage and smoother skin",
+        "Phase 2 (sessions 4-8): remodelling and dimple smoothing",
+        "Final phase: defined contour and restored firmness"
+      ],
+      "idealPara": "People with cellulite, orange-peel skin, fluid retention or body laxity looking for an intensive combined treatment.",
+      "duracion": "60 minutes (30 min per area + 30 min pressotherapy)",
+      "precios": [
+        { "concepto": "Single session", "precio": "90 €" },
+        { "concepto": "10-session pack", "precio": "650 €" }
+      ],
+      "packDestacado": 1
     },
     {
       "slug": "masaje-corporal",
