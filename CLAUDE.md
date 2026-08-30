@@ -110,6 +110,10 @@ Para CSS variables completas: `.claude/css-variables.md`
 
 ---
 
+## Convención de copy — certificaciones
+
+**No afirmar certificaciones en el copy** ("certificada", "con certificación médica", "certified") — retiradas por decisión del cliente ago-2026. Los badges "Certified" del hero se mantienen por ahora; ante la duda, describir la tecnología sin alegar certificación.
+
 ## Convención de copy — marca INDIBA
 
 **La palabra INDIBA SIEMPRE va precedida de "Radiofrecuencia"** en texto visible ES ("Radiofrecuencia INDIBA"); en EN se empareja como "INDIBA Radiofrequency". Nunca "INDIBA" a secas ni "INDIBA Activ" (nombre retirado ago-2026). Excepciones: atributos no visibles (`value="INDIBA"`), slugs/anchors (`pack-indiba`, `radiofrecuencia-indiba`) y la variante "Radiofrecuencia profunda INDIBA". En URLs de WhatsApp usar `%20` (`Pack%20Radiofrecuencia%20INDIBA`). Regla dictada por el cliente 2026-08-31.
