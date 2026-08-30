@@ -1,8 +1,8 @@
 # AnyLopez Website — Ground Rules
 
 Proyecto: **Sitio web estático de AnyLopez Clínica Estética (Benidorm)**  
-Stack: **Eleventy (11ty) v3** · Deploy en **GitHub Pages** vía GitHub Actions  
-URL live: https://raulgogna.github.io/anylopez-website/
+Stack: **Eleventy (11ty) v3** · Deploy prod en **Hostalia vía FTPS** (`deploy-hostalia.yml`), con Cloudflare delante  
+URL live: https://anylopez.com — GitHub Pages (`deploy.yml`) solo sirve redirects con `PATH_PREFIX=/anylopez-website/`
 
 ---
 
@@ -13,7 +13,7 @@ URL live: https://raulgogna.github.io/anylopez-website/
    href="{{ '/contact/' | url }}"
    src="{{ '/images/logo-color-sin-fondo.png' | url }}"
    ```
-   Sin él, los paths se rompen en producción por `pathPrefix: "/anylopez-website/"`.
+   Sin él, los paths se rompen en el build de GH Pages (`PATH_PREFIX=/anylopez-website/`); el pathPrefix es env-aware (`process.env.PATH_PREFIX || "/"`).
 
 2. **Filtro `| bust` obligatorio en CSS y JS**, siempre después de `| url`:
    ```njk
@@ -39,7 +39,7 @@ URL live: https://raulgogna.github.io/anylopez-website/
 ## Estructura
 
 ```
-anylopez-website/
+anylopez/website/
 ├── src/
 │   ├── _includes/base.njk     # Layout único (header, footer, WA, mobile-bar)
 │   ├── _data/tratamientos.json # 35 tratamientos · 8 categorías
@@ -64,7 +64,7 @@ anylopez-website/
 ## Comandos
 
 ```bash
-cd anylopez-website
+cd anylopez/website
 npm run serve    # dev server en localhost
 npm run build    # output a _site/
 ```
