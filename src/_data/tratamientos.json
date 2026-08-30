@@ -575,10 +575,15 @@
       "idealPara": "Personas con flacidez, pérdida de firmeza o signos de envejecimiento en rostro y cuerpo.",
       "duracion": "45 minutos",
       "precios": [
-        { "concepto": "1 sesión", "precio": "65 €" },
-        { "concepto": "Pack 10 sesiones", "precio": "350 €" }
+        { "concepto": "Sesión facial o corporal (30 min)", "precio": "45 €" },
+        { "concepto": "Sesión facial (45 min)", "precio": "65 €" },
+        { "concepto": "Sesión corporal (60 min, por zona)", "precio": "85 €" },
+        { "concepto": "Sesión vaginal (60 min)", "precio": "85 €" },
+        { "concepto": "Pack 5 sesiones (30 min)", "precio": "250 €" },
+        { "concepto": "Pack 10 sesiones (30 min)", "precio": "350 €" },
+        { "concepto": "Pack 10 sesiones (45 min)", "precio": "500 €" }
       ],
-      "packDestacado": 1
+      "packDestacado": 6
     },
     {
       "slug": "botox-zona",

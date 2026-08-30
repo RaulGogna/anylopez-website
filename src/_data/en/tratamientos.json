@@ -543,10 +543,15 @@
       "idealPara": "People with sagging, loss of firmness or signs of ageing on the face and body.",
       "duracion": "45 minutes",
       "precios": [
-        { "concepto": "1 session", "precio": "65 €" },
-        { "concepto": "Pack 10 sessions", "precio": "350 €" }
+        { "concepto": "Facial or body session (30 min)", "precio": "45 €" },
+        { "concepto": "Facial session (45 min)", "precio": "65 €" },
+        { "concepto": "Body session (60 min, per area)", "precio": "85 €" },
+        { "concepto": "Vaginal session (60 min)", "precio": "85 €" },
+        { "concepto": "5-session pack (30 min)", "precio": "250 €" },
+        { "concepto": "10-session pack (30 min)", "precio": "350 €" },
+        { "concepto": "10-session pack (45 min)", "precio": "500 €" }
       ],
-      "packDestacado": 1
+      "packDestacado": 6
     },
     {
       "slug": "botox-zona",
