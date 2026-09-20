@@ -1,0 +1,104 @@
+{
+  "modal": {
+    "close": "Cerrar ficha",
+    "benefits": "Beneficios",
+    "how": "¿Cómo funciona?",
+    "pricing": "Precios",
+    "idealFor": "Ideal para",
+    "recommendations": "Recomendaciones",
+    "guarantee": "Sin compromiso —",
+    "waHref": "https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios.",
+    "waCta": "Reservar por WhatsApp →",
+    "telCta": "Llamar 656 306 167"
+  },
+  "booking": {
+    "title": "Reserva tu consulta gratuita",
+    "subtitle": "30 minutos · diagnóstico personalizado · sin compromiso",
+    "prevMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "weekdays": ["L", "M", "X", "J", "V", "S", "D"],
+    "pickDay": "Elige tu plaza",
+    "noSlots": "Sin plazas este día",
+    "scarcityNote": "Agenda limitada para atención personalizada",
+    "formName": "Nombre",
+    "formPhone": "Teléfono",
+    "formTreatment": "¿Qué tratamiento te interesa?",
+    "formNotes": "Notas (opcional)",
+    "submit": "Reservar cita y avisar por WhatsApp",
+    "submitHint": "Abriremos WhatsApp con tu reserva escrita. AnyLopez te confirma en menos de 2 h.",
+    "success": "Hemos recibido tu reserva. AnyLopez te confirma por WhatsApp en menos de 2 h (horario de clínica).",
+    "error": "No hemos podido cargar la disponibilidad. Llámanos al +34 656 306 167 o usa WhatsApp.",
+    "fallbackHref": "https://wa.me/34656306167",
+    "fallbackText": "Escríbenos por WhatsApp",
+    "consultation": "Consulta gratuita personalizada",
+    "starLabel": "Tratamiento estrella",
+    "star": "Radiofrecuencia INDIBA · Programa anti-edad facial y corporal",
+    "groupLabel": "Por objetivo",
+    "groups": [
+      "Verme más joven y firme (lifting y antiaging)",
+      "Suavizar arrugas y recuperar volumen (Botox y rellenos)",
+      "Mejorar mi piel y luminosidad (faciales, dermapen, peelings)",
+      "Tratamientos corporales y reducción",
+      "Otros (depilación, estética decorativa, masajes)"
+    ],
+    "other": "No estoy segura — recomiéndame"
+  },
+  "leadStrip": {
+    "label_html": "¿Fuera de horario de WhatsApp?<br>Déjanos tus datos y te llamamos en menos de 24h.",
+    "subject": "Consulta desde lead strip homepage",
+    "namePh": "Tu nombre",
+    "nameAria": "Nombre",
+    "telPh": "Teléfono",
+    "telAria": "Teléfono",
+    "selAria": "Tratamiento de interés",
+    "selPh": "¿Qué te interesa?",
+    "options": [
+      { "value": "INDIBA", "label": "Radiofrecuencia INDIBA" },
+      { "value": "HIFU", "label": "Ultherapy HIFU Lifting" },
+      { "value": "Botox", "label": "Botox & Rellenos" },
+      { "value": "Limpieza Facial", "label": "Limpieza Facial" },
+      { "value": "Dermapen", "label": "Dermapen" },
+      { "value": "Otro", "label": "Otro tratamiento" }
+    ],
+    "submit": "Solicitar cita",
+    "msg_html": "✓ Recibido — te contactamos pronto."
+  },
+  "dolorSolucion": {
+    "dolor": {
+      "eyebrow": "¿Te suena esto?",
+      "title_html": "¿Has pasado por <em>aquí antes?</em>",
+      "p1_html": "Quizá ya has probado otros tratamientos. Y te quedó la sensación de que algo faltaba: tiempo, escucha, un plan pensado para ti y no un pack genérico.",
+      "p2_html": "O quizá nunca te has tratado, porque has visto resultados que parecían más quirúrgicos que naturales y prefieres tu piel tal y como es a una versión \"retocada\".",
+      "p3_html": "En ambos casos lo entendemos. Y en ambos casos creemos lo mismo: <strong>el resultado depende menos de la tecnología y más de las manos que la usan.</strong>"
+    },
+    "solucion": {
+      "eyebrow": "Así te cuidamos",
+      "title_html": "Tres generaciones de <em>oficio real</em>",
+      "p_html": "Heredamos 35 años de oficio en el cuidado de la piel. No vendemos packs por volumen — diseñamos protocolos por persona.",
+      "bullets": [
+        {
+          "strong": "Diagnosticamos primero.",
+          "span_html": "30 minutos sin compromiso valorando tu piel, tus objetivos y tu historial. Sin presión de venta."
+        },
+        {
+          "strong": "Tratamos con tiempo.",
+          "span_html": "Sesiones reales en cabina, sin prisa: cada protocolo respeta los tiempos que la técnica necesita para funcionar."
+        },
+        {
+          "strong": "Garantizamos el resultado.",
+          "span_html": "En nuestros packs, si no notas mejora visible al terminarlo, la sesión extra va por nuestra cuenta."
+        },
+        {
+          "strong": "Te seguimos después.",
+          "span_html": "A los 60 días de tu última sesión te invitamos a una revisión sin coste para evaluar resultados y diseñar tu plan de mantenimiento."
+        }
+      ]
+    }
+  },
+  "calcom": {
+    "eyebrow": "Disponibilidad en tiempo real",
+    "title_html": "Reserva tu <em>consulta gratuita</em>",
+    "subtitle_html": "Elige el día y la hora que mejor te venga. 30 minutos sin compromiso — valoramos tu caso y te recomendamos el mejor protocolo.",
+    "loading": "Cargando calendario…"
+  }
+}

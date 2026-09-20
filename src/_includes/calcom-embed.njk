@@ -1,19 +1,14 @@
+{%- set tp = i18n[lang or 'es'].partials %}
 <section class="calcom-section" id="reservar">
   <div class="container">
     <div class="calcom-header rv">
-      {% if lang == 'en' %}
-      <span class="calcom-eyebrow">Real-time availability</span>
-      <h2 class="calcom-title">Book your <em>free consultation</em></h2>
-      <p class="calcom-subtitle">Pick a day and time that works for you. 30 minutes, no commitment — we'll discuss your goals and recommend the best protocol.</p>
-      {% else %}
-      <span class="calcom-eyebrow">Disponibilidad en tiempo real</span>
-      <h2 class="calcom-title">Reserva tu <em>consulta gratuita</em></h2>
-      <p class="calcom-subtitle">Elige el día y la hora que mejor te venga. 30 minutos sin compromiso — valoramos tu caso y te recomendamos el mejor protocolo.</p>
-      {% endif %}
+      <span class="calcom-eyebrow">{{ tp.calcom.eyebrow }}</span>
+      <h2 class="calcom-title">{{ tp.calcom.title_html | safe }}</h2>
+      <p class="calcom-subtitle">{{ tp.calcom.subtitle_html | safe }}</p>
     </div>
     <div class="calcom-embed-wrap rv">
       <div id="cal-inline" class="calcom-loading" data-cal-link="anylopez-clinica-estetica/consulta-gratuita">
-        {% if lang == 'en' %}Loading calendar…{% else %}Cargando calendario…{% endif %}
+        {{ tp.calcom.loading }}
       </div>
     </div>
   </div>

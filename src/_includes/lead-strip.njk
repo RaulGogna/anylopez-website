@@ -1,45 +1,19 @@
-{% if lang == 'en' %}
+{%- set tp = i18n[lang or 'es'].partials %}
 <section class="lead-strip">
   <div class="lead-strip-inner rv">
-    <p class="lead-strip-label">Outside WhatsApp hours?<br>Leave your details and we'll call you within 24 hours.</p>
+    <p class="lead-strip-label">{{ tp.leadStrip.label_html | safe }}</p>
     <form class="lead-form" id="leadForm" action="https://formspree.io/f/xrerbgdw" method="POST">
-      <input type="hidden" name="_subject" value="Enquiry from EN homepage lead strip" />
-      <input type="text" name="nombre" placeholder="Your name" required aria-label="Name" />
-      <input type="tel" name="telefono" placeholder="Phone number" required aria-label="Phone number" />
-      <select name="tratamiento" aria-label="Treatment of interest">
-        <option value="" disabled selected>What are you interested in?</option>
-        <option value="INDIBA">Radiofrecuencia INDIBA</option>
-        <option value="HIFU">Ultherapy HIFU Lifting</option>
-        <option value="Botox">Botox &amp; Fillers</option>
-        <option value="Limpieza Facial">Facial Cleanse</option>
-        <option value="Dermapen">Dermapen</option>
-        <option value="Otro">Other treatment</option>
+      <input type="hidden" name="_subject" value="{{ tp.leadStrip.subject }}" />
+      <input type="text" name="nombre" placeholder="{{ tp.leadStrip.namePh }}" required aria-label="{{ tp.leadStrip.nameAria }}" />
+      <input type="tel" name="telefono" placeholder="{{ tp.leadStrip.telPh }}" required aria-label="{{ tp.leadStrip.telAria }}" />
+      <select name="tratamiento" aria-label="{{ tp.leadStrip.selAria }}">
+        <option value="" disabled selected>{{ tp.leadStrip.selPh }}</option>
+        {%- for o in tp.leadStrip.options %}
+        <option value="{{ o.value }}">{{ o.label }}</option>
+        {%- endfor %}
       </select>
-      <button type="submit" class="btn btn-terra">Book appointment</button>
+      <button type="submit" class="btn btn-terra">{{ tp.leadStrip.submit }}</button>
     </form>
-    <p id="leadFormMsg">✓ Received — we'll be in touch shortly.</p>
+    <p id="leadFormMsg">{{ tp.leadStrip.msg_html | safe }}</p>
   </div>
 </section>
-{% else %}
-<section class="lead-strip">
-  <div class="lead-strip-inner rv">
-    <p class="lead-strip-label">¿Fuera de horario de WhatsApp?<br>Déjanos tus datos y te llamamos en menos de 24h.</p>
-    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xrerbgdw" method="POST">
-      <input type="hidden" name="_subject" value="Consulta desde lead strip homepage" />
-      <input type="text" name="nombre" placeholder="Tu nombre" required aria-label="Nombre" />
-      <input type="tel" name="telefono" placeholder="Teléfono" required aria-label="Teléfono" />
-      <select name="tratamiento" aria-label="Tratamiento de interés">
-        <option value="" disabled selected>¿Qué te interesa?</option>
-        <option value="INDIBA">Radiofrecuencia INDIBA</option>
-        <option value="HIFU">Ultherapy HIFU Lifting</option>
-        <option value="Botox">Botox &amp; Rellenos</option>
-        <option value="Limpieza Facial">Limpieza Facial</option>
-        <option value="Dermapen">Dermapen</option>
-        <option value="Otro">Otro tratamiento</option>
-      </select>
-      <button type="submit" class="btn btn-terra">Solicitar cita</button>
-    </form>
-    <p id="leadFormMsg">✓ Recibido — te contactamos pronto.</p>
-  </div>
-</section>
-{% endif %}
