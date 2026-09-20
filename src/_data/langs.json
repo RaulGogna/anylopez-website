@@ -20,5 +20,16 @@
     "flag": "🇬🇧",
     "prefix": "/en",
     "hreflang": "en-GB"
+  },
+  {
+    "code": "fr",
+    "locale": "fr_FR",
+    "bcp47": "fr-FR",
+    "schemaName": "French",
+    "dir": "ltr",
+    "name": "Français",
+    "flag": "🇫🇷",
+    "prefix": "/fr",
+    "hreflang": "fr"
   }
 ]
