@@ -1,0 +1,112 @@
+{
+  "title": "Advanced Facials in Benidorm — AnyLopez",
+  "description": "Chemical peels, dermapen, virtual mesotherapy, dermaplaning and more. Advanced facials at AnyLopez Aesthetic Clinic, Benidorm. 9 protocols, free initial assessment.",
+  "jsonld": {
+    "name": "Advanced facials",
+    "alternateName": "AnyLopez advanced facial aesthetics",
+    "description": "Catalogue of advanced facials at AnyLopez Aesthetic Clinic (Benidorm): chemical peels, dermapen, virtual mesotherapy, dermaplaning, anti-acne, plasma pen and more. 9 protocols with a free initial assessment.",
+    "faq": [
+      { "q": "How do I know if I need a peel or dermapen?", "a": "It depends on the issue. Pigmentation and sun damage respond better to depigmenting chemical peels; scars, fine lines and uneven texture respond better to dermapen. In the free assessment we'll tell you exactly what your skin needs." },
+      { "q": "How much downtime will I need?", "a": "It depends on the treatment. Dermaplaning and virtual mesotherapy: zero. Hydration with dermapen and gentle peels: 24–48h with mild redness. Deep chemical peels: 4–7 days of controlled flaking. We'll explain it in detail before choosing your protocol." },
+      { "q": "When will I see results?", "a": "Treatments such as a collagen veil or dermaplaning give instant glow from the very first session. Anti-pigmentation peels and dermapen for scars are progressive: you'll notice improvement within a month and full results across 3–5 sessions depending on the case." },
+      { "q": "Can I combine several treatments?", "a": "Yes, and it's often the best strategy. Dermapen + hydration, peel + radiofrequency, mesotherapy + collagen veil are common combinations. In your bespoke plan we'll design the optimal sequence." },
+      { "q": "I have sensitive skin, rosacea or I'm pregnant. Are there alternatives?", "a": "Yes. We have specific protocols for sensitive and reactive skin. If you're pregnant or breastfeeding some treatments are contraindicated, but others are perfectly safe — we'll tell you straight in the assessment with clinical honesty." }
+    ]
+  },
+  "breadcrumb": { "services": "Services", "current": "Advanced Facials" },
+  "callCta": "Call +34 656 306 167",
+  "hero": {
+    "imgAlt": "Advanced facials at AnyLopez Benidorm",
+    "eyebrow": "Advanced facials · 9 protocols",
+    "h1_html": "Your face deserves more than <em>just another cream</em>.",
+    "lead_html": "If you've spent years investing in cosmetics and the mirror still shows pigmentation, fine lines or scars that won't quite fade, it's not that you don't take care of yourself. It's that those problems live deeper than any serum can reach.",
+    "ctaPrimary": "Book your free assessment →",
+    "reviews": "Google reviews",
+    "free": "Free initial assessment"
+  },
+  "pain": {
+    "eyebrow": "Does any of this sound familiar?",
+    "h2": "Most patients who walk through our door have been through the same thing.",
+    "p_html": "You're not coming out of nowhere. You're coming after trying other things that didn't quite work.",
+    "items": [
+      { "h3_html": "You've spent on premium creams and the pigmentation is still there.", "p_html": "Hyperpigmentation, sun spots and melasma can't be erased with cosmetics. They need technology that reaches the pigment where it sits." },
+      { "h3_html": "Your skin \"isn't what it used to be\" and products no longer bring the glow back.", "p_html": "Fine lines, uneven texture, more visible pores. Cosmetics maintain; renewal is another league — peels, dermapen, mesotherapy." },
+      { "h3_html": "Marks and scars you've been carrying since teenage acne.", "p_html": "You've spent years accepting them because \"they don't go away\". They do improve — just not with serums; with dermapen, progressive peels and plasma pen." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why advanced facials work",
+    "h2": "Six reasons these treatments change the game.",
+    "p_html": "It's not marketing — it's clinical technology applied with judgement.",
+    "items": [
+      { "h3_html": "Technology that reaches where cosmetics can't.", "p_html": "Chemical peels, dermapen with controlled micro-needling, plasma pen, virtual mesotherapy. They work in the dermis, not on the surface." },
+      { "h3_html": "Personalised diagnosis, not a menu.", "p_html": "We don't sell you the trendy treatment. We look at your skin, your history, your goal and we design a protocol. Sometimes it's a peel. Sometimes it isn't." },
+      { "h3_html": "Combinable with each other.", "p_html": "Dermapen + hydration. Peel + radiofrequency. Synergy between treatments multiplies results that none of them achieve on their own." },
+      { "h3_html": "Gradual, natural results that look like you.", "p_html": "No \"tight mask\" look. Your skin renews from within and you look like a better version of yourself, not a different face." },
+      { "h3_html": "No prolonged downtime.", "p_html": "Most treatments let you get back to your life within hours or a few days. Designed to fit into your real schedule." },
+      { "h3_html": "Performed by whoever signs the result.", "p_html": "Same principle as everywhere in the clinic: you're treated by someone with the experience to tell you what works in your case and what doesn't." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "9 facial protocols",
+    "h2": "The advanced facial catalogue, in detail.",
+    "p_html": "Tap any treatment to see benefits, how it works, prices and duration. If you're not sure which one is yours, we'll tell you in the free assessment.",
+    "detailsAria": "View details of",
+    "detailsCta": "View details →"
+  },
+  "cross": {
+    "eyebrow": "If your case goes further",
+    "h2_html": "If you need <em>more than an advanced facial</em>…",
+    "p_html": "Every concern has its own technology. If yours doesn't fit here, we'll guide you to the speciality that does solve it.",
+    "card1": {
+      "eyebrow": "Deep firming",
+      "h3_html": "You need deep firming → <em>INDIBA Radiofrequency</em>",
+      "p_html": "Sagging, drooping jawline, skin that looks \"tired\" despite all your care. INDIBA radiofrequency works in the hypodermis, where cosmetics and surface facials can't reach.",
+      "arrow_html": "Discover INDIBA Radiofrequency →"
+    },
+    "card2": {
+      "eyebrow": "Volume and filler",
+      "h3_html": "Looking for volume or filler → <em>Botox &amp; Fillers</em>",
+      "p_html": "Loss of volume in the cheeks, deep folds, lips or dynamic wrinkles. Hyaluronic acid, Botox and biostimulators applied with medical-aesthetic judgement.",
+      "arrow_html": "See Botox &amp; Fillers →"
+    }
+  },
+  "tests": {
+    "eyebrow": "Real patients",
+    "h2": "Results you can see, and tell others about.",
+    "p": "Verified Google reviews. No actors, no pills, no Photoshopped before-and-afters.",
+    "items": [
+      { "quote_html": "\"After years trying to erase pigmentation with very expensive creams, in five sessions of anti-pigmentation peel I have the skin I remember from my thirties.\"", "author": "María José L.", "meta": "Patient · Anti-Pigmentation Peel" },
+      { "quote_html": "\"Dermapen has improved my acne scars far more than I expected. The results are progressive and natural — nothing aggressive.\"", "author": "Cristina A.", "meta": "Patient · Dermapen" },
+      { "quote_html": "\"I came thinking I needed hyaluronic acid and they gave me an honest diagnosis: what I really needed was deep hydration. The difference is huge and I've saved a small fortune.\"", "author": "Verified patient", "meta": "Google review" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How do we get started?",
+    "h2": "Four steps. No surprises, no small print.",
+    "p": "From your first message to your first session, less than two weeks go by.",
+    "steps": [
+      { "h3": "You book your free assessment", "p_html": "Call/WhatsApp to find a slot. 30 minutes at the clinic, no cost, no commitment." },
+      { "h3": "Personalised diagnosis at the clinic", "p_html": "We look at your skin, talk through your history and your real goal. We tell you which treatment(s) make sense for you — and which one doesn't." },
+      { "h3": "Bespoke plan with protocol and frequency", "p_html": "We design the plan: how many sessions, in what order, which combinations. Everything clear before we begin." },
+      { "h3": "Real follow-up throughout the plan", "p_html": "Direct WhatsApp between sessions for questions, adjustments or aftercare. We don't disappear once you start." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "h2": "What people ask us most about advanced facials.",
+    "items": [
+      { "q_html": "How do I know if I need a peel or dermapen?", "a_html": "It depends on the issue. Pigmentation and sun damage respond better to depigmenting chemical peels; scars, fine lines and uneven texture respond better to dermapen. In the free assessment we'll tell you exactly what your skin needs." },
+      { "q_html": "How much downtime will I need?", "a_html": "It depends on the treatment. Dermaplaning and virtual mesotherapy: zero. Hydration with dermapen and gentle peels: 24–48h with mild redness. Deep chemical peels: 4–7 days of controlled flaking. We'll explain it in detail before choosing your protocol." },
+      { "q_html": "When will I see results?", "a_html": "Treatments such as a collagen veil or dermaplaning give instant glow from the very first session. Anti-pigmentation peels and dermapen for scars are progressive: you'll notice improvement within a month and full results across 3–5 sessions depending on the case." },
+      { "q_html": "Can I combine several treatments?", "a_html": "Yes, and it's often the best strategy. Dermapen + hydration, peel + radiofrequency, mesotherapy + collagen veil are common combinations. In your bespoke plan we'll design the optimal sequence." },
+      { "q_html": "I have sensitive skin / rosacea / I'm pregnant. Are there alternatives?", "a_html": "Yes. We have specific protocols for sensitive and reactive skin. If you're pregnant or breastfeeding, some treatments are contraindicated but others are perfectly safe — we'll tell you straight in the assessment with clinical honesty." }
+    ]
+  },
+  "final": {
+    "eyebrow": "No commitment",
+    "h2_html": "Book a free assessment. <em>Start by knowing what your skin actually needs</em>.",
+    "p_html": "Thirty minutes at the clinic with someone who has spent decades reading skin. If yours doesn't need any advanced treatment, we'll tell you straight and point you in the right direction.",
+    "cta": "Book your assessment →"
+  }
+}

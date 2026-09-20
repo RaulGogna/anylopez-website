@@ -1,0 +1,112 @@
+{
+  "title": "Tratamientos faciales avanzados en Benidorm — AnyLopez",
+  "description": "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y más. Tratamientos faciales avanzados en AnyLopez Clínica Estética, Benidorm. 9 protocolos, diagnóstico inicial gratuito.",
+  "jsonld": {
+    "name": "Tratamientos faciales avanzados",
+    "alternateName": "Estética facial avanzada AnyLopez",
+    "description": "Catálogo de tratamientos faciales avanzados en AnyLopez Clínica Estética (Benidorm): peelings químicos, dermapen, mesoterapia virtual, dermaplaning, anti-acné, plasma pen y más. 9 protocolos con diagnóstico inicial gratuito.",
+    "faq": [
+      { "q": "¿Cómo sé si lo mío es peeling o dermapen?", "a": "Depende del problema. Las manchas y daño solar responden mejor a peelings químicos despigmentantes; las cicatrices, líneas finas y textura irregular responden mejor a dermapen. En el diagnóstico gratuito vemos exactamente qué necesita tu piel." },
+      { "q": "¿Cuánto tiempo de baja necesito?", "a": "Depende del tratamiento. Dermaplaning y mesoterapia virtual: cero. Hidratación con dermapen y peelings suaves: 24-48h con leve enrojecimiento. Peelings químicos profundos: 4-7 días de descamación controlada. Te lo explicamos al detalle antes de elegir protocolo." },
+      { "q": "¿Cuándo voy a ver resultados?", "a": "Tratamientos como velo de colágeno o dermaplaning dan luminosidad inmediata desde la primera sesión. Peelings antimanchas y dermapen para cicatrices son progresivos: notas mejoría al mes y resultado pleno entre 3-5 sesiones según el caso." },
+      { "q": "¿Puedo combinar varios tratamientos?", "a": "Sí, y muchas veces es la mejor estrategia. Dermapen + hidratación, peeling + radiofrecuencia, mesoterapia + velo de colágeno son combinaciones habituales. En el plan personalizado te diseñamos la secuencia óptima." },
+      { "q": "Tengo piel sensible, rosácea o estoy embarazada. ¿Hay alternativas?", "a": "Sí. Tenemos protocolos específicos para piel sensible y reactiva. Si estás embarazada o lactando, algunos tratamientos están contraindicados pero otros son perfectamente seguros — te lo decimos en la valoración con honestidad clínica." }
+    ]
+  },
+  "breadcrumb": { "services": "Servicios", "current": "Tratamientos Faciales Avanzados" },
+  "callCta": "Llamar 656 306 167",
+  "hero": {
+    "imgAlt": "Tratamientos faciales avanzados en AnyLopez Benidorm",
+    "eyebrow": "Tratamientos faciales avanzados · 9 protocolos",
+    "h1_html": "Tu rostro merece más que <em>una crema más</em>.",
+    "lead_html": "Si llevas años invirtiendo en cosmética y aun así el espejo te devuelve manchas, líneas finas o cicatrices que no terminan de irse, no es que no te cuides. Es que esos problemas viven más profundo de donde llega un sérum.",
+    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "reviews": "reseñas Google",
+    "free": "Diagnóstico inicial sin coste"
+  },
+  "pain": {
+    "eyebrow": "¿Te suena alguna de estas?",
+    "h2": "La mayoría de pacientes que llegan aquí han pasado por lo mismo.",
+    "p_html": "No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.",
+    "items": [
+      { "h3_html": "Has gastado en cremas de gama alta y las manchas siguen ahí.", "p_html": "Las hiperpigmentaciones, manchas solares y melasma no se borran con cosmética. Necesitan tecnología que llegue al pigmento donde está." },
+      { "h3_html": "Tu piel \"ya no es la de antes\" y los productos no devuelven la luminosidad.", "p_html": "Líneas finas, textura irregular, poros más visibles. La cosmética mantiene; renovar es otra liga — peelings, dermapen, mesoterapia." },
+      { "h3_html": "Marcas y cicatrices que arrastras desde el acné juvenil.", "p_html": "Las llevas años aceptando porque \"ya no se quitan\". Sí se mejoran — solo no con sérums; con dermapen, peelings progresivos y plasma pen." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Por qué los faciales avanzados funcionan",
+    "h2": "Seis razones por las que estos tratamientos cambian el juego.",
+    "p_html": "No es marketing — es tecnología clínica aplicada con criterio.",
+    "items": [
+      { "h3_html": "Tecnología que llega donde la cosmética no.", "p_html": "Peelings químicos, dermapen con micropunción controlada, plasma pen, mesoterapia virtual. Trabajan en dermis, no en superficie." },
+      { "h3_html": "Diagnóstico personalizado, no menú.", "p_html": "No te vendemos el tratamiento de moda. Vemos tu piel, tu historial, tu objetivo y diseñamos protocolo. A veces es un peeling. A veces no." },
+      { "h3_html": "Combinables entre sí.", "p_html": "Dermapen + hidratación. Peeling + radiofrecuencia. La sinergia entre tratamientos multiplica resultados que ninguno por separado consigue." },
+      { "h3_html": "Resultados graduales, naturales, propios.", "p_html": "Nada de \"máscara tirante\". Tu piel se renueva desde dentro y se nota como mejor versión de ti, no como otra cara." },
+      { "h3_html": "Sin baja prolongada.", "p_html": "La mayoría de tratamientos te dejan reanudar tu vida en horas o pocos días. Diseñados para encajar en tu agenda real." },
+      { "h3_html": "Lo aplica quien firma el resultado.", "p_html": "Mismo principio que en toda la clínica: te atiende quien tiene la experiencia para decirte qué funciona en tu caso y qué no." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "9 protocolos faciales",
+    "h2": "El catálogo facial avanzado, al detalle.",
+    "p_html": "Pulsa cualquier tratamiento para ver beneficios, cómo funciona, precios y duración. Si dudas cuál es el tuyo, te lo decimos en el diagnóstico gratuito.",
+    "detailsAria": "Ver detalles de",
+    "detailsCta": "Ver detalles →"
+  },
+  "cross": {
+    "eyebrow": "Si lo tuyo va más allá",
+    "h2_html": "Si tu caso necesita <em>más que un facial avanzado</em>…",
+    "p_html": "Cada problema tiene su tecnología. Si lo tuyo no encaja aquí, te orientamos hacia la especialidad que sí lo resuelve.",
+    "card1": {
+      "eyebrow": "Reafirmación profunda",
+      "h3_html": "Necesitas reafirmación profunda → <em>Radiofrecuencia INDIBA</em>",
+      "p_html": "Flacidez, óvalo caído, piel \"cansada\" pese a cuidarte. La radiofrecuencia INDIBA trabaja en hipodermis donde la cosmética y los faciales superficiales no llegan.",
+      "arrow_html": "Conocer Radiofrecuencia INDIBA →"
+    },
+    "card2": {
+      "eyebrow": "Volumen y relleno",
+      "h3_html": "Buscas volumen o relleno → <em>Inyectables</em>",
+      "p_html": "Pérdida de volumen en pómulos, surcos marcados, labios o arrugas dinámicas. Ácido hialurónico, botox y bioestimuladores aplicados con criterio médico-estético.",
+      "arrow_html": "Ver inyectables →"
+    }
+  },
+  "tests": {
+    "eyebrow": "Pacientes reales",
+    "h2": "Resultados que se notan, y se cuentan.",
+    "p": "Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.",
+    "items": [
+      { "quote_html": "\"Después de años intentando borrar las manchas con cremas carísimas, en cinco sesiones de peeling antimanchas tengo la piel que recuerdo de los treinta.\"", "author": "María José L.", "meta": "Paciente · Peeling Anti-Manchas" },
+      { "quote_html": "\"El dermapen me ha mejorado las cicatrices del acné mucho más de lo que esperaba. Los resultados son progresivos y naturales — nada agresivo.\"", "author": "Cristina A.", "meta": "Paciente · Dermapen" },
+      { "quote_html": "\"Vine pensando que necesitaba ácido hialurónico y me hicieron un diagnóstico honesto: lo mío era hidratación profunda. La diferencia es brutal y me he ahorrado un dineral.\"", "author": "Paciente verificada", "meta": "Reseña Google" }
+    ]
+  },
+  "process": {
+    "eyebrow": "¿Cómo lo empezamos?",
+    "h2": "Cuatro pasos. Sin sorpresas, sin letra pequeña.",
+    "p": "Desde tu primer mensaje hasta la primera sesión pasan menos de dos semanas.",
+    "steps": [
+      { "h3": "Reservas tu diagnóstico gratuito", "p_html": "Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso." },
+      { "h3": "Diagnóstico personalizado en clínica", "p_html": "Vemos tu piel, hablamos de tu historial y de tu objetivo real. Te decimos qué tratamiento(s) tienen sentido para ti — y cuál NO." },
+      { "h3": "Plan a medida con protocolo y frecuencia", "p_html": "Diseñamos el plan: cuántas sesiones, qué orden, qué combinaciones. Todo claro antes de empezar." },
+      { "h3": "Seguimiento real durante el plan", "p_html": "WhatsApp directo entre sesiones para dudas, ajustes o pos-tratamiento. No desaparecemos cuando empiezas." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Dudas frecuentes",
+    "h2": "Lo que más nos preguntan sobre faciales avanzados.",
+    "items": [
+      { "q_html": "¿Cómo sé si lo mío es peeling o dermapen?", "a_html": "Depende del problema. Las manchas y daño solar responden mejor a peelings químicos despigmentantes; las cicatrices, líneas finas y textura irregular responden mejor a dermapen. En el diagnóstico gratuito vemos exactamente qué necesita tu piel." },
+      { "q_html": "¿Cuánto tiempo de baja necesito?", "a_html": "Depende del tratamiento. Dermaplaning y mesoterapia virtual: cero. Hidratación con dermapen y peelings suaves: 24-48h con leve enrojecimiento. Peelings químicos profundos: 4-7 días de descamación controlada. Te lo explicamos al detalle antes de elegir protocolo." },
+      { "q_html": "¿Cuándo voy a ver resultados?", "a_html": "Tratamientos como velo de colágeno o dermaplaning dan luminosidad inmediata desde la primera sesión. Peelings antimanchas y dermapen para cicatrices son progresivos: notas mejoría al mes y resultado pleno entre 3-5 sesiones según el caso." },
+      { "q_html": "¿Puedo combinar varios tratamientos?", "a_html": "Sí, y muchas veces es la mejor estrategia. Dermapen + hidratación, peeling + radiofrecuencia, mesoterapia + velo de colágeno son combinaciones habituales. En el plan personalizado te diseñamos la secuencia óptima." },
+      { "q_html": "Tengo piel sensible / rosácea / estoy embarazada. ¿Hay alternativas?", "a_html": "Sí. Tenemos protocolos específicos para piel sensible y reactiva. Si estás embarazada o lactando, algunos tratamientos están contraindicados pero otros son perfectamente seguros — te lo decimos en la valoración con honestidad clínica." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sin compromiso",
+    "h2_html": "Reserva un diagnóstico gratuito. <em>Empieza por saber qué necesita tu piel</em>.",
+    "p_html": "Treinta minutos en clínica con quien lleva décadas viendo pieles. Si lo tuyo no es ningún tratamiento avanzado, te lo decimos de frente y te orientamos.",
+    "cta": "Reservar valoración →"
+  }
+}
