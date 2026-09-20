@@ -1,0 +1,112 @@
+{
+  "title": "Masajes profesionales en Benidorm — 8 modalidades · AnyLopez",
+  "description": "Catálogo completo de masajes en clínica estética AnyLopez Benidorm: relajante, terapéutico, podal, drenaje, faciales con colágeno y vitamina C. Manualidad experta.",
+  "jsonld": {
+    "name": "Masajes profesionales AnyLopez",
+    "alternateName": "Masaje terapéutico y estético manual",
+    "description": "Catálogo completo de 8 modalidades de masaje en AnyLopez Clínica Estética Benidorm: corporal, relajante, craneo-facial-cervical, podal, piernas cansadas, aloe vera, facial con colágeno y facial con vitamina C.",
+    "specialties": [
+      "Masaje Corporal",
+      "Masaje Relajante",
+      "Masaje Craneo-Facial-Cervical",
+      "Masaje Podal",
+      "Masaje Piernas Cansadas",
+      "Masaje Aloe Vera",
+      "Masaje Facial Colágeno",
+      "Masaje Facial Vitamina C"
+    ],
+    "faq": [
+      { "q": "¿Cuál modalidad para qué?", "a": "Tensión cervical/cefaleas: craneo-facial-cervical. Piernas pesadas: piernas cansadas o aloe vera. Pies cargados o problemas reflejos: podal. Antifatiga general: corporal o relajante. Cuidado facial profundo: colágeno o vitamina C facial." },
+      { "q": "¿Frecuencia ideal?", "a": "Depende del objetivo. Mantenimiento general: 1 vez/mes. Tensión crónica: cada 2-3 semanas hasta resolver. Faciales: cada 4-6 semanas combinados con limpieza." },
+      { "q": "¿Masaje craneo-facial-cervical para migrañas?", "a": "Sí, especialmente útil para cefalea tensional y migraña que se origina en cervicales. No sustituye tratamiento médico pero complementa significativamente." },
+      { "q": "¿Embarazo?", "a": "Sí, con modalidad y posición adaptadas. Masaje relajante con técnica suave es perfectamente seguro. Evitar puntos reflejos en los pies durante primer trimestre." },
+      { "q": "¿Qué es masaje podal y por qué reflexológico?", "a": "El pie tiene zonas que reflejan órganos del cuerpo. Estimular esas zonas con técnica adecuada puede aliviar tensiones lejanas (cefalea, fatiga digestiva, lumbalgia). Más que un masaje de pies — es trabajo sobre cuerpo entero." }
+    ]
+  },
+  "breadcrumb": { "services": "Servicios", "current": "Masajes" },
+  "callCta": "Llamar 656 306 167",
+  "hero": {
+    "imgAlt": "Masajes profesionales en AnyLopez Clínica Estética Benidorm",
+    "eyebrow": "Masajes · 8 modalidades especializadas",
+    "h1_html": "Manos que diagnostican <em>mientras tratan.</em>",
+    "lead": "Has probado masajes en SPAs que te relajaban una hora pero no resolvían nada. Aquí cada masaje tiene un objetivo — descanso real, descongestión, antifatiga, terapia facial — y se elige tras valorar qué pide tu cuerpo o tu rostro ese día.",
+    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "reviews": "reseñas Google",
+    "free": "Diagnóstico inicial sin coste"
+  },
+  "pain": {
+    "eyebrow": "¿Te suena alguna de estas?",
+    "h2": "La mayoría de pacientes que llegan aquí han pasado por lo mismo.",
+    "p": "No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.",
+    "items": [
+      { "h3_html": "Has probado masajes que se sienten igual que un día en el spa.", "p": "Olor agradable, música suave, te despachan exactamente igual que la persona anterior. Bienestar superficial, cero técnica." },
+      { "h3_html": "Vas con tensión cervical o lumbar y sales 'agradablemente relajado' pero igual de tenso.", "p": "El masaje genérico relaja durante una hora — el masaje terapéutico suelta de verdad." },
+      { "h3_html": "Quieres beneficios concretos (drenaje, descongestión, antifatiga, regeneración facial) no solo aromaterapia.", "p": "Un masaje bien hecho cambia el estado del cuerpo." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Por qué los masajes en AnyLopez funcionan",
+    "h2": "Seis razones por las que aquí funcionan donde otros sitios no.",
+    "p": "No es marketing. Es manualidad experta, criterio y técnica específica para cada caso.",
+    "items": [
+      { "h3": "Manualidad experta de quien lleva décadas", "p_html": "Las manos diagnostican mientras tratan. No contratamos becarios para abaratar." },
+      { "h3": "Ocho modalidades específicas", "p_html": "Cada una tiene su técnica y su objetivo: relajante profundo, terapéutico cervical, podal reflexológico, antifatiga piernas, faciales con colágeno o vitamina C." },
+      { "h3": "Diagnóstico previo decide modalidad", "p_html": "No \"qué quieres\" — sino \"qué pide tu cuerpo hoy\". A veces relajación profunda; a veces drenaje; a veces facial regenerador." },
+      { "h3": "Combinable con corporales y faciales", "p_html": "Antes de un facial avanzado un masaje craneo-cervical relaja musculatura. Antes de drenaje, una sesión podal moviliza energía. Sinergias reales." },
+      { "h3": "Sesiones que se sienten desde la primera", "p_html": "No esperas 10 sesiones para notar algo. La diferencia es palpable al final de la primera." },
+      { "h3": "Lo aplica quien firma el resultado", "p_html": "Misma exigencia que en toda la clínica: experiencia real, no certificación express." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Si arrastras tensión muscular crónica",
+    "h2_html": "El masaje alivia, <em>el corporal terapéutico resuelve.</em>",
+    "p": "Para casos de tensión persistente, lumbalgias, recuperación postquirúrgica o celulitis estructural, los tratamientos corporales (recuperación muscular específica, drenaje linfático, maderoterapia) van más allá del masaje.",
+    "cta": "Ver tratamientos corporales →"
+  },
+  "grid": {
+    "eyebrow": "Ocho modalidades · una sola filosofía",
+    "h2": "Los masajes del catálogo.",
+    "p": "Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.",
+    "altSuffix": "en AnyLopez Benidorm",
+    "detailsAria": "Ver detalles de",
+    "detailsCta": "Ver detalles →"
+  },
+  "tests": {
+    "eyebrow": "Pacientes reales",
+    "h2": "Resultados que se notan, y se cuentan.",
+    "p": "Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.",
+    "items": [
+      { "quote_html": "\"Llevaba años con dolores de cabeza y tensión cervical. El masaje craneo-facial-cervical aquí es trabajo terapéutico real, no relajación maquillada. Llevo 6 sesiones y casi no tomo analgésicos.\"", "author": "Aurora L.", "meta": "Paciente · Craneo-facial-cervical" },
+      { "quote_html": "\"El masaje podal con técnica reflexológica fue un descubrimiento. Desde piernas hasta cabeza lo notas. Pago lo mismo que en cualquier spa pero con diferencia abismal.\"", "author": "Marta C.", "meta": "Paciente · Masaje Podal" },
+      { "quote_html": "\"El masaje facial con colágeno tras un mes de pantallas — milagro. Descongestiona, ilumina, devuelve elasticidad. Recomiendo combinarlo con limpieza facial.\"", "author": "Paciente verificada", "meta": "Reseña Google · Masaje Facial Colágeno" }
+    ]
+  },
+  "process": {
+    "eyebrow": "¿Cómo lo empezamos?",
+    "h2": "Cuatro pasos. Sin sorpresas, sin letra pequeña.",
+    "p": "Desde tu primer mensaje hasta que sales de la primera sesión, todo es claro.",
+    "steps": [
+      { "h3": "Reservas hueco", "p": "Llamada/WhatsApp para encontrar día y hora. Sin compromiso, sin pago previo." },
+      { "h3": "Valoración: te preguntamos qué pides hoy + observamos", "p": "Tensión, fatiga, congestión, regeneración facial. Antes de empezar decidimos modalidad — no se aplica un protocolo cualquiera porque sí." },
+      { "h3": "Aplicamos modalidad correspondiente", "p": "Técnica específica (relajante, terapéutico, podal reflexológico, drenaje facial, etc.) con la duración que tu caso requiere." },
+      { "h3": "Recomendación de cadencia y modalidades complementarias", "p": "Si tu caso pide combinar (ej. craneo-cervical antes de un facial avanzado, o podal antes de un drenaje), te lo decimos." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Dudas frecuentes",
+    "h2": "Lo que más nos preguntan sobre los masajes.",
+    "items": [
+      { "q": "¿Cuál modalidad para qué?", "a": "Tensión cervical/cefaleas: craneo-facial-cervical. Piernas pesadas: piernas cansadas o aloe vera. Pies cargados o problemas reflejos: podal. Antifatiga general: corporal o relajante. Cuidado facial profundo: colágeno o vitamina C facial." },
+      { "q": "¿Frecuencia ideal?", "a": "Depende del objetivo. Mantenimiento general: 1 vez/mes. Tensión crónica: cada 2-3 semanas hasta resolver. Faciales: cada 4-6 semanas combinados con limpieza." },
+      { "q": "¿Masaje craneo-facial-cervical para migrañas?", "a": "Sí, especialmente útil para cefalea tensional y migraña que se origina en cervicales. No sustituye tratamiento médico pero complementa significativamente." },
+      { "q": "¿Embarazo?", "a": "Sí, con modalidad y posición adaptadas. Masaje relajante con técnica suave es perfectamente seguro. Evitar puntos reflejos en los pies durante primer trimestre." },
+      { "q": "¿Qué es masaje podal y por qué reflexológico?", "a": "El pie tiene zonas que reflejan órganos del cuerpo. Estimular esas zonas con técnica adecuada puede aliviar tensiones lejanas (cefalea, fatiga digestiva, lumbalgia). Más que un masaje de pies — es trabajo sobre cuerpo entero." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sin compromiso",
+    "h2_html": "Reserva tu primera sesión. <em>Decide modalidad después</em>.",
+    "p": "Te valoramos al llegar y elegimos modalidad según pida tu cuerpo ese día. Si lo tuyo es derivable a fisioterapia médica, te lo decimos.",
+    "cta": "Reservar valoración →"
+  }
+}

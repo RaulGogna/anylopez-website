@@ -1,26 +1,30 @@
 ---
 layout: base.njk
-title: "Masajes profesionales en Benidorm — 8 modalidades · AnyLopez"
-description: "Catálogo completo de masajes en clínica estética AnyLopez Benidorm: relajante, terapéutico, podal, drenaje, faciales con colágeno y vitamina C. Manualidad experta."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/services/masajes/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code]['svc-masajes'].title | safe }}"
+  description: "{{ i18n[l.code]['svc-masajes'].description | safe }}"
 ---
-
+{%- set tx = i18n[l.code]['svc-masajes'] %}
+{%- set tdata = catalogo[l.code] %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalSpecialty",
-  "name": "Masajes profesionales AnyLopez",
-  "alternateName": "Masaje terapéutico y estético manual",
-  "description": "Catálogo completo de 8 modalidades de masaje en AnyLopez Clínica Estética Benidorm: corporal, relajante, craneo-facial-cervical, podal, piernas cansadas, aloe vera, facial con colágeno y facial con vitamina C.",
-  "url": "{{ site.url }}/services/masajes/",
+  "name": "{{ tx.jsonld.name | safe }}",
+  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
+  "description": "{{ tx.jsonld.description | safe }}",
+  "url": "{{ site.url }}{{ l.prefix }}/services/masajes/",
   "relevantSpecialty": [
-    "Masaje Corporal",
-    "Masaje Relajante",
-    "Masaje Craneo-Facial-Cervical",
-    "Masaje Podal",
-    "Masaje Piernas Cansadas",
-    "Masaje Aloe Vera",
-    "Masaje Facial Colágeno",
-    "Masaje Facial Vitamina C"
+{%- for s in tx.jsonld.specialties %}
+    "{{ s | safe }}"{% if not loop.last %},{% endif %}
+{%- endfor %}
   ],
   "provider": { "@id": "{{ site.url }}/#clinic" }
 }
@@ -31,11 +35,9 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Cuál modalidad para qué?", "acceptedAnswer": { "@type": "Answer", "text": "Tensión cervical/cefaleas: craneo-facial-cervical. Piernas pesadas: piernas cansadas o aloe vera. Pies cargados o problemas reflejos: podal. Antifatiga general: corporal o relajante. Cuidado facial profundo: colágeno o vitamina C facial." } },
-    { "@type": "Question", "name": "¿Frecuencia ideal?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del objetivo. Mantenimiento general: 1 vez/mes. Tensión crónica: cada 2-3 semanas hasta resolver. Faciales: cada 4-6 semanas combinados con limpieza." } },
-    { "@type": "Question", "name": "¿Masaje craneo-facial-cervical para migrañas?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, especialmente útil para cefalea tensional y migraña que se origina en cervicales. No sustituye tratamiento médico pero complementa significativamente." } },
-    { "@type": "Question", "name": "¿Embarazo?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, con modalidad y posición adaptadas. Masaje relajante con técnica suave es perfectamente seguro. Evitar puntos reflejos en los pies durante primer trimestre." } },
-    { "@type": "Question", "name": "¿Qué es masaje podal y por qué reflexológico?", "acceptedAnswer": { "@type": "Answer", "text": "El pie tiene zonas que reflejan órganos del cuerpo. Estimular esas zonas con técnica adecuada puede aliviar tensiones lejanas (cefalea, fatiga digestiva, lumbalgia). Más que un masaje de pies — es trabajo sobre cuerpo entero." } }
+{%- for f in tx.jsonld.faq %}
+    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+{%- endfor %}
   ]
 }
 </script>
@@ -477,11 +479,11 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <a href="{{ '/services/' | url }}">Servicios</a>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>
-    <span>Masajes</span>
+    <span>{{ tx.breadcrumb.current }}</span>
   </div>
 </div>
 
@@ -492,7 +494,7 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
       <source srcset="{{ '/images/tratamientos/masajes.webp' | url }}" type="image/webp">
       <img
         src="{{ '/images/tratamientos/masajes.png' | url }}"
-        alt="Masajes profesionales en AnyLopez Clínica Estética Benidorm"
+        alt="{{ tx.hero.imgAlt }}"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -504,18 +506,18 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
   <div class="cat-page-hero-inner">
     <div class="container">
       <div class="cat-page-hero-content">
-        <span class="eyebrow" style="color: var(--gold);">Masajes · 8 modalidades especializadas</span>
-        <h1>Manos que diagnostican <em>mientras tratan.</em></h1>
-        <p class="lead">Has probado masajes en SPAs que te relajaban una hora pero no resolvían nada. Aquí cada masaje tiene un objetivo — descanso real, descongestión, antifatiga, terapia facial — y se elige tras valorar qué pide tu cuerpo o tu rostro ese día.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.hero.eyebrow }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ tx.hero.lead }}</p>
         <div class="cat-page-hero-ctas">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
         </div>
         <div class="cat-page-hero-meta">
           <span class="stars">★★★★★</span>
-          <strong>{{ reviews.rating }} · {{ reviews.count }} reseñas Google</strong>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
           <span class="dot">·</span>
-          <span>Diagnóstico inicial sin coste</span>
+          <span>{{ tx.hero.free }}</span>
         </div>
       </div>
     </div>
@@ -526,23 +528,17 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <section class="cat-page-pain">
   <div class="container">
     <div class="cat-page-pain-head">
-      <span class="eyebrow">¿Te suena alguna de estas?</span>
-      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
-      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+      <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+      <h2>{{ tx.pain.h2 }}</h2>
+      <p>{{ tx.pain.p }}</p>
     </div>
     <div class="cat-page-pain-grid">
+      {%- for it in tx.pain.items %}
       <div class="cat-page-pain-item">
-        <h3>Has probado masajes que se sienten igual que un día en el spa.</h3>
-        <p>Olor agradable, música suave, te despachan exactamente igual que la persona anterior. Bienestar superficial, cero técnica.</p>
+        <h3>{{ it.h3_html | safe }}</h3>
+        <p>{{ it.p }}</p>
       </div>
-      <div class="cat-page-pain-item">
-        <h3>Vas con tensión cervical o lumbar y sales 'agradablemente relajado' pero igual de tenso.</h3>
-        <p>El masaje genérico relaja durante una hora — el masaje terapéutico suelta de verdad.</p>
-      </div>
-      <div class="cat-page-pain-item">
-        <h3>Quieres beneficios concretos (drenaje, descongestión, antifatiga, regeneración facial) no solo aromaterapia.</h3>
-        <p>Un masaje bien hecho cambia el estado del cuerpo.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -551,53 +547,20 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <section class="cat-page-why">
   <div class="container">
     <div class="cat-page-why-head">
-      <span class="eyebrow">Por qué los masajes en AnyLopez funcionan</span>
-      <h2>Seis razones por las que aquí funcionan donde otros sitios no.</h2>
-      <p>No es marketing. Es manualidad experta, criterio y técnica específica para cada caso.</p>
+      <span class="eyebrow">{{ tx.why.eyebrow }}</span>
+      <h2>{{ tx.why.h2 }}</h2>
+      <p>{{ tx.why.p }}</p>
     </div>
     <div class="cat-page-why-grid">
+      {%- for it in tx.why.items %}
       <div class="cat-page-reason">
-        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-num">0{{ loop.index }}</div>
         <div class="cat-page-reason-body">
-          <h3>Manualidad experta de quien lleva décadas</h3>
-          <p>Las manos diagnostican mientras tratan. No contratamos becarios para abaratar.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">02</div>
-        <div class="cat-page-reason-body">
-          <h3>Ocho modalidades específicas</h3>
-          <p>Cada una tiene su técnica y su objetivo: relajante profundo, terapéutico cervical, podal reflexológico, antifatiga piernas, faciales con colágeno o vitamina C.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">03</div>
-        <div class="cat-page-reason-body">
-          <h3>Diagnóstico previo decide modalidad</h3>
-          <p>No "qué quieres" — sino "qué pide tu cuerpo hoy". A veces relajación profunda; a veces drenaje; a veces facial regenerador.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">04</div>
-        <div class="cat-page-reason-body">
-          <h3>Combinable con corporales y faciales</h3>
-          <p>Antes de un facial avanzado un masaje craneo-cervical relaja musculatura. Antes de drenaje, una sesión podal moviliza energía. Sinergias reales.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">05</div>
-        <div class="cat-page-reason-body">
-          <h3>Sesiones que se sienten desde la primera</h3>
-          <p>No esperas 10 sesiones para notar algo. La diferencia es palpable al final de la primera.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">06</div>
-        <div class="cat-page-reason-body">
-          <h3>Lo aplica quien firma el resultado</h3>
-          <p>Misma exigencia que en toda la clínica: experiencia real, no certificación express.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -606,10 +569,10 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <section class="cat-page-xsell">
   <div class="container">
     <div class="cat-page-xsell-inner">
-      <span class="eyebrow">Si arrastras tensión muscular crónica</span>
-      <h2>El masaje alivia, <em>el corporal terapéutico resuelve.</em></h2>
-      <p>Para casos de tensión persistente, lumbalgias, recuperación postquirúrgica o celulitis estructural, los tratamientos corporales (recuperación muscular específica, drenaje linfático, maderoterapia) van más allá del masaje.</p>
-      <a href="{{ '/services/corporal/' | url }}" class="btn btn-accent">Ver tratamientos corporales →</a>
+      <span class="eyebrow">{{ tx.xsell.eyebrow }}</span>
+      <h2>{{ tx.xsell.h2_html | safe }}</h2>
+      <p>{{ tx.xsell.p }}</p>
+      <a href="{{ (l.prefix + '/services/corporal/') | url }}" class="btn btn-accent">{{ tx.xsell.cta }}</a>
     </div>
   </div>
 </section>
@@ -618,12 +581,12 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <section class="cat-page-section">
   <div class="container">
     <div class="cat-page-section-head">
-      <span class="eyebrow">Ocho modalidades · una sola filosofía</span>
-      <h2>Los masajes del catálogo.</h2>
-      <p>Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.</p>
+      <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
+      <h2>{{ tx.grid.h2 }}</h2>
+      <p>{{ tx.grid.p }}</p>
     </div>
 
-    {% set catTrats = tratamientos.tratamientos | byCategory("masajes") %}
+    {% set catTrats = tdata.tratamientos | byCategory("masajes") %}
     <div class="cat-page-grid">
       {% for trat in catTrats %}
       <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
@@ -631,7 +594,7 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
           <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
           <img
             src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-            alt="{{ trat.nombre }} en AnyLopez Benidorm"
+            alt="{{ trat.nombre }} {{ tx.grid.altSuffix }}"
             class="trat-card-img"
             loading="lazy"
             decoding="async"
@@ -664,8 +627,8 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
               type="button"
               class="trat-cta trat-card-trigger"
               data-slug="{{ trat.slug }}"
-              aria-label="Ver detalles de {{ trat.nombre }}"
-            >Ver detalles →</button>
+              aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
+            >{{ tx.grid.detailsCta }}</button>
           </div>
         </div>
       </article>
@@ -678,29 +641,19 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <section class="cat-page-tests">
   <div class="container">
     <div class="cat-page-tests-head">
-      <span class="eyebrow">Pacientes reales</span>
-      <h2>Resultados que se notan, y se cuentan.</h2>
-      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
     </div>
     <div class="cat-page-tests-grid">
+      {%- for it in tx.tests.items %}
       <div class="cat-page-test">
         <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Llevaba años con dolores de cabeza y tensión cervical. El masaje craneo-facial-cervical aquí es trabajo terapéutico real, no relajación maquillada. Llevo 6 sesiones y casi no tomo analgésicos."</p>
-        <div class="cat-page-test-author">Aurora L.</div>
-        <div class="cat-page-test-meta">Paciente · Craneo-facial-cervical</div>
+        <p class="cat-page-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="cat-page-test-author">{{ it.author }}</div>
+        <div class="cat-page-test-meta">{{ it.meta }}</div>
       </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"El masaje podal con técnica reflexológica fue un descubrimiento. Desde piernas hasta cabeza lo notas. Pago lo mismo que en cualquier spa pero con diferencia abismal."</p>
-        <div class="cat-page-test-author">Marta C.</div>
-        <div class="cat-page-test-meta">Paciente · Masaje Podal</div>
-      </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"El masaje facial con colágeno tras un mes de pantallas — milagro. Descongestiona, ilumina, devuelve elasticidad. Recomiendo combinarlo con limpieza facial."</p>
-        <div class="cat-page-test-author">Paciente verificada</div>
-        <div class="cat-page-test-meta">Reseña Google · Masaje Facial Colágeno</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -709,39 +662,20 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <section class="cat-page-process">
   <div class="container">
     <div class="cat-page-process-head">
-      <span class="eyebrow">¿Cómo lo empezamos?</span>
-      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
-      <p>Desde tu primer mensaje hasta que sales de la primera sesión, todo es claro.</p>
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ tx.process.p }}</p>
     </div>
     <div class="cat-page-steps">
+      {%- for it in tx.process.steps %}
       <div class="cat-page-step">
-        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-num">{{ loop.index }}</div>
         <div class="cat-page-step-body">
-          <h3>Reservas hueco</h3>
-          <p>Llamada/WhatsApp para encontrar día y hora. Sin compromiso, sin pago previo.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p }}</p>
         </div>
       </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">2</div>
-        <div class="cat-page-step-body">
-          <h3>Valoración: te preguntamos qué pides hoy + observamos</h3>
-          <p>Tensión, fatiga, congestión, regeneración facial. Antes de empezar decidimos modalidad — no se aplica un protocolo cualquiera porque sí.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">3</div>
-        <div class="cat-page-step-body">
-          <h3>Aplicamos modalidad correspondiente</h3>
-          <p>Técnica específica (relajante, terapéutico, podal reflexológico, drenaje facial, etc.) con la duración que tu caso requiere.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">4</div>
-        <div class="cat-page-step-body">
-          <h3>Recomendación de cadencia y modalidades complementarias</h3>
-          <p>Si tu caso pide combinar (ej. craneo-cervical antes de un facial avanzado, o podal antes de un drenaje), te lo decimos.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -750,30 +684,16 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <section class="cat-page-faq">
   <div class="container">
     <div class="cat-page-faq-head">
-      <span class="eyebrow">Dudas frecuentes</span>
-      <h2>Lo que más nos preguntan sobre los masajes.</h2>
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ tx.faq.h2 }}</h2>
     </div>
     <div class="cat-page-faq-list">
-      <div class="cat-page-faq-item open">
-        <button class="cat-page-faq-q" type="button">¿Cuál modalidad para qué? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Tensión cervical/cefaleas: craneo-facial-cervical. Piernas pesadas: piernas cansadas o aloe vera. Pies cargados o problemas reflejos: podal. Antifatiga general: corporal o relajante. Cuidado facial profundo: colágeno o vitamina C facial.</p></div>
+      {%- for f in tx.faq.items %}
+      <div class="cat-page-faq-item{% if loop.first %} open{% endif %}">
+        <button class="cat-page-faq-q" type="button">{{ f.q }} <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>{{ f.a }}</p></div>
       </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Frecuencia ideal? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Depende del objetivo. Mantenimiento general: 1 vez/mes. Tensión crónica: cada 2-3 semanas hasta resolver. Faciales: cada 4-6 semanas combinados con limpieza.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Masaje craneo-facial-cervical para migrañas? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Sí, especialmente útil para cefalea tensional y migraña que se origina en cervicales. No sustituye tratamiento médico pero complementa significativamente.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Embarazo? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Sí, con modalidad y posición adaptadas. Masaje relajante con técnica suave es perfectamente seguro. Evitar puntos reflejos en los pies durante primer trimestre.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Qué es masaje podal y por qué reflexológico? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>El pie tiene zonas que reflejan órganos del cuerpo. Estimular esas zonas con técnica adecuada puede aliviar tensiones lejanas (cefalea, fatiga digestiva, lumbalgia). Más que un masaje de pies — es trabajo sobre cuerpo entero.</p></div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -781,17 +701,18 @@ description: "Catálogo completo de masajes en clínica estética AnyLopez Benid
 <!-- FINAL CTA -->
 <section class="cat-page-final">
   <div class="container">
-    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
-    <h2>Reserva tu primera sesión. <em>Decide modalidad después</em>.</h2>
-    <p>Te valoramos al llegar y elegimos modalidad según pida tu cuerpo ese día. Si lo tuyo es derivable a fisioterapia médica, te lo decimos.</p>
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ tx.final.p }}</p>
     <div class="cat-page-final-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
     </div>
   </div>
 </section>
 
 <!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{%- set tratamientos = catalogo[l.code] %}
 {% include "treatment-modal.njk" %}
 
 <script>
