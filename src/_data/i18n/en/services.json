@@ -54,7 +54,7 @@
     "h2_html": "Book a free assessment and we'll tell you what you need — and what you don't.",
     "p_html": "Thirty minutes, no commitment. If it's not for you, we'll say so straight up and point you in the right direction. Honesty before the basket.",
     "btn": "Book your assessment →",
-    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp 656 306 167</a>"
+    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
   },
   "jsonld": {
     "name": "AnyLopez Aesthetic Clinic specialities"
