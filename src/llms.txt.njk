@@ -9,8 +9,8 @@ layout: null
 
 ## Servicios
 {% for p in pagesI18n -%}
-{%- if ('/services/' in p.urls.es) and (p.urls.es != '/services/') and i18n.es.crumbs[p.key] %}
-- [{{ i18n.es.crumbs[p.key] }}]({{ site.url }}{{ p.urls.es }})
+{%- if ('/services/' in p.urls.es) and (p.urls.es != '/services/') and i18n.es.chrome.crumbs[p.key] %}
+- [{{ i18n.es.chrome.crumbs[p.key] }}]({{ site.url }}{{ p.urls.es }})
 {%- endif -%}
 {%- endfor %}
 - [Radiofrecuencia INDIBA]({{ site.url }}/radiofrecuencia/)

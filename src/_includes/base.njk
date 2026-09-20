@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {%- set l = langs | langByCode(lang or 'es') %}
-{%- set t = i18n[l.code] %}
+{%- set t = i18n[l.code].chrome %}
 {%- set curEntry = pagesI18n | entryByUrl(page.url) %}
 <html lang="{{ l.code }}"{% if l.dir == 'rtl' %} dir="rtl"{% endif %}>
 <head>
