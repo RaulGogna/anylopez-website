@@ -1,0 +1,153 @@
+{
+  "title": "INDIBA Radiofrequency in Benidorm — Non-surgical lifting · AnyLopez",
+  "description": "INDIBA radiofrequency at AnyLopez Benidorm. Deep CRet/RES technology. 10-Session Packs from €350. Results from the first session — no pain, no downtime.",
+  "jsonld": {
+    "name": "INDIBA Radiofrequency",
+    "alternateName": "INDIBA Radiofrequency Anti-Ageing",
+    "description": "Deep INDIBA radiofrequency with CRet/RES technology. Non-invasive, painless treatment for facial and body sagging, cellulite, wrinkles and firming. 10-Session Packs from €350.",
+    "bodyLocation": ["Face", "Neck", "Abdomen", "Buttocks", "Legs", "Arms"],
+    "howPerformed": "Manual application with a CRet or RES head over the treatment area for 30-60 minutes. No needles, no pain, no recovery time.",
+    "preparation": "No prior preparation required. Arrive with clean skin and no creams.",
+    "followup": "Personalised plan of 10 sessions recommended. Monthly maintenance after the pack.",
+    "offerName": "10-Session (45 min) INDIBA Radiofrequency Anti-Ageing Pack",
+    "offerDescription": "10 sessions of 45-min INDIBA radiofrequency. Free initial assessment.",
+    "faq": [
+      { "q": "Is INDIBA radiofrequency treatment safe?", "a": "Yes, it is completely safe. The INDIBA radiofrequency system is non-invasive, approved for medical-aesthetic use, requires no anaesthesia or recovery and has been used for decades in sports medicine, physiotherapy and advanced aesthetic clinics." },
+      { "q": "Does the INDIBA Radiofrequency treatment hurt?", "a": "No, it is painless. The sensation is one of pleasant deep warmth in the treated area. Most patients describe the session as relaxing. No anaesthesia required." },
+      { "q": "When will I see results from INDIBA radiofrequency?", "a": "Results are visible from the first session and continue to improve with each treatment. For optimal, long-lasting results we recommend completing the full 10-session pack." },
+      { "q": "What makes INDIBA Radiofrequency different from other radiofrequencies?", "a": "INDIBA radiofrequency works at 448 kHz, a patented frequency that safely penetrates the deep (hypodermic) layers. Other radiofrequencies operate at more superficial frequencies or are more aggressive and painful. INDIBA Radiofrequency is the clinical reference for deep firming without surgery." },
+      { "q": "Can INDIBA Radiofrequency be combined with other treatments?", "a": "Yes. INDIBA Radiofrequency enhances and combines seamlessly with Ultherapy/HIFU, wood therapy, mesotherapy and peels. During the free assessment we design the optimal combined plan for you." },
+      { "q": "How many INDIBA Radiofrequency sessions do I need?", "a": "We recommend a 10-session pack (1-2 per week) for optimal results. The exact number depends on the treatment area and goal. During your first (free) assessment we evaluate your case and design the right plan." },
+      { "q": "How much does the INDIBA Radiofrequency Pack cost?", "a": "The 10-session 45-min pack costs €500 — €50 per session, saving you €375 versus buying everything separately. There is also a 10-session 30-min pack for €350 and a 5-session 30-min pack for €250. Single sessions range from €45 to €85 depending on duration and area. Free initial assessment, no strings attached." }
+    ]
+  },
+  "breadcrumb": { "services": "Services", "current": "INDIBA Radiofrequency" },
+  "callCta": "Call +34 656 306 167",
+  "hero": {
+    "imgAlt": "INDIBA radiofrequency session at AnyLopez Benidorm",
+    "eyebrow_html": "Flagship treatment · Lifting & Anti-Ageing",
+    "h1_html": "Firm without surgery. <em>Results from the very first session.</em>",
+    "lead": "If you have been looking after yourself for years and the mirror still shows sagging, it is not your fault — creams simply do not reach where INDIBA Radiofrequency reaches. Deep CRet/RES technology that stimulates your own collagen. No needles, no pain, no downtime.",
+    "ctaPrimary": "Book your free assessment →",
+    "reviews": "Google reviews",
+    "packMeta_html": "10-Session Pack (45 min) <strong>€500</strong> (you save €375)"
+  },
+  "pain": {
+    "eyebrow": "Does any of this sound familiar?",
+    "h2": "Most patients who walk in here have been through the same thing.",
+    "p": "You are not coming out of nowhere. You are coming after trying other things that never quite worked.",
+    "items": [
+      { "h3": "You have tried creams, massages and devices elsewhere.", "p_html": "You noticed something at first, but within a few weeks it all came back. Surface treatments help; sagging lives much deeper." },
+      { "h3": "You refuse to go under the knife — and rightly so.", "p_html": "You do not want anaesthesia, months of recovery or that pulled-tight look that does not feel like you. But you will not settle for \"bit by bit nothing happens\" either." },
+      { "h3": "The mirror looks tired despite all your effort.", "p_html": "You eat well, you stay hydrated, you sleep when you can. But the jawline contour, that arm laxity, that cellulite will not budge with discipline alone." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why INDIBA Radiofrequency works",
+    "h2": "Six reasons this technology changes the game.",
+    "p": "It is not magic and it is not marketing. It is physics applied to your physiology.",
+    "items": [
+      { "h3": "Deep CRet/RES technology", "p_html": "INDIBA radiofrequency works at 448 kHz, a patented frequency that reaches the hypodermic layer. Where a surgeon would cut to perform a lifting, we stimulate without opening the skin." },
+      { "h3": "Activates your own collagen", "p_html": "We do not inject substances. INDIBA Radiofrequency reactivates the natural production of collagen and elastin your body already knows how to make — it has just slowed down with age." },
+      { "h3": "Results from the first session", "p_html": "You do not have to wait three months to see \"something\". You leave the first session with brighter, firmer skin. The full effect builds over the 10-Session Pack." },
+      { "h3": "Painless and no downtime", "p_html": "The session is relaxing — pleasant deep warmth. You leave and carry on with your day: lunch, work, gym. No marks, no creams, no rest." },
+      { "h3": "Compatible with Ultherapy HIFU, mesotherapy and peels", "p_html": "INDIBA Radiofrequency enhances and combines with everything you are already doing. During the assessment we design the combined plan that multiplies results." },
+      { "h3": "Treated by the person who owns the result", "p_html": "No conveyor belt of trainees here. You are seen by someone who has worked with this technology for decades and knows exactly where to insist — and where not — for your case." }
+    ]
+  },
+  "mod": {
+    "eyebrow": "Two modalities, one principle",
+    "h2": "INDIBA Radiofrequency Facial and INDIBA Radiofrequency Body.",
+    "p": "The protocol adapts to the area. The technology is the same; the results, just as visible.",
+    "card1": {
+      "imgAlt": "INDIBA Radiofrequency Facial at AnyLopez Benidorm",
+      "h3": "INDIBA Radiofrequency Facial",
+      "p": "Firms the jawline, softens fine lines and delivers immediate radiance. Ideal for facial contour, neck and décolletage.",
+      "items": [
+        "Reduces fine lines and expression lines",
+        "Firmness and radiance from the very first session",
+        "Reduces sagging of jawline and neck",
+        "Deep intracellular hydration"
+      ]
+    },
+    "card2": {
+      "imgAlt": "INDIBA Radiofrequency Body at AnyLopez Benidorm",
+      "h3": "INDIBA Radiofrequency Body",
+      "p": "Targets cellulite, localised fat and laxity in abdomen, arms and legs. Can be combined with wood therapy and mesotherapy for faster results.",
+      "items": [
+        "Visibly reduces cellulite",
+        "Works on localised fat",
+        "Firms skin on arms, abdomen and legs",
+        "Compatible with wood therapy and mesotherapy"
+      ]
+    }
+  },
+  "pack": {
+    "eyebrow": "10-Session Pack (45 min)",
+    "h2_html": "Everything that's included, <em>and everything you save</em>.",
+    "p_html": "This is not an \"offer\". It is the difference between buying it all piecemeal and buying it properly.",
+    "stack": [
+      { "label": "10 INDIBA radiofrequency sessions, 45 min each (CRet/RES)", "price": "€650" },
+      { "label": "Personalised initial assessment (30 min)", "price": "€80" },
+      { "label": "Bespoke protocol plan + adjustments", "price": "€50" },
+      { "label": "Between-sessions follow-up (direct WhatsApp)", "price": "€30" },
+      { "label": "60-day review after finishing the pack", "price": "€65" }
+    ],
+    "totalLabel": "Total value",
+    "crossed": "€875",
+    "priceLabel": "Your pack price",
+    "final_html": "€500",
+    "savings": "Save €375 · 43% less than buying it piecemeal",
+    "waText_html": "Hi,%20I'm%20interested%20in%20the%20INDIBA%20Radiofrequency%20Pack",
+    "ratesTitle": "All INDIBA Radiofrequency prices",
+    "rates": [
+      { "label_html": "Facial or body session (30 min)", "price_html": "€45" },
+      { "label_html": "Facial session (45 min)", "price_html": "€65" },
+      { "label_html": "Body session (60 min, per area)", "price_html": "€85" },
+      { "label_html": "Vaginal session (60 min)", "price_html": "€85" },
+      { "label_html": "5-session pack (30 min)", "price_html": "€250" },
+      { "label_html": "10-session pack (30 min)", "price_html": "€350" },
+      { "label_html": "<strong>10-session pack (45 min) — best value</strong>", "price_html": "<strong>€500</strong>" }
+    ]
+  },
+  "tests": {
+    "eyebrow": "Real patients",
+    "h2": "Results you can see, and that people talk about.",
+    "p": "Verified Google reviews. No actors, no pills, no Photoshopped before-and-afters.",
+    "items": [
+      { "quote_html": "\"Firmer, more radiant skin with quick results from the very first session. The team is highly professional and the treatment is very comfortable. Wholeheartedly recommended.\"", "author": "Ana Bayixauli", "meta": "Patient · INDIBA Radiofrequency Facial" },
+      { "quote_html": "\"Noticeable improvement in my cellulite and no pain at all. The treatment is very comfortable and the results speak for themselves. Very happy with the clinic and the whole team.\"", "author": "Maria Castillo", "meta": "Patient · INDIBA Radiofrequency Body" },
+      { "quote_html": "\"After trying several places, here I have finally found what I was looking for. Impeccable care, honest advice and results you see in the mirror — not in a brochure.\"", "author": "Verified patient", "meta": "Google review · INDIBA Radiofrequency Anti-Ageing Pack" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How do we get started?",
+    "h2": "Four steps. No surprises, no small print.",
+    "p": "From your first message to seeing the first improvement is less than two weeks.",
+    "steps": [
+      { "h3": "Book your free assessment", "p": "Call or WhatsApp to find a slot. 30 minutes in clinic, no cost and no commitment. We reply in under 24 hours." },
+      { "h3": "We assess you in clinic", "p": "We review the area, your history and your expectations. If INDIBA Radiofrequency is not the right fit for your case, we tell you straight and point you toward what is." },
+      { "h3": "Personalised plan and tailored pack", "p": "We design the protocol, frequency (1-2 sessions per week) and treatment areas. You start when you decide — no pressure." },
+      { "h3": "Real follow-up during and after", "p": "Direct WhatsApp between sessions for questions or adjustments. After the pack, a 60-day review to plan maintenance. We do not vanish once we have been paid." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "h2": "What people most often ask us about INDIBA Radiofrequency.",
+    "items": [
+      { "q": "Is INDIBA Radiofrequency treatment safe?", "a_html": "Yes, completely. INDIBA radiofrequency is non-invasive, approved for medical-aesthetic use and has been used for decades in sports medicine, physiotherapy and advanced aesthetic clinics. No anaesthesia or recovery required." },
+      { "q": "Does it hurt?", "a_html": "No. The sensation is one of pleasant deep warmth in the treated area — most patients describe the session as relaxing. No needles, no incisions, no anaesthesia." },
+      { "q": "When will I see results?", "a_html": "From the first session you will notice brighter, firmer skin. The full effect (visible reduction in laxity, jawline definition, improved cellulite) builds during the 10-Session Pack and lasts months afterwards." },
+      { "q": "What sets INDIBA Radiofrequency apart from other radiofrequencies on the market?", "a_html": "INDIBA radiofrequency works at 448 kHz — a patented frequency that safely and deeply penetrates the hypodermic layer. Other radiofrequencies operate at more superficial frequencies or are more aggressive and painful. INDIBA Radiofrequency is the clinical reference for deep firming without surgery." },
+      { "q": "Can it be combined with other treatments?", "a_html": "Yes. INDIBA Radiofrequency enhances and combines seamlessly with Ultherapy/HIFU, wood therapy, mesotherapy and peels. During the assessment we design the optimal combined plan for your case." },
+      { "q": "How many sessions do I need?", "a_html": "We recommend a 10-session pack (1-2 per week). The exact number depends on the area and your goal. During your first free consultation we evaluate your case and design the right plan." },
+      { "q": "How much does it cost?", "a_html": "The 10-session 45-min pack costs <strong>€500</strong> — €50 per session, saving you <strong>€375</strong> versus buying everything separately. There is also a 10-session 30-min pack for €350 and a 5-session 30-min pack for €250. Single sessions range from €45 to €85 depending on duration and area. Free initial assessment, no strings attached." }
+    ]
+  },
+  "final": {
+    "eyebrow": "No commitment",
+    "h2_html": "Book your free assessment. <em>Start by knowing what you need — and what you don't</em>.",
+    "p": "Thirty minutes in clinic with someone who has spent decades with this technology. If it is not right for you, we will tell you straight.",
+    "cta": "Book your assessment →"
+  }
+}
