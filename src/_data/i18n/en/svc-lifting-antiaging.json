@@ -1,0 +1,108 @@
+{
+  "title": "Non-surgical Lifting & Anti-Ageing in Benidorm — Ultherapy + INDIBA Radiofrequency · AnyLopez",
+  "description": "Facial and body firming without surgery: Ultherapy HIFU and INDIBA radiofrequency at AnyLopez Aesthetic Clinic Benidorm. Free initial consultation.",
+  "brandRF": "INDIBA Radiofrequency",
+  "jsonld": {
+    "name": "AnyLopez Lifting & Anti-Ageing",
+    "alternateName": "Non-surgical Firming",
+    "description": "Catalogue of non-surgical lifting and anti-ageing treatments at AnyLopez Aesthetic Clinic Benidorm: Ultherapy HIFU and INDIBA radiofrequency. Deep collagen and elastin stimulation, no surgery, no downtime.",
+    "specialties": [
+      "Ultherapy HIFU",
+      "INDIBA Radiofrequency"
+    ],
+    "faq": [
+      { "q": "Ultherapy HIFU or INDIBA Radiofrequency — which one to choose?", "a": "It depends. HIFU is a shock treatment (1-2 sessions, results at 3-6 months). INDIBA Radiofrequency is progressive (10-session package, results from the 1st session). HIFU suits moderate-to-significant laxity. INDIBA Radiofrequency suits maintenance and gradual firming. We confirm the right choice during your consultation." },
+      { "q": "How many Ultherapy HIFU sessions do I need?", "a": "1-2 sessions depending on the area and degree of laxity. Sessions are spaced 6-12 months apart for maintenance. INDIBA Radiofrequency is a 10-session package run on a weekly cadence." },
+      { "q": "How long do the results last?", "a": "Ultherapy: 12-18 months once the full effect develops at 3-6 months. INDIBA Radiofrequency: long-lasting effect with monthly maintenance after the package." },
+      { "q": "At what age should I start?", "a": "When you notice loss of firmness in the jawline, typically from 35-45 years onward. Better sooner than later: stimulating collagen works best while you still have reserves." },
+      { "q": "What is the post-session care?", "a": "Minimal: topical hydration, strict sun protection over the following days, avoid saunas/extreme heat for 48h. We hand you written guidance after every session." }
+    ]
+  },
+  "breadcrumb": { "services": "Services", "current_html": "Lifting & Anti-Ageing" },
+  "callCta": "Call 656 306 167",
+  "hero": {
+    "imgAlt": "Non-surgical lifting and anti-ageing at AnyLopez Aesthetic Clinic Benidorm",
+    "eyebrow_html": "Lifting & Anti-Ageing · 2 complementary technologies",
+    "h1_html": "Firm with technology, <em>not with a scalpel.</em>",
+    "lead_html": "If you have ruled out surgery — out of fear, risk or weeks of downtime — and firming creams still aren't restoring tone, the answer lies in deep aesthetic technology. Ultherapy HIFU and INDIBA Radiofrequency reach where a surgeon would cut. Without cutting.",
+    "ctaPrimary": "Book your free consultation →",
+    "reviews": "Google reviews",
+    "free": "Free initial consultation"
+  },
+  "pain": {
+    "eyebrow": "Does any of this sound familiar?",
+    "h2": "Most patients who come here have been through the same thing.",
+    "p_html": "You're not arriving from nowhere. You're arriving after trying other things that didn't quite work.",
+    "items": [
+      { "h3_html": "The mirror keeps showing more laxity in your jawline, décolletage and arms.", "p_html": "Firming creams promised and held the line — but didn't bring back what was lost. The skin needs deep stimulation, not serums." },
+      { "h3_html": "You've ruled out surgery for the risk and the recovery time.", "p_html": "You don't want anaesthesia, weeks off work, or a result that looks artificial. But you won't settle for cosmetics either." },
+      { "h3_html": "You've tried \"cosmetic liftings\" elsewhere that promised and didn't deliver.", "p_html": "Devices used without judgement, sessions without diagnosis, cheap equipment. Technology without craft doesn't work." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why non-surgical lifting at AnyLopez works",
+    "h2_html": "Six reasons it works here where it doesn't elsewhere.",
+    "p": "Not marketing. Deep technology, clinical judgement and decades of craft.",
+    "items": [
+      { "h3": "Two deep, complementary technologies", "p": "Ultherapy HIFU works at the SMAS layer (the same layer a surgeon cuts to perform a lifting). INDIBA radiofrequency at 448 kHz penetrates down to the hypodermis. Each targets different layers." },
+      { "h3": "Combinable with genuine synergy", "p": "If your case calls for it, we combine Ultherapy HIFU + INDIBA Radiofrequency in a sequenced plan. Not a sales pitch — a clinical protocol." },
+      { "h3": "No surgery, no anaesthesia, no downtime", "p": "You walk out and carry on with your life. No marks, no medication, no month indoors." },
+      { "h3": "Gradual, lasting results", "p": "Not instant magic. We stimulate your own collagen and elastin, which take 3-6 months to reach full effect and last 12-18 months." },
+      { "h3": "Honest clinical diagnosis", "p": "We tell you which one (or both) is right for you. If your case truly needs injectables or surgery instead, we tell you that too." },
+      { "h3": "Performed by the person signing off the result", "p": "Decades with this technology. Knows where to insist and where to ease off in each case." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Two technologies · one philosophy",
+    "h2": "The lifting and anti-ageing treatments in our catalogue.",
+    "p": "Tap any card to see full benefits, prices and packages.",
+    "altSuffix": "at AnyLopez Benidorm",
+    "viewFullCta": "View full page →",
+    "detailsAria": "View details for",
+    "detailsCta": "View details →"
+  },
+  "xsell": {
+    "eyebrow": "INDIBA Radiofrequency is our flagship",
+    "h2_html": "If your case calls for INDIBA Radiofrequency, <em>we have a dedicated page.</em>",
+    "p": "INDIBA radiofrequency is our flagship treatment. Dedicated page with the 10-session package, facial and body modalities, and the full clinical detail.",
+    "cta": "View the full INDIBA Radiofrequency page →"
+  },
+  "tests": {
+    "eyebrow": "Real patients",
+    "h2": "Results you can see — and that people talk about.",
+    "p": "Verified Google reviews. No actors, no pills, no photoshopped before-and-afters.",
+    "items": [
+      { "quote_html": "\"One Ultherapy session and three months later my jawline has the contour it had ten years ago. No surgery, no downtime. I'm amazed.\"", "author": "Cristina M.", "meta": "Patient · Ultherapy HIFU" },
+      { "quote_html": "\"We combined Ultherapy with the INDIBA Radiofrequency package and the results reinforce each other. Honest diagnosis from the first day.\"", "author": "Pilar R.", "meta": "Patient · Ultherapy HIFU + INDIBA Radiofrequency" },
+      { "quote_html": "\"I came in thinking I needed thread lifts and they made me see my case was actually Ultherapy HIFU + Botox. The difference between selling a treatment and solving a problem.\"", "author": "Verified patient", "meta": "Google review" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How do we start?",
+    "h2": "Four steps. No surprises, no small print.",
+    "p": "From your first message to seeing the first improvement is less than two weeks.",
+    "steps": [
+      { "h3": "You book your free consultation", "p_html": "Call/WhatsApp to find a slot. 30 minutes at the clinic, no cost, no commitment." },
+      { "h3": "Clinical assessment of the case", "p_html": "We assess area, degree of laxity, skin quality and goal. We decide whether your case is Ultherapy HIFU, INDIBA Radiofrequency, both combined, or whether — given its features — another solution would suit you better." },
+      { "h3": "Personalised Ultherapy HIFU / INDIBA Radiofrequency / combined plan", "p_html": "You don't just \"come in for a session\". We design the protocol: number of sessions, cadence, what to combine and why. And if your case can be resolved with less than expected, we say so." },
+      { "h3": "Follow-up over the months after the session", "p_html": "Ultherapy HIFU's result is progressive: not visible today, visible at 3-6 months. Direct WhatsApp for questions, adjustments and guidance until you see the final effect." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "h2": "What patients ask us most about lifting and anti-ageing.",
+    "items": [
+      { "q": "Ultherapy HIFU or INDIBA Radiofrequency — which one to choose?", "a": "It depends. HIFU is a shock treatment (1-2 sessions, results at 3-6 months). INDIBA Radiofrequency is progressive (10-session package, results from the 1st session). HIFU suits moderate-to-significant laxity. INDIBA Radiofrequency suits maintenance and gradual firming. We confirm the right choice during your consultation." },
+      { "q": "How many Ultherapy HIFU sessions do I need?", "a": "1-2 sessions depending on the area and degree of laxity. Sessions are spaced 6-12 months apart for maintenance. INDIBA Radiofrequency is a 10-session package run on a weekly cadence." },
+      { "q": "How long do the results last?", "a": "Ultherapy: 12-18 months once the full effect develops at 3-6 months. INDIBA Radiofrequency: long-lasting effect with monthly maintenance after the package." },
+      { "q": "At what age should I start?", "a": "When you notice loss of firmness in the jawline, typically from 35-45 years onward. Better sooner than later: stimulating collagen works best while you still have reserves." },
+      { "q": "What is the post-session care?", "a": "Minimal: topical hydration, strict sun protection over the following days, avoid saunas/extreme heat for 48h. We hand you written guidance after every session." }
+    ]
+  },
+  "final": {
+    "eyebrow": "No commitment",
+    "h2_html": "Book a free consultation. <em>We'll tell you which technology is right for you</em>.",
+    "p_html": "Thirty minutes at the clinic with someone who has spent decades with Ultherapy HIFU and INDIBA Radiofrequency. If your case calls for something else (injectables, threads, surgery), we'll say so honestly.",
+    "cta": "Book your assessment →"
+  }
+}

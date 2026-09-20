@@ -1,20 +1,30 @@
 ---
 layout: base.njk
-title: "Lifting y Antiaging sin cirugía en Benidorm — Ultherapy + Radiofrecuencia INDIBA · AnyLopez"
-description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y radiofrecuencia INDIBA en AnyLopez Clínica Estética Benidorm. Diagnóstico inicial gratuito."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/services/lifting-antiaging/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code]['svc-lifting-antiaging'].title | safe }}"
+  description: "{{ i18n[l.code]['svc-lifting-antiaging'].description | safe }}"
 ---
-
+{%- set tx = i18n[l.code]['svc-lifting-antiaging'] %}
+{%- set tdata = catalogo[l.code] %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalSpecialty",
-  "name": "Lifting y Antiaging AnyLopez",
-  "alternateName": "Reafirmación sin cirugía",
-  "description": "Catálogo de tratamientos de lifting y antiaging sin cirugía en AnyLopez Clínica Estética Benidorm: Ultherapy HIFU y radiofrecuencia INDIBA. Estimulación profunda de colágeno y elastina, sin quirófano, sin baja.",
-  "url": "{{ site.url }}/services/lifting-antiaging/",
+  "name": "{{ tx.jsonld.name | safe }}",
+  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
+  "description": "{{ tx.jsonld.description | safe }}",
+  "url": "{{ site.url }}{{ l.prefix }}/services/lifting-antiaging/",
   "relevantSpecialty": [
-    "Ultherapy HIFU",
-    "Radiofrecuencia INDIBA"
+{%- for s in tx.jsonld.specialties %}
+    "{{ s | safe }}"{% if not loop.last %},{% endif %}
+{%- endfor %}
   ],
   "provider": { "@id": "{{ site.url }}/#clinic" }
 }
@@ -25,11 +35,9 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Ultherapy HIFU o Radiofrecuencia INDIBA, cuál elegir?", "acceptedAnswer": { "@type": "Answer", "text": "Depende. HIFU es de choque (1-2 sesiones, resultados a 3-6 meses). Radiofrecuencia INDIBA es progresivo (Pack 10 sesiones, resultados desde la 1ª). HIFU para flacidez moderada-alta. Radiofrecuencia INDIBA para mantenimiento + reafirmación gradual. En el diagnóstico te lo concretamos." } },
-    { "@type": "Question", "name": "¿Cuántas sesiones de Ultherapy HIFU necesito?", "acceptedAnswer": { "@type": "Answer", "text": "1-2 sesiones según zona y grado de flacidez. Las sesiones se espacian 6-12 meses para mantenimiento. Radiofrecuencia INDIBA es Pack 10 con cadencia semanal." } },
-    { "@type": "Question", "name": "¿Cuánto duran los resultados?", "acceptedAnswer": { "@type": "Answer", "text": "Ultherapy: 12-18 meses tras pleno efecto a los 3-6 meses. Radiofrecuencia INDIBA: efecto durable con mantenimiento mensual tras Pack." } },
-    { "@type": "Question", "name": "¿A qué edad empezar?", "acceptedAnswer": { "@type": "Answer", "text": "Cuando notas pérdida de firmeza del óvalo, normalmente desde 35-45 años. Mejor antes que después: estimular colágeno funciona mejor cuando aún hay reserva." } },
-    { "@type": "Question", "name": "¿Cuidados post-sesión?", "acceptedAnswer": { "@type": "Answer", "text": "Mínimos: hidratación tópica, protector solar estricto los siguientes días, evitar saunas/calor extremo 48h. Te entregamos pauta escrita tras cada sesión." } }
+{%- for f in tx.jsonld.faq %}
+    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+{%- endfor %}
   ]
 }
 </script>
@@ -272,7 +280,7 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
   }
   .trat-cta:hover { color: var(--terra); }
 
-  /* ─── CROSS-SELL BAND (toward Radiofrecuencia INDIBA flagship) ────── */
+  /* ─── CROSS-SELL BAND (toward {{ tx.brandRF }} flagship) ────── */
   .cat-page-xsell {
     background: var(--dark);
     color: #fff;
@@ -476,11 +484,11 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <a href="{{ '/services/' | url }}">Servicios</a>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>
-    <span>Lifting y Antiaging</span>
+    <span>{{ tx.breadcrumb.current_html | safe }}</span>
   </div>
 </div>
 
@@ -491,7 +499,7 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
       <source srcset="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.webp' | url }}" type="image/webp">
       <img
         src="{{ '/images/fotoscatalogoanylopez/ultherapyfacial.png' | url }}"
-        alt="Lifting y antiaging sin cirugía en AnyLopez Clínica Estética Benidorm"
+        alt="{{ tx.hero.imgAlt }}"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -503,18 +511,18 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
   <div class="cat-page-hero-inner">
     <div class="container">
       <div class="cat-page-hero-content">
-        <span class="eyebrow" style="color: var(--gold);">Lifting y Antiaging · 2 tecnologías complementarias</span>
-        <h1>Reafirma con tecnología, <em>no con bisturí.</em></h1>
-        <p class="lead">Si has descartado quirófano por miedo, por riesgo o por la baja postoperatoria — y las cremas firming siguen sin devolverte tono — la respuesta está en aparatología profunda. Ultherapy HIFU e Radiofrecuencia INDIBA llegan donde un cirujano corta. Sin cortar.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.hero.eyebrow_html | safe }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ tx.hero.lead_html | safe }}</p>
         <div class="cat-page-hero-ctas">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
         </div>
         <div class="cat-page-hero-meta">
           <span class="stars">★★★★★</span>
-          <strong>{{ reviews.rating }} · {{ reviews.count }} reseñas Google</strong>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
           <span class="dot">·</span>
-          <span>Diagnóstico inicial sin coste</span>
+          <span>{{ tx.hero.free }}</span>
         </div>
       </div>
     </div>
@@ -525,23 +533,17 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
 <section class="cat-page-pain">
   <div class="container">
     <div class="cat-page-pain-head">
-      <span class="eyebrow">¿Te suena alguna de estas?</span>
-      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
-      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+      <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+      <h2>{{ tx.pain.h2 }}</h2>
+      <p>{{ tx.pain.p_html | safe }}</p>
     </div>
     <div class="cat-page-pain-grid">
+      {%- for it in tx.pain.items %}
       <div class="cat-page-pain-item">
-        <h3>Los espejos te devuelven cada vez más flacidez del óvalo, escote y brazos.</h3>
-        <p>Cremas reafirmantes prometieron y mantuvieron — pero no devolvieron lo perdido. La piel necesita estimulación profunda, no sérums.</p>
+        <h3>{{ it.h3_html | safe }}</h3>
+        <p>{{ it.p_html | safe }}</p>
       </div>
-      <div class="cat-page-pain-item">
-        <h3>Has descartado el quirófano por riesgo y por tiempo de recuperación.</h3>
-        <p>No quieres anestesia, ni un mes de baja, ni un resultado que se note artificial. Pero tampoco te conformas con cosmética.</p>
-      </div>
-      <div class="cat-page-pain-item">
-        <h3>Has probado "liftings cosméticos" en otros centros que prometieron y no cumplieron.</h3>
-        <p>Aparatos sin criterio, sesiones sin diagnóstico, equipos baratos. La tecnología sin oficio no funciona.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -550,53 +552,20 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
 <section class="cat-page-why">
   <div class="container">
     <div class="cat-page-why-head">
-      <span class="eyebrow">Por qué el lifting sin cirugía en AnyLopez funciona</span>
-      <h2>Seis razones por las que aquí funcionan donde otros sitios no.</h2>
-      <p>No es marketing. Es tecnología profunda, criterio clínico y oficio de décadas.</p>
+      <span class="eyebrow">{{ tx.why.eyebrow }}</span>
+      <h2>{{ tx.why.h2_html | safe }}</h2>
+      <p>{{ tx.why.p }}</p>
     </div>
     <div class="cat-page-why-grid">
+      {%- for it in tx.why.items %}
       <div class="cat-page-reason">
-        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-num">0{{ loop.index }}</div>
         <div class="cat-page-reason-body">
-          <h3>Dos tecnologías profundas y complementarias</h3>
-          <p>Ultherapy HIFU trabaja a nivel SMAS (donde el cirujano corta para hacer un lifting). La radiofrecuencia INDIBA a 448 kHz penetra hasta hipodermis. Cada una ataca capas distintas.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p }}</p>
         </div>
       </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">02</div>
-        <div class="cat-page-reason-body">
-          <h3>Combinables con sinergia real</h3>
-          <p>Si tu caso lo pide, combinamos Ultherapy HIFU + Radiofrecuencia INDIBA en plan secuenciado. No es vendedor — es protocolo clínico.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">03</div>
-        <div class="cat-page-reason-body">
-          <h3>Sin quirófano, sin anestesia, sin baja</h3>
-          <p>Sales y sigues con tu vida. Sin marcas, sin medicación, sin un mes recluido.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">04</div>
-        <div class="cat-page-reason-body">
-          <h3>Resultados graduales y duraderos</h3>
-          <p>No es magia inmediata. Es estímulo de tu propio colágeno y elastina, que tarda 3-6 meses en pleno efecto y dura 12-18 meses.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">05</div>
-        <div class="cat-page-reason-body">
-          <h3>Diagnóstico clínico honesto</h3>
-          <p>Te decimos cuál de los dos (o ambos) es para ti. Si tu caso necesita inyectables o cirugía mejor, también te lo decimos.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">06</div>
-        <div class="cat-page-reason-body">
-          <h3>Lo aplica quien firma el resultado</h3>
-          <p>Décadas con esta tecnología. Sabe dónde insistir y dónde no en cada caso.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -605,21 +574,21 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
 <section class="cat-page-section">
   <div class="container">
     <div class="cat-page-section-head">
-      <span class="eyebrow">Dos tecnologías · una sola filosofía</span>
-      <h2>Los tratamientos de lifting y antiaging del catálogo.</h2>
-      <p>Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.</p>
+      <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
+      <h2>{{ tx.grid.h2 }}</h2>
+      <p>{{ tx.grid.p }}</p>
     </div>
 
-    {% set catTrats = tratamientos.tratamientos | byCategory("lifting-antiaging") %}
+    {% set catTrats = tdata.tratamientos | byCategory("lifting-antiaging") %}
     <div class="cat-page-grid">
       {% for trat in catTrats %}
         {% if trat.slug == "radiofrecuencia-indiba" %}
-        <a href="{{ '/radiofrecuencia/' | url }}" class="trat-card trat-card-link" id="{{ trat.slug }}">
+        <a href="{{ (l.prefix + '/radiofrecuencia/') | url }}" class="trat-card trat-card-link" id="{{ trat.slug }}">
           <picture>
             <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
             <img
               src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-              alt="{{ trat.nombre }} en AnyLopez Benidorm"
+              alt="{{ trat.nombre }} {{ tx.grid.altSuffix }}"
               class="trat-card-img"
               loading="lazy"
               decoding="async"
@@ -648,7 +617,7 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
                 </svg>
                 {{ trat.duracion }}
               </span>
-              <span class="trat-cta">Ver ficha completa →</span>
+              <span class="trat-cta">{{ tx.grid.viewFullCta }}</span>
             </div>
           </div>
         </a>
@@ -658,7 +627,7 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
             <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
             <img
               src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-              alt="{{ trat.nombre }} en AnyLopez Benidorm"
+              alt="{{ trat.nombre }} {{ tx.grid.altSuffix }}"
               class="trat-card-img"
               loading="lazy"
               decoding="async"
@@ -691,8 +660,8 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
                 type="button"
                 class="trat-cta trat-card-trigger"
                 data-slug="{{ trat.slug }}"
-                aria-label="Ver detalles de {{ trat.nombre }}"
-              >Ver detalles →</button>
+                aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
+              >{{ tx.grid.detailsCta }}</button>
             </div>
           </div>
         </article>
@@ -702,14 +671,14 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
   </div>
 </section>
 
-<!-- CROSS-SELL BAND (to Radiofrecuencia INDIBA flagship) -->
+<!-- CROSS-SELL BAND (to {{ tx.brandRF }} flagship) -->
 <section class="cat-page-xsell">
   <div class="container">
     <div class="cat-page-xsell-inner">
-      <span class="eyebrow">Radiofrecuencia INDIBA es nuestra bandera</span>
-      <h2>Si tu caso pide Radiofrecuencia INDIBA, <em>tenemos ficha completa.</em></h2>
-      <p>La radiofrecuencia INDIBA es nuestro tratamiento estrella. Ficha dedicada con Pack 10 sesiones, modalidades facial y corporal, y todo el detalle clínico.</p>
-      <a href="{{ '/radiofrecuencia/' | url }}" class="btn btn-accent">Ver ficha completa de Radiofrecuencia INDIBA →</a>
+      <span class="eyebrow">{{ tx.xsell.eyebrow }}</span>
+      <h2>{{ tx.xsell.h2_html | safe }}</h2>
+      <p>{{ tx.xsell.p }}</p>
+      <a href="{{ (l.prefix + '/radiofrecuencia/') | url }}" class="btn btn-accent">{{ tx.xsell.cta }}</a>
     </div>
   </div>
 </section>
@@ -718,29 +687,19 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
 <section class="cat-page-tests">
   <div class="container">
     <div class="cat-page-tests-head">
-      <span class="eyebrow">Pacientes reales</span>
-      <h2>Resultados que se notan, y se cuentan.</h2>
-      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
     </div>
     <div class="cat-page-tests-grid">
+      {%- for it in tx.tests.items %}
       <div class="cat-page-test">
         <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Una sesión de Ultherapy y a los tres meses la mandíbula ha recuperado el dibujo que tenía hace 10 años. Sin quirófano, sin baja. Estoy alucinada."</p>
-        <div class="cat-page-test-author">Cristina M.</div>
-        <div class="cat-page-test-meta">Paciente · Ultherapy HIFU</div>
+        <p class="cat-page-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="cat-page-test-author">{{ it.author }}</div>
+        <div class="cat-page-test-meta">{{ it.meta }}</div>
       </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Combinamos Ultherapy con Pack Radiofrecuencia INDIBA y los resultados se potencian uno al otro. Diagnóstico honesto desde el principio."</p>
-        <div class="cat-page-test-author">Pilar R.</div>
-        <div class="cat-page-test-meta">Paciente · Ultherapy HIFU + Radiofrecuencia INDIBA</div>
-      </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Vine pensando que necesitaba hilos tensores y me hicieron entender que mi caso era Ultherapy HIFU + Botox. La diferencia entre vender un tratamiento o resolver un problema."</p>
-        <div class="cat-page-test-author">Paciente verificada</div>
-        <div class="cat-page-test-meta">Reseña Google</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -749,39 +708,20 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
 <section class="cat-page-process">
   <div class="container">
     <div class="cat-page-process-head">
-      <span class="eyebrow">¿Cómo lo empezamos?</span>
-      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
-      <p>Desde tu primer mensaje hasta que ves la primera mejora pasan menos de dos semanas.</p>
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ tx.process.p }}</p>
     </div>
     <div class="cat-page-steps">
+      {%- for it in tx.process.steps %}
       <div class="cat-page-step">
-        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-num">{{ loop.index }}</div>
         <div class="cat-page-step-body">
-          <h3>Reservas tu diagnóstico gratuito</h3>
-          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">2</div>
-        <div class="cat-page-step-body">
-          <h3>Valoración clínica del caso</h3>
-          <p>Te evaluamos zona, grado de flacidez, calidad de piel y objetivo. Decidimos si tu caso es Ultherapy HIFU, Radiofrecuencia INDIBA, ambos en combinación, o si por sus características conviene derivar a otra solución.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">3</div>
-        <div class="cat-page-step-body">
-          <h3>Plan personalizado Ultherapy HIFU / Radiofrecuencia INDIBA / combinado</h3>
-          <p>No "vienes a una sesión". Diseñamos protocolo: número de sesiones, cadencia, qué combinar y por qué. Y si lo tuyo se resuelve con menos de lo previsto, lo decimos.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">4</div>
-        <div class="cat-page-step-body">
-          <h3>Seguimiento durante meses tras la sesión</h3>
-          <p>El resultado de Ultherapy HIFU es progresivo: no se ve hoy, se ve a 3-6 meses. WhatsApp directo para dudas, ajustes y guía hasta que veas el efecto final.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -790,30 +730,16 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
 <section class="cat-page-faq">
   <div class="container">
     <div class="cat-page-faq-head">
-      <span class="eyebrow">Dudas frecuentes</span>
-      <h2>Lo que más nos preguntan sobre lifting y antiaging.</h2>
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ tx.faq.h2 }}</h2>
     </div>
     <div class="cat-page-faq-list">
-      <div class="cat-page-faq-item open">
-        <button class="cat-page-faq-q" type="button">¿Ultherapy HIFU o Radiofrecuencia INDIBA, cuál elegir? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Depende. HIFU es de choque (1-2 sesiones, resultados a 3-6 meses). Radiofrecuencia INDIBA es progresivo (Pack 10 sesiones, resultados desde la 1ª). HIFU para flacidez moderada-alta. Radiofrecuencia INDIBA para mantenimiento + reafirmación gradual. En el diagnóstico te lo concretamos.</p></div>
+      {%- for f in tx.faq.items %}
+      <div class="cat-page-faq-item{% if loop.first %} open{% endif %}">
+        <button class="cat-page-faq-q" type="button">{{ f.q }} <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>{{ f.a }}</p></div>
       </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Cuántas sesiones de Ultherapy HIFU necesito? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>1-2 sesiones según zona y grado de flacidez. Las sesiones se espacian 6-12 meses para mantenimiento. Radiofrecuencia INDIBA es Pack 10 con cadencia semanal.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Cuánto duran los resultados? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Ultherapy: 12-18 meses tras pleno efecto a los 3-6 meses. Radiofrecuencia INDIBA: efecto durable con mantenimiento mensual tras Pack.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿A qué edad empezar? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Cuando notas pérdida de firmeza del óvalo, normalmente desde 35-45 años. Mejor antes que después: estimular colágeno funciona mejor cuando aún hay reserva.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Cuidados post-sesión? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Mínimos: hidratación tópica, protector solar estricto los siguientes días, evitar saunas/calor extremo 48h. Te entregamos pauta escrita tras cada sesión.</p></div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -821,17 +747,18 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
 <!-- FINAL CTA -->
 <section class="cat-page-final">
   <div class="container">
-    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
-    <h2>Reserva un diagnóstico gratuito. <em>Te decimos qué tecnología es para ti</em>.</h2>
-    <p>Treinta minutos en clínica con quien lleva décadas con Ultherapy HIFU e Radiofrecuencia INDIBA. Si tu caso pide otra cosa (inyectables, hilos, cirugía), te lo decimos honestamente.</p>
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ tx.final.p_html | safe }}</p>
     <div class="cat-page-final-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
     </div>
   </div>
 </section>
 
 <!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{%- set tratamientos = catalogo[l.code] %}
 {% include "treatment-modal.njk" %}
 
 <script>
@@ -843,4 +770,7 @@ description: "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y r
       if (!wasOpen) item.classList.add('open');
     });
   });
-</script>
+</script>{% if l.code == "en" %}
+</content>
+</invoke>{% else %}
+{% endif %}
