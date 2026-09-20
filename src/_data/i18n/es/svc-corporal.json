@@ -1,0 +1,114 @@
+{
+  "title": "Tratamientos corporales en Benidorm — Maderoterapia, drenaje y recuperación · AnyLopez",
+  "description": "Maderoterapia, presoterapia, drenaje linfático postoperatorio y recuperación muscular en AnyLopez Clínica Estética Benidorm. Manualidad experta y diagnóstico personalizado.",
+  "jsonld": {
+    "name": "Tratamientos corporales AnyLopez",
+    "alternateName": "Estética corporal manual",
+    "description": "Catálogo de tratamientos corporales en AnyLopez Clínica Estética Benidorm: maderoterapia, presoterapia, drenaje linfático postoperatorio y recuperación de dolor muscular. Manualidad experta, protocolos validados y diagnóstico personalizado.",
+    "specialties": [
+      "Maderoterapia",
+      "Presoterapia",
+      "Drenaje Linfático Postoperatorio",
+      "Recuperación Muscular"
+    ],
+    "faq": [
+      { "q": "¿Cuántas sesiones de drenaje postoperatorio necesito?", "a": "Depende de la cirugía y de la fase de recuperación, pero el protocolo habitual son 8-12 sesiones repartidas en las primeras 4-6 semanas postop. En el diagnóstico vemos tu parte médico, fecha de cirugía y diseñamos el plan exacto." },
+      { "q": "¿La maderoterapia funciona contra la celulitis?", "a": "Sí, especialmente combinada con constancia (alimentación, hidratación, movimiento). La maderoterapia mejora visiblemente la apariencia de la celulitis al estimular circulación y drenaje. No es magia, es trabajo manual sostenido — y los resultados se ven." },
+      { "q": "¿Presoterapia y maderoterapia se complementan?", "a": "Mucho. La maderoterapia trabaja manualmente la fascia y la grasa subcutánea; la presoterapia drena el líquido linfático con presión secuencial. Combinadas en una misma sesión los resultados se multiplican — es uno de los protocolos que más recomendamos para piernas pesadas y celulitis." },
+      { "q": "¿Después de una liposucción cuándo puedo empezar el drenaje?", "a": "Habitualmente entre 5 y 10 días tras la cirugía, según indicación de tu cirujano. Lo importante: drenaje específico postoperatorio (no masaje genérico) lo antes que el médico autorice. Cuanto antes empiezas, mejor evolución." },
+      { "q": "¿La manipulación me dolerá?", "a": "El drenaje linfático es muy suave — no duele. La maderoterapia y la recuperación muscular tienen una intensidad media-alta dependiendo de tu tolerancia, pero siempre dentro del umbral terapéutico. Si en algún momento es demasiado, ajustamos. No tratamos a nadie aguantando dolor." }
+    ]
+  },
+  "css": {
+    "xsellComment": "Radiofrecuencia INDIBA"
+  },
+  "comments": {
+    "xsell": "Radiofrecuencia INDIBA"
+  },
+  "breadcrumb": { "services": "Servicios", "current": "Tratamientos Corporales" },
+  "callCta": "Llamar 656 306 167",
+  "hero": {
+    "imgAlt": "Tratamientos corporales en AnyLopez Clínica Estética Benidorm",
+    "eyebrow": "Tratamientos corporales · 4 protocolos",
+    "h1_html": "Tu cuerpo no necesita una máquina más. <em>Necesita manos que sepan dónde insistir.</em>",
+    "lead_html": "Retención, piernas pesadas, recuperación postquirúrgica, tensión muscular crónica. Cosas que no se arreglan con un masaje genérico ni con una máquina sin criterio. Aquí trabajamos con técnica manual experta y protocolos específicos para cada caso.",
+    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "reviews": "reseñas Google",
+    "free": "Diagnóstico inicial sin coste"
+  },
+  "pain": {
+    "eyebrow": "¿Te suena alguna de estas?",
+    "h2": "La mayoría de pacientes que llegan aquí han pasado por lo mismo.",
+    "p_html": "No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.",
+    "items": [
+      { "h3_html": "Sientes las piernas cargadas y la circulación lenta.", "p_html": "Pese al deporte y a la dieta. Es retención y mala microcirculación. El gimnasio no la arregla — el drenaje sí." },
+      { "h3_html": "Te has operado y la recuperación va lenta.", "p_html": "Cirugía estética, quirúrgica abdominal, ortopédica. Sin drenaje específico postoperatorio se acumula inflamación que ralentiza tu vuelta a la normalidad." },
+      { "h3_html": "Vives con tensión muscular crónica.", "p_html": "Horas frente al ordenador o entrenamientos intensos. Lumbar, cervicales, piernas. Un masaje genérico te alivia un día — un protocolo serio te suelta de verdad." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Por qué los corporales en AnyLopez funcionan",
+    "h2_html": "Seis razones por las que aquí funcionan donde otros sitios no.",
+    "p_html": "No es marketing. Es manualidad experta, criterio y protocolos validados.",
+    "items": [
+      { "h3_html": "Manualidad experta de quien lleva décadas", "p_html": "Las máquinas ayudan; las manos diagnostican mientras tratan. Aquí no contratamos becarios para ahorrar costes — te atiende quien sabe." },
+      { "h3_html": "Combinable con Radiofrecuencia INDIBA si hay flacidez asociada", "p_html": "No vendemos solo lo nuestro. Si tu caso necesita radiofrecuencia profunda además del manual, lo decimos y combinamos protocolos." },
+      { "h3_html": "Drenaje linfático con técnica validada", "p_html": "No es masaje suave con nombre fancy. Es protocolo Vodder/Leduc adaptado a tu caso, con presiones y ritmo específicos." },
+      { "h3_html": "Recuperación postquirúrgica con protocolos serios", "p_html": "Tras una cirugía estética o de otro tipo, no improvisamos. Sabemos cuándo empezar, qué intensidad, qué frecuencia y por qué." },
+      { "h3_html": "Sesiones que se sienten desde la primera", "p_html": "No tienes que esperar 10 sesiones para notar algo. Drenaje, maderoterapia y recuperación muscular dan sensación inmediata." },
+      { "h3_html": "Sin pinchazos, sin recuperación, compatibles con tu rutina", "p_html": "Sales y sigues con tu vida. Nada de baja, nada de marcas visibles." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Cuando cuerpo y piel van juntos",
+    "h2_html": "Si tu caso combina cuerpo y <em>flacidez profunda</em>…",
+    "p": "Muchos protocolos corporales se potencian combinándolos con radiofrecuencia INDIBA. Si tu objetivo incluye reafirmación de piel además de drenaje o tonicidad, lo combinamos en el diagnóstico gratuito.",
+    "cta": "Conocer Radiofrecuencia INDIBA →"
+  },
+  "grid": {
+    "eyebrow": "Cuatro protocolos · una sola filosofía",
+    "h2": "Los tratamientos corporales del catálogo.",
+    "p": "Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.",
+    "altSuffix": "en AnyLopez Benidorm",
+    "detailsAria": "Ver detalles de",
+    "detailsCta": "Ver detalles →"
+  },
+  "tests": {
+    "eyebrow": "Pacientes reales",
+    "h2": "Resultados que se notan, y se cuentan.",
+    "p": "Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.",
+    "items": [
+      { "quote_html": "\"Operada de abdominoplastia, las primeras semanas pensaba que no iba a recuperarme nunca. Diez sesiones de drenaje postoperatorio y la diferencia es noche y día — la inflamación bajó muchísimo más rápido que cualquier expectativa.\"", "author": "Carmen R.", "meta": "Paciente · Drenaje Postoperatorio" },
+      { "quote_html": "\"Llevaba años con dolor lumbar de oficina. Probé fisio, gimnasio, hasta acupuntura. La recuperación muscular aquí me ha soltado de verdad — no es un masaje agradable, es trabajo terapéutico serio.\"", "author": "Javier M.", "meta": "Paciente · Recuperación Muscular" },
+      { "quote_html": "\"La maderoterapia me ha cambiado la celulitis de las piernas más que cualquier crema reductora. Combinado con un poco de constancia, los resultados son visibles.\"", "author": "Paciente verificada", "meta": "Reseña Google · Maderoterapia" }
+    ]
+  },
+  "process": {
+    "eyebrow": "¿Cómo lo empezamos?",
+    "h2": "Cuatro pasos. Sin sorpresas, sin letra pequeña.",
+    "p": "Desde tu primer mensaje hasta que ves la primera mejora pasan menos de dos semanas.",
+    "steps": [
+      { "h3": "Reservas tu diagnóstico gratuito", "p_html": "Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso." },
+      { "h3": "Diagnóstico personalizado en clínica", "p_html": "Te valoramos: zona, antecedentes, objetivo. Si vienes posquirúrgica, vemos parte médico. Si es retención, palpamos para ver qué tipo. Si es tensión muscular, evaluamos cadena postural." },
+      { "h3": "Protocolo a medida con sesiones y frecuencia", "p_html": "No \"vienes 10 veces\". Diseñamos cuántas sesiones realmente necesitas y con qué cadencia. Y si lo tuyo se resuelve en 4 te lo decimos." },
+      { "h3": "Seguimiento real entre sesiones", "p_html": "WhatsApp directo para dudas, ajustes y guía pos-tratamiento." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Dudas frecuentes",
+    "h2": "Lo que más nos preguntan sobre los corporales.",
+    "items": [
+      { "q": "¿Cuántas sesiones de drenaje postoperatorio necesito?", "a_html": "Depende de la cirugía y de la fase de recuperación, pero el protocolo habitual son 8-12 sesiones repartidas en las primeras 4-6 semanas postop. En el diagnóstico vemos tu parte médico, fecha de cirugía y diseñamos el plan exacto." },
+      { "q": "¿La maderoterapia funciona contra la celulitis?", "a_html": "Sí, especialmente combinada con constancia (alimentación, hidratación, movimiento). La maderoterapia mejora visiblemente la apariencia de la celulitis al estimular circulación y drenaje. No es magia, es trabajo manual sostenido — y los resultados se ven." },
+      { "q": "¿Presoterapia y maderoterapia se complementan?", "a_html": "Mucho. La maderoterapia trabaja manualmente la fascia y la grasa subcutánea; la presoterapia drena el líquido linfático con presión secuencial. Combinadas en una misma sesión los resultados se multiplican — es uno de los protocolos que más recomendamos para piernas pesadas y celulitis." },
+      { "q": "¿Después de una liposucción cuándo puedo empezar el drenaje?", "a_html": "Habitualmente entre 5 y 10 días tras la cirugía, según indicación de tu cirujano. Lo importante: drenaje específico postoperatorio (no masaje genérico) lo antes que el médico autorice. Cuanto antes empiezas, mejor evolución." },
+      { "q": "¿La manipulación me dolerá?", "a_html": "El drenaje linfático es muy suave — no duele. La maderoterapia y la recuperación muscular tienen una intensidad media-alta dependiendo de tu tolerancia, pero siempre dentro del umbral terapéutico. Si en algún momento es demasiado, ajustamos. No tratamos a nadie aguantando dolor." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sin compromiso",
+    "h2_html": "Reserva tu diagnóstico gratuito. <em>Empieza por saber qué necesita tu cuerpo</em>.",
+    "p_html": "Treinta minutos en clínica con quien lleva décadas con manos. Si lo tuyo es derivable a fisio, traumatólogo u otro especialista, te lo decimos.",
+    "cta": "Reservar valoración →"
+  }
+}
