@@ -1,0 +1,108 @@
+{
+  "title": "Individual lash extensions and semi-permanent make-up in Benidorm — AnyLopez",
+  "description": "Individual (1:1) lash extensions and semi-permanent make-up for brows, lips and eyeliner at AnyLopez aesthetic clinic in Benidorm. Pre-design and conservative technique that ages well.",
+  "jsonld": {
+    "name": "AnyLopez Lash Extensions & Semi-Permanent Make-up",
+    "alternateName": "Lashes and micropigmentation",
+    "description": "Lash extensions and semi-permanent make-up catalogue at AnyLopez Aesthetic Clinic Benidorm: individual (1:1) lash extensions and semi-permanent make-up for brows, lips and eyeliner. Pre-design, durable hypoallergenic pigments and a conservative technique that ages well.",
+    "specialties": [
+      "Individual (1:1) Lash Extensions",
+      "Brow Micropigmentation",
+      "Lip Micropigmentation",
+      "Micropigmented Eyeliner"
+    ],
+    "faq": [
+      { "q": "How long do individual lash extensions last?", "a": "Between 3 and 4 weeks, depending on your natural lash cycle. We schedule a top-up every 3-4 weeks to keep volume consistent. No damage to your natural lashes." },
+      { "q": "Does semi-permanent make-up hurt?", "a": "Mild discomfort, not pain. We apply numbing cream before and during the session. Most patients describe the sensation as a brief tingling or pinch." },
+      { "q": "When should I have my semi-permanent make-up touched up?", "a": "Initial top-up at 4-6 weeks (after the healing process) to refine the result. After that, annual top-ups to maintain colour and intensity." },
+      { "q": "Allergies?", "a": "Hypoallergenic pigments, but we always run an allergy patch test on a small area beforehand. If you react, we don't apply." },
+      { "q": "Can I exercise / sunbathe afterwards?", "a": "After the session: 7 days with no direct sun, no saunas, no sea/pool water and no make-up over the area. After that you can carry on as normal — daily SPF is key for the pigment to last." }
+    ]
+  },
+  "breadcrumb": { "services": "Services", "current_html": "Lash Extensions & Semi-Permanent Make-up" },
+  "callCta": "Call 656 306 167",
+  "hero": {
+    "imgAlt": "Lash extensions and semi-permanent make-up at AnyLopez Aesthetic Clinic Benidorm",
+    "eyebrow_html": "Lash extensions & semi-permanent make-up · Lashes + Micropigmentation",
+    "h1_html": "Details that show, <em>not details that shout.</em>",
+    "lead": "Wake up with your face already done. Individual (1:1) lash extensions and semi-permanent make-up for brows, lips and eyeliner — done with judgement: pre-design, durable pigments, conservative technique that ages well and can be touched up, rather than fading awkwardly with time.",
+    "ctaPrimary": "Book your free consultation →",
+    "reviews": "Google reviews",
+    "free": "Initial consultation at no cost"
+  },
+  "pain": {
+    "eyebrow": "Does any of this sound familiar?",
+    "h2": "Most patients who come here have been through the same.",
+    "p_html": "You're not arriving from nowhere. You're arriving after trying other things that never quite worked.",
+    "items": [
+      { "h3_html": "You wake up looking tired before your routine even starts.", "p_html": "Pale brows, sparse lashes, dull lips. You step out without make-up and the face in the mirror isn't really you." },
+      { "h3_html": "Drawing on brows and lips every morning steals minutes you don't have.", "p_html": "And it never quite looks like yesterday's. You want something that lasts and still looks natural." },
+      { "h3_html": "You've seen botched work that puts you off.", "p_html": "Sharpie-style brows. Overdrawn lips. Permanent eyeliner that ages oddly. That's why you've held back." }
+    ]
+  },
+  "why": {
+    "eyebrow_html": "Why lash extensions & semi-permanent make-up at AnyLopez work",
+    "h2_html": "Six reasons it works here when it doesn't elsewhere.",
+    "p_html": "It isn't marketing. It's pre-design, conservative technique and pigments that age well.",
+    "items": [
+      { "h3": "Pre-design every time.", "p_html": "Before applying anything, we draw on your skin and validate the shape with you. If you're not convinced, we don't begin." },
+      { "h3": "Individual (1:1) lash extensions, no artificial fans.", "p_html": "One synthetic lash for each natural lash. Real volume, a natural look — no \"doll lash\" effect." },
+      { "h3": "Durable hypoallergenic pigments.", "p_html": "Trademarked, traceable brands — not pigments from an online shop. Colour that ages well, without turning red or grey over the years." },
+      { "h3": "Conservative technique.", "p_html": "Better a little pigment now plus a top-up than overloading. Better lashes that respect your natural lash than extensions that damage it." },
+      { "h3": "Scheduled maintenance.", "p_html": "We book your top-ups at the right cadence (lashes every 3-4 weeks, semi-permanent make-up an annual top-up). We don't drop you after the sale." },
+      { "h3": "Applied by a certified, experienced professional.", "p_html": "The same standard as the rest of the clinic." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Two protocols · one philosophy",
+    "h2": "The lash extension and semi-permanent make-up treatments in our catalogue.",
+    "p": "Tap any card to see full benefits, prices and packages.",
+    "altSuffix": "at AnyLopez Benidorm",
+    "detailsAria": "See details for",
+    "detailsCta": "See details →"
+  },
+  "xsell": {
+    "eyebrow": "To enhance the canvas",
+    "h2_html": "Lash extensions and semi-permanent make-up look better <em>on well-cared-for skin.</em>",
+    "p": "Brows and lips stand out more on clean, luminous skin. If you want the whole look to feel cohesive, regular facials make all the difference.",
+    "cta": "See facial treatments →"
+  },
+  "tests": {
+    "eyebrow": "Real patients",
+    "h2": "Results that show — and that people talk about.",
+    "p": "Verified Google reviews. No actors, no pills, no Photoshopped before-and-afters.",
+    "items": [
+      { "quote_html": "\"I'd avoided semi-permanent make-up for years because of the terrible work I'd seen. Here they pre-designed it and used a hair-by-hair technique. My brows look like mine — just more defined.\"", "author": "Inmaculada R.", "meta": "Patient · Brow micropigmentation" },
+      { "quote_html": "\"Individual lash extensions every 4 weeks and my morning routine has halved. No artificial fans — they're mine, just better.\"", "author": "Sandra L.", "meta": "Patient · Lashes" },
+      { "quote_html": "\"Micropigmented eyeliner after a proper shape study and validation. I wake up with my eyes ready. Nothing I'd seen on Instagram convinced me until this.\"", "author": "Verified patient", "meta": "Google review" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How do we get started?",
+    "h2": "Four steps. No surprises, no small print.",
+    "p_html": "We design before applying. If you're not convinced, we don't begin.",
+    "steps": [
+      { "h3": "Book your consultation", "p_html": "A quick call or WhatsApp to find a slot. 30 minutes at the clinic, free of charge, no commitment." },
+      { "h3": "Pre-design on your skin + your validation", "p_html": "We draw the shape, colour and proportion straight onto your face. You check it in the mirror and we adjust it together. If you're not 100% convinced, we don't begin." },
+      { "h3": "Application", "p_html": "Individual (1:1) lash extensions or semi-permanent make-up using a conservative technique. Numbing cream when relevant. Time and care." },
+      { "h3": "Scheduled top-up", "p_html": "Lashes every 3-4 weeks. Semi-permanent make-up: initial top-up at 4-6 weeks and then annually. Real maintenance, not after-sale neglect." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "h2_html": "What we get asked most about lash extensions & semi-permanent make-up.",
+    "items": [
+      { "q": "How long do individual lash extensions last?", "a_html": "Between 3 and 4 weeks, depending on your natural lash cycle. We schedule a top-up every 3-4 weeks to keep volume consistent. No damage to your natural lashes." },
+      { "q": "Does semi-permanent make-up hurt?", "a_html": "Mild discomfort, not pain. We apply numbing cream before and during the session. Most patients describe the sensation as a brief tingling or pinch." },
+      { "q": "When should I have my semi-permanent make-up touched up?", "a_html": "Initial top-up at 4-6 weeks (after the healing process) to refine the result. After that, annual top-ups to maintain colour and intensity." },
+      { "q": "Allergies?", "a_html": "Hypoallergenic pigments, but we always run an allergy patch test on a small area beforehand. If you react, we don't apply." },
+      { "q": "Can I exercise / sunbathe afterwards?", "a_html": "After the session: 7 days with no direct sun, no saunas, no sea/pool water and no make-up over the area. After that you can carry on as normal — daily SPF is key for the pigment to last." }
+    ]
+  },
+  "final": {
+    "eyebrow": "No commitment",
+    "h2_html": "Book your consultation. <em>We design before we apply</em>.",
+    "p_html": "Thirty minutes to look at your face, talk through what you want and draw on your skin. If the design doesn't convince you 100%, we don't begin.",
+    "cta": "Book consultation →"
+  }
+}

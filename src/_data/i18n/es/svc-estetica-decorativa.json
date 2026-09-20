@@ -1,0 +1,108 @@
+{
+  "title": "Pestañas pelo a pelo y micropigmentación en Benidorm — AnyLopez",
+  "description": "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyeliner en clínica estética AnyLopez Benidorm. Diseño previo y técnica conservadora que envejece bien.",
+  "jsonld": {
+    "name": "Estética decorativa AnyLopez",
+    "alternateName": "Pestañas y micropigmentación",
+    "description": "Catálogo de estética decorativa en AnyLopez Clínica Estética Benidorm: pestañas pelo a pelo y micropigmentación de cejas, labios y eyeliner. Diseño previo, pigmentos hipoalergénicos durables y técnica conservadora que envejece bien.",
+    "specialties": [
+      "Pestañas Pelo a Pelo",
+      "Micropigmentación de Cejas",
+      "Micropigmentación de Labios",
+      "Eyeliner Micropigmentado"
+    ],
+    "faq": [
+      { "q": "¿Cuánto duran las pestañas pelo a pelo?", "a": "Entre 3 y 4 semanas según tu ciclo natural de pestaña. Te agendamos retoque cada 3-4 semanas para mantener volumen constante. Sin agresión a tu pestaña natural." },
+      { "q": "¿La micropigmentación duele?", "a": "Sensación de molestia ligera, no dolor. Aplicamos crema anestésica antes y durante. La mayoría de pacientes describe la sensación como cosquilleo o pellizco breve." },
+      { "q": "¿Cuándo retocar la micropigmentación?", "a": "Retoque inicial a las 4-6 semanas (después del proceso de cicatrización) para perfeccionar. Después, retoques anuales para mantener color e intensidad." },
+      { "q": "¿Alergias?", "a": "Pigmentos hipoalergénicos pero hacemos prueba de alergia antes en zona pequeña. Si reaccionas, no aplicamos." },
+      { "q": "¿Hago deporte / tomo el sol?", "a": "Después de la sesión: 7 días sin sol directo, sin saunas, sin agua de mar/piscina, sin maquillaje sobre la zona. Después puedes hacer vida normal — protector solar diario es clave para que el pigmento dure." }
+    ]
+  },
+  "breadcrumb": { "services": "Servicios", "current_html": "Estética Decorativa" },
+  "callCta": "Llamar 656 306 167",
+  "hero": {
+    "imgAlt": "Estética decorativa: pestañas y micropigmentación en AnyLopez Clínica Estética Benidorm",
+    "eyebrow_html": "Estética decorativa · Pestañas + Micropigmentación",
+    "h1_html": "Detalles que se notan, <em>no que llaman la atención.</em>",
+    "lead": "Despertar con la cara hecha. Pestañas pelo a pelo y cejas/labios/eyeliner micropigmentados — pero hechos con criterio: diseño previo, pigmentos durables, técnica conservadora que envejece bien y se retoca, no que se borre con la edad.",
+    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "reviews": "reseñas Google",
+    "free": "Diagnóstico inicial sin coste"
+  },
+  "pain": {
+    "eyebrow": "¿Te suena alguna de estas?",
+    "h2": "La mayoría de pacientes que llegan aquí han pasado por lo mismo.",
+    "p_html": "No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.",
+    "items": [
+      { "h3_html": "Te despiertas y antes de cualquier rutina ya pareces cansada.", "p_html": "Cejas claras, pestañas escasas, labios apagados. Sales sin maquillaje y la cara no te representa." },
+      { "h3_html": "Pintarte cejas y labios cada mañana te roba minutos que no tienes.", "p_html": "Y aun así nunca queda igual que ayer. Buscas algo que dure y se vea natural." },
+      { "h3_html": "Has visto trabajos mal hechos que te asustan.", "p_html": "Cejas postizas tipo Sharpie. Labios sobrepintados. Eyeliner permanente que envejece raro. Por eso no te has lanzado." }
+    ]
+  },
+  "why": {
+    "eyebrow_html": "Por qué la estética decorativa en AnyLopez funciona",
+    "h2_html": "Seis razones por las que aquí funciona donde otros sitios no.",
+    "p_html": "No es marketing. Es diseño previo, técnica conservadora y pigmentos que envejecen bien.",
+    "items": [
+      { "h3": "Diseño previo siempre.", "p_html": "Antes de aplicar nada, dibujamos sobre tu piel y validamos forma. Si no te convence, no empezamos." },
+      { "h3": "Pestañas pelo a pelo (no abanicos artificiales).", "p_html": "Una pestaña sintética por cada pestaña natural. Volumen real, mirada natural — no efecto \"pestaña de muñeca\"." },
+      { "h3": "Pigmentos hipoalergénicos durables.", "p_html": "Marcas registradas con trazabilidad, no pigmento de tienda online. Color que evoluciona bien — no vira a rojo o gris con los años." },
+      { "h3": "Técnica conservadora.", "p_html": "Mejor poco pigmento ahora y retoque que sobrecargar. Mejor pestañas que respetan tu pestaña natural que extensiones que la dañan." },
+      { "h3": "Mantenimiento programado.", "p_html": "Te agendamos retoques con cadencia (pestañas cada 3-4 semanas, micropigmentación retoque anual). No te abandonamos tras la venta." },
+      { "h3": "Aplica profesional certificada con experiencia.", "p_html": "Misma exigencia que en toda la clínica." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Dos protocolos · una sola filosofía",
+    "h2": "Los tratamientos de estética decorativa del catálogo.",
+    "p": "Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.",
+    "altSuffix": "en AnyLopez Benidorm",
+    "detailsAria": "Ver detalles de",
+    "detailsCta": "Ver detalles →"
+  },
+  "xsell": {
+    "eyebrow": "Para potenciar la base",
+    "h2_html": "La estética decorativa luce mejor <em>sobre piel cuidada.</em>",
+    "p": "Cejas y labios destacan más sobre piel limpia y luminosa. Si quieres que el conjunto se vea integral, las limpiezas faciales periódicas hacen la diferencia.",
+    "cta": "Ver limpiezas faciales →"
+  },
+  "tests": {
+    "eyebrow": "Pacientes reales",
+    "h2": "Resultados que se notan, y se cuentan.",
+    "p": "Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.",
+    "items": [
+      { "quote_html": "\"Llevaba años huyendo de la micropigmentación por trabajos terribles que había visto. Aquí me hicieron diseño antes y técnica de pelo a pelo. Mis cejas parecen mías — solo más definidas.\"", "author": "Inmaculada R.", "meta": "Paciente · Micropigmentación cejas" },
+      { "quote_html": "\"Pestañas pelo a pelo cada 4 semanas y mi rutina matinal se ha reducido a la mitad. Sin abanicos artificiales — son mías mejoradas.\"", "author": "Sandra L.", "meta": "Paciente · Pestañas" },
+      { "quote_html": "\"Eyeliner micropigmentado tras estudio de forma y validación. Despierto con la mirada lista. Ningún trabajo de los que había visto en Instagram me convencía hasta este.\"", "author": "Paciente verificada", "meta": "Reseña Google" }
+    ]
+  },
+  "process": {
+    "eyebrow": "¿Cómo lo empezamos?",
+    "h2": "Cuatro pasos. Sin sorpresas, sin letra pequeña.",
+    "p_html": "Diseñamos antes de aplicar. Si no te convence, no empezamos.",
+    "steps": [
+      { "h3": "Reservas tu valoración", "p_html": "Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso." },
+      { "h3": "Diseño previo sobre tu piel + validación tuya", "p_html": "Dibujamos forma, color y proporción directamente sobre tu rostro. Lo miras al espejo, lo ajustamos contigo. Si no te convence al 100%, no empezamos." },
+      { "h3": "Aplicación", "p_html": "Pestañas pelo a pelo o micropigmentación con técnica conservadora. Crema anestésica si aplica. Tiempo y mimo." },
+      { "h3": "Retoque programado", "p_html": "Pestañas cada 3-4 semanas. Micropigmentación: retoque inicial 4-6 semanas y anual. Mantenimiento real, no abandono postventa." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Dudas frecuentes",
+    "h2_html": "Lo que más nos preguntan sobre estética decorativa.",
+    "items": [
+      { "q": "¿Cuánto duran las pestañas pelo a pelo?", "a_html": "Entre 3 y 4 semanas según tu ciclo natural de pestaña. Te agendamos retoque cada 3-4 semanas para mantener volumen constante. Sin agresión a tu pestaña natural." },
+      { "q": "¿La micropigmentación duele?", "a_html": "Sensación de molestia ligera, no dolor. Aplicamos crema anestésica antes y durante. La mayoría de pacientes describe la sensación como cosquilleo o pellizco breve." },
+      { "q": "¿Cuándo retocar la micropigmentación?", "a_html": "Retoque inicial a las 4-6 semanas (después del proceso de cicatrización) para perfeccionar. Después, retoques anuales para mantener color e intensidad." },
+      { "q": "¿Alergias?", "a_html": "Pigmentos hipoalergénicos pero hacemos prueba de alergia antes en zona pequeña. Si reaccionas, no aplicamos." },
+      { "q": "¿Hago deporte / tomo el sol?", "a_html": "Después de la sesión: 7 días sin sol directo, sin saunas, sin agua de mar/piscina, sin maquillaje sobre la zona. Después puedes hacer vida normal — protector solar diario es clave para que el pigmento dure." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sin compromiso",
+    "h2_html": "Reserva una valoración. <em>Diseñamos antes de aplicar</em>.",
+    "p_html": "Treinta minutos para ver tu rostro, hablar de qué buscas y dibujar sobre tu piel. Si el diseño no te convence al 100%, no empezamos.",
+    "cta": "Reservar valoración →"
+  }
+}

@@ -1,22 +1,30 @@
 ---
 layout: base.njk
-title: "Pestañas pelo a pelo y micropigmentación en Benidorm — AnyLopez"
-description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyeliner en clínica estética AnyLopez Benidorm. Diseño previo y técnica conservadora que envejece bien."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/services/estetica-decorativa/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code]['svc-estetica-decorativa'].title | safe }}"
+  description: "{{ i18n[l.code]['svc-estetica-decorativa'].description | safe }}"
 ---
-
+{%- set tx = i18n[l.code]['svc-estetica-decorativa'] %}
+{%- set tdata = catalogo[l.code] %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalSpecialty",
-  "name": "Estética decorativa AnyLopez",
-  "alternateName": "Pestañas y micropigmentación",
-  "description": "Catálogo de estética decorativa en AnyLopez Clínica Estética Benidorm: pestañas pelo a pelo y micropigmentación de cejas, labios y eyeliner. Diseño previo, pigmentos hipoalergénicos durables y técnica conservadora que envejece bien.",
-  "url": "{{ site.url }}/services/estetica-decorativa/",
+  "name": "{{ tx.jsonld.name | safe }}",
+  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
+  "description": "{{ tx.jsonld.description | safe }}",
+  "url": "{{ site.url }}{{ l.prefix }}/services/estetica-decorativa/",
   "relevantSpecialty": [
-    "Pestañas Pelo a Pelo",
-    "Micropigmentación de Cejas",
-    "Micropigmentación de Labios",
-    "Eyeliner Micropigmentado"
+{%- for s in tx.jsonld.specialties %}
+    "{{ s | safe }}"{% if not loop.last %},{% endif %}
+{%- endfor %}
   ],
   "provider": { "@id": "{{ site.url }}/#clinic" }
 }
@@ -27,11 +35,9 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Cuánto duran las pestañas pelo a pelo?", "acceptedAnswer": { "@type": "Answer", "text": "Entre 3 y 4 semanas según tu ciclo natural de pestaña. Te agendamos retoque cada 3-4 semanas para mantener volumen constante. Sin agresión a tu pestaña natural." } },
-    { "@type": "Question", "name": "¿La micropigmentación duele?", "acceptedAnswer": { "@type": "Answer", "text": "Sensación de molestia ligera, no dolor. Aplicamos crema anestésica antes y durante. La mayoría de pacientes describe la sensación como cosquilleo o pellizco breve." } },
-    { "@type": "Question", "name": "¿Cuándo retocar la micropigmentación?", "acceptedAnswer": { "@type": "Answer", "text": "Retoque inicial a las 4-6 semanas (después del proceso de cicatrización) para perfeccionar. Después, retoques anuales para mantener color e intensidad." } },
-    { "@type": "Question", "name": "¿Alergias?", "acceptedAnswer": { "@type": "Answer", "text": "Pigmentos hipoalergénicos pero hacemos prueba de alergia antes en zona pequeña. Si reaccionas, no aplicamos." } },
-    { "@type": "Question", "name": "¿Hago deporte / tomo el sol?", "acceptedAnswer": { "@type": "Answer", "text": "Después de la sesión: 7 días sin sol directo, sin saunas, sin agua de mar/piscina, sin maquillaje sobre la zona. Después puedes hacer vida normal — protector solar diario es clave para que el pigmento dure." } }
+{%- for f in tx.jsonld.faq %}
+    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+{%- endfor %}
   ]
 }
 </script>
@@ -472,11 +478,11 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <a href="{{ '/services/' | url }}">Servicios</a>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>
-    <span>Estética Decorativa</span>
+    <span>{{ tx.breadcrumb.current_html | safe }}</span>
   </div>
 </div>
 
@@ -487,7 +493,7 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
       <source srcset="{{ '/images/tratamientos/micropigmentacion.webp' | url }}" type="image/webp">
       <img
         src="{{ '/images/tratamientos/micropigmentacion.png' | url }}"
-        alt="Estética decorativa: pestañas y micropigmentación en AnyLopez Clínica Estética Benidorm"
+        alt="{{ tx.hero.imgAlt }}"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -499,18 +505,18 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
   <div class="cat-page-hero-inner">
     <div class="container">
       <div class="cat-page-hero-content">
-        <span class="eyebrow" style="color: var(--gold);">Estética decorativa · Pestañas + Micropigmentación</span>
-        <h1>Detalles que se notan, <em>no que llaman la atención.</em></h1>
-        <p class="lead">Despertar con la cara hecha. Pestañas pelo a pelo y cejas/labios/eyeliner micropigmentados — pero hechos con criterio: diseño previo, pigmentos durables, técnica conservadora que envejece bien y se retoca, no que se borre con la edad.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.hero.eyebrow_html | safe }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ tx.hero.lead }}</p>
         <div class="cat-page-hero-ctas">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
         </div>
         <div class="cat-page-hero-meta">
           <span class="stars">★★★★★</span>
-          <strong>{{ reviews.rating }} · {{ reviews.count }} reseñas Google</strong>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
           <span class="dot">·</span>
-          <span>Diagnóstico inicial sin coste</span>
+          <span>{{ tx.hero.free }}</span>
         </div>
       </div>
     </div>
@@ -521,23 +527,17 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <section class="cat-page-pain">
   <div class="container">
     <div class="cat-page-pain-head">
-      <span class="eyebrow">¿Te suena alguna de estas?</span>
-      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
-      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+      <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+      <h2>{{ tx.pain.h2 }}</h2>
+      <p>{{ tx.pain.p_html | safe }}</p>
     </div>
     <div class="cat-page-pain-grid">
+      {%- for it in tx.pain.items %}
       <div class="cat-page-pain-item">
-        <h3>Te despiertas y antes de cualquier rutina ya pareces cansada.</h3>
-        <p>Cejas claras, pestañas escasas, labios apagados. Sales sin maquillaje y la cara no te representa.</p>
+        <h3>{{ it.h3_html | safe }}</h3>
+        <p>{{ it.p_html | safe }}</p>
       </div>
-      <div class="cat-page-pain-item">
-        <h3>Pintarte cejas y labios cada mañana te roba minutos que no tienes.</h3>
-        <p>Y aun así nunca queda igual que ayer. Buscas algo que dure y se vea natural.</p>
-      </div>
-      <div class="cat-page-pain-item">
-        <h3>Has visto trabajos mal hechos que te asustan.</h3>
-        <p>Cejas postizas tipo Sharpie. Labios sobrepintados. Eyeliner permanente que envejece raro. Por eso no te has lanzado.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -546,53 +546,20 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <section class="cat-page-why">
   <div class="container">
     <div class="cat-page-why-head">
-      <span class="eyebrow">Por qué la estética decorativa en AnyLopez funciona</span>
-      <h2>Seis razones por las que aquí funciona donde otros sitios no.</h2>
-      <p>No es marketing. Es diseño previo, técnica conservadora y pigmentos que envejecen bien.</p>
+      <span class="eyebrow">{{ tx.why.eyebrow_html | safe }}</span>
+      <h2>{{ tx.why.h2_html | safe }}</h2>
+      <p>{{ tx.why.p_html | safe }}</p>
     </div>
     <div class="cat-page-why-grid">
+      {%- for it in tx.why.items %}
       <div class="cat-page-reason">
-        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-num">0{{ loop.index }}</div>
         <div class="cat-page-reason-body">
-          <h3>Diseño previo siempre.</h3>
-          <p>Antes de aplicar nada, dibujamos sobre tu piel y validamos forma. Si no te convence, no empezamos.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">02</div>
-        <div class="cat-page-reason-body">
-          <h3>Pestañas pelo a pelo (no abanicos artificiales).</h3>
-          <p>Una pestaña sintética por cada pestaña natural. Volumen real, mirada natural — no efecto "pestaña de muñeca".</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">03</div>
-        <div class="cat-page-reason-body">
-          <h3>Pigmentos hipoalergénicos durables.</h3>
-          <p>Marcas registradas con trazabilidad, no pigmento de tienda online. Color que evoluciona bien — no vira a rojo o gris con los años.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">04</div>
-        <div class="cat-page-reason-body">
-          <h3>Técnica conservadora.</h3>
-          <p>Mejor poco pigmento ahora y retoque que sobrecargar. Mejor pestañas que respetan tu pestaña natural que extensiones que la dañan.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">05</div>
-        <div class="cat-page-reason-body">
-          <h3>Mantenimiento programado.</h3>
-          <p>Te agendamos retoques con cadencia (pestañas cada 3-4 semanas, micropigmentación retoque anual). No te abandonamos tras la venta.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">06</div>
-        <div class="cat-page-reason-body">
-          <h3>Aplica profesional certificada con experiencia.</h3>
-          <p>Misma exigencia que en toda la clínica.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -601,12 +568,12 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <section class="cat-page-section">
   <div class="container">
     <div class="cat-page-section-head">
-      <span class="eyebrow">Dos protocolos · una sola filosofía</span>
-      <h2>Los tratamientos de estética decorativa del catálogo.</h2>
-      <p>Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.</p>
+      <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
+      <h2>{{ tx.grid.h2 }}</h2>
+      <p>{{ tx.grid.p }}</p>
     </div>
 
-    {% set catTrats = tratamientos.tratamientos | byCategory("estetica-decorativa") %}
+    {% set catTrats = tdata.tratamientos | byCategory("estetica-decorativa") %}
     <div class="cat-page-grid">
       {% for trat in catTrats %}
       <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
@@ -614,7 +581,7 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
           <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
           <img
             src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-            alt="{{ trat.nombre }} en AnyLopez Benidorm"
+            alt="{{ trat.nombre }} {{ tx.grid.altSuffix }}"
             class="trat-card-img"
             loading="lazy"
             decoding="async"
@@ -647,8 +614,8 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
               type="button"
               class="trat-cta trat-card-trigger"
               data-slug="{{ trat.slug }}"
-              aria-label="Ver detalles de {{ trat.nombre }}"
-            >Ver detalles →</button>
+              aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
+            >{{ tx.grid.detailsCta }}</button>
           </div>
         </div>
       </article>
@@ -661,10 +628,10 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <section class="cat-page-xsell">
   <div class="container">
     <div class="cat-page-xsell-inner">
-      <span class="eyebrow">Para potenciar la base</span>
-      <h2>La estética decorativa luce mejor <em>sobre piel cuidada.</em></h2>
-      <p>Cejas y labios destacan más sobre piel limpia y luminosa. Si quieres que el conjunto se vea integral, las limpiezas faciales periódicas hacen la diferencia.</p>
-      <a href="{{ '/services/limpiezas-faciales/' | url }}" class="btn btn-accent">Ver limpiezas faciales →</a>
+      <span class="eyebrow">{{ tx.xsell.eyebrow }}</span>
+      <h2>{{ tx.xsell.h2_html | safe }}</h2>
+      <p>{{ tx.xsell.p }}</p>
+      <a href="{{ (l.prefix + '/services/limpiezas-faciales/') | url }}" class="btn btn-accent">{{ tx.xsell.cta }}</a>
     </div>
   </div>
 </section>
@@ -673,29 +640,19 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <section class="cat-page-tests">
   <div class="container">
     <div class="cat-page-tests-head">
-      <span class="eyebrow">Pacientes reales</span>
-      <h2>Resultados que se notan, y se cuentan.</h2>
-      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
     </div>
     <div class="cat-page-tests-grid">
+      {%- for it in tx.tests.items %}
       <div class="cat-page-test">
         <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Llevaba años huyendo de la micropigmentación por trabajos terribles que había visto. Aquí me hicieron diseño antes y técnica de pelo a pelo. Mis cejas parecen mías — solo más definidas."</p>
-        <div class="cat-page-test-author">Inmaculada R.</div>
-        <div class="cat-page-test-meta">Paciente · Micropigmentación cejas</div>
+        <p class="cat-page-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="cat-page-test-author">{{ it.author }}</div>
+        <div class="cat-page-test-meta">{{ it.meta }}</div>
       </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Pestañas pelo a pelo cada 4 semanas y mi rutina matinal se ha reducido a la mitad. Sin abanicos artificiales — son mías mejoradas."</p>
-        <div class="cat-page-test-author">Sandra L.</div>
-        <div class="cat-page-test-meta">Paciente · Pestañas</div>
-      </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Eyeliner micropigmentado tras estudio de forma y validación. Despierto con la mirada lista. Ningún trabajo de los que había visto en Instagram me convencía hasta este."</p>
-        <div class="cat-page-test-author">Paciente verificada</div>
-        <div class="cat-page-test-meta">Reseña Google</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -704,39 +661,20 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <section class="cat-page-process">
   <div class="container">
     <div class="cat-page-process-head">
-      <span class="eyebrow">¿Cómo lo empezamos?</span>
-      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
-      <p>Diseñamos antes de aplicar. Si no te convence, no empezamos.</p>
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ tx.process.p_html | safe }}</p>
     </div>
     <div class="cat-page-steps">
+      {%- for it in tx.process.steps %}
       <div class="cat-page-step">
-        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-num">{{ loop.index }}</div>
         <div class="cat-page-step-body">
-          <h3>Reservas tu valoración</h3>
-          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">2</div>
-        <div class="cat-page-step-body">
-          <h3>Diseño previo sobre tu piel + validación tuya</h3>
-          <p>Dibujamos forma, color y proporción directamente sobre tu rostro. Lo miras al espejo, lo ajustamos contigo. Si no te convence al 100%, no empezamos.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">3</div>
-        <div class="cat-page-step-body">
-          <h3>Aplicación</h3>
-          <p>Pestañas pelo a pelo o micropigmentación con técnica conservadora. Crema anestésica si aplica. Tiempo y mimo.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">4</div>
-        <div class="cat-page-step-body">
-          <h3>Retoque programado</h3>
-          <p>Pestañas cada 3-4 semanas. Micropigmentación: retoque inicial 4-6 semanas y anual. Mantenimiento real, no abandono postventa.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -745,30 +683,16 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <section class="cat-page-faq">
   <div class="container">
     <div class="cat-page-faq-head">
-      <span class="eyebrow">Dudas frecuentes</span>
-      <h2>Lo que más nos preguntan sobre estética decorativa.</h2>
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ tx.faq.h2_html | safe }}</h2>
     </div>
     <div class="cat-page-faq-list">
-      <div class="cat-page-faq-item open">
-        <button class="cat-page-faq-q" type="button">¿Cuánto duran las pestañas pelo a pelo? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Entre 3 y 4 semanas según tu ciclo natural de pestaña. Te agendamos retoque cada 3-4 semanas para mantener volumen constante. Sin agresión a tu pestaña natural.</p></div>
+      {%- for f in tx.faq.items %}
+      <div class="cat-page-faq-item{% if loop.first %} open{% endif %}">
+        <button class="cat-page-faq-q" type="button">{{ f.q }} <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>{{ f.a_html | safe }}</p></div>
       </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿La micropigmentación duele? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Sensación de molestia ligera, no dolor. Aplicamos crema anestésica antes y durante. La mayoría de pacientes describe la sensación como cosquilleo o pellizco breve.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Cuándo retocar la micropigmentación? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Retoque inicial a las 4-6 semanas (después del proceso de cicatrización) para perfeccionar. Después, retoques anuales para mantener color e intensidad.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Alergias? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Pigmentos hipoalergénicos pero hacemos prueba de alergia antes en zona pequeña. Si reaccionas, no aplicamos.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Hago deporte / tomo el sol? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Después de la sesión: 7 días sin sol directo, sin saunas, sin agua de mar/piscina, sin maquillaje sobre la zona. Después puedes hacer vida normal — protector solar diario es clave para que el pigmento dure.</p></div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -776,17 +700,18 @@ description: "Pestañas pelo a pelo y micropigmentación de cejas, labios y eyel
 <!-- FINAL CTA -->
 <section class="cat-page-final">
   <div class="container">
-    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
-    <h2>Reserva una valoración. <em>Diseñamos antes de aplicar</em>.</h2>
-    <p>Treinta minutos para ver tu rostro, hablar de qué buscas y dibujar sobre tu piel. Si el diseño no te convence al 100%, no empezamos.</p>
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ tx.final.p_html | safe }}</p>
     <div class="cat-page-final-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
     </div>
   </div>
 </section>
 
 <!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{%- set tratamientos = catalogo[l.code] %}
 {% include "treatment-modal.njk" %}
 
 <script>
