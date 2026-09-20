@@ -1,15 +1,23 @@
 ---
 layout: base.njk
-title: "Equipo y Clínica — AnyLopez Estética Benidorm"
-description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estética en Benidorm. Más de 35 años cuidando pieles, especialistas en Radiofrecuencia INDIBA, Ultherapy HIFU y medicina estética."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/about/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code].about.title | safe }}"
+  description: "{{ i18n[l.code].about.description | safe }}"
 ---
-
+{%- set ta = i18n[l.code].about %}
   <!-- BREADCRUMB -->
   <div class="breadcrumb">
     <div class="container">
-      <a href="{{ '/' | url }}">Inicio</a>
+      <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
       <span>›</span>
-      <span>Nosotros</span>
+      <span>{{ ta.breadcrumb }}</span>
     </div>
   </div>
 
@@ -17,9 +25,9 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
   <section class="page-hero" style="position:relative; background-image:url('{{ "/images/about/fondo-web-2.webp" | url }}'); background-size:cover; background-position:center;">
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(28,26,24,0.78) 0%,rgba(28,26,24,0.52) 100%);"></div>
     <div class="container" style="position:relative;z-index:2;">
-      <span class="section-label" style="color:var(--accent)">Sobre Nosotros</span>
-      <h1>AnyLopez Clínica Estética</h1>
-      <p>Donde podrás consentirte y darle belleza a tu piel</p>
+      <span class="section-label" style="color:var(--accent)">{{ ta.hero.label }}</span>
+      <h1>{{ ta.hero.h1 }}</h1>
+      <p>{{ ta.hero.sub }}</p>
     </div>
   </section>
 
@@ -28,18 +36,18 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
     <div class="container">
       <div class="grid-2">
         <div>
-          <span class="section-label">Nuestra Historia</span>
-          <h2 class="section-title">35 años de experiencia y pasión por la piel</h2>
-          <p style="color:var(--text-mid); margin-bottom:20px;">Todo comenzó hace 5 años, cuando una apasionada Esteticista Argentina, con más de 35 años de experiencia en el cuidado de la piel, iniciara este sueño. Hoy, seguimos honrando su legado, brindando dedicación y excelencia en cada tratamiento.</p>
-          <p style="color:var(--text-mid); margin-bottom:32px;">Sabemos que cada persona es única y que cada piel tiene sus propias necesidades, por lo que nos dedicamos a brindarte un enfoque personalizado. Tu bienestar y confianza son nuestra prioridad.</p>
-          <a href="{{ '/contact/' | url }}" class="btn btn-primary">Conoce la clínica</a>
+          <span class="section-label">{{ ta.historia.label }}</span>
+          <h2 class="section-title">{{ ta.historia.h2 }}</h2>
+          <p style="color:var(--text-mid); margin-bottom:20px;">{{ ta.historia.p1 }}</p>
+          <p style="color:var(--text-mid); margin-bottom:32px;">{{ ta.historia.p2 }}</p>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-primary">{{ ta.historia.cta }}</a>
         </div>
         <div style="position:relative;">
           <picture>
             <source srcset="{{ '/images/about/image-and-text-1.webp' | url }}" type="image/webp">
             <img
               src="{{ '/images/about/image-and-text-1.jpg' | url }}"
-              alt="Clínica AnyLopez"
+              alt="{{ ta.historia.imgAlt }}"
               loading="lazy"
               decoding="async"
               style="border-radius:16px; width:100%; object-fit:cover; height:420px;"
@@ -54,25 +62,18 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
   <section class="section section--bg">
     <div class="container">
       <div class="text-center">
-        <span class="section-label">Nuestros Valores</span>
-        <h2 class="section-title">Lo que nos define</h2>
+        <span class="section-label">{{ ta.valores.label }}</span>
+        <h2 class="section-title">{{ ta.valores.h2 }}</h2>
       </div>
       <div class="grid-3">
+        {%- set romanos = ["I", "II", "III"] %}
+        {%- for item in ta.valores.items %}
         <div class="value-card">
-          <div class="value-icon" style="font-family:'Cormorant Garamond',serif;font-style:italic;">I</div>
-          <h3>Bienestar</h3>
-          <p>Otorgar bienestar a nuestra piel y cuerpo es de vital importancia a través de la estética y cosmetología.</p>
+          <div class="value-icon" style="font-family:'Cormorant Garamond',serif;font-style:italic;">{{ romanos[loop.index0] }}</div>
+          <h3>{{ item.h3 }}</h3>
+          <p>{{ item.p }}</p>
         </div>
-        <div class="value-card">
-          <div class="value-icon" style="font-family:'Cormorant Garamond',serif;font-style:italic;">II</div>
-          <h3>Belleza</h3>
-          <p>La belleza es parte fundamental para sentirnos maravillosos, con nosotros mismos y con el mundo.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon" style="font-family:'Cormorant Garamond',serif;font-style:italic;">III</div>
-          <h3>Relajación</h3>
-          <p>La relajación la necesitamos para mantenernos libres y tranquilos. El descanso es indispensable.</p>
-        </div>
+        {%- endfor %}
       </div>
     </div>
   </section>
@@ -83,19 +84,19 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
       <div class="stats-grid">
         <div>
           <div class="stat-number">35+</div>
-          <div class="stat-label">Años de experiencia</div>
+          <div class="stat-label">{{ ta.stats.experiencia }}</div>
         </div>
         <div>
           <div class="stat-number">{{ reviews.rating }} ★</div>
-          <div class="stat-label">Valoración en Google</div>
+          <div class="stat-label">{{ ta.stats.rating }}</div>
         </div>
         <div>
           <div class="stat-number">{{ reviews.count }}</div>
-          <div class="stat-label">Reseñas verificadas</div>
+          <div class="stat-label">{{ ta.stats.resenas }}</div>
         </div>
         <div>
           <div class="stat-number">10+</div>
-          <div class="stat-label">Tratamientos especializados</div>
+          <div class="stat-label">{{ ta.stats.tratamientos }}</div>
         </div>
       </div>
     </div>
@@ -105,9 +106,9 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
   <section class="section">
     <div class="container">
       <div class="text-center">
-        <span class="section-label">El equipo</span>
-        <h2 class="section-title">Profesionales a tu servicio</h2>
-        <p class="section-subtitle">Contamos con un gran equipo de trabajo con maravillosas características y virtudes: profesionalismo, calidez, amabilidad, sensatez y una gran sonrisa desde el minuto 1.</p>
+        <span class="section-label">{{ ta.equipo.label }}</span>
+        <h2 class="section-title">{{ ta.equipo.h2 }}</h2>
+        <p class="section-subtitle">{{ ta.equipo.sub }}</p>
       </div>
       <div class="grid-4">
         <div class="team-card">
@@ -122,7 +123,7 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
             />
           </picture>
           <h3 class="team-name">Gogna Kumar</h3>
-          <p class="team-role">Gerente General</p>
+          <p class="team-role">{{ ta.equipo.roles.kumar }}</p>
         </div>
         <div class="team-card">
           <picture>
@@ -136,7 +137,7 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
             />
           </picture>
           <h3 class="team-name">Eilen Vanessa Cardenas</h3>
-          <p class="team-role">Esteticista Cosmetóloga</p>
+          <p class="team-role">{{ ta.equipo.roles.eilen_html | safe }}</p>
         </div>
         <div class="team-card">
           <picture>
@@ -150,7 +151,7 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
             />
           </picture>
           <h3 class="team-name">Dr. Jose Rius</h3>
-          <p class="team-role">Medicina Estética</p>
+          <p class="team-role">{{ ta.equipo.roles.rius }}</p>
         </div>
         <div class="team-card">
           <picture>
@@ -164,7 +165,7 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
             />
           </picture>
           <h3 class="team-name">Olga Topchevod</h3>
-          <p class="team-role">Bióloga Especialista en Recuperación Celular</p>
+          <p class="team-role">{{ ta.equipo.roles.olga }}</p>
         </div>
       </div>
     </div>
@@ -174,31 +175,31 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
   <section class="section section--bg">
     <div class="container">
       <div class="text-center">
-        <span class="section-label">Nuestro espacio</span>
-        <h2 class="section-title">Una clínica pensada para ti</h2>
-        <p class="section-subtitle">Cada rincón está diseñado para que te sientas cómoda, segura y en buenas manos desde el primer momento.</p>
+        <span class="section-label">{{ ta.instalaciones.label }}</span>
+        <h2 class="section-title">{{ ta.instalaciones.h2 }}</h2>
+        <p class="section-subtitle">{{ ta.instalaciones.sub }}</p>
       </div>
       <div class="grid-3" style="margin-top:40px;">
         <div>
           <picture>
             <source srcset="{{ '/images/clinica/recepcion.webp' | url }}" type="image/webp">
-            <img src="{{ '/images/clinica/recepcion.jpeg' | url }}" alt="Recepción de AnyLopez Clínica Estética" width="640" height="280" loading="lazy" decoding="async" style="width:100%; height:280px; object-fit:cover; border-radius:12px;" />
+            <img src="{{ '/images/clinica/recepcion.jpeg' | url }}" alt="{{ ta.instalaciones.recepcionAlt }}" width="640" height="280" loading="lazy" decoding="async" style="width:100%; height:280px; object-fit:cover; border-radius:12px;" />
           </picture>
-          <p style="text-align:center; margin-top:12px; color:var(--text-mid); font-size:0.85rem; font-family:'Jost',sans-serif; letter-spacing:0.05em; text-transform:uppercase;">Recepción</p>
+          <p style="text-align:center; margin-top:12px; color:var(--text-mid); font-size:0.85rem; font-family:'Jost',sans-serif; letter-spacing:0.05em; text-transform:uppercase;">{{ ta.instalaciones.recepcion }}</p>
         </div>
         <div>
           <picture>
             <source srcset="{{ '/images/clinica/salaespera.webp' | url }}" type="image/webp">
-            <img src="{{ '/images/clinica/salaespera.jpeg' | url }}" alt="Sala de espera de AnyLopez" width="640" height="280" loading="lazy" decoding="async" style="width:100%; height:280px; object-fit:cover; border-radius:12px;" />
+            <img src="{{ '/images/clinica/salaespera.jpeg' | url }}" alt="{{ ta.instalaciones.salaAlt }}" width="640" height="280" loading="lazy" decoding="async" style="width:100%; height:280px; object-fit:cover; border-radius:12px;" />
           </picture>
-          <p style="text-align:center; margin-top:12px; color:var(--text-mid); font-size:0.85rem; font-family:'Jost',sans-serif; letter-spacing:0.05em; text-transform:uppercase;">Sala de espera</p>
+          <p style="text-align:center; margin-top:12px; color:var(--text-mid); font-size:0.85rem; font-family:'Jost',sans-serif; letter-spacing:0.05em; text-transform:uppercase;">{{ ta.instalaciones.sala }}</p>
         </div>
         <div>
           <picture>
             <source srcset="{{ '/images/clinica/cabina2.webp' | url }}" type="image/webp">
-            <img src="{{ '/images/clinica/cabina2.jpeg' | url }}" alt="Cabina de tratamientos de AnyLopez" width="640" height="280" loading="lazy" decoding="async" style="width:100%; height:280px; object-fit:cover; border-radius:12px;" />
+            <img src="{{ '/images/clinica/cabina2.jpeg' | url }}" alt="{{ ta.instalaciones.cabinaAlt }}" width="640" height="280" loading="lazy" decoding="async" style="width:100%; height:280px; object-fit:cover; border-radius:12px;" />
           </picture>
-          <p style="text-align:center; margin-top:12px; color:var(--text-mid); font-size:0.85rem; font-family:'Jost',sans-serif; letter-spacing:0.05em; text-transform:uppercase;">Cabina de tratamientos</p>
+          <p style="text-align:center; margin-top:12px; color:var(--text-mid); font-size:0.85rem; font-family:'Jost',sans-serif; letter-spacing:0.05em; text-transform:uppercase;">{{ ta.instalaciones.cabina }}</p>
         </div>
       </div>
     </div>
@@ -207,9 +208,9 @@ description: "Conoce el equipo y las instalaciones de AnyLopez Clínica Estétic
   <!-- CTA -->
   <section class="section section--dark">
     <div class="container text-center">
-      <h2 class="section-title" style="color:#fff; margin-bottom:16px;">¿Quieres conocernos?</h2>
-      <p style="color:rgba(255,255,255,0.8); margin-bottom:12px;">Ven a visitarnos a nuestra clínica en Benidorm o llámanos para resolver cualquier duda.</p>
-      <p style="color:rgba(255,255,255,0.55); font-size:14px; margin-bottom:32px;">Antes de venir, lee lo que dicen las <a href="https://www.google.com/maps/place/AnyLopez+Clinica+Est%C3%A9tica/@38.5376389,-0.1329449,19z?utm_source=anylopez-web&utm_medium=about-cta" target="_blank" rel="noopener noreferrer" style="color:var(--gold); text-decoration:underline;">{{ reviews.count }} personas que ya pasaron por aquí en Google &rarr;</a></p>
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Contactar</a>
+      <h2 class="section-title" style="color:#fff; margin-bottom:16px;">{{ ta.cta.h2 }}</h2>
+      <p style="color:rgba(255,255,255,0.8); margin-bottom:12px;">{{ ta.cta.p }}</p>
+      <p style="color:rgba(255,255,255,0.55); font-size:14px; margin-bottom:32px;">{{ ta.cta.google_html | replace("{count}", reviews.count) | safe }}</p>
+      {{ ta.cta.btn_html | replace("{contactUrl}", (l.prefix + '/contact/') | url) | safe }}
     </div>
   </section>
