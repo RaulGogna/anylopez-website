@@ -12,6 +12,6 @@
   { "key": "estetica-decorativa", "path": "/services/estetica-decorativa/", "priority": "0.85", "changefreq": "monthly" },
   { "key": "depilacion", "path": "/services/depilacion/", "priority": "0.85", "changefreq": "monthly" },
   { "key": "contact", "path": "/contact/", "priority": "0.6", "changefreq": "monthly" },
-  { "key": "privacidad", "path": "/privacidad/", "priority": "0.3", "changefreq": "yearly", "only": ["es"] },
+  { "key": "privacidad", "path": "/privacidad/", "priority": "0.3", "changefreq": "yearly" },
   { "key": "aviso-legal", "path": "/aviso-legal/", "priority": "0.3", "changefreq": "yearly", "only": ["es"] }
 ]
