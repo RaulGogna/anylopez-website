@@ -1,0 +1,114 @@
+{
+  "title": "Soins du corps à Benidorm — Madérothérapie, drainage et récupération · AnyLopez",
+  "description": "Madérothérapie, pressothérapie, drainage lymphatique post-opératoire et récupération musculaire chez AnyLopez Clinique Esthétique Benidorm. Savoir-faire manuel expert et diagnostic personnalisé.",
+  "jsonld": {
+    "name": "Soins du corps AnyLopez",
+    "alternateName": "Esthétique corporelle manuelle",
+    "description": "Catalogue de soins du corps chez AnyLopez Clinique Esthétique Benidorm : madérothérapie, pressothérapie, drainage lymphatique post-opératoire et récupération des douleurs musculaires. Savoir-faire manuel expert, protocoles validés et diagnostic personnalisé.",
+    "specialties": [
+      "Madérothérapie",
+      "Pressothérapie",
+      "Drainage Lymphatique Post-opératoire",
+      "Récupération Musculaire"
+    ],
+    "faq": [
+      { "q": "De combien de séances de drainage post-opératoire ai-je besoin ?", "a": "Cela dépend de la chirurgie et de la phase de récupération, mais le protocole habituel est de 8 à 12 séances réparties sur les 4 à 6 premières semaines post-opératoires. Lors du diagnostic, nous examinons votre compte rendu médical, la date de l'intervention, et nous concevons le plan exact." },
+      { "q": "La madérothérapie fonctionne-t-elle contre la cellulite ?", "a": "Oui, surtout combinée à de la constance (alimentation, hydratation, activité physique). La madérothérapie améliore visiblement l'apparence de la cellulite en stimulant la circulation et le drainage. Ce n'est pas de la magie, c'est un travail manuel soutenu — et les résultats se voient." },
+      { "q": "Pressothérapie et madérothérapie se complètent-elles ?", "a": "Beaucoup. La madérothérapie travaille manuellement le fascia et la graisse sous-cutanée ; la pressothérapie draine le liquide lymphatique par pression séquentielle. Combinées dans une même séance, les résultats se multiplient — c'est l'un des protocoles que nous recommandons le plus pour les jambes lourdes et la cellulite." },
+      { "q": "Après une liposuccion, quand puis-je commencer le drainage ?", "a": "Habituellement entre 5 et 10 jours après l'intervention, selon les indications de votre chirurgien. L'essentiel : un drainage post-opératoire spécifique (pas un massage générique), dès que le médecin l'autorise. Plus vous commencez tôt, meilleure est l'évolution." },
+      { "q": "La manipulation me fera-t-elle mal ?", "a": "Le drainage lymphatique est très doux — il ne fait pas mal. La madérothérapie et la récupération musculaire ont une intensité moyenne à élevée selon votre tolérance, mais toujours dans le seuil thérapeutique. Si à un moment c'est trop, nous ajustons. Nous ne soignons personne qui serre les dents." }
+    ]
+  },
+  "css": {
+    "xsellComment": "Radiofréquence INDIBA"
+  },
+  "comments": {
+    "xsell": "Radiofréquence INDIBA"
+  },
+  "breadcrumb": { "services": "Soins", "current": "Soins du Corps" },
+  "callCta": "Appeler le 656 306 167",
+  "hero": {
+    "imgAlt": "Soins du corps chez AnyLopez Clinique Esthétique Benidorm",
+    "eyebrow": "Soins du corps · 4 protocoles",
+    "h1_html": "Votre corps n'a pas besoin d'une machine de plus. <em>Il a besoin de mains qui savent où insister.</em>",
+    "lead_html": "Rétention d'eau, jambes lourdes, récupération post-chirurgicale, tension musculaire chronique. Des choses qui ne se règlent ni avec un massage générique ni avec une machine sans discernement. Ici, nous travaillons avec une technique manuelle experte et des protocoles spécifiques à chaque cas.",
+    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "reviews": "avis Google",
+    "free": "Diagnostic initial sans frais"
+  },
+  "pain": {
+    "eyebrow": "Cela vous parle ?",
+    "h2": "La plupart des patientes qui arrivent ici sont passées par la même chose.",
+    "p_html": "Vous ne partez pas de zéro. Vous arrivez après avoir essayé d'autres solutions qui n'ont pas vraiment fonctionné.",
+    "items": [
+      { "h3_html": "Vous sentez vos jambes lourdes et votre circulation ralentie.", "p_html": "Malgré le sport et l'alimentation. C'est de la rétention et une mauvaise microcirculation. La salle de sport ne la règle pas — le drainage, oui." },
+      { "h3_html": "Vous avez été opérée et la récupération traîne.", "p_html": "Chirurgie esthétique, abdominale, orthopédique. Sans drainage post-opératoire spécifique, l'inflammation s'accumule et ralentit votre retour à la normale." },
+      { "h3_html": "Vous vivez avec une tension musculaire chronique.", "p_html": "Des heures devant l'ordinateur ou des entraînements intensifs. Lombaires, cervicales, jambes. Un massage générique vous soulage un jour — un protocole sérieux vous dénoue pour de vrai." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi les soins du corps chez AnyLopez fonctionnent",
+    "h2_html": "Six raisons pour lesquelles ils fonctionnent ici et pas ailleurs.",
+    "p_html": "Ce n'est pas du marketing. C'est un savoir-faire manuel expert, du discernement et des protocoles validés.",
+    "items": [
+      { "h3_html": "Le savoir-faire manuel de décennies de pratique", "p_html": "Les machines aident ; les mains diagnostiquent pendant qu'elles soignent. Ici, nous n'embauchons pas de stagiaires pour réduire les coûts — vous êtes reçue par quelqu'un qui sait." },
+      { "h3_html": "Combinables avec la Radiofréquence INDIBA en cas de relâchement cutané associé", "p_html": "Nous ne vendons pas que notre spécialité. Si votre cas nécessite une radiofréquence profonde en plus du manuel, nous le disons et combinons les protocoles." },
+      { "h3_html": "Drainage lymphatique avec technique validée", "p_html": "Ce n'est pas un massage doux au nom pompeux. C'est le protocole Vodder/Leduc adapté à votre cas, avec des pressions et un rythme spécifiques." },
+      { "h3_html": "Récupération post-chirurgicale avec des protocoles sérieux", "p_html": "Après une chirurgie esthétique ou autre, nous n'improvisons pas. Nous savons quand commencer, à quelle intensité, à quelle fréquence et pourquoi." },
+      { "h3_html": "Des séances qui se ressentent dès la première", "p_html": "Pas besoin d'attendre 10 séances pour sentir quelque chose. Drainage, madérothérapie et récupération musculaire procurent une sensation immédiate." },
+      { "h3_html": "Sans piqûres, sans convalescence, compatibles avec votre routine", "p_html": "Vous sortez et reprenez votre vie. Pas d'arrêt, pas de marques visibles." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Quand le corps et la peau vont de pair",
+    "h2_html": "Si votre cas associe corps et <em>relâchement cutané profond</em>…",
+    "p": "Beaucoup de protocoles corporels sont renforcés par la radiofréquence INDIBA. Si votre objectif inclut de raffermir la peau en plus du drainage ou de la tonicité, nous les combinons lors du diagnostic gratuit.",
+    "cta": "Découvrir la Radiofréquence INDIBA →"
+  },
+  "grid": {
+    "eyebrow": "Quatre protocoles · une seule philosophie",
+    "h2": "Les soins du corps du catalogue.",
+    "p": "Cliquez sur une carte pour voir tous les bienfaits, les tarifs et les packs.",
+    "altSuffix": "chez AnyLopez Benidorm",
+    "detailsAria": "Voir les détails de",
+    "detailsCta": "Voir les détails →"
+  },
+  "tests": {
+    "eyebrow": "Patientes réelles",
+    "h2": "Des résultats qui se voient, et qui se racontent.",
+    "p": "Avis vérifiés sur Google. Sans acteurs, sans miracles en pilule, sans avant-après retouchés.",
+    "items": [
+      { "quote_html": "\"Opérée d'une abdominoplastie, les premières semaines je pensais ne jamais m'en remettre. Dix séances de drainage post-opératoire et la différence est le jour et la nuit — l'inflammation a diminué bien plus vite que toutes mes attentes.\"", "author": "Carmen R.", "meta": "Patiente · Drainage Post-opératoire" },
+      { "quote_html": "\"Des années de douleurs lombaires de bureau. J'ai essayé la kiné, la salle de sport, même l'acupuncture. La récupération musculaire ici m'a dénoué pour de vrai — ce n'est pas un massage agréable, c'est un travail thérapeutique sérieux.\"", "author": "Javier M.", "meta": "Patient · Récupération Musculaire" },
+      { "quote_html": "\"La madérothérapie a changé la cellulite de mes jambes plus que n'importe quelle crème amincissante. Avec un peu de constance, les résultats sont visibles.\"", "author": "Patiente vérifiée", "meta": "Avis Google · Madérothérapie" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment commence-t-on ?",
+    "h2": "Quatre étapes. Sans surprises, sans petites lignes.",
+    "p": "Entre votre premier message et la première amélioration visible, il s'écoule moins de deux semaines.",
+    "steps": [
+      { "h3": "Vous réservez votre diagnostic gratuit", "p_html": "Appel/WhatsApp pour trouver un créneau. 30 min en clinique, sans frais, sans engagement." },
+      { "h3": "Diagnostic personnalisé en clinique", "p_html": "Nous vous évaluons : zone, antécédents, objectif. Si vous sortez d'une chirurgie, nous consultons le compte rendu médical. S'il s'agit de rétention, nous palpons pour en déterminer le type. Si c'est une tension musculaire, nous évaluons la chaîne posturale." },
+      { "h3": "Protocole sur mesure avec séances et fréquence", "p_html": "Pas de « revenez 10 fois ». Nous déterminons combien de séances il vous faut vraiment et à quel rythme. Et si votre cas se résout en 4, nous vous le disons." },
+      { "h3": "Un vrai suivi entre les séances", "p_html": "WhatsApp direct pour vos questions, ajustements et conseils post-soin." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "h2": "Ce qu'on nous demande le plus sur les soins du corps.",
+    "items": [
+      { "q": "De combien de séances de drainage post-opératoire ai-je besoin ?", "a_html": "Cela dépend de la chirurgie et de la phase de récupération, mais le protocole habituel est de 8 à 12 séances réparties sur les 4 à 6 premières semaines post-opératoires. Lors du diagnostic, nous examinons votre compte rendu médical, la date de l'intervention, et nous concevons le plan exact." },
+      { "q": "La madérothérapie fonctionne-t-elle contre la cellulite ?", "a_html": "Oui, surtout combinée à de la constance (alimentation, hydratation, activité physique). La madérothérapie améliore visiblement l'apparence de la cellulite en stimulant la circulation et le drainage. Ce n'est pas de la magie, c'est un travail manuel soutenu — et les résultats se voient." },
+      { "q": "Pressothérapie et madérothérapie se complètent-elles ?", "a_html": "Beaucoup. La madérothérapie travaille manuellement le fascia et la graisse sous-cutanée ; la pressothérapie draine le liquide lymphatique par pression séquentielle. Combinées dans une même séance, les résultats se multiplient — c'est l'un des protocoles que nous recommandons le plus pour les jambes lourdes et la cellulite." },
+      { "q": "Après une liposuccion, quand puis-je commencer le drainage ?", "a_html": "Habituellement entre 5 et 10 jours après l'intervention, selon les indications de votre chirurgien. L'essentiel : un drainage post-opératoire spécifique (pas un massage générique), dès que le médecin l'autorise. Plus vous commencez tôt, meilleure est l'évolution." },
+      { "q": "La manipulation me fera-t-elle mal ?", "a_html": "Le drainage lymphatique est très doux — il ne fait pas mal. La madérothérapie et la récupération musculaire ont une intensité moyenne à élevée selon votre tolérance, mais toujours dans le seuil thérapeutique. Si à un moment c'est trop, nous ajustons. Nous ne soignons personne qui serre les dents." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sans engagement",
+    "h2_html": "Réservez votre diagnostic gratuit. <em>Commencez par savoir ce dont votre corps a besoin</em>.",
+    "p_html": "Trente minutes en clinique avec des mains qui pratiquent depuis des décennies. Si votre cas relève d'un kinésithérapeute, d'un traumatologue ou d'un autre spécialiste, nous vous le disons.",
+    "cta": "Réserver un bilan →"
+  }
+}

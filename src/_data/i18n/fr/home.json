@@ -1,0 +1,317 @@
+{
+  "title": "AnyLopez Benidorm — Ultherapy HIFU et Pack Radiofréquence INDIBA",
+  "description": "Clinique esthétique à Benidorm spécialisée en Ultherapy HIFU et radiofréquence INDIBA. Pack 10 séances (45 min) à 500 € avec garantie : si vous ne constatez aucune amélioration, la 11e séance est offerte.",
+  "ogTitle": "AnyLopez Benidorm — Spécialistes Ultherapy HIFU & Radiofréquence INDIBA",
+  "ogDescPre": "Clinique esthétique à Benidorm. Radiofréquence INDIBA, Ultherapy HIFU, Botox, soins du visage et plus encore. ",
+  "ogDescPost": " avis cinq étoiles. Réservez votre consultation gratuite sur WhatsApp.",
+  "c": {
+    "booking": "BOOKING CUSTOM — primaire (remplace Cal.com)",
+    "leadStrip": "LEAD STRIP — repli hors horaires",
+    "pack": "PACK Radiofréquence INDIBA — SOIN PHARE",
+    "otros": "AUTRES SOINS (bandeau inférieur compact)",
+    "porque": "POURQUOI NOUS CHOISIR",
+    "legado": "HÉRITAGE + ÉQUIPE",
+    "proceso": "PROCESSUS",
+    "testi": "TÉMOIGNAGES",
+    "donde": "OÙ NOUS TROUVER",
+    "cta": "CTA FINAL"
+  },
+  "hero": {
+    "eyebrow": "Benidorm · Clinique esthétique depuis 2018",
+    "h1_html": "Une peau plus ferme.<br>Plus lumineuse.<br><em>En quelques séances.</em>",
+    "desc": "Radiofréquence INDIBA avec protocole personnalisé. Nous avons hérité de 35 ans de savoir-faire dans le soin de la peau et nous les appliquons à chaque séance.",
+    "waHref": "https://wa.me/34656306167?text=Bonjour%2C%20je%20souhaite%20demander%20mon%20bilan%20gratuit%20de%20Radiofr%C3%A9quence%20INDIBA.",
+    "waCta": "Demandez votre bilan sur WhatsApp",
+    "packCta": "Voir le pack Radiofréquence INDIBA",
+    "aria1_html": "Voir les ",
+    "aria2": " avis d'AnyLopez sur Google (",
+    "aria3": " étoiles)",
+    "ratingSuffix": "avis vérifiés sur Google",
+    "chipsAria": "Avantages du Pack Radiofréquence INDIBA",
+    "chips": ["Sans douleur", "Sans convalescence", "Pack (45 min) 500 €", "Garantie 11e séance"],
+    "guarantee": "Si après votre Pack 10 Radiofréquence INDIBA vous ne constatez aucune amélioration, votre 11e séance est offerte."
+  },
+  "trust": {
+    "ratingSuffix": "avis",
+    "badge1": "Radiofréquence INDIBA",
+    "years_html": "<strong style=\"color:#fff\">35 ans</strong> de savoir-faire hérité"
+  },
+  "pack": {
+    "label": "Soin phare",
+    "h2_html": "Pack Radiofréquence INDIBA Anti-Âge<br><em>10 séances (45 min) pour 500 €</em>",
+    "subtitle": "Raffermissez le visage ou le corps avec la technologie que nous recommandons le plus. Résultats visibles dès les premières séances, sans chirurgie et sans convalescence.",
+    "includeH3_html": "Ce que comprend votre Pack 10",
+    "items": [
+      {
+        "name_html": "10 séances de radiofréquence INDIBA (45 min)",
+        "value": "650 €",
+        "reason_html": "La séance de 45 min à l'unité coûte 65 € en clinique — payer 10 séances à l'unité reviendrait à 650 €."
+      },
+      {
+        "name_html": "Diagnostic initial + plan personnalisé par zone",
+        "value": "80 €",
+        "reason_html": "Un bilan esthétique professionnel avec recommandation de protocole coûte entre 60 et 100 € dans la région."
+      },
+      {
+        "name_html": "Suivi séance après séance avec ajustement des paramètres",
+        "value": "50 €",
+        "reason_html": "À chaque rendez-vous, nous calibrons puissance et durées selon votre peau. C'est cet ajustement qui rend les résultats visibles."
+      },
+      {
+        "name_html": "Plan de soins à domicile pour entretenir les résultats",
+        "value": "30 €",
+        "reason_html": "Routine personnalisée pour votre type de peau. Nous vous disons quoi utiliser chez vous, sans commissions ni marque maison à vendre."
+      },
+      {
+        "cls": "is-guarantee",
+        "name_html": "<strong>Garantie 11e séance :</strong> vous constatez une amélioration ou la 11e est à notre charge",
+        "value": "65 €",
+        "reason_html": "Nous sommes si sûres de votre amélioration que, si vous ne la constatez pas au bout des 10 séances, la 11e est pour nous."
+      }
+    ],
+    "totalLine_html": "Valeur totale offerte : <s>875 €</s>",
+    "price_html": "Votre investissement aujourd'hui : <strong>500 €</strong>",
+    "savings_html": "Vous économisez <strong>375 €</strong> (43 %)",
+    "tableH3": "Comparez les options",
+    "thOption": "Option",
+    "thPrice": "Prix",
+    "thPer": "Par séance",
+    "rows": [
+      { "td": "Séance à l'unité (45 min)", "p": "65 €", "s": "65 €" },
+      { "td": "Pack 10 (30 min/séance)", "p": "350 €", "s": "35 €" },
+      { "td": "Pack 10 (45 min/séance)", "p": "500 €", "s": "50 €", "hl": true }
+    ],
+    "note": "Les séances du pack à 500 € durent 45 minutes : le meilleur prix au volume.",
+    "reason_html": "<strong>Pourquoi 10 séances à 500 € ?</strong> Parce que c'est le protocole complet. En dessous de 10, la Radiofréquence INDIBA ne consolide pas le résultat. Ce que nous facturons, c'est ce dont votre peau a besoin — pas une séance de plus, pas une de moins.",
+    "waHref": "https://wa.me/34656306167?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20mon%20Pack%20Radiofr%C3%A9quence%20INDIBA%20Anti-%C3%82ge%20de%2010%20s%C3%A9ances.",
+    "waCta": "Réserver mon Pack Radiofréquence INDIBA sur WhatsApp"
+  },
+  "otros": {
+    "intro_html": "Notre spécialité est la Radiofréquence INDIBA. Nous pratiquons aussi Ultherapy HIFU, Botox et injections de comblement, Dermapen, Nettoyage de peau Platinum, madérothérapie et pressothérapie. Si vous venez pour l'un de ces soins, vous serez aussi bien accueillie — mais si vous ne deviez venir que pour un seul, nous vous dirions la Radiofréquence INDIBA.",
+    "chips": [
+      { "path": "/services/lifting-antiaging/#ultherapy-hifu", "label": "Ultherapy HIFU Lifting" },
+      { "path": "/services/inyectables/#botox-zona", "label": "Botox & Comblements" },
+      { "path": "/services/tratamientos-faciales/#dermapen-hidratacion", "label": "Dermapen" },
+      { "path": "/services/limpiezas-faciales/#limpieza-facial-platinum", "label": "Nettoyage de peau Platinum" },
+      { "path": "/services/corporal/#maderoterapia", "label": "Madérothérapie" },
+      { "path": "/services/corporal/#presoterapia", "label": "Pressothérapie" },
+      { "path": "/services/inyectables/#acido-hialuronico", "label": "Acide Hyaluronique" }
+    ],
+    "catalogCta": "Voir le catalogue complet"
+  },
+  "porque": {
+    "label": "Pourquoi AnyLopez ?",
+    "h2": "Notre différence",
+    "c1": {
+      "h3": "35 ans de savoir-faire, une clinique depuis 2018",
+      "p_html": "Nous avons hérité d'un savoir-faire argentin de 35 ans dans le soin de la peau. Aujourd'hui, nous l'appliquons chaque jour à Benidorm, avec la même exigence."
+    },
+    "c2": {
+      "h3": "Technologie de pointe",
+      "p_html": "Équipements de Radiofréquence INDIBA &amp; Ultherapy HIFU. Sécurité et efficacité validées par la science."
+    },
+    "c3": {
+      "h3": "Accompagnement personnalisé",
+      "p_html": "Chaque soin est conçu sur mesure selon vos besoins, vos objectifs et votre type de peau. Sans protocoles génériques."
+    },
+    "c4": {
+      "h3": "Résultats garantis",
+      "p_html": " avis 5 étoiles sur Google en témoignent. Si vous n'êtes pas satisfaite, nous cherchons la solution avec vous."
+    }
+  },
+  "legado": {
+    "label": "Notre histoire",
+    "h2_html": "35 ans de savoir-faire.<br><em>Une clinique fidèle à cet héritage.</em>",
+    "p1_html": "Cette clinique est née en 2018, héritière de 35 ans de savoir-faire d'une esthéticienne argentine qui avait compris une chose : la peau ne se brusque pas, elle s'écoute. Aujourd'hui, nous continuons de travailler ainsi.",
+    "p2_html": "<strong>Nous ne vendons pas de séances superflues. Nous ne traitons pas ce dont vous n'avez pas besoin. Si votre peau n'a pas besoin de Radiofréquence INDIBA, nous vous le dirons.</strong>",
+    "p3_html": "Chaque personne est unique et chaque peau a ses propres besoins. C'est pourquoi nous n'appliquons pas de protocoles à la chaîne : nous discutons avec vous, nous évaluons votre peau et nous concevons un plan sur mesure.",
+    "eqLabel": "Qui est aujourd'hui derrière la clinique",
+    "imgAlt": "Gogna Kumar — Directeur d'AnyLopez Clinique Esthétique",
+    "rol": "Directeur de la clinique",
+    "bio1": "J'ai pris la direction d'AnyLopez pour que le soin qui définit cette clinique reste ici, à Benidorm, avec les mêmes mains expertes et la même technologie.",
+    "bio2_html": "Je ne vends pas de forfaits plus longs que ce dont votre peau a besoin. Je ne commence aucun soin sans bilan préalable. Si vous avez des doutes avant de commencer, écrivez-moi directement sur le WhatsApp de la clinique — je préfère perdre une vente plutôt que vous arriviez sans réponses à toutes vos questions.",
+    "waHref": "https://wa.me/34656306167?text=Bonjour%20Kumar%2C%20j%27ai%20quelques%20questions%20avant%20de%20commencer.",
+    "waCta": "Écrire directement à Kumar"
+  },
+  "proceso": {
+    "label": "Comment ça marche",
+    "h2": "Votre chemin vers la peau que vous méritez",
+    "steps": [
+      { "h3": "Consultation gratuite", "p": "Nous analysons votre peau et écoutons vos objectifs, sans engagement." },
+      { "h3": "Plan personnalisé", "p": "Nous concevons un protocole adapté à votre peau, votre rythme de vie et votre budget." },
+      { "h3": "Soin", "p": "Nous appliquons la technologie la plus avancée avec précision et expertise." },
+      { "h3": "Suivi", "p": "Nous vous accompagnons pour maintenir et renforcer les résultats sur le long terme." }
+    ],
+    "ctaLabel": "Commencez aujourd'hui — consultation gratuite"
+  },
+  "testi": {
+    "countSuffix": "avis vérifiés",
+    "h2_html": "Ce que disent<br><em style=\"font-style:italic;color:var(--gold);\">nos clientes</em>",
+    "introPre": "Plus de ",
+    "introPost": " personnes nous font confiance. Voici quelques-unes de leurs histoires — toutes réelles, toutes sur notre profil Google.",
+    "allCta": "Voir tous les avis →",
+    "cards": [
+      {
+        "featured": true,
+        "quote_html": "« C'est un centre spectaculaire. Andrea est très professionnelle, un 10 sur 10. Un accompagnement personnalisé qui se ressent dès le premier instant. »",
+        "name": "Cris",
+        "service": "Radiofréquence INDIBA visage · Janvier 2026"
+      },
+      {
+        "quote_html": "« Ma peau a rajeuni de trente ans. Un accueil formidable et un professionnalisme à toute épreuve. J'y retournerai sans hésiter. »",
+        "name": "Pedro",
+        "service": "Nettoyage de peau · Mars 2026"
+      },
+      {
+        "quote_html": "« Cela fait plus de 20 ans que je fais des nettoyages de peau, mais aucun comme celui-ci. J'ai été émerveillée dès la première séance. 100 % recommandable. »",
+        "name": "Bárbara G.",
+        "service": "Nettoyage de peau · 2025"
+      },
+      {
+        "quote_html": "« Je souffrais de douleurs lombaires depuis 17 ans. Après seulement trois séances de radiofréquence INDIBA, je me suis amélioré de 95 %. Je recommande ce centre à toute personne cherchant une solution efficace contre la douleur. »",
+        "name": "Param Singh",
+        "service": "Radiofréquence INDIBA · Juin 2026"
+      }
+    ]
+  },
+  "faq": {
+    "label": "Questions fréquentes",
+    "h2": "Tout ce que vous devez savoir",
+    "items": [
+      {
+        "q_html": "Le soin Radiofréquence INDIBA est-il douloureux ?",
+        "a_html": "Non, la radiofréquence INDIBA est totalement indolore. Beaucoup de clientes la décrivent comme une sensation de chaleur agréable et relaxante. Elle convient à tous les types de peau, y compris les plus sensibles."
+      },
+      {
+        "q_html": "De combien de séances ai-je besoin ?",
+        "a_html": "Cela dépend du soin et de l'objectif. En général, 6 à 10 séances sont recommandées pour des résultats optimaux. Lors de la consultation gratuite, nous concevons un plan personnalisé pour vous."
+      },
+      {
+        "q_html": "Et si ça ne fonctionne pas sur moi, comme dans d'autres cliniques ?",
+        "a_html": "Nous vous comprenons — la déception d'investir sans voir de résultat est bien réelle. C'est pourquoi nous travaillons avec une garantie : si vous terminez votre Pack 10 Radiofréquence INDIBA sans constater d'amélioration, la 11e séance est offerte. Avant de commencer, nous évaluons votre peau sans engagement et, si nous pensons que ce n'est pas le soin qu'il vous faut, nous vous le disons. Nous préférons perdre une vente plutôt que vous fassiez face à une nouvelle déception."
+      },
+      {
+        "q_html": "Pourquoi AnyLopez et pas une clinique moins chère ou une grande franchise ?",
+        "a_html": "En franchise, on vous traite à la chaîne avec un protocole identique pour toutes. Ici, nous avons hérité de 35 ans de savoir-faire et nous adaptons chaque séance à votre peau — Radiofréquence INDIBA avec des paramètres spécifiques, des durées calibrées, un suivi séance après séance. Et lorsqu'une clinique moins chère réduit ses coûts, elle réduit généralement la durée de chaque séance ou la puissance de l'appareil. Nous faisons l'inverse : 10 vraies séances de 30 minutes à la puissance dont votre peau a besoin, pas une de moins."
+      },
+      {
+        "q_html": "Est-ce sûr ? Y a-t-il des contre-indications ?",
+        "a_html": "La radiofréquence INDIBA est approuvée pour un usage esthétique et médical, non invasive, sans anesthésie ni convalescence. Les contre-indications absolues sont rares : grossesse, pacemaker ou implants électroniques, prothèses métalliques dans la zone à traiter, maladies oncologiques actives et thrombose. Lors de la consultation initiale, nous passons en revue vos antécédents ; si quelque chose déconseille le soin, nous vous le dirons avant de vous facturer quoi que ce soit."
+      },
+      {
+        "q_html": "Quand verrai-je de vrais résultats ? Vous n'allez pas me vendre du vent ?",
+        "a_html": "En toute sincérité : vous remarquerez une peau plus hydratée et lumineuse dès la 1re ou 2e séance (effet immédiat de la chaleur profonde). L'effet raffermissant s'installe entre la 5e et la 8e séance, lorsque le collagène se réorganise. Le résultat consolidé se voit à la fin des 10 séances, avec une amélioration progressive pendant encore 3 à 6 mois tandis que votre peau continue de se régénérer. Si quelqu'un vous promet mieux que cela, il vous vend du vent."
+      },
+      {
+        "q_html": "Combien de temps durent les résultats ?",
+        "a_html": "Les résultats varient selon le soin et l'entretien à domicile, mais ils se maintiennent généralement entre 6 et 12 mois. Avec des séances d'entretien régulières, les résultats peuvent être permanents."
+      },
+      {
+        "q_html": "À partir de quel âge peut-on se faire traiter ?",
+        "a_html": "À partir de 18 ans. Pour les mineurs, l'autorisation et la présence d'un tuteur légal lors de la consultation initiale sont obligatoires."
+      },
+      {
+        "q_html": "Faut-il prendre rendez-vous ?",
+        "a_html": "Oui, nous travaillons exclusivement sur rendez-vous pour garantir l'accompagnement personnalisé que chaque cliente mérite. Vous pouvez réserver par téléphone, WhatsApp ou via le formulaire de contact."
+      }
+    ]
+  },
+  "jsonldProduct": {
+    "name": "Pack Radiofréquence INDIBA Anti-Âge — 10 séances",
+    "description": "Protocole complet de radiofréquence INDIBA pour raffermir le visage ou le corps. Comprend 10 séances de 45 min, un diagnostic initial, un plan personnalisé, un suivi séance après séance, un plan de soins à domicile et la garantie 11e séance.",
+    "inLanguage": "fr",
+    "clinicName": "AnyLopez Clinique Esthétique"
+  },
+  "jsonldFaq": [
+    {
+      "name": "Le soin Radiofréquence INDIBA est-il douloureux ?",
+      "text": "Non, la radiofréquence INDIBA est totalement indolore. Beaucoup de clientes la décrivent comme une sensation de chaleur agréable et relaxante. Elle convient à tous les types de peau, y compris les plus sensibles."
+    },
+    {
+      "name": "De combien de séances ai-je besoin ?",
+      "text": "Cela dépend du soin et de l'objectif. En général, 6 à 10 séances sont recommandées pour des résultats optimaux. Lors de la consultation gratuite, nous concevons un plan personnalisé pour vous."
+    },
+    {
+      "name": "Et si ça ne fonctionne pas sur moi, comme dans d'autres cliniques ?",
+      "text": "Nous travaillons avec une garantie : si vous terminez votre Pack 10 Radiofréquence INDIBA sans constater d'amélioration, la 11e séance est offerte. Avant de commencer, nous évaluons votre peau sans engagement et, si nous pensons que ce n'est pas le soin qu'il vous faut, nous vous le disons. Nous préférons perdre une vente plutôt que vous fassiez face à une nouvelle déception."
+    },
+    {
+      "name": "Pourquoi AnyLopez et pas une clinique moins chère ou une grande franchise ?",
+      "text": "En franchise, on vous traite à la chaîne avec un protocole identique pour toutes. Chez AnyLopez, nous avons hérité de 35 ans de savoir-faire et nous adaptons chaque séance à votre peau : Radiofréquence INDIBA avec des paramètres spécifiques, des durées calibrées et un suivi séance après séance. Lorsqu'une clinique moins chère réduit son prix, elle réduit généralement la durée de chaque séance ou la puissance de l'appareil. Ici, nous faisons l'inverse : 10 séances de 30 minutes à la puissance dont votre peau a besoin."
+    },
+    {
+      "name": "Est-ce sûr ? Y a-t-il des contre-indications ?",
+      "text": "La radiofréquence INDIBA est approuvée pour un usage esthétique et médical, non invasive, sans anesthésie ni convalescence. Les contre-indications absolues sont rares : grossesse, pacemaker ou implants électroniques, prothèses métalliques dans la zone à traiter, maladies oncologiques actives et thrombose. Lors de la consultation initiale, nous passons en revue vos antécédents ; si quelque chose déconseille le soin, nous vous le dirons avant de vous facturer quoi que ce soit."
+    },
+    {
+      "name": "Quand verrai-je de vrais résultats ?",
+      "text": "Vous remarquerez une peau plus hydratée et lumineuse dès la première ou la deuxième séance (effet immédiat de la chaleur profonde). L'effet raffermissant s'installe entre la 5e et la 8e séance, lorsque le collagène se réorganise. Le résultat consolidé se voit à la fin des 10 séances, avec une amélioration progressive pendant encore 3 à 6 mois tandis que votre peau continue de se régénérer."
+    },
+    {
+      "name": "Combien de temps durent les résultats ?",
+      "text": "Les résultats varient selon le soin et l'entretien à domicile, mais ils se maintiennent généralement entre 6 et 12 mois. Avec des séances d'entretien régulières, les résultats peuvent être permanents."
+    },
+    {
+      "name": "À partir de quel âge peut-on se faire traiter ?",
+      "text": "À partir de 18 ans. Pour les mineurs, l'autorisation et la présence d'un tuteur légal lors de la consultation initiale sont obligatoires."
+    },
+    {
+      "name": "Faut-il prendre rendez-vous ?",
+      "text": "Oui, nous travaillons exclusivement sur rendez-vous pour garantir l'accompagnement personnalisé que chaque cliente mérite. Vous pouvez réserver par téléphone, WhatsApp ou via le formulaire de contact."
+    }
+  ],
+  "ig": {
+    "label": "Suivez-nous",
+    "profileCta": "Voir le profil →",
+    "followCta": "Nous suivre sur Instagram →"
+  },
+  "donde": {
+    "label": "Où nous trouver",
+    "h2_html": "Rendez-nous visite à <em style=\"font-style:italic;color:var(--terra);\">Benidorm</em>",
+    "mapTitle": "Carte d'AnyLopez Clinique Esthétique — C/ Marqués de Comillas 4 Local 6, Benidorm",
+    "mapText": "Charger la carte interactive",
+    "openAria": "Voir sur Google Maps (s'ouvre dans un nouvel onglet)",
+    "openLabel": "Ouvrir dans Google Maps",
+    "infoTitle": "Écrivez-nous",
+    "infoDesc_html": "Nous répondons en moins de 24 heures. Vous pouvez aussi nous appeler ou venir directement.",
+    "hours": "Lun–Ven · 10h00–14h00 / 16h00–20h00",
+    "form": {
+      "subject": "Demande depuis la section Où Nous Trouver (FR)",
+      "nameLabel": "Prénom",
+      "namePh": "Votre prénom",
+      "telLabel": "Téléphone",
+      "telPh": "6XX XXX XXX",
+      "servLabel": "Soin qui vous intéresse",
+      "servPh": "Sélectionnez un soin",
+      "options": [
+        "Radiofréquence INDIBA",
+        "Ultherapy HIFU Lifting",
+        "Botox & Comblements",
+        "Nettoyage de peau",
+        "Dermapen",
+        "Autre / Demande générale"
+      ],
+      "msgLabel": "Message",
+      "msgPh": "Dites-nous comment nous pouvons vous aider...",
+      "submit": "Envoyer le message",
+      "successMsg_html": "Message reçu ! Nous vous contactons très vite."
+    }
+  },
+  "cta": {
+    "title_html": "Et si on commençait par<br><em>un bilan ?</em>",
+    "sub_html": "Dites-nous ce qui vous préoccupe concernant votre peau. Nous vous répondons sur WhatsApp pendant les horaires de la clinique, sans engagement et sans longs formulaires.",
+    "waHref": "https://wa.me/34656306167?text=Bonjour%2C%20je%20souhaiterais%20un%20bilan%20gratuit.",
+    "waCta": "Écrivez-nous sur WhatsApp",
+    "hours": "Lun–Ven 10h00–14h00 / 16h00–20h00",
+    "phoneLabel": "Appelez-nous maintenant",
+    "wa2Href": "https://wa.me/34656306167?text=Bonjour%2C%20je%20souhaite%20plus%20d%27informations",
+    "wa2Cta": "Écrivez-nous sur WhatsApp"
+  },
+  "js": {
+    "leadComment": "── Lead form AJAX (éviter la redirection vers Formspree) ──",
+    "sending": "Envoi en cours...",
+    "send": "Envoyer le message",
+    "book": "Demander un rendez-vous",
+    "err": "Erreur lors de l'envoi. Appelez-nous au 656 306 167."
+  }
+}

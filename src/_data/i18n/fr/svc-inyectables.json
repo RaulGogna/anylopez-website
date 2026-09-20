@@ -1,0 +1,111 @@
+{
+  "title": "Médecine esthétique injectable à Benidorm — Botox, acide hyaluronique, fils · AnyLopez",
+  "description": "Botox, acide hyaluronique, fils tenseurs et PRP à la clinique esthétique AnyLopez Benidorm. Diagnostic avant toute injection et techniques conservatrices.",
+  "jsonld": {
+    "name": "Médecine esthétique injectable AnyLopez",
+    "alternateName": "Injectables du visage",
+    "description": "Catalogue de médecine esthétique injectable chez AnyLopez Clinique Esthétique Benidorm : Botox, acide hyaluronique, fils tenseurs et PRP. Diagnostic avant toute injection, produits de marque et techniques conservatrices.",
+    "specialties": [
+      "Botox",
+      "Acide Hyaluronique",
+      "Fils Tenseurs",
+      "PRP Plasma Riche en Plaquettes"
+    ],
+    "faq": [
+      { "q": "Botox ou acide hyaluronique ?", "a": "Le Botox détend les muscles (front, ride du lion, pattes d'oie). L'acide hyaluronique comble les volumes perdus (sillons, lèvres, contours). Lors du diagnostic, nous voyons ce qu'il faut — souvent les deux, dans des zones différentes." },
+      { "q": "Est-ce douloureux ?", "a": "Très peu. Les aiguilles sont extrêmement fines. Sur les zones sensibles, nous appliquons une crème anesthésiante au préalable. La plupart des patientes décrivent la sensation comme un bref pincement." },
+      { "q": "Quand voit-on les résultats ?", "a": "Botox : effet progressif entre le 3e et le 14e jour (complet à 2 semaines). Acide hyaluronique : visible en quelques heures, complet à 2-4 semaines. Fils : lifting immédiat + stimulation du collagène à 3 mois. PRP : effets à 4-6 semaines." },
+      { "q": "Combien de temps durent-ils ?", "a": "Botox : 4-6 mois selon la zone. Acide hyaluronique : 6-12 mois selon le produit. Fils crantés : 12-18 mois. PRP : 6-12 mois avec des séances d'entretien." },
+      { "q": "Grossesse ou allaitement ?", "a": "Les injectables sont contre-indiqués pendant la grossesse et l'allaitement. Nous attendons la fin de l'allaitement pour commencer le plan." }
+    ]
+  },
+  "css": {
+    "xsellComment": "Radiofréquence INDIBA"
+  },
+  "breadcrumb": { "services": "Soins", "current_html": "Médecine Esthétique Injectable" },
+  "callCta": "Appeler le 656 306 167",
+  "hero": {
+    "imgAlt_html": "Médecine esthétique injectable chez AnyLopez Clinique Esthétique Benidorm",
+    "eyebrow_html": "Médecine esthétique injectable · 4 protocoles",
+    "h1_html": "Du volume, pas de l'excès. <em>Subtil, technique, fidèle à vous-même.</em>",
+    "lead": "Le Botox pour lisser les rides, l'acide hyaluronique pour restaurer les volumes, les fils tenseurs pour repositionner, le PRP pour régénérer. Chacun a son moment précis sur votre visage — et c'est ce moment qui sépare un résultat naturel d'un résultat figé.",
+    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "reviews": "avis Google",
+    "free": "Diagnostic initial sans frais"
+  },
+  "pain": {
+    "eyebrow": "Cela vous parle ?",
+    "h2": "La plupart des patientes qui arrivent ici sont passées par la même chose.",
+    "p_html": "Vous ne partez pas de zéro. Vous arrivez après avoir hésité, comparé et craint d'aller trop loin.",
+    "items": [
+      { "h3_html": "Vous vous êtes abstenue par peur que ça se voie.", "p_html": "Vous avez vu des pommettes exagérées, des lèvres surprojetées, des fronts paralysés — et vous n'en voulez pas. Mais vous n'acceptez pas non plus que votre visage vieillisse sans véritable option." },
+      { "h3_html": "Vous avez vu des résultats qui ressemblent à des masques et vous fuyez.", "p_html": "Le « visage refait » est le signe d'une injection sans discernement. La médecine esthétique bien appliquée se remarque parce que vous avez l'air reposée, pas différente." },
+      { "h3_html": "Vous ne savez pas si votre cas relève du Botox, de l'acide hyaluronique ou vraiment d'autre chose.", "p_html": "Vous avez tout lu, vous vous êtes encore plus embrouillée, et vous ne décidez pas parce que chaque professionnel recommande sa spécialité. Un diagnostic honnête lève ce doute." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi les injectables chez AnyLopez fonctionnent",
+    "h2_html": "Six raisons pour lesquelles ils fonctionnent ici et pas ailleurs.",
+    "p_html": "Ce n'est pas du marketing. C'est un diagnostic médical, des marques traçables et une technique conservatrice.",
+    "items": [
+      { "h3": "Un diagnostic avant d'injecter", "p_html": "Nous voyons ce dont vous avez VRAIMENT besoin — pas ce qui se vend le mieux. Parfois ce n'est pas du Botox ; parfois c'est de l'acide hyaluronique. Parfois ni l'un ni l'autre." },
+      { "h3": "Produits de marque déposée et traçabilité", "p_html": "Vistabel, Restylane, Juvederm — des produits cliniquement validés. Chaque lot enregistré. Sans « génériques » ni produits recyclés." },
+      { "h3": "Une technique toujours conservatrice", "p_html": "Mieux vaut peu et un contrôle à 15 jours que trop dès la première séance. Comblement progressif (couche par couche), pas de visage surgonflé." },
+      { "h3": "Toute la palette dans un seul plan", "p_html": "Botox + acide hyaluronique + fils + PRP — combinables si votre cas le demande. Nous concevons la séquence qui multiplie les résultats." },
+      { "h3": "Contrôle inclus à 15-30 jours", "p_html": "Nous ajustons jusqu'à votre satisfaction. Ce n'est pas une vente d'un jour — c'est le suivi du résultat." },
+      { "h3": "De la médecine esthétique professionnelle", "p_html": "Des médecins qualifiés, pas des esthéticiennes formées en un week-end. La même exigence que dans toute la clinique." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Si votre cas va au-delà du comblement",
+    "h2_html": "Le volume <em>se complète par le tonus.</em>",
+    "p": "L'acide hyaluronique restaure les volumes, mais le relâchement cutané profond se traite par la technologie. En combinant les injectables avec Ultherapy HIFU ou la Radiofréquence INDIBA, les résultats se renforcent.",
+    "cta_html": "Voir Lifting et Anti-âge →"
+  },
+  "grid": {
+    "eyebrow": "Quatre protocoles · une seule philosophie",
+    "h2": "Les soins injectables du catalogue.",
+    "p": "Cliquez sur une carte pour voir tous les bienfaits, les tarifs et les packs.",
+    "altSuffix": "chez AnyLopez Benidorm",
+    "detailsAria": "Voir les détails de",
+    "detailsCta": "Voir les détails →"
+  },
+  "tests": {
+    "eyebrow": "Patientes réelles",
+    "h2": "Des résultats qui se voient, et qui se racontent.",
+    "p": "Avis vérifiés sur Google. Sans acteurs, sans miracles en pilule, sans avant-après retouchés.",
+    "items": [
+      { "quote_html": "\"J'ai demandé du Botox pour « le faire » et on m'a fait comprendre que mon cas relevait de l'acide hyaluronique pour les sillons. La différence est exactement ce que je voulais : reposée, pas différente.\"", "author": "Lucía A.", "meta": "Patiente · Acide hyaluronique" },
+      { "quote_html": "\"Des fils tenseurs crantés avec une technique incroyable. On sent le lifting naturel sans que personne ne demande « qu'est-ce que tu t'es fait ». Exactement ce que je cherchais.\"", "author": "María Pilar T.", "meta": "Patiente · Fils Tenseurs" },
+      { "quote_html": "\"Le PRP combiné à l'acide hyaluronique a été la combinaison clé. Mon visage paraît régénéré, sans ressembler à quelqu'un d'autre.\"", "author": "Patiente vérifiée", "meta": "Avis Google" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment commence-t-on ?",
+    "h2": "Quatre étapes. Sans surprises, sans petites lignes.",
+    "p": "Un diagnostic médical avant toute aiguille — et un contrôle inclus après la séance.",
+    "steps": [
+      { "h3": "Vous réservez votre diagnostic gratuit", "p_html": "Appel/WhatsApp pour trouver un créneau. 30 min en clinique, sans frais, sans engagement." },
+      { "h3": "Évaluation médicale du visage", "p_html": "Un médecin esthétique qualifié évalue votre cas : zones à traiter, attentes, antécédents. Si votre objectif ne relève pas des injectables, nous vous le disons." },
+      { "h3": "Plan séquencé avec marque et dosage", "p_html": "Nous déterminons quel produit, quelle quantité et dans quel ordre — toujours de manière conservatrice. Vous savez exactement ce qui est injecté et pourquoi." },
+      { "h3": "Contrôle à 15-30 jours inclus", "p_html": "Nous nous revoyons pour ajuster ce qu'il faut. Le résultat s'affine ; il ne se fige pas le premier jour." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "h2": "Ce qu'on nous demande le plus sur les injectables.",
+    "items": [
+      { "q": "Botox ou acide hyaluronique ?", "a_html": "Le Botox détend les muscles (front, ride du lion, pattes d'oie). L'acide hyaluronique comble les volumes perdus (sillons, lèvres, contours). Lors du diagnostic, nous voyons ce qu'il faut — souvent les deux, dans des zones différentes." },
+      { "q": "Est-ce douloureux ?", "a_html": "Très peu. Les aiguilles sont extrêmement fines. Sur les zones sensibles, nous appliquons une crème anesthésiante au préalable. La plupart des patientes décrivent la sensation comme un bref pincement." },
+      { "q": "Quand voit-on les résultats ?", "a_html": "Botox : effet progressif entre le 3e et le 14e jour (complet à 2 semaines). Acide hyaluronique : visible en quelques heures, complet à 2-4 semaines. Fils : lifting immédiat + stimulation du collagène à 3 mois. PRP : effets à 4-6 semaines." },
+      { "q": "Combien de temps durent-ils ?", "a_html": "Botox : 4-6 mois selon la zone. Acide hyaluronique : 6-12 mois selon le produit. Fils crantés : 12-18 mois. PRP : 6-12 mois avec des séances d'entretien." },
+      { "q": "Grossesse ou allaitement ?", "a_html": "Les injectables sont contre-indiqués pendant la grossesse et l'allaitement. Nous attendons la fin de l'allaitement pour commencer le plan." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Le diagnostic avant la piqûre",
+    "h2_html": "Réservez votre bilan. <em>Commencez par savoir ce qu'il vous faut — et ce qu'il ne vous faut pas</em>.",
+    "p_html": "Trente minutes en clinique avec un médecin esthétique qualifié. Si votre cas ne relève pas des injectables, nous vous le disons. S'il en relève, nous concevons un plan conservateur.",
+    "cta": "Réserver un bilan →"
+  }
+}

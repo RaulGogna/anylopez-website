@@ -1,0 +1,109 @@
+{
+  "title": "Nettoyages de peau professionnels à Benidorm — 5 niveaux · AnyLopez",
+  "description": "Nettoyages de peau professionnels en clinique à Benidorm. 5 protocoles progressifs (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) avec diagnostic préalable et appareils de qualité clinique.",
+  "jsonld": {
+    "name": "Nettoyages de peau AnyLopez",
+    "alternateName": "Hygiène du visage professionnelle progressive",
+    "description": "Catalogue de nettoyages de peau professionnels chez AnyLopez Clinique Esthétique Benidorm : 5 protocoles progressifs (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) avec diagnostic préalable, extraction manuelle et appareils de qualité clinique.",
+    "specialties": [
+      "Nettoyage de Peau GOLD",
+      "Nettoyage de Peau PLATINUM",
+      "Nettoyage de Peau DETOX",
+      "Nettoyage de Peau DIAMOND",
+      "Nettoyage de Peau ELITE"
+    ],
+    "faq": [
+      { "q": "Quelle est la différence entre les 5 niveaux ?", "a": "GOLD : nettoyage essentiel (50 €). PLATINUM : nettoyage + hydratation profonde à l'acide hyaluronique et à la vitamine C (75 €). DETOX : nettoyage + peeling aux nano-aiguilles + masque détox (150 €). DIAMOND : nettoyage + appareils avancés + 3 exfoliants (150 €). ELITE : le protocole le plus complet, avec plâtrothérapie et appareils premium (200 €)." },
+      { "q": "À quelle fréquence faire un nettoyage professionnel ?", "a": "Cela dépend du type de peau : peaux normales toutes les 4-6 semaines ; grasses/acnéiques toutes les 3-4 semaines ; sèches/matures toutes les 6-8 semaines. Lors du diagnostic, nous vous le précisons." },
+      { "q": "Les nettoyages sont-ils un simple moment de bien-être ou ont-ils un effet réel ?", "a": "Ils ont un effet clinique réel : extraction manuelle des comédons, élimination des cellules mortes, renouvellement cellulaire stimulé par les appareils, hydratation profonde. Ils modifient l'état de la peau, ils ne procurent pas qu'une sensation agréable." },
+      { "q": "Puis-je me maquiller ou m'exposer au soleil après ?", "a": "Nous recommandons de ne pas se maquiller pendant les 4-6 premières heures pour laisser la peau respirer. Protection solaire toujours, surtout les premières 24-48 h." },
+      { "q": "Peut-on faire un nettoyage avec de l'acné actif ou une peau sensible ?", "a": "Oui, avec un protocole adapté. Pour l'acné actif, nous utilisons d'abord le Soin Anti-Acné spécifique. Pour les peaux sensibles, nous ajustons produits et intensité." }
+    ]
+  },
+  "breadcrumb": { "services": "Soins", "current_html": "Nettoyages de Peau" },
+  "callCta": "Appeler le 656 306 167",
+  "hero": {
+    "imgAlt": "Nettoyages de peau professionnels chez AnyLopez Clinique Esthétique Benidorm",
+    "eyebrow_html": "Nettoyages de peau · 5 niveaux progressifs",
+    "h1_html": "Les nettoyages de peau sérieux. <em>Pas ceux du spa de l'hôtel.</em>",
+    "lead": "Si vous vous nettoyez la peau depuis des années chez vous ou dans des centres où l'on vous applique de la mousse avant de vous expédier en une demi-heure, vous ne prenez pas soin de votre peau — vous la laissez telle quelle. Un nettoyage professionnel commence par examiner votre peau et choisir le niveau.",
+    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "reviews": "avis Google",
+    "free": "Diagnostic initial sans frais"
+  },
+  "pain": {
+    "eyebrow": "Cela vous parle ?",
+    "h2": "La plupart des patientes qui arrivent ici sont passées par la même chose.",
+    "p_html": "Vous ne partez pas de zéro. Vous arrivez après avoir essayé d'autres solutions qui n'ont pas vraiment fonctionné.",
+    "items": [
+      { "h3_html": "Des années de rituels maison et les points noirs sont toujours là.", "p": "Masques, exfoliants de parapharmacie, vapeur maison. La surface s'en va, mais les comédons profonds vivent plus loin que là où arrive un sérum." },
+      { "h3_html": "Vous payez de la cosmétique premium et votre peau reste terne.", "p": "Les bons produits servent à entretenir — pas à remettre à zéro. Renouveler exige une extraction manuelle et des appareils professionnels." },
+      { "h3_html": "Vous avez connu des « nettoyages » en spa expédiés en 30 min.", "p": "Sans diagnostic, sans vraie extraction, sans niveau adapté. Ça, c'est un massage, pas un nettoyage professionnel." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi les nettoyages chez AnyLopez fonctionnent",
+    "h2_html": "Six raisons pour lesquelles ils fonctionnent ici et pas ailleurs.",
+    "p": "Ce n'est pas du marketing. C'est un diagnostic préalable, des niveaux progressifs et de vrais appareils de qualité clinique.",
+    "items": [
+      { "h3": "Un diagnostic préalable, toujours", "p_html": "Nous ne commençons pas sans voir votre type de peau et ses besoins. Parfois c'est GOLD ; parfois ELITE." },
+      { "h3": "5 niveaux progressifs", "p_html": "GOLD basique essentiel · PLATINUM avec hydratation · DETOX avec peeling aux nano-aiguilles · DIAMOND avec appareils avancés · ELITE premium avec plâtrothérapie." },
+      { "h3": "Combinables avec des soins avancés", "p_html": "Un nettoyage prépare la peau aux peelings, au dermapen ou à la radiofréquence. Vous multipliez les résultats." },
+      { "h3": "Des appareils de qualité clinique", "p_html": "Ce n'est ni un ultrason de YouTube ni de la mousse cosmétique. De vrais équipements professionnels." },
+      { "h3": "Un vrai entretien programmé", "p_html": "Toutes les 4-6 semaines selon votre peau — pas « quand vous y pensez ». Nous le planifions ensemble." },
+      { "h3": "Appliqués par la personne qui signe le résultat", "p_html": "Le même principe que dans toute la clinique : vous êtes reçue par quelqu'un qui a une vraie expérience de votre type de peau." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Cinq niveaux · une seule philosophie",
+    "h2": "Les nettoyages de peau du catalogue.",
+    "p": "Cliquez sur une carte pour voir tous les bienfaits, les tarifs et les packs.",
+    "altSuffix": "chez AnyLopez Benidorm",
+    "detailsAria": "Voir les détails de",
+    "detailsCta": "Voir les détails →"
+  },
+  "xsell": {
+    "eyebrow": "L'étape suivante",
+    "h2_html": "Après le nettoyage, <em>place au renouvellement ?</em>",
+    "p_html": "Une peau propre est la base. Si vous voulez plus — effacer les taches pigmentaires, lisser les ridules, améliorer la texture — les soins du visage avancés vont là où le nettoyage ne va pas.",
+    "cta": "Voir les soins du visage avancés →"
+  },
+  "tests": {
+    "eyebrow": "Patientes réelles",
+    "h2": "Des résultats qui se voient, et qui se racontent.",
+    "p": "Avis vérifiés sur Google. Sans acteurs, sans miracles en pilule, sans avant-après retouchés.",
+    "items": [
+      { "quote_html": "\"Après des années de masques maison et de nettoyages qui n'aboutissaient à rien, une séance DIAMOND et la différence se voit même en photo. Ma peau respire à nouveau.\"", "author": "Beatriz N.", "meta": "Patiente · DIAMOND" },
+      { "quote_html": "\"Je dépensais beaucoup en cosmétique et ma peau restait terne. Ils m'ont fait un diagnostic et j'ai commencé le PLATINUM mensuel — l'éclat a totalement changé.\"", "author": "Carmen P.", "meta": "Patiente · PLATINUM" },
+      { "quote_html": "\"Le protocole ELITE est un autre niveau. La plâtrothérapie à la fin est une touche finale qu'aucun autre centre ne m'avait offerte.\"", "author": "Patiente vérifiée", "meta": "Avis Google · ELITE" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment commence-t-on ?",
+    "h2": "Quatre étapes. Sans surprises, sans petites lignes.",
+    "p": "Entre votre premier message et la première amélioration visible, il s'écoule moins de deux semaines.",
+    "steps": [
+      { "h3": "Vous réservez votre diagnostic gratuit", "p_html": "Appel/WhatsApp pour trouver un créneau. 30 min en clinique, sans frais, sans engagement." },
+      { "h3": "Diagnostic à la loupe professionnelle", "p_html": "Nous évaluons votre peau à la loupe professionnelle : type de peau, comédons, hydratation, sensibilité. Nous vous disons quel niveau convient — GOLD, PLATINUM, DETOX, DIAMOND ou ELITE." },
+      { "h3": "Plan sur mesure avec fréquence", "p_html": "Pas de « vous venez une fois ». Nous déterminons quel niveau et à quelle fréquence l'entretenir. Si votre peau a besoin d'un PLATINUM toutes les 6 semaines, nous vous le disons clairement." },
+      { "h3": "Entretien programmé", "p_html": "Nous planifions vos prochaines séances pour ne rien laisser passer. WhatsApp direct pour vos questions et ajustements entre les rendez-vous." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "h2": "Ce qu'on nous demande le plus sur les nettoyages de peau.",
+    "items": [
+      { "q": "Quelle est la différence entre les 5 niveaux ?", "a": "GOLD : nettoyage essentiel (50 €). PLATINUM : nettoyage + hydratation profonde à l'acide hyaluronique et à la vitamine C (75 €). DETOX : nettoyage + peeling aux nano-aiguilles + masque détox (150 €). DIAMOND : nettoyage + appareils avancés + 3 exfoliants (150 €). ELITE : le protocole le plus complet, avec plâtrothérapie et appareils premium (200 €)." },
+      { "q": "À quelle fréquence faire un nettoyage professionnel ?", "a": "Cela dépend du type de peau : peaux normales toutes les 4-6 semaines ; grasses/acnéiques toutes les 3-4 semaines ; sèches/matures toutes les 6-8 semaines. Lors du diagnostic, nous vous le précisons." },
+      { "q": "Les nettoyages sont-ils un simple moment de bien-être ou ont-ils un effet réel ?", "a": "Ils ont un effet clinique réel : extraction manuelle des comédons, élimination des cellules mortes, renouvellement cellulaire stimulé par les appareils, hydratation profonde. Ils modifient l'état de la peau, ils ne procurent pas qu'une sensation agréable." },
+      { "q": "Puis-je me maquiller ou m'exposer au soleil après ?", "a": "Nous recommandons de ne pas se maquiller pendant les 4-6 premières heures pour laisser la peau respirer. Protection solaire toujours, surtout les premières 24-48 h." },
+      { "q": "Peut-on faire un nettoyage avec de l'acné actif ou une peau sensible ?", "a": "Oui, avec un protocole adapté. Pour l'acné actif, nous utilisons d'abord le Soin Anti-Acné spécifique. Pour les peaux sensibles, nous ajustons produits et intensité." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sans engagement",
+    "h2_html": "Réservez votre diagnostic gratuit. <em>Commencez par savoir de quel niveau votre peau a besoin</em>.",
+    "p_html": "Trente minutes en clinique avec loupe professionnelle et expérience réelle. Si vous n'avez besoin que d'un entretien basique, nous vous le disons.",
+    "cta": "Réserver un bilan →"
+  }
+}

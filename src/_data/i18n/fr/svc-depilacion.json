@@ -1,0 +1,108 @@
+{
+  "title": "Épilation IPL à Benidorm — Lumière pulsée intense et sûre · AnyLopez",
+  "description": "Épilation à la lumière pulsée IPL à la clinique esthétique AnyLopez Benidorm. Équipement de qualité clinique, diagnostic préalable du phototype et plan de séances selon le vrai cycle pilaire.",
+  "jsonld": {
+    "name": "Épilation IPL AnyLopez",
+    "alternateName": "Épilation lumière pulsée intense",
+    "description": "Épilation à la lumière pulsée intense (IPL) chez AnyLopez Clinique Esthétique Benidorm. Équipement de qualité clinique, diagnostic préalable du phototype et plan de séances selon le vrai cycle pilaire.",
+    "specialties": [
+      "Épilation IPL",
+      "Lumière Pulsée Intense",
+      "Réduction permanente de la pilosité"
+    ],
+    "faq": [
+      { "q": "De combien de séances ai-je besoin ?", "a": "Entre 6 et 10 séances espacées selon la zone et le cycle pilaire. Visage et aisselles : toutes les 4-6 semaines. Jambes et corps : 6-8 semaines. Entretien ponctuel une fois par an une fois le plan terminé." },
+      { "q": "Est-ce douloureux ?", "a": "Une sensation de bref pincement à chaque impulsion lumineuse. Bien plus confortable que la cire chaude ou le laser diode. La plupart des personnes n'ont pas besoin d'anesthésie." },
+      { "q": "Puis-je faire de l'IPL en été ?", "a": "Idéalement, l'IPL se pratique hors des périodes d'exposition solaire intense. C'est possible en été si votre peau n'est pas bronzée et que vous appliquez une protection solaire stricte. Pour les peaux bronzées, mieux vaut attendre l'automne-hiver." },
+      { "q": "Grossesse ou allaitement ?", "a": "L'IPL n'est pas validée pendant la grossesse et l'allaitement par précaution, bien qu'aucun effet nocif ne soit démontré. Nous attendons la fin de l'allaitement pour commencer le plan." },
+      { "q": "IPL ou laser diode ?", "a": "Les deux réduisent la pilosité de façon permanente. L'IPL utilise une lumière pulsée à large spectre (plus flexible pour différentes zones et peaux). Le laser diode est une lumière cohérente unique (plus efficace sur poils très foncés et peau claire, moins polyvalent)." }
+    ]
+  },
+  "breadcrumb": { "services": "Soins", "current": "Épilation IPL" },
+  "callCta": "Appeler le 656 306 167",
+  "hero": {
+    "imgAlt": "Épilation IPL chez AnyLopez Clinique Esthétique Benidorm",
+    "eyebrow": "Épilation IPL · Lumière pulsée intense",
+    "h1_html": "L'épilation IPL sérieuse. <em>Pas celle du centre de quartier.</em>",
+    "lead_html": "Cire, rasoir, crèmes... des années d'épilations temporaires qui s'accumulent en dépenses et en peau maltraitée. L'IPL bien appliquée réduit la pilosité de façon permanente — mais seulement bien appliquée. Équipement de qualité clinique et plan selon votre phototype et votre vrai cycle pilaire, pas le protocole unique d'une chaîne low-cost.",
+    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "reviews": "avis Google",
+    "free": "Diagnostic initial sans frais"
+  },
+  "pain": {
+    "eyebrow": "Cela vous parle ?",
+    "h2": "La plupart des patientes qui arrivent ici sont passées par la même chose.",
+    "p_html": "Vous ne partez pas de zéro. Vous arrivez après avoir essayé d'autres solutions qui n'ont pas vraiment fonctionné.",
+    "items": [
+      { "h3_html": "Vous en avez assez du rasoir, de la cire et des crèmes dépilatoires", "p_html": "Et votre peau abîmée en témoigne. Folliculite, poils incarnés, irritation constante. Votre peau réclame une solution définitive." },
+      { "h3_html": "Vous avez essayé l'IPL dans des chaînes low-cost sans résultats durables.", "p_html": "Appareils bon marché, paramètres uniques, « revenez tous les 15 jours » — puis les poils repoussent pareil. La technologie sans discernement ne fonctionne pas." },
+      { "h3_html": "Vous avez la peau sensible, des poils fins ou clairs, ou un phototype élevé", "p_html": "Et vous ne savez pas si cela fonctionnera. Réponse courte : avec un équipement professionnel et un diagnostic préalable, oui — avec un appareil générique, non." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi l'IPL chez AnyLopez fonctionne",
+    "h2_html": "Six raisons pour lesquelles elle fonctionne ici et pas ailleurs.",
+    "p_html": "Ce n'est pas du marketing. C'est un équipement de qualité clinique, un diagnostic préalable et du discernement au cas par cas.",
+    "items": [
+      { "h3": "Équipement IPL de qualité clinique", "p_html": "Ce n'est ni un appareil d'Amazon ni de bazar low-cost. Une technologie professionnelle aux paramètres réglables — la différence entre réduire la pilosité et ne rien faire." },
+      { "h3": "Diagnostic préalable du phototype et du poil", "p_html": "Les peaux claires aux poils foncés répondent différemment des peaux mates aux poils fins. Sans diagnostic, mauvais pronostic. Avec diagnostic, un plan efficace." },
+      { "h3": "Des séances espacées selon le vrai cycle pilaire", "p_html": "Pas de « revenez tous les 15 jours » pour cumuler des séances — mais en respectant la phase anagène du poil (la seule où l'IPL fonctionne). Chaque zone a son rythme." },
+      { "h3": "Confortable, sans vraie douleur", "p_html": "Une sensation de bref pincement due à la lumière pulsée. Sans aiguilles, sans cire chaude, sans poils incarnés." },
+      { "h3": "Compatible avec les peaux sensibles et tous les phototypes", "p_html": "Avec des paramètres adaptés, l'IPL est sûre sur les peaux sensibles. Pour les phototypes élevés (plus foncés), nous utilisons des protocoles spécifiques." },
+      { "h3": "Appliquée par quelqu'un qui sait lire votre peau", "p_html": "Des décennies d'expérience à ajuster les paramètres au cas par cas. La différence entre une IPL efficace et un placebo." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Après l'IPL",
+    "h2_html": "Une peau sans poils <em>se soigne différemment.</em>",
+    "p": "Après un protocole IPL, la peau est plus douce et plus réceptive — le moment parfait pour intégrer des nettoyages de peau ou des massages régénérants en entretien global.",
+    "cta": "Voir les massages →"
+  },
+  "grid": {
+    "eyebrow": "Un protocole · toutes les zones",
+    "h2": "Le soin d'épilation.",
+    "p": "Cliquez sur la carte pour voir tous les bienfaits, toutes les zones avec leur tarif et les packs.",
+    "altSuffix": "chez AnyLopez Benidorm",
+    "forWhom_html": "Pour qui :",
+    "detailsAria": "Voir les détails de",
+    "detailsCta": "Voir toutes les zones et les tarifs →"
+  },
+  "tests": {
+    "eyebrow": "Patientes réelles",
+    "h2": "Des résultats qui se voient, et qui se racontent.",
+    "p": "Avis vérifiés sur Google. Sans acteurs, sans miracles en pilule, sans avant-après retouchés.",
+    "items": [
+      { "quote_html": "\"Après avoir essayé l'IPL dans une autre chaîne avec un résultat médiocre, ici en 6 séances ma zone est parfaitement réduite. La différence, c'est la qualité de l'équipement et le diagnostic préalable.\"", "author": "Cristina M.", "meta": "Patiente · IPL jambes complètes" },
+      { "quote_html": "\"Ma peau est très sensible et je craignais l'épilation laser/IPL après de mauvaises expériences. Ici, ils ont ajusté les paramètres dès la première séance et zéro irritation.\"", "author": "Inés P.", "meta": "Patiente · IPL maillot" },
+      { "quote_html": "\"Des années à me raser la barbe (femme avec pilosité faciale due au SOPK), c'était un enfer. L'IPL du visage avec un protocole spécifique a changé ma vie. Ils prennent aussi en compte la dimension psychologique.\"", "author": "Patiente vérifiée", "meta": "Avis Google" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment commence-t-on ?",
+    "h2": "Quatre étapes. Sans surprises, sans petites lignes.",
+    "p": "Entre votre premier message et la première séance, il s'écoule moins de deux semaines.",
+    "steps": [
+      { "h3_html": "Vous réservez votre bilan", "p_html": "Appel/WhatsApp pour trouver un créneau. 30 min en clinique, sans frais, sans engagement." },
+      { "h3_html": "Diagnostic phototype + type de poil", "p_html": "Nous évaluons la couleur de votre peau, la couleur et l'épaisseur du poil, vos antécédents et la zone visée. Nous vous disons honnêtement si l'IPL est adaptée pour vous — et si elle ne l'est pas, aussi." },
+      { "h3_html": "Plan de séances selon la zone et le cycle", "p_html": "Nous déterminons un nombre de séances réaliste et un rythme respectant le cycle pilaire de chaque zone. Visage et aisselles : 4-6 semaines. Jambes et corps : 6-8 semaines." },
+      { "h3_html": "Entretien ponctuel une fois le plan terminé", "p_html": "Après le plan initial, une séance d'entretien ponctuelle une fois par an suffit. Sans engagements éternels." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "h2": "Ce qu'on nous demande le plus sur l'IPL.",
+    "items": [
+      { "q": "De combien de séances ai-je besoin ?", "a_html": "Entre 6 et 10 séances espacées selon la zone et le cycle pilaire. Visage et aisselles : toutes les 4-6 semaines. Jambes et corps : 6-8 semaines. Entretien ponctuel une fois par an une fois le plan terminé." },
+      { "q": "Est-ce douloureux ?", "a_html": "Une sensation de bref pincement à chaque impulsion lumineuse. Bien plus confortable que la cire chaude ou le laser diode. La plupart des personnes n'ont pas besoin d'anesthésie." },
+      { "q": "Puis-je faire de l'IPL en été ?", "a_html": "Idéalement, l'IPL se pratique hors des périodes d'exposition solaire intense. C'est possible en été si votre peau n'est pas bronzée et que vous appliquez une protection solaire stricte. Pour les peaux bronzées, mieux vaut attendre l'automne-hiver." },
+      { "q": "Grossesse ou allaitement ?", "a_html": "L'IPL n'est pas validée pendant la grossesse et l'allaitement par précaution, bien qu'aucun effet nocif ne soit démontré. Nous attendons la fin de l'allaitement pour commencer le plan." },
+      { "q": "IPL ou laser diode ?", "a_html": "Les deux réduisent la pilosité de façon permanente. L'IPL utilise une lumière pulsée à large spectre (plus flexible pour différentes zones et peaux). Le laser diode est une lumière cohérente unique (plus efficace sur poils très foncés et peau claire, moins polyvalent)." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sans engagement",
+    "h2_html": "Réservez votre bilan. <em>Diagnostic du phototype et plan sur mesure</em>.",
+    "p_html": "Trente minutes pour évaluer votre peau et votre pilosité, vous dire si l'IPL est adaptée à votre cas (elle ne l'est pas toujours) et concevoir un plan réaliste.",
+    "cta": "Réserver un bilan →"
+  }
+}

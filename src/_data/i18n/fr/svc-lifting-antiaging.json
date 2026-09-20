@@ -1,0 +1,108 @@
+{
+  "title": "Lifting et Anti-âge sans chirurgie à Benidorm — Ultherapy + Radiofréquence INDIBA · AnyLopez",
+  "description": "Raffermissement du visage et du corps sans bloc opératoire : Ultherapy HIFU et radiofréquence INDIBA chez AnyLopez Clinique Esthétique Benidorm. Diagnostic initial gratuit.",
+  "brandRF": "Radiofréquence INDIBA",
+  "jsonld": {
+    "name": "Lifting et Anti-âge AnyLopez",
+    "alternateName": "Raffermissement sans chirurgie",
+    "description": "Catalogue de soins de lifting et anti-âge sans chirurgie chez AnyLopez Clinique Esthétique Benidorm : Ultherapy HIFU et radiofréquence INDIBA. Stimulation profonde du collagène et de l'élastine, sans bloc opératoire, sans arrêt.",
+    "specialties": [
+      "Ultherapy HIFU",
+      "Radiofréquence INDIBA"
+    ],
+    "faq": [
+      { "q": "Ultherapy HIFU ou Radiofréquence INDIBA, lequel choisir ?", "a": "Cela dépend. Le HIFU est un traitement de choc (1-2 séances, résultats à 3-6 mois). La Radiofréquence INDIBA est progressive (Pack 10 séances, résultats dès la 1re). HIFU pour un relâchement modéré à important. Radiofréquence INDIBA pour l'entretien + un raffermissement graduel. Lors du diagnostic, nous vous le précisons." },
+      { "q": "De combien de séances d'Ultherapy HIFU ai-je besoin ?", "a": "1 à 2 séances selon la zone et le degré de relâchement. Les séances s'espacent de 6 à 12 mois pour l'entretien. La Radiofréquence INDIBA est un Pack 10 à rythme hebdomadaire." },
+      { "q": "Combien de temps durent les résultats ?", "a": "Ultherapy : 12-18 mois après l'effet complet à 3-6 mois. Radiofréquence INDIBA : effet durable avec un entretien mensuel après le Pack." },
+      { "q": "À quel âge commencer ?", "a": "Quand vous remarquez une perte de fermeté de l'ovale, généralement entre 35 et 45 ans. Mieux vaut tôt que tard : stimuler le collagène fonctionne mieux quand il reste des réserves." },
+      { "q": "Quels soins après la séance ?", "a": "Minimes : hydratation topique, protection solaire stricte les jours suivants, éviter saunas et chaleur extrême pendant 48 h. Nous vous remettons des consignes écrites après chaque séance." }
+    ]
+  },
+  "breadcrumb": { "services": "Soins", "current_html": "Lifting et Anti-âge" },
+  "callCta": "Appeler le 656 306 167",
+  "hero": {
+    "imgAlt": "Lifting et anti-âge sans chirurgie chez AnyLopez Clinique Esthétique Benidorm",
+    "eyebrow_html": "Lifting et Anti-âge · 2 technologies complémentaires",
+    "h1_html": "Raffermissez avec la technologie, <em>pas avec le bistouri.</em>",
+    "lead_html": "Si vous avez écarté le bloc opératoire par peur, par risque ou à cause de la convalescence — et que les crèmes raffermissantes ne vous rendent toujours pas de tonus — la réponse est dans la technologie profonde. Ultherapy HIFU et la Radiofréquence INDIBA arrivent là où un chirurgien incise. Sans inciser.",
+    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "reviews": "avis Google",
+    "free": "Diagnostic initial sans frais"
+  },
+  "pain": {
+    "eyebrow": "Cela vous parle ?",
+    "h2": "La plupart des patientes qui arrivent ici sont passées par la même chose.",
+    "p_html": "Vous ne partez pas de zéro. Vous arrivez après avoir essayé d'autres solutions qui n'ont pas vraiment fonctionné.",
+    "items": [
+      { "h3_html": "Les miroirs vous renvoient de plus en plus de relâchement de l'ovale, du décolleté et des bras.", "p_html": "Les crèmes raffermissantes ont promis et entretenu — mais n'ont pas rendu ce qui était perdu. La peau a besoin d'une stimulation profonde, pas de sérums." },
+      { "h3_html": "Vous avez écarté le bloc opératoire pour le risque et le temps de récupération.", "p_html": "Vous ne voulez ni anesthésie, ni un mois d'arrêt, ni un résultat qui se voie artificiel. Mais vous ne vous contentez pas non plus de la cosmétique." },
+      { "h3_html": "Vous avez essayé des « liftings cosmétiques » ailleurs, qui ont promis sans tenir.", "p_html": "Des appareils sans discernement, des séances sans diagnostic, des équipements bon marché. La technologie sans savoir-faire ne fonctionne pas." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi le lifting sans chirurgie chez AnyLopez fonctionne",
+    "h2_html": "Six raisons pour lesquelles il fonctionne ici et pas ailleurs.",
+    "p": "Ce n'est pas du marketing. C'est une technologie profonde, un discernement clinique et des décennies de savoir-faire.",
+    "items": [
+      { "h3": "Deux technologies profondes et complémentaires", "p": "Ultherapy HIFU travaille au niveau du SMAS (là où le chirurgien incise pour réaliser un lifting). La radiofréquence INDIBA à 448 kHz pénètre jusqu'à l'hypoderme. Chacune agit sur des couches différentes." },
+      { "h3": "Combinables avec une vraie synergie", "p": "Si votre cas le demande, nous combinons Ultherapy HIFU + Radiofréquence INDIBA dans un plan séquencé. Ce n'est pas commercial — c'est un protocole clinique." },
+      { "h3": "Sans bloc opératoire, sans anesthésie, sans arrêt", "p": "Vous sortez et reprenez votre vie. Sans marques, sans médicaments, sans un mois cloîtrée." },
+      { "h3": "Des résultats progressifs et durables", "p": "Ce n'est pas de la magie immédiate. C'est la stimulation de votre propre collagène et de votre élastine, qui atteint son plein effet en 3-6 mois et dure 12-18 mois." },
+      { "h3": "Un diagnostic clinique honnête", "p": "Nous vous disons laquelle des deux (ou les deux) est pour vous. Si votre cas relève plutôt des injectables ou de la chirurgie, nous vous le disons aussi." },
+      { "h3": "Appliqué par la personne qui signe le résultat", "p": "Des décennies avec cette technologie. Elle sait où insister et où non dans chaque cas." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Deux technologies · une seule philosophie",
+    "h2": "Les soins de lifting et anti-âge du catalogue.",
+    "p": "Cliquez sur une carte pour voir tous les bienfaits, les tarifs et les packs.",
+    "altSuffix": "chez AnyLopez Benidorm",
+    "viewFullCta": "Voir la fiche complète →",
+    "detailsAria": "Voir les détails de",
+    "detailsCta": "Voir les détails →"
+  },
+  "xsell": {
+    "eyebrow": "La Radiofréquence INDIBA est notre soin phare",
+    "h2_html": "Si votre cas appelle la Radiofréquence INDIBA, <em>nous avons une fiche complète.</em>",
+    "p": "La radiofréquence INDIBA est notre soin phare. Une fiche dédiée avec le Pack 10 séances, les modalités visage et corps, et tout le détail clinique.",
+    "cta": "Voir la fiche complète de la Radiofréquence INDIBA →"
+  },
+  "tests": {
+    "eyebrow": "Patientes réelles",
+    "h2": "Des résultats qui se voient, et qui se racontent.",
+    "p": "Avis vérifiés sur Google. Sans acteurs, sans miracles en pilule, sans avant-après retouchés.",
+    "items": [
+      { "quote_html": "\"Une séance d'Ultherapy et, trois mois plus tard, ma mâchoire a retrouvé le dessin qu'elle avait il y a 10 ans. Sans bloc opératoire, sans arrêt. Je suis bluffée.\"", "author": "Cristina M.", "meta": "Patiente · Ultherapy HIFU" },
+      { "quote_html": "\"Nous avons combiné Ultherapy et le Pack Radiofréquence INDIBA et les résultats se renforcent mutuellement. Un diagnostic honnête dès le début.\"", "author": "Pilar R.", "meta": "Patiente · Ultherapy HIFU + Radiofréquence INDIBA" },
+      { "quote_html": "\"Je suis venue pensant avoir besoin de fils tenseurs et l'on m'a fait comprendre que mon cas relevait d'Ultherapy HIFU + Botox. La différence entre vendre un soin et résoudre un problème.\"", "author": "Patiente vérifiée", "meta": "Avis Google" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment commence-t-on ?",
+    "h2": "Quatre étapes. Sans surprises, sans petites lignes.",
+    "p": "Entre votre premier message et la première amélioration visible, il s'écoule moins de deux semaines.",
+    "steps": [
+      { "h3": "Vous réservez votre diagnostic gratuit", "p_html": "Appel/WhatsApp pour trouver un créneau. 30 min en clinique, sans frais, sans engagement." },
+      { "h3": "Évaluation clinique du cas", "p_html": "Nous évaluons la zone, le degré de relâchement, la qualité de peau et l'objectif. Nous décidons si votre cas relève d'Ultherapy HIFU, de la Radiofréquence INDIBA, des deux en combinaison, ou s'il convient de vous orienter vers une autre solution." },
+      { "h3": "Plan personnalisé Ultherapy HIFU / Radiofréquence INDIBA / combiné", "p_html": "Pas de « vous venez à une séance ». Nous concevons le protocole : nombre de séances, rythme, quoi combiner et pourquoi. Et si votre cas se résout avec moins que prévu, nous le disons." },
+      { "h3": "Un suivi pendant des mois après la séance", "p_html": "Le résultat d'Ultherapy HIFU est progressif : il ne se voit pas aujourd'hui, il se voit à 3-6 mois. WhatsApp direct pour vos questions, ajustements et conseils jusqu'à l'effet final." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "h2": "Ce qu'on nous demande le plus sur le lifting et l'anti-âge.",
+    "items": [
+      { "q": "Ultherapy HIFU ou Radiofréquence INDIBA, lequel choisir ?", "a": "Cela dépend. Le HIFU est un traitement de choc (1-2 séances, résultats à 3-6 mois). La Radiofréquence INDIBA est progressive (Pack 10 séances, résultats dès la 1re). HIFU pour un relâchement modéré à important. Radiofréquence INDIBA pour l'entretien + un raffermissement graduel. Lors du diagnostic, nous vous le précisons." },
+      { "q": "De combien de séances d'Ultherapy HIFU ai-je besoin ?", "a": "1 à 2 séances selon la zone et le degré de relâchement. Les séances s'espacent de 6 à 12 mois pour l'entretien. La Radiofréquence INDIBA est un Pack 10 à rythme hebdomadaire." },
+      { "q": "Combien de temps durent les résultats ?", "a": "Ultherapy : 12-18 mois après l'effet complet à 3-6 mois. Radiofréquence INDIBA : effet durable avec un entretien mensuel après le Pack." },
+      { "q": "À quel âge commencer ?", "a": "Quand vous remarquez une perte de fermeté de l'ovale, généralement entre 35 et 45 ans. Mieux vaut tôt que tard : stimuler le collagène fonctionne mieux quand il reste des réserves." },
+      { "q": "Quels soins après la séance ?", "a": "Minimes : hydratation topique, protection solaire stricte les jours suivants, éviter saunas et chaleur extrême pendant 48 h. Nous vous remettons des consignes écrites après chaque séance." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sans engagement",
+    "h2_html": "Réservez un diagnostic gratuit. <em>Nous vous dirons quelle technologie est pour vous</em>.",
+    "p_html": "Trente minutes en clinique avec quelqu'un qui pratique Ultherapy HIFU et la Radiofréquence INDIBA depuis des décennies. Si votre cas appelle autre chose (injectables, fils, chirurgie), nous vous le disons honnêtement.",
+    "cta": "Réserver un bilan →"
+  }
+}

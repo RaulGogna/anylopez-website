@@ -1,0 +1,153 @@
+{
+  "title": "Radiofréquence INDIBA à Benidorm — Lifting sans chirurgie · AnyLopez",
+  "description": "Radiofréquence INDIBA chez AnyLopez Benidorm. Technologie CRet/RES profonde. Packs 10 séances à partir de 350 €. Résultats dès la première séance, sans douleur, sans convalescence.",
+  "jsonld": {
+    "name": "Radiofréquence INDIBA",
+    "alternateName": "Radiofréquence INDIBA Anti-Âge",
+    "description": "Radiofréquence profonde INDIBA avec technologie CRet/RES. Soin non invasif et indolore contre le relâchement cutané du visage et du corps, la cellulite et les rides, pour raffermir la peau. Packs 10 séances à partir de 350 €.",
+    "bodyLocation": ["Visage", "Cou", "Abdomen", "Fessiers", "Jambes", "Bras"],
+    "howPerformed": "Application manuelle avec tête CRet ou RES sur la zone à traiter pendant 30 à 60 minutes. Sans aiguilles, sans douleur, sans temps de récupération.",
+    "preparation": "Aucune préparation préalable requise. Venir avec la peau propre et sans crèmes.",
+    "followup": "Plan personnalisé de 10 séances recommandé. Entretien mensuel après le pack.",
+    "offerName": "Pack 10 séances (45 min) Radiofréquence INDIBA Anti-Âge",
+    "offerDescription": "10 séances de radiofréquence INDIBA de 45 min. Diagnostic initial gratuit.",
+    "faq": [
+      { "q": "Le soin de radiofréquence INDIBA est-il sûr ?", "a": "Oui, il est totalement sûr. Le système de radiofréquence INDIBA est non invasif, approuvé pour un usage médico-esthétique, ne nécessite ni anesthésie ni convalescence et est utilisé depuis des décennies dans les cliniques de médecine du sport, de kinésithérapie et d'esthétique avancée." },
+      { "q": "Le soin Radiofréquence INDIBA est-il douloureux ?", "a": "Il ne provoque aucune douleur. La sensation est celle d'une chaleur profonde et agréable dans la zone traitée. La plupart des patientes décrivent la séance comme relaxante. Aucune anesthésie n'est nécessaire." },
+      { "q": "Quand verrai-je les résultats de la radiofréquence INDIBA ?", "a": "Les résultats sont visibles dès la première séance et continuent de s'améliorer à chaque soin. Pour des résultats optimaux et durables, il est recommandé de compléter le cycle de 10 séances du Pack." },
+      { "q": "Qu'est-ce qui distingue la Radiofréquence INDIBA des autres radiofréquences ?", "a": "La radiofréquence INDIBA travaille à 448 kHz, une fréquence brevetée qui pénètre en toute sécurité jusqu'aux couches profondes (hypoderme). D'autres radiofréquences opèrent à des fréquences plus superficielles ou sont plus agressives et douloureuses. La Radiofréquence INDIBA est la référence clinique du raffermissement profond sans chirurgie." },
+      { "q": "Peut-on combiner la Radiofréquence INDIBA avec d'autres soins ?", "a": "Oui. La Radiofréquence INDIBA renforce et se combine sans problème avec Ultherapy/HIFU, la madérothérapie, la mésothérapie et les peelings. Lors du diagnostic gratuit, nous concevons pour vous le plan combiné optimal." },
+      { "q": "De combien de séances de Radiofréquence INDIBA ai-je besoin ?", "a": "Nous recommandons un Pack de 10 séances (1 à 2 par semaine) pour des résultats optimaux. Le nombre exact dépend de la zone à traiter et de l'objectif. Lors de la première consultation de diagnostic (gratuite), nous évaluons votre cas et concevons le plan adapté." },
+      { "q": "Combien coûte le Pack Radiofréquence INDIBA ?", "a": "Le Pack 10 séances de 45 min coûte 500 € — soit 50 € par séance et 375 € d'économie par rapport à un achat à l'unité. Il existe aussi un Pack 10 de 30 min à 350 € et un Pack 5 de 30 min à 250 €. La séance à l'unité va de 45 € à 85 € selon la durée et la zone. Diagnostic initial gratuit et sans engagement." }
+    ]
+  },
+  "breadcrumb": { "services": "Soins", "current": "Radiofréquence INDIBA" },
+  "callCta": "Appeler le 656 306 167",
+  "hero": {
+    "imgAlt": "Séance de radiofréquence INDIBA chez AnyLopez Benidorm",
+    "eyebrow_html": "Soin phare · Lifting et Anti-âge",
+    "h1_html": "Raffermissez sans bloc opératoire. <em>Des résultats dès la première séance.</em>",
+    "lead": "Si vous prenez soin de vous depuis des années et que le miroir vous renvoie malgré tout du relâchement cutané, ce n'est pas votre faute — les crèmes n'atteignent pas la profondeur où agit la Radiofréquence INDIBA. Une technologie CRet/RES profonde qui stimule votre propre collagène. Sans aiguilles, sans douleur, sans convalescence.",
+    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "reviews": "avis Google",
+    "packMeta_html": "Pack 10 séances (45 min) <strong>500 €</strong> (375 € d'économie)"
+  },
+  "pain": {
+    "eyebrow": "Cela vous parle ?",
+    "h2": "La plupart des patientes qui arrivent ici sont passées par la même chose.",
+    "p": "Vous ne partez pas de zéro. Vous arrivez après avoir essayé d'autres solutions qui n'ont pas vraiment fonctionné.",
+    "items": [
+      { "h3": "Vous avez essayé crèmes, massages et appareils ailleurs.", "p_html": "Vous avez remarqué un effet au début, mais tout revenait au bout de quelques semaines. La surface aide ; le relâchement cutané vit plus en profondeur." },
+      { "h3": "Vous refusez le bloc opératoire, et avec raison.", "p_html": "Vous ne voulez ni anesthésie, ni des mois de convalescence, ni un résultat figé qui ne vous ressemble pas. Mais vous ne vous résignez pas non plus au « petit à petit qui ne fait rien »." },
+      { "h3": "Le miroir vous renvoie un air fatigué malgré vos soins.", "p_html": "Vous mangez bien, vous vous hydratez, vous dormez autant que possible. Mais ce contour de l'ovale, ce relâchement du bras, cette cellulite ne partent pas à la seule force de la discipline." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi la Radiofréquence INDIBA fonctionne",
+    "h2": "Six raisons pour lesquelles cette technologie change la donne.",
+    "p": "Ce n'est ni de la magie, ni du marketing. C'est de la physique appliquée à votre physiologie.",
+    "items": [
+      { "h3": "Technologie CRet/RES profonde", "p_html": "La radiofréquence INDIBA travaille à 448 kHz, une fréquence brevetée qui pénètre jusqu'à l'hypoderme. Là où un chirurgien incise pour réaliser un lifting, nous stimulons sans ouvrir." },
+      { "h3": "Elle active votre propre collagène", "p_html": "Nous n'injectons aucune substance. La Radiofréquence INDIBA réactive la régénération naturelle de collagène et d'élastine que votre corps sait déjà produire — il a simplement ralenti le rythme avec les années." },
+      { "h3": "Des résultats dès la première séance", "p_html": "Pas besoin d'attendre trois mois pour voir « quelque chose ». Vous sortez de la première séance avec une peau plus lumineuse et plus ferme. L'effet complet se construit sur le Pack 10." },
+      { "h3": "Indolore et sans convalescence", "p_html": "La séance est relaxante, une chaleur profonde agréable. Vous sortez et reprenez votre journée — déjeuner, bureau, salle de sport. Sans marques, sans crèmes, sans repos forcé." },
+      { "h3": "Compatible avec Ultherapy HIFU, la mésothérapie et les peelings", "p_html": "La Radiofréquence INDIBA renforce et se combine avec tout ce que vous faites déjà. Lors du diagnostic, nous concevons le plan combiné qui multiplie les résultats." },
+      { "h3": "Appliquée par la personne qui signe le résultat", "p_html": "Ici, on ne vous confie pas à des stagiaires. Vous êtes reçue par quelqu'un qui pratique cette technologie depuis des décennies et sait où insister et où non dans votre cas." }
+    ]
+  },
+  "mod": {
+    "eyebrow": "Deux modalités, un même principe",
+    "h2": "Radiofréquence INDIBA Visage et Radiofréquence INDIBA Corps.",
+    "p": "Le protocole s'adapte à la zone. La technologie est la même ; les résultats, tout aussi visibles.",
+    "card1": {
+      "imgAlt": "Radiofréquence INDIBA Visage chez AnyLopez Benidorm",
+      "h3": "Radiofréquence INDIBA Visage",
+      "p": "Raffermit l'ovale, lisse les rides fines, apporte un éclat immédiat. Idéale pour le contour du visage, le cou et le décolleté.",
+      "items": [
+        "Atténue rides fines et ridules d'expression",
+        "Fermeté et éclat dès la 1re séance",
+        "Réduit le relâchement de l'ovale et du cou",
+        "Hydratation profonde intracellulaire"
+      ]
+    },
+    "card2": {
+      "imgAlt": "Radiofréquence INDIBA Corps chez AnyLopez Benidorm",
+      "h3": "Radiofréquence INDIBA Corps",
+      "p": "S'attaque à la cellulite, à la graisse localisée et au relâchement cutané de l'abdomen, des bras et des jambes. Combinable avec la madérothérapie et la mésothérapie pour des résultats plus rapides.",
+      "items": [
+        "Réduit visiblement la cellulite",
+        "Agit sur la graisse localisée",
+        "Raffermit la peau des bras, de l'abdomen et des jambes",
+        "Compatible avec madérothérapie et mésothérapie"
+      ]
+    }
+  },
+  "pack": {
+    "eyebrow": "Pack 10 séances (45 min)",
+    "h2_html": "Tout ce qui est compris, <em>et tout ce que vous économisez</em>.",
+    "p_html": "Ce n'est pas une « promo ». C'est la différence entre tout acheter à l'unité et acheter juste.",
+    "stack": [
+      { "label": "10 séances de radiofréquence INDIBA de 45 min (CRet/RES)", "price": "650 €" },
+      { "label": "Diagnostic initial personnalisé (30 min)", "price": "80 €" },
+      { "label": "Plan de protocole sur mesure + ajustements", "price": "50 €" },
+      { "label": "Suivi entre les séances (WhatsApp direct)", "price": "30 €" },
+      { "label": "Contrôle à 60 jours après la fin du Pack", "price": "65 €" }
+    ],
+    "totalLabel": "Valeur totale",
+    "crossed": "875 €",
+    "priceLabel": "Votre prix Pack",
+    "final_html": "500&nbsp;€",
+    "savings": "Vous économisez 375 € · 43 % de moins qu'à l'unité",
+    "waText_html": "Bonjour%2C%20le%20Pack%20Radiofr%C3%A9quence%20INDIBA%20m%27int%C3%A9resse",
+    "ratesTitle": "Tous les tarifs Radiofréquence INDIBA",
+    "rates": [
+      { "label_html": "Séance visage ou corps (30 min)", "price_html": "45 €" },
+      { "label_html": "Séance visage (45 min)", "price_html": "65 €" },
+      { "label_html": "Séance corps (60 min, par zone)", "price_html": "85 €" },
+      { "label_html": "Séance vaginale (60 min)", "price_html": "85 €" },
+      { "label_html": "Pack 5 séances (30 min)", "price_html": "250 €" },
+      { "label_html": "Pack 10 séances (30 min)", "price_html": "350 €" },
+      { "label_html": "<strong>Pack 10 séances (45 min) — le plus avantageux</strong>", "price_html": "<strong>500 €</strong>" }
+    ]
+  },
+  "tests": {
+    "eyebrow": "Patientes réelles",
+    "h2": "Des résultats qui se voient, et qui se racontent.",
+    "p": "Avis vérifiés sur Google. Sans acteurs, sans miracles en pilule, sans avant-après retouchés.",
+    "items": [
+      { "quote_html": "\"Une peau plus ferme et lumineuse, avec des résultats rapides dès la première séance. L'équipe est très professionnelle et le soin très confortable. À recommander sans réserve.\"", "author": "Ana Bayixauli", "meta": "Patiente · Radiofréquence INDIBA Visage" },
+      { "quote_html": "\"Une amélioration notable de ma cellulite et sans aucune douleur. Le soin est très confortable et les résultats parlent d'eux-mêmes. Très contente de la clinique et de toute l'équipe.\"", "author": "Maria Castillo", "meta": "Patiente · Radiofréquence INDIBA Corps" },
+      { "quote_html": "\"Après avoir essayé plusieurs endroits, j'ai enfin trouvé ici ce que je cherchais. Un accueil impeccable, des conseils honnêtes et des résultats qui se voient dans le miroir, pas sur une brochure.\"", "author": "Patiente vérifiée", "meta": "Avis Google · Pack Radiofréquence INDIBA Anti-Âge" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment commence-t-on ?",
+    "h2": "Quatre étapes. Sans surprises, sans petites lignes.",
+    "p": "Entre votre premier message et la première amélioration visible, il s'écoule moins de deux semaines.",
+    "steps": [
+      { "h3": "Vous réservez votre diagnostic gratuit", "p": "Appel ou WhatsApp pour trouver un créneau. 30 minutes en clinique, sans frais et sans engagement. Nous vous répondons en moins de 24 h." },
+      { "h3": "Nous vous évaluons en clinique", "p": "Nous examinons votre zone, vos antécédents et vos attentes. Si la Radiofréquence INDIBA n'est pas adaptée à votre cas, nous vous le disons franchement et vous orientons vers ce qui l'est." },
+      { "h3": "Plan personnalisé et Pack ajusté", "p": "Nous concevons le protocole, la fréquence (1 à 2 séances par semaine) et les zones à traiter. Vous commencez quand vous le décidez — sans pression." },
+      { "h3": "Un vrai suivi pendant et après", "p": "WhatsApp direct entre les séances pour vos questions ou ajustements. Après le Pack, contrôle à 60 jours pour évaluer l'entretien. Nous ne disparaissons pas une fois encaissé." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "h2": "Ce qu'on nous demande le plus sur la Radiofréquence INDIBA.",
+    "items": [
+      { "q": "Le soin Radiofréquence INDIBA est-il sûr ?", "a_html": "Oui, totalement. La radiofréquence INDIBA est non invasive, approuvée pour un usage médico-esthétique et utilisée depuis des décennies dans les cliniques de médecine du sport, de kinésithérapie et d'esthétique avancée. Elle ne nécessite ni anesthésie ni convalescence." },
+      { "q": "Est-ce douloureux ?", "a_html": "Non. La sensation est celle d'une chaleur profonde et agréable dans la zone traitée — la plupart des patientes décrivent la séance comme relaxante. Pas d'aiguilles, pas d'incision, pas d'anesthésie." },
+      { "q": "Quand verrai-je des résultats ?", "a_html": "Dès la première séance, vous remarquez une peau plus lumineuse et plus ferme. L'effet complet (réduction visible du relâchement, définition de l'ovale, amélioration de la cellulite) se consolide au fil du Pack 10 et se maintient des mois après." },
+      { "q": "Qu'est-ce qui distingue la Radiofréquence INDIBA des autres radiofréquences du marché ?", "a_html": "La radiofréquence INDIBA travaille à 448 kHz — une fréquence brevetée qui pénètre jusqu'à l'hypoderme de manière sûre et profonde. D'autres radiofréquences opèrent à des fréquences plus superficielles ou sont plus agressives et douloureuses. La Radiofréquence INDIBA est la référence clinique du raffermissement profond sans chirurgie." },
+      { "q": "Peut-on la combiner avec d'autres soins ?", "a_html": "Oui. La Radiofréquence INDIBA renforce et se combine sans problème avec Ultherapy/HIFU, la madérothérapie, la mésothérapie et les peelings. Lors du diagnostic, nous concevons le plan combiné optimal selon votre cas." },
+      { "q": "De combien de séances ai-je besoin ?", "a_html": "Nous recommandons un Pack de 10 séances (1 à 2 par semaine). Le nombre exact dépend de la zone à traiter et de votre objectif. Lors de la première consultation gratuite, nous évaluons votre cas et concevons le plan adapté." },
+      { "q": "Combien ça coûte ?", "a_html": "Le Pack 10 séances de 45 min coûte <strong>500 €</strong> — soit 50 € par séance et <strong>375 € d'économie</strong> par rapport à un achat à l'unité. Il existe aussi un Pack 10 de 30 min à 350 € et un Pack 5 de 30 min à 250 €. La séance à l'unité va de 45 € à 85 € selon la durée et la zone. Diagnostic initial gratuit et sans engagement." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sans engagement",
+    "h2_html": "Réservez votre diagnostic gratuit. <em>Commencez par savoir ce qu'il vous faut — et ce qu'il ne vous faut pas</em>.",
+    "p": "Trente minutes en clinique avec quelqu'un qui pratique cette technologie depuis des décennies. Si ce n'est pas pour vous, nous vous le disons franchement.",
+    "cta": "Réserver un bilan →"
+  }
+}
