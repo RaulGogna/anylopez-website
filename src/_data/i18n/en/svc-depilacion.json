@@ -1,0 +1,108 @@
+{
+  "title": "IPL Hair Removal in Benidorm — Safe Intense Pulsed Light · AnyLopez",
+  "description": "IPL intense pulsed light hair removal at AnyLopez aesthetic clinic in Benidorm. Clinical-grade equipment, prior skin phototype assessment and a session plan based on your real hair growth cycle.",
+  "jsonld": {
+    "name": "AnyLopez IPL Hair Removal",
+    "alternateName": "Intense Pulsed Light Hair Removal",
+    "description": "Intense Pulsed Light (IPL) hair removal at AnyLopez Aesthetic Clinic Benidorm. Clinical-grade equipment, prior skin phototype assessment and a session plan based on your real hair growth cycle.",
+    "specialties": [
+      "IPL Hair Removal",
+      "Intense Pulsed Light",
+      "Permanent hair reduction"
+    ],
+    "faq": [
+      { "q": "How many sessions will I need?", "a": "Between 6 and 10 sessions, spaced according to the area and hair growth cycle. Face and underarms: every 4-6 weeks. Legs and body: every 6-8 weeks. A one-off top-up once a year after completing the plan." },
+      { "q": "Does it hurt?", "a": "A brief snapping sensation with each light pulse. Far more comfortable than hot wax or diode laser. Most people don't need any anaesthetic." },
+      { "q": "Can I have IPL in summer?", "a": "Ideally IPL is done outside periods of intense sun exposure. Summer is fine if your skin isn't tanned and you use strict sunscreen. For tanned skin it's better to wait until autumn or winter." },
+      { "q": "What about pregnancy or breastfeeding?", "a": "IPL isn't validated for pregnancy or breastfeeding as a precaution, even though there is no evidence of harm. We wait until breastfeeding ends before starting a plan." },
+      { "q": "IPL vs diode laser?", "a": "Both reduce hair permanently. IPL uses broad-spectrum pulsed light (more flexible across different areas and skin types). Diode laser uses a single coherent wavelength (more effective on very dark hair and fair skin, but less versatile)." }
+    ]
+  },
+  "breadcrumb": { "services": "Services", "current": "IPL Hair Removal" },
+  "callCta": "Call +34 656 306 167",
+  "hero": {
+    "imgAlt": "IPL hair removal at AnyLopez Aesthetic Clinic Benidorm",
+    "eyebrow": "IPL Hair Removal · Intense Pulsed Light",
+    "h1_html": "Serious IPL hair removal. <em>Not the high-street version.</em>",
+    "lead_html": "Wax, razors, creams... you've spent years on temporary hair removal that piles up costs and damaged skin. IPL done properly reduces hair permanently — but only when it's done properly. Clinical-grade equipment and a plan tailored to your skin phototype and real hair growth cycle, not a one-size-fits-all low-cost chain protocol.",
+    "ctaPrimary": "Book a free assessment →",
+    "reviews": "Google reviews",
+    "free": "Free initial assessment"
+  },
+  "pain": {
+    "eyebrow": "Sound familiar?",
+    "h2": "Most patients who come to us have been through the same thing.",
+    "p_html": "You're not arriving from nowhere. You're arriving after trying other things that didn't quite work.",
+    "items": [
+      { "h3_html": "You're tired of shaving, waxing and depilatory creams", "p_html": "And your damaged skin shows it. Folliculitis, ingrown hairs, constant irritation. Your skin is asking for something permanent." },
+      { "h3_html": "You've tried IPL at low-cost chains with no lasting results", "p_html": "Cheap machines, fixed parameters, \"come back every fortnight\" — and then the hair grows back just the same. Technology without judgement doesn't work." },
+      { "h3_html": "You have sensitive skin, fine or fair hair, or a high phototype", "p_html": "And you're not sure if it'll work. The short answer: with professional equipment and a prior assessment, yes — with a generic device, no." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why IPL at AnyLopez works",
+    "h2_html": "Six reasons it works here when it hasn't worked elsewhere.",
+    "p_html": "It's not marketing. It's clinical-grade equipment, prior assessment and case-by-case judgement.",
+    "items": [
+      { "h3": "Clinical-grade IPL equipment", "p_html": "Not an Amazon or bargain-bin device. Professional technology with adjustable parameters — the difference between actually reducing hair and not." },
+      { "h3": "Prior assessment of phototype and hair", "p_html": "Fair skin with dark hair responds differently to darker skin with fine hair. No assessment, poor outcome. With assessment, an effective plan." },
+      { "h3": "Sessions spaced to your real hair growth cycle", "p_html": "Not \"come back every fortnight\" to rack up sessions — but respecting the anagen phase of the hair (the only one IPL works on). Each area has its own cadence." },
+      { "h3": "Comfortable, no real pain", "p_html": "A brief snapping sensation from the pulsed light. No needles, no hot wax, no ingrown hairs." },
+      { "h3": "Compatible with sensitive skin and all phototypes", "p_html": "With adapted parameters, IPL is safe on sensitive skin. For higher (darker) phototypes we use specific protocols." },
+      { "h3": "Applied by someone who can read your skin", "p_html": "Decades of experience tuning parameters case by case. The difference between effective IPL and a placebo." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "After IPL",
+    "h2_html": "Hair-free skin <em>deserves different care.</em>",
+    "p": "After an IPL protocol, your skin feels softer and more receptive — the perfect moment to add facials or restorative massages as part of your overall maintenance.",
+    "cta": "See massages →"
+  },
+  "grid": {
+    "eyebrow": "One protocol · all areas",
+    "h2": "The hair removal treatment.",
+    "p": "Tap the card to see all benefits, every body area with prices and packs.",
+    "altSuffix": "at AnyLopez Benidorm",
+    "forWhom_html": "Who it's for:",
+    "detailsAria": "See details for",
+    "detailsCta": "See all areas and prices →"
+  },
+  "tests": {
+    "eyebrow": "Real patients",
+    "h2": "Results you notice — and that people talk about.",
+    "p": "Verified Google reviews. No actors, no pills, no Photoshopped before-and-afters.",
+    "items": [
+      { "quote_html": "\"After trying IPL at another chain with mediocre results, here in 6 sessions the area is perfectly reduced. The difference is the quality of the equipment and the prior assessment.\"", "author": "Cristina M.", "meta": "Patient · IPL full legs" },
+      { "quote_html": "\"My skin is very sensitive and I was afraid of laser/IPL hair removal after bad experiences. Here they adjusted the parameters from the very first session and there was no irritation at all.\"", "author": "Inés P.", "meta": "Patient · IPL bikini" },
+      { "quote_html": "\"I'd been shaving my face for years (a woman with facial hair due to PCOS) and it was hell. Facial IPL with a specific protocol has changed my life. The psychological side is something they really care about too.\"", "author": "Verified patient", "meta": "Google review" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How do we get started?",
+    "h2": "Four steps. No surprises, no small print.",
+    "p": "From your first message to your first session takes less than two weeks.",
+    "steps": [
+      { "h3_html": "You book your assessment", "p_html": "A call or WhatsApp to find a slot. 30 minutes at the clinic, free of charge, no commitment." },
+      { "h3_html": "Phototype + hair type assessment", "p_html": "We evaluate your skin colour, the colour and thickness of your hair, your medical history and the target area. We'll tell you honestly whether IPL is right for you — and if it isn't, we'll say so too." },
+      { "h3_html": "Session plan based on area and cycle", "p_html": "We design a realistic number of sessions and a cadence that respects each area's hair growth cycle. Face and underarms: 4-6 weeks. Legs and body: 6-8 weeks." },
+      { "h3_html": "One-off top-ups once you're done", "p_html": "After the initial plan, a single top-up session once a year is enough. No endless commitments." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "h2": "What people ask us most about IPL.",
+    "items": [
+      { "q": "How many sessions will I need?", "a_html": "Between 6 and 10 sessions, spaced according to the area and hair growth cycle. Face and underarms: every 4-6 weeks. Legs and body: every 6-8 weeks. A one-off top-up once a year after completing the plan." },
+      { "q": "Does it hurt?", "a_html": "A brief snapping sensation with each light pulse. Far more comfortable than hot wax or diode laser. Most people don't need any anaesthetic." },
+      { "q": "Can I have IPL in summer?", "a_html": "Ideally IPL is done outside periods of intense sun exposure. Summer is fine if your skin isn't tanned and you use strict sunscreen. For tanned skin it's better to wait until autumn or winter." },
+      { "q": "What about pregnancy or breastfeeding?", "a_html": "IPL isn't validated for pregnancy or breastfeeding as a precaution, even though there is no evidence of harm. We wait until breastfeeding ends before starting a plan." },
+      { "q": "IPL vs diode laser?", "a_html": "Both reduce hair permanently. IPL uses broad-spectrum pulsed light (more flexible across different areas and skin types). Diode laser uses a single coherent wavelength (more effective on very dark hair and fair skin, but less versatile)." }
+    ]
+  },
+  "final": {
+    "eyebrow": "No commitment",
+    "h2_html": "Book your assessment. <em>Phototype diagnosis and a tailored plan</em>.",
+    "p_html": "Thirty minutes to evaluate your skin and hair, tell you whether IPL is right for your case (it isn't always) and design a realistic plan.",
+    "cta": "Book your assessment →"
+  }
+}
