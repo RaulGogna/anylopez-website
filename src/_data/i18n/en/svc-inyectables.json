@@ -1,0 +1,111 @@
+{
+  "title": "Botox & Fillers in Benidorm — Botox, Hyaluronic acid, Thread lifts · AnyLopez",
+  "description": "Botox, hyaluronic acid, thread lifts and PRP at AnyLopez aesthetic clinic in Benidorm. Diagnosis before injection and conservative techniques.",
+  "jsonld": {
+    "name": "AnyLopez Botox & Fillers",
+    "alternateName": "Facial injectables",
+    "description": "Botox & Fillers catalogue at AnyLopez Aesthetic Clinic Benidorm: Botox, hyaluronic acid, thread lifts and PRP. Diagnosis before injection, branded products and conservative techniques.",
+    "specialties": [
+      "Botox",
+      "Hyaluronic acid",
+      "Thread lifts",
+      "PRP (Platelet-Rich Plasma)"
+    ],
+    "faq": [
+      { "q": "Botox or hyaluronic acid?", "a": "Botox relaxes muscles (forehead, frown lines, crow's feet). Hyaluronic acid restores lost volume (folds, lips, contour). During the diagnosis we identify what you actually need — often it's both, in different areas." },
+      { "q": "Does it hurt?", "a": "Minimally. The needles are extremely fine. In sensitive areas we apply a numbing cream beforehand. Most patients describe the sensation as a brief pinch." },
+      { "q": "When will I see results?", "a": "Botox: progressive effect between day 3 and day 14 (full effect at 2 weeks). Hyaluronic acid: visible within hours, full effect at 2-4 weeks. Threads: immediate lifting plus collagen stimulation at 3 months. PRP: results at 4-6 weeks." },
+      { "q": "How long do they last?", "a": "Botox: 4-6 months depending on area. Hyaluronic acid: 6-12 months depending on product. Barbed threads: 12-18 months. PRP: 6-12 months with maintenance sessions." },
+      { "q": "Pregnancy or breastfeeding?", "a": "Injectables are contraindicated during pregnancy and breastfeeding. We wait until you finish breastfeeding before starting any plan." }
+    ]
+  },
+  "css": {
+    "xsellComment": "INDIBA Radiofrequency"
+  },
+  "breadcrumb": { "services": "Services", "current_html": "Botox & Fillers" },
+  "callCta": "Call 656 306 167",
+  "hero": {
+    "imgAlt_html": "Botox & Fillers at AnyLopez Aesthetic Clinic Benidorm",
+    "eyebrow_html": "Botox & Fillers · 4 protocols",
+    "h1_html": "Volume, not excess. <em>Subtle, technical, your own.</em>",
+    "lead": "Botox to soften lines, hyaluronic acid to restore volume, thread lifts to reposition, PRP to regenerate. Each one has its precise moment in your face — and that moment is what separates a natural result from a frozen one.",
+    "ctaPrimary": "Book your free assessment →",
+    "reviews": "Google reviews",
+    "free": "Initial assessment at no cost"
+  },
+  "pain": {
+    "eyebrow": "Does any of this sound familiar?",
+    "h2": "Most patients who come to us have been through the same thing.",
+    "p_html": "You don't arrive out of nowhere. You arrive after hesitating, comparing and worrying about overdoing it.",
+    "items": [
+      { "h3_html": "You've stayed away for fear it will show.", "p_html": "You've seen exaggerated cheekbones, over-projected lips, frozen foreheads — and you don't want that. But you also won't accept your face ageing without a real option." },
+      { "h3_html": "You've seen mask-like results and run away.", "p_html": "The \"done\" look is a sign of injection without judgement. Well-applied aesthetic medicine shows because you look rested, not different." },
+      { "h3_html": "You don't know whether you need Botox, hyaluronic acid or something else entirely.", "p_html": "You've read everything, got more confused, and can't decide because every professional recommends their own thing. An honest diagnosis ends that doubt." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why injectables at AnyLopez work",
+    "h2_html": "Six reasons it works here where it doesn't elsewhere.",
+    "p_html": "This isn't marketing. It's medical diagnosis, traceable brands and conservative technique.",
+    "items": [
+      { "h3": "Diagnosis before injecting", "p_html": "We look at what you ACTUALLY need — not what sells best. Sometimes it isn't Botox; sometimes it's hyaluronic acid. Sometimes it's neither." },
+      { "h3": "Branded products with full traceability", "p_html": "Vistabel, Restylane, Juvederm — clinically validated products. Every batch is registered. No \"generics\" or recycled product." },
+      { "h3": "Conservative technique, always", "p_html": "Better a little with a 15-day review than overdoing it on the first session. Progressive filler (layer by layer), never pumping up the face." },
+      { "h3": "The full palette in a single plan", "p_html": "Botox + hyaluronic acid + threads + PRP — combined when your case calls for it. We design a sequence that multiplies results." },
+      { "h3": "Review at 15-30 days included", "p_html": "We adjust until you're satisfied. It's not a one-day sale — it's follow-up of the result." },
+      { "h3": "Professional aesthetic medicine", "p_html": "Qualified doctors, not beauty therapists with a weekend course. The same standard as everywhere else in the clinic." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "If your case goes beyond filling",
+    "h2_html": "Volume <em>pairs with tone.</em>",
+    "p": "Hyaluronic acid restores volume, but deep sagging is treated with technology. Combining injectables with Ultherapy HIFU or INDIBA Radiofrequency amplifies the results.",
+    "cta_html": "See Lifting & Antiaging →"
+  },
+  "grid": {
+    "eyebrow": "Four protocols · one philosophy",
+    "h2": "The injectable treatments in our catalogue.",
+    "p": "Tap any card to see full benefits, prices and packs.",
+    "altSuffix": "at AnyLopez Benidorm",
+    "detailsAria": "View details of",
+    "detailsCta": "View details →"
+  },
+  "tests": {
+    "eyebrow": "Real patients",
+    "h2": "Results you can see, and that people talk about.",
+    "p": "Verified Google reviews. No actors, no scripts, no Photoshopped before-and-after shots.",
+    "items": [
+      { "quote_html": "\"I asked for Botox to 'get it done' and they made me see my case was hyaluronic acid for the folds. The difference is exactly what I wanted: rested, not different.\"", "author": "Lucía A.", "meta": "Patient · Hyaluronic acid" },
+      { "quote_html": "\"Barbed thread lifts with incredible technique. You feel the natural lift without anyone asking 'what have you done?'. Exactly what I was after.\"", "author": "María Pilar T.", "meta": "Patient · Thread lifts" },
+      { "quote_html": "\"PRP combined with hyaluronic acid was the key combination. My face looks regenerated, without looking like someone else.\"", "author": "Verified patient", "meta": "Google review" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How do we start?",
+    "h2": "Four steps. No surprises, no small print.",
+    "p": "Medical diagnosis before any needle — and a review included after the session.",
+    "steps": [
+      { "h3": "You book your free assessment", "p_html": "A call or WhatsApp to find a slot. 30 minutes at the clinic, no cost, no commitment." },
+      { "h3": "Medical assessment of the face", "p_html": "A qualified aesthetic doctor evaluates your case: areas to treat, expectations, history. If your goal isn't injectable, we tell you." },
+      { "h3": "Sequenced plan with brand and dose", "p_html": "We design which product, how much and in what order — always conservative. You know exactly what goes in and why." },
+      { "h3": "Review at 15-30 days included", "p_html": "We meet again to adjust whatever's needed. The result is fine-tuned; it isn't closed on day one." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "h2": "What people ask us most about injectables.",
+    "items": [
+      { "q": "Botox or hyaluronic acid?", "a_html": "Botox relaxes muscles (forehead, frown lines, crow's feet). Hyaluronic acid restores lost volume (folds, lips, contour). During the diagnosis we identify what you actually need — often it's both, in different areas." },
+      { "q": "Does it hurt?", "a_html": "Minimally. The needles are extremely fine. In sensitive areas we apply a numbing cream beforehand. Most patients describe the sensation as a brief pinch." },
+      { "q": "When will I see results?", "a_html": "Botox: progressive effect between day 3 and day 14 (full effect at 2 weeks). Hyaluronic acid: visible within hours, full effect at 2-4 weeks. Threads: immediate lifting plus collagen stimulation at 3 months. PRP: results at 4-6 weeks." },
+      { "q": "How long do they last?", "a_html": "Botox: 4-6 months depending on area. Hyaluronic acid: 6-12 months depending on product. Barbed threads: 12-18 months. PRP: 6-12 months with maintenance sessions." },
+      { "q": "Pregnancy or breastfeeding?", "a_html": "Injectables are contraindicated during pregnancy and breastfeeding. We wait until you finish breastfeeding before starting any plan." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Diagnosis before the needle",
+    "h2_html": "Book your assessment. <em>Start by knowing what you need — and what you don't</em>.",
+    "p_html": "Thirty minutes at the clinic with a qualified aesthetic doctor. If your case isn't injectable, we'll say so. If it is, we design a conservative plan.",
+    "cta": "Book your assessment →"
+  }
+}
