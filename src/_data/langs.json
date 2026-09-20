@@ -1,0 +1,24 @@
+[
+  {
+    "code": "es",
+    "locale": "es_ES",
+    "bcp47": "es-ES",
+    "schemaName": "Spanish",
+    "dir": "ltr",
+    "name": "Español",
+    "flag": "🇪🇸",
+    "prefix": "",
+    "hreflang": "es"
+  },
+  {
+    "code": "en",
+    "locale": "en_GB",
+    "bcp47": "en-GB",
+    "schemaName": "English",
+    "dir": "ltr",
+    "name": "English",
+    "flag": "🇬🇧",
+    "prefix": "/en",
+    "hreflang": "en-GB"
+  }
+]

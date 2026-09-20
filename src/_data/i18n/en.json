@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Treatments",
+    "radiofrecuencia": "INDIBA Radiofrequency",
+    "contact": "Contact"
+  },
+  "header": {
+    "bookCta": "Book appointment",
+    "waHref": "https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20a%20free%20consultation.",
+    "menuToggle": "Open menu"
+  },
+  "breadcrumbHome": "Home",
+  "footer": {
+    "brand": "Aesthetic clinic in Benidorm. 35+ years of expertise with INDIBA Radiofrequency & Ultherapy HIFU technology.",
+    "servicesHeading": "Treatments",
+    "servicesLinks": {
+      "/radiofrecuencia/": "INDIBA Radiofrequency",
+      "/services/lifting-antiaging/": "Ultherapy HIFU",
+      "/services/inyectables/": "Botox & Fillers",
+      "/services/limpiezas-faciales/": "Facials",
+      "/services/tratamientos-faciales/": "Dermapen",
+      "/services/depilacion/": "IPL Hair Removal",
+      "/services/masajes/": "Massages",
+      "/services/corporal/": "Body Treatments",
+      "/services/estetica-decorativa/": "Micropigmentation"
+    },
+    "infoHeading": "Information",
+    "infoLinks": {
+      "/": "Home",
+      "/about/": "About Us",
+      "/radiofrecuencia/": "INDIBA Radiofrequency",
+      "/contact/": "Contact"
+    },
+    "googleReviews": "Google reviews",
+    "contactHeading": "Contact",
+    "hours": "Mon–Fri: 10am–2pm / 4–8pm",
+    "rights": "All rights reserved.",
+    "privacyLabel": "Privacy policy",
+    "legalLabel": "Legal notice"
+  },
+  "mobileBar": {
+    "call": "Call"
+  },
+  "crumbs": {
+    "about": "About Us",
+    "services": "Treatments",
+    "radiofrecuencia": "INDIBA Radiofrequency",
+    "limpiezas-faciales": "Facials & Deep Cleanse",
+    "tratamientos-faciales": "Advanced Facials",
+    "lifting-antiaging": "Lifting & Anti-Ageing",
+    "inyectables": "Botox & Fillers",
+    "corporal": "Body Treatments",
+    "masajes": "Massages",
+    "estetica-decorativa": "Lash Extensions & Semi-Permanent Make-up",
+    "depilacion": "IPL Hair Removal",
+    "contact": "Contact"
+  }
+}
