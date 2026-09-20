@@ -1,0 +1,78 @@
+{
+  "title": "Contacto — AnyLopez Clínica Estética",
+  "description": "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqués de Comillas 4, Local 6. Tel: 656 306 167. Lun–Vie 10–14h / 16–20h.",
+  "breadcrumb": "Contacto",
+  "comments": {
+    "main": "CONTACTO PRINCIPAL",
+    "map": "MAPA",
+    "form": "FORMULARIO",
+    "cta": "LLAMADA DIRECTA"
+  },
+  "hero": {
+    "label": "Ponte en Contacto",
+    "h1": "Contáctanos",
+    "sub_html": "Conoce nuestra clínica y disfruta de nuestras instalaciones y atención de calidad personalizada"
+  },
+  "info": {
+    "label": "Información",
+    "h2": "¿Qué esperas para contactarnos?",
+    "p_html": "Estamos encantados de atenderte y resolver todas tus dudas. Reserva tu cita o visítanos directamente en nuestra clínica en Benidorm.",
+    "direccion": "Dirección",
+    "telefonos": "Teléfonos",
+    "email": "Email",
+    "horario": "Horario",
+    "horario_html": "Lunes a Viernes<br>10:00 – 14:00 · 16:00 – 20:00"
+  },
+  "map": {
+    "aria": "Ver AnyLopez Clínica Estética en Google Maps (abre en nueva pestaña)",
+    "text": "Ver en Google Maps"
+  },
+  "form": {
+    "label": "Formulario",
+    "h2": "Reserva Tu Cita",
+    "p_html": "Rellena el formulario y nos pondremos en contacto contigo lo antes posible.",
+    "nombre": "Nombre *",
+    "nombrePh": "Tu nombre",
+    "apellidos": "Apellidos *",
+    "apellidosPh": "Tus apellidos",
+    "email": "Email *",
+    "emailPh": "tu@email.com",
+    "telefono": "Teléfono",
+    "telefonoPh": "Tu número de teléfono",
+    "tratamiento": "Tratamiento de Interés",
+    "options": [
+      { "value": "", "label": "Selecciona un tratamiento..." },
+      { "value": "higiene-facial", "label": "Higiene Facial" },
+      { "value": "radiofrecuencia-facial", "label": "Radiofrecuencia Facial" },
+      { "value": "radiofrecuencia-corporal", "label": "Radiofrecuencia Corporal" },
+      { "value": "radiofrecuencia-indiba", "label": "Radiofrecuencia Sistema Indiba" },
+      { "value": "ultherapy", "label": "Ultherapy" },
+      { "value": "dermapen", "label": "Dermapen" },
+      { "value": "botox", "label": "Botox" },
+      { "value": "acido-hialuronico", "label": "Relleno Ácido Hialurónico" },
+      { "value": "vitaminas-exosomas", "label": "Vitaminas + Exosomas" },
+      { "value": "micropigmentacion", "label": "Micropigmentación" },
+      { "value": "otro", "label": "Otro / Consulta general" }
+    ],
+    "mensaje": "Mensaje o comentarios",
+    "mensajePh": "Cuéntanos en qué podemos ayudarte...",
+    "consent_html": "<span>He leído y acepto la <a href=\"{privacyUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">política de privacidad</a></span>",
+    "submit": "Enviar Solicitud",
+    "note": "Respondemos en menos de 24h.",
+    "successH3": "¡Mensaje enviado!",
+    "successP_html": "Nos pondremos en contacto contigo en menos de 24 horas."
+  },
+  "ctaBottom": {
+    "label": "Llamada directa",
+    "h2": "Llámanos al 656 306 167",
+    "p": "Si prefieres hablar directamente con nosotros, llámanos en nuestro horario de atención.",
+    "btn_html": "<a href=\"tel:656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Llamar Ahora</a>"
+  },
+  "js": {
+    "required": "Por favor completa los campos obligatorios (nombre, apellidos y email).",
+    "invalidEmail": "Por favor introduce un email válido.",
+    "sending": "Enviando...",
+    "serverError": "Error del servidor",
+    "sendError": "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o llámanos al 656 306 167."
+  }
+}

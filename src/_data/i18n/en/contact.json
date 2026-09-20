@@ -1,0 +1,78 @@
+{
+  "title": "Book Appointment — AnyLopez Benidorm Aesthetic Clinic",
+  "description": "Contact AnyLopez Aesthetic Clinic in Benidorm. C/ Marqués de Comillas 4, Local 6. Tel: 656 306 167. Mon–Fri 10am–2pm / 4–8pm.",
+  "breadcrumb": "Contact",
+  "comments": {
+    "main": "CONTACT MAIN",
+    "map": "MAP",
+    "form": "FORM",
+    "cta": "DIRECT CONTACT"
+  },
+  "hero": {
+    "label": "Get in Touch",
+    "h1": "Contact Us",
+    "sub_html": "We'd love to hear from you. Book your appointment or ask us anything."
+  },
+  "info": {
+    "label": "Information",
+    "h2": "Ready to take the next step?",
+    "p_html": "We're happy to answer any questions you may have. Book your appointment or visit us directly at our clinic in Benidorm.",
+    "direccion": "Address",
+    "telefonos": "Phone",
+    "email": "Email",
+    "horario": "Opening Hours",
+    "horario_html": "Mon–Fri: 10am–2pm / 4–8pm"
+  },
+  "map": {
+    "aria": "View AnyLopez Aesthetic Clinic on Google Maps (opens in new tab)",
+    "text": "View on Google Maps →"
+  },
+  "form": {
+    "label": "Enquiry Form",
+    "h2": "Book Your Appointment",
+    "p_html": "Fill in the form and we'll get back to you as soon as possible.",
+    "nombre": "First name *",
+    "nombrePh": "Your first name",
+    "apellidos": "Last name *",
+    "apellidosPh": "Your last name",
+    "email": "Email *",
+    "emailPh": "you@email.com",
+    "telefono": "Phone",
+    "telefonoPh": "Your phone number",
+    "tratamiento": "Treatment of Interest",
+    "options": [
+      { "value": "", "label": "Select a treatment..." },
+      { "value": "higiene-facial", "label": "Facial Cleanse" },
+      { "value": "radiofrecuencia-facial", "label": "Facial Radiofrequency" },
+      { "value": "radiofrecuencia-corporal", "label": "Body Radiofrequency" },
+      { "value": "radiofrecuencia-indiba", "label": "INDIBA Radiofrequency System" },
+      { "value": "ultherapy", "label": "Ultherapy (HIFU)" },
+      { "value": "dermapen", "label": "Dermapen" },
+      { "value": "botox", "label": "Botox" },
+      { "value": "acido-hialuronico", "label": "Hyaluronic Acid Filler" },
+      { "value": "vitaminas-exosomas", "label": "Vitamins + Exosomes" },
+      { "value": "micropigmentacion", "label": "Micropigmentation" },
+      { "value": "otro", "label": "Other / General enquiry" }
+    ],
+    "mensaje": "Message or comments",
+    "mensajePh": "Tell us how we can help you...",
+    "consent_html": "<span>I have read and accept the <a href=\"{privacyUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">privacy policy</a></span>",
+    "submit": "Send Message",
+    "note": "We reply within 24 hours.",
+    "successH3": "Message sent!",
+    "successP_html": "Thank you! We'll be in touch shortly."
+  },
+  "ctaBottom": {
+    "label": "Book on WhatsApp",
+    "h2": "Or book directly on WhatsApp",
+    "p": "Prefer to speak with us directly? Send us a message on WhatsApp during our opening hours.",
+    "btn_html": "<a href=\"https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment.\" class=\"btn btn-accent\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Book an appointment on WhatsApp (opens in new tab)\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"contact-page-bottom\"}'>Book on WhatsApp</a>"
+  },
+  "js": {
+    "required": "Please fill in the required fields (first name, last name and email).",
+    "invalidEmail": "Please enter a valid email address.",
+    "sending": "Sending...",
+    "serverError": "Server error",
+    "sendError": "There was an error sending your message. Please try again or call us on 656 306 167."
+  }
+}
