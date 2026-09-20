@@ -1,0 +1,109 @@
+{
+  "title": "Limpiezas faciales profesionales en Benidorm — 5 niveles · AnyLopez",
+  "description": "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolos escalonados (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) con diagnóstico previo y aparatología clínica.",
+  "jsonld": {
+    "name": "Limpiezas faciales AnyLopez",
+    "alternateName": "Higiene facial profesional escalonada",
+    "description": "Catálogo de limpiezas faciales profesionales en AnyLopez Clínica Estética Benidorm: 5 protocolos escalonados (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) con diagnóstico previo, extracción manual y aparatología clínica.",
+    "specialties": [
+      "Limpieza Facial GOLD",
+      "Limpieza Facial PLATINUM",
+      "Limpieza Facial DETOX",
+      "Limpieza Facial DIAMOND",
+      "Limpieza Facial ELITE"
+    ],
+    "faq": [
+      { "q": "¿Cuál es la diferencia entre los 5 niveles?", "a": "GOLD: limpieza esencial (50€). PLATINUM: limpieza + hidratación profunda con ácido hialurónico y vitamina C (75€). DETOX: limpieza + peeling con nanoagujas + mascarilla detox (150€). DIAMOND: limpieza + aparatología avanzada + 3 exfoliantes (150€). ELITE: protocolo más completo con yesoterapia y aparatología premium (200€)." },
+      { "q": "¿Cada cuánto una limpieza profesional?", "a": "Depende del tipo de piel: pieles regulares cada 4-6 semanas; grasas/acneicas cada 3-4 semanas; secas/maduras cada 6-8 semanas. En el diagnóstico te lo concretamos." },
+      { "q": "¿Las limpiezas son sólo bienestar o tienen efecto real?", "a": "Tienen efecto clínico real: extracción manual de comedones, eliminación de células muertas, renovación celular estimulada por aparatología, hidratación profunda. Modifican estado de la piel, no sólo dan sensación agradable." },
+      { "q": "¿Puedo maquillarme o salir al sol después?", "a": "Recomendamos no maquillarse las primeras 4-6 horas para que la piel respire. Protector solar siempre, especialmente las primeras 24-48h." },
+      { "q": "¿Pueden hacer limpieza con acné activo o piel sensible?", "a": "Sí, con protocolo adaptado. Para acné activo usamos Tratamiento Anti-Acné específico antes. Para pieles sensibles ajustamos productos e intensidad." }
+    ]
+  },
+  "breadcrumb": { "services": "Servicios", "current_html": "Limpiezas Faciales" },
+  "callCta": "Llamar 656 306 167",
+  "hero": {
+    "imgAlt": "Limpiezas faciales profesionales en AnyLopez Clínica Estética Benidorm",
+    "eyebrow_html": "Limpiezas faciales · 5 niveles escalonados",
+    "h1_html": "Las limpiezas faciales en serio. <em>No las del SPA del hotel.</em>",
+    "lead": "Si llevas años haciéndote la limpieza en casa o en centros donde te aplican espuma y te despachan en media hora, no estás cuidando tu piel — la estás dejando como estaba. Una limpieza profesional empieza por ver tu piel y elegir nivel.",
+    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "reviews": "reseñas Google",
+    "free": "Diagnóstico inicial sin coste"
+  },
+  "pain": {
+    "eyebrow": "¿Te suena alguna de estas?",
+    "h2": "La mayoría de pacientes que llegan aquí han pasado por lo mismo.",
+    "p_html": "No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.",
+    "items": [
+      { "h3_html": "Has hecho rituales caseros años y los puntos negros siguen.", "p": "Mascarillas, exfoliantes de droguería, vapor casero. La superficie se va, pero los comedones profundos viven más adentro de donde llega un sérum." },
+      { "h3_html": "Pagas cosmética premium y la piel sigue apagada.", "p": "Buenos productos sirven para mantener — no para resetear. Renovar requiere extracción manual y aparatología." },
+      { "h3_html": "Has ido a \"limpiezas\" en spas que te despacharon en 30 min.", "p": "Sin diagnóstico, sin extracción real, sin nivel adaptado. Eso es masaje, no limpieza profesional." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Por qué las limpiezas en AnyLopez funcionan",
+    "h2_html": "Seis razones por las que aquí funcionan donde otros sitios no.",
+    "p": "No es marketing. Es diagnóstico previo, niveles escalonados y aparatología clínica real.",
+    "items": [
+      { "h3": "Diagnóstico previo siempre", "p_html": "No empezamos sin ver qué tipo de piel tienes y qué necesita. A veces es GOLD; a veces ELITE." },
+      { "h3": "5 niveles escalonados", "p_html": "GOLD básico esencial · PLATINUM con hidratación · DETOX con peeling nanoagujas · DIAMOND con aparatología · ELITE premium con yesoterapia." },
+      { "h3": "Combinables con tratamientos avanzados", "p_html": "Una limpieza prepara la piel para peelings, dermapen o radiofrecuencia. Multiplicas resultados." },
+      { "h3": "Aparatología de calidad clínica", "p_html": "No es ultrasonido de YouTube ni espuma cosmética. Equipos profesionales reales." },
+      { "h3": "Mantenimiento programado real", "p_html": "Cada 4-6 semanas según tu piel — no \"cuando te acuerdes\". Te lo agendamos juntos." },
+      { "h3": "Lo aplica quien firma el resultado", "p_html": "Mismo principio que en toda la clínica: te atiende quien tiene experiencia real con tu tipo de piel." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Cinco niveles · una sola filosofía",
+    "h2": "Las limpiezas faciales del catálogo.",
+    "p": "Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.",
+    "altSuffix": "en AnyLopez Benidorm",
+    "detailsAria": "Ver detalles de",
+    "detailsCta": "Ver detalles →"
+  },
+  "xsell": {
+    "eyebrow": "El siguiente paso",
+    "h2_html": "Después de limpiar, <em>¿toca renovar?</em>",
+    "p_html": "Una piel limpia es la base. Si quieres más — borrar manchas, suavizar líneas, mejorar textura — los tratamientos faciales avanzados llegan donde la limpieza no.",
+    "cta": "Ver tratamientos faciales avanzados →"
+  },
+  "tests": {
+    "eyebrow": "Pacientes reales",
+    "h2": "Resultados que se notan, y se cuentan.",
+    "p": "Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.",
+    "items": [
+      { "quote_html": "\"Después de años de mascarillas caseras y limpiezas que no llegaban a nada, una sesión DIAMOND y la diferencia se ve hasta en la foto. Mi piel respira otra vez.\"", "author": "Beatriz N.", "meta": "Paciente · DIAMOND" },
+      { "quote_html": "\"Pagaba mucho en cosmética y mi piel seguía apagada. Me hicieron diagnóstico y empecé con PLATINUM mensual — ha cambiado totalmente la luminosidad.\"", "author": "Carmen P.", "meta": "Paciente · PLATINUM" },
+      { "quote_html": "\"El protocolo ELITE es otro nivel. La yesoterapia al final es un cierre que ningún otro centro me había hecho.\"", "author": "Paciente verificada", "meta": "Reseña Google · ELITE" }
+    ]
+  },
+  "process": {
+    "eyebrow": "¿Cómo lo empezamos?",
+    "h2": "Cuatro pasos. Sin sorpresas, sin letra pequeña.",
+    "p": "Desde tu primer mensaje hasta que ves la primera mejora pasan menos de dos semanas.",
+    "steps": [
+      { "h3": "Reservas tu diagnóstico gratuito", "p_html": "Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso." },
+      { "h3": "Diagnóstico con lupa profesional", "p_html": "Te valoramos la piel con lupa profesional: tipo de piel, comedones, hidratación, sensibilidad. Te decimos qué nivel encaja — GOLD, PLATINUM, DETOX, DIAMOND o ELITE." },
+      { "h3": "Plan a medida con cadencia", "p_html": "No \"vienes una vez\". Diseñamos qué nivel y con qué frecuencia mantenerlo. Si tu piel necesita PLATINUM cada 6 semanas, te lo decimos así de claro." },
+      { "h3": "Mantenimiento programado", "p_html": "Te agendamos las siguientes sesiones para que no se te pase. WhatsApp directo para dudas y ajustes entre citas." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Dudas frecuentes",
+    "h2": "Lo que más nos preguntan sobre las limpiezas faciales.",
+    "items": [
+      { "q": "¿Cuál es la diferencia entre los 5 niveles?", "a": "GOLD: limpieza esencial (50€). PLATINUM: limpieza + hidratación profunda con ácido hialurónico y vitamina C (75€). DETOX: limpieza + peeling con nanoagujas + mascarilla detox (150€). DIAMOND: limpieza + aparatología avanzada + 3 exfoliantes (150€). ELITE: protocolo más completo con yesoterapia y aparatología premium (200€)." },
+      { "q": "¿Cada cuánto una limpieza profesional?", "a": "Depende del tipo de piel: pieles regulares cada 4-6 semanas; grasas/acneicas cada 3-4 semanas; secas/maduras cada 6-8 semanas. En el diagnóstico te lo concretamos." },
+      { "q": "¿Las limpiezas son sólo bienestar o tienen efecto real?", "a": "Tienen efecto clínico real: extracción manual de comedones, eliminación de células muertas, renovación celular estimulada por aparatología, hidratación profunda. Modifican estado de la piel, no sólo dan sensación agradable." },
+      { "q": "¿Puedo maquillarme o salir al sol después?", "a": "Recomendamos no maquillarse las primeras 4-6 horas para que la piel respire. Protector solar siempre, especialmente las primeras 24-48h." },
+      { "q": "¿Pueden hacer limpieza con acné activo o piel sensible?", "a": "Sí, con protocolo adaptado. Para acné activo usamos Tratamiento Anti-Acné específico antes. Para pieles sensibles ajustamos productos e intensidad." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sin compromiso",
+    "h2_html": "Reserva tu diagnóstico gratuito. <em>Empieza por saber qué nivel necesita tu piel</em>.",
+    "p_html": "Treinta minutos en clínica con lupa profesional y experiencia real. Si solo necesitas mantenimiento básico, te lo decimos.",
+    "cta": "Reservar valoración →"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "title": "Professional Facials & Deep Cleanse in Benidorm — 5 Levels · AnyLopez",
+  "description": "Professional facials & deep cleanse at our Benidorm clinic. 5 tiered protocols (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) with prior assessment and clinical-grade equipment.",
+  "jsonld": {
+    "name": "AnyLopez Facials & Deep Cleanse",
+    "alternateName": "Tiered professional facial hygiene",
+    "description": "Catalogue of professional facials at AnyLopez Aesthetic Clinic Benidorm: 5 tiered protocols (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) with prior assessment, manual extraction and clinical-grade equipment.",
+    "specialties": [
+      "GOLD Facial",
+      "PLATINUM Facial",
+      "DETOX Facial",
+      "DIAMOND Facial",
+      "ELITE Facial"
+    ],
+    "faq": [
+      { "q": "What is the difference between the 5 levels?", "a": "GOLD: essential cleanse (€50). PLATINUM: cleanse + deep hydration with hyaluronic acid and vitamin C (€75). DETOX: cleanse + nano-needle peel + detox mask (€150). DIAMOND: cleanse + advanced equipment + 3 exfoliants (€150). ELITE: most complete protocol with plaster therapy and premium equipment (€200)." },
+      { "q": "How often should you have a professional facial?", "a": "It depends on your skin type: normal skin every 4-6 weeks; oily/acne-prone every 3-4 weeks; dry/mature every 6-8 weeks. We confirm cadence at your assessment." },
+      { "q": "Are facials just wellness or do they have a real effect?", "a": "They have a real clinical effect: manual comedone extraction, removal of dead cells, cell renewal stimulated by clinical equipment, deep hydration. They genuinely change the state of the skin, not just feel pleasant." },
+      { "q": "Can I wear make-up or go out in the sun afterwards?", "a": "We recommend no make-up for the first 4-6 hours so the skin can breathe. Always use sunscreen, especially during the first 24-48 hours." },
+      { "q": "Can you treat active acne or sensitive skin?", "a": "Yes, with an adapted protocol. For active acne we use a specific Anti-Acne Treatment beforehand. For sensitive skin we adjust products and intensity." }
+    ]
+  },
+  "breadcrumb": { "services": "Services", "current_html": "Facials & Deep Cleanse" },
+  "callCta": "Call 656 306 167",
+  "hero": {
+    "imgAlt": "Professional facials at AnyLopez Aesthetic Clinic Benidorm",
+    "eyebrow_html": "Facials & Deep Cleanse · 5 tiered levels",
+    "h1_html": "Serious facials. <em>Not the ones at the hotel spa.</em>",
+    "lead": "If you have spent years cleansing at home or at places that apply some foam and send you out in half an hour, you are not caring for your skin — you are leaving it as it was. A professional facial starts by reading your skin and choosing the right level.",
+    "ctaPrimary": "Book your free assessment →",
+    "reviews": "Google reviews",
+    "free": "Free initial assessment"
+  },
+  "pain": {
+    "eyebrow": "Does any of this sound familiar?",
+    "h2": "Most patients who come here have been through the same thing.",
+    "p_html": "You don't arrive out of nowhere. You arrive after trying other things that didn't quite work.",
+    "items": [
+      { "h3_html": "You have done home rituals for years and the blackheads are still there.", "p": "Masks, drugstore exfoliants, home steaming. The surface comes off, but deep comedones live further down than any serum can reach." },
+      { "h3_html": "You spend on premium skincare and your skin still looks dull.", "p": "Good products are for maintenance — not for resetting. Renewal needs manual extraction and clinical equipment." },
+      { "h3_html": "You have had \"facials\" at spas that rushed you through in 30 min.", "p": "No assessment, no real extraction, no level adapted to your skin. That is a massage, not a professional facial." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why facials at AnyLopez actually work",
+    "h2_html": "Six reasons it works here where elsewhere it doesn't.",
+    "p": "It is not marketing. It is prior assessment, tiered levels and real clinical-grade equipment.",
+    "items": [
+      { "h3": "Prior assessment, always", "p_html": "We don't begin without seeing your skin type and what it needs. Sometimes it is GOLD; sometimes ELITE." },
+      { "h3": "5 tiered levels", "p_html": "GOLD essential basic · PLATINUM with hydration · DETOX with nano-needle peel · DIAMOND with equipment · ELITE premium with plaster therapy." },
+      { "h3": "Combinable with advanced treatments", "p_html": "A facial preps the skin for peels, dermapen or radiofrequency. You multiply results." },
+      { "h3": "Clinical-grade equipment", "p_html": "Not YouTube ultrasound or cosmetic foam. Real professional kit." },
+      { "h3": "Real scheduled maintenance", "p_html": "Every 4-6 weeks depending on your skin — not \"whenever you remember\". We book it in together." },
+      { "h3": "Delivered by the person who signs the result", "p_html": "Same principle as the rest of the clinic: you are seen by someone with real experience treating skin like yours." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Five levels · one philosophy",
+    "h2": "The facials in our catalogue.",
+    "p": "Tap any card to see the full benefits, prices and packages.",
+    "altSuffix": "at AnyLopez Benidorm",
+    "detailsAria": "View details of",
+    "detailsCta": "View details →"
+  },
+  "xsell": {
+    "eyebrow": "The next step",
+    "h2_html": "After cleansing, <em>time to renew?</em>",
+    "p_html": "Clean skin is the foundation. If you want more — fading dark spots, smoothing lines, improving texture — advanced facials reach where a cleanse can't.",
+    "cta": "See advanced facials →"
+  },
+  "tests": {
+    "eyebrow": "Real patients",
+    "h2": "Results you can see, and that people share.",
+    "p": "Verified Google reviews. No actors, no pills, no photoshopped before-and-afters.",
+    "items": [
+      { "quote_html": "\"After years of home masks and facials that didn't get anywhere, one DIAMOND session and the difference shows even on camera. My skin can breathe again.\"", "author": "Beatriz N.", "meta": "Patient · DIAMOND" },
+      { "quote_html": "\"I was spending a fortune on skincare and my skin still looked dull. They assessed me and I started with monthly PLATINUM — the radiance has completely changed.\"", "author": "Carmen P.", "meta": "Patient · PLATINUM" },
+      { "quote_html": "\"The ELITE protocol is on another level. The plaster therapy at the end is a finish no other place had given me.\"", "author": "Verified patient", "meta": "Google review · ELITE" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How do we start?",
+    "h2": "Four steps. No surprises, no small print.",
+    "p": "From your first message to seeing the first improvement, less than two weeks go by.",
+    "steps": [
+      { "h3": "Book your free assessment", "p_html": "Phone call or WhatsApp to find a slot. 30 min at the clinic, no cost, no obligation." },
+      { "h3": "Assessment with a professional magnifying lamp", "p_html": "We assess your skin with a professional magnifying lamp: skin type, comedones, hydration, sensitivity. We tell you which level fits — GOLD, PLATINUM, DETOX, DIAMOND or ELITE." },
+      { "h3": "Tailored plan with cadence", "p_html": "It is not a \"one-off visit\". We design which level and how often to maintain it. If your skin needs PLATINUM every 6 weeks, we tell you straight." },
+      { "h3": "Scheduled maintenance", "p_html": "We book your next sessions so you don't let it slip. Direct WhatsApp for any questions or tweaks between appointments." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "h2": "The questions we hear most about facials.",
+    "items": [
+      { "q": "What is the difference between the 5 levels?", "a": "GOLD: essential cleanse (€50). PLATINUM: cleanse + deep hydration with hyaluronic acid and vitamin C (€75). DETOX: cleanse + nano-needle peel + detox mask (€150). DIAMOND: cleanse + advanced equipment + 3 exfoliants (€150). ELITE: most complete protocol with plaster therapy and premium equipment (€200)." },
+      { "q": "How often should you have a professional facial?", "a": "It depends on your skin type: normal skin every 4-6 weeks; oily/acne-prone every 3-4 weeks; dry/mature every 6-8 weeks. We confirm cadence at your assessment." },
+      { "q": "Are facials just wellness or do they have a real effect?", "a": "They have a real clinical effect: manual comedone extraction, removal of dead cells, cell renewal stimulated by clinical equipment, deep hydration. They genuinely change the state of the skin, not just feel pleasant." },
+      { "q": "Can I wear make-up or go out in the sun afterwards?", "a": "We recommend no make-up for the first 4-6 hours so the skin can breathe. Always use sunscreen, especially during the first 24-48 hours." },
+      { "q": "Can you treat active acne or sensitive skin?", "a": "Yes, with an adapted protocol. For active acne we use a specific Anti-Acne Treatment beforehand. For sensitive skin we adjust products and intensity." }
+    ]
+  },
+  "final": {
+    "eyebrow": "No obligation",
+    "h2_html": "Book your free assessment. <em>Start by knowing what level your skin needs</em>.",
+    "p_html": "Thirty minutes at the clinic with a professional magnifying lamp and real experience. If you only need basic maintenance, we'll tell you so.",
+    "cta": "Book your assessment →"
+  }
+}
