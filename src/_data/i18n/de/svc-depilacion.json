@@ -1,0 +1,108 @@
+{
+  "title": "IPL-Haarentfernung in Benidorm — Sicheres Intenspulslicht · AnyLopez",
+  "description": "Haarentfernung mit IPL-Pulslicht in der Ästhetikklinik AnyLopez Benidorm. Gerät in klinischer Qualität, vorherige Hauttyp-Diagnose und Sitzungsplan nach dem echten Haarzyklus.",
+  "jsonld": {
+    "name": "IPL-Haarentfernung AnyLopez",
+    "alternateName": "Haarentfernung mit intensivem Pulslicht",
+    "description": "Haarentfernung mit intensivem Pulslicht (IPL) in der AnyLopez Ästhetikklinik Benidorm. Gerät in klinischer Qualität, vorherige Hauttyp-Diagnose und Sitzungsplan nach dem echten Haarzyklus.",
+    "specialties": [
+      "IPL-Haarentfernung",
+      "Intensives Pulslicht",
+      "Dauerhafte Haarreduktion"
+    ],
+    "faq": [
+      { "q": "Wie viele Sitzungen brauche ich?", "a": "Zwischen 6 und 10 Sitzungen, verteilt nach Zone und Haarzyklus. Gesicht und Achseln: alle 4–6 Wochen. Beine und Körper: alle 6–8 Wochen. Nach Abschluss genügt eine punktuelle Auffrischung pro Jahr." },
+      { "q": "Tut es weh?", "a": "Ein kurzes Zwicken bei jedem Lichtimpuls. Deutlich angenehmer als heißes Wachs oder Diodenlaser. Die meisten brauchen keine Betäubung." },
+      { "q": "Kann ich IPL im Sommer machen?", "a": "Idealerweise findet IPL außerhalb intensiver Sonnenexposition statt. Im Sommer geht es, wenn die Haut ungebräunt ist und Sie strikt Sonnenschutz auftragen. Bei gebräunter Haut besser bis Herbst/Winter warten." },
+      { "q": "Schwangerschaft oder Stillzeit?", "a": "IPL ist für Schwangerschaft und Stillzeit vorsorglich nicht validiert, auch wenn es keine Hinweise auf Schäden gibt. Wir warten mit dem Plan bis zum Ende der Stillzeit." },
+      { "q": "IPL oder Diodenlaser?", "a": "Beide reduzieren Haare dauerhaft. IPL nutzt Pulslicht mit breitem Spektrum (flexibler für verschiedene Zonen und Hauttypen). Der Diodenlaser ist kohärentes Einzellicht (wirksamer bei sehr dunklem Haar und heller Haut, weniger vielseitig)." }
+    ]
+  },
+  "breadcrumb": { "services": "Behandlungen", "current": "IPL-Haarentfernung" },
+  "callCta": "Anrufen: 656 306 167",
+  "hero": {
+    "imgAlt": "IPL-Haarentfernung in der AnyLopez Ästhetikklinik Benidorm",
+    "eyebrow": "IPL-Haarentfernung · Intenspulslicht",
+    "h1_html": "IPL-Haarentfernung, ernst genommen. <em>Nicht die vom Studio um die Ecke.</em>",
+    "lead_html": "Wachs, Rasierer, Cremes … seit Jahren zahlen Sie für vorübergehende Haarentfernungen — mit strapazierter Haut als Ergebnis. Richtig angewandtes IPL reduziert Haare dauerhaft — aber nur richtig angewandt. Gerät in klinischer Qualität und ein Plan nach Ihrem Hauttyp und echten Haarzyklus, kein Einheitsprotokoll einer Billigkette.",
+    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "reviews": "Google-Bewertungen",
+    "free": "Erstdiagnose kostenfrei"
+  },
+  "pain": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "h2": "Die meisten Patientinnen, die zu uns kommen, haben dasselbe erlebt.",
+    "p_html": "Sie fangen nicht bei null an. Sie kommen, nachdem Sie anderes probiert haben, das nicht wirklich funktioniert hat.",
+    "items": [
+      { "h3_html": "Sie haben genug von Rasierer, Wachs und Enthaarungscremes", "p_html": "Und die strapazierte Haut beweist es. Follikulitis, eingewachsene Haare, ständige Reizung. Ihre Haut verlangt etwas Endgültiges." },
+      { "h3_html": "Sie haben IPL in Billigketten probiert — ohne dauerhaftes Ergebnis.", "p_html": "Billige Geräte, Einheitsparameter, „kommen Sie alle 15 Tage“ — und das Haar kommt genauso wieder. Technologie ohne Urteilsvermögen funktioniert nicht." },
+      { "h3_html": "Sie haben empfindliche Haut, feines oder helles Haar oder einen dunklen Hauttyp", "p_html": "Und wissen nicht, ob es funktioniert. Die kurze Antwort: mit Profigerät und vorheriger Diagnose ja — mit einem generischen Apparat nein." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Warum IPL bei AnyLopez wirkt",
+    "h2_html": "Sechs Gründe, warum es hier wirkt, wo andere versagen.",
+    "p_html": "Kein Marketing. Gerät in klinischer Qualität, vorherige Diagnose und Urteil von Fall zu Fall.",
+    "items": [
+      { "h3": "IPL-Gerät in klinischer Qualität", "p_html": "Kein Amazon-Apparat, kein Billigbasar. Professionelle Technologie mit einstellbaren Parametern — der Unterschied zwischen Haarreduktion und keiner." },
+      { "h3": "Vorherige Diagnose von Hauttyp und Haar", "p_html": "Helle Haut mit dunklem Haar reagiert anders als dunkle Haut mit feinem Haar. Ohne Diagnose schlechte Prognose. Mit Diagnose ein wirksamer Plan." },
+      { "h3": "Sitzungen im Takt des echten Haarzyklus", "p_html": "Kein „kommen Sie alle 15 Tage“, um Sitzungen zu häufen — sondern im Respekt der Anagenphase des Haars (der einzigen, in der IPL wirkt). Jede Zone hat ihren Rhythmus." },
+      { "h3": "Angenehm, ohne echten Schmerz", "p_html": "Ein kurzes Zwicken durch das Pulslicht. Keine Nadeln, kein heißes Wachs, keine eingewachsenen Haare." },
+      { "h3": "Geeignet für empfindliche Haut und alle Hauttypen", "p_html": "Mit angepassten Parametern ist IPL auch bei empfindlicher Haut sicher. Für dunklere Hauttypen nutzen wir spezifische Protokolle." },
+      { "h3": "Angewendet von jemandem, der Ihre Haut lesen kann", "p_html": "Jahrzehnte Erfahrung im Anpassen der Parameter von Fall zu Fall. Der Unterschied zwischen wirksamem IPL und Placebo." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Nach dem IPL",
+    "h2_html": "Haut ohne Haare <em>pflegt man anders.</em>",
+    "p": "Nach einem IPL-Protokoll ist die Haut glatter und aufnahmefähiger — der perfekte Moment, Gesichtsreinigungen oder regenerierende Massagen als ganzheitliche Pflege einzubauen.",
+    "cta": "Massagen ansehen →"
+  },
+  "grid": {
+    "eyebrow": "Ein Protokoll · alle Zonen",
+    "h2": "Die Haarentfernungs-Behandlung.",
+    "p": "Tippen Sie auf die Karte für alle Wirkungen, alle Zonen mit Preis und Pakete.",
+    "altSuffix": "bei AnyLopez Benidorm",
+    "forWhom_html": "Für wen:",
+    "detailsAria": "Details ansehen zu",
+    "detailsCta": "Alle Zonen und Preise ansehen →"
+  },
+  "tests": {
+    "eyebrow": "Echte Patientinnen",
+    "h2": "Ergebnisse, die man sieht — und weitererzählt.",
+    "p": "Verifizierte Google-Bewertungen. Ohne Schauspieler, ohne Wunderpillen, ohne retuschierte Vorher-nachher-Bilder.",
+    "items": [
+      { "quote_html": "\"Nach IPL in einer anderen Kette mit mäßigem Ergebnis habe ich hier in 6 Sitzungen eine perfekt reduzierte Zone. Der Unterschied sind die Gerätequalität und die vorherige Diagnose.\"", "author": "Cristina M.", "meta": "Patientin · IPL komplette Beine" },
+      { "quote_html": "\"Meine Haut ist sehr empfindlich und ich fürchtete Laser/IPL nach schlechten Erfahrungen. Hier wurden die Parameter ab der ersten Sitzung angepasst — null Reizung.\"", "author": "Inés P.", "meta": "Patientin · IPL Leisten" },
+      { "quote_html": "\"Jahrelang rasierte ich mir das Gesicht (Frau mit Gesichtsbehaarung durch PCOS) — die Hölle. IPL im Gesicht mit spezifischem Protokoll hat mein Leben verändert. Auch die Psychologie dahinter wird hier ernst genommen.\"", "author": "Verifizierte Patientin", "meta": "Google-Bewertung" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie fangen wir an?",
+    "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
+    "p": "Von Ihrer ersten Nachricht bis zur ersten Sitzung vergehen weniger als zwei Wochen.",
+    "steps": [
+      { "h3_html": "Sie buchen Ihre Beurteilung", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
+      { "h3_html": "Diagnose von Hauttyp + Haartyp", "p_html": "Wir beurteilen Hautfarbe, Farbe und Stärke des Haars, Vorgeschichte und Zielzone. Wir sagen Ihnen ehrlich, ob IPL das Richtige für Sie ist — und wenn nicht, auch." },
+      { "h3_html": "Sitzungsplan nach Zone und Zyklus", "p_html": "Wir planen eine realistische Zahl von Sitzungen und den Rhythmus im Respekt des Haarzyklus jeder Zone. Gesicht und Achseln: 4–6 Wochen. Beine und Körper: 6–8 Wochen." },
+      { "h3_html": "Punktuelle Auffrischung nach Abschluss", "p_html": "Nach dem Anfangsplan genügt eine punktuelle Auffrischung pro Jahr. Ohne ewige Verpflichtungen." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "h2": "Was wir zu IPL am häufigsten gefragt werden.",
+    "items": [
+      { "q": "Wie viele Sitzungen brauche ich?", "a_html": "Zwischen 6 und 10 Sitzungen, verteilt nach Zone und Haarzyklus. Gesicht und Achseln: alle 4–6 Wochen. Beine und Körper: alle 6–8 Wochen. Nach Abschluss genügt eine punktuelle Auffrischung pro Jahr." },
+      { "q": "Tut es weh?", "a_html": "Ein kurzes Zwicken bei jedem Lichtimpuls. Deutlich angenehmer als heißes Wachs oder Diodenlaser. Die meisten brauchen keine Betäubung." },
+      { "q": "Kann ich IPL im Sommer machen?", "a_html": "Idealerweise findet IPL außerhalb intensiver Sonnenexposition statt. Im Sommer geht es, wenn die Haut ungebräunt ist und Sie strikt Sonnenschutz auftragen. Bei gebräunter Haut besser bis Herbst/Winter warten." },
+      { "q": "Schwangerschaft oder Stillzeit?", "a_html": "IPL ist für Schwangerschaft und Stillzeit vorsorglich nicht validiert, auch wenn es keine Hinweise auf Schäden gibt. Wir warten mit dem Plan bis zum Ende der Stillzeit." },
+      { "q": "IPL oder Diodenlaser?", "a_html": "Beide reduzieren Haare dauerhaft. IPL nutzt Pulslicht mit breitem Spektrum (flexibler für verschiedene Zonen und Hauttypen). Der Diodenlaser ist kohärentes Einzellicht (wirksamer bei sehr dunklem Haar und heller Haut, weniger vielseitig)." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Unverbindlich",
+    "h2_html": "Buchen Sie Ihre Beurteilung. <em>Hauttyp-Diagnose und Plan nach Maß</em>.",
+    "p_html": "Dreißig Minuten, um Haut und Haar zu beurteilen, Ihnen zu sagen, ob IPL das Richtige für Ihren Fall ist (nicht immer), und einen realistischen Plan zu erstellen.",
+    "cta": "Beurteilung buchen →"
+  }
+}

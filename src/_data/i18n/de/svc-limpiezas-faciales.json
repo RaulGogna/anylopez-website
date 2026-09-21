@@ -1,0 +1,109 @@
+{
+  "title": "Professionelle Gesichtsreinigungen in Benidorm — 5 Stufen · AnyLopez",
+  "description": "Professionelle Gesichtsreinigungen in der Klinik in Benidorm. 5 gestufte Protokolle (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) mit vorheriger Diagnose und klinischer Apparatetechnik.",
+  "jsonld": {
+    "name": "Gesichtsreinigungen AnyLopez",
+    "alternateName": "Gestufte professionelle Gesichtspflege",
+    "description": "Angebot professioneller Gesichtsreinigungen in der AnyLopez Ästhetikklinik Benidorm: 5 gestufte Protokolle (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) mit vorheriger Diagnose, manueller Ausreinigung und klinischer Apparatetechnik.",
+    "specialties": [
+      "Gesichtsreinigung GOLD",
+      "Gesichtsreinigung PLATINUM",
+      "Gesichtsreinigung DETOX",
+      "Gesichtsreinigung DIAMOND",
+      "Gesichtsreinigung ELITE"
+    ],
+    "faq": [
+      { "q": "Was unterscheidet die 5 Stufen?", "a": "GOLD: essenzielle Reinigung (50€). PLATINUM: Reinigung + Tiefenhydratation mit Hyaluronsäure und Vitamin C (75€). DETOX: Reinigung + Peeling mit Nanonadeln + Detox-Maske (150€). DIAMOND: Reinigung + fortgeschrittene Apparatetechnik + 3 Peelings (150€). ELITE: das umfassendste Protokoll mit Gipstherapie und Premium-Apparatetechnik (200€)." },
+      { "q": "Wie oft eine professionelle Reinigung?", "a": "Je nach Hauttyp: normale Haut alle 4–6 Wochen; fettige/aknöse Haut alle 3–4 Wochen; trockene/reife Haut alle 6–8 Wochen. In der Diagnose legen wir es konkret fest." },
+      { "q": "Sind die Reinigungen nur Wellness oder haben sie echte Wirkung?", "a": "Sie haben echte klinische Wirkung: manuelle Ausreinigung von Komedonen, Entfernen abgestorbener Zellen, apparativ angeregte Zellerneuerung, Tiefenhydratation. Sie verändern den Hautzustand, statt nur ein angenehmes Gefühl zu geben." },
+      { "q": "Darf ich mich danach schminken oder in die Sonne?", "a": "Wir empfehlen, sich die ersten 4–6 Stunden nicht zu schminken, damit die Haut atmet. Sonnenschutz immer, besonders die ersten 24–48 Stunden." },
+      { "q": "Geht eine Reinigung bei aktiver Akne oder empfindlicher Haut?", "a": "Ja, mit angepasstem Protokoll. Bei aktiver Akne setzen wir vorher die spezifische Anti-Akne-Behandlung ein. Bei empfindlicher Haut passen wir Produkte und Intensität an." }
+    ]
+  },
+  "breadcrumb": { "services": "Behandlungen", "current_html": "Gesichtsreinigungen" },
+  "callCta": "Anrufen: 656 306 167",
+  "hero": {
+    "imgAlt": "Professionelle Gesichtsreinigungen in der AnyLopez Ästhetikklinik Benidorm",
+    "eyebrow_html": "Gesichtsreinigungen · 5 gestufte Stufen",
+    "h1_html": "Gesichtsreinigung, ernst genommen. <em>Nicht die vom Hotel-Spa.</em>",
+    "lead": "Wenn Sie sich seit Jahren zu Hause reinigen oder in Studios, wo man Schaum aufträgt und Sie in einer halben Stunde abfertigt, pflegen Sie Ihre Haut nicht — Sie lassen sie, wie sie war. Eine professionelle Reinigung beginnt damit, Ihre Haut anzusehen und die Stufe zu wählen.",
+    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "reviews": "Google-Bewertungen",
+    "free": "Erstdiagnose kostenfrei"
+  },
+  "pain": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "h2": "Die meisten Patientinnen, die zu uns kommen, haben dasselbe erlebt.",
+    "p_html": "Sie fangen nicht bei null an. Sie kommen, nachdem Sie anderes probiert haben, das nicht wirklich funktioniert hat.",
+    "items": [
+      { "h3_html": "Sie machen seit Jahren Heimrituale und die Mitesser bleiben.", "p": "Masken, Drogerie-Peelings, Dampfbad zu Hause. Die Oberfläche wird sauber, aber tiefe Komedonen sitzen weiter unten, als ein Serum reicht." },
+      { "h3_html": "Sie zahlen für Premium-Kosmetik und die Haut bleibt fahl.", "p": "Gute Produkte erhalten — sie setzen nichts zurück. Erneuern erfordert manuelle Ausreinigung und Apparatetechnik." },
+      { "h3_html": "Sie waren bei „Reinigungen“ im Spa, die Sie in 30 Minuten abfertigten.", "p": "Ohne Diagnose, ohne echte Ausreinigung, ohne passende Stufe. Das ist Massage, keine professionelle Reinigung." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Warum die Reinigungen bei AnyLopez wirken",
+    "h2_html": "Sechs Gründe, warum sie hier wirken, wo andere versagen.",
+    "p": "Kein Marketing. Vorherige Diagnose, gestufte Protokolle und echte klinische Apparatetechnik.",
+    "items": [
+      { "h3": "Immer vorherige Diagnose", "p_html": "Wir beginnen nicht, ohne zu sehen, welchen Hauttyp Sie haben und was er braucht. Mal ist es GOLD, mal ELITE." },
+      { "h3": "5 gestufte Stufen", "p_html": "GOLD essenziell · PLATINUM mit Hydratation · DETOX mit Nanonadel-Peeling · DIAMOND mit Apparatetechnik · ELITE Premium mit Gipstherapie." },
+      { "h3": "Kombinierbar mit fortgeschrittenen Behandlungen", "p_html": "Eine Reinigung bereitet die Haut auf Peelings, Dermapen oder Radiofrequenz vor. Sie vervielfachen die Ergebnisse." },
+      { "h3": "Apparatetechnik in klinischer Qualität", "p_html": "Kein YouTube-Ultraschall, kein kosmetischer Schaum. Echte Profigeräte." },
+      { "h3": "Echte geplante Pflege", "p_html": "Alle 4–6 Wochen je nach Haut — nicht „wenn Sie daran denken“. Wir planen die Termine gemeinsam." },
+      { "h3": "Angewendet von der Person, die für das Ergebnis einsteht", "p_html": "Dasselbe Prinzip wie in der ganzen Klinik: Sie werden von jemandem behandelt, der echte Erfahrung mit Ihrem Hauttyp hat." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Fünf Stufen · eine Philosophie",
+    "h2": "Die Gesichtsreinigungen im Überblick.",
+    "p": "Tippen Sie auf eine Karte für alle Wirkungen, Preise und Pakete.",
+    "altSuffix": "bei AnyLopez Benidorm",
+    "detailsAria": "Details ansehen zu",
+    "detailsCta": "Details ansehen →"
+  },
+  "xsell": {
+    "eyebrow": "Der nächste Schritt",
+    "h2_html": "Nach dem Reinigen — <em>Zeit zu erneuern?</em>",
+    "p_html": "Saubere Haut ist die Basis. Wollen Sie mehr — Pigmentflecken aufhellen, Linien glätten, die Textur verbessern —, gehen die fortgeschrittenen Gesichtsbehandlungen dorthin, wo die Reinigung nicht hinkommt.",
+    "cta": "Erweiterte Gesichtsbehandlungen →"
+  },
+  "tests": {
+    "eyebrow": "Echte Patientinnen",
+    "h2": "Ergebnisse, die man sieht — und weitererzählt.",
+    "p": "Verifizierte Google-Bewertungen. Ohne Schauspieler, ohne Wunderpillen, ohne retuschierte Vorher-nachher-Bilder.",
+    "items": [
+      { "quote_html": "\"Nach Jahren von Heimmasken und Reinigungen, die nichts brachten, eine DIAMOND-Sitzung — und der Unterschied ist sogar auf dem Foto zu sehen. Meine Haut atmet wieder.\"", "author": "Beatriz N.", "meta": "Patientin · DIAMOND" },
+      { "quote_html": "\"Ich zahlte viel für Kosmetik und meine Haut blieb fahl. Nach der Diagnose begann ich mit PLATINUM monatlich — die Ausstrahlung hat sich komplett verändert.\"", "author": "Carmen P.", "meta": "Patientin · PLATINUM" },
+      { "quote_html": "\"Das ELITE-Protokoll ist eine andere Liga. Die Gipstherapie am Ende ist ein Abschluss, den mir kein anderes Studio je gemacht hat.\"", "author": "Verifizierte Patientin", "meta": "Google-Bewertung · ELITE" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie fangen wir an?",
+    "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
+    "p": "Von Ihrer ersten Nachricht bis zur ersten Verbesserung vergehen weniger als zwei Wochen.",
+    "steps": [
+      { "h3": "Sie buchen Ihre kostenlose Diagnose", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
+      { "h3": "Diagnose mit Profi-Lupe", "p_html": "Wir beurteilen Ihre Haut mit der Profi-Lupe: Hauttyp, Komedonen, Feuchtigkeit, Empfindlichkeit. Wir sagen Ihnen, welche Stufe passt — GOLD, PLATINUM, DETOX, DIAMOND oder ELITE." },
+      { "h3": "Plan nach Maß mit Rhythmus", "p_html": "Kein „einmal vorbeikommen“. Wir planen, welche Stufe und in welchem Abstand. Braucht Ihre Haut PLATINUM alle 6 Wochen, sagen wir es Ihnen genau so klar." },
+      { "h3": "Geplante Folgetermine", "p_html": "Wir planen die nächsten Sitzungen, damit nichts untergeht. Direkter WhatsApp-Kontakt für Fragen und Anpassungen zwischen den Terminen." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "h2": "Was wir zu den Gesichtsreinigungen am häufigsten gefragt werden.",
+    "items": [
+      { "q": "Was unterscheidet die 5 Stufen?", "a": "GOLD: essenzielle Reinigung (50€). PLATINUM: Reinigung + Tiefenhydratation mit Hyaluronsäure und Vitamin C (75€). DETOX: Reinigung + Peeling mit Nanonadeln + Detox-Maske (150€). DIAMOND: Reinigung + fortgeschrittene Apparatetechnik + 3 Peelings (150€). ELITE: das umfassendste Protokoll mit Gipstherapie und Premium-Apparatetechnik (200€)." },
+      { "q": "Wie oft eine professionelle Reinigung?", "a": "Je nach Hauttyp: normale Haut alle 4–6 Wochen; fettige/aknöse Haut alle 3–4 Wochen; trockene/reife Haut alle 6–8 Wochen. In der Diagnose legen wir es konkret fest." },
+      { "q": "Sind die Reinigungen nur Wellness oder haben sie echte Wirkung?", "a": "Sie haben echte klinische Wirkung: manuelle Ausreinigung von Komedonen, Entfernen abgestorbener Zellen, apparativ angeregte Zellerneuerung, Tiefenhydratation. Sie verändern den Hautzustand, statt nur ein angenehmes Gefühl zu geben." },
+      { "q": "Darf ich mich danach schminken oder in die Sonne?", "a": "Wir empfehlen, sich die ersten 4–6 Stunden nicht zu schminken, damit die Haut atmet. Sonnenschutz immer, besonders die ersten 24–48 Stunden." },
+      { "q": "Geht eine Reinigung bei aktiver Akne oder empfindlicher Haut?", "a": "Ja, mit angepasstem Protokoll. Bei aktiver Akne setzen wir vorher die spezifische Anti-Akne-Behandlung ein. Bei empfindlicher Haut passen wir Produkte und Intensität an." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Unverbindlich",
+    "h2_html": "Buchen Sie Ihre kostenlose Diagnose. <em>Erfahren Sie zuerst, welche Stufe Ihre Haut braucht</em>.",
+    "p_html": "Dreißig Minuten in der Klinik mit Profi-Lupe und echter Erfahrung. Brauchen Sie nur Basispflege, sagen wir es Ihnen.",
+    "cta": "Beurteilung buchen →"
+  }
+}

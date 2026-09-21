@@ -1,0 +1,112 @@
+{
+  "title": "Erweiterte Gesichtsbehandlungen in Benidorm — AnyLopez",
+  "description": "Chemische Peelings, Dermapen, virtuelle Mesotherapie, Dermaplaning und mehr. Erweiterte Gesichtsbehandlungen bei AnyLopez Ästhetikklinik, Benidorm. 9 Protokolle, kostenlose Erstdiagnose.",
+  "jsonld": {
+    "name": "Erweiterte Gesichtsbehandlungen",
+    "alternateName": "Fortgeschrittene Gesichtsästhetik AnyLopez",
+    "description": "Angebot an erweiterten Gesichtsbehandlungen in der AnyLopez Ästhetikklinik (Benidorm): chemische Peelings, Dermapen, virtuelle Mesotherapie, Dermaplaning, Anti-Akne, Plasma Pen und mehr. 9 Protokolle mit kostenloser Erstdiagnose.",
+    "faq": [
+      { "q": "Woher weiß ich, ob ich Peeling oder Dermapen brauche?", "a": "Das hängt vom Problem ab. Pigmentflecken und Sonnenschäden sprechen besser auf depigmentierende chemische Peelings an; Narben, feine Linien und unregelmäßige Textur besser auf Dermapen. In der kostenlosen Diagnose sehen wir genau, was Ihre Haut braucht." },
+      { "q": "Wie viel Ausfallzeit brauche ich?", "a": "Je nach Behandlung. Dermaplaning und virtuelle Mesotherapie: keine. Hydratation mit Dermapen und sanfte Peelings: 24–48 Std. mit leichter Rötung. Tiefe chemische Peelings: 4–7 Tage kontrollierter Schälung. Wir erklären es im Detail, bevor Sie das Protokoll wählen." },
+      { "q": "Wann sehe ich Ergebnisse?", "a": "Behandlungen wie Kollagenschleier oder Dermaplaning geben ab der ersten Sitzung sofortige Frische. Anti-Pigmentflecken-Peelings und Dermapen gegen Narben wirken progressiv: Verbesserung nach einem Monat, volles Ergebnis nach 3–5 Sitzungen je nach Fall." },
+      { "q": "Kann ich mehrere Behandlungen kombinieren?", "a": "Ja, und oft ist das die beste Strategie. Dermapen + Hydratation, Peeling + Radiofrequenz, Mesotherapie + Kollagenschleier sind übliche Kombinationen. Im persönlichen Plan gestalten wir die optimale Abfolge." },
+      { "q": "Ich habe empfindliche Haut, Rosazea oder bin schwanger. Gibt es Alternativen?", "a": "Ja. Wir haben spezifische Protokolle für empfindliche und reaktive Haut. In Schwangerschaft oder Stillzeit sind einige Behandlungen kontraindiziert, andere völlig sicher — wir sagen es Ihnen in der Beurteilung mit klinischer Ehrlichkeit." }
+    ]
+  },
+  "breadcrumb": { "services": "Behandlungen", "current": "Erweiterte Gesichtsbehandlungen" },
+  "callCta": "Anrufen: 656 306 167",
+  "hero": {
+    "imgAlt": "Erweiterte Gesichtsbehandlungen bei AnyLopez Benidorm",
+    "eyebrow": "Erweiterte Gesichtsbehandlungen · 9 Protokolle",
+    "h1_html": "Ihr Gesicht verdient mehr als <em>noch eine Creme</em>.",
+    "lead_html": "Wenn Sie seit Jahren in Kosmetik investieren und der Spiegel Ihnen trotzdem Pigmentflecken, feine Linien oder hartnäckige Narben zeigt, liegt es nicht an mangelnder Pflege. Diese Probleme sitzen tiefer, als ein Serum reicht.",
+    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "reviews": "Google-Bewertungen",
+    "free": "Erstdiagnose kostenfrei"
+  },
+  "pain": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "h2": "Die meisten Patientinnen, die zu uns kommen, haben dasselbe erlebt.",
+    "p_html": "Sie fangen nicht bei null an. Sie kommen, nachdem Sie anderes probiert haben, das nicht wirklich funktioniert hat.",
+    "items": [
+      { "h3_html": "Sie haben teure Cremes gekauft und die Flecken sind noch da.", "p_html": "Hyperpigmentierungen, Sonnenflecken und Melasma lassen sich nicht wegcremen. Sie brauchen Technologie, die das Pigment dort erreicht, wo es sitzt." },
+      { "h3_html": "Ihre Haut ist „nicht mehr wie früher“ und Produkte bringen die Ausstrahlung nicht zurück.", "p_html": "Feine Linien, unregelmäßige Textur, sichtbarere Poren. Kosmetik erhält; Erneuern ist eine andere Liga — Peelings, Dermapen, Mesotherapie." },
+      { "h3_html": "Male und Narben, die Sie seit der Jugendakne mitschleppen.", "p_html": "Sie akzeptieren sie seit Jahren, weil sie „nicht mehr weggehen“. Doch, sie lassen sich verbessern — nur nicht mit Seren, sondern mit Dermapen, progressiven Peelings und Plasma Pen." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Warum die erweiterten Gesichtsbehandlungen wirken",
+    "h2": "Sechs Gründe, warum diese Behandlungen alles verändern.",
+    "p_html": "Kein Marketing — klinische Technologie, mit Urteilsvermögen angewandt.",
+    "items": [
+      { "h3_html": "Technologie, die erreicht, was Kosmetik nicht erreicht.", "p_html": "Chemische Peelings, Dermapen mit kontrollierter Mikropunktion, Plasma Pen, virtuelle Mesotherapie. Sie arbeiten in der Dermis, nicht an der Oberfläche." },
+      { "h3_html": "Persönliche Diagnose statt Menü.", "p_html": "Wir verkaufen Ihnen nicht die Modebehandlung. Wir sehen Ihre Haut, Ihre Vorgeschichte, Ihr Ziel und gestalten das Protokoll. Mal ist es ein Peeling. Mal nicht." },
+      { "h3_html": "Untereinander kombinierbar.", "p_html": "Dermapen + Hydratation. Peeling + Radiofrequenz. Die Synergie zwischen Behandlungen vervielfacht Ergebnisse, die keine allein erreicht." },
+      { "h3_html": "Graduelle, natürliche, eigene Ergebnisse.", "p_html": "Keine „straffe Maske“. Ihre Haut erneuert sich von innen und wirkt wie die beste Version von Ihnen, nicht wie ein anderes Gesicht." },
+      { "h3_html": "Ohne lange Ausfallzeit.", "p_html": "Die meisten Behandlungen lassen Sie in Stunden oder wenigen Tagen in den Alltag zurück. Gemacht für Ihren echten Terminkalender." },
+      { "h3_html": "Angewendet von der Person, die für das Ergebnis einsteht.", "p_html": "Dasselbe Prinzip wie in der ganzen Klinik: Sie werden von jemandem behandelt, der die Erfahrung hat, Ihnen zu sagen, was in Ihrem Fall wirkt und was nicht." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "9 Gesichtsprotokolle",
+    "h2": "Das erweiterte Gesichtsprogramm im Detail.",
+    "p_html": "Tippen Sie auf eine Behandlung für Wirkungen, Funktionsweise, Preise und Dauer. Wenn Sie zweifeln, welche Ihre ist, sagen wir es Ihnen in der kostenlosen Diagnose.",
+    "detailsAria": "Details ansehen zu",
+    "detailsCta": "Details ansehen →"
+  },
+  "cross": {
+    "eyebrow": "Wenn es um mehr geht",
+    "h2_html": "Wenn Ihr Fall <em>mehr als eine Gesichtsbehandlung</em> braucht …",
+    "p_html": "Jedes Problem hat seine Technologie. Passt Ihres nicht hierher, weisen wir Sie zur Spezialität, die es löst.",
+    "card1": {
+      "eyebrow": "Tiefenstraffung",
+      "h3_html": "Sie brauchen Tiefenstraffung → <em>INDIBA Radiofrequenz</em>",
+      "p_html": "Hauterschlaffung, hängendes Gesichtsoval, „müde“ Haut trotz Pflege. Die INDIBA Radiofrequenz arbeitet in der Hypodermis, wo Kosmetik und oberflächliche Gesichtsbehandlungen nicht hinkommen.",
+      "arrow_html": "INDIBA Radiofrequenz kennenlernen →"
+    },
+    "card2": {
+      "eyebrow": "Volumen und Filler",
+      "h3_html": "Sie suchen Volumen oder Filler → <em>Injektionen</em>",
+      "p_html": "Volumenverlust an den Wangenknochen, markante Falten, Lippen oder Mimikfalten. Hyaluronsäure, Botox und Biostimulatoren, mit medizinisch-ästhetischem Urteil angewandt.",
+      "arrow_html": "Injektionen ansehen →"
+    }
+  },
+  "tests": {
+    "eyebrow": "Echte Patientinnen",
+    "h2": "Ergebnisse, die man sieht — und weitererzählt.",
+    "p": "Verifizierte Google-Bewertungen. Ohne Schauspieler, ohne Wunderpillen, ohne retuschierte Vorher-nachher-Bilder.",
+    "items": [
+      { "quote_html": "\"Nach Jahren des Versuchs, die Flecken mit sündteuren Cremes zu löschen, habe ich nach fünf Sitzungen Anti-Pigmentflecken-Peeling die Haut, an die ich mich mit dreißig erinnere.\"", "author": "María José L.", "meta": "Patientin · Anti-Pigmentflecken-Peeling" },
+      { "quote_html": "\"Das Dermapen hat meine Aknenarben weit mehr verbessert, als ich erwartet hatte. Die Ergebnisse sind progressiv und natürlich — nichts Aggressives.\"", "author": "Cristina A.", "meta": "Patientin · Dermapen" },
+      { "quote_html": "\"Ich kam im Glauben, ich bräuchte Hyaluronsäure, und bekam eine ehrliche Diagnose: Mein Fall war Tiefenhydratation. Der Unterschied ist gewaltig und ich habe ein Vermögen gespart.\"", "author": "Verifizierte Patientin", "meta": "Google-Bewertung" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie fangen wir an?",
+    "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
+    "p": "Von Ihrer ersten Nachricht bis zur ersten Sitzung vergehen weniger als zwei Wochen.",
+    "steps": [
+      { "h3": "Sie buchen Ihre kostenlose Diagnose", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
+      { "h3": "Persönliche Diagnose in der Klinik", "p_html": "Wir sehen Ihre Haut, sprechen über Ihre Vorgeschichte und Ihr echtes Ziel. Wir sagen Ihnen, welche Behandlung(en) für Sie Sinn ergeben — und welche NICHT." },
+      { "h3": "Plan nach Maß mit Protokoll und Rhythmus", "p_html": "Wir gestalten den Plan: wie viele Sitzungen, welche Reihenfolge, welche Kombinationen. Alles klar, bevor es losgeht." },
+      { "h3": "Echte Begleitung während des Plans", "p_html": "Direkter WhatsApp-Kontakt zwischen den Sitzungen für Fragen, Anpassungen oder Nachsorge. Wir verschwinden nicht, sobald Sie anfangen." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "h2": "Was wir zu den erweiterten Gesichtsbehandlungen am häufigsten gefragt werden.",
+    "items": [
+      { "q_html": "Woher weiß ich, ob ich Peeling oder Dermapen brauche?", "a_html": "Das hängt vom Problem ab. Pigmentflecken und Sonnenschäden sprechen besser auf depigmentierende chemische Peelings an; Narben, feine Linien und unregelmäßige Textur besser auf Dermapen. In der kostenlosen Diagnose sehen wir genau, was Ihre Haut braucht." },
+      { "q_html": "Wie viel Ausfallzeit brauche ich?", "a_html": "Je nach Behandlung. Dermaplaning und virtuelle Mesotherapie: keine. Hydratation mit Dermapen und sanfte Peelings: 24–48 Std. mit leichter Rötung. Tiefe chemische Peelings: 4–7 Tage kontrollierter Schälung. Wir erklären es im Detail, bevor Sie das Protokoll wählen." },
+      { "q_html": "Wann sehe ich Ergebnisse?", "a_html": "Behandlungen wie Kollagenschleier oder Dermaplaning geben ab der ersten Sitzung sofortige Frische. Anti-Pigmentflecken-Peelings und Dermapen gegen Narben wirken progressiv: Verbesserung nach einem Monat, volles Ergebnis nach 3–5 Sitzungen je nach Fall." },
+      { "q_html": "Kann ich mehrere Behandlungen kombinieren?", "a_html": "Ja, und oft ist das die beste Strategie. Dermapen + Hydratation, Peeling + Radiofrequenz, Mesotherapie + Kollagenschleier sind übliche Kombinationen. Im persönlichen Plan gestalten wir die optimale Abfolge." },
+      { "q_html": "Ich habe empfindliche Haut / Rosazea / bin schwanger. Gibt es Alternativen?", "a_html": "Ja. Wir haben spezifische Protokolle für empfindliche und reaktive Haut. In Schwangerschaft oder Stillzeit sind einige Behandlungen kontraindiziert, andere völlig sicher — wir sagen es Ihnen in der Beurteilung mit klinischer Ehrlichkeit." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Unverbindlich",
+    "h2_html": "Buchen Sie eine kostenlose Diagnose. <em>Erfahren Sie zuerst, was Ihre Haut braucht</em>.",
+    "p_html": "Dreißig Minuten in der Klinik mit jemandem, der seit Jahrzehnten Haut beurteilt. Ist Ihr Fall keine fortgeschrittene Behandlung, sagen wir es Ihnen offen und weisen Ihnen den Weg.",
+    "cta": "Beurteilung buchen →"
+  }
+}

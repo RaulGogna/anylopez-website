@@ -1,0 +1,111 @@
+{
+  "title": "Ästhetische Injektionen in Benidorm — Botox, Hyaluron, Fäden · AnyLopez",
+  "description": "Botox, Hyaluronsäure, Fadenlifting und PRP in der Ästhetikklinik AnyLopez Benidorm. Diagnose vor jeder Injektion und konservative Techniken.",
+  "jsonld": {
+    "name": "Ästhetische Injektionsmedizin AnyLopez",
+    "alternateName": "Injektionen fürs Gesicht",
+    "description": "Angebot an ästhetischer Injektionsmedizin in der AnyLopez Ästhetikklinik Benidorm: Botox, Hyaluronsäure, Fadenlifting und PRP. Diagnose vor jeder Injektion, Markenprodukte und konservative Techniken.",
+    "specialties": [
+      "Botox",
+      "Hyaluronsäure",
+      "Fadenlifting",
+      "PRP Plättchenreiches Plasma"
+    ],
+    "faq": [
+      { "q": "Botox oder Hyaluronsäure?", "a": "Botox entspannt Muskeln (Stirn, Zornesfalte, Krähenfüße). Hyaluronsäure füllt verlorenes Volumen auf (Falten, Lippen, Kontur). In der Diagnose sehen wir, was nötig ist — oft beides, in verschiedenen Zonen." },
+      { "q": "Tut es weh?", "a": "Kaum. Die Nadeln sind hauchdünn. In empfindlichen Zonen tragen wir vorher eine Betäubungscreme auf. Die meisten Patientinnen beschreiben das Gefühl als kurzes Zwicken." },
+      { "q": "Wann sieht man Ergebnisse?", "a": "Botox: progressive Wirkung zwischen Tag 3 und Tag 14 (voll nach 2 Wochen). Hyaluronsäure: in Stunden sichtbar, voll nach 2–4 Wochen. Fäden: sofortiges Lifting + Kollagenstimulation nach 3 Monaten. PRP: Wirkung nach 4–6 Wochen." },
+      { "q": "Wie lange halten sie?", "a": "Botox: 4–6 Monate je nach Zone. Hyaluronsäure: 6–12 Monate je nach Produkt. Fäden mit Widerhaken: 12–18 Monate. PRP: 6–12 Monate mit Auffrischungssitzungen." },
+      { "q": "Schwangerschaft oder Stillzeit?", "a": "Injektionen sind in Schwangerschaft und Stillzeit kontraindiziert. Wir warten mit dem Behandlungsplan bis zum Ende der Stillzeit." }
+    ]
+  },
+  "css": {
+    "xsellComment": "INDIBA Radiofrequenz"
+  },
+  "breadcrumb": { "services": "Behandlungen", "current_html": "Ästhetische Injektionen" },
+  "callCta": "Anrufen: 656 306 167",
+  "hero": {
+    "imgAlt_html": "Ästhetische Injektionsmedizin in der AnyLopez Ästhetikklinik Benidorm",
+    "eyebrow_html": "Ästhetische Injektionen · 4 Protokolle",
+    "h1_html": "Volumen, nicht Übermaß. <em>Subtil, präzise, ganz Sie.</em>",
+    "lead": "Botox, um Linien zu glätten, Hyaluronsäure, um Volumen zurückzugeben, Fadenlifting zum Repositionieren, PRP zur Regeneration. Jedes hat seinen genauen Moment in Ihrem Gesicht — und dieser Moment trennt ein natürliches Ergebnis von einem eingefrorenen.",
+    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "reviews": "Google-Bewertungen",
+    "free": "Erstdiagnose kostenfrei"
+  },
+  "pain": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "h2": "Die meisten Patientinnen, die zu uns kommen, haben dasselbe erlebt.",
+    "p_html": "Sie fangen nicht bei null an. Sie kommen nach Zweifeln, Vergleichen und der Angst, zu weit zu gehen.",
+    "items": [
+      { "h3_html": "Sie haben sich nicht getraut — aus Angst, dass man es sieht.", "p_html": "Sie haben übertriebene Wangenknochen, überspritzte Lippen, erstarrte Stirnen gesehen — und das wollen Sie nicht. Aber Sie akzeptieren auch nicht, dass Ihr Gesicht ohne echte Option altert." },
+      { "h3_html": "Sie haben Ergebnisse gesehen, die wie Masken wirken, und nehmen Abstand.", "p_html": "Der „gemachte Look“ ist das Zeichen einer Injektion ohne Urteilsvermögen. Gut angewandte ästhetische Medizin erkennt man daran, dass Sie erholt aussehen — nicht anders." },
+      { "h3_html": "Sie wissen nicht, ob Sie Botox, Hyaluronsäure oder etwas ganz anderes brauchen.", "p_html": "Sie haben alles gelesen, sind nur verwirrter, und entscheiden nicht, weil jeder Anbieter das Eigene empfiehlt. Eine ehrliche Diagnose beendet diesen Zweifel." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Warum die Injektionen bei AnyLopez wirken",
+    "h2_html": "Sechs Gründe, warum sie hier wirken, wo andere versagen.",
+    "p_html": "Kein Marketing. Medizinische Diagnose, rückverfolgbare Marken und konservative Technik.",
+    "items": [
+      { "h3": "Diagnose vor jeder Injektion", "p_html": "Wir sehen, was Sie WIRKLICH brauchen — nicht, was sich am besten verkauft. Manchmal ist es kein Botox, manchmal Hyaluronsäure. Manchmal keines von beiden." },
+      { "h3": "Markenprodukte mit Rückverfolgbarkeit", "p_html": "Vistabel, Restylane, Juvederm — klinisch validierte Produkte. Jede Charge registriert. Keine „Generika“, nichts Wiederverwendetes." },
+      { "h3": "Immer konservative Technik", "p_html": "Lieber wenig und Kontrolle nach 15 Tagen als zu viel in der ersten Sitzung. Progressiver Filler (Schicht für Schicht), kein Aufpumpen des Gesichts." },
+      { "h3": "Die ganze Palette in einem Plan", "p_html": "Botox + Hyaluronsäure + Fäden + PRP — kombinierbar, wenn Ihr Fall es verlangt. Wir planen die Abfolge, die Ergebnisse vervielfacht." },
+      { "h3": "Kontrolle nach 15–30 Tagen inklusive", "p_html": "Wir justieren bis zu Ihrer Zufriedenheit. Kein Eintagsgeschäft — sondern Begleitung des Ergebnisses." },
+      { "h3": "Professionelle ästhetische Medizin", "p_html": "Qualifizierte Ärzte, keine Kosmetikerinnen mit Wochenendkurs. Derselbe Anspruch wie in der ganzen Klinik." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Wenn es um mehr als Filler geht",
+    "h2_html": "Volumen <em>wird durch Spannkraft ergänzt.</em>",
+    "p": "Hyaluronsäure gibt Volumen zurück, doch tiefe Hauterschlaffung behandelt man mit Technologie. Kombinieren Sie Injektionen mit Ultherapy HIFU oder INDIBA Radiofrequenz, verstärken sich die Ergebnisse.",
+    "cta_html": "Lifting & Anti-Aging ansehen →"
+  },
+  "grid": {
+    "eyebrow": "Vier Protokolle · eine Philosophie",
+    "h2": "Die Injektionsbehandlungen im Überblick.",
+    "p": "Tippen Sie auf eine Karte für alle Wirkungen, Preise und Pakete.",
+    "altSuffix": "bei AnyLopez Benidorm",
+    "detailsAria": "Details ansehen zu",
+    "detailsCta": "Details ansehen →"
+  },
+  "tests": {
+    "eyebrow": "Echte Patientinnen",
+    "h2": "Ergebnisse, die man sieht — und weitererzählt.",
+    "p": "Verifizierte Google-Bewertungen. Ohne Schauspieler, ohne Wunderpillen, ohne retuschierte Vorher-nachher-Bilder.",
+    "items": [
+      { "quote_html": "\"Ich wollte Botox, „einfach machen lassen“ — und man erklärte mir, dass mein Fall Hyaluronsäure für die Falten war. Der Unterschied ist genau, was ich wollte: erholt, nicht anders.\"", "author": "Lucía A.", "meta": "Patientin · Hyaluronsäure" },
+      { "quote_html": "\"Fadenlifting mit Widerhaken, unglaubliche Technik. Man spürt das natürliche Lifting, ohne dass jemand fragt, was man hat machen lassen. Genau, was ich suchte.\"", "author": "María Pilar T.", "meta": "Patientin · Fadenlifting" },
+      { "quote_html": "\"PRP kombiniert mit Hyaluronsäure war die Schlüsselkombination. Mein Gesicht wirkt regeneriert, ohne wie eine andere Person auszusehen.\"", "author": "Verifizierte Patientin", "meta": "Google-Bewertung" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie fangen wir an?",
+    "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
+    "p": "Medizinische Diagnose vor jeder Nadel — und Kontrolle nach der Sitzung inklusive.",
+    "steps": [
+      { "h3": "Sie buchen Ihre kostenlose Diagnose", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
+      { "h3": "Medizinische Beurteilung des Gesichts", "p_html": "Ein qualifizierter Ästhetikmediziner beurteilt Ihren Fall: Zonen, Erwartungen, Vorgeschichte. Ist Ihr Ziel keine Injektion, sagen wir es Ihnen." },
+      { "h3": "Sequenzierter Plan mit Marke und Dosis", "p_html": "Wir planen, welches Produkt, welche Menge und in welcher Reihenfolge — immer konservativ. Sie wissen genau, was injiziert wird und warum." },
+      { "h3": "Kontrolle nach 15–30 Tagen inklusive", "p_html": "Wir sehen uns wieder, um nachzujustieren, was nötig ist. Das Ergebnis wird verfeinert; es endet nicht am ersten Tag." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "h2": "Was wir zu den Injektionen am häufigsten gefragt werden.",
+    "items": [
+      { "q": "Botox oder Hyaluronsäure?", "a_html": "Botox entspannt Muskeln (Stirn, Zornesfalte, Krähenfüße). Hyaluronsäure füllt verlorenes Volumen auf (Falten, Lippen, Kontur). In der Diagnose sehen wir, was nötig ist — oft beides, in verschiedenen Zonen." },
+      { "q": "Tut es weh?", "a_html": "Kaum. Die Nadeln sind hauchdünn. In empfindlichen Zonen tragen wir vorher eine Betäubungscreme auf. Die meisten Patientinnen beschreiben das Gefühl als kurzes Zwicken." },
+      { "q": "Wann sieht man Ergebnisse?", "a_html": "Botox: progressive Wirkung zwischen Tag 3 und Tag 14 (voll nach 2 Wochen). Hyaluronsäure: in Stunden sichtbar, voll nach 2–4 Wochen. Fäden: sofortiges Lifting + Kollagenstimulation nach 3 Monaten. PRP: Wirkung nach 4–6 Wochen." },
+      { "q": "Wie lange halten sie?", "a_html": "Botox: 4–6 Monate je nach Zone. Hyaluronsäure: 6–12 Monate je nach Produkt. Fäden mit Widerhaken: 12–18 Monate. PRP: 6–12 Monate mit Auffrischungssitzungen." },
+      { "q": "Schwangerschaft oder Stillzeit?", "a_html": "Injektionen sind in Schwangerschaft und Stillzeit kontraindiziert. Wir warten mit dem Behandlungsplan bis zum Ende der Stillzeit." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Diagnose vor der Nadel",
+    "h2_html": "Buchen Sie Ihre Beurteilung. <em>Erfahren Sie zuerst, was Sie brauchen — und was nicht</em>.",
+    "p_html": "Dreißig Minuten in der Klinik mit einem qualifizierten Ästhetikmediziner. Ist Ihr Fall keine Injektion, sagen wir es Ihnen. Ist er es, planen wir konservativ.",
+    "cta": "Beurteilung buchen →"
+  }
+}

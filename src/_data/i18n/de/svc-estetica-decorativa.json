@@ -1,0 +1,108 @@
+{
+  "title": "Wimpern einzeln & Micropigmentierung in Benidorm — AnyLopez",
+  "description": "Einzeln applizierte Wimpern und Micropigmentierung von Augenbrauen, Lippen und Eyeliner in der AnyLopez Ästhetikklinik Benidorm. Vorheriges Design und konservative Technik, die gut altert.",
+  "jsonld": {
+    "name": "Dekorative Ästhetik AnyLopez",
+    "alternateName": "Wimpern und Micropigmentierung",
+    "description": "Angebot an dekorativer Ästhetik in der AnyLopez Ästhetikklinik Benidorm: einzeln applizierte Wimpern und Micropigmentierung von Augenbrauen, Lippen und Eyeliner. Vorheriges Design, langlebige hypoallergene Pigmente und konservative Technik, die gut altert.",
+    "specialties": [
+      "Wimpern einzeln appliziert",
+      "Augenbrauen-Micropigmentierung",
+      "Lippen-Micropigmentierung",
+      "Micropigmentierter Eyeliner"
+    ],
+    "faq": [
+      { "q": "Wie lange halten einzeln applizierte Wimpern?", "a": "3 bis 4 Wochen, je nach Ihrem natürlichen Wimpernzyklus. Wir planen ein Auffüllen alle 3–4 Wochen, um konstantes Volumen zu erhalten. Ohne Ihre Naturwimper zu strapazieren." },
+      { "q": "Tut die Micropigmentierung weh?", "a": "Ein leichtes Unbehagen, kein Schmerz. Wir tragen vorher und währenddessen eine Betäubungscreme auf. Die meisten Patientinnen beschreiben es als Kribbeln oder kurzes Zwicken." },
+      { "q": "Wann wird die Micropigmentierung aufgefrischt?", "a": "Erste Auffrischung nach 4–6 Wochen (nach dem Heilungsprozess) zur Perfektionierung. Danach jährliche Auffrischung, um Farbe und Intensität zu erhalten." },
+      { "q": "Allergien?", "a": "Hypoallergene Pigmente — trotzdem machen wir vorher einen Allergietest an einer kleinen Stelle. Reagieren Sie, wenden wir nichts an." },
+      { "q": "Sport / Sonne?", "a": "Nach der Sitzung: 7 Tage keine direkte Sonne, keine Sauna, kein Meer-/Poolwasser, kein Make-up auf der Zone. Danach normales Leben — täglicher Sonnenschutz ist der Schlüssel, damit das Pigment hält." }
+    ]
+  },
+  "breadcrumb": { "services": "Behandlungen", "current_html": "Dekorative Ästhetik" },
+  "callCta": "Anrufen: 656 306 167",
+  "hero": {
+    "imgAlt": "Dekorative Ästhetik: Wimpern und Micropigmentierung in der AnyLopez Ästhetikklinik Benidorm",
+    "eyebrow_html": "Dekorative Ästhetik · Wimpern + Micropigmentierung",
+    "h1_html": "Details, die man sieht — <em>ohne dass sie auffallen.</em>",
+    "lead": "Mit fertigem Gesicht aufwachen. Einzeln applizierte Wimpern und micropigmentierte Brauen/Lippen/Eyeliner — aber mit Urteilsvermögen gemacht: vorheriges Design, langlebige Pigmente, konservative Technik, die gut altert und aufgefrischt wird, statt mit den Jahren zu verblassen.",
+    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "reviews": "Google-Bewertungen",
+    "free": "Erstdiagnose kostenfrei"
+  },
+  "pain": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "h2": "Die meisten Patientinnen, die zu uns kommen, haben dasselbe erlebt.",
+    "p_html": "Sie fangen nicht bei null an. Sie kommen, nachdem Sie anderes probiert haben, das nicht wirklich funktioniert hat.",
+    "items": [
+      { "h3_html": "Sie wachen auf und sehen vor jeder Routine schon müde aus.", "p_html": "Helle Brauen, spärliche Wimpern, blasse Lippen. Sie gehen ungeschminkt hinaus und das Gesicht entspricht Ihnen nicht." },
+      { "h3_html": "Jeden Morgen Brauen und Lippen zu schminken raubt Ihnen Minuten, die Sie nicht haben.", "p_html": "Und trotzdem wird es nie wie gestern. Sie suchen etwas, das hält und natürlich aussieht." },
+      { "h3_html": "Sie haben schlecht gemachte Arbeiten gesehen, die Sie abschrecken.", "p_html": "Brauen wie mit dem Filzstift gemalt. Übermalte Lippen. Permanenter Eyeliner, der seltsam altert. Deshalb haben Sie sich nicht getraut." }
+    ]
+  },
+  "why": {
+    "eyebrow_html": "Warum die dekorative Ästhetik bei AnyLopez funktioniert",
+    "h2_html": "Sechs Gründe, warum sie hier wirkt, wo andere versagen.",
+    "p_html": "Kein Marketing. Vorheriges Design, konservative Technik und Pigmente, die gut altern.",
+    "items": [
+      { "h3": "Immer vorheriges Design.", "p_html": "Bevor wir etwas anwenden, zeichnen wir auf Ihrer Haut und stimmen die Form ab. Überzeugt es Sie nicht, beginnen wir nicht." },
+      { "h3": "Wimpern einzeln (keine künstlichen Fächer).", "p_html": "Eine synthetische Wimper pro Naturwimper. Echtes Volumen, natürlicher Blick — kein „Puppenwimpern“-Effekt." },
+      { "h3": "Langlebige hypoallergene Pigmente.", "p_html": "Eingetragene Marken mit Rückverfolgbarkeit, kein Onlineshop-Pigment. Farbe, die sich gut entwickelt — ohne über die Jahre ins Rote oder Graue zu kippen." },
+      { "h3": "Konservative Technik.", "p_html": "Lieber jetzt wenig Pigment und auffrischen als überladen. Lieber Wimpern, die Ihre Naturwimper respektieren, als Extensions, die sie schädigen." },
+      { "h3": "Geplante Pflege.", "p_html": "Wir terminieren die Auffrischungen im Rhythmus (Wimpern alle 3–4 Wochen, Micropigmentierung jährlich). Wir lassen Sie nach dem Kauf nicht allein." },
+      { "h3": "Angewendet von einer erfahrenen Fachkraft.", "p_html": "Derselbe Anspruch wie in der ganzen Klinik." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Zwei Protokolle · eine Philosophie",
+    "h2": "Die Behandlungen der dekorativen Ästhetik im Überblick.",
+    "p": "Tippen Sie auf eine Karte für alle Wirkungen, Preise und Pakete.",
+    "altSuffix": "bei AnyLopez Benidorm",
+    "detailsAria": "Details ansehen zu",
+    "detailsCta": "Details ansehen →"
+  },
+  "xsell": {
+    "eyebrow": "Um die Basis zu stärken",
+    "h2_html": "Dekorative Ästhetik wirkt am besten <em>auf gepflegter Haut.</em>",
+    "p": "Brauen und Lippen kommen auf sauberer, strahlender Haut besser zur Geltung. Soll das Gesamtbild stimmig wirken, machen regelmäßige Gesichtsreinigungen den Unterschied.",
+    "cta": "Gesichtsreinigungen ansehen →"
+  },
+  "tests": {
+    "eyebrow": "Echte Patientinnen",
+    "h2": "Ergebnisse, die man sieht — und weitererzählt.",
+    "p": "Verifizierte Google-Bewertungen. Ohne Schauspieler, ohne Wunderpillen, ohne retuschierte Vorher-nachher-Bilder.",
+    "items": [
+      { "quote_html": "\"Ich bin jahrelang vor der Micropigmentierung geflohen, wegen schrecklicher Arbeiten, die ich gesehen hatte. Hier gab es zuerst ein Design und dann die Härchentechnik. Meine Brauen wirken wie meine — nur definierter.\"", "author": "Inmaculada R.", "meta": "Patientin · Brauen-Micropigmentierung" },
+      { "quote_html": "\"Einzeln applizierte Wimpern alle 4 Wochen und meine Morgenroutine hat sich halbiert. Ohne künstliche Fächer — es sind meine, nur besser.\"", "author": "Sandra L.", "meta": "Patientin · Wimpern" },
+      { "quote_html": "\"Micropigmentierter Eyeliner nach Formstudie und Abstimmung. Ich wache mit fertigem Blick auf. Keine der Arbeiten, die ich auf Instagram gesehen hatte, überzeugte mich — bis zu dieser.\"", "author": "Verifizierte Patientin", "meta": "Google-Bewertung" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie fangen wir an?",
+    "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
+    "p_html": "Wir entwerfen, bevor wir anwenden. Überzeugt es Sie nicht, beginnen wir nicht.",
+    "steps": [
+      { "h3": "Sie buchen Ihre Beurteilung", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
+      { "h3": "Design auf Ihrer Haut + Ihre Freigabe", "p_html": "Wir zeichnen Form, Farbe und Proportion direkt auf Ihr Gesicht. Sie sehen es im Spiegel, wir passen es mit Ihnen an. Überzeugt es Sie nicht zu 100 %, beginnen wir nicht." },
+      { "h3": "Anwendung", "p_html": "Wimpern einzeln oder Micropigmentierung mit konservativer Technik. Betäubungscreme, wenn nötig. Zeit und Sorgfalt." },
+      { "h3": "Geplante Auffrischung", "p_html": "Wimpern alle 3–4 Wochen. Micropigmentierung: erste Auffrischung nach 4–6 Wochen, danach jährlich. Echte Pflege statt Verschwinden nach dem Verkauf." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "h2_html": "Was wir zur dekorativen Ästhetik am häufigsten gefragt werden.",
+    "items": [
+      { "q": "Wie lange halten einzeln applizierte Wimpern?", "a_html": "3 bis 4 Wochen, je nach Ihrem natürlichen Wimpernzyklus. Wir planen ein Auffüllen alle 3–4 Wochen, um konstantes Volumen zu erhalten. Ohne Ihre Naturwimper zu strapazieren." },
+      { "q": "Tut die Micropigmentierung weh?", "a_html": "Ein leichtes Unbehagen, kein Schmerz. Wir tragen vorher und währenddessen eine Betäubungscreme auf. Die meisten Patientinnen beschreiben es als Kribbeln oder kurzes Zwicken." },
+      { "q": "Wann wird die Micropigmentierung aufgefrischt?", "a_html": "Erste Auffrischung nach 4–6 Wochen (nach dem Heilungsprozess) zur Perfektionierung. Danach jährliche Auffrischungen, um Farbe und Intensität zu erhalten." },
+      { "q": "Allergien?", "a_html": "Hypoallergene Pigmente — trotzdem machen wir vorher einen Allergietest an einer kleinen Stelle. Reagieren Sie, wenden wir nichts an." },
+      { "q": "Sport / Sonne?", "a_html": "Nach der Sitzung: 7 Tage keine direkte Sonne, keine Sauna, kein Meer-/Poolwasser, kein Make-up auf der Zone. Danach normales Leben — täglicher Sonnenschutz ist der Schlüssel, damit das Pigment hält." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Unverbindlich",
+    "h2_html": "Buchen Sie eine Beurteilung. <em>Wir entwerfen, bevor wir anwenden</em>.",
+    "p_html": "Dreißig Minuten, um Ihr Gesicht anzusehen, über Ihre Wünsche zu sprechen und auf Ihrer Haut zu zeichnen. Überzeugt Sie das Design nicht zu 100 %, beginnen wir nicht.",
+    "cta": "Beurteilung buchen →"
+  }
+}
