@@ -1,0 +1,61 @@
+{
+  "title": "Team und Klinik — AnyLopez Ästhetik Benidorm",
+  "description": "Lernen Sie das Team und die Räumlichkeiten der AnyLopez Ästhetikklinik in Benidorm kennen. Über 35 Jahre Hautpflege-Erfahrung, Spezialisten für INDIBA Radiofrequenz, Ultherapy HIFU und ästhetische Medizin.",
+  "breadcrumb": "Über uns",
+  "hero": {
+    "label": "Über uns",
+    "h1": "AnyLopez Ästhetikklinik",
+    "sub": "Wo Sie sich verwöhnen lassen und Ihrer Haut Schönheit schenken können"
+  },
+  "historia": {
+    "label": "Unsere Geschichte",
+    "h2": "35 Jahre Erfahrung und Leidenschaft für die Haut",
+    "p1": "Alles begann vor 5 Jahren, als eine leidenschaftliche argentinische Kosmetikerin mit über 35 Jahren Erfahrung in der Hautpflege diesen Traum ins Leben rief. Heute führen wir ihr Vermächtnis fort — mit Hingabe und Exzellenz bei jeder Behandlung.",
+    "p2": "Wir wissen, dass jeder Mensch einzigartig ist und jede Haut ihre eigenen Bedürfnisse hat. Deshalb betreuen wir Sie ganz individuell. Ihr Wohlbefinden und Ihr Vertrauen sind unsere Priorität.",
+    "cta": "Die Klinik kennenlernen",
+    "imgAlt": "Klinik AnyLopez"
+  },
+  "valores": {
+    "label": "Unsere Werte",
+    "h2": "Was uns ausmacht",
+    "items": [
+      { "h3": "Wohlbefinden", "p": "Haut und Körper Wohlbefinden zu schenken ist von zentraler Bedeutung — durch Ästhetik und Kosmetologie." },
+      { "h3": "Schönheit", "p": "Schönheit ist ein wesentlicher Teil davon, sich wunderbar zu fühlen — mit sich selbst und mit der Welt." },
+      { "h3": "Entspannung", "p": "Entspannung brauchen wir, um frei und gelassen zu bleiben. Erholung ist unverzichtbar." }
+    ]
+  },
+  "stats": {
+    "experiencia": "Jahre Erfahrung",
+    "rating": "Google-Bewertung",
+    "resenas": "Verifizierte Bewertungen",
+    "tratamientos": "Spezialisierte Behandlungen"
+  },
+  "equipo": {
+    "label": "Das Team",
+    "h2": "Fachleute für Sie da",
+    "sub": "Unser großartiges Team vereint wunderbare Eigenschaften und Stärken: Professionalität, Herzlichkeit, Freundlichkeit, gesunden Menschenverstand und ein Lächeln von der ersten Minute an.",
+    "roles": {
+      "kumar": "Geschäftsführer",
+      "eilen_html": "Kosmetikerin & Kosmetologin",
+      "rius": "Ästhetische Medizin",
+      "olga": "Biologin, Spezialistin für Zellregeneration"
+    }
+  },
+  "instalaciones": {
+    "label": "Unsere Räumlichkeiten",
+    "h2": "Eine Klinik, die an Sie denkt",
+    "sub": "Jeder Winkel ist so gestaltet, dass Sie sich vom ersten Moment an wohl, sicher und gut aufgehoben fühlen.",
+    "recepcionAlt": "Empfang der AnyLopez Ästhetikklinik",
+    "recepcion": "Empfang",
+    "salaAlt": "Wartebereich von AnyLopez",
+    "sala": "Wartebereich",
+    "cabinaAlt": "Behandlungskabine von AnyLopez",
+    "cabina": "Behandlungskabine"
+  },
+  "cta": {
+    "h2": "Möchten Sie uns kennenlernen?",
+    "p": "Besuchen Sie uns in unserer Klinik in Benidorm oder rufen Sie uns an — wir beantworten gern jede Frage.",
+    "google_html": "Lesen Sie vor Ihrem Besuch, was die <a href=\"https://www.google.com/maps/place/AnyLopez+Clinica+Est%C3%A9tica/@38.5376389,-0.1329449,19z?utm_source=anylopez-web&utm_medium=about-cta-de\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--gold); text-decoration:underline;\">{count} Personen sagen, die schon bei uns waren — auf Google &rarr;</a>",
+    "btn_html": "<a href=\"{contactUrl}\" class=\"btn btn-accent\">Kontakt aufnehmen</a>"
+  }
+}

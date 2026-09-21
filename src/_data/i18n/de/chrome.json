@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Behandlungen",
+    "radiofrecuencia": "INDIBA Radiofrequenz",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "bookCta": "Termin vereinbaren",
+    "waHref": "https://wa.me/34656306167?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20Informationen%20zu%20Ihren%20Behandlungen.",
+    "menuToggle": "Menü öffnen"
+  },
+  "breadcrumbHome": "Startseite",
+  "footer": {
+    "brand": "Ästhetikklinik für Gesicht und Körper in Benidorm. Über 35 Jahre Erfahrung mit INDIBA Radiofrequenz & Ultherapy HIFU.",
+    "servicesHeading": "Behandlungen",
+    "servicesLinks": {
+      "/radiofrecuencia/": "INDIBA Radiofrequenz",
+      "/services/lifting-antiaging/": "Ultherapy HIFU",
+      "/services/inyectables/": "Botox & Filler",
+      "/services/limpiezas-faciales/": "Gesichtsreinigung",
+      "/services/tratamientos-faciales/": "Dermapen",
+      "/services/depilacion/": "IPL-Haarentfernung",
+      "/services/masajes/": "Massagen",
+      "/services/corporal/": "Körper",
+      "/services/estetica-decorativa/": "Micropigmentierung"
+    },
+    "infoHeading": "Information",
+    "infoLinks": {
+      "/": "Startseite",
+      "/about/": "Über uns",
+      "/radiofrecuencia/": "INDIBA Radiofrequenz",
+      "/contact/": "Kontakt"
+    },
+    "googleReviews": "Bewertungen auf Google",
+    "contactHeading": "Kontakt",
+    "hours": "Mo–Fr: 10–14 / 16–20 Uhr",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacyLabel": "Datenschutzerklärung",
+    "legalLabel": "Impressum"
+  },
+  "mobileBar": {
+    "call": "Anrufen"
+  },
+  "crumbs": {
+    "about": "Über uns",
+    "services": "Behandlungen",
+    "radiofrecuencia": "INDIBA Radiofrequenz",
+    "limpiezas-faciales": "Gesichtsreinigungen",
+    "tratamientos-faciales": "Erweiterte Gesichtsbehandlungen",
+    "lifting-antiaging": "Lifting & Anti-Aging",
+    "inyectables": "Ästhetische Injektionen",
+    "corporal": "Körperbehandlungen",
+    "masajes": "Massagen",
+    "estetica-decorativa": "Dekorative Ästhetik",
+    "depilacion": "IPL-Haarentfernung",
+    "contact": "Kontakt"
+  }
+}
