@@ -232,14 +232,14 @@ eleventyComputed:
   .trat-card-incluye li {
     font-size: 13px;
     color: var(--text-mid);
-    padding-left: 16px;
+    padding-inline-start: 16px;
     position: relative;
     line-height: 1.5;
   }
   .trat-card-incluye li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     color: var(--terra);
     font-weight: 700;
     font-size: 12px;
@@ -276,7 +276,7 @@ eleventyComputed:
     cursor: pointer;
     padding: 0;
     transition: color 0.2s;
-    text-align: left;
+    text-align: start;
   }
   .trat-cta:hover { color: var(--terra); }
 
@@ -412,7 +412,7 @@ eleventyComputed:
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     color: var(--dark);
-    text-align: left;
+    text-align: start;
     cursor: pointer;
     display: flex;
     justify-content: space-between;

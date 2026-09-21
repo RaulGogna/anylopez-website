@@ -232,7 +232,7 @@ eleventyComputed:
   .indiba-mod-list li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     color: var(--terra);
     font-weight: 700;
   }
@@ -295,7 +295,7 @@ eleventyComputed:
     margin-bottom: 32px;
   }
   .indiba-stack-totals .label { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
-  .indiba-stack-totals .crossed { color: rgba(255,255,255,0.55); text-decoration: line-through; font-size: 22px; margin-right: 16px; font-family: 'Cormorant Garamond', serif; }
+  .indiba-stack-totals .crossed { color: rgba(255,255,255,0.55); text-decoration: line-through; font-size: 22px; margin-inline-end: 16px; font-family: 'Cormorant Garamond', serif; }
   .indiba-stack-totals .final {
     font-family: 'Cormorant Garamond', serif;
     color: var(--gold);
@@ -421,7 +421,7 @@ eleventyComputed:
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     color: var(--dark);
-    text-align: left;
+    text-align: start;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -650,7 +650,7 @@ eleventyComputed:
           <div class="label">{{ tx.pack.totalLabel }}</div>
           <span class="crossed">{{ tx.pack.crossed }}</span>
         </div>
-        <div style="text-align: right;">
+        <div style="text-align: end;">
           <div class="label">{{ tx.pack.priceLabel }}</div>
           <span class="final">{{ tx.pack.final_html | safe }}</span>
         </div>
