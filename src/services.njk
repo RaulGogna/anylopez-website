@@ -457,7 +457,7 @@ eleventyComputed:
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "{{ tx.jsonld.name }}",
+  "name": {{ tx.jsonld.name | dump | safe }},
   "numberOfItems": {{ tdata.categorias | length }},
   "itemListElement": [
     {%- for cat in tdata.categorias -%}

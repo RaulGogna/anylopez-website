@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="{{ '/images/favicon-32.png' | url }}" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="{{ site.name }}" />
+  <meta property="og:site_name" content="{{ i18n[l.code].chrome.siteName or site.name }}" />
   <meta property="og:locale" content="{{ locale or l.locale }}" />
   <meta property="og:title" content="{{ ogTitle or title }}" />
   <meta property="og:description" content="{{ ogDescription or description }}" />
@@ -74,13 +74,13 @@
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "{{ t.breadcrumbHome }}",
+        "name": {{ t.breadcrumbHome | dump | safe }},
         "item": "{{ site.url }}{{ l.prefix }}/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "{{ _crumbName }}",
+        "name": {{ _crumbName | dump | safe }},
         "item": "{{ site.url }}{{ page.url }}"
       }
     ]
@@ -97,7 +97,7 @@
         "@id": "{{ site.url }}/#clinic",
         "name": "AnyLopez Clínica Estética",
         "alternateName": "AnyLopez Benidorm",
-        "description": "Clínica estética facial y corporal en Benidorm con 35+ años de experiencia. Especialistas en radiofrecuencia INDIBA, Ultherapy HIFU, dermapen, depilación láser, botox y rellenos.",
+        "description": {{ t.clinicDescription | dump | safe }},
         "url": "{{ site.url }}/",
         "logo": "{{ site.url }}/images/logo-color-sin-fondo.webp",
         "image": [
@@ -112,7 +112,7 @@
         "currenciesAccepted": "EUR",
         "paymentAccepted": "Cash, Credit Card, Bizum, Bank Transfer, Financing",
         "medicalSpecialty": "Dermatologic",
-        "availableLanguage": [{% for l2 in langs %}"{{ l2.schemaName }}"{% if not loop.last %}, {% endif %}{% endfor %}],
+        "availableLanguage": [{% for l2 in langs %}{{ l2.schemaName | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %}],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "C/ Marqués de Comillas 4, Local 6",
@@ -169,7 +169,7 @@
         "url": "{{ site.url }}/",
         "name": "AnyLopez Clínica Estética",
         "publisher": { "@id": "{{ site.url }}/#clinic" },
-        "inLanguage": [{% for l2 in langs %}"{{ l2.bcp47 }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+        "inLanguage": [{% for l2 in langs %}{{ l2.bcp47 | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %}]
       }
     ]
   }
