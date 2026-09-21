@@ -48,8 +48,13 @@
   <link rel="preconnect" href="https://gateway.umami.is" crossorigin />
   <link rel="preconnect" href="https://maps.googleapis.com" />
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
+  {%- if l.dir == 'rtl' %}
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/noto-naskh-arabic-v44-arabic-400.woff2' | url }}" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/ibm-plex-sans-arabic-v15-arabic-400.woff2' | url }}" crossorigin />
+  {%- else %}
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-latin-300.woff2' | url }}" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2' | url }}" crossorigin />
+  {%- endif %}
   <link rel="preload" href="{{ '/assets/css/fonts.css' | url | bust }}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url | bust }}" /></noscript>
   {% if page.url == "/" %}
