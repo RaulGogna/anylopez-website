@@ -31,5 +31,16 @@
     "flag": "🇫🇷",
     "prefix": "/fr",
     "hreflang": "fr"
+  },
+  {
+    "code": "de",
+    "locale": "de_DE",
+    "bcp47": "de-DE",
+    "schemaName": "German",
+    "dir": "ltr",
+    "name": "Deutsch",
+    "flag": "🇩🇪",
+    "prefix": "/de",
+    "hreflang": "de"
   }
 ]
