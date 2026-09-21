@@ -1,23 +1,30 @@
 ---
 layout: base.njk
-title: "Limpiezas faciales profesionales en Benidorm — 5 niveles · AnyLopez"
-description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolos escalonados (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) con diagnóstico previo y aparatología clínica."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/services/limpiezas-faciales/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code]['svc-limpiezas-faciales'].title | safe }}"
+  description: "{{ i18n[l.code]['svc-limpiezas-faciales'].description | safe }}"
 ---
-
+{%- set tx = i18n[l.code]['svc-limpiezas-faciales'] %}
+{%- set tdata = catalogo[l.code] %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalSpecialty",
-  "name": "Limpiezas faciales AnyLopez",
-  "alternateName": "Higiene facial profesional escalonada",
-  "description": "Catálogo de limpiezas faciales profesionales en AnyLopez Clínica Estética Benidorm: 5 protocolos escalonados (GOLD, PLATINUM, DETOX, DIAMOND, ELITE) con diagnóstico previo, extracción manual y aparatología clínica.",
-  "url": "{{ site.url }}/services/limpiezas-faciales/",
+  "name": "{{ tx.jsonld.name | safe }}",
+  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
+  "description": "{{ tx.jsonld.description | safe }}",
+  "url": "{{ site.url }}{{ l.prefix }}/services/limpiezas-faciales/",
   "relevantSpecialty": [
-    "Limpieza Facial GOLD",
-    "Limpieza Facial PLATINUM",
-    "Limpieza Facial DETOX",
-    "Limpieza Facial DIAMOND",
-    "Limpieza Facial ELITE"
+{%- for s in tx.jsonld.specialties %}
+    "{{ s | safe }}"{% if not loop.last %},{% endif %}
+{%- endfor %}
   ],
   "provider": { "@id": "{{ site.url }}/#clinic" }
 }
@@ -28,11 +35,9 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Cuál es la diferencia entre los 5 niveles?", "acceptedAnswer": { "@type": "Answer", "text": "GOLD: limpieza esencial (50€). PLATINUM: limpieza + hidratación profunda con ácido hialurónico y vitamina C (75€). DETOX: limpieza + peeling con nanoagujas + mascarilla detox (150€). DIAMOND: limpieza + aparatología avanzada + 3 exfoliantes (150€). ELITE: protocolo más completo con yesoterapia y aparatología premium (200€)." } },
-    { "@type": "Question", "name": "¿Cada cuánto una limpieza profesional?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tipo de piel: pieles regulares cada 4-6 semanas; grasas/acneicas cada 3-4 semanas; secas/maduras cada 6-8 semanas. En el diagnóstico te lo concretamos." } },
-    { "@type": "Question", "name": "¿Las limpiezas son sólo bienestar o tienen efecto real?", "acceptedAnswer": { "@type": "Answer", "text": "Tienen efecto clínico real: extracción manual de comedones, eliminación de células muertas, renovación celular estimulada por aparatología, hidratación profunda. Modifican estado de la piel, no sólo dan sensación agradable." } },
-    { "@type": "Question", "name": "¿Puedo maquillarme o salir al sol después?", "acceptedAnswer": { "@type": "Answer", "text": "Recomendamos no maquillarse las primeras 4-6 horas para que la piel respire. Protector solar siempre, especialmente las primeras 24-48h." } },
-    { "@type": "Question", "name": "¿Pueden hacer limpieza con acné activo o piel sensible?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, con protocolo adaptado. Para acné activo usamos Tratamiento Anti-Acné específico antes. Para pieles sensibles ajustamos productos e intensidad." } }
+{%- for f in tx.jsonld.faq %}
+    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+{%- endfor %}
   ]
 }
 </script>
@@ -221,14 +226,14 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
   .trat-card-incluye li {
     font-size: 13px;
     color: var(--text-mid);
-    padding-left: 16px;
+    padding-inline-start: 16px;
     position: relative;
     line-height: 1.5;
   }
   .trat-card-incluye li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     color: var(--terra);
     font-weight: 700;
     font-size: 12px;
@@ -265,7 +270,7 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
     cursor: pointer;
     padding: 0;
     transition: color 0.2s;
-    text-align: left;
+    text-align: start;
   }
   .trat-cta:hover { color: var(--terra); }
 
@@ -401,7 +406,7 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     color: var(--dark);
-    text-align: left;
+    text-align: start;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -473,11 +478,11 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <a href="{{ '/services/' | url }}">Servicios</a>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>
-    <span>Limpiezas Faciales</span>
+    <span>{{ tx.breadcrumb.current_html | safe }}</span>
   </div>
 </div>
 
@@ -488,7 +493,7 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
       <source srcset="{{ '/images/fotoscatalogoanylopez/limpiezafacial.webp' | url }}" type="image/webp">
       <img
         src="{{ '/images/fotoscatalogoanylopez/limpiezafacial.png' | url }}"
-        alt="Limpiezas faciales profesionales en AnyLopez Clínica Estética Benidorm"
+        alt="{{ tx.hero.imgAlt }}"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -500,18 +505,18 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
   <div class="cat-page-hero-inner">
     <div class="container">
       <div class="cat-page-hero-content">
-        <span class="eyebrow" style="color: var(--gold);">Limpiezas faciales · 5 niveles escalonados</span>
-        <h1>Las limpiezas faciales en serio. <em>No las del SPA del hotel.</em></h1>
-        <p class="lead">Si llevas años haciéndote la limpieza en casa o en centros donde te aplican espuma y te despachan en media hora, no estás cuidando tu piel — la estás dejando como estaba. Una limpieza profesional empieza por ver tu piel y elegir nivel.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.hero.eyebrow_html | safe }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ tx.hero.lead }}</p>
         <div class="cat-page-hero-ctas">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
         </div>
         <div class="cat-page-hero-meta">
           <span class="stars">★★★★★</span>
-          <strong>{{ reviews.rating }} · {{ reviews.count }} reseñas Google</strong>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
           <span class="dot">·</span>
-          <span>Diagnóstico inicial sin coste</span>
+          <span>{{ tx.hero.free }}</span>
         </div>
       </div>
     </div>
@@ -522,23 +527,17 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <section class="cat-page-pain">
   <div class="container">
     <div class="cat-page-pain-head">
-      <span class="eyebrow">¿Te suena alguna de estas?</span>
-      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
-      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+      <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+      <h2>{{ tx.pain.h2 }}</h2>
+      <p>{{ tx.pain.p_html | safe }}</p>
     </div>
     <div class="cat-page-pain-grid">
+      {%- for it in tx.pain.items %}
       <div class="cat-page-pain-item">
-        <h3>Has hecho rituales caseros años y los puntos negros siguen.</h3>
-        <p>Mascarillas, exfoliantes de droguería, vapor casero. La superficie se va, pero los comedones profundos viven más adentro de donde llega un sérum.</p>
+        <h3>{{ it.h3_html | safe }}</h3>
+        <p>{{ it.p }}</p>
       </div>
-      <div class="cat-page-pain-item">
-        <h3>Pagas cosmética premium y la piel sigue apagada.</h3>
-        <p>Buenos productos sirven para mantener — no para resetear. Renovar requiere extracción manual y aparatología.</p>
-      </div>
-      <div class="cat-page-pain-item">
-        <h3>Has ido a "limpiezas" en spas que te despacharon en 30 min.</h3>
-        <p>Sin diagnóstico, sin extracción real, sin nivel adaptado. Eso es masaje, no limpieza profesional.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -547,53 +546,20 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <section class="cat-page-why">
   <div class="container">
     <div class="cat-page-why-head">
-      <span class="eyebrow">Por qué las limpiezas en AnyLopez funcionan</span>
-      <h2>Seis razones por las que aquí funcionan donde otros sitios no.</h2>
-      <p>No es marketing. Es diagnóstico previo, niveles escalonados y aparatología clínica real.</p>
+      <span class="eyebrow">{{ tx.why.eyebrow }}</span>
+      <h2>{{ tx.why.h2_html | safe }}</h2>
+      <p>{{ tx.why.p }}</p>
     </div>
     <div class="cat-page-why-grid">
+      {%- for it in tx.why.items %}
       <div class="cat-page-reason">
-        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-num">0{{ loop.index }}</div>
         <div class="cat-page-reason-body">
-          <h3>Diagnóstico previo siempre</h3>
-          <p>No empezamos sin ver qué tipo de piel tienes y qué necesita. A veces es GOLD; a veces ELITE.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">02</div>
-        <div class="cat-page-reason-body">
-          <h3>5 niveles escalonados</h3>
-          <p>GOLD básico esencial · PLATINUM con hidratación · DETOX con peeling nanoagujas · DIAMOND con aparatología · ELITE premium con yesoterapia.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">03</div>
-        <div class="cat-page-reason-body">
-          <h3>Combinables con tratamientos avanzados</h3>
-          <p>Una limpieza prepara la piel para peelings, dermapen o radiofrecuencia. Multiplicas resultados.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">04</div>
-        <div class="cat-page-reason-body">
-          <h3>Aparatología de calidad clínica</h3>
-          <p>No es ultrasonido de YouTube ni espuma cosmética. Equipos profesionales reales.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">05</div>
-        <div class="cat-page-reason-body">
-          <h3>Mantenimiento programado real</h3>
-          <p>Cada 4-6 semanas según tu piel — no "cuando te acuerdes". Te lo agendamos juntos.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">06</div>
-        <div class="cat-page-reason-body">
-          <h3>Lo aplica quien firma el resultado</h3>
-          <p>Mismo principio que en toda la clínica: te atiende quien tiene experiencia real con tu tipo de piel.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -602,12 +568,12 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <section class="cat-page-section">
   <div class="container">
     <div class="cat-page-section-head">
-      <span class="eyebrow">Cinco niveles · una sola filosofía</span>
-      <h2>Las limpiezas faciales del catálogo.</h2>
-      <p>Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.</p>
+      <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
+      <h2>{{ tx.grid.h2 }}</h2>
+      <p>{{ tx.grid.p }}</p>
     </div>
 
-    {% set catTrats = tratamientos.tratamientos | byCategory("limpiezas-faciales") %}
+    {% set catTrats = tdata.tratamientos | byCategory("limpiezas-faciales") %}
     <div class="cat-page-grid">
       {% for trat in catTrats %}
       <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
@@ -615,7 +581,7 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
           <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
           <img
             src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-            alt="{{ trat.nombre }} en AnyLopez Benidorm"
+            alt="{{ trat.nombre }} {{ tx.grid.altSuffix }}"
             class="trat-card-img"
             loading="lazy"
             decoding="async"
@@ -648,8 +614,8 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
               type="button"
               class="trat-cta trat-card-trigger"
               data-slug="{{ trat.slug }}"
-              aria-label="Ver detalles de {{ trat.nombre }}"
-            >Ver detalles →</button>
+              aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
+            >{{ tx.grid.detailsCta }}</button>
           </div>
         </div>
       </article>
@@ -662,10 +628,10 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <section class="cat-page-xsell">
   <div class="container">
     <div class="cat-page-xsell-inner">
-      <span class="eyebrow">El siguiente paso</span>
-      <h2>Después de limpiar, <em>¿toca renovar?</em></h2>
-      <p>Una piel limpia es la base. Si quieres más — borrar manchas, suavizar líneas, mejorar textura — los tratamientos faciales avanzados llegan donde la limpieza no.</p>
-      <a href="{{ '/services/tratamientos-faciales/' | url }}" class="btn btn-accent">Ver tratamientos faciales avanzados →</a>
+      <span class="eyebrow">{{ tx.xsell.eyebrow }}</span>
+      <h2>{{ tx.xsell.h2_html | safe }}</h2>
+      <p>{{ tx.xsell.p_html | safe }}</p>
+      <a href="{{ (l.prefix + '/services/tratamientos-faciales/') | url }}" class="btn btn-accent">{{ tx.xsell.cta }}</a>
     </div>
   </div>
 </section>
@@ -674,29 +640,19 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <section class="cat-page-tests">
   <div class="container">
     <div class="cat-page-tests-head">
-      <span class="eyebrow">Pacientes reales</span>
-      <h2>Resultados que se notan, y se cuentan.</h2>
-      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
     </div>
     <div class="cat-page-tests-grid">
+      {%- for it in tx.tests.items %}
       <div class="cat-page-test">
         <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Después de años de mascarillas caseras y limpiezas que no llegaban a nada, una sesión DIAMOND y la diferencia se ve hasta en la foto. Mi piel respira otra vez."</p>
-        <div class="cat-page-test-author">Beatriz N.</div>
-        <div class="cat-page-test-meta">Paciente · DIAMOND</div>
+        <p class="cat-page-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="cat-page-test-author">{{ it.author }}</div>
+        <div class="cat-page-test-meta">{{ it.meta }}</div>
       </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Pagaba mucho en cosmética y mi piel seguía apagada. Me hicieron diagnóstico y empecé con PLATINUM mensual — ha cambiado totalmente la luminosidad."</p>
-        <div class="cat-page-test-author">Carmen P.</div>
-        <div class="cat-page-test-meta">Paciente · PLATINUM</div>
-      </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"El protocolo ELITE es otro nivel. La yesoterapia al final es un cierre que ningún otro centro me había hecho."</p>
-        <div class="cat-page-test-author">Paciente verificada</div>
-        <div class="cat-page-test-meta">Reseña Google · ELITE</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -705,39 +661,20 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <section class="cat-page-process">
   <div class="container">
     <div class="cat-page-process-head">
-      <span class="eyebrow">¿Cómo lo empezamos?</span>
-      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
-      <p>Desde tu primer mensaje hasta que ves la primera mejora pasan menos de dos semanas.</p>
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ tx.process.p }}</p>
     </div>
     <div class="cat-page-steps">
+      {%- for it in tx.process.steps %}
       <div class="cat-page-step">
-        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-num">{{ loop.index }}</div>
         <div class="cat-page-step-body">
-          <h3>Reservas tu diagnóstico gratuito</h3>
-          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">2</div>
-        <div class="cat-page-step-body">
-          <h3>Diagnóstico con lupa profesional</h3>
-          <p>Te valoramos la piel con lupa profesional: tipo de piel, comedones, hidratación, sensibilidad. Te decimos qué nivel encaja — GOLD, PLATINUM, DETOX, DIAMOND o ELITE.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">3</div>
-        <div class="cat-page-step-body">
-          <h3>Plan a medida con cadencia</h3>
-          <p>No "vienes una vez". Diseñamos qué nivel y con qué frecuencia mantenerlo. Si tu piel necesita PLATINUM cada 6 semanas, te lo decimos así de claro.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">4</div>
-        <div class="cat-page-step-body">
-          <h3>Mantenimiento programado</h3>
-          <p>Te agendamos las siguientes sesiones para que no se te pase. WhatsApp directo para dudas y ajustes entre citas.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -746,30 +683,16 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <section class="cat-page-faq">
   <div class="container">
     <div class="cat-page-faq-head">
-      <span class="eyebrow">Dudas frecuentes</span>
-      <h2>Lo que más nos preguntan sobre las limpiezas faciales.</h2>
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ tx.faq.h2 }}</h2>
     </div>
     <div class="cat-page-faq-list">
-      <div class="cat-page-faq-item open">
-        <button class="cat-page-faq-q" type="button">¿Cuál es la diferencia entre los 5 niveles? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>GOLD: limpieza esencial (50€). PLATINUM: limpieza + hidratación profunda con ácido hialurónico y vitamina C (75€). DETOX: limpieza + peeling con nanoagujas + mascarilla detox (150€). DIAMOND: limpieza + aparatología avanzada + 3 exfoliantes (150€). ELITE: protocolo más completo con yesoterapia y aparatología premium (200€).</p></div>
+      {%- for f in tx.faq.items %}
+      <div class="cat-page-faq-item{% if loop.first %} open{% endif %}">
+        <button class="cat-page-faq-q" type="button">{{ f.q }} <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>{{ f.a }}</p></div>
       </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Cada cuánto una limpieza profesional? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Depende del tipo de piel: pieles regulares cada 4-6 semanas; grasas/acneicas cada 3-4 semanas; secas/maduras cada 6-8 semanas. En el diagnóstico te lo concretamos.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Las limpiezas son sólo bienestar o tienen efecto real? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Tienen efecto clínico real: extracción manual de comedones, eliminación de células muertas, renovación celular estimulada por aparatología, hidratación profunda. Modifican estado de la piel, no sólo dan sensación agradable.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Puedo maquillarme o salir al sol después? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Recomendamos no maquillarse las primeras 4-6 horas para que la piel respire. Protector solar siempre, especialmente las primeras 24-48h.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Pueden hacer limpieza con acné activo o piel sensible? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Sí, con protocolo adaptado. Para acné activo usamos Tratamiento Anti-Acné específico antes. Para pieles sensibles ajustamos productos e intensidad.</p></div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -777,17 +700,18 @@ description: "Limpiezas faciales profesionales en clínica Benidorm. 5 protocolo
 <!-- FINAL CTA -->
 <section class="cat-page-final">
   <div class="container">
-    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
-    <h2>Reserva tu diagnóstico gratuito. <em>Empieza por saber qué nivel necesita tu piel</em>.</h2>
-    <p>Treinta minutos en clínica con lupa profesional y experiencia real. Si solo necesitas mantenimiento básico, te lo decimos.</p>
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ tx.final.p_html | safe }}</p>
     <div class="cat-page-final-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
     </div>
   </div>
 </section>
 
 <!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{%- set tratamientos = catalogo[l.code] %}
 {% include "treatment-modal.njk" %}
 
 <script>

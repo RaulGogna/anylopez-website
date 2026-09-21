@@ -1,0 +1,61 @@
+{
+  "title": "Equipo y Clínica — AnyLopez Estética Benidorm",
+  "description": "Conoce el equipo y las instalaciones de AnyLopez Clínica Estética en Benidorm. Más de 35 años cuidando pieles, especialistas en Radiofrecuencia INDIBA, Ultherapy HIFU y medicina estética.",
+  "breadcrumb": "Nosotros",
+  "hero": {
+    "label": "Sobre Nosotros",
+    "h1": "AnyLopez Clínica Estética",
+    "sub": "Donde podrás consentirte y darle belleza a tu piel"
+  },
+  "historia": {
+    "label": "Nuestra Historia",
+    "h2": "35 años de experiencia y pasión por la piel",
+    "p1": "Todo comenzó hace 5 años, cuando una apasionada Esteticista Argentina, con más de 35 años de experiencia en el cuidado de la piel, iniciara este sueño. Hoy, seguimos honrando su legado, brindando dedicación y excelencia en cada tratamiento.",
+    "p2": "Sabemos que cada persona es única y que cada piel tiene sus propias necesidades, por lo que nos dedicamos a brindarte un enfoque personalizado. Tu bienestar y confianza son nuestra prioridad.",
+    "cta": "Conoce la clínica",
+    "imgAlt": "Clínica AnyLopez"
+  },
+  "valores": {
+    "label": "Nuestros Valores",
+    "h2": "Lo que nos define",
+    "items": [
+      { "h3": "Bienestar", "p": "Otorgar bienestar a nuestra piel y cuerpo es de vital importancia a través de la estética y cosmetología." },
+      { "h3": "Belleza", "p": "La belleza es parte fundamental para sentirnos maravillosos, con nosotros mismos y con el mundo." },
+      { "h3": "Relajación", "p": "La relajación la necesitamos para mantenernos libres y tranquilos. El descanso es indispensable." }
+    ]
+  },
+  "stats": {
+    "experiencia": "Años de experiencia",
+    "rating": "Valoración en Google",
+    "resenas": "Reseñas verificadas",
+    "tratamientos": "Tratamientos especializados"
+  },
+  "equipo": {
+    "label": "El equipo",
+    "h2": "Profesionales a tu servicio",
+    "sub": "Contamos con un gran equipo de trabajo con maravillosas características y virtudes: profesionalismo, calidez, amabilidad, sensatez y una gran sonrisa desde el minuto 1.",
+    "roles": {
+      "kumar": "Gerente General",
+      "eilen_html": "Esteticista Cosmetóloga",
+      "rius": "Medicina Estética",
+      "olga": "Bióloga Especialista en Recuperación Celular"
+    }
+  },
+  "instalaciones": {
+    "label": "Nuestro espacio",
+    "h2": "Una clínica pensada para ti",
+    "sub": "Cada rincón está diseñado para que te sientas cómoda, segura y en buenas manos desde el primer momento.",
+    "recepcionAlt": "Recepción de AnyLopez Clínica Estética",
+    "recepcion": "Recepción",
+    "salaAlt": "Sala de espera de AnyLopez",
+    "sala": "Sala de espera",
+    "cabinaAlt": "Cabina de tratamientos de AnyLopez",
+    "cabina": "Cabina de tratamientos"
+  },
+  "cta": {
+    "h2": "¿Quieres conocernos?",
+    "p": "Ven a visitarnos a nuestra clínica en Benidorm o llámanos para resolver cualquier duda.",
+    "google_html": "Antes de venir, lee lo que dicen las <a href=\"https://www.google.com/maps/place/AnyLopez+Clinica+Est%C3%A9tica/@38.5376389,-0.1329449,19z?utm_source=anylopez-web&utm_medium=about-cta\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--gold); text-decoration:underline;\">{count} personas que ya pasaron por aquí en Google &rarr;</a>",
+    "btn_html": "<a href=\"{contactUrl}\" class=\"btn btn-accent\">Contactar</a>"
+  }
+}

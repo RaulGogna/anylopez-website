@@ -1,0 +1,114 @@
+{
+  "title": "Körperbehandlungen in Benidorm — Holztherapie, Drainage und Regeneration · AnyLopez",
+  "description": "Holztherapie, Pressotherapie, postoperative Lymphdrainage und Muskelregeneration in der AnyLopez Ästhetikklinik Benidorm. Erfahrene Handarbeit und persönliche Diagnose.",
+  "jsonld": {
+    "name": "Körperbehandlungen AnyLopez",
+    "alternateName": "Manuelle Körperästhetik",
+    "description": "Angebot an Körperbehandlungen in der AnyLopez Ästhetikklinik Benidorm: Holztherapie, Pressotherapie, postoperative Lymphdrainage und Behandlung von Muskelschmerzen. Erfahrene Handarbeit, validierte Protokolle und persönliche Diagnose.",
+    "specialties": [
+      "Holztherapie",
+      "Pressotherapie",
+      "Postoperative Lymphdrainage",
+      "Muskelregeneration"
+    ],
+    "faq": [
+      { "q": "Wie viele Sitzungen postoperative Drainage brauche ich?", "a": "Das hängt von der Operation und der Erholungsphase ab; das übliche Protokoll sind 8–12 Sitzungen in den ersten 4–6 Wochen nach der OP. In der Diagnose sehen wir Ihren Arztbericht und das OP-Datum an und erstellen den genauen Plan." },
+      { "q": "Wirkt die Holztherapie gegen Cellulite?", "a": "Ja, besonders in Kombination mit Konsequenz (Ernährung, Flüssigkeit, Bewegung). Die Holztherapie verbessert das Erscheinungsbild der Cellulite sichtbar, indem sie Durchblutung und Drainage anregt. Keine Magie, sondern beständige manuelle Arbeit — und die Ergebnisse sieht man." },
+      { "q": "Ergänzen sich Pressotherapie und Holztherapie?", "a": "Sehr. Die Holztherapie bearbeitet manuell Faszien und Unterhautfett; die Pressotherapie leitet Lymphflüssigkeit mit sequenziellem Druck ab. In einer Sitzung kombiniert vervielfachen sich die Ergebnisse — eines unserer meistempfohlenen Protokolle bei schweren Beinen und Cellulite." },
+      { "q": "Wann kann ich nach einer Fettabsaugung mit der Drainage beginnen?", "a": "Üblicherweise 5 bis 10 Tage nach der Operation, je nach Vorgabe Ihres Chirurgen. Wichtig: eine spezifische postoperative Drainage (keine generische Massage), sobald der Arzt sie freigibt. Je früher Sie beginnen, desto besser der Verlauf." },
+      { "q": "Tut die Behandlung weh?", "a": "Die Lymphdrainage ist sehr sanft — sie tut nicht weh. Holztherapie und Muskelregeneration haben je nach Toleranz eine mittlere bis hohe Intensität, bleiben aber immer im therapeutischen Bereich. Wird es zu viel, passen wir an. Bei uns muss niemand Schmerzen aushalten." }
+    ]
+  },
+  "css": {
+    "xsellComment": "INDIBA Radiofrequenz"
+  },
+  "comments": {
+    "xsell": "INDIBA Radiofrequenz"
+  },
+  "breadcrumb": { "services": "Behandlungen", "current": "Körperbehandlungen" },
+  "callCta": "Anrufen: 656 306 167",
+  "hero": {
+    "imgAlt": "Körperbehandlungen in der AnyLopez Ästhetikklinik Benidorm",
+    "eyebrow": "Körperbehandlungen · 4 Protokolle",
+    "h1_html": "Ihr Körper braucht keine weitere Maschine. <em>Er braucht Hände, die wissen, wo sie ansetzen müssen.</em>",
+    "lead_html": "Wassereinlagerungen, schwere Beine, Erholung nach Operationen, chronische Muskelverspannung. Dinge, die weder eine generische Massage noch eine Maschine ohne Urteilsvermögen lösen. Hier arbeiten wir mit erfahrener manueller Technik und spezifischen Protokollen für jeden Fall.",
+    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "reviews": "Google-Bewertungen",
+    "free": "Erstdiagnose kostenfrei"
+  },
+  "pain": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "h2": "Die meisten Patientinnen, die zu uns kommen, haben dasselbe erlebt.",
+    "p_html": "Sie fangen nicht bei null an. Sie kommen, nachdem Sie anderes probiert haben, das nicht wirklich funktioniert hat.",
+    "items": [
+      { "h3_html": "Ihre Beine fühlen sich schwer an, die Durchblutung ist träge.", "p_html": "Trotz Sport und Diät. Das sind Wassereinlagerungen und schlechte Mikrozirkulation. Das Fitnessstudio löst sie nicht — die Drainage schon." },
+      { "h3_html": "Sie wurden operiert und die Erholung geht langsam.", "p_html": "Ästhetische, abdominale oder orthopädische Chirurgie. Ohne spezifische postoperative Drainage staut sich Schwellung an, die Ihre Rückkehr zur Normalität verzögert." },
+      { "h3_html": "Sie leben mit chronischer Muskelverspannung.", "p_html": "Stunden am Computer oder intensives Training. Lendenwirbel, Nacken, Beine. Eine generische Massage lindert einen Tag — ein seriöses Protokoll löst wirklich." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Warum die Körperbehandlungen bei AnyLopez wirken",
+    "h2_html": "Sechs Gründe, warum sie hier wirken, wo andere versagen.",
+    "p_html": "Kein Marketing. Erfahrene Handarbeit, klinisches Urteil und validierte Protokolle.",
+    "items": [
+      { "h3_html": "Handarbeit aus Jahrzehnten Erfahrung", "p_html": "Maschinen helfen; die Hände diagnostizieren, während sie behandeln. Wir stellen keine Praktikanten ein, um Kosten zu sparen — Sie werden von jemandem behandelt, der sein Handwerk versteht." },
+      { "h3_html": "Kombinierbar mit INDIBA Radiofrequenz bei begleitender Hauterschlaffung", "p_html": "Wir verkaufen nicht nur unser Programm. Braucht Ihr Fall zusätzlich tiefe Radiofrequenz, sagen wir es und kombinieren die Protokolle." },
+      { "h3_html": "Lymphdrainage mit validierter Technik", "p_html": "Keine sanfte Massage mit schickem Namen, sondern das Vodder/Leduc-Protokoll, angepasst an Ihren Fall, mit spezifischem Druck und Rhythmus." },
+      { "h3_html": "Postoperative Erholung mit seriösen Protokollen", "p_html": "Nach einer ästhetischen oder anderen Operation improvisieren wir nicht. Wir wissen, wann wir beginnen, mit welcher Intensität, in welchem Rhythmus und warum." },
+      { "h3_html": "Sitzungen, die man ab der ersten spürt", "p_html": "Sie müssen keine 10 Sitzungen warten, um etwas zu merken. Drainage, Holztherapie und Muskelregeneration wirken sofort spürbar." },
+      { "h3_html": "Ohne Nadeln, ohne Ausfallzeit, vereinbar mit Ihrem Alltag", "p_html": "Sie gehen hinaus und leben Ihr Leben weiter. Keine Krankschreibung, keine sichtbaren Spuren." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Wenn Körper und Haut zusammengehören",
+    "h2_html": "Wenn Ihr Fall Körper und <em>tiefe Hauterschlaffung</em> verbindet …",
+    "p": "Viele Körperprotokolle werden durch die Kombination mit INDIBA Radiofrequenz verstärkt. Gehört zu Ihrem Ziel neben Drainage oder Tonus auch die Hautstraffung, kombinieren wir es in der kostenlosen Diagnose.",
+    "cta": "INDIBA Radiofrequenz kennenlernen →"
+  },
+  "grid": {
+    "eyebrow": "Vier Protokolle · eine Philosophie",
+    "h2": "Die Körperbehandlungen im Überblick.",
+    "p": "Tippen Sie auf eine Karte für alle Wirkungen, Preise und Pakete.",
+    "altSuffix": "bei AnyLopez Benidorm",
+    "detailsAria": "Details ansehen zu",
+    "detailsCta": "Details ansehen →"
+  },
+  "tests": {
+    "eyebrow": "Echte Patientinnen",
+    "h2": "Ergebnisse, die man sieht — und weitererzählt.",
+    "p": "Verifizierte Google-Bewertungen. Ohne Schauspieler, ohne Wunderpillen, ohne retuschierte Vorher-nachher-Bilder.",
+    "items": [
+      { "quote_html": "\"Nach meiner Bauchdeckenstraffung dachte ich in den ersten Wochen, ich würde mich nie erholen. Zehn Sitzungen postoperative Drainage — der Unterschied ist wie Tag und Nacht, die Schwellung ging viel schneller zurück als erwartet.\"", "author": "Carmen R.", "meta": "Patientin · Postoperative Drainage" },
+      { "quote_html": "\"Ich hatte jahrelang Kreuzschmerzen vom Büro. Physio, Fitnessstudio, sogar Akupunktur. Die Muskelregeneration hier hat mich wirklich gelöst — keine angenehme Massage, sondern seriöse therapeutische Arbeit.\"", "author": "Javier M.", "meta": "Patient · Muskelregeneration" },
+      { "quote_html": "\"Die Holztherapie hat die Cellulite an meinen Beinen mehr verändert als jede Creme. Kombiniert mit etwas Konsequenz sind die Ergebnisse sichtbar.\"", "author": "Verifizierte Patientin", "meta": "Google-Bewertung · Holztherapie" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie fangen wir an?",
+    "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
+    "p": "Von Ihrer ersten Nachricht bis zur ersten Verbesserung vergehen weniger als zwei Wochen.",
+    "steps": [
+      { "h3": "Sie buchen Ihre kostenlose Diagnose", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
+      { "h3": "Persönliche Diagnose in der Klinik", "p_html": "Wir beurteilen Sie: Zone, Vorgeschichte, Ziel. Nach einer OP sehen wir den Arztbericht an. Bei Wassereinlagerungen tasten wir, um welchen Typ es sich handelt. Bei Muskelverspannung prüfen wir die Haltungskette." },
+      { "h3": "Maßgeschneidertes Protokoll mit Sitzungen und Rhythmus", "p_html": "Kein „Kommen Sie 10-mal“. Wir planen, wie viele Sitzungen Sie wirklich brauchen und in welchem Rhythmus. Reichen bei Ihnen 4, sagen wir es Ihnen." },
+      { "h3": "Echte Begleitung zwischen den Sitzungen", "p_html": "Direkter WhatsApp-Kontakt für Fragen, Anpassungen und Nachsorge." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "h2": "Was wir zu den Körperbehandlungen am häufigsten gefragt werden.",
+    "items": [
+      { "q": "Wie viele Sitzungen postoperative Drainage brauche ich?", "a_html": "Das hängt von der Operation und der Erholungsphase ab; das übliche Protokoll sind 8–12 Sitzungen in den ersten 4–6 Wochen nach der OP. In der Diagnose sehen wir Ihren Arztbericht und das OP-Datum an und erstellen den genauen Plan." },
+      { "q": "Wirkt die Holztherapie gegen Cellulite?", "a_html": "Ja, besonders in Kombination mit Konsequenz (Ernährung, Flüssigkeit, Bewegung). Die Holztherapie verbessert das Erscheinungsbild der Cellulite sichtbar, indem sie Durchblutung und Drainage anregt. Keine Magie, sondern beständige manuelle Arbeit — und die Ergebnisse sieht man." },
+      { "q": "Ergänzen sich Pressotherapie und Holztherapie?", "a_html": "Sehr. Die Holztherapie bearbeitet manuell Faszien und Unterhautfett; die Pressotherapie leitet Lymphflüssigkeit mit sequenziellem Druck ab. In einer Sitzung kombiniert vervielfachen sich die Ergebnisse — eines unserer meistempfohlenen Protokolle bei schweren Beinen und Cellulite." },
+      { "q": "Wann kann ich nach einer Fettabsaugung mit der Drainage beginnen?", "a_html": "Üblicherweise 5 bis 10 Tage nach der Operation, je nach Vorgabe Ihres Chirurgen. Wichtig: eine spezifische postoperative Drainage (keine generische Massage), sobald der Arzt sie freigibt. Je früher Sie beginnen, desto besser der Verlauf." },
+      { "q": "Tut die Behandlung weh?", "a_html": "Die Lymphdrainage ist sehr sanft — sie tut nicht weh. Holztherapie und Muskelregeneration haben je nach Toleranz eine mittlere bis hohe Intensität, bleiben aber immer im therapeutischen Bereich. Wird es zu viel, passen wir an. Bei uns muss niemand Schmerzen aushalten." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Unverbindlich",
+    "h2_html": "Buchen Sie Ihre kostenlose Diagnose. <em>Erfahren Sie zuerst, was Ihr Körper braucht</em>.",
+    "p_html": "Dreißig Minuten in der Klinik mit jemandem, der seit Jahrzehnten mit den Händen arbeitet. Gehört Ihr Fall zu Physio, Orthopäde oder einem anderen Spezialisten, sagen wir es Ihnen.",
+    "cta": "Beurteilung buchen →"
+  }
+}

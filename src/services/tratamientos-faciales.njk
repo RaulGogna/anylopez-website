@@ -1,17 +1,26 @@
 ---
 layout: base.njk
-title: "Tratamientos faciales avanzados en Benidorm — AnyLopez"
-description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y más. Tratamientos faciales avanzados en AnyLopez Clínica Estética, Benidorm. 9 protocolos, diagnóstico inicial gratuito."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/services/tratamientos-faciales/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code]['svc-tratamientos-faciales'].title | safe }}"
+  description: "{{ i18n[l.code]['svc-tratamientos-faciales'].description | safe }}"
 ---
-
+{%- set tx = i18n[l.code]['svc-tratamientos-faciales'] %}
+{%- set tdata = catalogo[l.code] %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalSpecialty",
-  "name": "Tratamientos faciales avanzados",
-  "alternateName": "Estética facial avanzada AnyLopez",
-  "description": "Catálogo de tratamientos faciales avanzados en AnyLopez Clínica Estética (Benidorm): peelings químicos, dermapen, mesoterapia virtual, dermaplaning, anti-acné, plasma pen y más. 9 protocolos con diagnóstico inicial gratuito.",
-  "url": "{{ site.url }}/services/tratamientos-faciales/",
+  "name": "{{ tx.jsonld.name | safe }}",
+  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
+  "description": "{{ tx.jsonld.description | safe }}",
+  "url": "{{ site.url }}{{ l.prefix }}/services/tratamientos-faciales/",
   "relevantSpecialty": ["https://schema.org/Dermatologic", "https://schema.org/PlasticSurgery"],
   "provider": { "@id": "{{ site.url }}/#clinic" }
 }
@@ -22,11 +31,9 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Cómo sé si lo mío es peeling o dermapen?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del problema. Las manchas y daño solar responden mejor a peelings químicos despigmentantes; las cicatrices, líneas finas y textura irregular responden mejor a dermapen. En el diagnóstico gratuito vemos exactamente qué necesita tu piel." } },
-    { "@type": "Question", "name": "¿Cuánto tiempo de baja necesito?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tratamiento. Dermaplaning y mesoterapia virtual: cero. Hidratación con dermapen y peelings suaves: 24-48h con leve enrojecimiento. Peelings químicos profundos: 4-7 días de descamación controlada. Te lo explicamos al detalle antes de elegir protocolo." } },
-    { "@type": "Question", "name": "¿Cuándo voy a ver resultados?", "acceptedAnswer": { "@type": "Answer", "text": "Tratamientos como velo de colágeno o dermaplaning dan luminosidad inmediata desde la primera sesión. Peelings antimanchas y dermapen para cicatrices son progresivos: notas mejoría al mes y resultado pleno entre 3-5 sesiones según el caso." } },
-    { "@type": "Question", "name": "¿Puedo combinar varios tratamientos?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, y muchas veces es la mejor estrategia. Dermapen + hidratación, peeling + radiofrecuencia, mesoterapia + velo de colágeno son combinaciones habituales. En el plan personalizado te diseñamos la secuencia óptima." } },
-    { "@type": "Question", "name": "Tengo piel sensible, rosácea o estoy embarazada. ¿Hay alternativas?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tenemos protocolos específicos para piel sensible y reactiva. Si estás embarazada o lactando, algunos tratamientos están contraindicados pero otros son perfectamente seguros — te lo decimos en la valoración con honestidad clínica." } }
+{%- for f in tx.jsonld.faq %}
+    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+{%- endfor %}
   ]
 }
 </script>
@@ -220,14 +227,14 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
   .trat-card-incluye li {
     font-size: 12px;
     color: var(--text-mid);
-    padding-left: 14px;
+    padding-inline-start: 14px;
     position: relative;
     line-height: 1.5;
   }
   .trat-card-incluye li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     color: var(--terra);
     font-weight: 700;
     font-size: 11px;
@@ -428,7 +435,7 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     color: var(--dark);
-    text-align: left;
+    text-align: start;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -504,11 +511,11 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <a href="{{ '/services/' | url }}">Servicios</a>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>
-    <span>Tratamientos Faciales Avanzados</span>
+    <span>{{ tx.breadcrumb.current }}</span>
   </div>
 </div>
 
@@ -519,7 +526,7 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
       <source srcset="{{ '/images/fotoscatalogoanylopez/dermapen.webp' | url }}" type="image/webp">
       <img
         src="{{ '/images/fotoscatalogoanylopez/dermapen.png' | url }}"
-        alt="Tratamientos faciales avanzados en AnyLopez Benidorm"
+        alt="{{ tx.hero.imgAlt }}"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -531,18 +538,18 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
   <div class="cat-page-hero-inner">
     <div class="container">
       <div class="cat-page-hero-content">
-        <span class="eyebrow" style="color: var(--gold);">Tratamientos faciales avanzados · 9 protocolos</span>
-        <h1>Tu rostro merece más que <em>una crema más</em>.</h1>
-        <p class="lead">Si llevas años invirtiendo en cosmética y aun así el espejo te devuelve manchas, líneas finas o cicatrices que no terminan de irse, no es que no te cuides. Es que esos problemas viven más profundo de donde llega un sérum.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.hero.eyebrow }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ tx.hero.lead_html | safe }}</p>
         <div class="cat-page-hero-ctas">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
         </div>
         <div class="cat-page-hero-meta">
           <span class="stars">★★★★★</span>
-          <strong>{{ reviews.rating }} · {{ reviews.count }} reseñas Google</strong>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
           <span class="dot">·</span>
-          <span>Diagnóstico inicial sin coste</span>
+          <span>{{ tx.hero.free }}</span>
         </div>
       </div>
     </div>
@@ -553,23 +560,17 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <section class="cat-page-pain">
   <div class="container">
     <div class="cat-page-pain-head">
-      <span class="eyebrow">¿Te suena alguna de estas?</span>
-      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
-      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+      <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+      <h2>{{ tx.pain.h2 }}</h2>
+      <p>{{ tx.pain.p_html | safe }}</p>
     </div>
     <div class="cat-page-pain-grid">
+      {%- for it in tx.pain.items %}
       <div class="cat-page-pain-item">
-        <h3>Has gastado en cremas de gama alta y las manchas siguen ahí.</h3>
-        <p>Las hiperpigmentaciones, manchas solares y melasma no se borran con cosmética. Necesitan tecnología que llegue al pigmento donde está.</p>
+        <h3>{{ it.h3_html | safe }}</h3>
+        <p>{{ it.p_html | safe }}</p>
       </div>
-      <div class="cat-page-pain-item">
-        <h3>Tu piel "ya no es la de antes" y los productos no devuelven la luminosidad.</h3>
-        <p>Líneas finas, textura irregular, poros más visibles. La cosmética mantiene; renovar es otra liga — peelings, dermapen, mesoterapia.</p>
-      </div>
-      <div class="cat-page-pain-item">
-        <h3>Marcas y cicatrices que arrastras desde el acné juvenil.</h3>
-        <p>Las llevas años aceptando porque "ya no se quitan". Sí se mejoran — solo no con sérums; con dermapen, peelings progresivos y plasma pen.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -578,53 +579,20 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <section class="cat-page-why">
   <div class="container">
     <div class="cat-page-why-head">
-      <span class="eyebrow">Por qué los faciales avanzados funcionan</span>
-      <h2>Seis razones por las que estos tratamientos cambian el juego.</h2>
-      <p>No es marketing — es tecnología clínica aplicada con criterio.</p>
+      <span class="eyebrow">{{ tx.why.eyebrow }}</span>
+      <h2>{{ tx.why.h2 }}</h2>
+      <p>{{ tx.why.p_html | safe }}</p>
     </div>
     <div class="cat-page-why-grid">
+      {%- for it in tx.why.items %}
       <div class="cat-page-reason">
-        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-num">0{{ loop.index }}</div>
         <div class="cat-page-reason-body">
-          <h3>Tecnología que llega donde la cosmética no.</h3>
-          <p>Peelings químicos, dermapen con micropunción controlada, plasma pen, mesoterapia virtual. Trabajan en dermis, no en superficie.</p>
+          <h3>{{ it.h3_html | safe }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">02</div>
-        <div class="cat-page-reason-body">
-          <h3>Diagnóstico personalizado, no menú.</h3>
-          <p>No te vendemos el tratamiento de moda. Vemos tu piel, tu historial, tu objetivo y diseñamos protocolo. A veces es un peeling. A veces no.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">03</div>
-        <div class="cat-page-reason-body">
-          <h3>Combinables entre sí.</h3>
-          <p>Dermapen + hidratación. Peeling + radiofrecuencia. La sinergia entre tratamientos multiplica resultados que ninguno por separado consigue.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">04</div>
-        <div class="cat-page-reason-body">
-          <h3>Resultados graduales, naturales, propios.</h3>
-          <p>Nada de "máscara tirante". Tu piel se renueva desde dentro y se nota como mejor versión de ti, no como otra cara.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">05</div>
-        <div class="cat-page-reason-body">
-          <h3>Sin baja prolongada.</h3>
-          <p>La mayoría de tratamientos te dejan reanudar tu vida en horas o pocos días. Diseñados para encajar en tu agenda real.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">06</div>
-        <div class="cat-page-reason-body">
-          <h3>Lo aplica quien firma el resultado.</h3>
-          <p>Mismo principio que en toda la clínica: te atiende quien tiene la experiencia para decirte qué funciona en tu caso y qué no.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -633,12 +601,12 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <section class="cat-page-grid-section">
   <div class="container">
     <div class="cat-page-grid-head">
-      <span class="eyebrow">9 protocolos faciales</span>
-      <h2>El catálogo facial avanzado, al detalle.</h2>
-      <p>Pulsa cualquier tratamiento para ver beneficios, cómo funciona, precios y duración. Si dudas cuál es el tuyo, te lo decimos en el diagnóstico gratuito.</p>
+      <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
+      <h2>{{ tx.grid.h2 }}</h2>
+      <p>{{ tx.grid.p_html | safe }}</p>
     </div>
     <div class="cat-page-grid">
-      {%- set facialTrats = tratamientos.tratamientos | byCategory("tratamientos-faciales") -%}
+      {%- set facialTrats = tdata.tratamientos | byCategory("tratamientos-faciales") -%}
       {% for trat in facialTrats %}
       <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
         <picture>
@@ -676,8 +644,8 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
               type="button"
               class="trat-cta trat-card-trigger"
               data-slug="{{ trat.slug }}"
-              aria-label="Ver detalles de {{ trat.nombre }}"
-            >Ver detalles →</button>
+              aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
+            >{{ tx.grid.detailsCta }}</button>
           </div>
         </div>
       </article>
@@ -690,22 +658,22 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <section class="cat-page-cross">
   <div class="container">
     <div class="cat-page-cross-head">
-      <span class="eyebrow">Si lo tuyo va más allá</span>
-      <h2>Si tu caso necesita <em>más que un facial avanzado</em>…</h2>
-      <p>Cada problema tiene su tecnología. Si lo tuyo no encaja aquí, te orientamos hacia la especialidad que sí lo resuelve.</p>
+      <span class="eyebrow">{{ tx.cross.eyebrow }}</span>
+      <h2>{{ tx.cross.h2_html | safe }}</h2>
+      <p>{{ tx.cross.p_html | safe }}</p>
     </div>
     <div class="cat-page-cross-grid">
-      <a href="{{ '/radiofrecuencia/' | url }}" class="cat-page-cross-card">
-        <span class="eyebrow">Reafirmación profunda</span>
-        <h3>Necesitas reafirmación profunda → <em>Radiofrecuencia INDIBA</em></h3>
-        <p>Flacidez, óvalo caído, piel "cansada" pese a cuidarte. La radiofrecuencia INDIBA trabaja en hipodermis donde la cosmética y los faciales superficiales no llegan.</p>
-        <span class="arrow">Conocer Radiofrecuencia INDIBA →</span>
+      <a href="{{ (l.prefix + '/radiofrecuencia/') | url }}" class="cat-page-cross-card">
+        <span class="eyebrow">{{ tx.cross.card1.eyebrow }}</span>
+        <h3>{{ tx.cross.card1.h3_html | safe }}</h3>
+        <p>{{ tx.cross.card1.p_html | safe }}</p>
+        <span class="arrow">{{ tx.cross.card1.arrow_html | safe }}</span>
       </a>
-      <a href="{{ '/services/inyectables/' | url }}" class="cat-page-cross-card">
-        <span class="eyebrow">Volumen y relleno</span>
-        <h3>Buscas volumen o relleno → <em>Inyectables</em></h3>
-        <p>Pérdida de volumen en pómulos, surcos marcados, labios o arrugas dinámicas. Ácido hialurónico, botox y bioestimuladores aplicados con criterio médico-estético.</p>
-        <span class="arrow">Ver inyectables →</span>
+      <a href="{{ (l.prefix + '/services/inyectables/') | url }}" class="cat-page-cross-card">
+        <span class="eyebrow">{{ tx.cross.card2.eyebrow }}</span>
+        <h3>{{ tx.cross.card2.h3_html | safe }}</h3>
+        <p>{{ tx.cross.card2.p_html | safe }}</p>
+        <span class="arrow">{{ tx.cross.card2.arrow_html | safe }}</span>
       </a>
     </div>
   </div>
@@ -715,29 +683,19 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <section class="cat-page-tests">
   <div class="container">
     <div class="cat-page-tests-head">
-      <span class="eyebrow">Pacientes reales</span>
-      <h2>Resultados que se notan, y se cuentan.</h2>
-      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
     </div>
     <div class="cat-page-tests-grid">
+      {%- for it in tx.tests.items %}
       <div class="cat-page-test">
         <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Después de años intentando borrar las manchas con cremas carísimas, en cinco sesiones de peeling antimanchas tengo la piel que recuerdo de los treinta."</p>
-        <div class="cat-page-test-author">María José L.</div>
-        <div class="cat-page-test-meta">Paciente · Peeling Anti-Manchas</div>
+        <p class="cat-page-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="cat-page-test-author">{{ it.author }}</div>
+        <div class="cat-page-test-meta">{{ it.meta }}</div>
       </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"El dermapen me ha mejorado las cicatrices del acné mucho más de lo que esperaba. Los resultados son progresivos y naturales — nada agresivo."</p>
-        <div class="cat-page-test-author">Cristina A.</div>
-        <div class="cat-page-test-meta">Paciente · Dermapen</div>
-      </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Vine pensando que necesitaba ácido hialurónico y me hicieron un diagnóstico honesto: lo mío era hidratación profunda. La diferencia es brutal y me he ahorrado un dineral."</p>
-        <div class="cat-page-test-author">Paciente verificada</div>
-        <div class="cat-page-test-meta">Reseña Google</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -746,39 +704,20 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <section class="cat-page-process">
   <div class="container">
     <div class="cat-page-process-head">
-      <span class="eyebrow">¿Cómo lo empezamos?</span>
-      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
-      <p>Desde tu primer mensaje hasta la primera sesión pasan menos de dos semanas.</p>
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ tx.process.p }}</p>
     </div>
     <div class="cat-page-steps">
+      {%- for it in tx.process.steps %}
       <div class="cat-page-step">
-        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-num">{{ loop.index }}</div>
         <div class="cat-page-step-body">
-          <h3>Reservas tu diagnóstico gratuito</h3>
-          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">2</div>
-        <div class="cat-page-step-body">
-          <h3>Diagnóstico personalizado en clínica</h3>
-          <p>Vemos tu piel, hablamos de tu historial y de tu objetivo real. Te decimos qué tratamiento(s) tienen sentido para ti — y cuál NO.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">3</div>
-        <div class="cat-page-step-body">
-          <h3>Plan a medida con protocolo y frecuencia</h3>
-          <p>Diseñamos el plan: cuántas sesiones, qué orden, qué combinaciones. Todo claro antes de empezar.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">4</div>
-        <div class="cat-page-step-body">
-          <h3>Seguimiento real durante el plan</h3>
-          <p>WhatsApp directo entre sesiones para dudas, ajustes o pos-tratamiento. No desaparecemos cuando empiezas.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -787,30 +726,16 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <section class="cat-page-faq">
   <div class="container">
     <div class="cat-page-faq-head">
-      <span class="eyebrow">Dudas frecuentes</span>
-      <h2>Lo que más nos preguntan sobre faciales avanzados.</h2>
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ tx.faq.h2 }}</h2>
     </div>
     <div class="cat-page-faq-list">
-      <div class="cat-page-faq-item open">
-        <button class="cat-page-faq-q" type="button">¿Cómo sé si lo mío es peeling o dermapen? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Depende del problema. Las manchas y daño solar responden mejor a peelings químicos despigmentantes; las cicatrices, líneas finas y textura irregular responden mejor a dermapen. En el diagnóstico gratuito vemos exactamente qué necesita tu piel.</p></div>
+      {%- for f in tx.faq.items %}
+      <div class="cat-page-faq-item{% if loop.first %} open{% endif %}">
+        <button class="cat-page-faq-q" type="button">{{ f.q_html | safe }} <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>{{ f.a_html | safe }}</p></div>
       </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Cuánto tiempo de baja necesito? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Depende del tratamiento. Dermaplaning y mesoterapia virtual: cero. Hidratación con dermapen y peelings suaves: 24-48h con leve enrojecimiento. Peelings químicos profundos: 4-7 días de descamación controlada. Te lo explicamos al detalle antes de elegir protocolo.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Cuándo voy a ver resultados? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Tratamientos como velo de colágeno o dermaplaning dan luminosidad inmediata desde la primera sesión. Peelings antimanchas y dermapen para cicatrices son progresivos: notas mejoría al mes y resultado pleno entre 3-5 sesiones según el caso.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Puedo combinar varios tratamientos? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Sí, y muchas veces es la mejor estrategia. Dermapen + hidratación, peeling + radiofrecuencia, mesoterapia + velo de colágeno son combinaciones habituales. En el plan personalizado te diseñamos la secuencia óptima.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">Tengo piel sensible / rosácea / estoy embarazada. ¿Hay alternativas? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Sí. Tenemos protocolos específicos para piel sensible y reactiva. Si estás embarazada o lactando, algunos tratamientos están contraindicados pero otros son perfectamente seguros — te lo decimos en la valoración con honestidad clínica.</p></div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -818,17 +743,18 @@ description: "Peelings químicos, dermapen, mesoterapia virtual, dermaplaning y 
 <!-- FINAL CTA -->
 <section class="cat-page-final">
   <div class="container">
-    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
-    <h2>Reserva un diagnóstico gratuito. <em>Empieza por saber qué necesita tu piel</em>.</h2>
-    <p>Treinta minutos en clínica con quien lleva décadas viendo pieles. Si lo tuyo no es ningún tratamiento avanzado, te lo decimos de frente y te orientamos.</p>
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ tx.final.p_html | safe }}</p>
     <div class="cat-page-final-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
     </div>
   </div>
 </section>
 
 <!-- TREATMENT MODAL PARTIAL -->
+{%- set tratamientos = catalogo[l.code] %}
 {% include "treatment-modal.njk" %}
 
 <script>

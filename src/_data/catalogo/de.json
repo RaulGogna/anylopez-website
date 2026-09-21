@@ -1,0 +1,1613 @@
+{
+  "garantiaDefault": "Persönliche, unverbindliche Beurteilung. Wenn wir nach der ersten Sitzung feststellen, dass die Behandlung nicht die richtige für Sie ist, führen wir Sie zur wirksamsten Alternative für Ihren Fall.",
+  "categorias": [
+    {
+      "id": "limpiezas-faciales",
+      "nombre": "Gesichtsreinigungen",
+      "descripcion": "Gesichtspflege in verschiedenen Stufen von Tiefe und Anspruch."
+    },
+    {
+      "id": "tratamientos-faciales",
+      "nombre": "Erweiterte Gesichtsbehandlungen",
+      "descripcion": "Peelings, Mesotherapie, Dermapen und Regenerationstechnologie."
+    },
+    {
+      "id": "lifting-antiaging",
+      "nombre": "Lifting & Anti-Aging",
+      "descripcion": "Straffung ohne OP mit Ultherapy HIFU und INDIBA Radiofrequenz."
+    },
+    {
+      "id": "inyectables",
+      "nombre": "Ästhetische Injektionen",
+      "descripcion": "Botox, Hyaluronsäure, Fadenlifting und PRP."
+    },
+    {
+      "id": "corporal",
+      "nombre": "Körperbehandlungen",
+      "descripcion": "Holztherapie, Pressotherapie, Drainage und Muskelregeneration."
+    },
+    {
+      "id": "masajes",
+      "nombre": "Massagen",
+      "descripcion": "Entspannend, therapeutisch, fürs Gesicht und spezialisiert."
+    },
+    {
+      "id": "estetica-decorativa",
+      "nombre": "Dekorative Ästhetik",
+      "descripcion": "Einzeln applizierte Wimpern und semipermanente Micropigmentierung."
+    },
+    {
+      "id": "depilacion",
+      "nombre": "IPL-Haarentfernung",
+      "descripcion": "Intensives Pulslicht, sicher und angenehm für alle Hauttypen."
+    }
+  ],
+  "tratamientos": [
+    {
+      "slug": "limpieza-facial-gold",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Gesichtsreinigung GOLD",
+      "descripcion": "Essenzielle, sanfte und wirksame Behandlung — ideal, um die Haut ohne aggressive Verfahren sauber, ausgeglichen und gesund zu halten.",
+      "paraQuien": "Für alle, die eine einfache, aber wirksame Basispflege suchen und Unreinheiten vorbeugen möchten, bevor sie entstehen.",
+      "comoFunciona": [
+        "Tiefenreinigung des Gesichts, angepasst an Ihren Hauttyp: Reinigung, sanftes Peeling und Tonisierung.",
+        "Sorgfältige Ausreinigung von Komedonen und Mitessern, um die Poren zu befreien.",
+        "Entfernen abgestorbener Zellen zur Förderung der natürlichen Hauterneuerung."
+      ],
+      "beneficios": [
+        "Tiefenreinigung des Gesichts für alle Hauttypen",
+        "Sorgfältige Ausreinigung von Komedonen und angesammelten Unreinheiten",
+        "Entfernen abgestorbener Zellen",
+        "Sichtbare Verbesserung von Textur und Erscheinungsbild",
+        "Beugt verstopften Poren und künftigen Unreinheiten vor",
+        "Bringt Frische, Geschmeidigkeit und ein ebenmäßiges Hautbild"
+      ],
+      "incluye": [
+        "Tiefenreinigung des Gesichts",
+        "Ausreinigung von Komedonen",
+        "Entfernen abgestorbener Zellen",
+        "Bessere Textur und Erscheinungsbild"
+      ],
+      "idealPara": "Regelmäßige Pflege oder erster Schritt vor fortgeschritteneren Behandlungen.",
+      "recomendaciones": "Alle 4–6 Wochen wiederholen, um die Haut sauber und ausgeglichen zu halten.",
+      "duracion": "45 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "50 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "limpieza-facial-platinum",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Gesichtsreinigung PLATINUM",
+      "descripcion": "Fortgeschrittene Behandlung, die Tiefenreinigung mit kraftvoller Hydratation verbindet, um Ihrer Haut Ausstrahlung, Frische und Vitalität zurückzugeben.",
+      "paraQuien": "Für dehydrierte oder fahle Haut, die ohne invasive Verfahren ihre Ausstrahlung zurückgewinnen soll.",
+      "comoFunciona": [
+        "Die Tiefenreinigung entfernt Unreinheiten, überschüssiges Fett und angesammelte Rückstände.",
+        "Sanftes Peeling, das die Zellerneuerung fördert und die Textur verbessert.",
+        "Intensive Hydratation mit Hyaluronsäure für einen Aufpolsterungseffekt und gebundene Feuchtigkeit.",
+        "Auftrag von antioxidativem Vitamin C, um die Haut zum Strahlen zu bringen und Müdigkeitszeichen zu mildern."
+      ],
+      "beneficios": [
+        "Tiefenreinigung des Gesichts",
+        "Sanftes Peeling, das die Haut erneuert",
+        "Intensive Hydratation mit Hyaluronsäure",
+        "Antioxidatives, aufhellendes Vitamin C",
+        "Bessere Elastizität, Geschmeidigkeit und ein ebenmäßiger Ton",
+        "Abschließende Gesichtscreme, die die Feuchtigkeit versiegelt"
+      ],
+      "incluye": [
+        "Tiefenreinigung des Gesichts",
+        "Sanftes Peeling",
+        "Intensive Hydratation mit Hyaluronsäure",
+        "Auftrag von antioxidativem Vitamin C",
+        "Abschließende Gesichtscreme"
+      ],
+      "idealPara": "Dehydrierte, fahle Haut oder Haut ohne Ausstrahlung, die einen verjüngenden Effekt ohne invasive Verfahren sucht.",
+      "duracion": "60 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "75 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "limpieza-facial-detox",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Gesichtsreinigung DETOX",
+      "descripcion": "Detox-Reinigung + Peeling mit Nanonadeln. Innovativ — reinigt und revitalisiert die Haut von innen.",
+      "paraQuien": "Für gestaute, fahle Haut oder Haut mit Unreinheiten, die einen tiefen Neustart braucht.",
+      "comoFunciona": [
+        "Die tiefe Gesichtsreinigung entfernt Toxine, Unreinheiten und überschüssiges Fett.",
+        "Das Peeling mit Nanonadeln regt die Zellregeneration an, ohne die Haut zu schädigen.",
+        "Die Detox-Maske reinigt, beruhigt und bringt die Haut ins Gleichgewicht.",
+        "Das Zusammenspiel verbessert die Aufnahme von Wirkstoffen und verstärkt die nachfolgenden Effekte."
+      ],
+      "beneficios": [
+        "Strahlendere, frischere Haut ab der ersten Sitzung",
+        "Gleichmäßigere, weichere Textur",
+        "Sauberere, weniger sichtbare Poren",
+        "Regt die Hauterneuerung an",
+        "Revitalisiertes, gesund aussehendes Gesicht"
+      ],
+      "incluye": [
+        "Tiefenreinigung des Gesichts",
+        "Peeling mit Nanonadeln",
+        "Bessere Aufnahme von Wirkstoffen",
+        "Detox-Maske",
+        "Hauterneuerung"
+      ],
+      "idealPara": "Fahle, gestaute Haut, Haut mit Unreinheiten oder ohne Vitalität.",
+      "duracion": "90 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "150 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "limpieza-facial-diamond",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Gesichtsreinigung DIAMOND",
+      "descripcion": "Komplette Behandlung für saubere, hydratisierte und strahlende Haut.",
+      "paraQuien": "Für alle, die eine komplette Pflege suchen, die Tiefenreinigung, apparative Hydratation und intensives Peeling verbindet.",
+      "comoFunciona": [
+        "Vorbereitende Tiefenreinigung des Gesichts.",
+        "Hydratation mit fortgeschrittener Gesichtsapparatur, die die Aufnahme verstärkt.",
+        "Auftrag von drei Exfoliantien, um die Haut auf verschiedenen Ebenen zu erneuern.",
+        "Nährendes Serum, individuelle Maske und Abschlusscreme versiegeln die Behandlung."
+      ],
+      "beneficios": [
+        "Saubere, hydratisierte und strahlende Haut",
+        "Tiefe Zellerneuerung",
+        "Sichtbar bessere Textur und Ausstrahlung",
+        "Langanhaltende Hydratation",
+        "Verjüngendes Ergebnis ab der ersten Sitzung"
+      ],
+      "incluye": [
+        "Tiefenreinigung des Gesichts",
+        "Fortgeschrittene Gesichtsapparatur",
+        "Drei Exfoliantien",
+        "Nährendes Serum",
+        "Angepasste Maske",
+        "Langanhaltend feuchtigkeitsspendende Creme"
+      ],
+      "idealPara": "Alle, die mit einer kompletten Behandlung strahlendere, weichere und verjüngte Haut möchten.",
+      "duracion": "90 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "150 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "limpieza-facial-elite",
+      "imagen": "limpiezas-faciales.png",
+      "categoria": "limpiezas-faciales",
+      "nombre": "Gesichtsreinigung ELITE",
+      "descripcion": "Exklusive Behandlung, entworfen, um Ihre Haut auf höchstem Niveau zu erneuern, zu hydratisieren und zu revitalisieren.",
+      "paraQuien": "Für alle, die die umfassendste Behandlung des Hauses suchen, mit Gipstherapie und Premium-Apparatur.",
+      "comoFunciona": [
+        "Vorbereitende Tiefenreinigung des Gesichts.",
+        "Intensive Hydratation mit fortgeschrittener Gesichtsapparatur.",
+        "Premium-Exfoliantien, die die Haut in verschiedenen Schichten erneuern.",
+        "Gipstherapie-Maske mit straffendem, revitalisierendem Effekt.",
+        "Nährende Gesichtscreme und Sonnenschutz beenden das Ritual."
+      ],
+      "beneficios": [
+        "Maximale Erneuerung, Hydratation und Revitalisierung",
+        "Sichtbar straffender Effekt",
+        "Strahlende Haut ab der ersten Sitzung",
+        "Exklusive Gipstherapie-Maske",
+        "Komplette Premium-Pflege"
+      ],
+      "incluye": [
+        "Tiefenreinigung des Gesichts",
+        "Fortgeschrittene Gesichtsapparatur",
+        "Premium-Exfoliantien",
+        "Straffende Gipstherapie-Maske",
+        "Gesichtscreme und Sonnenschutz"
+      ],
+      "idealPara": "Alle, die ihrer Haut die exklusivste Pflege gönnen und ein strahlendes Gesicht zeigen möchten.",
+      "duracion": "120 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "200 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "mesoterapia-virtual",
+      "imagen": "mesoterapia-virtual.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Virtuelle Mesotherapie",
+      "descripcion": "Nicht-invasive Behandlung zur Reduktion lokaler Fettdepots und Verbesserung des Hautbilds — ohne Nadeln. Ampullen mit Koffein und Vitaminen, per virtueller Technologie eingebracht.",
+      "paraQuien": "Für alle mit lokalen Fettdepots oder leichter Hauterschlaffung, die den Tonus verbessern möchten — ohne Nadeln, ohne Ausfallzeit.",
+      "comoFunciona": [
+        "Das Koffein beschleunigt Blut- und Lymphzirkulation und fördert die Mobilisierung des in den Fettzellen gespeicherten Fetts.",
+        "Vitamine und Nährstoffe nähren, revitalisieren und straffen die Haut von innen.",
+        "Die virtuelle Technologie sichert die schmerzfreie Aufnahme der Wirkstoffe und regt den natürlichen Stoffwechsel an, das freigesetzte Fett zu verbrennen."
+      ],
+      "beneficios": [
+        "Reduktion lokaler Fettdepots",
+        "Bessere Festigkeit und Elastizität der Haut",
+        "Regt Durchblutung und Lymphdrainage an",
+        "Strafft und glättet die Haut",
+        "Sicheres, schmerzfreies Verfahren ohne Erholungszeit"
+      ],
+      "incluye": [
+        "Reduktion lokaler Fettdepots",
+        "Bessere Festigkeit und Elastizität",
+        "Regt Durchblutung und Lymphdrainage an",
+        "Strafft und glättet die Haut",
+        "Schmerzfrei und ohne Erholungszeit"
+      ],
+      "idealPara": "Menschen mit lokalen Fettdepots, leichter Hauterschlaffung oder dem Wunsch, Tonus und Hautbild ohne invasive Verfahren zu verbessern.",
+      "duracion": "30 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "90 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "velo-colageno-puro",
+      "imagen": "velo-colageno-puro.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Schleier aus purem Kollagen",
+      "descripcion": "Intensivbehandlung mit einem Schleier aus 100 % purem Meereskollagen, der Elastizität und Festigkeit wiederherstellt — mit sofortigem Verjüngungseffekt.",
+      "paraQuien": "Für fahle, dehydrierte Haut oder Haut mit Müdigkeitszeichen, die einen sofortigen Schub an Feuchtigkeit und Festigkeit braucht.",
+      "comoFunciona": [
+        "Ein Schleier aus 100 % purem Kollagen marinen Ursprungs wird direkt auf das Gesicht aufgelegt.",
+        "Das Meereskollagen stellt die Elastizität wieder her und verbessert die Festigkeit ab der ersten Sitzung.",
+        "Es fördert die Zellregeneration und schützt die Haut vor Müdigkeits- und Alterungszeichen."
+      ],
+      "beneficios": [
+        "Tiefe, langanhaltende Hydratation",
+        "Weichere, strahlendere, gesündere Haut",
+        "Bessere Elastizität und Festigkeit",
+        "Reinigung und Revitalisierung der Haut",
+        "Sofortiger Verjüngungseffekt"
+      ],
+      "incluye": [
+        "Tiefe, langanhaltende Hydratation",
+        "Weichere, strahlendere, gesündere Haut",
+        "Bessere Elastizität und Festigkeit",
+        "Sichtbare Revitalisierung",
+        "Ideal für fahle oder dehydrierte Haut"
+      ],
+      "idealPara": "Alle Hauttypen, besonders fahle, dehydrierte oder müde wirkende Haut.",
+      "duracion": "90 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "150 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "dermapen-hidratacion",
+      "imagen": "dermapen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermapen + Gesichtshydratation",
+      "descripcion": "Kombinierte Behandlung, die Regeneration und Revitalisierung der Haut mit Mikronadeln und Tiefenhydratation verstärkt.",
+      "paraQuien": "Für alle, die straffen, feine Linien glätten und das Gesicht natürlich und schrittweise verjüngen möchten.",
+      "comoFunciona": [
+        "Das Dermapen setzt kontrollierte Mikropunktionen auf der Haut.",
+        "Diese Mikropunktionen stimulieren die Fibroblasten, die Kollagen und Elastin produzieren.",
+        "Nach der vorbereitenden Tiefenreinigung folgt eine intensive Hydratation mit Hyaluronsäure und Vitaminen für mehr Ausstrahlung und Elastizität."
+      ],
+      "beneficios": [
+        "Glattere, weichere, verjüngte Haut",
+        "Weniger feine Linien und Falten",
+        "Bessere Aufnahme feuchtigkeitsspendender Wirkstoffe",
+        "Bessere Textur, Festigkeit und ein besserer Ton",
+        "Revitalisiertes, gesund wirkendes Gesicht"
+      ],
+      "incluye": [
+        "Tiefenreinigung des Gesichts",
+        "Mikropunktionen mit Dermapen",
+        "Intensive Hydratation mit Hyaluronsäure und Vitaminen",
+        "Bessere Textur, Festigkeit und Ton",
+        "Revitalisiertes Gesicht"
+      ],
+      "idealPara": "Haut mit feinen Linien, nachlassender Festigkeit oder Bedarf an tiefer Regeneration.",
+      "duracion": "75 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "150 €"
+        },
+        {
+          "concepto": "Paket 6 Sitzungen",
+          "precio": "800 €"
+        }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "dermapen-cicatrices",
+      "imagen": "dermapen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermapen gegen Narben",
+      "descripcion": "Fortgeschrittene Mikronadel-Behandlung, die die natürliche Hautregeneration anregt und Kollagen und Elastin wiederherstellt, um Aknenarben zu verbessern.",
+      "paraQuien": "Für alle, die mit Aknenarben oder oberflächlichen Malen leben und ein ebenmäßigeres Hautbild zurückgewinnen möchten.",
+      "comoFunciona": [
+        "Das Dermapen setzt kontrollierte Mikroperforationen in der Haut.",
+        "Diese Mikroperforationen aktivieren den natürlichen Reparaturprozess des Körpers.",
+        "Kollagen und Elastin werden wiederhergestellt — bestehende Narben verbessern sich und die Hautstruktur wird gestärkt."
+      ],
+      "beneficios": [
+        "Weniger Aknenarben und oberflächliche Male",
+        "Stimulation von Kollagen und Elastin",
+        "Bessere Textur und Geschmeidigkeit der Haut",
+        "Ebenmäßigerer Ton und verjüngtes Aussehen",
+        "Minimal-invasives Verfahren"
+      ],
+      "incluye": [
+        "Weniger Aknenarben",
+        "Stimulation von Kollagen und Elastin",
+        "Bessere Textur und Geschmeidigkeit",
+        "Ebenmäßigerer Ton",
+        "Minimal-invasiv"
+      ],
+      "idealPara": "Haut mit Aknenarben oder oberflächlichen Malen, alle Hauttypen.",
+      "recomendaciones": "Je nach Tiefe der Narben können mehrere Sitzungen nötig sein. Danach sind beruhigende Produkte und Sonnenschutz entscheidend.",
+      "duracion": "60 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "75 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "peeling-antimanchas",
+      "imagen": "peeling-antimanchas.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Anti-Pigmentflecken-Peeling",
+      "descripcion": "Fortgeschrittene, nicht-chirurgische Behandlung, um Pigmentflecken zu entfernen, die Textur zu verbessern und das Gesicht zu verjüngen. Depigmentierendes chemisches Peeling + Radiofrequenz.",
+      "paraQuien": "Für Frauen mit angesammelten Sonnenflecken, Hyperpigmentierung oder ungleichmäßigem Ton, die eine schrittweise, dauerhafte Veränderung suchen.",
+      "comoFunciona": [
+        "Depigmentierendes chemisches Peeling mit einer Kombination aus 4 Säuren, das oberflächliche Hautschichten kontrolliert abträgt.",
+        "Kombiniert mit Radiofrequenz, die die Kollagenproduktion anregt und die Festigkeit der Haut verbessert.",
+        "Programm aus 4 kompletten Sitzungen, die die Haut in der Tiefe erneuern und die dermale Matrix stimulieren."
+      ],
+      "beneficios": [
+        "Schrittweises Entfernen von Flecken und Unreinheiten",
+        "Erneuerung der Haut in der Tiefe",
+        "Stimulation der dermalen Matrix",
+        "Ebenmäßigere, strahlendere Haut",
+        "Sichtbar weniger Falten und Flecken",
+        "Bessere Festigkeit und Elastizität"
+      ],
+      "incluye": [
+        "4 komplette Sitzungen",
+        "Schrittweises Entfernen von Flecken",
+        "Tiefe Erneuerung",
+        "Stimulation der dermalen Matrix",
+        "Ebenmäßigere, strahlendere Haut"
+      ],
+      "idealPara": "Flecken und ungleichmäßiger Ton, Gesichtsfalten, Aknenarben, gealterte Haut oder nachlassende Festigkeit.",
+      "duracion": "60 Minuten pro Sitzung",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "175 €"
+        },
+        {
+          "concepto": "Paket 5 Sitzungen",
+          "precio": "800 €"
+        }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "peeling-quimico-facial",
+      "imagen": "peeling-quimico-facial.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Chemisches Gesichtspeeling",
+      "descripcion": "Tiefes Peeling ohne Reibung durch eine chemische Lösung. Entfernt geschädigte Zellen und regt die Zellregeneration an.",
+      "paraQuien": "Für alle, die die Haut in der Tiefe erneuern, den Ton verbessern und feine Linien in einer einzigen Sitzung glätten möchten.",
+      "comoFunciona": [
+        "Vorherige Reinigung des Gesichts zur Vorbereitung der Haut.",
+        "Auftrag einer an Ihren Hauttyp angepassten chemischen Lösung, ohne mechanische Reibung.",
+        "Beruhigende und schützende Produkte verstärken die Ergebnisse und schützen die erneuerte Haut."
+      ],
+      "beneficios": [
+        "Regt die Kollagenproduktion an",
+        "Verbessert sichtbar Textur und Ton",
+        "Bringt sofortige Ausstrahlung",
+        "Weichere, ebenmäßigere, verjüngte Haut",
+        "Verkleinert erweiterte Poren"
+      ],
+      "incluye": [
+        "Behandelt Hyperpigmentierung und Sonnenschäden",
+        "Mildert Aknenarben",
+        "Glättet Mimikfalten",
+        "Bringt sofortige Ausstrahlung",
+        "Regt Kollagen an"
+      ],
+      "idealPara": "Hautflecken, Aknemale, Mimikfalten, erweiterte Poren, fahle Haut oder Haut mit Alterungszeichen.",
+      "recomendaciones": "Nach der Behandlung können leichte Rötung oder Schuppung auftreten (Teil des Erneuerungsprozesses). Sonnenschutz verwenden und die Empfehlungen befolgen.",
+      "duracion": "45 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "150 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "dermaplaning-facial",
+      "imagen": "dermaplaning-facial.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Dermaplaning fürs Gesicht",
+      "descripcion": "Mechanische Peeling-Technik, die abgestorbene Zellen und feinen Gesichtsflaum entfernt und eine strahlendere, weichere Haut freilegt.",
+      "paraQuien": "Für alle, die sofort strahlendere, samtweiche Haut möchten — frei von dem feinen Flaum, der das Gesicht matt wirken lässt.",
+      "comoFunciona": [
+        "Ein spezielles chirurgisches Skalpell gleitet sanft über die saubere, trockene Haut.",
+        "Es trägt sorgfältig die oberflächlichen Schichten ab: abgestorbene Zellen, Unreinheiten und Vellushaar (feiner Flaum, der die Haut matt macht).",
+        "Die Haut erneuert sich auf natürliche Weise und nachfolgende Kosmetik dringt besser ein — ihre Wirkung wird verstärkt."
+      ],
+      "beneficios": [
+        "Entfernt abgestorbene Zellen und feinen Gesichtsflaum",
+        "Verbessert Ausstrahlung und Geschmeidigkeit der Haut",
+        "Fördert die Aufnahme nachfolgender Behandlungen",
+        "Gleicht Ton und Textur aus",
+        "Sicheres, schnelles, schmerzfreies Verfahren",
+        "Geeignet für alle Hauttypen, auch empfindliche"
+      ],
+      "incluye": [
+        "Entfernt abgestorbene Zellen und Gesichtsflaum",
+        "Verbessert Ausstrahlung und Geschmeidigkeit",
+        "Fördert die Aufnahme von Behandlungen",
+        "Gleicht Ton und Textur aus",
+        "Geeignet für empfindliche Haut"
+      ],
+      "idealPara": "Alle Hauttypen, auch empfindliche, die sofortige Ausstrahlung ohne Schuppung suchen.",
+      "recomendaciones": "Alle 4–6 Wochen wiederholen. Direkte Sonne unmittelbar danach meiden und Sonnenschutz auftragen.",
+      "duracion": "45 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "50 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen",
+          "precio": "400 €"
+        }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "anti-acne",
+      "imagen": "anti-acne.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Anti-Akne-Behandlung",
+      "descripcion": "Spezialisierte Gesichtspflege, um Akne zu bekämpfen, die Haut zu beruhigen und künftigen Unreinheiten vorzubeugen.",
+      "paraQuien": "Für Jugendliche und Erwachsene mit aktiver Akne, fettiger Tendenz oder wiederkehrenden entzündlichen Schüben.",
+      "comoFunciona": [
+        "Die tiefe Gesichtsreinigung entfernt Unreinheiten, Fett und Rückstände aus den Poren.",
+        "Auftrag spezifischer Anti-Akne-Wirkstoffe, die den Talg regulieren und Bakterien bekämpfen.",
+        "Hochfrequenz-Sitzung, die Entzündungen mindert, die Heilung beschleunigt und neuen Schüben vorbeugt."
+      ],
+      "beneficios": [
+        "Sauberere, geklärte Haut",
+        "Weniger Rötungen und Entzündung",
+        "Ebenmäßigerer Ton",
+        "Frischeres, gesünderes Aussehen",
+        "Regt die Zellerneuerung an",
+        "Weniger Mitesser, Pickel und frische Male"
+      ],
+      "incluye": [
+        "Tiefenreinigung des Gesichts",
+        "Spezifische Anti-Akne-Wirkstoffe",
+        "Entzündungshemmende Hochfrequenz",
+        "Mindert Rötungen und Entzündung",
+        "Weniger Mitesser und Pickel"
+      ],
+      "idealPara": "Haut mit aktiver Akne, fettiger oder entzündlicher Tendenz.",
+      "duracion": "45 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "75 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "laser-plasma-pen",
+      "imagen": "laser-plasma-pen.png",
+      "categoria": "tratamientos-faciales",
+      "nombre": "Plasma-Pen-Laser",
+      "descripcion": "Fortgeschrittenes Verfahren gegen kleine Hautmakel (Warzen, Flecken, Fibrome) mittels Plasmaenergie — ohne Chirurgie.",
+      "paraQuien": "Für alle mit kleinen, lokalisierten Makeln (Sommersprossen, Flecken, Warzen), die sie ohne Chirurgie entfernen möchten.",
+      "comoFunciona": [
+        "Der Laser erzeugt einen kleinen Energiepunkt auf der Hautoberfläche — eine kontrollierte Mikroverbrennung.",
+        "Diese präzise Wirkung entfernt die Läsion, ohne das umliegende Gewebe zu schädigen.",
+        "Er regt die natürliche Hautregeneration und die Kollagenproduktion an und verbessert Qualität und Festigkeit."
+      ],
+      "beneficios": [
+        "Entfernt oder minimiert Makel präzise",
+        "Schädigt das umliegende Gewebe nicht",
+        "Regt die Hautregeneration an",
+        "Verbessert Textur und Gesamtbild",
+        "Nicht-chirurgisches Verfahren",
+        "Sichtbare Ergebnisse ab den ersten Sitzungen"
+      ],
+      "incluye": [
+        "Präzises Entfernen von Makeln",
+        "Regt die Regeneration an",
+        "Verbessert Textur und Aussehen",
+        "Nicht-chirurgisch",
+        "Ergebnisse ab der ersten Sitzung"
+      ],
+      "idealPara": "Sommersprossen, Flecken, Warzen, kleine Hautläsionen und lokalisierte Makel.",
+      "recomendaciones": "Nach der Behandlung kann sich vorübergehend eine leichte Kruste bilden (natürlicher Prozess). Die Stelle nicht berühren und Sonnenschutz verwenden.",
+      "duracion": "30 Minuten",
+      "precios": [
+        {
+          "concepto": "Ab",
+          "precio": "95 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "ultherapy-hifu",
+      "imagen": "ultherapy-hifu.png",
+      "categoria": "lifting-antiaging",
+      "nombre": "Ultherapy HIFU – Lifting ohne OP",
+      "descripcion": "Fokussierter Ultraschall, der strafft, formt und verjüngt. Er regt die natürliche Produktion von Kollagen und Elastin an — für ein Lifting ohne OP.",
+      "paraQuien": "Für alle, die einen natürlichen Lifting-Effekt suchen — ohne OP-Saal, ohne Narkose, ohne Erholungszeit.",
+      "comoFunciona": [
+        "Der fokussierte Ultraschall wirkt in den tiefen Hautschichten — dort, wo ein Chirurg für ein Lifting schneidet.",
+        "Er aktiviert die natürliche Regeneration und regt die Produktion von Kollagen und Elastin von innen an.",
+        "Die Ergebnisse sind progressiv: sichtbare Verbesserung ab dem ersten Monat, optimales Ergebnis nach 3–6 Monaten, mit langer Dauer."
+      ],
+      "beneficios": [
+        "Sichtbare Straffung ohne Chirurgie",
+        "Weniger Hauterschlaffung",
+        "Entfernen lokaler Fettdepots",
+        "Neuformung der Gesichts- und Körperkontur",
+        "Festere, elastischere, jüngere Haut",
+        "Dauerhafte, progressive Ergebnisse"
+      ],
+      "incluye": [
+        "Sichtbare Straffung ohne Chirurgie",
+        "Weniger Hauterschlaffung",
+        "Natürlicher Lifting-Effekt",
+        "Neuformung der Konturen",
+        "Dauerhafte Ergebnisse"
+      ],
+      "idealPara": "Menschen mit Hauterschlaffung an Gesicht oder Körper, die ein natürliches Lifting ohne OP-Saal suchen.",
+      "duracion": "Variabel je nach Zone",
+      "precios": [
+        {
+          "concepto": "Komplettes Gesicht (120 Min.)",
+          "precio": "350 €"
+        },
+        {
+          "concepto": "Augenringe (20 Min.)",
+          "precio": "160 €"
+        },
+        {
+          "concepto": "Hals (60 Min.)",
+          "precio": "250 €"
+        },
+        {
+          "concepto": "Dekolleté (60 Min.)",
+          "precio": "250 €"
+        },
+        {
+          "concepto": "Arme (60 Min.)",
+          "precio": "350 €"
+        },
+        {
+          "concepto": "Hände (30 Min.)",
+          "precio": "200 €"
+        },
+        {
+          "concepto": "Bauch (60 Min. pro Zone)",
+          "precio": "350 €"
+        },
+        {
+          "concepto": "Unterschenkel (45 Min. pro Zone)",
+          "precio": "350 €"
+        },
+        {
+          "concepto": "Vaginale Behandlung (45 Min.)",
+          "precio": "490 €"
+        },
+        {
+          "concepto": "Vaginale Behandlung — Paket 2 Sitzungen",
+          "precio": "595 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "radiofrecuencia-indiba",
+      "imagen": "radiofrecuencia-indiba.png",
+      "categoria": "lifting-antiaging",
+      "nombre": "INDIBA Radiofrequenz für Gesicht und Körper",
+      "descripcion": "INDIBA Radiofrequenz-Technologie, die aus dem Zellinneren heraus Kollagen und Elastin stimuliert. Festere, strahlendere, verjüngte Haut ab der ersten Sitzung.",
+      "paraQuien": "Für alle mit Hauterschlaffung, nachlassender Festigkeit oder Alterungszeichen an Gesicht und Körper, die sichtbare Ergebnisse ab der ersten Sitzung möchten — ohne Eingriff.",
+      "comoFunciona": [
+        "Die INDIBA Radiofrequenz sendet hochfrequente Wellen, die gleichzeitig in den drei Hautschichten wirken.",
+        "Sie regt die Produktion von Kollagen und Elastin an und strafft das Gewebe von innen.",
+        "Sie verbessert die Durchblutung und leitet Toxine aus — für strahlendere, festere, gesündere Haut."
+      ],
+      "beneficios": [
+        "Lifting-Effekt ohne Chirurgie",
+        "Bessere Elastizität und Festigkeit",
+        "Weniger Falten und Hauterschlaffung",
+        "Aktiviert die Zellregeneration",
+        "Verbessert die Durchblutung und leitet Toxine aus",
+        "Sichtbare Ergebnisse ab der 1. Sitzung"
+      ],
+      "incluye": [
+        "Lifting-Effekt ohne Chirurgie",
+        "Bessere Elastizität und Festigkeit",
+        "Weniger Falten und Hauterschlaffung",
+        "Aktiviert die Zellregeneration",
+        "Ohne Schmerz, ohne Erholungszeit"
+      ],
+      "idealPara": "Menschen mit Hauterschlaffung, nachlassender Festigkeit oder Alterungszeichen an Gesicht und Körper.",
+      "duracion": "45 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung Gesicht oder Körper (30 Min.)",
+          "precio": "45 €"
+        },
+        {
+          "concepto": "Sitzung Gesicht (45 Min.)",
+          "precio": "65 €"
+        },
+        {
+          "concepto": "Sitzung Körper (60 Min., pro Zone)",
+          "precio": "85 €"
+        },
+        {
+          "concepto": "Vaginale Sitzung (60 Min.)",
+          "precio": "85 €"
+        },
+        {
+          "concepto": "Paket 5 Sitzungen (30 Min.)",
+          "precio": "250 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen (30 Min.)",
+          "precio": "350 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen (45 Min.)",
+          "precio": "500 €"
+        }
+      ],
+      "packDestacado": 6
+    },
+    {
+      "slug": "botox-zona",
+      "imagen": "botox-zona.png",
+      "categoria": "inyectables",
+      "nombre": "Botox pro Zone",
+      "descripcion": "Injektion von Botulinumtoxin, um vorübergehend die Muskelkontraktion zu blockieren, die Mimikfalten verursacht.",
+      "paraQuien": "Für alle, die Falten an Stirn, Zornesfalte oder Krähenfüßen glätten und dabei ihre natürliche Mimik bewahren möchten.",
+      "comoFunciona": [
+        "Präzise Mikroinjektionen in die Muskeln, die die Mimiklinien verursachen.",
+        "Das Botulinumtoxin blockiert vorübergehend die Nervensignale, die diese Muskeln kontrahieren.",
+        "Die Falten glätten sich und neuen Linien wird vorgebeugt. Natürlicher, entspannter Effekt."
+      ],
+      "beneficios": [
+        "Mildert Mimikfalten",
+        "Beugt neuen Mimiklinien vor",
+        "Natürlicher, harmonischer Effekt",
+        "Schnelles, minimal-invasives Verfahren",
+        "Sichtbare Ergebnisse in wenigen Tagen",
+        "Lindert Bruxismus und Kieferspannung"
+      ],
+      "incluye": [
+        "Mildert Mimikfalten",
+        "Beugt neuen Linien vor",
+        "Natürlicher Effekt",
+        "Minimal-invasiv",
+        "Ergebnisse ab der ersten Sitzung"
+      ],
+      "idealPara": "Alle, die Falten an Stirn, Zornesfalte oder Krähenfüßen mit natürlichem Ergebnis glätten möchten.",
+      "recomendaciones": "In den ersten 24 Stunden nach der Anwendung Massagen, Sauna und intensiven Sport meiden.",
+      "duracion": "30 Minuten",
+      "precios": [
+        {
+          "concepto": "Pro Zone",
+          "precio": "300 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "acido-hialuronico",
+      "imagen": "acido-hialuronico.png",
+      "categoria": "inyectables",
+      "nombre": "Filler mit Hyaluronsäure",
+      "descripcion": "Minimal-invasive Behandlung, die Konturen von Gesicht und Lippen neu formt und verjüngt und vom Altern betroffenen Zonen ihr Volumen zurückgibt.",
+      "paraQuien": "Für alle, die Volumen an konkreten Stellen (Falten, Lippen) zurückgewinnen oder Konturen ohne Chirurgie neu definieren möchten.",
+      "comoFunciona": [
+        "Präzise Injektionen von Hyaluronsäure in spezifische Zonen, je nach Ziel.",
+        "Die Hyaluronsäure bindet Wasser und integriert sich ins Gewebe — sie füllt Falten auf oder vergrößert das Lippenvolumen auf natürliche Weise.",
+        "Eine Kontrolle nach 15–30 Tagen sichert das optimale Ergebnis und erlaubt Anpassungen, falls nötig."
+      ],
+      "beneficios": [
+        "Formt und definiert das Gesicht",
+        "Gibt gealterten Zonen Volumen zurück",
+        "Glättet Falten und Mimiklinien",
+        "Verbessert die Gesichtsharmonie",
+        "Sicheres, schnelles Verfahren",
+        "Sichtbare, sofortige Ergebnisse"
+      ],
+      "incluye": [
+        "Formt und definiert das Gesicht",
+        "Gibt Volumen zurück",
+        "Glättet Falten",
+        "Verbessert die Gesichtsharmonie",
+        "Sofortige Ergebnisse"
+      ],
+      "idealPara": "Alle, die Konturen formen, Falten glätten oder das Lippenvolumen vergrößern möchten.",
+      "recomendaciones": "In den ersten Tagen intensive Massagen, lange Sonne und Sauna meiden. Zur Kontrolle kommen.",
+      "duracion": "30 Minuten",
+      "precios": [
+        {
+          "concepto": "Nasolabialfalte",
+          "precio": "300 €"
+        },
+        {
+          "concepto": "Nasenmodellierung",
+          "precio": "450 €"
+        },
+        {
+          "concepto": "Lippen",
+          "precio": "350 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "hilos-tensores",
+      "imagen": "hilos-tensores.png",
+      "categoria": "inyectables",
+      "nombre": "Fadenlifting",
+      "descripcion": "Ästhetische Medizin mit feinen Fäden, die das Gesicht auf natürliche Weise verjüngen und straffen. Sie verbessern die Festigkeit, glätten Falten und definieren Konturen neu.",
+      "paraQuien": "Für alle mit mäßiger Hauterschlaffung, absinkender Gesichtskontur oder dem Wunsch, die Kinnlinie ohne Chirurgie neu zu definieren.",
+      "comoFunciona": [
+        "Die Fäden werden mit präzisen, minimal-invasiven Techniken unter die Haut eingebracht.",
+        "Sie erzeugen einen sofortigen Straffungseffekt, indem sie das Gewebe anheben und repositionieren.",
+        "Sie regen die natürliche Kollagenproduktion an und verbessern langfristig Festigkeit und Hautqualität."
+      ],
+      "beneficios": [
+        "Strafft und spannt die Haut",
+        "Lifting-Effekt ohne Chirurgie",
+        "Regt natürliches Kollagen an",
+        "Bessere Definition der Gesichtskonturen",
+        "Hebt die Brauen und definiert die Kinnlinie neu",
+        "Sichtbare Ergebnisse ab der ersten Sitzung"
+      ],
+      "incluye": [
+        "Strafft und spannt",
+        "Lifting ohne Chirurgie",
+        "Regt Kollagen an",
+        "Definiert Konturen",
+        "Ergebnisse ab der ersten Sitzung"
+      ],
+      "idealPara": "Mäßige Hauterschlaffung im Gesicht, absinkende Kontur oder der Wunsch nach einem Lifting-Effekt ohne OP-Saal.",
+      "recomendaciones": "In den ersten Tagen intensive Massagen und körperliche Anstrengung meiden.",
+      "duracion": "60 Minuten",
+      "precios": [
+        {
+          "concepto": "4 Fäden mit Widerhaken",
+          "precio": "395 €"
+        },
+        {
+          "concepto": "6 Fäden mit Widerhaken",
+          "precio": "595 €"
+        },
+        {
+          "concepto": "4 Fäden mit Widerhaken + 12 PDO-Fäden",
+          "precio": "495 €"
+        },
+        {
+          "concepto": "6 Fäden mit Widerhaken + 16 PDO-Fäden",
+          "precio": "725 €"
+        }
+      ],
+      "packDestacado": 2
+    },
+    {
+      "slug": "prp-plasma",
+      "imagen": "prp-plasma.png",
+      "categoria": "inyectables",
+      "nombre": "Plättchenreiches Plasma (PRP)",
+      "descripcion": "Biostimulation mit Ihrem eigenen Plasma, um die Haut auf natürliche Weise zu verjüngen. Reaktiviert Ihre eigene Regenerationsfähigkeit.",
+      "paraQuien": "Für alle, die eine 100 % natürliche Behandlung mit dem eigenen Plasma möchten — ideal bei Alterungszeichen oder Hauterschlaffung.",
+      "comoFunciona": [
+        "Es wird eine kleine Blutprobe entnommen.",
+        "Sie wird zentrifugiert, um das plättchenreiche Plasma zu gewinnen und die Wachstumsfaktoren zu konzentrieren.",
+        "Dieses Konzentrat wird in die Haut eingebracht und regt Zellregeneration sowie die Produktion von Kollagen und Elastin an."
+      ],
+      "beneficios": [
+        "Regeneration und Revitalisierung der Haut",
+        "Bessere Textur und Ausstrahlung",
+        "Weniger feine Falten und Mimiklinien",
+        "Mehr Festigkeit und Elastizität",
+        "Hydratisiertere, verjüngte Haut",
+        "Natürliche Behandlung mit Ihrem eigenen Plasma"
+      ],
+      "incluye": [
+        "Natürliche Behandlung mit Ihrem eigenen Plasma",
+        "Regt Kollagen und Elastin an",
+        "Verbessert Qualität und Aussehen",
+        "Progressive Ergebnisse",
+        "Sicheres, biokompatibles Verfahren"
+      ],
+      "idealPara": "Haut mit Alterungszeichen, fehlender Ausstrahlung, Erschlaffung oder Dehydrierung.",
+      "recomendaciones": "Je nach Bedarf der Haut können mehrere Sitzungen nötig sein. Die Nachsorge befolgen.",
+      "duracion": "60 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "275 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "maderoterapia",
+      "imagen": "maderoterapia.png",
+      "categoria": "corporal",
+      "nombre": "Holztherapie",
+      "descripcion": "Ästhetische Massage mit Holzinstrumenten, die die Durchblutung anregen, die Haut tonisieren und straffen. Wirksam bei lokalen Fettdepots, Erschlaffung oder Cellulite.",
+      "paraQuien": "Für alle mit Cellulite, Körpererschlaffung oder lokalen Fettdepots, die eine manuelle, nicht-invasive und entspannende Behandlung suchen.",
+      "comoFunciona": [
+        "Mit präzisen Bewegungen von Rollen und anderen Holzinstrumenten werden Blut- und Lymphzirkulation aktiviert.",
+        "Die Sauerstoffversorgung des Gewebes verbessert sich und die Produktion von Kollagen und Elastin wird angeregt.",
+        "Sie fördert Festigkeit, Hautelastizität und die Mobilisierung angesammelten Fetts."
+      ],
+      "beneficios": [
+        "Reduziert lokale Fettdepots und Bauchvolumen",
+        "Verbessert Blut- und Lymphzirkulation",
+        "Tonisiert und strafft die Haut",
+        "Regt Kollagen und Elastin an",
+        "Trägt zur Reduktion von Cellulite bei",
+        "Entspannend und revitalisierend"
+      ],
+      "incluye": [
+        "Reduziert lokale Fettdepots",
+        "Verbessert Durchblutung und Drainage",
+        "Tonisiert und strafft",
+        "Regt Kollagen an",
+        "Reduziert Cellulite"
+      ],
+      "idealPara": "Menschen mit Cellulite, Körpererschlaffung oder lokalen Fettdepots an Bauch, Gesäß oder Beinen.",
+      "recomendaciones": "Mit Flüssigkeit, ausgewogener Ernährung und Bewegung kombinieren, um die Ergebnisse zu verstärken.",
+      "duracion": "30 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "40 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen",
+          "precio": "360 €"
+        }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "presoterapia",
+      "imagen": "presoterapia.png",
+      "categoria": "corporal",
+      "nombre": "Pressotherapie",
+      "descripcion": "Nicht-invasive Behandlung mit sequenziellem Druck auf Beine, Bauch und Arme, die Lymphdrainage, Durchblutung und Zellregeneration anregt.",
+      "paraQuien": "Für Menschen mit müden Beinen, Wassereinlagerungen, schlechter Durchblutung oder vielen Stunden im Stehen/Sitzen.",
+      "comoFunciona": [
+        "Luftdruck wird sequenziell auf Beine, Bauch, Arme oder andere Bereiche ausgeübt.",
+        "Er regt Lymphdrainage und Durchblutung an und hilft, Toxine und eingelagerte Flüssigkeit auszuleiten.",
+        "Er fördert die Sauerstoffversorgung des Gewebes und die Hautelastizität — mit sofortigem Leichtigkeitsgefühl."
+      ],
+      "beneficios": [
+        "Fördert das Ausleiten von Flüssigkeit und Toxinen",
+        "Verbessert Elastizität und Festigkeit der Haut",
+        "Reduziert das Schweregefühl in den Beinen",
+        "Regt Durchblutung und Sauerstoffversorgung an",
+        "Angenehmes, sicheres, schmerzfreies Verfahren",
+        "Entspannender, revitalisierender Effekt"
+      ],
+      "incluye": [
+        "Leitet eingelagerte Flüssigkeit aus",
+        "Verbessert die Elastizität",
+        "Entlastet müde Beine",
+        "Regt die Durchblutung an",
+        "Angenehm und entspannend"
+      ],
+      "idealPara": "Menschen, die Durchblutung und Lymphdrainage verbessern und Wassereinlagerungen reduzieren möchten.",
+      "duracion": "30 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "25 €"
+        },
+        {
+          "concepto": "Paket 5 Sitzungen",
+          "precio": "100 €"
+        }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "drenaje-linfatico-postop",
+      "imagen": "drenaje-linfatico-postop.png",
+      "categoria": "corporal",
+      "nombre": "Postoperative Lymphdrainage",
+      "descripcion": "Spezialisierte Behandlung nach chirurgischen Eingriffen, um die Erholung zu beschleunigen, Schwellungen zu mindern und die ästhetischen Ergebnisse zu verbessern.",
+      "paraQuien": "Für frisch operierte Patientinnen (Lipo, Bauchdeckenstraffung, Brustvergrößerung, Lifting) oder Menschen mit Ödemen und starken Einlagerungen.",
+      "comoFunciona": [
+        "Sanfte, langsame, präzise Griffe, die das Lymphsystem stimulieren.",
+        "Sie helfen, eingelagerte Flüssigkeit, Toxine und nach der Operation angesammelte Narkosereste auszuleiten.",
+        "Sie fördern das Abschwellen des Gewebes, beugen Fibrosen vor und verbessern sichtbar die Heilung."
+      ],
+      "beneficios": [
+        "Mindert Schwellungen und Ödeme",
+        "Verringert Hämatome und Beschwerden",
+        "Beugt Fibrosen und Verhärtungen vor",
+        "Verbessert die Heilung",
+        "Beschleunigt die postoperative Erholung",
+        "Verbessert die ästhetischen Endergebnisse"
+      ],
+      "incluye": [
+        "Mindert Schwellungen und Ödeme",
+        "Verringert Hämatome",
+        "Beugt Fibrosen vor",
+        "Verbessert die Heilung",
+        "Beschleunigt die Erholung"
+      ],
+      "idealPara": "Nach Fettabsaugung, Bauchdeckenstraffung, Brustvergrößerung, Lifting oder anderen ästhetischen Eingriffen. Auch bei Wassereinlagerungen oder Ödemen.",
+      "recomendaciones": "Beginn nach ärztlicher Anweisung. Viel Wasser trinken und die professionellen Vorgaben für eine optimale Erholung befolgen.",
+      "duracion": "45 oder 60 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung 45 Min.",
+          "precio": "65 €"
+        },
+        {
+          "concepto": "Sitzung 60 Min.",
+          "precio": "75 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen 45 Min.",
+          "precio": "600 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen 60 Min.",
+          "precio": "700 €"
+        }
+      ],
+      "packDestacado": 2
+    },
+    {
+      "slug": "dolor-muscular-corporal",
+      "imagen": "masajes.png",
+      "categoria": "corporal",
+      "nombre": "Verabschieden Sie den Muskelschmerz",
+      "descripcion": "Nicht-invasive Körperbehandlung für Schultern, Rücken, Lendenbereich, Knie oder müde Beine. Entspannt die Muskulatur, lindert Verspannung und fördert die Regeneration.",
+      "paraQuien": "Für alle mit chronischem Muskelschmerz, arbeitsbedingter Verspannung oder Überlastung in bestimmten Körperzonen.",
+      "comoFunciona": [
+        "Kombinierte Techniken, die auf die verspannte Muskulatur und die Schmerzpunkte wirken.",
+        "Sie verbessern die lokale Durchblutung, versorgen das Gewebe mit Sauerstoff und lösen kontrahierte Muskelfasern.",
+        "Progressives Programm: Über mehrere Sitzungen hält die Linderung an und die Zone gewinnt ihre Funktion zurück."
+      ],
+      "beneficios": [
+        "Weniger Muskelschmerz ab den ersten Sitzungen",
+        "Fördert Entspannung und Wohlbefinden",
+        "Verbessert Durchblutung und Regeneration der behandelten Zonen",
+        "Entlastet müde oder schwere Beine",
+        "Angenehmes, nicht-invasives, sicheres Verfahren",
+        "Sichtbare Ergebnisse über mehrere Sitzungen"
+      ],
+      "incluye": [
+        "Reduziert Muskelschmerz",
+        "Fördert Entspannung",
+        "Verbessert die Durchblutung",
+        "Entlastet müde Beine",
+        "Angenehm und sicher"
+      ],
+      "idealPara": "Menschen mit Muskelbeschwerden, angestauter Verspannung oder Überlastung in verschiedenen Körperzonen.",
+      "duracion": "45 Minuten pro Zone",
+      "precios": [
+        {
+          "concepto": "Körpersitzung (45 Min. pro Zone)",
+          "precio": "65 €"
+        },
+        {
+          "concepto": "Paket 5 Sitzungen (30 Min.)",
+          "precio": "225 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen (30 Min.)",
+          "precio": "400 €"
+        }
+      ],
+      "packDestacado": 2
+    },
+    {
+      "slug": "triple-accion-anticelulitica",
+      "imagen": "triple-accion-anticelulitica.png",
+      "categoria": "corporal",
+      "nombre": "Dreifach-Wirkung gegen Cellulite, straffend",
+      "descripcion": "Synergetische Kombination aus INDIBA Radiofrequenz, thermischem Gua Sha und sequenzieller Pressotherapie in einer einzigen Sitzung. Löst die fibrösen Septen, regt das Kollagen an und drainiert Wassereinlagerungen.",
+      "paraQuien": "Für alle, die Cellulite, Orangenhaut und Körpererschlaffung mit einem kombinierten Protokoll behandeln möchten, das in einer Sitzung auf Ursache, Textur und Einlagerungen wirkt.",
+      "comoFunciona": [
+        "INDIBA Radiofrequenz: regt den Zellstoffwechsel an, versorgt das Fettgewebe mit Sauerstoff und fördert die Kollagensynthese.",
+        "Thermisches Gua Sha: fortgeschrittene manuelle Technik mit Thermokopf, die die fibrösen Septen löst und die Orangenhaut glättet.",
+        "Sequenzielle Pressotherapie: pneumatische Massage, die freigesetzte Flüssigkeit und Toxine mobilisiert und die tiefe Lymphdrainage aktiviert."
+      ],
+      "beneficios": [
+        "Dreifache Technologie in einer kombinierten Sitzung",
+        "Löst die fibrösen Septen, die die Cellulite verursachen",
+        "Regt die Kollagenproduktion an und strafft",
+        "Aktiviert die Lymphdrainage und reduziert Einlagerungen",
+        "Glättet die Orangenhaut und verbessert die Textur",
+        "Definiertere Kontur und wiederhergestellte Festigkeit"
+      ],
+      "incluye": [
+        "30 Min. pro Zone: Massage + INDIBA Radiofrequenz + thermisches Gua Sha",
+        "30 Min. sequenzielle Pressotherapie",
+        "Phase 1 (Sitzungen 1–3): tiefe Drainage und weiche Haut",
+        "Phase 2 (Sitzungen 4–8): Remodellierung und Glätten der Dellen",
+        "Endphase: definierte Kontur und wiederhergestellte Festigkeit"
+      ],
+      "idealPara": "Menschen mit Cellulite, Orangenhaut, Wassereinlagerungen oder Körpererschlaffung, die eine intensive kombinierte Behandlung suchen.",
+      "duracion": "60 Minuten (30 Min. pro Zone + 30 Min. Pressotherapie)",
+      "precios": [
+        {
+          "concepto": "Einzelsitzung",
+          "precio": "90 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen",
+          "precio": "650 €"
+        }
+      ],
+      "packDestacado": 1
+    },
+    {
+      "slug": "masaje-corporal",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Körpermassage",
+      "descripcion": "Behandlung des Muskel-Skelett-Systems, die Verspannungen löst, die Muskeln entspannt und beruhigend und revitalisierend wirkt.",
+      "paraQuien": "Für alle, die durch Arbeit, Sport oder Stress Verspannung ansammeln und ein tiefes Abschalten von Körper und Geist brauchen.",
+      "comoFunciona": [
+        "Aktive, präzise Techniken, die auf Muskeln, Sehnen und Gelenke wirken.",
+        "Sie stimulieren das Nervensystem und fördern die tiefe Entspannung.",
+        "Sie verbessern die Durchblutung und tonisieren die Muskulatur — mit revitalisierendem Gefühl."
+      ],
+      "beneficios": [
+        "Löst angestaute Muskelverspannungen",
+        "Entspannt und tonisiert den ganzen Körper",
+        "Stimuliert das Nervensystem (beruhigender Effekt)",
+        "Verbessert die Durchblutung",
+        "Reduziert Stress und körperliche Erschöpfung"
+      ],
+      "incluye": [
+        "Löst Verspannungen",
+        "Entspannt und tonisiert",
+        "Beruhigender Effekt",
+        "Verbessert die Durchblutung",
+        "Reduziert Stress"
+      ],
+      "idealPara": "Alle, die Beschwerden und Verhärtungen lindern oder abschalten und tief entspannen möchten.",
+      "recomendaciones": "Nach der Massage mit Flüssigkeit und sanftem Dehnen ergänzen.",
+      "duracion": "15 bis 60 Minuten",
+      "precios": [
+        {
+          "concepto": "60 Minuten",
+          "precio": "85 €"
+        },
+        {
+          "concepto": "50 Minuten",
+          "precio": "85 €"
+        },
+        {
+          "concepto": "45 Minuten",
+          "precio": "75 €"
+        },
+        {
+          "concepto": "30 Minuten",
+          "precio": "55 €"
+        },
+        {
+          "concepto": "15 Minuten",
+          "precio": "35 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-relajante",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Entspannungsmassage",
+      "descripcion": "Massage mit 100 % natürlichen Pflanzen- und ätherischen Ölen. Ideal, um Stress, Muskelverspannung und Verhärtungen zu lindern.",
+      "paraQuien": "Für alle, die vollkommenes Abschalten, Stresslinderung und ein entspannendes Sinneserlebnis suchen.",
+      "comoFunciona": [
+        "Weite, präzise Bewegungen über Beine, Arme, Nacken und Rücken mit natürlichen Pflanzen- und ätherischen Ölen.",
+        "Sie lösen angestaute Verspannung und schenken ein tiefes Gefühl körperlichen und mentalen Wohlbefindens.",
+        "Die ätherischen Öle verstärken die entspannende Wirkung über den Geruchssinn und den Hautkontakt."
+      ],
+      "beneficios": [
+        "Lindert Stress, Anspannung und Nervosität",
+        "Löst Verhärtungen und Muskelverspannung",
+        "Regt die Durchblutung an",
+        "Erleichtert das Ausleiten von Toxinen",
+        "Entspannendes, wohltuendes Erlebnis"
+      ],
+      "incluye": [
+        "Lindert Stress",
+        "Löst Verhärtungen",
+        "Regt die Durchblutung an",
+        "Erleichtert das Ausleiten von Toxinen",
+        "Entspannendes Erlebnis"
+      ],
+      "idealPara": "Regelmäßige Entspannungssitzungen oder nach intensiven Arbeitstagen.",
+      "recomendaciones": "Mit Flüssigkeit und tiefer Atmung kombinieren, um die Wirkung zu verstärken.",
+      "duracion": "15 bis 60 Minuten",
+      "precios": [
+        {
+          "concepto": "60 Minuten",
+          "precio": "75 €"
+        },
+        {
+          "concepto": "45 Minuten",
+          "precio": "65 €"
+        },
+        {
+          "concepto": "30 Minuten",
+          "precio": "45 €"
+        },
+        {
+          "concepto": "15 Minuten",
+          "precio": "25 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-craneo-facial-cervical",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Kopf-Gesicht-Nacken-Massage",
+      "descripcion": "Kombiniert Massagetechniken an Gesicht, Kopf, Nacken, Trapezmuskeln und Kopfhaut mit ätherischen Ölen. Löst Stress und verbessert die Beweglichkeit.",
+      "paraQuien": "Für alle mit Spannungskopfschmerzen, Nackenverhärtungen oder angestautem mentalem Stress.",
+      "comoFunciona": [
+        "Sanfte, präzise Bewegungen über Gesicht, Schädel, Halswirbelsäule und Schultern mit ätherischen Ölen.",
+        "Sie lösen Verhärtungen in besonders stressempfindlichen Zonen.",
+        "Sie regen die lokale Durchblutung an und verbessern Beweglichkeit und Tonus der Nackenmuskulatur."
+      ],
+      "beneficios": [
+        "Löst Stress und Anspannung",
+        "Entspannt die Gesichts- und Nackenmuskulatur",
+        "Verbessert Beweglichkeit und Muskeltonus",
+        "Lindert Verspannung in Nacken, Schultern und Kopf",
+        "Regt Durchblutung und allgemeines Wohlbefinden an"
+      ],
+      "incluye": [
+        "Löst Stress",
+        "Entspannt Gesichts- und Nackenmuskulatur",
+        "Verbessert die Beweglichkeit",
+        "Lindert Verspannung",
+        "Regt die Durchblutung an"
+      ],
+      "idealPara": "Alle, die Linderung von Spannungskopfschmerzen, Nackenverhärtungen oder mentalem Stress suchen.",
+      "recomendaciones": "Unmittelbar nach der Massage intensive körperliche Aktivität meiden, um die Wirkung zu verlängern.",
+      "duracion": "30 oder 45 Minuten",
+      "precios": [
+        {
+          "concepto": "30 Minuten",
+          "precio": "50 €"
+        },
+        {
+          "concepto": "45 Minuten",
+          "precio": "75 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-podal",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Fußmassage",
+      "descripcion": "Massage, die die Füße revitalisiert und entlastet, die Durchblutung verbessert und Wohlbefinden im ganzen Körper schenkt.",
+      "paraQuien": "Für alle, die viele Stunden stehen, für Sportler oder Menschen mit müden/geschwollenen Füßen.",
+      "comoFunciona": [
+        "Drucktechniken und präzise Bewegungen über die ganze Fußsohle und den Fußrücken.",
+        "Sie regen die lokale Blut- und Lymphzirkulation an.",
+        "Die Wirkung erstreckt sich auf Beine, Arme und Nacken und erzeugt ein allgemeines Entspannungsgefühl."
+      ],
+      "beneficios": [
+        "Revitalisiert müde Füße",
+        "Verbessert Blut- und Lymphzirkulation",
+        "Lindert Verspannung in Beinen, Armen und Nacken",
+        "Entspannt und mindert Stress",
+        "Regt Energie und allgemeines Wohlbefinden an"
+      ],
+      "incluye": [
+        "Revitalisiert müde Füße",
+        "Verbessert die Durchblutung",
+        "Lindert Verspannung in den Beinen",
+        "Entspannt",
+        "Regt das Wohlbefinden an"
+      ],
+      "idealPara": "Menschen, die viele Stunden stehen, Sportler oder geschwollene Füße.",
+      "recomendaciones": "Regelmäßig durchführen, um die Durchblutung aktiv zu halten. Mit Flüssigkeit und Dehnen kombinieren.",
+      "duracion": "30 oder 45 Minuten",
+      "precios": [
+        {
+          "concepto": "45 Minuten",
+          "precio": "65 €"
+        },
+        {
+          "concepto": "30 Minuten",
+          "precio": "45 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-piernas-cansadas",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Massage für müde Beine",
+      "descripcion": "Spezialisierte Massage zur Entlastung müder, schwerer oder geschwollener Beine. Regt Durchblutung und Lymphdrainage an.",
+      "paraQuien": "Für Frauen mit Wassereinlagerungen, leichten Krampfadern, Schwangere oder Menschen mit chronischem Schweregefühl.",
+      "comoFunciona": [
+        "Rhythmische, präzise Bewegungen über das ganze Bein, vom Knöchel zur Hüfte.",
+        "Sie fördern das Ausleiten eingelagerter Flüssigkeit und verbessern den venösen und lymphatischen Rückfluss.",
+        "Sie mindern Schwere- und Schwellungsgefühl — die Beine fühlen sich sofort leichter an."
+      ],
+      "beneficios": [
+        "Lindert das Gefühl müder Beine",
+        "Reduziert Schwellungen und Ödeme",
+        "Verbessert Blut- und Lymphzirkulation",
+        "Fördert das Ausleiten von Toxinen",
+        "Entspannt und tonisiert die Beinmuskulatur"
+      ],
+      "incluye": [
+        "Entlastet müde Beine",
+        "Reduziert Schwellungen",
+        "Verbessert die Durchblutung",
+        "Leitet Toxine aus",
+        "Entspannt und tonisiert"
+      ],
+      "idealPara": "Frauen mit Wassereinlagerungen, Schwangere, Menschen mit chronischem Schweregefühl oder langem Sitzen.",
+      "recomendaciones": "Nach der Massage trinken, gehen und die Beine hochlegen, um die Ergebnisse zu erhalten.",
+      "duracion": "30 oder 45 Minuten",
+      "precios": [
+        {
+          "concepto": "45 Minuten",
+          "precio": "65 €"
+        },
+        {
+          "concepto": "30 Minuten",
+          "precio": "45 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-aloe-vera",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Feuchtigkeitsmassage mit Aloe Vera",
+      "descripcion": "Körperpackung und Massage mit purer Aloe Vera, um die Haut zu hydratisieren, zu beruhigen und zu regenerieren. Ideal für sensibilisierte, trockene Haut oder nach der Sonne.",
+      "paraQuien": "Für sensibilisierte, trockene Haut, nach intensiver Sonnenexposition oder bei allgemeinem Spannungsgefühl.",
+      "comoFunciona": [
+        "Eine Packung mit purer Aloe Vera wird auf den ganzen Körper aufgetragen — mit ihren beruhigenden, regenerierenden Eigenschaften.",
+        "Anschließend folgt eine Massage, die die Aufnahme der Aloe erleichtert.",
+        "Sie verbessert die Durchblutung und stellt das natürliche Gleichgewicht der Haut wieder her."
+      ],
+      "beneficios": [
+        "Hydratisiert die Haut in der Tiefe",
+        "Beruhigt Rötungen und Empfindlichkeit",
+        "Fördert die Hautregeneration",
+        "Entspannt und lockert die Muskeln",
+        "Bringt die Haut nach der Sonne in ihren natürlichen Zustand zurück"
+      ],
+      "incluye": [
+        "Tiefe Hydratation",
+        "Beruhigt Rötungen",
+        "Hautregeneration",
+        "Entspannt die Muskeln",
+        "Erholung nach der Sonne"
+      ],
+      "idealPara": "Trockene, gereizte Haut oder nach intensiver Sonnenexposition.",
+      "recomendaciones": "Mit Sonnenschutz und täglicher Feuchtigkeitspflege ergänzen.",
+      "duracion": "45 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "75 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-facial-colageno",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Gesichtsmassage mit Kollagen",
+      "descripcion": "Professionelle Massage mit Meereskollagen-Serum. Ideal für reife oder dehydrierte Haut — tiefe Hydratation und Anti-Aging-Effekt.",
+      "paraQuien": "Für reife oder dehydrierte Haut, die einen manuellen Verjüngungseffekt möchte — ohne Nadeln, ohne Apparate.",
+      "comoFunciona": [
+        "Die Massage regt Durchblutung und Gesichtsdrainage an und weckt die Mikrozirkulation.",
+        "Das Meereskollagen dringt in die Haut ein und hilft, Festigkeit, Geschmeidigkeit und natürlichen Ton zu erhalten.",
+        "Sie fördert die Hautregeneration und glättet sichtbar Falten und Mimiklinien."
+      ],
+      "beneficios": [
+        "Tiefe, langanhaltende Hydratation",
+        "Strafft und verbessert die Elastizität",
+        "Mildert Falten und Mimiklinien",
+        "Glättet und repariert das Hautrelief",
+        "Fördert strahlendere, jüngere Haut"
+      ],
+      "incluye": [
+        "Tiefe Hydratation",
+        "Strafft und verbessert die Elastizität",
+        "Mildert Falten",
+        "Glättet das Hautrelief",
+        "Strahlende, junge Haut"
+      ],
+      "idealPara": "Reife, dehydrierte Haut oder Haut mit Mimiklinien.",
+      "recomendaciones": "Mit einer Gesichtspflege-Routine und Sonnenschutz ergänzen, um die Ergebnisse zu verlängern.",
+      "duracion": "35 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "60 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "masaje-facial-vitamina-c",
+      "imagen": "masajes.png",
+      "categoria": "masajes",
+      "nombre": "Gesichtsmassage mit Vitamin C",
+      "descripcion": "Massage mit hochkonzentriertem Vitamin C. Ideal für fahle, müde oder gestresste Haut. Antioxidantien, die freie Radikale bekämpfen.",
+      "paraQuien": "Für fahle Haut, Raucherhaut, Haut mit Umweltbelastung oder ungleichmäßigem Ton, die Ausstrahlung braucht.",
+      "comoFunciona": [
+        "Die Massage regt Blut- und Lymphzirkulation des Gesichts an und weckt die Sauerstoffversorgung.",
+        "Das Vitamin-C-Konzentrat dringt in die Haut ein und liefert Antioxidantien gegen freie Radikale.",
+        "Sie fördert die Zellregeneration und gibt Ausstrahlung und einen gleichmäßigen Ton zurück."
+      ],
+      "beneficios": [
+        "Gibt der Haut Ausstrahlung und Ton zurück",
+        "Strafft und verbessert die Elastizität",
+        "Antioxidative, regenerierende Wirkung",
+        "Glättet feine Linien und Hautmüdigkeit",
+        "Verbessert Textur und Vitalität des Gesichts"
+      ],
+      "incluye": [
+        "Gibt Ausstrahlung zurück",
+        "Strafft und verbessert die Elastizität",
+        "Antioxidative Wirkung",
+        "Glättet feine Linien",
+        "Verbessert Textur und Vitalität"
+      ],
+      "idealPara": "Fahle, müde oder gestresste Haut, mit ungleichmäßigem Ton oder Umweltbelastung.",
+      "recomendaciones": "Nach der Behandlung Sonnenschutz auftragen, um die Ergebnisse zu maximieren und die Haut zu schützen.",
+      "duracion": "35 Minuten",
+      "precios": [
+        {
+          "concepto": "Sitzung",
+          "precio": "50 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "pestanas-pelo-a-pelo",
+      "imagen": "pestanas-pelo-a-pelo.png",
+      "categoria": "estetica-decorativa",
+      "nombre": "Wimpern einzeln appliziert",
+      "descripcion": "Wimpernverlängerung, bei der auf jede Naturwimper eine künstliche Wimper gesetzt wird — für einen längeren, definierteren und natürlichen Effekt.",
+      "paraQuien": "Für alle, die geschminkt aufwachen, jeden Morgen Zeit sparen und den Blick dauerhaft betonen möchten.",
+      "comoFunciona": [
+        "Individuelle Applikation auf jedem natürlichen Härchen, eines nach dem anderen.",
+        "Ihre Augenform und der gewünschte Stil werden respektiert (klassisch, Volumen, Foxy, Wispy, Hawaiianisch).",
+        "Das Ergebnis ist ein intensiverer Blick mit mehr Volumen und Länge — elegant und natürlich."
+      ],
+      "beneficios": [
+        "Verlängert und definiert die Wimpern auf natürliche Weise",
+        "Bringt Volumen und Dichte",
+        "Semipermanenter Effekt",
+        "Erspart die tägliche Wimperntusche",
+        "Persönliches Ergebnis nach Ihrem Stil"
+      ],
+      "incluye": [
+        "Verlängert und definiert die Wimpern",
+        "Bringt Volumen und Dichte",
+        "Semipermanenter Effekt",
+        "Erspart tägliche Tusche",
+        "Persönliches Ergebnis"
+      ],
+      "idealPara": "Alle, die den Blick ohne tägliches Make-up betonen möchten, mit persönlichem Stil.",
+      "recomendaciones": "Auffüllen alle 15–20 Tage zum halben Preis. Vergeht mehr Zeit, kann der Preis je nach Zustand variieren.",
+      "duracion": "120 Minuten",
+      "precios": [
+        {
+          "concepto": "Klassisch (Neuanlage)",
+          "precio": "70 €"
+        },
+        {
+          "concepto": "Hawaiianisch (Neuanlage)",
+          "precio": "70 €"
+        },
+        {
+          "concepto": "Mega-Volumen (Neuanlage)",
+          "precio": "80 €"
+        },
+        {
+          "concepto": "Foxy Eyes (Neuanlage)",
+          "precio": "80 €"
+        },
+        {
+          "concepto": "Wispy (Neuanlage)",
+          "precio": "80 €"
+        },
+        {
+          "concepto": "Auffüllen Klassisch / Hawaiianisch / Volumen 3D",
+          "precio": "35 €"
+        },
+        {
+          "concepto": "Auffüllen Mega-Volumen / Foxy Eyes / Wispy",
+          "precio": "40 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "micropigmentacion",
+      "imagen": "micropigmentacion.png",
+      "categoria": "estetica-decorativa",
+      "nombre": "Micropigmentierung (semipermanentes Make-up)",
+      "descripcion": "Semipermanentes Make-up, das Brauen, Lippen und Augen mit natürlichen, dauerhaften Ergebnissen betont. Spezielle Pigmente und fortgeschrittene Techniken.",
+      "paraQuien": "Für alle, die täglich Schminkzeit sparen, asymmetrische Brauen definieren oder Lippen und Augen dauerhaft betonen möchten.",
+      "comoFunciona": [
+        "Ein persönliches Vorab-Design, an jedes Gesicht angepasst, garantiert ein harmonisches Ergebnis.",
+        "Pigmente werden mit einer sicheren, praktisch schmerzfreien Technik in die Haut eingebracht.",
+        "An den Brauen sind Härchentechnik oder Schattierung möglich, je nach gewünschtem Stil.",
+        "Kontrolle nach 30 Tagen inklusive, um das Ergebnis zu perfektionieren."
+      ],
+      "beneficios": [
+        "Sichtbare Ergebnisse ab der ersten Sitzung",
+        "Zeitersparnis beim täglichen Schminken",
+        "Bessere Symmetrie und Definition",
+        "Natürlicher, dauerhafter Effekt (über ein Jahr)",
+        "Sicheres, angenehmes Verfahren",
+        "Kontrolle nach 30 Tagen inklusive"
+      ],
+      "incluye": [
+        "Ergebnisse ab der ersten Sitzung",
+        "Tägliche Zeitersparnis",
+        "Bessere Symmetrie",
+        "Natürlicher, dauerhafter Effekt",
+        "Kontrolle nach 30 Tagen"
+      ],
+      "idealPara": "Alle, die Make-up sparen und Brauen, Lippen oder Augen dauerhaft definieren möchten.",
+      "recomendaciones": "Die angegebene Nachsorge befolgen, damit die Haut richtig heilt und das Pigment länger hält.",
+      "duracion": "120 Minuten",
+      "precios": [
+        {
+          "concepto": "Augen",
+          "precio": "300 €"
+        },
+        {
+          "concepto": "Lippen",
+          "precio": "300 €"
+        },
+        {
+          "concepto": "Brauen",
+          "precio": "300 €"
+        }
+      ],
+      "packDestacado": 0
+    },
+    {
+      "slug": "depilacion-ipl",
+      "imagen": "depilacion-ipl.png",
+      "categoria": "depilacion",
+      "nombre": "IPL-Haarentfernung",
+      "descripcion": "Intensives Pulslicht, das an der Haarwurzel wirkt und das Haar schrittweise schwächt. Sicher, angenehm und langanhaltend.",
+      "paraQuien": "Für alle, die Rasierer, Wachs und schmerzhaften Laser vergessen möchten. Ideal für alle Zonen, alle Hauttypen.",
+      "comoFunciona": [
+        "Die IPL-Technologie sendet Lichtimpulse, die vom Melanin des Haares aufgenommen werden.",
+        "Diese Energie wirkt direkt an der Wurzel und schwächt den Haarfollikel schrittweise.",
+        "Nach mehreren Sitzungen ist das Haar drastisch reduziert und die Haut bleibt glatt, ohne Reizung."
+      ],
+      "beneficios": [
+        "Schrittweise, langanhaltende Haarreduktion",
+        "Glattere Haut, ohne Reizung",
+        "Schnelle, praktisch schmerzfreie Behandlung",
+        "Geeignet für viele Körperzonen",
+        "Sichtbare Ergebnisse ab den ersten Sitzungen"
+      ],
+      "incluye": [
+        "Schrittweise Haarreduktion",
+        "Glattere Haut",
+        "Schnell und schmerzfrei",
+        "Viele Zonen",
+        "Ergebnisse ab den ersten Sitzungen"
+      ],
+      "idealPara": "Männer und Frauen, die eine dauerhafte Haarentfernung an jeder Zone suchen.",
+      "recomendaciones": "Sonne vor und nach der Behandlung meiden. Die Abstände zwischen den Sitzungen einhalten, für beste Ergebnisse.",
+      "duracion": "Variabel je nach Zone",
+      "precios": [
+        {
+          "concepto": "Kleine Zonen (Oberlippe, Kinn, Koteletten, Warzenhof, Finger, Hals, Hände, Brauenzwischenraum, Schläfen, Ohren, Wangen)",
+          "precio": "12 €"
+        },
+        {
+          "concepto": "Mittlere Zonen (komplettes Gesicht, Achseln, Leisten, Pofalte, Unterarme, Schambereich, Schultern)",
+          "precio": "25 €"
+        },
+        {
+          "concepto": "Große Zonen (halbes Bein, komplette Intimzone, Arme, Gesäß, Bauch, Brust, Rücken)",
+          "precio": "35 €"
+        },
+        {
+          "concepto": "Extragroße Zonen (komplette Beine, kompletter Rücken)",
+          "precio": "55 €"
+        },
+        {
+          "concepto": "Ganzer Körper",
+          "precio": "125 €"
+        },
+        {
+          "concepto": "Halber Körper (oben oder unten)",
+          "precio": "80 €"
+        },
+        {
+          "concepto": "ANGEBOT: Achseln + halbes Bein + Bikini komplett",
+          "precio": "85 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen (Angebot)",
+          "precio": "800 €"
+        }
+      ],
+      "packDestacado": 7
+    }
+  ]
+}

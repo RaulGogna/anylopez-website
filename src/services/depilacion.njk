@@ -1,21 +1,30 @@
 ---
 layout: base.njk
-title: "Depilación IPL en Benidorm — Pulsada intensa segura · AnyLopez"
-description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Benidorm. Equipo de calidad clínica, diagnóstico previo del fototipo y plan de sesiones según ciclo capilar real."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/services/depilacion/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code]['svc-depilacion'].title | safe }}"
+  description: "{{ i18n[l.code]['svc-depilacion'].description | safe }}"
 ---
-
+{%- set tx = i18n[l.code]['svc-depilacion'] %}
+{%- set tdata = catalogo[l.code] %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalSpecialty",
-  "name": "Depilación IPL AnyLopez",
-  "alternateName": "Depilación luz pulsada intensa",
-  "description": "Depilación con luz pulsada intensa (IPL) en AnyLopez Clínica Estética Benidorm. Equipo de calidad clínica, diagnóstico previo del fototipo y plan de sesiones según ciclo capilar real.",
-  "url": "{{ site.url }}/services/depilacion/",
+  "name": "{{ tx.jsonld.name | safe }}",
+  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
+  "description": "{{ tx.jsonld.description | safe }}",
+  "url": "{{ site.url }}{{ l.prefix }}/services/depilacion/",
   "relevantSpecialty": [
-    "Depilación IPL",
-    "Luz Pulsada Intensa",
-    "Reducción de vello permanente"
+{%- for s in tx.jsonld.specialties %}
+    "{{ s | safe }}"{% if not loop.last %},{% endif %}
+{%- endfor %}
   ],
   "provider": { "@id": "{{ site.url }}/#clinic" }
 }
@@ -26,11 +35,9 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Cuántas sesiones necesito?", "acceptedAnswer": { "@type": "Answer", "text": "Entre 6 y 10 sesiones espaciadas según zona y ciclo capilar. Cara y axilas: cadencia 4-6 semanas. Piernas y cuerpo: 6-8 semanas. Mantenimiento puntual una vez al año tras completar." } },
-    { "@type": "Question", "name": "¿Duele?", "acceptedAnswer": { "@type": "Answer", "text": "Sensación de pellizco breve con cada pulso de luz. Mucho más cómodo que cera caliente o láser diodo. La mayoría no requiere anestesia." } },
-    { "@type": "Question", "name": "¿En verano puedo hacer IPL?", "acceptedAnswer": { "@type": "Answer", "text": "Idealmente IPL se hace fuera de exposición solar intensa. Se puede en verano si tienes piel sin bronceado y aplicas protector solar estricto. Para pieles bronceadas mejor esperar al otoño-invierno." } },
-    { "@type": "Question", "name": "¿Embarazo o lactancia?", "acceptedAnswer": { "@type": "Answer", "text": "IPL no está validado para embarazo y lactancia por precaución, aunque no hay evidencia de daño. Esperamos a fin de lactancia para empezar plan." } },
-    { "@type": "Question", "name": "¿IPL vs láser diodo?", "acceptedAnswer": { "@type": "Answer", "text": "Ambos reducen vello permanentemente. IPL usa luz pulsada de espectro amplio (más flexible para distintas zonas y pieles). Láser diodo es luz coherente única (más eficaz en vello muy oscuro y piel clara, menos versátil)." } }
+{%- for f in tx.jsonld.faq %}
+    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+{%- endfor %}
   ]
 }
 </script>
@@ -220,14 +227,14 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
   .trat-card-incluye li {
     font-size: 13.5px;
     color: var(--text-mid);
-    padding-left: 16px;
+    padding-inline-start: 16px;
     position: relative;
     line-height: 1.55;
   }
   .trat-card-incluye li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     color: var(--terra);
     font-weight: 700;
     font-size: 12px;
@@ -264,7 +271,7 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
     cursor: pointer;
     padding: 0;
     transition: color 0.2s;
-    text-align: left;
+    text-align: start;
   }
   .trat-cta:hover { color: var(--terra); }
 
@@ -400,7 +407,7 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     color: var(--dark);
-    text-align: left;
+    text-align: start;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -471,11 +478,11 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ '/' | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <a href="{{ '/services/' | url }}">Servicios</a>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>
-    <span>Depilación IPL</span>
+    <span>{{ tx.breadcrumb.current }}</span>
   </div>
 </div>
 
@@ -486,7 +493,7 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
       <source srcset="{{ '/images/tratamientos/depilacion-ipl.webp' | url }}" type="image/webp">
       <img
         src="{{ '/images/tratamientos/depilacion-ipl.png' | url }}"
-        alt="Depilación IPL en AnyLopez Clínica Estética Benidorm"
+        alt="{{ tx.hero.imgAlt }}"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -498,18 +505,18 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
   <div class="cat-page-hero-inner">
     <div class="container">
       <div class="cat-page-hero-content">
-        <span class="eyebrow" style="color: var(--gold);">Depilación IPL · Pulsada intensa</span>
-        <h1>Depilación IPL en serio. <em>No la del centro de barrio.</em></h1>
-        <p class="lead">Cera, cuchilla, cremas... llevas años con depilaciones temporales que se acumulan en gastos y en piel maltratada. La IPL bien aplicada reduce vello permanentemente — pero solo bien aplicada. Equipo de calidad clínica y plan según tu fototipo y ciclo capilar real, no protocolo único de cadena low-cost.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.hero.eyebrow }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ tx.hero.lead_html | safe }}</p>
         <div class="cat-page-hero-ctas">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
         </div>
         <div class="cat-page-hero-meta">
           <span class="stars">★★★★★</span>
-          <strong>{{ reviews.rating }} · {{ reviews.count }} reseñas Google</strong>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
           <span class="dot">·</span>
-          <span>Diagnóstico inicial sin coste</span>
+          <span>{{ tx.hero.free }}</span>
         </div>
       </div>
     </div>
@@ -520,23 +527,17 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <section class="cat-page-pain">
   <div class="container">
     <div class="cat-page-pain-head">
-      <span class="eyebrow">¿Te suena alguna de estas?</span>
-      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
-      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+      <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+      <h2>{{ tx.pain.h2 }}</h2>
+      <p>{{ tx.pain.p_html | safe }}</p>
     </div>
     <div class="cat-page-pain-grid">
+      {%- for it in tx.pain.items %}
       <div class="cat-page-pain-item">
-        <h3>Te has cansado del rasurado, la cera y los depilatorios</h3>
-        <p>Y la piel rota lo demuestra. Foliculitis, pelos enquistados, irritación constante. Tu piel pide algo definitivo.</p>
+        <h3>{{ it.h3_html | safe }}</h3>
+        <p>{{ it.p_html | safe }}</p>
       </div>
-      <div class="cat-page-pain-item">
-        <h3>Has probado IPL en cadenas low-cost sin resultados duraderos.</h3>
-        <p>Aparatos baratos, parámetros únicos, "vente cada 15 días" — luego el vello vuelve igual. Tecnología sin criterio no funciona.</p>
-      </div>
-      <div class="cat-page-pain-item">
-        <h3>Tienes piel sensible, vello fino o claro, o fototipo alto</h3>
-        <p>Y no sabes si funcionará. La respuesta corta: con equipo profesional y diagnóstico previo, sí — con aparato genérico, no.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -545,53 +546,20 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <section class="cat-page-why">
   <div class="container">
     <div class="cat-page-why-head">
-      <span class="eyebrow">Por qué la IPL en AnyLopez funciona</span>
-      <h2>Seis razones por las que aquí funciona donde otros sitios no.</h2>
-      <p>No es marketing. Es equipo de calidad clínica, diagnóstico previo y criterio caso a caso.</p>
+      <span class="eyebrow">{{ tx.why.eyebrow }}</span>
+      <h2>{{ tx.why.h2_html | safe }}</h2>
+      <p>{{ tx.why.p_html | safe }}</p>
     </div>
     <div class="cat-page-why-grid">
+      {%- for it in tx.why.items %}
       <div class="cat-page-reason">
-        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-num">0{{ loop.index }}</div>
         <div class="cat-page-reason-body">
-          <h3>Equipo IPL de calidad clínica</h3>
-          <p>No es aparato de Amazon ni de bazar low-cost. Tecnología profesional con parámetros ajustables — la diferencia entre reducir vello y no.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">02</div>
-        <div class="cat-page-reason-body">
-          <h3>Diagnóstico previo del fototipo y vello</h3>
-          <p>Pieles claras con vello oscuro responden distinto a pieles morenas con vello fino. Sin diagnóstico, mal pronóstico. Con diagnóstico, plan eficaz.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">03</div>
-        <div class="cat-page-reason-body">
-          <h3>Sesiones espaciadas según ciclo capilar real</h3>
-          <p>No "vente cada 15 días" para acumular sesiones — sino respetando fase anágena del vello (la única en la que IPL funciona). Cada zona tiene su cadencia.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">04</div>
-        <div class="cat-page-reason-body">
-          <h3>Cómoda, sin dolor real</h3>
-          <p>Sensación de pellizco breve por luz pulsada. Sin agujas, sin cera caliente, sin pelos enquistados.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">05</div>
-        <div class="cat-page-reason-body">
-          <h3>Compatible con piel sensible y todo tipo de fototipos</h3>
-          <p>Con parámetros adaptados, IPL es seguro en pieles sensibles. Para fototipos altos (más oscuros) usamos protocolos específicos.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">06</div>
-        <div class="cat-page-reason-body">
-          <h3>Aplica quien sabe leer tu piel</h3>
-          <p>Décadas de experiencia ajustando parámetros caso por caso. La diferencia entre IPL eficaz y placebo.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -600,12 +568,12 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <section class="cat-page-section">
   <div class="container">
     <div class="cat-page-section-head">
-      <span class="eyebrow">Un protocolo · todas las zonas</span>
-      <h2>El tratamiento de depilación.</h2>
-      <p>Pulsa la tarjeta para ver beneficios completos, todas las zonas con precio y packs.</p>
+      <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
+      <h2>{{ tx.grid.h2 }}</h2>
+      <p>{{ tx.grid.p }}</p>
     </div>
 
-    {% set catTrats = tratamientos.tratamientos | byCategory("depilacion") %}
+    {% set catTrats = tdata.tratamientos | byCategory("depilacion") %}
     <div class="cat-page-grid">
       {% for trat in catTrats %}
       <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
@@ -613,7 +581,7 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
           <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
           <img
             src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-            alt="{{ trat.nombre }} en AnyLopez Benidorm"
+            alt="{{ trat.nombre }} {{ tx.grid.altSuffix }}"
             class="trat-card-img"
             loading="lazy"
             decoding="async"
@@ -624,7 +592,7 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
         <div class="trat-card-body">
           <h3 class="trat-card-name">{{ trat.nombre }}</h3>
           <p class="trat-card-desc">{{ trat.descripcion }}</p>
-          <p class="trat-card-desc"><strong>Para quién:</strong> {{ trat.paraQuien }}</p>
+          <p class="trat-card-desc"><strong>{{ tx.grid.forWhom_html | safe }}</strong> {{ trat.paraQuien }}</p>
 
           {% if trat.incluye %}
           <ul class="trat-card-incluye">
@@ -645,8 +613,8 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
               type="button"
               class="trat-cta trat-card-trigger"
               data-slug="{{ trat.slug }}"
-              aria-label="Ver detalles de {{ trat.nombre }}"
-            >Ver todas las zonas y precios →</button>
+              aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
+            >{{ tx.grid.detailsCta }}</button>
           </div>
         </div>
       </article>
@@ -659,10 +627,10 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <section class="cat-page-xsell">
   <div class="container">
     <div class="cat-page-xsell-inner">
-      <span class="eyebrow">Después de IPL</span>
-      <h2>Una piel sin vello <em>se cuida diferente.</em></h2>
-      <p>Tras un protocolo IPL, la piel queda más suave y receptiva — momento perfecto para incorporar limpiezas faciales o masajes regeneradores como mantenimiento integral.</p>
-      <a href="{{ '/services/masajes/' | url }}" class="btn btn-accent">Ver masajes →</a>
+      <span class="eyebrow">{{ tx.xsell.eyebrow }}</span>
+      <h2>{{ tx.xsell.h2_html | safe }}</h2>
+      <p>{{ tx.xsell.p }}</p>
+      <a href="{{ (l.prefix + '/services/masajes/') | url }}" class="btn btn-accent">{{ tx.xsell.cta }}</a>
     </div>
   </div>
 </section>
@@ -671,29 +639,19 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <section class="cat-page-tests">
   <div class="container">
     <div class="cat-page-tests-head">
-      <span class="eyebrow">Pacientes reales</span>
-      <h2>Resultados que se notan, y se cuentan.</h2>
-      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
     </div>
     <div class="cat-page-tests-grid">
+      {%- for it in tx.tests.items %}
       <div class="cat-page-test">
         <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Después de probar IPL en otra cadena con resultado mediocre, aquí en 6 sesiones tengo zona perfectamente reducida. La diferencia es la calidad del equipo y el diagnóstico previo."</p>
-        <div class="cat-page-test-author">Cristina M.</div>
-        <div class="cat-page-test-meta">Paciente · IPL piernas completas</div>
+        <p class="cat-page-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="cat-page-test-author">{{ it.author }}</div>
+        <div class="cat-page-test-meta">{{ it.meta }}</div>
       </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Mi piel es muy sensible y temía la depilación láser/IPL tras malas experiencias. Aquí ajustaron parámetros desde la primera sesión y cero irritación."</p>
-        <div class="cat-page-test-author">Inés P.</div>
-        <div class="cat-page-test-meta">Paciente · IPL ingles</div>
-      </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Llevaba años rasurándome la barba (mujer con vello facial por SOP) y era infierno. IPL facial con protocolo específico ha cambiado mi vida. La psicología detrás también la trabajan."</p>
-        <div class="cat-page-test-author">Paciente verificada</div>
-        <div class="cat-page-test-meta">Reseña Google</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -702,39 +660,20 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <section class="cat-page-process">
   <div class="container">
     <div class="cat-page-process-head">
-      <span class="eyebrow">¿Cómo lo empezamos?</span>
-      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
-      <p>Desde tu primer mensaje hasta que ves la primera sesión pasan menos de dos semanas.</p>
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ tx.process.p }}</p>
     </div>
     <div class="cat-page-steps">
+      {%- for it in tx.process.steps %}
       <div class="cat-page-step">
-        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-num">{{ loop.index }}</div>
         <div class="cat-page-step-body">
-          <h3>Reservas tu valoración</h3>
-          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+          <h3>{{ it.h3_html | safe }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">2</div>
-        <div class="cat-page-step-body">
-          <h3>Diagnóstico fototipo + tipo vello</h3>
-          <p>Evaluamos color de piel, color y grosor del vello, antecedentes y zona objetivo. Te decimos honestamente si IPL es lo adecuado para ti — y si no lo es, también.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">3</div>
-        <div class="cat-page-step-body">
-          <h3>Plan de sesiones según zona y ciclo</h3>
-          <p>Diseñamos número de sesiones realistas y cadencia respetando ciclo capilar de cada zona. Cara y axilas: 4-6 semanas. Piernas y cuerpo: 6-8 semanas.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">4</div>
-        <div class="cat-page-step-body">
-          <h3>Mantenimiento puntual una vez completado</h3>
-          <p>Tras el plan inicial, sesión de mantenimiento puntual una vez al año basta. Sin compromisos eternos.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -743,30 +682,16 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <section class="cat-page-faq">
   <div class="container">
     <div class="cat-page-faq-head">
-      <span class="eyebrow">Dudas frecuentes</span>
-      <h2>Lo que más nos preguntan sobre la IPL.</h2>
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ tx.faq.h2 }}</h2>
     </div>
     <div class="cat-page-faq-list">
-      <div class="cat-page-faq-item open">
-        <button class="cat-page-faq-q" type="button">¿Cuántas sesiones necesito? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Entre 6 y 10 sesiones espaciadas según zona y ciclo capilar. Cara y axilas: cadencia 4-6 semanas. Piernas y cuerpo: 6-8 semanas. Mantenimiento puntual una vez al año tras completar.</p></div>
+      {%- for f in tx.faq.items %}
+      <div class="cat-page-faq-item{% if loop.first %} open{% endif %}">
+        <button class="cat-page-faq-q" type="button">{{ f.q }} <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>{{ f.a_html | safe }}</p></div>
       </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Duele? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Sensación de pellizco breve con cada pulso de luz. Mucho más cómodo que cera caliente o láser diodo. La mayoría no requiere anestesia.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿En verano puedo hacer IPL? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Idealmente IPL se hace fuera de exposición solar intensa. Se puede en verano si tienes piel sin bronceado y aplicas protector solar estricto. Para pieles bronceadas mejor esperar al otoño-invierno.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Embarazo o lactancia? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>IPL no está validado para embarazo y lactancia por precaución, aunque no hay evidencia de daño. Esperamos a fin de lactancia para empezar plan.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿IPL vs láser diodo? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Ambos reducen vello permanentemente. IPL usa luz pulsada de espectro amplio (más flexible para distintas zonas y pieles). Láser diodo es luz coherente única (más eficaz en vello muy oscuro y piel clara, menos versátil).</p></div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -774,17 +699,18 @@ description: "Depilación con luz pulsada IPL en clínica estética AnyLopez Ben
 <!-- FINAL CTA -->
 <section class="cat-page-final">
   <div class="container">
-    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
-    <h2>Reserva tu valoración. <em>Diagnóstico de fototipo y plan a medida</em>.</h2>
-    <p>Treinta minutos para evaluar tu piel y vello, decirte si IPL es lo adecuado para tu caso (no siempre lo es) y diseñar plan realista.</p>
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ tx.final.p_html | safe }}</p>
     <div class="cat-page-final-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
     </div>
   </div>
 </section>
 
 <!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{%- set tratamientos = catalogo[l.code] %}
 {% include "treatment-modal.njk" %}
 
 <script>

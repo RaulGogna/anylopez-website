@@ -1,42 +1,50 @@
 ---
 layout: base.njk
-title: "Contacto — AnyLopez Clínica Estética"
-description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqués de Comillas 4, Local 6. Tel: 656 306 167. Lun–Vie 10–14h / 16–20h."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/contact/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code].contact.title | safe }}"
+  description: "{{ i18n[l.code].contact.description | safe }}"
 ---
-
+{%- set tx = i18n[l.code].contact %}
   <!-- BREADCRUMB -->
   <div class="breadcrumb">
     <div class="container">
-      <a href="{{ '/' | url }}">Inicio</a>
+      <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
       <span>›</span>
-      <span>Contacto</span>
+      <span>{{ tx.breadcrumb }}</span>
     </div>
   </div>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <span class="section-label" style="color:var(--accent)">Ponte en Contacto</span>
-      <h1>Contáctanos</h1>
-      <p>Conoce nuestra clínica y disfruta de nuestras instalaciones y atención de calidad personalizada</p>
+      <span class="section-label" style="color:var(--accent)">{{ tx.hero.label }}</span>
+      <h1>{{ tx.hero.h1 }}</h1>
+      <p>{{ tx.hero.sub_html | safe }}</p>
     </div>
   </section>
 
-  <!-- CONTACTO PRINCIPAL -->
+  <!-- {{ tx.comments.main }} -->
   <section class="section">
     <div class="container">
       <div class="contact-grid">
 
         <!-- INFO -->
         <div>
-          <span class="section-label">Información</span>
-          <h2 class="section-title">¿Qué esperas para contactarnos?</h2>
-          <p style="color:var(--text-mid); margin-bottom:40px;">Estamos encantados de atenderte y resolver todas tus dudas. Reserva tu cita o visítanos directamente en nuestra clínica en Benidorm.</p>
+          <span class="section-label">{{ tx.info.label }}</span>
+          <h2 class="section-title">{{ tx.info.h2 }}</h2>
+          <p style="color:var(--text-mid); margin-bottom:40px;">{{ tx.info.p_html | safe }}</p>
 
           <div class="contact-info-item">
             <div class="contact-icon">📍</div>
             <div>
-              <h4>Dirección</h4>
+              <h4>{{ tx.info.direccion }}</h4>
               <p>Calle Marqués de Comillas 4, Local 6<br>C.P. 03501, Benidorm (Alicante)</p>
             </div>
           </div>
@@ -44,7 +52,7 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
           <div class="contact-info-item">
             <div class="contact-icon">📞</div>
             <div>
-              <h4>Teléfonos</h4>
+              <h4>{{ tx.info.telefonos }}</h4>
               <a href="tel:656306167" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"656306167"}'>656 306 167</a>
               <a href="tel:865710769" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"865710769"}'>865 710 769</a>
             </div>
@@ -53,7 +61,7 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
           <div class="contact-info-item">
             <div class="contact-icon">✉️</div>
             <div>
-              <h4>Email</h4>
+              <h4>{{ tx.info.email }}</h4>
               <a href="mailto:info@anylopez.com" style="color:var(--secondary);">info@anylopez.com</a>
             </div>
           </div>
@@ -61,77 +69,68 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
           <div class="contact-info-item">
             <div class="contact-icon">🕐</div>
             <div>
-              <h4>Horario</h4>
-              <p>Lunes a Viernes<br>10:00 – 14:00 · 16:00 – 20:00</p>
+              <h4>{{ tx.info.horario }}</h4>
+              <p>{{ tx.info.horario_html | safe }}</p>
             </div>
           </div>
 
-          <!-- MAPA -->
+          <!-- {{ tx.comments.map }} -->
           <div class="map-embed donde-map-link-wrap">
             <a
               href="https://maps.google.com/?q=Calle+Marqués+de+Comillas+4,+Benidorm"
               target="_blank"
               rel="noopener noreferrer"
               class="donde-map-link"
-              aria-label="Ver AnyLopez Clínica Estética en Google Maps (abre en nueva pestaña)"
+              aria-label="{{ tx.map.aria }}"
             >
               <span class="donde-map-icon" aria-hidden="true">📍</span>
-              <span class="donde-map-text">Ver en Google Maps</span>
+              <span class="donde-map-text">{{ tx.map.text }}</span>
               <span class="donde-map-addr">C/ Marqués de Comillas 4, Local 6 — Benidorm</span>
             </a>
           </div>
         </div>
 
-        <!-- FORMULARIO -->
+        <!-- {{ tx.comments.form }} -->
         <div>
           <div style="background:#fff; padding:40px; border-radius:16px; box-shadow:var(--shadow);">
-            <span class="section-label">Formulario</span>
-            <h2 class="section-title" style="font-size:28px;">Reserva Tu Cita</h2>
-            <p style="color:var(--text-mid); margin-bottom:32px; font-size:15px;">Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+            <span class="section-label">{{ tx.form.label }}</span>
+            <h2 class="section-title" style="font-size:28px;">{{ tx.form.h2 }}</h2>
+            <p style="color:var(--text-mid); margin-bottom:32px; font-size:15px;">{{ tx.form.p_html | safe }}</p>
 
             <form id="contactForm" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate data-form-name="contact">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="nombre">Nombre *</label>
-                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                  <label for="nombre">{{ tx.form.nombre }}</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="{{ tx.form.nombrePh }}" required />
                 </div>
                 <div class="form-group">
-                  <label for="apellidos">Apellidos *</label>
-                  <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required />
+                  <label for="apellidos">{{ tx.form.apellidos }}</label>
+                  <input type="text" id="apellidos" name="apellidos" placeholder="{{ tx.form.apellidosPh }}" required />
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+                <label for="email">{{ tx.form.email }}</label>
+                <input type="email" id="email" name="email" placeholder="{{ tx.form.emailPh }}" required />
               </div>
 
               <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" />
+                <label for="telefono">{{ tx.form.telefono }}</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="{{ tx.form.telefonoPh }}" />
               </div>
 
               <div class="form-group">
-                <label for="tratamiento">Tratamiento de Interés</label>
+                <label for="tratamiento">{{ tx.form.tratamiento }}</label>
                 <select id="tratamiento" name="tratamiento">
-                  <option value="">Selecciona un tratamiento...</option>
-                  <option value="higiene-facial">Higiene Facial</option>
-                  <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>
-                  <option value="radiofrecuencia-corporal">Radiofrecuencia Corporal</option>
-                  <option value="radiofrecuencia-indiba">Radiofrecuencia Sistema Indiba</option>
-                  <option value="ultherapy">Ultherapy</option>
-                  <option value="dermapen">Dermapen</option>
-                  <option value="botox">Botox</option>
-                  <option value="acido-hialuronico">Relleno Ácido Hialurónico</option>
-                  <option value="vitaminas-exosomas">Vitaminas + Exosomas</option>
-                  <option value="micropigmentacion">Micropigmentación</option>
-                  <option value="otro">Otro / Consulta general</option>
+                  {%- for opt in tx.form.options %}
+                  <option value="{{ opt.value }}">{{ opt.label }}</option>
+                  {%- endfor %}
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="mensaje">Mensaje o comentarios</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                <label for="mensaje">{{ tx.form.mensaje }}</label>
+                <textarea id="mensaje" name="mensaje" placeholder="{{ tx.form.mensajePh }}"></textarea>
               </div>
 
               <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
@@ -139,23 +138,23 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
               <div class="form-group form-consent">
                 <label class="consent-label">
                   <input type="checkbox" name="_consent" required />
-                  <span>He leído y acepto la <a href="{{ '/privacidad/' | url }}" target="_blank" rel="noopener noreferrer">política de privacidad</a></span>
+                  {{ tx.form.consent_html | replace("{privacyUrl}", '/privacidad/' | url) | safe }}
                 </label>
               </div>
 
               <button type="submit" class="btn btn-primary" style="width:100%; font-size:13px; padding:16px;">
-                Enviar Solicitud
+                {{ tx.form.submit }}
               </button>
 
               <p style="font-size:12px; color:var(--text-light); margin-top:16px; text-align:center;">
-                Respondemos en menos de 24h.
+                {{ tx.form.note }}
               </p>
             </form>
 
             <div id="formSuccess" style="display:none; text-align:center; padding:32px 0;">
               <div style="font-size:48px; margin-bottom:16px;">✅</div>
-              <h3 style="color:var(--primary); margin-bottom:8px;">¡Mensaje enviado!</h3>
-              <p style="color:var(--text-mid);">Nos pondremos en contacto contigo en menos de 24 horas.</p>
+              <h3 style="color:var(--primary); margin-bottom:8px;">{{ tx.form.successH3 }}</h3>
+              <p style="color:var(--text-mid);">{{ tx.form.successP_html | safe }}</p>
             </div>
           </div>
         </div>
@@ -164,13 +163,13 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
     </div>
   </section>
 
-  <!-- LLAMADA DIRECTA -->
+  <!-- {{ tx.comments.cta }} -->
   <section class="section section--dark">
     <div class="container text-center">
-      <span class="section-label" style="color:var(--accent)">Llamada directa</span>
-      <h2 class="section-title" style="color:#fff; margin-bottom:16px;">Llámanos al 656 306 167</h2>
-      <p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">Si prefieres hablar directamente con nosotros, llámanos en nuestro horario de atención.</p>
-      <a href="tel:656306167" class="btn btn-accent" data-event="phone_clicked" data-event-props='{"location":"contact-page-bottom","number":"656306167"}'>Llamar Ahora</a>
+      <span class="section-label" style="color:var(--accent)">{{ tx.ctaBottom.label }}</span>
+      <h2 class="section-title" style="color:#fff; margin-bottom:16px;">{{ tx.ctaBottom.h2 }}</h2>
+      <p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">{{ tx.ctaBottom.p }}</p>
+      {{ tx.ctaBottom.btn_html | safe }}
     </div>
   </section>
 
@@ -182,16 +181,16 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
       const apellidos = document.getElementById('apellidos').value.trim();
       const email  = document.getElementById('email').value.trim();
       if (!nombre || !apellidos || !email) {
-        alert('Por favor completa los campos obligatorios (nombre, apellidos y email).');
+        alert('{{ tx.js.required }}');
         return;
       }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert('Por favor introduce un email válido.');
+        alert('{{ tx.js.invalidEmail }}');
         return;
       }
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
-      btn.textContent = 'Enviando...';
+      btn.textContent = '{{ tx.js.sending }}';
 
       fetch(form.action, {
         method: 'POST',
@@ -202,12 +201,12 @@ description: "Contacta con AnyLopez Clínica Estética en Benidorm. Calle Marqu�
           form.style.display = 'none';
           document.getElementById('formSuccess').style.display = 'block';
         } else {
-          throw new Error('Error del servidor');
+          throw new Error('{{ tx.js.serverError }}');
         }
       }).catch(function() {
-        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o llámanos al 656 306 167.');
+        alert('{{ tx.js.sendError }}');
         btn.disabled = false;
-        btn.textContent = 'Enviar Solicitud';
+        btn.textContent = '{{ tx.form.submit }}';
       });
     });
   </script>

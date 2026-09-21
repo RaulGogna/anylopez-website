@@ -6,20 +6,14 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- set siteUrl = site.url -%}
-{%- for p in pages %}
+{%- for p in pagesI18n %}
+{%- for code, u in p.urls %}
   <url>
-    <loc>{{ siteUrl }}{{ p.es }}</loc>
+    <loc>{{ siteUrl }}{{ u }}</loc>
     <lastmod>{{ page.date.toISOString().split('T')[0] }}</lastmod>
     <changefreq>{{ p.changefreq }}</changefreq>
-    <priority>{{ p.priority_es }}</priority>
+    <priority>{{ p.priority[code] }}</priority>
   </url>
-  {%- if p.en %}
-  <url>
-    <loc>{{ siteUrl }}{{ p.en }}</loc>
-    <lastmod>{{ page.date.toISOString().split('T')[0] }}</lastmod>
-    <changefreq>{{ p.changefreq }}</changefreq>
-    <priority>{{ p.priority_en }}</priority>
-  </url>
-  {%- endif %}
+{%- endfor %}
 {%- endfor %}
 </urlset>

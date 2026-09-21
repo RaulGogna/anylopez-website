@@ -1,0 +1,112 @@
+{
+  "title": "Massages professionnels à Benidorm — 8 modalités · AnyLopez",
+  "description": "Catalogue complet de massages à la clinique esthétique AnyLopez Benidorm : relaxant, thérapeutique, plantaire, drainage, massages du visage au collagène et à la vitamine C. Savoir-faire manuel expert.",
+  "jsonld": {
+    "name": "Massages professionnels AnyLopez",
+    "alternateName": "Massage thérapeutique et esthétique manuel",
+    "description": "Catalogue complet de 8 modalités de massage chez AnyLopez Clinique Esthétique Benidorm : corporel, relaxant, crânio-facial-cervical, plantaire, jambes lourdes, aloe vera, visage au collagène et visage à la vitamine C.",
+    "specialties": [
+      "Massage Corporel",
+      "Massage Relaxant",
+      "Massage Crânio-Facial-Cervical",
+      "Massage Plantaire",
+      "Massage Jambes Lourdes",
+      "Massage Aloe Vera",
+      "Massage Visage Collagène",
+      "Massage Visage Vitamine C"
+    ],
+    "faq": [
+      { "q": "Quelle modalité pour quel besoin ?", "a": "Tension cervicale/céphalées : crânio-facial-cervical. Jambes lourdes : massage jambes lourdes ou aloe vera. Pieds fatigués ou troubles réflexes : plantaire. Antifatigue générale : corporel ou relaxant. Soin profond du visage : collagène ou vitamine C." },
+      { "q": "Quelle fréquence idéale ?", "a": "Cela dépend de l'objectif. Entretien général : 1 fois/mois. Tension chronique : toutes les 2-3 semaines jusqu'à résolution. Massages du visage : toutes les 4-6 semaines, combinés à un nettoyage de peau." },
+      { "q": "Le massage crânio-facial-cervical contre les migraines ?", "a": "Oui, particulièrement utile contre la céphalée de tension et la migraine d'origine cervicale. Il ne remplace pas un traitement médical mais le complète de manière significative." },
+      { "q": "Et pendant la grossesse ?", "a": "Oui, avec une modalité et une position adaptées. Le massage relaxant en technique douce est parfaitement sûr. Éviter les points réflexes des pieds pendant le premier trimestre." },
+      { "q": "Qu'est-ce que le massage plantaire et pourquoi réflexologique ?", "a": "Le pied possède des zones qui reflètent les organes du corps. Stimuler ces zones avec la technique adéquate peut soulager des tensions à distance (céphalée, fatigue digestive, lombalgie). Plus qu'un massage des pieds — c'est un travail sur le corps entier." }
+    ]
+  },
+  "breadcrumb": { "services": "Soins", "current": "Massages" },
+  "callCta": "Appeler le 656 306 167",
+  "hero": {
+    "imgAlt": "Massages professionnels chez AnyLopez Clinique Esthétique Benidorm",
+    "eyebrow": "Massages · 8 modalités spécialisées",
+    "h1_html": "Des mains qui diagnostiquent <em>pendant qu'elles soignent.</em>",
+    "lead": "Vous avez essayé des massages en spa qui vous détendaient une heure sans rien résoudre. Ici, chaque massage a un objectif — repos réel, décongestion, antifatigue, soin du visage — et se choisit après avoir évalué ce que demande votre corps ou votre visage ce jour-là.",
+    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "reviews": "avis Google",
+    "free": "Diagnostic initial sans frais"
+  },
+  "pain": {
+    "eyebrow": "Cela vous parle ?",
+    "h2": "La plupart des patientes qui arrivent ici sont passées par la même chose.",
+    "p": "Vous ne partez pas de zéro. Vous arrivez après avoir essayé d'autres solutions qui n'ont pas vraiment fonctionné.",
+    "items": [
+      { "h3_html": "Vous avez essayé des massages qui ressemblent à une journée au spa.", "p": "Odeur agréable, musique douce, et on vous expédie exactement comme la personne d'avant. Bien-être superficiel, zéro technique." },
+      { "h3_html": "Vous arrivez avec des tensions cervicales ou lombaires et repartez « agréablement détendue » mais tout aussi tendue.", "p": "Le massage générique détend pendant une heure — le massage thérapeutique dénoue pour de vrai." },
+      { "h3_html": "Vous cherchez des bienfaits concrets (drainage, décongestion, antifatigue, régénération du visage), pas seulement de l'aromathérapie.", "p": "Un massage bien fait change l'état du corps." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi les massages chez AnyLopez fonctionnent",
+    "h2": "Six raisons pour lesquelles ils fonctionnent ici et pas ailleurs.",
+    "p": "Ce n'est pas du marketing. C'est un savoir-faire manuel expert, du discernement et une technique spécifique à chaque cas.",
+    "items": [
+      { "h3": "Le savoir-faire manuel de décennies de pratique", "p_html": "Les mains diagnostiquent pendant qu'elles soignent. Nous n'embauchons pas de stagiaires pour réduire les coûts." },
+      { "h3": "Huit modalités spécifiques", "p_html": "Chacune a sa technique et son objectif : relaxant profond, thérapeutique cervical, plantaire réflexologique, antifatigue jambes, visage au collagène ou à la vitamine C." },
+      { "h3": "Un diagnostic préalable décide de la modalité", "p_html": "Pas « qu'est-ce que vous voulez » — mais « que demande votre corps aujourd'hui ». Parfois une relaxation profonde ; parfois un drainage ; parfois un soin régénérant du visage." },
+      { "h3": "Combinables avec soins du corps et du visage", "p_html": "Avant un soin du visage avancé, un massage crânio-cervical détend la musculature. Avant un drainage, une séance plantaire mobilise l'énergie. De vraies synergies." },
+      { "h3": "Des séances qui se ressentent dès la première", "p_html": "Vous n'attendez pas 10 séances pour sentir quelque chose. La différence est palpable à la fin de la première." },
+      { "h3": "Appliqués par la personne qui signe le résultat", "p_html": "La même exigence que dans toute la clinique : une expérience réelle, pas une certification express." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Si vous traînez une tension musculaire chronique",
+    "h2_html": "Le massage soulage, <em>le soin corporel thérapeutique résout.</em>",
+    "p": "Pour les tensions persistantes, les lombalgies, la récupération post-chirurgicale ou la cellulite structurelle, les soins du corps (récupération musculaire spécifique, drainage lymphatique, madérothérapie) vont au-delà du massage.",
+    "cta": "Voir les soins du corps →"
+  },
+  "grid": {
+    "eyebrow": "Huit modalités · une seule philosophie",
+    "h2": "Les massages du catalogue.",
+    "p": "Cliquez sur une carte pour voir tous les bienfaits, les tarifs et les packs.",
+    "altSuffix": "chez AnyLopez Benidorm",
+    "detailsAria": "Voir les détails de",
+    "detailsCta": "Voir les détails →"
+  },
+  "tests": {
+    "eyebrow": "Patientes réelles",
+    "h2": "Des résultats qui se voient, et qui se racontent.",
+    "p": "Avis vérifiés sur Google. Sans acteurs, sans miracles en pilule, sans avant-après retouchés.",
+    "items": [
+      { "quote_html": "\"Je souffrais depuis des années de maux de tête et de tensions cervicales. Le massage crânio-facial-cervical ici est un vrai travail thérapeutique, pas de la relaxation déguisée. Après 6 séances, je ne prends presque plus d'antalgiques.\"", "author": "Aurora L.", "meta": "Patiente · Crânio-facial-cervical" },
+      { "quote_html": "\"Le massage plantaire en technique réflexologique a été une découverte. Des jambes jusqu'à la tête, on le sent. Je paie le même prix qu'en spa mais avec une différence abyssale.\"", "author": "Marta C.", "meta": "Patiente · Massage Plantaire" },
+      { "quote_html": "\"Le massage du visage au collagène après un mois d'écrans — un miracle. Il décongestionne, illumine, redonne de l'élasticité. Je recommande de le combiner avec un nettoyage de peau.\"", "author": "Patiente vérifiée", "meta": "Avis Google · Massage Visage Collagène" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment commence-t-on ?",
+    "h2": "Quatre étapes. Sans surprises, sans petites lignes.",
+    "p": "De votre premier message jusqu'à la sortie de la première séance, tout est clair.",
+    "steps": [
+      { "h3": "Vous réservez un créneau", "p": "Appel/WhatsApp pour trouver jour et heure. Sans engagement, sans paiement préalable." },
+      { "h3": "Évaluation : nous vous demandons ce dont vous avez besoin aujourd'hui + nous observons", "p": "Tension, fatigue, congestion, régénération du visage. Avant de commencer, nous décidons de la modalité — on n'applique pas un protocole au hasard." },
+      { "h3": "Nous appliquons la modalité correspondante", "p": "Technique spécifique (relaxant, thérapeutique, plantaire réflexologique, drainage du visage, etc.) avec la durée que votre cas requiert." },
+      { "h3": "Recommandation de fréquence et de modalités complémentaires", "p": "Si votre cas demande une combinaison (par ex. crânio-cervical avant un soin du visage avancé, ou plantaire avant un drainage), nous vous le disons." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "h2": "Ce qu'on nous demande le plus sur les massages.",
+    "items": [
+      { "q": "Quelle modalité pour quel besoin ?", "a": "Tension cervicale/céphalées : crânio-facial-cervical. Jambes lourdes : massage jambes lourdes ou aloe vera. Pieds fatigués ou troubles réflexes : plantaire. Antifatigue générale : corporel ou relaxant. Soin profond du visage : collagène ou vitamine C." },
+      { "q": "Quelle fréquence idéale ?", "a": "Cela dépend de l'objectif. Entretien général : 1 fois/mois. Tension chronique : toutes les 2-3 semaines jusqu'à résolution. Massages du visage : toutes les 4-6 semaines, combinés à un nettoyage de peau." },
+      { "q": "Le massage crânio-facial-cervical contre les migraines ?", "a": "Oui, particulièrement utile contre la céphalée de tension et la migraine d'origine cervicale. Il ne remplace pas un traitement médical mais le complète de manière significative." },
+      { "q": "Et pendant la grossesse ?", "a": "Oui, avec une modalité et une position adaptées. Le massage relaxant en technique douce est parfaitement sûr. Éviter les points réflexes des pieds pendant le premier trimestre." },
+      { "q": "Qu'est-ce que le massage plantaire et pourquoi réflexologique ?", "a": "Le pied possède des zones qui reflètent les organes du corps. Stimuler ces zones avec la technique adéquate peut soulager des tensions à distance (céphalée, fatigue digestive, lombalgie). Plus qu'un massage des pieds — c'est un travail sur le corps entier." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sans engagement",
+    "h2_html": "Réservez votre première séance. <em>Choisissez la modalité ensuite</em>.",
+    "p": "Nous vous évaluons à votre arrivée et choisissons la modalité selon ce que demande votre corps ce jour-là. Si votre cas relève de la kinésithérapie médicale, nous vous le disons.",
+    "cta": "Réserver un bilan →"
+  }
+}

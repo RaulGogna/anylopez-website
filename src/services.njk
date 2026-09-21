@@ -1,9 +1,18 @@
 ---
 layout: base.njk
-title: "Tratamientos en AnyLopez Clínica Estética — Benidorm"
-description: "Ocho especialidades, un único oficio. Catálogo editorial de tratamientos faciales, corporales, inyectables y aparatología en AnyLopez Clínica Estética, Benidorm."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/services/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code].services.title | safe }}"
+  description: "{{ i18n[l.code].services.description | safe }}"
 ---
-
+{%- set tx = i18n[l.code].services %}
+{%- set tdata = catalogo[l.code] %}
 <style>
   /* ─── HERO ─────────────────────────────────────────── */
   .svc-hero {
@@ -98,7 +107,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
   .svc-cat-num {
     position: absolute;
     top: 20px;
-    left: 24px;
+    inset-inline-start: 24px;
     z-index: 2;
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -110,7 +119,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
   .svc-cat-flag {
     position: absolute;
     top: 20px;
-    right: 24px;
+    inset-inline-end: 24px;
     z-index: 2;
     background: var(--terra);
     color: #fff;
@@ -130,7 +139,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--terra-dk);
+    color: {{ tx.css.eyebrowColor }};
     margin-bottom: 12px;
     display: block;
   }
@@ -148,7 +157,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
   }
   .svc-cat-trat-list {
     font-size: 13px;
-    color: var(--text-mid);
+    color: {{ tx.css.tratListColor }};
     line-height: 1.6;
     margin-bottom: 24px;
   }
@@ -170,7 +179,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
     color: var(--terra);
   }
 
-  /* ─── FLAGSHIP BAND (Radiofrecuencia INDIBA) ──────────────────────── */
+  /* ─── FLAGSHIP BAND ({{ tx.css.flagshipLabel }}) ──────────────────────── */
   .svc-flagship {
     background: var(--dark);
     color: #fff;
@@ -292,25 +301,25 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <span>Servicios</span>
+    <span>{{ tx.breadcrumb }}</span>
   </div>
 </div>
 
 <!-- HERO -->
 <section class="svc-hero">
   <div class="container">
-    <span class="eyebrow">Catálogo · 8 especialidades</span>
-    <h1>Ocho especialidades,<br><em>un único oficio.</em></h1>
-    <p class="lead">Tres generaciones diseñando, ejecutando y supervisando cada tratamiento. Aquí no contratamos becarios ni encadenamos sesiones por horarios apretados — cuando reservas, te atiende quien firma el resultado.</p>
+    <span class="eyebrow">{{ tx.hero.eyebrow }}</span>
+    <h1>{{ tx.hero.h1_html | safe }}</h1>
+    <p class="lead">{{ tx.hero.lead_html | safe }}</p>
     <div class="svc-hero-meta">
       <span class="svc-hero-stars">★★★★★</span>
-      <strong>{{ reviews.rating }} sobre {{ reviews.count }} reseñas en Google</strong>
+      <strong>{{ tx.hero.reviews_html | replace("{rating}", reviews.rating) | replace("{count}", reviews.count) | safe }}</strong>
       <span class="dot">·</span>
-      <span>{{ tratamientos.tratamientos | length }} tratamientos disponibles</span>
+      <span>{{ tdata.tratamientos | length }} {{ tx.hero.treatments }}</span>
       <span class="dot">·</span>
-      <span>Diagnóstico inicial gratuito</span>
+      <span>{{ tx.hero.free }}</span>
     </div>
   </div>
 </section>
@@ -321,33 +330,32 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
     <div class="svc-index-grid">
 
       {%- set catImages = {
-        "limpiezas-faciales":   { "img": "fotoscatalogoanylopez/limpiezafacial",         "label": "Higiene + cuidado regular" },
-        "tratamientos-faciales":{ "img": "fotoscatalogoanylopez/dermapen",               "label": "Renovación · Anti-acné · Manchas" },
-        "lifting-antiaging":    { "img": "fotoscatalogoanylopez/ultherapyfacial",        "label": "Reafirmación sin cirugía" },
-        "inyectables":          { "img": "fotoscatalogoanylopez/rellenoacidohialuronico","label": "Medicina estética avanzada" },
-        "corporal":             { "img": "tratamientos/maderoterapia",                   "label": "Cuerpo · Tonicidad · Recuperación" },
-        "masajes":              { "img": "tratamientos/masajes",                         "label": "Manual · Terapéutico · Drenaje" },
-        "estetica-decorativa":  { "img": "tratamientos/micropigmentacion",               "label": "Pestañas · Micropigmentación" },
-        "depilacion":           { "img": "tratamientos/depilacion-ipl",                  "label": "IPL · Pieles cómodas" }
+        "limpiezas-faciales":   "fotoscatalogoanylopez/limpiezafacial",
+        "tratamientos-faciales":"fotoscatalogoanylopez/dermapen",
+        "lifting-antiaging":    "fotoscatalogoanylopez/ultherapyfacial",
+        "inyectables":          "fotoscatalogoanylopez/rellenoacidohialuronico",
+        "corporal":             "tratamientos/maderoterapia",
+        "masajes":              "tratamientos/masajes",
+        "estetica-decorativa":  "tratamientos/micropigmentacion",
+        "depilacion":           "tratamientos/depilacion-ipl"
       } -%}
 
-      {% for cat in tratamientos.categorias %}
-        {%- set catTrats = tratamientos.tratamientos | byCategory(cat.id) -%}
-        {%- set imgInfo = catImages[cat.id] -%}
-        {%- set imgPath = imgInfo.img -%}
+      {% for cat in tdata.categorias %}
+        {%- set catTrats = tdata.tratamientos | byCategory(cat.id) -%}
+        {%- set imgPath = catImages[cat.id] -%}
         {%- set isFlag = cat.id == "lifting-antiaging" -%}
         {%- set padded = "0" + (loop.index | string) if loop.index < 10 else (loop.index | string) -%}
-        {%- set total = "0" + (tratamientos.categorias | length | string) if (tratamientos.categorias | length) < 10 else (tratamientos.categorias | length | string) -%}
+        {%- set total = "0" + (tdata.categorias | length | string) if (tdata.categorias | length) < 10 else (tdata.categorias | length | string) -%}
 
-        <a href="{{ ('/services/' + cat.id + '/') | url }}" class="svc-cat" data-cat="{{ cat.id }}">
+        <a href="{{ (l.prefix + '/services/' + cat.id + '/') | url }}" class="svc-cat" data-cat="{{ cat.id }}">
           <div class="svc-cat-img">
             <span class="svc-cat-num">{{ padded }} / {{ total }}</span>
-            {% if isFlag %}<span class="svc-cat-flag">Especialidad estrella</span>{% endif %}
+            {% if isFlag %}<span class="svc-cat-flag">{{ tx.cards.flag }}</span>{% endif %}
             <picture>
               <source srcset="{{ ('/images/' + imgPath + '.webp') | url }}" type="image/webp">
               <img
                 src="{{ ('/images/' + imgPath + '.png') | url }}"
-                alt="{{ cat.nombre }} en AnyLopez Benidorm"
+                alt="{{ cat.nombre }} {{ tx.cards.altSuffix }}"
                 loading="{{ 'eager' if loop.index <= 2 else 'lazy' }}"
                 {% if loop.index == 1 %}fetchpriority="high"{% endif %}
                 decoding="async"
@@ -357,7 +365,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
             </picture>
           </div>
           <div class="svc-cat-body">
-            <span class="svc-cat-eyebrow">{{ imgInfo.label }}</span>
+            <span class="svc-cat-eyebrow">{{ tx.catLabels[cat.id] }}</span>
             <h2 class="svc-cat-name">{{ cat.nombre }}</h2>
             <p class="svc-cat-desc">{{ cat.descripcion }}</p>
             <p class="svc-cat-trat-list">
@@ -369,10 +377,10 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
                   {%- set tratNamesStr = tratNamesStr + " · " + t.nombre -%}
                 {%- endif -%}
               {%- endfor -%}
-              {{ catTrats | length }} tratamiento{{ "s" if catTrats | length > 1 else "" }} ·
+              {{ catTrats | length }} {{ tx.cards.unit }}{{ "s" if catTrats | length > 1 else "" }} ·
               {{ tratNamesStr | truncate(110, true, "…") }}
             </p>
-            <span class="svc-cat-cta">Ver tratamientos <span aria-hidden="true">→</span></span>
+            <span class="svc-cat-cta">{{ tx.cards.cta }} <span aria-hidden="true">→</span></span>
           </div>
         </a>
       {% endfor %}
@@ -385,12 +393,12 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
 <section class="svc-trust">
   <div class="container">
     <div class="svc-trust-stars">★★★★★</div>
-    <div class="svc-trust-rating"><strong>{{ reviews.rating }}</strong> · {{ reviews.count }} reseñas verificadas en Google</div>
-    <div class="svc-trust-sub">Más de 30 años acompañando pacientes en Benidorm</div>
+    <div class="svc-trust-rating"><strong>{{ reviews.rating }}</strong> · {{ reviews.count }} {{ tx.trust.reviews }}</div>
+    <div class="svc-trust-sub">{{ tx.trust.sub }}</div>
   </div>
 </section>
 
-<!-- FLAGSHIP — Radiofrecuencia INDIBA -->
+<!-- FLAGSHIP — {{ tx.flagship.comment }} -->
 <section class="svc-flagship">
   <div class="container">
     <div class="svc-flagship-grid">
@@ -399,7 +407,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
           <source srcset="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.webp' | url }}" type="image/webp">
           <img
             src="{{ '/images/fotoscatalogoanylopez/radiofrecuenciacorporal.png' | url }}"
-            alt="Radiofrecuencia INDIBA en AnyLopez Benidorm"
+            alt="{{ tx.flagship.alt }}"
             loading="lazy"
             decoding="async"
             width="800"
@@ -408,24 +416,24 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
         </picture>
       </div>
       <div>
-        <span class="eyebrow" style="color: var(--gold);">Tratamiento bandera</span>
-        <h2>Radiofrecuencia INDIBA — <em>el lifting que no se nota</em>.</h2>
-        <p>Si has cuidado tu piel toda la vida pero los espejos te devuelven flacidez, Radiofrecuencia INDIBA es la respuesta sin quirófano. Tecnología CRet/RES que estimula tu propio colágeno desde la primera sesión. Indoloro, sin recuperación, compatible con todo lo demás.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.flagship.eyebrow }}</span>
+        <h2>{{ tx.flagship.h2_html | safe }}</h2>
+        <p>{{ tx.flagship.p_html | safe }}</p>
         <div class="svc-flagship-meta">
           <div class="svc-flagship-meta-item">
-            <strong>500 €</strong>
-            Pack 10 sesiones (45 min)
+            <strong>{{ tx.flagship.m1v }}</strong>
+            {{ tx.flagship.m1l }}
           </div>
           <div class="svc-flagship-meta-item">
-            <strong>375 €</strong>
-            Ahorro vs sesión suelta
+            <strong>{{ tx.flagship.m2v }}</strong>
+            {{ tx.flagship.m2l }}
           </div>
           <div class="svc-flagship-meta-item">
-            <strong>1ª sesión</strong>
-            Resultados visibles
+            <strong>{{ tx.flagship.m3v }}</strong>
+            {{ tx.flagship.m3l }}
           </div>
         </div>
-        <a href="{{ '/radiofrecuencia/' | url }}" class="btn btn-accent">Conocer Radiofrecuencia INDIBA →</a>
+        <a href="{{ (l.prefix + '/radiofrecuencia/') | url }}" class="btn btn-accent">{{ tx.flagship.cta }}</a>
       </div>
     </div>
   </div>
@@ -434,12 +442,12 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
 <!-- FINAL CTA -->
 <section class="svc-final-cta">
   <div class="container">
-    <span class="eyebrow">¿No sabes por dónde empezar?</span>
-    <h2>Reserva un diagnóstico gratuito y te decimos qué necesitas — y qué no.</h2>
-    <p>Treinta minutos sin compromiso. Si no es para ti, te lo decimos de frente y te orientamos. Honestidad antes que carrito.</p>
+    <span class="eyebrow">{{ tx.finalCta.eyebrow }}</span>
+    <h2>{{ tx.finalCta.h2_html | safe }}</h2>
+    <p>{{ tx.finalCta.p_html | safe }}</p>
     <div class="svc-final-cta-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="https://wa.me/34656306167" class="btn btn-outline" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"services-page"}'>WhatsApp 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.finalCta.btn }}</a>
+      {{ tx.finalCta.wa_html | safe }}
     </div>
   </div>
 </section>
@@ -449,10 +457,10 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Especialidades de AnyLopez Clínica Estética",
-  "numberOfItems": {{ tratamientos.categorias | length }},
+  "name": "{{ tx.jsonld.name }}",
+  "numberOfItems": {{ tdata.categorias | length }},
   "itemListElement": [
-    {%- for cat in tratamientos.categorias -%}
+    {%- for cat in tdata.categorias -%}
     {
       "@type": "ListItem",
       "position": {{ loop.index }},
@@ -460,7 +468,7 @@ description: "Ocho especialidades, un único oficio. Catálogo editorial de trat
         "@type": "MedicalSpecialty",
         "name": {{ cat.nombre | dump | safe }},
         "description": {{ cat.descripcion | dump | safe }},
-        "url": "{{ site.url }}/services/{{ cat.id }}/"
+        "url": "{{ site.url }}{{ l.prefix }}/services/{{ cat.id }}/"
       }
     }{% if not loop.last %},{% endif %}
     {%- endfor %}

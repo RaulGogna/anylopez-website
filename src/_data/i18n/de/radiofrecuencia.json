@@ -1,0 +1,153 @@
+{
+  "title": "INDIBA Radiofrequenz in Benidorm — Lifting ohne OP · AnyLopez",
+  "description": "INDIBA Radiofrequenz bei AnyLopez Benidorm. Tiefenwirksame CRet/RES-Technologie. Pakete mit 10 Sitzungen ab 350 €. Ergebnisse ab der ersten Sitzung, schmerzfrei, ohne Ausfallzeit.",
+  "jsonld": {
+    "name": "INDIBA Radiofrequenz",
+    "alternateName": "INDIBA Radiofrequenz Anti-Aging",
+    "description": "Tiefenwirksame INDIBA Radiofrequenz mit CRet/RES-Technologie. Nicht-invasive, schmerzfreie Behandlung gegen Hauterschlaffung an Gesicht und Körper, Cellulite und Falten sowie zur Straffung. Pakete mit 10 Sitzungen ab 350 €.",
+    "bodyLocation": ["Gesicht", "Hals", "Bauch", "Gesäß", "Beine", "Arme"],
+    "howPerformed": "Manuelle Anwendung mit CRet- oder RES-Kopf auf der zu behandelnden Zone, 30-60 Minuten. Ohne Nadeln, ohne Schmerzen, ohne Erholungszeit.",
+    "preparation": "Keine Vorbereitung erforderlich. Bitte mit sauberer Haut und ohne Cremes kommen.",
+    "followup": "Empfohlen wird ein individueller Plan mit 10 Sitzungen. Monatliche Erhaltung nach dem Paket.",
+    "offerName": "Paket 10 Sitzungen (45 Min.) INDIBA Radiofrequenz Anti-Aging",
+    "offerDescription": "10 Sitzungen INDIBA Radiofrequenz à 45 Min. Kostenlose Erstdiagnose.",
+    "faq": [
+      { "q": "Ist die INDIBA Radiofrequenz Behandlung sicher?", "a": "Ja, sie ist vollkommen sicher. Das INDIBA Radiofrequenz System ist nicht invasiv, für den medizinisch-ästhetischen Einsatz zugelassen, erfordert weder Anästhesie noch Erholungszeit und wird seit Jahrzehnten in Kliniken für Sportmedizin, Physiotherapie und fortgeschrittene Ästhetik eingesetzt." },
+      { "q": "Tut die INDIBA Radiofrequenz Behandlung weh?", "a": "Sie verursacht keine Schmerzen. Man spürt eine tiefe, angenehme Wärme in der behandelten Zone. Die meisten Patientinnen beschreiben die Sitzung als entspannend. Keine Anästhesie erforderlich." },
+      { "q": "Wann sehe ich die Ergebnisse der INDIBA Radiofrequenz?", "a": "Die Ergebnisse sind ab der ersten Sitzung sichtbar und verbessern sich mit jeder Behandlung weiter. Für optimale und dauerhafte Ergebnisse empfiehlt sich der komplette 10-Sitzungen-Zyklus des Pakets." },
+      { "q": "Was unterscheidet die INDIBA Radiofrequenz von anderen Radiofrequenzen?", "a": "Die INDIBA Radiofrequenz arbeitet mit 448 kHz, einer patentierten Frequenz, die sicher bis in die tiefen Hautschichten (Hypodermis) eindringt. Andere Radiofrequenzen arbeiten oberflächlicher oder sind aggressiver und schmerzhaft. Die INDIBA Radiofrequenz ist die klinische Referenz für tiefe Straffung ohne OP." },
+      { "q": "Kann man die INDIBA Radiofrequenz mit anderen Behandlungen kombinieren?", "a": "Ja. Die INDIBA Radiofrequenz verstärkt und kombiniert sich problemlos mit Ultherapy/HIFU, Holztherapie, Mesotherapie und Peelings. In der kostenlosen Diagnose entwerfen wir den optimalen Kombinationsplan für Sie." },
+      { "q": "Wie viele Sitzungen INDIBA Radiofrequenz brauche ich?", "a": "Wir empfehlen ein Paket mit 10 Sitzungen (1-2 pro Woche) für optimale Ergebnisse. Die genaue Anzahl hängt von der Zone und dem Ziel ab. In der ersten (kostenlosen) Diagnose-Beratung beurteilen wir Ihren Fall und entwerfen den passenden Plan." },
+      { "q": "Was kostet das INDIBA Radiofrequenz Paket?", "a": "Das Paket mit 10 Sitzungen à 45 Min. kostet 500 € — das sind 50 € pro Sitzung, und Sie sparen 375 € gegenüber Einzelbuchungen. Es gibt auch ein 10er-Paket à 30 Min. für 350 € und ein 5er-Paket à 30 Min. für 250 €. Die Einzelsitzung kostet je nach Dauer und Zone 45 € bis 85 €. Kostenlose und unverbindliche Erstdiagnose." }
+    ]
+  },
+  "breadcrumb": { "services": "Behandlungen", "current": "INDIBA Radiofrequenz" },
+  "callCta": "Anrufen: 656 306 167",
+  "hero": {
+    "imgAlt": "INDIBA Radiofrequenz Sitzung bei AnyLopez Benidorm",
+    "eyebrow_html": "Flaggschiff-Behandlung · Lifting und Anti-Aging",
+    "h1_html": "Straffen ohne OP. <em>Ergebnisse ab der ersten Sitzung.</em>",
+    "lead": "Sie pflegen sich seit Jahren, und trotzdem zeigt der Spiegel Hauterschlaffung? Das ist nicht Ihre Schuld — Cremes reichen nicht dorthin, wo die INDIBA Radiofrequenz wirkt. Tiefenwirksame CRet/RES-Technologie, die Ihr eigenes Kollagen stimuliert. Ohne Nadeln, ohne Schmerzen, ohne Ausfallzeit.",
+    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "reviews": "Google-Bewertungen",
+    "packMeta_html": "Paket 10 Sitzungen (45 Min.) <strong>500 €</strong> (Sie sparen 375 €)"
+  },
+  "pain": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "h2": "Die meisten Patientinnen, die zu uns kommen, haben dasselbe erlebt.",
+    "p": "Sie kommen nicht aus dem Nichts. Sie kommen, nachdem Sie andere Dinge ausprobiert haben, die nicht richtig funktioniert haben.",
+    "items": [
+      { "h3": "Sie haben Cremes, Massagen und Geräte anderswo ausprobiert.", "p_html": "Anfangs merkten Sie etwas, aber nach Wochen kam alles zurück. Die Oberfläche hilft; die Erschlaffung sitzt tiefer." },
+      { "h3": "Sie lehnen eine OP ab — zu Recht.", "p_html": "Sie wollen keine Anästhesie, keine monatelange Erholung und kein straff gezogenes Ergebnis, das nicht zu Ihnen passt. Aber Sie geben sich auch nicht mit \"kleinen Schritten, die nichts bewirken\" zufrieden." },
+      { "h3": "Der Spiegel zeigt Müdigkeit, obwohl Sie sich pflegen.", "p_html": "Sie essen gut, trinken genug, schlafen, so viel Sie können. Aber diese Kontur des Ovals, diese Erschlaffung am Arm, diese Cellulite verschwinden nicht allein durch Disziplin." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Warum die INDIBA Radiofrequenz wirkt",
+    "h2": "Sechs Gründe, warum diese Technologie alles verändert.",
+    "p": "Keine Magie, kein Marketing. Physik, angewendet auf Ihre Physiologie.",
+    "items": [
+      { "h3": "Tiefenwirksame CRet/RES-Technologie", "p_html": "Die INDIBA Radiofrequenz arbeitet mit 448 kHz, einer patentierten Frequenz, die bis zur Hypodermis vordringt. Dort, wo ein Chirurg für ein Lifting schneidet, stimulieren wir — ohne zu öffnen." },
+      { "h3": "Aktiviert Ihr eigenes Kollagen", "p_html": "Wir führen keine Substanzen zu. Die INDIBA Radiofrequenz reaktiviert die natürliche Regeneration von Kollagen und Elastin, die Ihr Körper längst beherrscht — sie hat mit den Jahren nur an Tempo verloren." },
+      { "h3": "Ergebnisse ab der ersten Sitzung", "p_html": "Sie müssen nicht drei Monate warten, um \"etwas\" zu sehen. Sie verlassen die erste Sitzung mit strahlenderer, strafferer Haut. Die volle Wirkung baut sich über das 10er-Paket auf." },
+      { "h3": "Schmerzfrei und ohne Ausfallzeit", "p_html": "Die Sitzung ist entspannend, eine angenehme Tiefenwärme. Sie gehen raus und machen mit Ihrem Tag weiter — Mittagessen, Büro, Fitnessstudio. Ohne Spuren, ohne Cremes, ohne Ruhezeit." },
+      { "h3": "Kompatibel mit Ultherapy HIFU, Mesotherapie und Peelings", "p_html": "Die INDIBA Radiofrequenz verstärkt und kombiniert sich mit allem, was Sie bereits machen. In der Diagnose entwerfen wir den Kombinationsplan, der die Ergebnisse vervielfacht." },
+      { "h3": "Angewendet von der Person, die für das Ergebnis geradesteht", "p_html": "Hier reicht man Sie nicht an Praktikanten weiter. Sie werden von jemandem behandelt, der Jahrzehnte mit dieser Technologie arbeitet und weiß, wo man in Ihrem Fall ansetzen muss und wo nicht." }
+    ]
+  },
+  "mod": {
+    "eyebrow": "Zwei Anwendungen, ein Prinzip",
+    "h2": "INDIBA Radiofrequenz Gesicht und INDIBA Radiofrequenz Körper.",
+    "p": "Das Protokoll passt sich der Zone an. Die Technologie ist dieselbe; die Ergebnisse genauso sichtbar.",
+    "card1": {
+      "imgAlt": "INDIBA Radiofrequenz Gesicht bei AnyLopez Benidorm",
+      "h3": "INDIBA Radiofrequenz Gesicht",
+      "p": "Strafft das Oval, glättet feine Falten, verleiht sofortige Ausstrahlung. Ideal für Gesichtskontur, Hals und Dekolleté.",
+      "items": [
+        "Mildert feine Falten und Mimiklinien",
+        "Festigkeit und Ausstrahlung ab der 1. Sitzung",
+        "Reduziert Erschlaffung an Oval und Hals",
+        "Tiefe intrazelluläre Hydratation"
+      ]
+    },
+    "card2": {
+      "imgAlt": "INDIBA Radiofrequenz Körper bei AnyLopez Benidorm",
+      "h3": "INDIBA Radiofrequenz Körper",
+      "p": "Wirkt gegen Cellulite, lokale Fettpolster und Hauterschlaffung an Bauch, Armen und Beinen. Kombinierbar mit Holztherapie und Mesotherapie für schnellere Ergebnisse.",
+      "items": [
+        "Reduziert Cellulite sichtbar",
+        "Wirkt auf lokale Fettpolster",
+        "Strafft die Haut an Armen, Bauch und Beinen",
+        "Kompatibel mit Holztherapie und Mesotherapie"
+      ]
+    }
+  },
+  "pack": {
+    "eyebrow": "Paket 10 Sitzungen (45 Min.)",
+    "h2_html": "Alles, was enthalten ist — <em>und alles, was Sie sparen</em>.",
+    "p_html": "Das ist kein \"Angebot\". Es ist der Unterschied zwischen allem einzeln kaufen und richtig kaufen.",
+    "stack": [
+      { "label": "10 Sitzungen INDIBA Radiofrequenz à 45 Min. (CRet/RES)", "price": "650 €" },
+      { "label": "Individuelle Erstdiagnose (30 Min.)", "price": "80 €" },
+      { "label": "Maßgeschneiderter Protokollplan + Anpassungen", "price": "50 €" },
+      { "label": "Begleitung zwischen den Sitzungen (direktes WhatsApp)", "price": "30 €" },
+      { "label": "Kontrolle 60 Tage nach Abschluss des Pakets", "price": "65 €" }
+    ],
+    "totalLabel": "Gesamtwert",
+    "crossed": "875 €",
+    "priceLabel": "Ihr Paketpreis",
+    "final_html": "500&nbsp;€",
+    "savings": "Sie sparen 375 € · 43 % weniger als einzeln gekauft",
+    "waText_html": "Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20das%20INDIBA%20Radiofrequenz%20Paket",
+    "ratesTitle": "Alle Tarife INDIBA Radiofrequenz",
+    "rates": [
+      { "label_html": "Sitzung Gesicht oder Körper (30 Min.)", "price_html": "45 €" },
+      { "label_html": "Sitzung Gesicht (45 Min.)", "price_html": "65 €" },
+      { "label_html": "Sitzung Körper (60 Min., pro Zone)", "price_html": "85 €" },
+      { "label_html": "Vaginale Sitzung (60 Min.)", "price_html": "85 €" },
+      { "label_html": "Paket 5 Sitzungen (30 Min.)", "price_html": "250 €" },
+      { "label_html": "Paket 10 Sitzungen (30 Min.)", "price_html": "350 €" },
+      { "label_html": "<strong>Paket 10 Sitzungen (45 Min.) — das lohnendste</strong>", "price_html": "<strong>500 €</strong>" }
+    ]
+  },
+  "tests": {
+    "eyebrow": "Echte Patientinnen",
+    "h2": "Ergebnisse, die man sieht — und weitererzählt.",
+    "p": "Verifizierte Google-Bewertungen. Ohne Schauspieler, ohne Wundermittel, ohne gephotoshoppte Vorher-Nachher-Bilder.",
+    "items": [
+      { "quote_html": "\"Straffere, strahlendere Haut mit schnellen Ergebnissen ab der ersten Sitzung. Das Team ist sehr professionell und die Behandlung sehr angenehm. Absolut empfehlenswert.\"", "author": "Ana Bayixauli", "meta": "Patientin · INDIBA Radiofrequenz Gesicht" },
+      { "quote_html": "\"Deutliche Verbesserung meiner Cellulite, ganz ohne Schmerzen. Die Behandlung ist sehr angenehm und die Ergebnisse sprechen für sich. Sehr zufrieden mit der Klinik und dem ganzen Team.\"", "author": "Maria Castillo", "meta": "Patientin · INDIBA Radiofrequenz Körper" },
+      { "quote_html": "\"Nachdem ich mehrere Zentren ausprobiert hatte, habe ich hier endlich gefunden, was ich suchte. Tadellose Betreuung, ehrliche Beratung und Ergebnisse, die man im Spiegel sieht — nicht in einer Broschüre.\"", "author": "Verifizierte Patientin", "meta": "Google-Bewertung · INDIBA Radiofrequenz Anti-Aging-Paket" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie fangen wir an?",
+    "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
+    "p": "Von Ihrer ersten Nachricht bis zur ersten sichtbaren Verbesserung vergehen weniger als zwei Wochen.",
+    "steps": [
+      { "h3": "Sie buchen Ihre kostenlose Diagnose", "p": "Anruf oder WhatsApp, um einen Termin zu finden. 30 Minuten in der Klinik, kostenlos und unverbindlich. Wir antworten in weniger als 24 Std." },
+      { "h3": "Wir beurteilen Sie in der Klinik", "p": "Wir prüfen Ihre Zone, Ihre Vorgeschichte und Ihre Erwartungen. Wenn die INDIBA Radiofrequenz für Ihren Fall nicht das Richtige ist, sagen wir es Ihnen offen und beraten Sie zu dem, was passt." },
+      { "h3": "Individueller Plan und angepasstes Paket", "p": "Wir legen Protokoll, Frequenz (1-2 Sitzungen pro Woche) und die zu behandelnden Zonen fest. Sie beginnen, wann Sie es entscheiden — ohne Druck." },
+      { "h3": "Echte Begleitung während und danach", "p": "Direktes WhatsApp zwischen den Sitzungen für Fragen oder Anpassungen. Nach dem Paket eine Kontrolle nach 60 Tagen, um die Erhaltung zu bewerten. Wir verschwinden nicht, sobald bezahlt ist." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "h2": "Was wir zur INDIBA Radiofrequenz am häufigsten gefragt werden.",
+    "items": [
+      { "q": "Ist die INDIBA Radiofrequenz Behandlung sicher?", "a_html": "Ja, absolut. Die INDIBA Radiofrequenz ist nicht invasiv, für den medizinisch-ästhetischen Einsatz zugelassen und wird seit Jahrzehnten in Kliniken für Sportmedizin, Physiotherapie und fortgeschrittene Ästhetik eingesetzt. Sie erfordert weder Anästhesie noch Erholungszeit." },
+      { "q": "Tut es weh?", "a_html": "Nein. Man spürt eine tiefe, angenehme Wärme in der behandelten Zone — die meisten Patientinnen beschreiben die Sitzung als entspannend. Keine Nadeln, kein Schnitt, keine Anästhesie." },
+      { "q": "Wann sehe ich Ergebnisse?", "a_html": "Ab der ersten Sitzung wirkt die Haut strahlender und straffer. Die volle Wirkung (sichtbare Reduktion der Erschlaffung, Definition des Ovals, Verbesserung der Cellulite) festigt sich über das 10er-Paket und hält Monate danach an." },
+      { "q": "Was unterscheidet die INDIBA Radiofrequenz von anderen Radiofrequenzen am Markt?", "a_html": "Die INDIBA Radiofrequenz arbeitet mit 448 kHz — einer patentierten Frequenz, die sicher und tief bis zur Hypodermis vordringt. Andere Radiofrequenzen arbeiten oberflächlicher oder sind aggressiver und schmerzhaft. Die INDIBA Radiofrequenz ist die klinische Referenz für tiefe Straffung ohne OP." },
+      { "q": "Kann man sie mit anderen Behandlungen kombinieren?", "a_html": "Ja. Die INDIBA Radiofrequenz verstärkt und kombiniert sich problemlos mit Ultherapy/HIFU, Holztherapie, Mesotherapie und Peelings. In der Diagnose entwerfen wir den optimalen Kombinationsplan für Ihren Fall." },
+      { "q": "Wie viele Sitzungen brauche ich?", "a_html": "Wir empfehlen ein Paket mit 10 Sitzungen (1-2 pro Woche). Die genaue Anzahl hängt von der Zone und Ihrem Ziel ab. In der ersten kostenlosen Beratung beurteilen wir Ihren Fall und entwerfen den passenden Plan." },
+      { "q": "Was kostet es?", "a_html": "Das Paket mit 10 Sitzungen à 45 Min. kostet <strong>500 €</strong> — das sind 50 € pro Sitzung, und Sie <strong>sparen 375 €</strong> gegenüber Einzelbuchungen. Es gibt auch ein 10er-Paket à 30 Min. für 350 € und ein 5er-Paket à 30 Min. für 250 €. Die Einzelsitzung kostet je nach Dauer und Zone 45 € bis 85 €. Kostenlose und unverbindliche Erstdiagnose." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Unverbindlich",
+    "h2_html": "Buchen Sie Ihre kostenlose Diagnose. <em>Erfahren Sie zuerst, was Sie brauchen — und was nicht</em>.",
+    "p": "Dreißig Minuten in der Klinik mit jemandem, der Jahrzehnte mit dieser Technologie arbeitet. Wenn es nichts für Sie ist, sagen wir es Ihnen offen.",
+    "cta": "Beratung buchen →"
+  }
+}

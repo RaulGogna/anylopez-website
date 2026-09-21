@@ -1,0 +1,61 @@
+{
+  "title": "Our Team & Clinic — AnyLopez Aesthetic Clinic Benidorm",
+  "description": "Meet the team and facilities at AnyLopez Aesthetic Clinic in Benidorm. 35+ years caring for skin, specialists in INDIBA Radiofrequency, Ultherapy HIFU and aesthetic medicine.",
+  "breadcrumb": "About Us",
+  "hero": {
+    "label": "About Us",
+    "h1": "AnyLopez Aesthetic Clinic",
+    "sub": "Where you can treat yourself and give your skin the care it deserves"
+  },
+  "historia": {
+    "label": "Our Story",
+    "h2": "35 years of experience and passion for skin",
+    "p1": "It all began five years ago, when a passionate Argentine aesthetician with over 35 years of experience in skincare started this dream. Today, we continue to honour her legacy, bringing dedication and excellence to every treatment.",
+    "p2": "We know that every person is unique and every skin has its own needs, which is why we offer a personalised approach to every client. Your wellbeing and confidence are our priority.",
+    "cta": "Visit our clinic",
+    "imgAlt": "AnyLopez Aesthetic Clinic"
+  },
+  "valores": {
+    "label": "Our Values",
+    "h2": "What defines us",
+    "items": [
+      { "h3": "Wellbeing", "p": "Promoting the wellbeing of our skin and body is of vital importance through aesthetics and cosmetology." },
+      { "h3": "Beauty", "p": "Beauty is a fundamental part of feeling wonderful — with ourselves and with the world around us." },
+      { "h3": "Relaxation", "p": "Relaxation is essential to help us feel free and at peace. Rest is indispensable to our overall health." }
+    ]
+  },
+  "stats": {
+    "experiencia": "Years of experience",
+    "rating": "Google rating",
+    "resenas": "Verified reviews",
+    "tratamientos": "Specialist treatments"
+  },
+  "equipo": {
+    "label": "The team",
+    "h2": "Professionals at your service",
+    "sub": "Our team brings together wonderful qualities and strengths: professionalism, warmth, kindness, good judgement, and a genuine smile from the very first moment.",
+    "roles": {
+      "kumar": "General Manager",
+      "eilen_html": "Aesthetician &amp; Cosmetologist",
+      "rius": "Aesthetic Medicine",
+      "olga": "Biologist, Specialist in Cellular Regeneration"
+    }
+  },
+  "instalaciones": {
+    "label": "Our space",
+    "h2": "A clinic designed for you",
+    "sub": "Every corner is designed so you feel comfortable, safe, and in good hands from the very first moment.",
+    "recepcionAlt": "Reception at AnyLopez Aesthetic Clinic",
+    "recepcion": "Reception",
+    "salaAlt": "Waiting area at AnyLopez",
+    "sala": "Waiting area",
+    "cabinaAlt": "Treatment room at AnyLopez",
+    "cabina": "Treatment room"
+  },
+  "cta": {
+    "h2": "Would you like to visit us?",
+    "p": "Come and visit our clinic in Benidorm or get in touch to answer any questions you may have.",
+    "google_html": "Before you come, read what the <a href=\"https://www.google.com/maps/place/AnyLopez+Clinica+Est%C3%A9tica/@38.5376389,-0.1329449,19z?utm_source=anylopez-web&utm_medium=about-cta-en\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:var(--gold); text-decoration:underline;\">{count} people who&apos;ve already been here say on Google &rarr;</a>",
+    "btn_html": "<a href=\"https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20treatments.\" class=\"btn btn-accent\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Book your consultation on WhatsApp\">Book your consultation on WhatsApp</a>"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Aesthetic Treatments at AnyLopez Clinic — Benidorm",
+  "description": "Eight specialities, one craft. Editorial catalogue of facial, body, injectable and apparatology treatments at AnyLopez Aesthetic Clinic, Benidorm.",
+  "breadcrumb": "Services",
+  "css": {
+    "eyebrowColor": "var(--terra)",
+    "tratListColor": "var(--text-light)",
+    "flagshipLabel": "INDIBA Radiofrequency"
+  },
+  "hero": {
+    "eyebrow": "Catalogue · 8 specialities",
+    "h1_html": "Eight specialities,<br><em>one craft.</em>",
+    "lead_html": "Three generations designing, delivering and overseeing every treatment. We don't hire trainees or rush back-to-back sessions to fit a tight schedule — when you book, you're seen by the person who signs off the result.",
+    "reviews_html": "{rating} from {count} Google reviews",
+    "treatments": "treatments available",
+    "free": "Free initial assessment"
+  },
+  "catLabels": {
+    "limpiezas-faciales": "Hygiene + regular care",
+    "tratamientos-faciales": "Renewal · Anti-acne · Pigmentation",
+    "lifting-antiaging": "Non-surgical firming",
+    "inyectables": "Advanced aesthetic medicine",
+    "corporal": "Body · Tone · Recovery",
+    "masajes": "Manual · Therapeutic · Drainage",
+    "estetica-decorativa": "Lashes · Semi-permanent make-up",
+    "depilacion": "IPL · Comfortable for sensitive skin"
+  },
+  "cards": {
+    "flag": "Flagship speciality",
+    "altSuffix": "at AnyLopez Benidorm",
+    "unit": "treatment",
+    "cta": "View treatments"
+  },
+  "trust": {
+    "reviews": "verified Google reviews",
+    "sub": "More than 30 years caring for patients in Benidorm"
+  },
+  "flagship": {
+    "comment": "INDIBA Radiofrequency",
+    "alt": "INDIBA radiofrequency at AnyLopez Benidorm",
+    "eyebrow": "Flagship treatment",
+    "h2_html": "INDIBA Radiofrequency — <em>the lifting effect that doesn't show.</em>",
+    "p_html": "If you've cared for your skin all your life but the mirror keeps showing laxity, INDIBA Radiofrequency is the answer without surgery. CRet/RES technology that stimulates your own collagen from the very first session. Painless, no recovery time, compatible with every other treatment.",
+    "m1v": "€500",
+    "m1l": "10-session pack (45 min)",
+    "m2v": "€375",
+    "m2l": "Saving vs single session",
+    "m3v": "1st session",
+    "m3l": "Visible results",
+    "cta": "Discover INDIBA Radiofrequency →"
+  },
+  "finalCta": {
+    "eyebrow": "Not sure where to start?",
+    "h2_html": "Book a free assessment and we'll tell you what you need — and what you don't.",
+    "p_html": "Thirty minutes, no commitment. If it's not for you, we'll say so straight up and point you in the right direction. Honesty before the basket.",
+    "btn": "Book your assessment →",
+    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
+  },
+  "jsonld": {
+    "name": "AnyLopez Aesthetic Clinic specialities"
+  }
+}

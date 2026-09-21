@@ -1,137 +1,17 @@
 [
-  {
-    "es": "/",
-    "en": "/en/",
-    "priority_es": "1.0",
-    "priority_en": "0.9",
-    "changefreq": "weekly",
-    "crumb_es": null,
-    "crumb_en": null
-  },
-  {
-    "es": "/about/",
-    "en": "/en/about/",
-    "priority_es": "0.7",
-    "priority_en": "0.6",
-    "changefreq": "monthly",
-    "crumb_es": "Nosotras",
-    "crumb_en": "About Us"
-  },
-  {
-    "es": "/services/",
-    "en": "/en/services/",
-    "priority_es": "0.9",
-    "priority_en": "0.8",
-    "changefreq": "weekly",
-    "crumb_es": "Servicios",
-    "crumb_en": "Treatments"
-  },
-  {
-    "es": "/radiofrecuencia/",
-    "en": "/en/radiofrecuencia/",
-    "priority_es": "0.9",
-    "priority_en": "0.8",
-    "changefreq": "weekly",
-    "crumb_es": "Radiofrecuencia INDIBA",
-    "crumb_en": "INDIBA Radiofrequency"
-  },
-  {
-    "es": "/services/limpiezas-faciales/",
-    "en": "/en/services/limpiezas-faciales/",
-    "priority_es": "0.85",
-    "priority_en": "0.75",
-    "changefreq": "monthly",
-    "crumb_es": "Limpiezas Faciales",
-    "crumb_en": "Facials & Deep Cleanse"
-  },
-  {
-    "es": "/services/tratamientos-faciales/",
-    "en": "/en/services/tratamientos-faciales/",
-    "priority_es": "0.85",
-    "priority_en": "0.75",
-    "changefreq": "monthly",
-    "crumb_es": "Tratamientos Faciales Avanzados",
-    "crumb_en": "Advanced Facials"
-  },
-  {
-    "es": "/services/lifting-antiaging/",
-    "en": "/en/services/lifting-antiaging/",
-    "priority_es": "0.85",
-    "priority_en": "0.75",
-    "changefreq": "monthly",
-    "crumb_es": "Lifting y Antiaging",
-    "crumb_en": "Lifting & Anti-Ageing"
-  },
-  {
-    "es": "/services/inyectables/",
-    "en": "/en/services/inyectables/",
-    "priority_es": "0.85",
-    "priority_en": "0.75",
-    "changefreq": "monthly",
-    "crumb_es": "Medicina Estética Inyectable",
-    "crumb_en": "Botox & Fillers"
-  },
-  {
-    "es": "/services/corporal/",
-    "en": "/en/services/corporal/",
-    "priority_es": "0.85",
-    "priority_en": "0.75",
-    "changefreq": "monthly",
-    "crumb_es": "Tratamientos Corporales",
-    "crumb_en": "Body Treatments"
-  },
-  {
-    "es": "/services/masajes/",
-    "en": "/en/services/masajes/",
-    "priority_es": "0.85",
-    "priority_en": "0.75",
-    "changefreq": "monthly",
-    "crumb_es": "Masajes",
-    "crumb_en": "Massages"
-  },
-  {
-    "es": "/services/estetica-decorativa/",
-    "en": "/en/services/estetica-decorativa/",
-    "priority_es": "0.85",
-    "priority_en": "0.75",
-    "changefreq": "monthly",
-    "crumb_es": "Estética Decorativa",
-    "crumb_en": "Lash Extensions & Semi-Permanent Make-up"
-  },
-  {
-    "es": "/services/depilacion/",
-    "en": "/en/services/depilacion/",
-    "priority_es": "0.85",
-    "priority_en": "0.75",
-    "changefreq": "monthly",
-    "crumb_es": "Depilación IPL",
-    "crumb_en": "IPL Hair Removal"
-  },
-  {
-    "es": "/contact/",
-    "en": "/en/contact/",
-    "priority_es": "0.6",
-    "priority_en": "0.5",
-    "changefreq": "monthly",
-    "crumb_es": "Contacto",
-    "crumb_en": "Contact"
-  },
-  {
-    "es": "/privacidad/",
-    "en": null,
-    "priority_es": "0.3",
-    "priority_en": null,
-    "changefreq": "yearly",
-    "crumb_es": null,
-    "crumb_en": null
-  },
-  {
-    "es": "/aviso-legal/",
-    "en": null,
-    "priority_es": "0.3",
-    "priority_en": null,
-    "changefreq": "yearly",
-    "crumb_es": null,
-    "crumb_en": null
-  }
+  { "key": "home", "path": "/", "priority": "1.0", "changefreq": "weekly" },
+  { "key": "about", "path": "/about/", "priority": "0.7", "changefreq": "monthly" },
+  { "key": "services", "path": "/services/", "priority": "0.9", "changefreq": "weekly" },
+  { "key": "radiofrecuencia", "path": "/radiofrecuencia/", "priority": "0.9", "changefreq": "weekly" },
+  { "key": "limpiezas-faciales", "path": "/services/limpiezas-faciales/", "priority": "0.85", "changefreq": "monthly" },
+  { "key": "tratamientos-faciales", "path": "/services/tratamientos-faciales/", "priority": "0.85", "changefreq": "monthly" },
+  { "key": "lifting-antiaging", "path": "/services/lifting-antiaging/", "priority": "0.85", "changefreq": "monthly" },
+  { "key": "inyectables", "path": "/services/inyectables/", "priority": "0.85", "changefreq": "monthly" },
+  { "key": "corporal", "path": "/services/corporal/", "priority": "0.85", "changefreq": "monthly" },
+  { "key": "masajes", "path": "/services/masajes/", "priority": "0.85", "changefreq": "monthly" },
+  { "key": "estetica-decorativa", "path": "/services/estetica-decorativa/", "priority": "0.85", "changefreq": "monthly" },
+  { "key": "depilacion", "path": "/services/depilacion/", "priority": "0.85", "changefreq": "monthly" },
+  { "key": "contact", "path": "/contact/", "priority": "0.6", "changefreq": "monthly" },
+  { "key": "privacidad", "path": "/privacidad/", "priority": "0.3", "changefreq": "yearly" },
+  { "key": "aviso-legal", "path": "/aviso-legal/", "priority": "0.3", "changefreq": "yearly", "only": ["es"] }
 ]

@@ -1,0 +1,78 @@
+{
+  "title": "اتصلي بنا — عيادة AnyLopez للتجميل",
+  "description": "تواصلي مع عيادة AnyLopez للتجميل في بنيدورم. Calle Marqués de Comillas 4, Local 6. الهاتف: 656 306 167. الاثنين–الجمعة 10–14 / 16–20.",
+  "breadcrumb": "اتصلي بنا",
+  "comments": {
+    "main": "الاتصال الرئيسي",
+    "map": "الخريطة",
+    "form": "النموذج",
+    "cta": "مكالمة مباشرة"
+  },
+  "hero": {
+    "label": "تواصلي معنا",
+    "h1": "اتصلي بنا",
+    "sub_html": "تعرّفي على عيادتنا واستمتعي بمرافقنا وبخدمة شخصية عالية الجودة"
+  },
+  "info": {
+    "label": "معلومات",
+    "h2": "ماذا تنتظرين للتواصل معنا؟",
+    "p_html": "يسعدنا أن نخدمك ونجيب عن جميع استفساراتك. احجزي موعدك أو زورينا مباشرة في عيادتنا في بنيدورم.",
+    "direccion": "العنوان",
+    "telefonos": "الهواتف",
+    "email": "البريد الإلكتروني",
+    "horario": "ساعات العمل",
+    "horario_html": "من الاثنين إلى الجمعة<br>10:00 – 14:00 · 16:00 – 20:00"
+  },
+  "map": {
+    "aria": "عرض موقع عيادة AnyLopez للتجميل على خرائط Google في علامة تبويب جديدة",
+    "text": "عرض على خرائط Google"
+  },
+  "form": {
+    "label": "النموذج",
+    "h2": "احجزي موعدك",
+    "p_html": "املئي النموذج وسنتواصل معك في أقرب وقت ممكن.",
+    "nombre": "الاسم *",
+    "nombrePh": "اسمك",
+    "apellidos": "اسم العائلة *",
+    "apellidosPh": "اسم عائلتك",
+    "email": "البريد الإلكتروني *",
+    "emailPh": "example@email.com",
+    "telefono": "الهاتف",
+    "telefonoPh": "رقم هاتفك",
+    "tratamiento": "العلاج الذي يهمك",
+    "options": [
+      { "value": "", "label": "اختاري علاجاً..." },
+      { "value": "higiene-facial", "label": "تنظيف البشرة" },
+      { "value": "radiofrecuencia-facial", "label": "الترددات الراديوية للوجه" },
+      { "value": "radiofrecuencia-corporal", "label": "الترددات الراديوية للجسم" },
+      { "value": "radiofrecuencia-indiba", "label": "الترددات الراديوية بنظام Indiba" },
+      { "value": "ultherapy", "label": "Ultherapy" },
+      { "value": "dermapen", "label": "Dermapen" },
+      { "value": "botox", "label": "Botox" },
+      { "value": "acido-hialuronico", "label": "حقن حمض الهيالورونيك" },
+      { "value": "vitaminas-exosomas", "label": "فيتامينات + إكسوسومات" },
+      { "value": "micropigmentacion", "label": "المكياج الدائم" },
+      { "value": "otro", "label": "أخرى / استشارة عامة" }
+    ],
+    "mensaje": "رسالة أو ملاحظات",
+    "mensajePh": "أخبرينا كيف يمكننا مساعدتك...",
+    "consent_html": "<span>قرأت وأوافق على <a href=\"{privacyUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">سياسة الخصوصية</a></span>",
+    "submit": "إرسال الطلب",
+    "note": "نرد في أقل من 24 ساعة.",
+    "successH3": "تم إرسال الرسالة!",
+    "successP_html": "سنتواصل معك في غضون أقل من 24 ساعة."
+  },
+  "ctaBottom": {
+    "label": "مكالمة مباشرة",
+    "h2": "اتصلي بنا على 656 306 167",
+    "p": "إذا كنت تفضلين التحدث معنا مباشرة، فاتصلي بنا خلال ساعات العمل.",
+    "btn_html": "<a href=\"tel:656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>اتصلي الآن</a>"
+  },
+  "js": {
+    "required": "يرجى تعبئة الحقول الإلزامية (الاسم واسم العائلة والبريد الإلكتروني).",
+    "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح.",
+    "sending": "جارٍ الإرسال...",
+    "serverError": "خطأ في الخادم",
+    "sendError": "حدث خطأ أثناء إرسال النموذج. يرجى المحاولة مرة أخرى أو الاتصال بنا على 656 306 167."
+  }
+}

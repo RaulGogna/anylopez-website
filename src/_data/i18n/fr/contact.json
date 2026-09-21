@@ -1,0 +1,78 @@
+{
+  "title": "Contact — AnyLopez Clinique Esthétique",
+  "description": "Contactez AnyLopez Clinique Esthétique à Benidorm. Calle Marqués de Comillas 4, Local 6. Tél : 656 306 167. Lun–Ven 10h–14h / 16h–20h.",
+  "breadcrumb": "Contact",
+  "comments": {
+    "main": "CONTACT PRINCIPAL",
+    "map": "CARTE",
+    "form": "FORMULAIRE",
+    "cta": "APPEL DIRECT"
+  },
+  "hero": {
+    "label": "Entrez en Contact",
+    "h1": "Contactez-nous",
+    "sub_html": "Découvrez notre clinique et profitez de nos installations et d'un accueil personnalisé de qualité"
+  },
+  "info": {
+    "label": "Informations",
+    "h2": "Qu'attendez-vous pour nous contacter ?",
+    "p_html": "Nous serons ravis de vous accueillir et de répondre à toutes vos questions. Prenez rendez-vous ou venez directement nous voir dans notre clinique à Benidorm.",
+    "direccion": "Adresse",
+    "telefonos": "Téléphones",
+    "email": "Email",
+    "horario": "Horaires",
+    "horario_html": "Du lundi au vendredi<br>10h00 – 14h00 · 16h00 – 20h00"
+  },
+  "map": {
+    "aria": "Voir AnyLopez Clinique Esthétique sur Google Maps (s'ouvre dans un nouvel onglet)",
+    "text": "Voir sur Google Maps"
+  },
+  "form": {
+    "label": "Formulaire",
+    "h2": "Prenez Rendez-vous",
+    "p_html": "Remplissez le formulaire et nous vous contacterons dans les plus brefs délais.",
+    "nombre": "Prénom *",
+    "nombrePh": "Votre prénom",
+    "apellidos": "Nom *",
+    "apellidosPh": "Votre nom",
+    "email": "Email *",
+    "emailPh": "vous@email.com",
+    "telefono": "Téléphone",
+    "telefonoPh": "Votre numéro de téléphone",
+    "tratamiento": "Soin qui vous intéresse",
+    "options": [
+      { "value": "", "label": "Sélectionnez un soin..." },
+      { "value": "higiene-facial", "label": "Nettoyage de peau" },
+      { "value": "radiofrecuencia-facial", "label": "Radiofréquence visage" },
+      { "value": "radiofrecuencia-corporal", "label": "Radiofréquence corps" },
+      { "value": "radiofrecuencia-indiba", "label": "Radiofréquence INDIBA" },
+      { "value": "ultherapy", "label": "Ultherapy" },
+      { "value": "dermapen", "label": "Dermapen" },
+      { "value": "botox", "label": "Botox" },
+      { "value": "acido-hialuronico", "label": "Comblement acide hyaluronique" },
+      { "value": "vitaminas-exosomas", "label": "Vitamines + Exosomes" },
+      { "value": "micropigmentacion", "label": "Micropigmentation" },
+      { "value": "otro", "label": "Autre / Demande générale" }
+    ],
+    "mensaje": "Message ou commentaires",
+    "mensajePh": "Dites-nous comment nous pouvons vous aider...",
+    "consent_html": "<span>J'ai lu et j'accepte la <a href=\"{privacyUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">politique de confidentialité</a></span>",
+    "submit": "Envoyer la Demande",
+    "note": "Nous répondons en moins de 24 h.",
+    "successH3": "Message envoyé !",
+    "successP_html": "Nous vous contacterons dans un délai de 24 heures."
+  },
+  "ctaBottom": {
+    "label": "Appel direct",
+    "h2": "Appelez-nous au 656 306 167",
+    "p": "Si vous préférez nous parler directement, appelez-nous pendant nos horaires d'ouverture.",
+    "btn_html": "<a href=\"tel:656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Appeler Maintenant</a>"
+  },
+  "js": {
+    "required": "Veuillez remplir les champs obligatoires (prénom, nom et email).",
+    "invalidEmail": "Veuillez saisir un email valide.",
+    "sending": "Envoi en cours...",
+    "serverError": "Erreur du serveur",
+    "sendError": "Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer ou nous appeler au 656 306 167."
+  }
+}

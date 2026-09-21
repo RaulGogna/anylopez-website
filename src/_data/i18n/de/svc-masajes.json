@@ -1,0 +1,112 @@
+{
+  "title": "Professionelle Massagen in Benidorm — 8 Varianten · AnyLopez",
+  "description": "Komplettes Massageangebot der Ästhetikklinik AnyLopez Benidorm: Entspannungsmassage, therapeutische Massage, Fußreflexzonenmassage, Drainage, Gesichtsmassagen mit Kollagen und Vitamin C. Erfahrene Handarbeit.",
+  "jsonld": {
+    "name": "Professionelle Massagen AnyLopez",
+    "alternateName": "Therapeutische und ästhetische manuelle Massage",
+    "description": "Komplettes Angebot von 8 Massagevarianten in der AnyLopez Ästhetikklinik Benidorm: Körpermassage, Entspannungsmassage, Kopf-Gesicht-Nacken-Massage, Fußmassage, Massage für müde Beine, Aloe-vera-Massage, Gesichtsmassage mit Kollagen und mit Vitamin C.",
+    "specialties": [
+      "Körpermassage",
+      "Entspannungsmassage",
+      "Kopf-Gesicht-Nacken-Massage",
+      "Fußmassage",
+      "Massage für müde Beine",
+      "Aloe-vera-Massage",
+      "Gesichtsmassage Kollagen",
+      "Gesichtsmassage Vitamin C"
+    ],
+    "faq": [
+      { "q": "Welche Variante wofür?", "a": "Nackenverspannung/Kopfschmerzen: Kopf-Gesicht-Nacken-Massage. Schwere Beine: Massage für müde Beine oder Aloe vera. Belastete Füße oder Reflexbeschwerden: Fußmassage. Allgemeine Erschöpfung: Körper- oder Entspannungsmassage. Tiefenpflege des Gesichts: Kollagen oder Vitamin C." },
+      { "q": "Ideale Häufigkeit?", "a": "Je nach Ziel. Allgemeine Pflege: 1-mal im Monat. Chronische Verspannung: alle 2–3 Wochen bis zur Besserung. Gesichtsmassagen: alle 4–6 Wochen, kombiniert mit einer Gesichtsreinigung." },
+      { "q": "Kopf-Gesicht-Nacken-Massage bei Migräne?", "a": "Ja, besonders hilfreich bei Spannungskopfschmerz und Migräne mit Ursprung in der Halswirbelsäule. Sie ersetzt keine ärztliche Behandlung, ergänzt sie aber deutlich." },
+      { "q": "Und in der Schwangerschaft?", "a": "Ja, mit angepasster Variante und Lagerung. Die sanfte Entspannungsmassage ist völlig sicher. Reflexpunkte an den Füßen im ersten Trimester meiden." },
+      { "q": "Was ist die Fußmassage und warum reflexologisch?", "a": "Der Fuß hat Zonen, die Organe des Körpers widerspiegeln. Diese Zonen mit der richtigen Technik zu stimulieren, kann entfernte Beschwerden lindern (Kopfschmerz, Verdauungsmüdigkeit, Kreuzschmerzen). Mehr als eine Fußmassage — Arbeit am ganzen Körper." }
+    ]
+  },
+  "breadcrumb": { "services": "Behandlungen", "current": "Massagen" },
+  "callCta": "Anrufen: 656 306 167",
+  "hero": {
+    "imgAlt": "Professionelle Massagen in der AnyLopez Ästhetikklinik Benidorm",
+    "eyebrow": "Massagen · 8 spezialisierte Varianten",
+    "h1_html": "Hände, die diagnostizieren, <em>während sie behandeln.</em>",
+    "lead": "Sie haben Spa-Massagen probiert, die eine Stunde entspannten, aber nichts lösten. Hier hat jede Massage ein Ziel — echte Erholung, Entstauung, Anti-Müdigkeit, Gesichtspflege — und wird gewählt, nachdem wir beurteilt haben, was Ihr Körper oder Ihr Gesicht an diesem Tag braucht.",
+    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "reviews": "Google-Bewertungen",
+    "free": "Erstdiagnose kostenfrei"
+  },
+  "pain": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "h2": "Die meisten Patientinnen, die zu uns kommen, haben dasselbe erlebt.",
+    "p": "Sie fangen nicht bei null an. Sie kommen, nachdem Sie anderes probiert haben, das nicht wirklich funktioniert hat.",
+    "items": [
+      { "h3_html": "Sie haben Massagen probiert, die sich wie ein Tag im Spa anfühlen.", "p": "Angenehmer Duft, sanfte Musik — und Sie werden genauso abgefertigt wie die Person vor Ihnen. Oberflächliches Wohlgefühl, null Technik." },
+      { "h3_html": "Sie kommen mit Nacken- oder Rückenverspannung und gehen „angenehm entspannt“, aber genauso verspannt.", "p": "Die generische Massage entspannt für eine Stunde — die therapeutische Massage löst wirklich." },
+      { "h3_html": "Sie wollen konkrete Wirkung (Drainage, Entstauung, Anti-Müdigkeit, Hautregeneration), nicht nur Aromatherapie.", "p": "Eine gut gemachte Massage verändert den Zustand des Körpers." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Warum die Massagen bei AnyLopez wirken",
+    "h2": "Sechs Gründe, warum sie hier wirken, wo andere versagen.",
+    "p": "Kein Marketing. Erfahrene Handarbeit, klinisches Urteil und die passende Technik für jeden Fall.",
+    "items": [
+      { "h3": "Handarbeit aus Jahrzehnten Erfahrung", "p_html": "Die Hände diagnostizieren, während sie behandeln. Wir stellen keine Praktikanten ein, um Kosten zu sparen." },
+      { "h3": "Acht spezifische Varianten", "p_html": "Jede mit eigener Technik und eigenem Ziel: tiefe Entspannung, therapeutisch für den Nacken, reflexologische Fußmassage, Anti-Müdigkeit für die Beine, Gesichtsmassagen mit Kollagen oder Vitamin C." },
+      { "h3": "Eine Diagnose bestimmt die Variante", "p_html": "Nicht „was möchten Sie“ — sondern „was braucht Ihr Körper heute“. Mal tiefe Entspannung, mal Drainage, mal eine regenerierende Gesichtsmassage." },
+      { "h3": "Kombinierbar mit Körper- und Gesichtsbehandlungen", "p_html": "Vor einer fortgeschrittenen Gesichtsbehandlung entspannt eine Kopf-Nacken-Massage die Muskulatur. Vor einer Drainage mobilisiert eine Fußmassage die Energie. Echte Synergien." },
+      { "h3": "Sitzungen, die man ab der ersten spürt", "p_html": "Sie warten keine 10 Sitzungen, um etwas zu merken. Der Unterschied ist am Ende der ersten spürbar." },
+      { "h3": "Angewendet von der Person, die für das Ergebnis einsteht", "p_html": "Derselbe Anspruch wie in der ganzen Klinik: echte Erfahrung statt Schnellzertifikat." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Bei chronischer Muskelverspannung",
+    "h2_html": "Die Massage lindert, <em>die therapeutische Körperbehandlung löst.</em>",
+    "p": "Bei hartnäckiger Verspannung, Kreuzschmerzen, Erholung nach Operationen oder struktureller Cellulite gehen die Körperbehandlungen (gezielte Muskelregeneration, Lymphdrainage, Holztherapie) über die Massage hinaus.",
+    "cta": "Körperbehandlungen ansehen →"
+  },
+  "grid": {
+    "eyebrow": "Acht Varianten · eine Philosophie",
+    "h2": "Die Massagen im Überblick.",
+    "p": "Tippen Sie auf eine Karte für alle Wirkungen, Preise und Pakete.",
+    "altSuffix": "bei AnyLopez Benidorm",
+    "detailsAria": "Details ansehen zu",
+    "detailsCta": "Details ansehen →"
+  },
+  "tests": {
+    "eyebrow": "Echte Patientinnen",
+    "h2": "Ergebnisse, die man sieht — und weitererzählt.",
+    "p": "Verifizierte Google-Bewertungen. Ohne Schauspieler, ohne Wunderpillen, ohne retuschierte Vorher-nachher-Bilder.",
+    "items": [
+      { "quote_html": "\"Ich hatte jahrelang Kopfschmerzen und Nackenverspannungen. Die Kopf-Gesicht-Nacken-Massage hier ist echte therapeutische Arbeit, keine getarnte Entspannung. Nach 6 Sitzungen nehme ich kaum noch Schmerzmittel.\"", "author": "Aurora L.", "meta": "Patientin · Kopf-Gesicht-Nacken" },
+      { "quote_html": "\"Die Fußmassage mit reflexologischer Technik war eine Entdeckung. Von den Beinen bis zum Kopf spürt man sie. Ich zahle dasselbe wie im Spa, aber der Unterschied ist gewaltig.\"", "author": "Marta C.", "meta": "Patientin · Fußmassage" },
+      { "quote_html": "\"Die Gesichtsmassage mit Kollagen nach einem Monat vor Bildschirmen — ein Wunder. Sie entstaut, bringt Frische und Elastizität zurück. Ich empfehle, sie mit einer Gesichtsreinigung zu kombinieren.\"", "author": "Verifizierte Patientin", "meta": "Google-Bewertung · Gesichtsmassage Kollagen" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Wie fangen wir an?",
+    "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
+    "p": "Von Ihrer ersten Nachricht bis zum Ende der ersten Sitzung ist alles klar.",
+    "steps": [
+      { "h3": "Sie buchen einen Termin", "p": "Anruf/WhatsApp, um Tag und Uhrzeit zu finden. Unverbindlich, ohne Vorauszahlung." },
+      { "h3": "Beurteilung: Wir fragen, was Sie heute brauchen, und schauen genau hin", "p": "Verspannung, Müdigkeit, Stauung, Hautregeneration. Vor Beginn entscheiden wir die Variante — kein beliebiges Protokoll nach Schema F." },
+      { "h3": "Wir wenden die passende Variante an", "p": "Spezifische Technik (entspannend, therapeutisch, reflexologische Fußmassage, Gesichtsdrainage usw.) mit der Dauer, die Ihr Fall erfordert." },
+      { "h3": "Empfehlung zu Rhythmus und ergänzenden Varianten", "p": "Wenn Ihr Fall eine Kombination verlangt (z. B. Kopf-Nacken vor einer fortgeschrittenen Gesichtsbehandlung oder Fußmassage vor einer Drainage), sagen wir es Ihnen." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "h2": "Was wir zu den Massagen am häufigsten gefragt werden.",
+    "items": [
+      { "q": "Welche Variante wofür?", "a": "Nackenverspannung/Kopfschmerzen: Kopf-Gesicht-Nacken-Massage. Schwere Beine: Massage für müde Beine oder Aloe vera. Belastete Füße oder Reflexbeschwerden: Fußmassage. Allgemeine Erschöpfung: Körper- oder Entspannungsmassage. Tiefenpflege des Gesichts: Kollagen oder Vitamin C." },
+      { "q": "Ideale Häufigkeit?", "a": "Je nach Ziel. Allgemeine Pflege: 1-mal im Monat. Chronische Verspannung: alle 2–3 Wochen bis zur Besserung. Gesichtsmassagen: alle 4–6 Wochen, kombiniert mit einer Gesichtsreinigung." },
+      { "q": "Kopf-Gesicht-Nacken-Massage bei Migräne?", "a": "Ja, besonders hilfreich bei Spannungskopfschmerz und Migräne mit Ursprung in der Halswirbelsäule. Sie ersetzt keine ärztliche Behandlung, ergänzt sie aber deutlich." },
+      { "q": "Und in der Schwangerschaft?", "a": "Ja, mit angepasster Variante und Lagerung. Die sanfte Entspannungsmassage ist völlig sicher. Reflexpunkte an den Füßen im ersten Trimester meiden." },
+      { "q": "Was ist die Fußmassage und warum reflexologisch?", "a": "Der Fuß hat Zonen, die Organe des Körpers widerspiegeln. Diese Zonen mit der richtigen Technik zu stimulieren, kann entfernte Beschwerden lindern (Kopfschmerz, Verdauungsmüdigkeit, Kreuzschmerzen). Mehr als eine Fußmassage — Arbeit am ganzen Körper." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Unverbindlich",
+    "h2_html": "Buchen Sie Ihre erste Sitzung. <em>Die Variante wählen wir danach</em>.",
+    "p": "Wir beurteilen Sie bei der Ankunft und wählen die Variante nach dem, was Ihr Körper an diesem Tag braucht. Gehört Ihr Fall in die medizinische Physiotherapie, sagen wir es Ihnen.",
+    "cta": "Beurteilung buchen →"
+  }
+}

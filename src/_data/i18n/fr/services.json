@@ -1,0 +1,62 @@
+{
+  "title": "Soins chez AnyLopez Clinique Esthétique — Benidorm",
+  "description": "Huit spécialités, un seul savoir-faire. Catalogue éditorial de soins du visage, du corps, injectables et technologies esthétiques chez AnyLopez Clinique Esthétique, Benidorm.",
+  "breadcrumb": "Soins",
+  "css": {
+    "eyebrowColor": "var(--terra-dk)",
+    "tratListColor": "var(--text-mid)",
+    "flagshipLabel": "Radiofréquence INDIBA"
+  },
+  "hero": {
+    "eyebrow": "Catalogue · 8 spécialités",
+    "h1_html": "Huit spécialités,<br><em>un seul savoir-faire.</em>",
+    "lead_html": "Trois générations qui conçoivent, réalisent et supervisent chaque soin. Ici, pas de stagiaires ni de séances enchaînées à la va-vite — lorsque vous réservez, vous êtes reçue par la personne qui signe le résultat.",
+    "reviews_html": "{rating} sur {count} avis Google",
+    "treatments": "soins disponibles",
+    "free": "Diagnostic initial gratuit"
+  },
+  "catLabels": {
+    "limpiezas-faciales": "Hygiène + soin régulier",
+    "tratamientos-faciales": "Rénovation · Anti-acné · Taches pigmentaires",
+    "lifting-antiaging": "Raffermissement sans chirurgie",
+    "inyectables": "Médecine esthétique avancée",
+    "corporal": "Corps · Tonicité · Récupération",
+    "masajes": "Manuel · Thérapeutique · Drainage",
+    "estetica-decorativa": "Cils · Micropigmentation",
+    "depilacion": "IPL · Peaux apaisées"
+  },
+  "cards": {
+    "flag": "Spécialité phare",
+    "altSuffix": "chez AnyLopez Benidorm",
+    "unit": "soin",
+    "cta": "Voir les soins"
+  },
+  "trust": {
+    "reviews": "avis vérifiés sur Google",
+    "sub": "Plus de 30 ans à accompagner nos patientes à Benidorm"
+  },
+  "flagship": {
+    "comment": "Radiofréquence INDIBA",
+    "alt": "Radiofréquence INDIBA chez AnyLopez Benidorm",
+    "eyebrow": "Soin phare",
+    "h2_html": "Radiofréquence INDIBA — <em>le lifting qui ne se remarque pas</em>.",
+    "p_html": "Si vous avez pris soin de votre peau toute votre vie mais que le miroir vous renvoie du relâchement cutané, la Radiofréquence INDIBA est la réponse sans bloc opératoire. Une technologie CRet/RES qui stimule votre propre collagène dès la première séance. Indolore, sans convalescence, compatible avec tout le reste.",
+    "m1v": "500 €",
+    "m1l": "Pack 10 séances (45 min)",
+    "m2v": "375 €",
+    "m2l": "Économie vs séance à l'unité",
+    "m3v": "1re séance",
+    "m3l": "Résultats visibles",
+    "cta": "Découvrir la Radiofréquence INDIBA →"
+  },
+  "finalCta": {
+    "eyebrow": "Vous ne savez pas par où commencer ?",
+    "h2_html": "Réservez un diagnostic gratuit et nous vous dirons ce qu'il vous faut — et ce qu'il ne vous faut pas.",
+    "p_html": "Trente minutes sans engagement. Si ce n'est pas pour vous, nous vous le dirons franchement et nous vous orienterons. L'honnêteté avant le panier.",
+    "btn": "Réserver un bilan →",
+    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
+  },
+  "jsonld": {
+    "name": "Spécialités d'AnyLopez Clinique Esthétique"
+  }
+}

@@ -1,22 +1,30 @@
 ---
 layout: base.njk
-title: "Tratamientos corporales en Benidorm — Maderoterapia, drenaje y recuperación · AnyLopez"
-description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y recuperación muscular en AnyLopez Clínica Estética Benidorm. Manualidad experta y diagnóstico personalizado."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/services/corporal/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code]['svc-corporal'].title | safe }}"
+  description: "{{ i18n[l.code]['svc-corporal'].description | safe }}"
 ---
-
+{%- set tx = i18n[l.code]['svc-corporal'] %}
+{%- set tdata = catalogo[l.code] %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalSpecialty",
-  "name": "Tratamientos corporales AnyLopez",
-  "alternateName": "Estética corporal manual",
-  "description": "Catálogo de tratamientos corporales en AnyLopez Clínica Estética Benidorm: maderoterapia, presoterapia, drenaje linfático postoperatorio y recuperación de dolor muscular. Manualidad experta, protocolos validados y diagnóstico personalizado.",
-  "url": "{{ site.url }}/services/corporal/",
+  "name": "{{ tx.jsonld.name | safe }}",
+  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
+  "description": "{{ tx.jsonld.description | safe }}",
+  "url": "{{ site.url }}{{ l.prefix }}/services/corporal/",
   "relevantSpecialty": [
-    "Maderoterapia",
-    "Presoterapia",
-    "Drenaje Linfático Postoperatorio",
-    "Recuperación Muscular"
+{%- for s in tx.jsonld.specialties %}
+    "{{ s | safe }}"{% if not loop.last %},{% endif %}
+{%- endfor %}
   ],
   "provider": { "@id": "{{ site.url }}/#clinic" }
 }
@@ -27,11 +35,9 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Cuántas sesiones de drenaje postoperatorio necesito?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la cirugía y de la fase de recuperación, pero el protocolo habitual son 8-12 sesiones repartidas en las primeras 4-6 semanas postop. En el diagnóstico vemos tu parte médico, fecha de cirugía y diseñamos el plan exacto." } },
-    { "@type": "Question", "name": "¿La maderoterapia funciona contra la celulitis?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, especialmente combinada con constancia (alimentación, hidratación, movimiento). La maderoterapia mejora visiblemente la apariencia de la celulitis al estimular circulación y drenaje. No es magia, es trabajo manual sostenido — y los resultados se ven." } },
-    { "@type": "Question", "name": "¿Presoterapia y maderoterapia se complementan?", "acceptedAnswer": { "@type": "Answer", "text": "Mucho. La maderoterapia trabaja manualmente la fascia y la grasa subcutánea; la presoterapia drena el líquido linfático con presión secuencial. Combinadas en una misma sesión los resultados se multiplican — es uno de los protocolos que más recomendamos para piernas pesadas y celulitis." } },
-    { "@type": "Question", "name": "¿Después de una liposucción cuándo puedo empezar el drenaje?", "acceptedAnswer": { "@type": "Answer", "text": "Habitualmente entre 5 y 10 días tras la cirugía, según indicación de tu cirujano. Lo importante: drenaje específico postoperatorio (no masaje genérico) lo antes que el médico autorice. Cuanto antes empiezas, mejor evolución." } },
-    { "@type": "Question", "name": "¿La manipulación me dolerá?", "acceptedAnswer": { "@type": "Answer", "text": "El drenaje linfático es muy suave — no duele. La maderoterapia y la recuperación muscular tienen una intensidad media-alta dependiendo de tu tolerancia, pero siempre dentro del umbral terapéutico. Si en algún momento es demasiado, ajustamos. No tratamos a nadie aguantando dolor." } }
+{%- for f in tx.jsonld.faq %}
+    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+{%- endfor %}
   ]
 }
 </script>
@@ -221,14 +227,14 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
   .trat-card-incluye li {
     font-size: 13px;
     color: var(--text-mid);
-    padding-left: 16px;
+    padding-inline-start: 16px;
     position: relative;
     line-height: 1.5;
   }
   .trat-card-incluye li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     color: var(--terra);
     font-weight: 700;
     font-size: 12px;
@@ -265,11 +271,11 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
     cursor: pointer;
     padding: 0;
     transition: color 0.2s;
-    text-align: left;
+    text-align: start;
   }
   .trat-cta:hover { color: var(--terra); }
 
-  /* ─── CROSS-SELL BAND (toward Radiofrecuencia INDIBA) ─────────────── */
+  /* ─── CROSS-SELL BAND (toward {{ tx.css.xsellComment }}) ─────────────── */
   .cat-page-xsell {
     background: var(--dark);
     color: #fff;
@@ -401,7 +407,7 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     color: var(--dark);
-    text-align: left;
+    text-align: start;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -473,11 +479,11 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <a href="{{ '/services/' | url }}">Servicios</a>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>
-    <span>Tratamientos Corporales</span>
+    <span>{{ tx.breadcrumb.current }}</span>
   </div>
 </div>
 
@@ -488,7 +494,7 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
       <source srcset="{{ '/images/tratamientos/maderoterapia.webp' | url }}" type="image/webp">
       <img
         src="{{ '/images/tratamientos/maderoterapia.png' | url }}"
-        alt="Tratamientos corporales en AnyLopez Clínica Estética Benidorm"
+        alt="{{ tx.hero.imgAlt }}"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -500,18 +506,18 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
   <div class="cat-page-hero-inner">
     <div class="container">
       <div class="cat-page-hero-content">
-        <span class="eyebrow" style="color: var(--gold);">Tratamientos corporales · 4 protocolos</span>
-        <h1>Tu cuerpo no necesita una máquina más. <em>Necesita manos que sepan dónde insistir.</em></h1>
-        <p class="lead">Retención, piernas pesadas, recuperación postquirúrgica, tensión muscular crónica. Cosas que no se arreglan con un masaje genérico ni con una máquina sin criterio. Aquí trabajamos con técnica manual experta y protocolos específicos para cada caso.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.hero.eyebrow }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ tx.hero.lead_html | safe }}</p>
         <div class="cat-page-hero-ctas">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
         </div>
         <div class="cat-page-hero-meta">
           <span class="stars">★★★★★</span>
-          <strong>{{ reviews.rating }} · {{ reviews.count }} reseñas Google</strong>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
           <span class="dot">·</span>
-          <span>Diagnóstico inicial sin coste</span>
+          <span>{{ tx.hero.free }}</span>
         </div>
       </div>
     </div>
@@ -522,23 +528,17 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
 <section class="cat-page-pain">
   <div class="container">
     <div class="cat-page-pain-head">
-      <span class="eyebrow">¿Te suena alguna de estas?</span>
-      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
-      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+      <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+      <h2>{{ tx.pain.h2 }}</h2>
+      <p>{{ tx.pain.p_html | safe }}</p>
     </div>
     <div class="cat-page-pain-grid">
+      {%- for it in tx.pain.items %}
       <div class="cat-page-pain-item">
-        <h3>Sientes las piernas cargadas y la circulación lenta.</h3>
-        <p>Pese al deporte y a la dieta. Es retención y mala microcirculación. El gimnasio no la arregla — el drenaje sí.</p>
+        <h3>{{ it.h3_html | safe }}</h3>
+        <p>{{ it.p_html | safe }}</p>
       </div>
-      <div class="cat-page-pain-item">
-        <h3>Te has operado y la recuperación va lenta.</h3>
-        <p>Cirugía estética, quirúrgica abdominal, ortopédica. Sin drenaje específico postoperatorio se acumula inflamación que ralentiza tu vuelta a la normalidad.</p>
-      </div>
-      <div class="cat-page-pain-item">
-        <h3>Vives con tensión muscular crónica.</h3>
-        <p>Horas frente al ordenador o entrenamientos intensos. Lumbar, cervicales, piernas. Un masaje genérico te alivia un día — un protocolo serio te suelta de verdad.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -547,53 +547,20 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
 <section class="cat-page-why">
   <div class="container">
     <div class="cat-page-why-head">
-      <span class="eyebrow">Por qué los corporales en AnyLopez funcionan</span>
-      <h2>Seis razones por las que aquí funcionan donde otros sitios no.</h2>
-      <p>No es marketing. Es manualidad experta, criterio y protocolos validados.</p>
+      <span class="eyebrow">{{ tx.why.eyebrow }}</span>
+      <h2>{{ tx.why.h2_html | safe }}</h2>
+      <p>{{ tx.why.p_html | safe }}</p>
     </div>
     <div class="cat-page-why-grid">
+      {%- for it in tx.why.items %}
       <div class="cat-page-reason">
-        <div class="cat-page-reason-num">01</div>
+        <div class="cat-page-reason-num">0{{ loop.index }}</div>
         <div class="cat-page-reason-body">
-          <h3>Manualidad experta de quien lleva décadas</h3>
-          <p>Las máquinas ayudan; las manos diagnostican mientras tratan. Aquí no contratamos becarios para ahorrar costes — te atiende quien sabe.</p>
+          <h3>{{ it.h3_html | safe }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">02</div>
-        <div class="cat-page-reason-body">
-          <h3>Combinable con Radiofrecuencia INDIBA si hay flacidez asociada</h3>
-          <p>No vendemos solo lo nuestro. Si tu caso necesita radiofrecuencia profunda además del manual, lo decimos y combinamos protocolos.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">03</div>
-        <div class="cat-page-reason-body">
-          <h3>Drenaje linfático con técnica validada</h3>
-          <p>No es masaje suave con nombre fancy. Es protocolo Vodder/Leduc adaptado a tu caso, con presiones y ritmo específicos.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">04</div>
-        <div class="cat-page-reason-body">
-          <h3>Recuperación postquirúrgica con protocolos serios</h3>
-          <p>Tras una cirugía estética o de otro tipo, no improvisamos. Sabemos cuándo empezar, qué intensidad, qué frecuencia y por qué.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">05</div>
-        <div class="cat-page-reason-body">
-          <h3>Sesiones que se sienten desde la primera</h3>
-          <p>No tienes que esperar 10 sesiones para notar algo. Drenaje, maderoterapia y recuperación muscular dan sensación inmediata.</p>
-        </div>
-      </div>
-      <div class="cat-page-reason">
-        <div class="cat-page-reason-num">06</div>
-        <div class="cat-page-reason-body">
-          <h3>Sin pinchazos, sin recuperación, compatibles con tu rutina</h3>
-          <p>Sales y sigues con tu vida. Nada de baja, nada de marcas visibles.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -602,12 +569,12 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
 <section class="cat-page-section">
   <div class="container">
     <div class="cat-page-section-head">
-      <span class="eyebrow">Cuatro protocolos · una sola filosofía</span>
-      <h2>Los tratamientos corporales del catálogo.</h2>
-      <p>Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.</p>
+      <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
+      <h2>{{ tx.grid.h2 }}</h2>
+      <p>{{ tx.grid.p }}</p>
     </div>
 
-    {% set catTrats = tratamientos.tratamientos | byCategory("corporal") %}
+    {% set catTrats = tdata.tratamientos | byCategory("corporal") %}
     <div class="cat-page-grid">
       {% for trat in catTrats %}
       <article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
@@ -615,7 +582,7 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
           <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
           <img
             src="{{ ('/images/tratamientos/' + trat.imagen) | url }}"
-            alt="{{ trat.nombre }} en AnyLopez Benidorm"
+            alt="{{ trat.nombre }} {{ tx.grid.altSuffix }}"
             class="trat-card-img"
             loading="lazy"
             decoding="async"
@@ -648,8 +615,8 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
               type="button"
               class="trat-cta trat-card-trigger"
               data-slug="{{ trat.slug }}"
-              aria-label="Ver detalles de {{ trat.nombre }}"
-            >Ver detalles →</button>
+              aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
+            >{{ tx.grid.detailsCta }}</button>
           </div>
         </div>
       </article>
@@ -658,14 +625,14 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
   </div>
 </section>
 
-<!-- CROSS-SELL BAND (to Radiofrecuencia INDIBA) -->
+<!-- CROSS-SELL BAND (to {{ tx.comments.xsell }}) -->
 <section class="cat-page-xsell">
   <div class="container">
     <div class="cat-page-xsell-inner">
-      <span class="eyebrow">Cuando cuerpo y piel van juntos</span>
-      <h2>Si tu caso combina cuerpo y <em>flacidez profunda</em>…</h2>
-      <p>Muchos protocolos corporales se potencian combinándolos con radiofrecuencia INDIBA. Si tu objetivo incluye reafirmación de piel además de drenaje o tonicidad, lo combinamos en el diagnóstico gratuito.</p>
-      <a href="{{ '/radiofrecuencia/' | url }}" class="btn btn-accent">Conocer Radiofrecuencia INDIBA →</a>
+      <span class="eyebrow">{{ tx.xsell.eyebrow }}</span>
+      <h2>{{ tx.xsell.h2_html | safe }}</h2>
+      <p>{{ tx.xsell.p }}</p>
+      <a href="{{ (l.prefix + '/radiofrecuencia/') | url }}" class="btn btn-accent">{{ tx.xsell.cta }}</a>
     </div>
   </div>
 </section>
@@ -674,29 +641,19 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
 <section class="cat-page-tests">
   <div class="container">
     <div class="cat-page-tests-head">
-      <span class="eyebrow">Pacientes reales</span>
-      <h2>Resultados que se notan, y se cuentan.</h2>
-      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
     </div>
     <div class="cat-page-tests-grid">
+      {%- for it in tx.tests.items %}
       <div class="cat-page-test">
         <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Operada de abdominoplastia, las primeras semanas pensaba que no iba a recuperarme nunca. Diez sesiones de drenaje postoperatorio y la diferencia es noche y día — la inflamación bajó muchísimo más rápido que cualquier expectativa."</p>
-        <div class="cat-page-test-author">Carmen R.</div>
-        <div class="cat-page-test-meta">Paciente · Drenaje Postoperatorio</div>
+        <p class="cat-page-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="cat-page-test-author">{{ it.author }}</div>
+        <div class="cat-page-test-meta">{{ it.meta }}</div>
       </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"Llevaba años con dolor lumbar de oficina. Probé fisio, gimnasio, hasta acupuntura. La recuperación muscular aquí me ha soltado de verdad — no es un masaje agradable, es trabajo terapéutico serio."</p>
-        <div class="cat-page-test-author">Javier M.</div>
-        <div class="cat-page-test-meta">Paciente · Recuperación Muscular</div>
-      </div>
-      <div class="cat-page-test">
-        <div class="cat-page-test-stars">★★★★★</div>
-        <p class="cat-page-test-quote">"La maderoterapia me ha cambiado la celulitis de las piernas más que cualquier crema reductora. Combinado con un poco de constancia, los resultados son visibles."</p>
-        <div class="cat-page-test-author">Paciente verificada</div>
-        <div class="cat-page-test-meta">Reseña Google · Maderoterapia</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -705,39 +662,20 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
 <section class="cat-page-process">
   <div class="container">
     <div class="cat-page-process-head">
-      <span class="eyebrow">¿Cómo lo empezamos?</span>
-      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
-      <p>Desde tu primer mensaje hasta que ves la primera mejora pasan menos de dos semanas.</p>
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ tx.process.p }}</p>
     </div>
     <div class="cat-page-steps">
+      {%- for it in tx.process.steps %}
       <div class="cat-page-step">
-        <div class="cat-page-step-num">1</div>
+        <div class="cat-page-step-num">{{ loop.index }}</div>
         <div class="cat-page-step-body">
-          <h3>Reservas tu diagnóstico gratuito</h3>
-          <p>Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">2</div>
-        <div class="cat-page-step-body">
-          <h3>Diagnóstico personalizado en clínica</h3>
-          <p>Te valoramos: zona, antecedentes, objetivo. Si vienes posquirúrgica, vemos parte médico. Si es retención, palpamos para ver qué tipo. Si es tensión muscular, evaluamos cadena postural.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">3</div>
-        <div class="cat-page-step-body">
-          <h3>Protocolo a medida con sesiones y frecuencia</h3>
-          <p>No "vienes 10 veces". Diseñamos cuántas sesiones realmente necesitas y con qué cadencia. Y si lo tuyo se resuelve en 4 te lo decimos.</p>
-        </div>
-      </div>
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">4</div>
-        <div class="cat-page-step-body">
-          <h3>Seguimiento real entre sesiones</h3>
-          <p>WhatsApp directo para dudas, ajustes y guía pos-tratamiento.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -746,30 +684,16 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
 <section class="cat-page-faq">
   <div class="container">
     <div class="cat-page-faq-head">
-      <span class="eyebrow">Dudas frecuentes</span>
-      <h2>Lo que más nos preguntan sobre los corporales.</h2>
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ tx.faq.h2 }}</h2>
     </div>
     <div class="cat-page-faq-list">
-      <div class="cat-page-faq-item open">
-        <button class="cat-page-faq-q" type="button">¿Cuántas sesiones de drenaje postoperatorio necesito? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Depende de la cirugía y de la fase de recuperación, pero el protocolo habitual son 8-12 sesiones repartidas en las primeras 4-6 semanas postop. En el diagnóstico vemos tu parte médico, fecha de cirugía y diseñamos el plan exacto.</p></div>
+      {%- for f in tx.faq.items %}
+      <div class="cat-page-faq-item{% if loop.first %} open{% endif %}">
+        <button class="cat-page-faq-q" type="button">{{ f.q }} <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>{{ f.a_html | safe }}</p></div>
       </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿La maderoterapia funciona contra la celulitis? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Sí, especialmente combinada con constancia (alimentación, hidratación, movimiento). La maderoterapia mejora visiblemente la apariencia de la celulitis al estimular circulación y drenaje. No es magia, es trabajo manual sostenido — y los resultados se ven.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Presoterapia y maderoterapia se complementan? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Mucho. La maderoterapia trabaja manualmente la fascia y la grasa subcutánea; la presoterapia drena el líquido linfático con presión secuencial. Combinadas en una misma sesión los resultados se multiplican — es uno de los protocolos que más recomendamos para piernas pesadas y celulitis.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿Después de una liposucción cuándo puedo empezar el drenaje? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>Habitualmente entre 5 y 10 días tras la cirugía, según indicación de tu cirujano. Lo importante: drenaje específico postoperatorio (no masaje genérico) lo antes que el médico autorice. Cuanto antes empiezas, mejor evolución.</p></div>
-      </div>
-      <div class="cat-page-faq-item">
-        <button class="cat-page-faq-q" type="button">¿La manipulación me dolerá? <span class="icon">+</span></button>
-        <div class="cat-page-faq-a"><p>El drenaje linfático es muy suave — no duele. La maderoterapia y la recuperación muscular tienen una intensidad media-alta dependiendo de tu tolerancia, pero siempre dentro del umbral terapéutico. Si en algún momento es demasiado, ajustamos. No tratamos a nadie aguantando dolor.</p></div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -777,17 +701,18 @@ description: "Maderoterapia, presoterapia, drenaje linfático postoperatorio y r
 <!-- FINAL CTA -->
 <section class="cat-page-final">
   <div class="container">
-    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
-    <h2>Reserva tu diagnóstico gratuito. <em>Empieza por saber qué necesita tu cuerpo</em>.</h2>
-    <p>Treinta minutos en clínica con quien lleva décadas con manos. Si lo tuyo es derivable a fisio, traumatólogo u otro especialista, te lo decimos.</p>
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ tx.final.p_html | safe }}</p>
     <div class="cat-page-final-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
     </div>
   </div>
 </section>
 
 <!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{%- set tratamientos = catalogo[l.code] %}
 {% include "treatment-modal.njk" %}
 
 <script>

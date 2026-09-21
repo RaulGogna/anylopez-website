@@ -56,6 +56,16 @@ module.exports = function (eleventyConfig) {
     typeof str === "string" && str.startsWith(prefix)
   );
 
+  // i18n: resuelve el objeto idioma a partir del code ('es' | 'en' | ...)
+  eleventyConfig.addFilter("langByCode", (langs, code) =>
+    langs.find((l) => l.code === code)
+  );
+
+  // i18n: entry de pagesI18n cuya URL (en cualquier idioma) coincide con la actual
+  eleventyConfig.addFilter("entryByUrl", (entries, url) =>
+    entries.find((e) => Object.values(e.urls).includes(url)) || null
+  );
+
   eleventyConfig.addFilter("bust", bustAsset);
 
   return {

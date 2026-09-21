@@ -1,0 +1,104 @@
+{
+  "modal": {
+    "close": "Karte schließen",
+    "benefits": "Vorteile",
+    "how": "Wie funktioniert es?",
+    "pricing": "Preise",
+    "idealFor": "Ideal für",
+    "recommendations": "Empfehlungen",
+    "guarantee": "Unverbindlich —",
+    "waHref": "https://wa.me/34656306167?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20Informationen%20zu%20Ihren%20Behandlungen.",
+    "waCta": "Per WhatsApp buchen →",
+    "telCta": "Anrufen: 656 306 167"
+  },
+  "booking": {
+    "title": "Buchen Sie Ihre kostenlose Beratung",
+    "subtitle": "30 Minuten · persönliche Diagnose · unverbindlich",
+    "prevMonth": "Voriger Monat",
+    "nextMonth": "Nächster Monat",
+    "weekdays": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
+    "pickDay": "Wählen Sie Ihren Termin",
+    "noSlots": "Keine freien Termine an diesem Tag",
+    "scarcityNote": "Begrenzte Termine für persönliche Betreuung",
+    "formName": "Name",
+    "formPhone": "Telefon",
+    "formTreatment": "Welche Behandlung interessiert Sie?",
+    "formNotes": "Anmerkungen (optional)",
+    "submit": "Termin buchen und per WhatsApp melden",
+    "submitHint": "Wir öffnen WhatsApp mit Ihrer fertigen Buchung. AnyLopez bestätigt in weniger als 2 Std.",
+    "success": "Wir haben Ihre Buchung erhalten. AnyLopez bestätigt per WhatsApp in weniger als 2 Std. (während der Öffnungszeiten).",
+    "error": "Die Verfügbarkeit konnte nicht geladen werden. Rufen Sie uns an unter +34 656 306 167 oder nutzen Sie WhatsApp.",
+    "fallbackHref": "https://wa.me/34656306167",
+    "fallbackText": "Schreiben Sie uns per WhatsApp",
+    "consultation": "Kostenlose persönliche Beratung",
+    "starLabel": "Star-Behandlung",
+    "star": "INDIBA Radiofrequenz · Anti-Aging-Programm für Gesicht und Körper",
+    "groupLabel": "Nach Ziel",
+    "groups": [
+      "Jünger und straffer aussehen (Lifting und Anti-Aging)",
+      "Falten glätten und Volumen zurückgewinnen (Botox und Filler)",
+      "Haut und Ausstrahlung verbessern (Gesichtsbehandlungen, Dermapen, Peelings)",
+      "Körperbehandlungen und Umfangsreduktion",
+      "Sonstiges (Haarentfernung, dekorative Ästhetik, Massagen)"
+    ],
+    "other": "Ich bin unsicher — beraten Sie mich"
+  },
+  "leadStrip": {
+    "label_html": "Außerhalb der WhatsApp-Zeiten?<br>Hinterlassen Sie Ihre Daten — wir rufen Sie innerhalb von 24 Std. zurück.",
+    "subject": "Anfrage über Lead-Strip Homepage",
+    "namePh": "Ihr Name",
+    "nameAria": "Name",
+    "telPh": "Telefon",
+    "telAria": "Telefon",
+    "selAria": "Gewünschte Behandlung",
+    "selPh": "Was interessiert Sie?",
+    "options": [
+      { "value": "INDIBA", "label": "INDIBA Radiofrequenz" },
+      { "value": "HIFU", "label": "Ultherapy HIFU Lifting" },
+      { "value": "Botox", "label": "Botox & Filler" },
+      { "value": "Limpieza Facial", "label": "Gesichtsreinigung" },
+      { "value": "Dermapen", "label": "Dermapen" },
+      { "value": "Otro", "label": "Andere Behandlung" }
+    ],
+    "submit": "Termin anfragen",
+    "msg_html": "✓ Erhalten — wir melden uns bald."
+  },
+  "dolorSolucion": {
+    "dolor": {
+      "eyebrow": "Kommt Ihnen das bekannt vor?",
+      "title_html": "Waren Sie <em>so etwas schon einmal durch?</em>",
+      "p1_html": "Vielleicht haben Sie schon andere Behandlungen ausprobiert. Und es blieb das Gefühl, dass etwas fehlte: Zeit, Zuhören, ein Plan für Sie statt eines Pakets von der Stange.",
+      "p2_html": "Oder Sie haben sich noch nie behandeln lassen, weil Sie Ergebnisse gesehen haben, die eher operiert als natürlich wirkten — und Ihnen Ihre Haut, so wie sie ist, lieber ist als eine \"retuschierte\" Version.",
+      "p3_html": "In beiden Fällen verstehen wir Sie. Und in beiden Fällen sind wir überzeugt: <strong>Das Ergebnis hängt weniger von der Technologie ab als von den Händen, die sie führen.</strong>"
+    },
+    "solucion": {
+      "eyebrow": "So kümmern wir uns um Sie",
+      "title_html": "Drei Generationen <em>echtes Handwerk</em>",
+      "p_html": "Wir haben 35 Jahre Hautpflege-Handwerk geerbt. Wir verkaufen keine Pakete nach Stückzahl — wir entwerfen Protokolle für jeden einzelnen Menschen.",
+      "bullets": [
+        {
+          "strong": "Wir diagnostizieren zuerst.",
+          "span_html": "30 unverbindliche Minuten, in denen wir Ihre Haut, Ihre Ziele und Ihre Vorgeschichte beurteilen. Ohne Verkaufsdruck."
+        },
+        {
+          "strong": "Wir behandeln mit Zeit.",
+          "span_html": "Echte Sitzungen in der Kabine, ohne Eile: Jedes Protokoll respektiert die Zeit, die die Technik braucht, um zu wirken."
+        },
+        {
+          "strong": "Wir garantieren das Ergebnis.",
+          "span_html": "Wenn Sie bei unseren Paketen am Ende keine sichtbare Verbesserung bemerken, geht die Zusatzsitzung auf uns."
+        },
+        {
+          "strong": "Wir begleiten Sie danach.",
+          "span_html": "60 Tage nach Ihrer letzten Sitzung laden wir Sie zu einer kostenlosen Kontrolle ein, um die Ergebnisse zu bewerten und Ihren Erhaltungsplan zu gestalten."
+        }
+      ]
+    }
+  },
+  "calcom": {
+    "eyebrow": "Verfügbarkeit in Echtzeit",
+    "title_html": "Buchen Sie Ihre <em>kostenlose Beratung</em>",
+    "subtitle_html": "Wählen Sie Tag und Uhrzeit, die Ihnen am besten passen. 30 Minuten, unverbindlich — wir beurteilen Ihren Fall und empfehlen das beste Protokoll.",
+    "loading": "Kalender wird geladen…"
+  }
+}

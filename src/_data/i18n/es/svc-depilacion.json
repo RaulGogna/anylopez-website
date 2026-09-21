@@ -1,0 +1,108 @@
+{
+  "title": "Depilación IPL en Benidorm — Pulsada intensa segura · AnyLopez",
+  "description": "Depilación con luz pulsada IPL en clínica estética AnyLopez Benidorm. Equipo de calidad clínica, diagnóstico previo del fototipo y plan de sesiones según ciclo capilar real.",
+  "jsonld": {
+    "name": "Depilación IPL AnyLopez",
+    "alternateName": "Depilación luz pulsada intensa",
+    "description": "Depilación con luz pulsada intensa (IPL) en AnyLopez Clínica Estética Benidorm. Equipo de calidad clínica, diagnóstico previo del fototipo y plan de sesiones según ciclo capilar real.",
+    "specialties": [
+      "Depilación IPL",
+      "Luz Pulsada Intensa",
+      "Reducción de vello permanente"
+    ],
+    "faq": [
+      { "q": "¿Cuántas sesiones necesito?", "a": "Entre 6 y 10 sesiones espaciadas según zona y ciclo capilar. Cara y axilas: cadencia 4-6 semanas. Piernas y cuerpo: 6-8 semanas. Mantenimiento puntual una vez al año tras completar." },
+      { "q": "¿Duele?", "a": "Sensación de pellizco breve con cada pulso de luz. Mucho más cómodo que cera caliente o láser diodo. La mayoría no requiere anestesia." },
+      { "q": "¿En verano puedo hacer IPL?", "a": "Idealmente IPL se hace fuera de exposición solar intensa. Se puede en verano si tienes piel sin bronceado y aplicas protector solar estricto. Para pieles bronceadas mejor esperar al otoño-invierno." },
+      { "q": "¿Embarazo o lactancia?", "a": "IPL no está validado para embarazo y lactancia por precaución, aunque no hay evidencia de daño. Esperamos a fin de lactancia para empezar plan." },
+      { "q": "¿IPL vs láser diodo?", "a": "Ambos reducen vello permanentemente. IPL usa luz pulsada de espectro amplio (más flexible para distintas zonas y pieles). Láser diodo es luz coherente única (más eficaz en vello muy oscuro y piel clara, menos versátil)." }
+    ]
+  },
+  "breadcrumb": { "services": "Servicios", "current": "Depilación IPL" },
+  "callCta": "Llamar 656 306 167",
+  "hero": {
+    "imgAlt": "Depilación IPL en AnyLopez Clínica Estética Benidorm",
+    "eyebrow": "Depilación IPL · Pulsada intensa",
+    "h1_html": "Depilación IPL en serio. <em>No la del centro de barrio.</em>",
+    "lead_html": "Cera, cuchilla, cremas... llevas años con depilaciones temporales que se acumulan en gastos y en piel maltratada. La IPL bien aplicada reduce vello permanentemente — pero solo bien aplicada. Equipo de calidad clínica y plan según tu fototipo y ciclo capilar real, no protocolo único de cadena low-cost.",
+    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "reviews": "reseñas Google",
+    "free": "Diagnóstico inicial sin coste"
+  },
+  "pain": {
+    "eyebrow": "¿Te suena alguna de estas?",
+    "h2": "La mayoría de pacientes que llegan aquí han pasado por lo mismo.",
+    "p_html": "No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.",
+    "items": [
+      { "h3_html": "Te has cansado del rasurado, la cera y los depilatorios", "p_html": "Y la piel rota lo demuestra. Foliculitis, pelos enquistados, irritación constante. Tu piel pide algo definitivo." },
+      { "h3_html": "Has probado IPL en cadenas low-cost sin resultados duraderos.", "p_html": "Aparatos baratos, parámetros únicos, \"vente cada 15 días\" — luego el vello vuelve igual. Tecnología sin criterio no funciona." },
+      { "h3_html": "Tienes piel sensible, vello fino o claro, o fototipo alto", "p_html": "Y no sabes si funcionará. La respuesta corta: con equipo profesional y diagnóstico previo, sí — con aparato genérico, no." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Por qué la IPL en AnyLopez funciona",
+    "h2_html": "Seis razones por las que aquí funciona donde otros sitios no.",
+    "p_html": "No es marketing. Es equipo de calidad clínica, diagnóstico previo y criterio caso a caso.",
+    "items": [
+      { "h3": "Equipo IPL de calidad clínica", "p_html": "No es aparato de Amazon ni de bazar low-cost. Tecnología profesional con parámetros ajustables — la diferencia entre reducir vello y no." },
+      { "h3": "Diagnóstico previo del fototipo y vello", "p_html": "Pieles claras con vello oscuro responden distinto a pieles morenas con vello fino. Sin diagnóstico, mal pronóstico. Con diagnóstico, plan eficaz." },
+      { "h3": "Sesiones espaciadas según ciclo capilar real", "p_html": "No \"vente cada 15 días\" para acumular sesiones — sino respetando fase anágena del vello (la única en la que IPL funciona). Cada zona tiene su cadencia." },
+      { "h3": "Cómoda, sin dolor real", "p_html": "Sensación de pellizco breve por luz pulsada. Sin agujas, sin cera caliente, sin pelos enquistados." },
+      { "h3": "Compatible con piel sensible y todo tipo de fototipos", "p_html": "Con parámetros adaptados, IPL es seguro en pieles sensibles. Para fototipos altos (más oscuros) usamos protocolos específicos." },
+      { "h3": "Aplica quien sabe leer tu piel", "p_html": "Décadas de experiencia ajustando parámetros caso por caso. La diferencia entre IPL eficaz y placebo." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Después de IPL",
+    "h2_html": "Una piel sin vello <em>se cuida diferente.</em>",
+    "p": "Tras un protocolo IPL, la piel queda más suave y receptiva — momento perfecto para incorporar limpiezas faciales o masajes regeneradores como mantenimiento integral.",
+    "cta": "Ver masajes →"
+  },
+  "grid": {
+    "eyebrow": "Un protocolo · todas las zonas",
+    "h2": "El tratamiento de depilación.",
+    "p": "Pulsa la tarjeta para ver beneficios completos, todas las zonas con precio y packs.",
+    "altSuffix": "en AnyLopez Benidorm",
+    "forWhom_html": "Para quién:",
+    "detailsAria": "Ver detalles de",
+    "detailsCta": "Ver todas las zonas y precios →"
+  },
+  "tests": {
+    "eyebrow": "Pacientes reales",
+    "h2": "Resultados que se notan, y se cuentan.",
+    "p": "Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.",
+    "items": [
+      { "quote_html": "\"Después de probar IPL en otra cadena con resultado mediocre, aquí en 6 sesiones tengo zona perfectamente reducida. La diferencia es la calidad del equipo y el diagnóstico previo.\"", "author": "Cristina M.", "meta": "Paciente · IPL piernas completas" },
+      { "quote_html": "\"Mi piel es muy sensible y temía la depilación láser/IPL tras malas experiencias. Aquí ajustaron parámetros desde la primera sesión y cero irritación.\"", "author": "Inés P.", "meta": "Paciente · IPL ingles" },
+      { "quote_html": "\"Llevaba años rasurándome la barba (mujer con vello facial por SOP) y era infierno. IPL facial con protocolo específico ha cambiado mi vida. La psicología detrás también la trabajan.\"", "author": "Paciente verificada", "meta": "Reseña Google" }
+    ]
+  },
+  "process": {
+    "eyebrow": "¿Cómo lo empezamos?",
+    "h2": "Cuatro pasos. Sin sorpresas, sin letra pequeña.",
+    "p": "Desde tu primer mensaje hasta que ves la primera sesión pasan menos de dos semanas.",
+    "steps": [
+      { "h3_html": "Reservas tu valoración", "p_html": "Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso." },
+      { "h3_html": "Diagnóstico fototipo + tipo vello", "p_html": "Evaluamos color de piel, color y grosor del vello, antecedentes y zona objetivo. Te decimos honestamente si IPL es lo adecuado para ti — y si no lo es, también." },
+      { "h3_html": "Plan de sesiones según zona y ciclo", "p_html": "Diseñamos número de sesiones realistas y cadencia respetando ciclo capilar de cada zona. Cara y axilas: 4-6 semanas. Piernas y cuerpo: 6-8 semanas." },
+      { "h3_html": "Mantenimiento puntual una vez completado", "p_html": "Tras el plan inicial, sesión de mantenimiento puntual una vez al año basta. Sin compromisos eternos." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Dudas frecuentes",
+    "h2": "Lo que más nos preguntan sobre la IPL.",
+    "items": [
+      { "q": "¿Cuántas sesiones necesito?", "a_html": "Entre 6 y 10 sesiones espaciadas según zona y ciclo capilar. Cara y axilas: cadencia 4-6 semanas. Piernas y cuerpo: 6-8 semanas. Mantenimiento puntual una vez al año tras completar." },
+      { "q": "¿Duele?", "a_html": "Sensación de pellizco breve con cada pulso de luz. Mucho más cómodo que cera caliente o láser diodo. La mayoría no requiere anestesia." },
+      { "q": "¿En verano puedo hacer IPL?", "a_html": "Idealmente IPL se hace fuera de exposición solar intensa. Se puede en verano si tienes piel sin bronceado y aplicas protector solar estricto. Para pieles bronceadas mejor esperar al otoño-invierno." },
+      { "q": "¿Embarazo o lactancia?", "a_html": "IPL no está validado para embarazo y lactancia por precaución, aunque no hay evidencia de daño. Esperamos a fin de lactancia para empezar plan." },
+      { "q": "¿IPL vs láser diodo?", "a_html": "Ambos reducen vello permanentemente. IPL usa luz pulsada de espectro amplio (más flexible para distintas zonas y pieles). Láser diodo es luz coherente única (más eficaz en vello muy oscuro y piel clara, menos versátil)." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sin compromiso",
+    "h2_html": "Reserva tu valoración. <em>Diagnóstico de fototipo y plan a medida</em>.",
+    "p_html": "Treinta minutos para evaluar tu piel y vello, decirte si IPL es lo adecuado para tu caso (no siempre lo es) y diseñar plan realista.",
+    "cta": "Reservar valoración →"
+  }
+}

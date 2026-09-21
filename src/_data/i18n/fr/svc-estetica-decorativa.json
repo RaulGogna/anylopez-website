@@ -1,0 +1,108 @@
+{
+  "title": "Cils poil par poil et micropigmentation à Benidorm — AnyLopez",
+  "description": "Extensions de cils poil par poil et micropigmentation des sourcils, des lèvres et eye-liner à la clinique esthétique AnyLopez Benidorm. Dessin préalable et technique conservatrice qui vieillit bien.",
+  "jsonld": {
+    "name": "Esthétique décorative AnyLopez",
+    "alternateName": "Cils et micropigmentation",
+    "description": "Catalogue d'esthétique décorative chez AnyLopez Clinique Esthétique Benidorm : extensions de cils poil par poil et micropigmentation des sourcils, des lèvres et eye-liner. Dessin préalable, pigments hypoallergéniques durables et technique conservatrice qui vieillit bien.",
+    "specialties": [
+      "Cils Poil par Poil",
+      "Micropigmentation des Sourcils",
+      "Micropigmentation des Lèvres",
+      "Eye-liner Micropigmenté"
+    ],
+    "faq": [
+      { "q": "Combien de temps durent les cils poil par poil ?", "a": "Entre 3 et 4 semaines selon le cycle naturel de vos cils. Nous planifions une retouche toutes les 3-4 semaines pour maintenir un volume constant. Sans agresser vos cils naturels." },
+      { "q": "La micropigmentation fait-elle mal ?", "a": "Une sensation de gêne légère, pas de douleur. Nous appliquons une crème anesthésiante avant et pendant. La plupart des patientes décrivent la sensation comme un picotement ou un bref pincement." },
+      { "q": "Quand retoucher la micropigmentation ?", "a": "Retouche initiale à 4-6 semaines (après la cicatrisation) pour perfectionner. Ensuite, des retouches annuelles pour maintenir la couleur et l'intensité." },
+      { "q": "Et les allergies ?", "a": "Les pigments sont hypoallergéniques mais nous faisons au préalable un test d'allergie sur une petite zone. En cas de réaction, nous n'appliquons pas." },
+      { "q": "Puis-je faire du sport / m'exposer au soleil ?", "a": "Après la séance : 7 jours sans soleil direct, sans sauna, sans eau de mer ni piscine, sans maquillage sur la zone. Ensuite, vie normale — la protection solaire quotidienne est la clé pour que le pigment dure." }
+    ]
+  },
+  "breadcrumb": { "services": "Soins", "current_html": "Esthétique Décorative" },
+  "callCta": "Appeler le 656 306 167",
+  "hero": {
+    "imgAlt": "Esthétique décorative : cils et micropigmentation chez AnyLopez Clinique Esthétique Benidorm",
+    "eyebrow_html": "Esthétique décorative · Cils + Micropigmentation",
+    "h1_html": "Des détails qui se remarquent, <em>sans attirer l'attention.</em>",
+    "lead": "Se réveiller déjà maquillée. Des cils poil par poil et des sourcils/lèvres/eye-liner micropigmentés — mais faits avec discernement : dessin préalable, pigments durables, une technique conservatrice qui vieillit bien et se retouche, au lieu de s'effacer avec l'âge.",
+    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "reviews": "avis Google",
+    "free": "Diagnostic initial sans frais"
+  },
+  "pain": {
+    "eyebrow": "Cela vous parle ?",
+    "h2": "La plupart des patientes qui arrivent ici sont passées par la même chose.",
+    "p_html": "Vous ne partez pas de zéro. Vous arrivez après avoir essayé d'autres solutions qui n'ont pas vraiment fonctionné.",
+    "items": [
+      { "h3_html": "Vous vous réveillez et, avant toute routine, vous avez déjà l'air fatiguée.", "p_html": "Sourcils clairs, cils clairsemés, lèvres ternes. Vous sortez sans maquillage et votre visage ne vous ressemble pas." },
+      { "h3_html": "Dessiner vos sourcils et vos lèvres chaque matin vous vole des minutes que vous n'avez pas.", "p_html": "Et malgré tout, ce n'est jamais pareil qu'hier. Vous cherchez quelque chose qui dure et qui reste naturel." },
+      { "h3_html": "Vous avez vu des réalisations ratées qui vous font peur.", "p_html": "Des sourcils postiches façon marqueur. Des lèvres surchargées. Un eye-liner permanent qui vieillit mal. C'est pour ça que vous n'avez pas sauté le pas." }
+    ]
+  },
+  "why": {
+    "eyebrow_html": "Pourquoi l'esthétique décorative chez AnyLopez fonctionne",
+    "h2_html": "Six raisons pour lesquelles elle fonctionne ici et pas ailleurs.",
+    "p_html": "Ce n'est pas du marketing. C'est un dessin préalable, une technique conservatrice et des pigments qui vieillissent bien.",
+    "items": [
+      { "h3": "Un dessin préalable, toujours.", "p_html": "Avant toute application, nous dessinons sur votre peau et validons la forme. Si elle ne vous convainc pas, nous ne commençons pas." },
+      { "h3": "Des cils poil par poil (pas d'éventails artificiels).", "p_html": "Un cil synthétique pour chaque cil naturel. Un volume réel, un regard naturel — pas d'effet « cils de poupée »." },
+      { "h3": "Des pigments hypoallergéniques durables.", "p_html": "Des marques déposées avec traçabilité, pas des pigments de boutique en ligne. Une couleur qui évolue bien — sans virer au rouge ou au gris avec les années." },
+      { "h3": "Une technique conservatrice.", "p_html": "Mieux vaut peu de pigment maintenant et une retouche que surcharger. Mieux vaut des cils qui respectent vos cils naturels que des extensions qui les abîment." },
+      { "h3": "Un entretien programmé.", "p_html": "Nous planifions vos retouches à un rythme régulier (cils toutes les 3-4 semaines, micropigmentation retouche annuelle). Nous ne vous abandonnons pas après la vente." },
+      { "h3": "Réalisé par une professionnelle certifiée et expérimentée.", "p_html": "La même exigence que dans toute la clinique." }
+    ]
+  },
+  "grid": {
+    "eyebrow": "Deux protocoles · une seule philosophie",
+    "h2": "Les soins d'esthétique décorative du catalogue.",
+    "p": "Cliquez sur une carte pour voir tous les bienfaits, les tarifs et les packs.",
+    "altSuffix": "chez AnyLopez Benidorm",
+    "detailsAria": "Voir les détails de",
+    "detailsCta": "Voir les détails →"
+  },
+  "xsell": {
+    "eyebrow": "Pour sublimer la base",
+    "h2_html": "L'esthétique décorative est plus belle <em>sur une peau soignée.</em>",
+    "p": "Les sourcils et les lèvres ressortent davantage sur une peau propre et lumineuse. Pour un rendu d'ensemble harmonieux, les nettoyages de peau réguliers font la différence.",
+    "cta": "Voir les nettoyages de peau →"
+  },
+  "tests": {
+    "eyebrow": "Patientes réelles",
+    "h2": "Des résultats qui se voient, et qui se racontent.",
+    "p": "Avis vérifiés sur Google. Sans acteurs, sans miracles en pilule, sans avant-après retouchés.",
+    "items": [
+      { "quote_html": "\"Je fuyais la micropigmentation depuis des années à cause des réalisations terribles que j'avais vues. Ici, on m'a fait un dessin préalable et une technique poil par poil. Mes sourcils ont l'air d'être les miens — juste plus définis.\"", "author": "Inmaculada R.", "meta": "Patiente · Micropigmentation sourcils" },
+      { "quote_html": "\"Des cils poil par poil toutes les 4 semaines et ma routine du matin a été réduite de moitié. Sans éventails artificiels — ce sont les miens, en mieux.\"", "author": "Sandra L.", "meta": "Patiente · Cils" },
+      { "quote_html": "\"Eye-liner micropigmenté après étude de la forme et validation. Je me réveille le regard prêt. Aucune des réalisations vues sur Instagram ne me convainquait avant celle-ci.\"", "author": "Patiente vérifiée", "meta": "Avis Google" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment commence-t-on ?",
+    "h2": "Quatre étapes. Sans surprises, sans petites lignes.",
+    "p_html": "Nous dessinons avant d'appliquer. Si le résultat ne vous convainc pas, nous ne commençons pas.",
+    "steps": [
+      { "h3": "Vous réservez votre bilan", "p_html": "Appel/WhatsApp pour trouver un créneau. 30 min en clinique, sans frais, sans engagement." },
+      { "h3": "Dessin préalable sur votre peau + votre validation", "p_html": "Nous dessinons la forme, la couleur et les proportions directement sur votre visage. Vous vous regardez dans le miroir, nous ajustons avec vous. Si vous n'êtes pas convaincue à 100 %, nous ne commençons pas." },
+      { "h3": "Application", "p_html": "Cils poil par poil ou micropigmentation en technique conservatrice. Crème anesthésiante si nécessaire. Du temps et du soin." },
+      { "h3": "Retouche programmée", "p_html": "Cils toutes les 3-4 semaines. Micropigmentation : retouche initiale à 4-6 semaines puis annuelle. Un vrai entretien, pas un abandon après-vente." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "h2_html": "Ce qu'on nous demande le plus sur l'esthétique décorative.",
+    "items": [
+      { "q": "Combien de temps durent les cils poil par poil ?", "a_html": "Entre 3 et 4 semaines selon le cycle naturel de vos cils. Nous planifions une retouche toutes les 3-4 semaines pour maintenir un volume constant. Sans agresser vos cils naturels." },
+      { "q": "La micropigmentation fait-elle mal ?", "a_html": "Une sensation de gêne légère, pas de douleur. Nous appliquons une crème anesthésiante avant et pendant. La plupart des patientes décrivent la sensation comme un picotement ou un bref pincement." },
+      { "q": "Quand retoucher la micropigmentation ?", "a_html": "Retouche initiale à 4-6 semaines (après la cicatrisation) pour perfectionner. Ensuite, des retouches annuelles pour maintenir la couleur et l'intensité." },
+      { "q": "Et les allergies ?", "a_html": "Les pigments sont hypoallergéniques mais nous faisons au préalable un test d'allergie sur une petite zone. En cas de réaction, nous n'appliquons pas." },
+      { "q": "Puis-je faire du sport / m'exposer au soleil ?", "a_html": "Après la séance : 7 jours sans soleil direct, sans sauna, sans eau de mer ni piscine, sans maquillage sur la zone. Ensuite, vie normale — la protection solaire quotidienne est la clé pour que le pigment dure." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Sans engagement",
+    "h2_html": "Réservez un bilan. <em>Nous dessinons avant d'appliquer</em>.",
+    "p_html": "Trente minutes pour observer votre visage, parler de ce que vous cherchez et dessiner sur votre peau. Si le dessin ne vous convainc pas à 100 %, nous ne commençons pas.",
+    "cta": "Réserver un bilan →"
+  }
+}

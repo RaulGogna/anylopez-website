@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotras",
+    "services": "Servicios",
+    "radiofrecuencia": "Radiofrecuencia INDIBA",
+    "contact": "Contacto"
+  },
+  "header": {
+    "bookCta": "Reservar cita",
+    "waHref": "https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios.",
+    "menuToggle": "Abrir menú"
+  },
+  "breadcrumbHome": "Inicio",
+  "footer": {
+    "brand": "Clínica estética facial y corporal en Benidorm. Más de 35 años de experiencia con tecnología Radiofrecuencia INDIBA & Ultherapy HIFU.",
+    "servicesHeading": "Servicios",
+    "servicesLinks": {
+      "/radiofrecuencia/": "Radiofrecuencia INDIBA",
+      "/services/lifting-antiaging/": "Ultherapy HIFU",
+      "/services/inyectables/": "Botox & Rellenos",
+      "/services/limpiezas-faciales/": "Limpieza Facial",
+      "/services/tratamientos-faciales/": "Dermapen",
+      "/services/depilacion/": "Depilación IPL",
+      "/services/masajes/": "Masajes",
+      "/services/corporal/": "Corporal",
+      "/services/estetica-decorativa/": "Micropigmentación"
+    },
+    "infoHeading": "Información",
+    "infoLinks": {
+      "/": "Inicio",
+      "/about/": "Nosotras",
+      "/radiofrecuencia/": "Radiofrecuencia INDIBA",
+      "/contact/": "Contacto"
+    },
+    "googleReviews": "reseñas en Google",
+    "contactHeading": "Contacto",
+    "hours": "Lun–Vie: 10–14h / 16–20h",
+    "rights": "Todos los derechos reservados.",
+    "privacyLabel": "Política de privacidad",
+    "legalLabel": "Aviso legal"
+  },
+  "mobileBar": {
+    "call": "Llamar"
+  },
+  "crumbs": {
+    "about": "Nosotras",
+    "services": "Servicios",
+    "radiofrecuencia": "Radiofrecuencia INDIBA",
+    "limpiezas-faciales": "Limpiezas Faciales",
+    "tratamientos-faciales": "Tratamientos Faciales Avanzados",
+    "lifting-antiaging": "Lifting y Antiaging",
+    "inyectables": "Medicina Estética Inyectable",
+    "corporal": "Tratamientos Corporales",
+    "masajes": "Masajes",
+    "estetica-decorativa": "Estética Decorativa",
+    "depilacion": "Depilación IPL",
+    "contact": "Contacto"
+  }
+}

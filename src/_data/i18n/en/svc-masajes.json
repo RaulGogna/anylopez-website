@@ -1,0 +1,112 @@
+{
+  "title": "Professional massages in Benidorm — 8 modalities · AnyLopez",
+  "description": "Complete massage catalogue at AnyLopez aesthetic clinic Benidorm: relaxing, therapeutic, reflexology, drainage, facials with collagen and vitamin C. Expert manual technique.",
+  "jsonld": {
+    "name": "AnyLopez professional massages",
+    "alternateName": "Therapeutic and aesthetic manual massage",
+    "description": "Complete catalogue of 8 massage modalities at AnyLopez Aesthetic Clinic Benidorm: body, relaxing, cranio-facial-cervical, reflexology, tired legs, aloe vera, collagen facial and vitamin C facial.",
+    "specialties": [
+      "Body Massage",
+      "Relaxing Massage",
+      "Cranio-Facial-Cervical Massage",
+      "Reflexology Massage",
+      "Tired Legs Massage",
+      "Aloe Vera Massage",
+      "Collagen Facial Massage",
+      "Vitamin C Facial Massage"
+    ],
+    "faq": [
+      { "q": "Which modality for what?", "a": "Cervical tension/headaches: cranio-facial-cervical. Heavy legs: tired legs or aloe vera. Tired feet or reflex issues: reflexology. General anti-fatigue: body or relaxing. Deep facial care: collagen or vitamin C facial." },
+      { "q": "Ideal frequency?", "a": "Depends on the goal. General maintenance: once a month. Chronic tension: every 2-3 weeks until resolved. Facials: every 4-6 weeks combined with cleansing." },
+      { "q": "Cranio-facial-cervical massage for migraines?", "a": "Yes, particularly useful for tension headaches and migraines originating in the cervical area. It does not replace medical treatment but complements it significantly." },
+      { "q": "Pregnancy?", "a": "Yes, with adapted modality and position. A relaxing massage with a gentle technique is perfectly safe. Avoid reflex points on the feet during the first trimester." },
+      { "q": "What is reflexology massage and why reflexological?", "a": "The foot has zones that mirror organs of the body. Stimulating these zones with the right technique can ease distant tensions (headache, digestive fatigue, lower back pain). More than a foot massage — it is whole-body work." }
+    ]
+  },
+  "breadcrumb": { "services": "Services", "current": "Massages" },
+  "callCta": "Call 656 306 167",
+  "hero": {
+    "imgAlt": "Professional massages at AnyLopez Aesthetic Clinic Benidorm",
+    "eyebrow": "Massages · 8 specialised modalities",
+    "h1_html": "Hands that diagnose <em>while they treat.</em>",
+    "lead": "You have tried massages at spas that relaxed you for an hour but resolved nothing. Here every massage has an objective — real rest, decongestion, anti-fatigue, facial therapy — and is chosen after assessing what your body or face is asking for that day.",
+    "ctaPrimary": "Book your free consultation →",
+    "reviews": "Google reviews",
+    "free": "Initial consultation at no cost"
+  },
+  "pain": {
+    "eyebrow": "Does any of this sound familiar?",
+    "h2": "Most patients who arrive here have been through the same thing.",
+    "p": "You are not coming from nowhere. You are coming after trying other things that did not quite work.",
+    "items": [
+      { "h3_html": "You have tried massages that feel just like a day at the spa.", "p": "Pleasant scent, soft music, served exactly the same way as the previous person. Surface-level wellness, zero technique." },
+      { "h3_html": "You go in with cervical or lower-back tension and leave 'pleasantly relaxed' but just as tense.", "p": "A generic massage relaxes for an hour — a therapeutic massage truly releases." },
+      { "h3_html": "You want concrete benefits (drainage, decongestion, anti-fatigue, facial regeneration), not just aromatherapy.", "p": "A well-executed massage changes the state of the body." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why massages at AnyLopez work",
+    "h2": "Six reasons why they work here where other places fall short.",
+    "p": "It is not marketing. It is expert manual technique, judgement, and a specific approach for each case.",
+    "items": [
+      { "h3": "Expert manual technique from decades of practice", "p_html": "Hands that diagnose while they treat. We do not hire trainees to cut costs." },
+      { "h3": "Eight specific modalities", "p_html": "Each has its own technique and objective: deep relaxing, therapeutic cervical, reflexology foot, anti-fatigue legs, facials with collagen or vitamin C." },
+      { "h3": "A prior assessment decides the modality", "p_html": "Not \"what do you want\" — but \"what is your body asking for today\". Sometimes deep relaxation; sometimes drainage; sometimes a regenerating facial." },
+      { "h3": "Combinable with body and facial treatments", "p_html": "Before an advanced facial, a cranio-cervical massage relaxes the muscles. Before drainage, a reflexology session mobilises energy. Real synergies." },
+      { "h3": "Sessions you feel from the very first one", "p_html": "You do not wait 10 sessions to notice something. The difference is palpable by the end of the first." },
+      { "h3": "Delivered by the person who signs off the result", "p_html": "The same standard as across the whole clinic: real experience, not an express certificate." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "If you carry chronic muscle tension",
+    "h2_html": "Massage relieves, <em>therapeutic body work resolves.</em>",
+    "p": "For cases of persistent tension, lower-back pain, post-surgical recovery or structural cellulite, body treatments (specific muscle recovery, lymphatic drainage, wood therapy) go beyond massage.",
+    "cta": "See body treatments →"
+  },
+  "grid": {
+    "eyebrow": "Eight modalities · one single philosophy",
+    "h2": "The massages in the catalogue.",
+    "p": "Tap any card to see full benefits, prices and packages.",
+    "altSuffix": "at AnyLopez Benidorm",
+    "detailsAria": "See details of",
+    "detailsCta": "See details →"
+  },
+  "tests": {
+    "eyebrow": "Real patients",
+    "h2": "Results you feel, and that get talked about.",
+    "p": "Verified Google reviews. No actors, no pills, no photoshopped before-and-afters.",
+    "items": [
+      { "quote_html": "\"I had been suffering from headaches and cervical tension for years. The cranio-facial-cervical massage here is real therapeutic work, not dressed-up relaxation. After 6 sessions I barely take painkillers anymore.\"", "author": "Aurora L.", "meta": "Patient · Cranio-facial-cervical" },
+      { "quote_html": "\"The reflexology foot massage was a discovery. From legs to head, you feel it everywhere. I pay the same as at any spa, but the difference is night and day.\"", "author": "Marta C.", "meta": "Patient · Reflexology Massage" },
+      { "quote_html": "\"The collagen facial massage after a month of staring at screens — a miracle. It decongests, brightens, restores elasticity. I recommend pairing it with a facial cleanse.\"", "author": "Verified patient", "meta": "Google review · Collagen Facial Massage" }
+    ]
+  },
+  "process": {
+    "eyebrow": "How do we get started?",
+    "h2": "Four steps. No surprises, no small print.",
+    "p": "From your first message to the moment you leave the first session, everything is clear.",
+    "steps": [
+      { "h3": "You book a slot", "p": "Call/WhatsApp to find a day and time. No commitment, no upfront payment." },
+      { "h3": "Assessment: we ask what you are after today + we observe", "p": "Tension, fatigue, congestion, facial regeneration. Before starting, we decide the modality — we do not apply just any protocol for the sake of it." },
+      { "h3": "We apply the corresponding modality", "p": "Specific technique (relaxing, therapeutic, reflexology foot, facial drainage, etc.) with the duration your case requires." },
+      { "h3": "Recommended frequency and complementary modalities", "p": "If your case calls for combining (e.g. cranio-cervical before an advanced facial, or reflexology before drainage), we tell you." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "h2": "What we are most often asked about massages.",
+    "items": [
+      { "q": "Which modality for what?", "a": "Cervical tension/headaches: cranio-facial-cervical. Heavy legs: tired legs or aloe vera. Tired feet or reflex issues: reflexology. General anti-fatigue: body or relaxing. Deep facial care: collagen or vitamin C facial." },
+      { "q": "Ideal frequency?", "a": "It depends on the goal. General maintenance: once a month. Chronic tension: every 2-3 weeks until resolved. Facials: every 4-6 weeks combined with cleansing." },
+      { "q": "Cranio-facial-cervical massage for migraines?", "a": "Yes, particularly useful for tension headaches and migraines originating in the cervical area. It does not replace medical treatment but complements it significantly." },
+      { "q": "Pregnancy?", "a": "Yes, with adapted modality and position. A relaxing massage with a gentle technique is perfectly safe. Avoid reflex points on the feet during the first trimester." },
+      { "q": "What is reflexology massage and why reflexological?", "a": "The foot has zones that mirror organs of the body. Stimulating these zones with the right technique can ease distant tensions (headache, digestive fatigue, lower-back pain). More than a foot massage — it is whole-body work." }
+    ]
+  },
+  "final": {
+    "eyebrow": "No commitment",
+    "h2_html": "Book your first session. <em>Decide the modality afterwards</em>.",
+    "p": "We assess you on arrival and choose the modality based on what your body asks for that day. If your case is better referred to medical physiotherapy, we tell you.",
+    "cta": "Book your assessment →"
+  }
+}

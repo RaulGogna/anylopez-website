@@ -1,30 +1,38 @@
 ---
 layout: base.njk
-title: "Radiofrecuencia INDIBA en Benidorm — Lifting sin cirugía · AnyLopez"
-description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES profunda. Packs 10 sesiones desde 350 €. Resultados desde la primera sesión, sin dolor, sin recuperación."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/radiofrecuencia/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code].radiofrecuencia.title | safe }}"
+  description: "{{ i18n[l.code].radiofrecuencia.description | safe }}"
 ---
-
+{%- set tx = i18n[l.code].radiofrecuencia %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalTherapy",
-  "name": "Radiofrecuencia INDIBA",
-  "alternateName": "Radiofrecuencia INDIBA Anti-Edad",
-  "description": "Radiofrecuencia profunda INDIBA con tecnología CRet/RES. Tratamiento no invasivo e indoloro para flacidez facial y corporal, celulitis, arrugas y reafirmación. Packs 10 sesiones desde 350 €.",
-  "url": "{{ site.url }}/radiofrecuencia/",
+  "name": "{{ tx.jsonld.name | safe }}",
+  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
+  "description": "{{ tx.jsonld.description | safe }}",
+  "url": "{{ site.url }}{{ l.prefix }}/radiofrecuencia/",
   "procedureType": "https://schema.org/NoninvasiveProcedure",
-  "bodyLocation": ["Cara", "Cuello", "Abdomen", "Glúteos", "Piernas", "Brazos"],
-  "howPerformed": "Aplicación manual con cabezal CRet o RES sobre la zona a tratar durante 30-60 minutos. Sin agujas, sin dolor, sin tiempo de recuperación.",
-  "preparation": "No se requiere preparación previa. Acudir con la piel limpia y sin cremas.",
-  "followup": "Plan personalizado de 10 sesiones recomendado. Mantenimiento mensual tras el pack.",
+  "bodyLocation": [{% for b in tx.jsonld.bodyLocation %}"{{ b | safe }}"{% if not loop.last %}, {% endif %}{% endfor %}],
+  "howPerformed": "{{ tx.jsonld.howPerformed | safe }}",
+  "preparation": "{{ tx.jsonld.preparation | safe }}",
+  "followup": "{{ tx.jsonld.followup | safe }}",
   "offers": {
     "@type": "Offer",
     "price": "500",
     "priceCurrency": "EUR",
-    "name": "Pack 10 sesiones (45 min) Radiofrecuencia INDIBA Anti-Edad",
-    "description": "10 sesiones de radiofrecuencia INDIBA de 45 min. Diagnóstico inicial gratuito.",
+    "name": "{{ tx.jsonld.offerName | safe }}",
+    "description": "{{ tx.jsonld.offerDescription | safe }}",
     "availability": "https://schema.org/InStock",
-    "url": "{{ site.url }}/radiofrecuencia/"
+    "url": "{{ site.url }}{{ l.prefix }}/radiofrecuencia/"
   },
   "provider": { "@id": "{{ site.url }}/#clinic" }
 }
@@ -35,13 +43,9 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿Es seguro el tratamiento de radiofrecuencia INDIBA?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, es completamente seguro. El sistema de radiofrecuencia INDIBA es no invasivo, está aprobado para uso médico-estético, no requiere anestesia ni recuperación y se utiliza desde hace décadas en clínicas de medicina deportiva, fisioterapia y estética avanzada." } },
-    { "@type": "Question", "name": "¿Duele el tratamiento Radiofrecuencia INDIBA?", "acceptedAnswer": { "@type": "Answer", "text": "No produce dolor. La sensación es la de un calor profundo y agradable en la zona tratada. La mayoría de pacientes describe la sesión como relajante. No requiere anestesia." } },
-    { "@type": "Question", "name": "¿Cuándo veré los resultados de la radiofrecuencia INDIBA?", "acceptedAnswer": { "@type": "Answer", "text": "Los resultados son visibles desde la primera sesión y continúan mejorando con cada tratamiento. Para resultados óptimos y duraderos se recomienda completar el ciclo de 10 sesiones del Pack." } },
-    { "@type": "Question", "name": "¿Qué diferencia Radiofrecuencia INDIBA de otras radiofrecuencias?", "acceptedAnswer": { "@type": "Answer", "text": "La radiofrecuencia INDIBA trabaja a 448 kHz, una frecuencia patentada que penetra hasta las capas profundas (hipodérmica) de manera segura. Otras radiofrecuencias operan en frecuencias más superficiales o son más agresivas y dolorosas. Radiofrecuencia INDIBA es la referencia clínica para reafirmación profunda sin cirugía." } },
-    { "@type": "Question", "name": "¿Se puede combinar Radiofrecuencia INDIBA con otros tratamientos?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Radiofrecuencia INDIBA potencia y se combina sin problema con Ultherapy/HIFU, maderoterapia, mesoterapia y peelings. En el diagnóstico gratuito te diseñamos el plan combinado óptimo." } },
-    { "@type": "Question", "name": "¿Cuántas sesiones de Radiofrecuencia INDIBA necesito?", "acceptedAnswer": { "@type": "Answer", "text": "Recomendamos un Pack de 10 sesiones (1-2 por semana) para resultados óptimos. El número exacto depende del área a tratar y el objetivo. En la primera consulta de diagnóstico (gratuita) evaluamos tu caso y diseñamos el plan adecuado." } },
-    { "@type": "Question", "name": "¿Cuánto cuesta el Pack Radiofrecuencia INDIBA?", "acceptedAnswer": { "@type": "Answer", "text": "El Pack 10 sesiones de 45 min cuesta 500 € — sale a 50 € por sesión y ahorras 375 € frente a comprarlo todo suelto. También hay Pack 10 de 30 min por 350 € y Pack 5 de 30 min por 250 €. La sesión suelta va de 45 € a 85 € según duración y zona. Diagnóstico inicial gratuito y sin compromiso." } }
+{%- for f in tx.jsonld.faq %}
+    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+{%- endfor %}
   ]
 }
 </script>
@@ -228,7 +232,7 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
   .indiba-mod-list li::before {
     content: '✓';
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     color: var(--terra);
     font-weight: 700;
   }
@@ -291,7 +295,7 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
     margin-bottom: 32px;
   }
   .indiba-stack-totals .label { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
-  .indiba-stack-totals .crossed { color: rgba(255,255,255,0.55); text-decoration: line-through; font-size: 22px; margin-right: 16px; font-family: 'Cormorant Garamond', serif; }
+  .indiba-stack-totals .crossed { color: rgba(255,255,255,0.55); text-decoration: line-through; font-size: 22px; margin-inline-end: 16px; font-family: 'Cormorant Garamond', serif; }
   .indiba-stack-totals .final {
     font-family: 'Cormorant Garamond', serif;
     color: var(--gold);
@@ -417,7 +421,7 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     color: var(--dark);
-    text-align: left;
+    text-align: start;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -491,11 +495,11 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">Inicio</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
-    <a href="{{ '/services/' | url }}">Servicios</a>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>
-    <span>Radiofrecuencia INDIBA</span>
+    <span>{{ tx.breadcrumb.current }}</span>
   </div>
 </div>
 
@@ -506,7 +510,7 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
       <source srcset="{{ '/images/radiofrecuencia/5796413057692451908.webp' | url }}" type="image/webp">
       <img
         src="{{ '/images/radiofrecuencia/5796413057692451908.jpg' | url }}"
-        alt="Sesión de radiofrecuencia INDIBA en AnyLopez Benidorm"
+        alt="{{ tx.hero.imgAlt }}"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -518,18 +522,18 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
   <div class="indiba-hero-inner">
     <div class="container">
       <div class="indiba-hero-content">
-        <span class="eyebrow" style="color: var(--gold);">Tratamiento bandera · Lifting y Antiaging</span>
-        <h1>Reafirma sin quirófano. <em>Resultados desde la primera sesión.</em></h1>
-        <p class="lead">Si llevas años cuidándote y aun así el espejo te devuelve flacidez, no es tu culpa — las cremas no llegan donde llega Radiofrecuencia INDIBA. Tecnología CRet/RES profunda que estimula tu propio colágeno. Sin agujas, sin dolor, sin recuperación.</p>
+        <span class="eyebrow" style="color: var(--gold);">{{ tx.hero.eyebrow_html | safe }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ tx.hero.lead }}</p>
         <div class="indiba-hero-ctas">
-          <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
         </div>
         <div class="indiba-hero-meta">
           <span class="stars">★★★★★</span>
-          <strong>{{ reviews.rating }} · {{ reviews.count }} reseñas Google</strong>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
           <span class="dot">·</span>
-          <span>Pack 10 sesiones (45 min) <strong>500 €</strong> (ahorras 375 €)</span>
+          <span>{{ tx.hero.packMeta_html | safe }}</span>
         </div>
       </div>
     </div>
@@ -540,23 +544,17 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <section class="indiba-pain">
   <div class="container">
     <div class="indiba-pain-head">
-      <span class="eyebrow">¿Te suena alguna de estas?</span>
-      <h2>La mayoría de pacientes que llegan aquí han pasado por lo mismo.</h2>
-      <p>No vienes de la nada. Vienes después de probar otras cosas que no acabaron de funcionar.</p>
+      <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+      <h2>{{ tx.pain.h2 }}</h2>
+      <p>{{ tx.pain.p }}</p>
     </div>
     <div class="indiba-pain-grid">
+      {%- for it in tx.pain.items %}
       <div class="indiba-pain-item">
-        <h3>Has probado cremas, masajes y aparatología en otros sitios.</h3>
-        <p>Notaste algo al principio, pero a las semanas todo volvía. La superficie ayuda; la flacidez vive más profundo.</p>
+        <h3>{{ it.h3 }}</h3>
+        <p>{{ it.p_html | safe }}</p>
       </div>
-      <div class="indiba-pain-item">
-        <h3>Te niegas al quirófano, y con razón.</h3>
-        <p>No quieres anestesia, ni meses de recuperación, ni un resultado tirante que no te represente. Pero tampoco te conformas con "poco a poco no se hace nada".</p>
-      </div>
-      <div class="indiba-pain-item">
-        <h3>El espejo te devuelve algo cansado pese a cuidarte.</h3>
-        <p>Comes bien, te hidratas, duermes lo que puedes. Pero ese contorno del óvalo, esa flacidez del brazo, esa celulitis no se van solo con disciplina.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -565,53 +563,20 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <section class="indiba-why">
   <div class="container">
     <div class="indiba-why-head">
-      <span class="eyebrow">Por qué Radiofrecuencia INDIBA funciona</span>
-      <h2>Seis razones por las que esta tecnología cambia el juego.</h2>
-      <p>No es magia, no es marketing. Es física aplicada a tu fisiología.</p>
+      <span class="eyebrow">{{ tx.why.eyebrow }}</span>
+      <h2>{{ tx.why.h2 }}</h2>
+      <p>{{ tx.why.p }}</p>
     </div>
     <div class="indiba-why-grid">
+      {%- for it in tx.why.items %}
       <div class="indiba-reason">
-        <div class="indiba-reason-num">01</div>
+        <div class="indiba-reason-num">0{{ loop.index }}</div>
         <div class="indiba-reason-body">
-          <h3>Tecnología CRet/RES profunda</h3>
-          <p>La radiofrecuencia INDIBA trabaja a 448 kHz, una frecuencia patentada que penetra hasta la capa hipodérmica. Allí donde un cirujano corta para hacer un lifting, nosotros estimulamos sin abrir.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p_html | safe }}</p>
         </div>
       </div>
-      <div class="indiba-reason">
-        <div class="indiba-reason-num">02</div>
-        <div class="indiba-reason-body">
-          <h3>Activa tu propio colágeno</h3>
-          <p>No metemos sustancias. Radiofrecuencia INDIBA reactiva la regeneración natural de colágeno y elastina que tu cuerpo ya sabe producir, solo que ha bajado de ritmo con los años.</p>
-        </div>
-      </div>
-      <div class="indiba-reason">
-        <div class="indiba-reason-num">03</div>
-        <div class="indiba-reason-body">
-          <h3>Resultados desde la primera sesión</h3>
-          <p>No tienes que esperar tres meses para ver "algo". Sales de la primera sesión con la piel más luminosa y firme. El efecto pleno se construye sobre el Pack 10.</p>
-        </div>
-      </div>
-      <div class="indiba-reason">
-        <div class="indiba-reason-num">04</div>
-        <div class="indiba-reason-body">
-          <h3>Indoloro y sin recuperación</h3>
-          <p>La sesión es relajante, calor profundo agradable. Sales y sigues con tu día — almuerzo, oficina, gimnasio. Sin marcas, sin cremas, sin reposo.</p>
-        </div>
-      </div>
-      <div class="indiba-reason">
-        <div class="indiba-reason-num">05</div>
-        <div class="indiba-reason-body">
-          <h3>Compatible con Ultherapy HIFU, mesoterapia y peelings</h3>
-          <p>Radiofrecuencia INDIBA potencia y se combina con todo lo que ya estás haciendo. En el diagnóstico te diseñamos el plan combinado que multiplica resultados.</p>
-        </div>
-      </div>
-      <div class="indiba-reason">
-        <div class="indiba-reason-num">06</div>
-        <div class="indiba-reason-body">
-          <h3>Lo aplica quien firma el resultado</h3>
-          <p>Aquí no encadenas pacientes con becarios. Te atiende quien lleva décadas con esta tecnología y conoce dónde insistir y dónde no en tu caso.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -620,26 +585,25 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <section class="indiba-modalities">
   <div class="container">
     <div class="indiba-mod-head">
-      <span class="eyebrow">Dos modalidades, un mismo principio</span>
-      <h2>Radiofrecuencia INDIBA Facial e Radiofrecuencia INDIBA Corporal.</h2>
-      <p>El protocolo se adapta al área. La tecnología es la misma; los resultados, igual de visibles.</p>
+      <span class="eyebrow">{{ tx.mod.eyebrow }}</span>
+      <h2>{{ tx.mod.h2 }}</h2>
+      <p>{{ tx.mod.p }}</p>
     </div>
     <div class="indiba-mod-grid">
       <div class="indiba-mod">
         <div class="indiba-mod-img">
           <picture>
             <source srcset="{{ '/images/radiofrecuencia/112.webp' | url }}" type="image/webp">
-            <img src="{{ '/images/radiofrecuencia/112.png' | url }}" alt="Radiofrecuencia INDIBA Facial en AnyLopez Benidorm" loading="lazy" decoding="async" width="640" height="400" />
+            <img src="{{ '/images/radiofrecuencia/112.png' | url }}" alt="{{ tx.mod.card1.imgAlt }}" loading="lazy" decoding="async" width="640" height="400" />
           </picture>
         </div>
         <div class="indiba-mod-body">
-          <h3>Radiofrecuencia INDIBA Facial</h3>
-          <p>Reafirma el óvalo, suaviza arrugas finas, aporta luminosidad inmediata. Ideal para contorno facial, cuello y escote.</p>
+          <h3>{{ tx.mod.card1.h3 }}</h3>
+          <p>{{ tx.mod.card1.p }}</p>
           <ul class="indiba-mod-list">
-            <li>Reduce arrugas finas y líneas de expresión</li>
-            <li>Firmeza y luminosidad desde la 1ª sesión</li>
-            <li>Reduce flacidez del óvalo y cuello</li>
-            <li>Hidratación profunda intracelular</li>
+            {%- for li in tx.mod.card1.items %}
+            <li>{{ li }}</li>
+            {%- endfor %}
           </ul>
         </div>
       </div>
@@ -647,17 +611,16 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
         <div class="indiba-mod-img">
           <picture>
             <source srcset="{{ '/images/radiofrecuencia/111.webp' | url }}" type="image/webp">
-            <img src="{{ '/images/radiofrecuencia/111.png' | url }}" alt="Radiofrecuencia INDIBA Corporal en AnyLopez Benidorm" loading="lazy" decoding="async" width="640" height="400" />
+            <img src="{{ '/images/radiofrecuencia/111.png' | url }}" alt="{{ tx.mod.card2.imgAlt }}" loading="lazy" decoding="async" width="640" height="400" />
           </picture>
         </div>
         <div class="indiba-mod-body">
-          <h3>Radiofrecuencia INDIBA Corporal</h3>
-          <p>Ataca celulitis, grasa localizada y flacidez en abdomen, brazos y piernas. Combinable con maderoterapia y mesoterapia para resultados más rápidos.</p>
+          <h3>{{ tx.mod.card2.h3 }}</h3>
+          <p>{{ tx.mod.card2.p }}</p>
           <ul class="indiba-mod-list">
-            <li>Reduce visiblemente celulitis</li>
-            <li>Trabaja sobre grasa localizada</li>
-            <li>Reafirma piel de brazos, abdomen y piernas</li>
-            <li>Compatible con maderoterapia y mesoterapia</li>
+            {%- for li in tx.mod.card2.items %}
+            <li>{{ li }}</li>
+            {%- endfor %}
           </ul>
         </div>
       </div>
@@ -669,61 +632,43 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <section class="indiba-pack" id="pack">
   <div class="container">
     <div class="indiba-pack-head">
-      <span class="eyebrow">Pack 10 sesiones (45 min)</span>
-      <h2>Todo lo que entra, <em>y todo lo que ahorras</em>.</h2>
-      <p>No es una "oferta". Es la diferencia entre comprarlo todo suelto a comprarlo bien.</p>
+      <span class="eyebrow">{{ tx.pack.eyebrow }}</span>
+      <h2>{{ tx.pack.h2_html | safe }}</h2>
+      <p>{{ tx.pack.p_html | safe }}</p>
     </div>
     <div class="indiba-pack-card">
       <ul class="indiba-stack-list">
+        {%- for it in tx.pack.stack %}
         <li>
-          <span>10 sesiones de radiofrecuencia INDIBA de 45 min (CRet/RES)</span>
-          <span class="price">650 €</span>
+          <span>{{ it.label }}</span>
+          <span class="price">{{ it.price }}</span>
         </li>
-        <li>
-          <span>Diagnóstico inicial personalizado (30 min)</span>
-          <span class="price">80 €</span>
-        </li>
-        <li>
-          <span>Plan de protocolo a medida + ajustes</span>
-          <span class="price">50 €</span>
-        </li>
-        <li>
-          <span>Seguimiento entre sesiones (WhatsApp directo)</span>
-          <span class="price">30 €</span>
-        </li>
-        <li>
-          <span>Revisión a 60 días tras finalizar el Pack</span>
-          <span class="price">65 €</span>
-        </li>
+        {%- endfor %}
       </ul>
       <div class="indiba-stack-totals">
         <div>
-          <div class="label">Valor total</div>
-          <span class="crossed">875 €</span>
+          <div class="label">{{ tx.pack.totalLabel }}</div>
+          <span class="crossed">{{ tx.pack.crossed }}</span>
         </div>
-        <div style="text-align: right;">
-          <div class="label">Tu precio Pack</div>
-          <span class="final">500&nbsp;€</span>
+        <div style="text-align: end;">
+          <div class="label">{{ tx.pack.priceLabel }}</div>
+          <span class="final">{{ tx.pack.final_html | safe }}</span>
         </div>
       </div>
-      <div class="indiba-stack-savings">Ahorras 375 € · 43% menos que comprándolo suelto</div>
+      <div class="indiba-stack-savings">{{ tx.pack.savings }}</div>
       <div class="indiba-pack-cta">
-        <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar diagnóstico gratuito →</a>
-        <a href="https://wa.me/34656306167?text=Hola,%20me%20interesa%20el%20Pack%20Radiofrecuencia%20INDIBA" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+        <a href="https://wa.me/34656306167?text={{ tx.pack.waText_html | safe }}" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </div>
     <div class="indiba-pack-card" style="margin-top: 2rem;">
       <div class="indiba-pack-head" style="margin-bottom: 1rem;">
-        <h3 style="color: #fff; font-size: clamp(22px, 3vw, 30px);">Todas las tarifas Radiofrecuencia INDIBA</h3>
+        <h3 style="color: #fff; font-size: clamp(22px, 3vw, 30px);">{{ tx.pack.ratesTitle }}</h3>
       </div>
       <ul class="indiba-stack-list">
-        <li><span>Sesión facial o corporal (30 min)</span><span class="price">45 €</span></li>
-        <li><span>Sesión facial (45 min)</span><span class="price">65 €</span></li>
-        <li><span>Sesión corporal (60 min, por zona)</span><span class="price">85 €</span></li>
-        <li><span>Sesión vaginal (60 min)</span><span class="price">85 €</span></li>
-        <li><span>Pack 5 sesiones (30 min)</span><span class="price">250 €</span></li>
-        <li><span>Pack 10 sesiones (30 min)</span><span class="price">350 €</span></li>
-        <li><span><strong>Pack 10 sesiones (45 min) — el que más renta</strong></span><span class="price"><strong>500 €</strong></span></li>
+        {%- for it in tx.pack.rates %}
+        <li><span>{{ it.label_html | safe }}</span><span class="price">{{ it.price_html | safe }}</span></li>
+        {%- endfor %}
       </ul>
     </div>
   </div>
@@ -733,29 +678,19 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <section class="indiba-tests">
   <div class="container">
     <div class="indiba-tests-head">
-      <span class="eyebrow">Pacientes reales</span>
-      <h2>Resultados que se notan, y se cuentan.</h2>
-      <p>Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.</p>
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
     </div>
     <div class="indiba-tests-grid">
+      {%- for it in tx.tests.items %}
       <div class="indiba-test">
         <div class="indiba-test-stars">★★★★★</div>
-        <p class="indiba-test-quote">"Piel más firme y luminosa con resultados rápidos desde la primera sesión. El equipo es muy profesional y el tratamiento muy cómodo. Completamente recomendable."</p>
-        <div class="indiba-test-author">Ana Bayixauli</div>
-        <div class="indiba-test-meta">Paciente · Radiofrecuencia INDIBA Facial</div>
+        <p class="indiba-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="indiba-test-author">{{ it.author }}</div>
+        <div class="indiba-test-meta">{{ it.meta }}</div>
       </div>
-      <div class="indiba-test">
-        <div class="indiba-test-stars">★★★★★</div>
-        <p class="indiba-test-quote">"Mejoría notable en mi celulitis y sin ningún dolor. El tratamiento es muy cómodo y los resultados hablan por sí solos. Muy contenta con la clínica y con todo el equipo."</p>
-        <div class="indiba-test-author">Maria Castillo</div>
-        <div class="indiba-test-meta">Paciente · Radiofrecuencia INDIBA Corporal</div>
-      </div>
-      <div class="indiba-test">
-        <div class="indiba-test-stars">★★★★★</div>
-        <p class="indiba-test-quote">"Después de probar varios sitios, aquí he encontrado por fin lo que buscaba. Atención impecable, asesoramiento honesto y resultados que se ven en el espejo, no en un folleto."</p>
-        <div class="indiba-test-author">Paciente verificada</div>
-        <div class="indiba-test-meta">Reseña Google · Pack Radiofrecuencia INDIBA Anti-Edad</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -764,39 +699,20 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <section class="indiba-process">
   <div class="container">
     <div class="indiba-process-head">
-      <span class="eyebrow">¿Cómo lo empezamos?</span>
-      <h2>Cuatro pasos. Sin sorpresas, sin letra pequeña.</h2>
-      <p>Desde tu primer mensaje hasta que ves la primera mejora pasan menos de dos semanas.</p>
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ tx.process.p }}</p>
     </div>
     <div class="indiba-steps">
+      {%- for it in tx.process.steps %}
       <div class="indiba-step">
-        <div class="indiba-step-num">1</div>
+        <div class="indiba-step-num">{{ loop.index }}</div>
         <div class="indiba-step-body">
-          <h3>Reservas tu diagnóstico gratuito</h3>
-          <p>Llamada o WhatsApp para encontrar hueco. 30 minutos en clínica, sin coste y sin compromiso. Te respondemos en menos de 24 h.</p>
+          <h3>{{ it.h3 }}</h3>
+          <p>{{ it.p }}</p>
         </div>
       </div>
-      <div class="indiba-step">
-        <div class="indiba-step-num">2</div>
-        <div class="indiba-step-body">
-          <h3>Te valoramos en clínica</h3>
-          <p>Revisamos tu zona, tu historial y tus expectativas. Si Radiofrecuencia INDIBA no es lo adecuado para tu caso, te lo decimos de frente y te orientamos hacia lo que sí lo sea.</p>
-        </div>
-      </div>
-      <div class="indiba-step">
-        <div class="indiba-step-num">3</div>
-        <div class="indiba-step-body">
-          <h3>Plan personalizado y Pack ajustado</h3>
-          <p>Diseñamos protocolo, frecuencia (1-2 sesiones por semana) y zonas a tratar. Empiezas cuando tú decides — sin presión.</p>
-        </div>
-      </div>
-      <div class="indiba-step">
-        <div class="indiba-step-num">4</div>
-        <div class="indiba-step-body">
-          <h3>Seguimiento real durante y después</h3>
-          <p>WhatsApp directo entre sesiones para dudas o ajustes. Tras el Pack, revisión a 60 días para evaluar mantenimiento. No desaparecemos cuando cobramos.</p>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -805,38 +721,16 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <section class="indiba-faq">
   <div class="container">
     <div class="indiba-faq-head">
-      <span class="eyebrow">Dudas frecuentes</span>
-      <h2>Lo que más nos preguntan sobre Radiofrecuencia INDIBA.</h2>
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ tx.faq.h2 }}</h2>
     </div>
     <div class="indiba-faq-list">
-      <div class="indiba-faq-item open">
-        <button class="indiba-faq-q" type="button">¿Es seguro el tratamiento Radiofrecuencia INDIBA? <span class="icon">+</span></button>
-        <div class="indiba-faq-a"><p>Sí, totalmente. La radiofrecuencia INDIBA es no invasiva, está aprobada para uso médico-estético y se utiliza desde hace décadas en clínicas de medicina deportiva, fisioterapia y estética avanzada. No requiere anestesia ni recuperación.</p></div>
+      {%- for f in tx.faq.items %}
+      <div class="indiba-faq-item{% if loop.first %} open{% endif %}">
+        <button class="indiba-faq-q" type="button">{{ f.q }} <span class="icon">+</span></button>
+        <div class="indiba-faq-a"><p>{{ f.a_html | safe }}</p></div>
       </div>
-      <div class="indiba-faq-item">
-        <button class="indiba-faq-q" type="button">¿Duele? <span class="icon">+</span></button>
-        <div class="indiba-faq-a"><p>No. La sensación es la de un calor profundo y agradable en la zona tratada — la mayoría de pacientes describe la sesión como relajante. No hay agujas, no hay corte, no hay anestesia.</p></div>
-      </div>
-      <div class="indiba-faq-item">
-        <button class="indiba-faq-q" type="button">¿Cuándo veré resultados? <span class="icon">+</span></button>
-        <div class="indiba-faq-a"><p>Desde la primera sesión notas la piel más luminosa y firme. El efecto pleno (reducción visible de flacidez, definición de óvalo, mejora de celulitis) se consolida durante el Pack 10 y se mantiene meses después.</p></div>
-      </div>
-      <div class="indiba-faq-item">
-        <button class="indiba-faq-q" type="button">¿Qué diferencia Radiofrecuencia INDIBA de otras radiofrecuencias del mercado? <span class="icon">+</span></button>
-        <div class="indiba-faq-a"><p>La radiofrecuencia INDIBA trabaja a 448 kHz — una frecuencia patentada que penetra hasta la capa hipodérmica de manera segura y profunda. Otras radiofrecuencias operan en frecuencias más superficiales o son más agresivas y dolorosas. Radiofrecuencia INDIBA es la referencia clínica para reafirmación profunda sin cirugía.</p></div>
-      </div>
-      <div class="indiba-faq-item">
-        <button class="indiba-faq-q" type="button">¿Se puede combinar con otros tratamientos? <span class="icon">+</span></button>
-        <div class="indiba-faq-a"><p>Sí. Radiofrecuencia INDIBA potencia y se combina sin problema con Ultherapy/HIFU, maderoterapia, mesoterapia y peelings. En el diagnóstico te diseñamos el plan combinado óptimo según tu caso.</p></div>
-      </div>
-      <div class="indiba-faq-item">
-        <button class="indiba-faq-q" type="button">¿Cuántas sesiones necesito? <span class="icon">+</span></button>
-        <div class="indiba-faq-a"><p>Recomendamos un Pack de 10 sesiones (1-2 por semana). El número exacto depende del área a tratar y tu objetivo. En la primera consulta gratuita evaluamos tu caso y diseñamos el plan adecuado.</p></div>
-      </div>
-      <div class="indiba-faq-item">
-        <button class="indiba-faq-q" type="button">¿Cuánto cuesta? <span class="icon">+</span></button>
-        <div class="indiba-faq-a"><p>El Pack 10 sesiones de 45 min cuesta <strong>500 €</strong> — sale a 50 € por sesión y <strong>ahorras 375 €</strong> frente a comprarlo todo suelto. También hay Pack 10 de 30 min por 350 € y Pack 5 de 30 min por 250 €. La sesión suelta va de 45 € a 85 € según duración y zona. Diagnóstico inicial gratuito y sin compromiso.</p></div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -844,12 +738,12 @@ description: "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES 
 <!-- FINAL CTA -->
 <section class="indiba-final">
   <div class="container">
-    <span class="eyebrow" style="color: var(--gold);">Sin compromiso</span>
-    <h2>Reserva tu diagnóstico gratuito. <em>Empieza por saber qué necesitas — y qué no</em>.</h2>
-    <p>Treinta minutos en clínica con quien lleva décadas con esta tecnología. Si no es para ti, te lo decimos de frente.</p>
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ tx.final.p }}</p>
     <div class="indiba-final-row">
-      <a href="{{ '/contact/' | url }}" class="btn btn-accent">Reservar valoración →</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">Llamar 656 306 167</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
     </div>
   </div>
 </section>

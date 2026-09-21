@@ -1,30 +1,39 @@
 ---
 layout: base.njk
-title: "AnyLopez Benidorm — Ultherapy HIFU y Pack Radiofrecuencia INDIBA"
-description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y radiofrecuencia INDIBA. Pack 10 sesiones (45 min) por 500 € con garantía: si no notas mejora, sesión 11 gratis."
+pagination:
+  data: langs
+  size: 1
+  alias: l
+permalink: "{{ l.prefix }}/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code].home.title | safe }}"
+  description: "{{ i18n[l.code].home.description | safe }}"
+  ogTitle: "{{ i18n[l.code].home.ogTitle | safe }}"
+  ogDescription: "{% if i18n[l.code].home.ogDescPre %}{{ i18n[l.code].home.ogDescPre | safe }}{{ reviews.count }}{{ i18n[l.code].home.ogDescPost | safe }}{% endif %}"
 ---
-
+{%- set tx = i18n[l.code].home %}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <span class="hero-eyebrow">Benidorm · Clínica estética desde 2018</span>
-    <h1 class="hero-title">Piel más firme.<br>Más luminosa.<br><em>En pocas sesiones.</em></h1>
-    <p class="hero-desc">Radiofrecuencia INDIBA con protocolo personalizado. Heredamos 35 años de oficio en el cuidado de la piel y los aplicamos a cada sesión.</p>
+    <span class="hero-eyebrow">{{ tx.hero.eyebrow }}</span>
+    <h1 class="hero-title">{{ tx.hero.h1_html | safe }}</h1>
+    <p class="hero-desc">{{ tx.hero.desc }}</p>
     <div class="hero-actions">
-      <a href="https://wa.me/34656306167?text=Hola%2C%20quiero%20pedir%20mi%20valoraci%C3%B3n%20gratuita%20por%20Radiofrecuencia%20INDIBA." class="btn btn-terra" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"hero"}'>Pídenos tu valoración por WhatsApp</a>
-      <a href="#pack-indiba" class="btn btn-outline-light">Ver pack Radiofrecuencia INDIBA</a>
+      <a href="{{ tx.hero.waHref }}" class="btn btn-terra" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"hero"}'>{{ tx.hero.waCta }}</a>
+      <a href="#pack-indiba" class="btn btn-outline-light">{{ tx.hero.packCta }}</a>
     </div>
-    <a class="hero-rating-link" href="https://www.google.com/search?q=AnyLopez+Clinica+Estetica+Benidorm&amp;hl=es" target="_blank" rel="noopener noreferrer" aria-label="Ver las {{ reviews.count }} reseñas de AnyLopez en Google ({{ reviews.rating }} estrellas)">
+    <a class="hero-rating-link" href="https://www.google.com/search?q=AnyLopez+Clinica+Estetica+Benidorm&amp;hl={{ l.code }}" target="_blank" rel="noopener noreferrer" aria-label="{{ tx.hero.aria1_html | safe }}{{ reviews.count }}{{ tx.hero.aria2 }}{{ reviews.rating }}{{ tx.hero.aria3 }}">
       <span class="hero-rating-stars" aria-hidden="true">★★★★★</span>
-      <span class="hero-rating-text"><strong>{{ reviews.rating }}</strong> · {{ reviews.count }} reseñas verificadas en Google</span>
+      <span class="hero-rating-text"><strong>{{ reviews.rating }}</strong> · {{ reviews.count }} {{ tx.hero.ratingSuffix }}</span>
     </a>
-    <ul class="hero-chips" aria-label="Ventajas del Pack Radiofrecuencia INDIBA">
-      <li class="hero-chip">Sin dolor</li>
-      <li class="hero-chip">Sin recuperación</li>
-      <li class="hero-chip">Pack (45 min) 500 €</li>
-      <li class="hero-chip">Garantía sesión 11</li>
+    <ul class="hero-chips" aria-label="{{ tx.hero.chipsAria }}">
+      {%- for ch in tx.hero.chips %}
+      <li class="hero-chip">{{ ch }}</li>
+      {%- endfor %}
     </ul>
-    <p class="hero-guarantee">Si tras tu Pack 10 Radiofrecuencia INDIBA no notas mejora, tu sesión 11 es gratis.</p>
+    <p class="hero-guarantee">{{ tx.hero.guarantee }}</p>
     <div class="scroll-hint" aria-hidden="true"><span class="scroll-hint-line"></span></div>
   </div>
   <div class="hero-right">
@@ -36,11 +45,11 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
   </div>
 </section>
 
-<!-- BOOKING CUSTOM — primario (sustituye Cal.com) -->
-{% set lang = "es" %}
+<!-- {{ tx.c.booking }} -->
+{% set lang = l.code %}
 {% include "booking.njk" %}
 
-<!-- LEAD STRIP — fallback fuera de horario -->
+<!-- {{ tx.c.leadStrip }} -->
 {% include "lead-strip.njk" %}
 
 <!-- TRUST STRIP -->
@@ -49,10 +58,10 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
     <div class="trust-inner">
       <div class="trust-item">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.9)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <span class="trust-text"><strong>{{ reviews.rating }}</strong> Google · {{ reviews.count }} reseñas</span>
+        <span class="trust-text"><strong>{{ reviews.rating }}</strong> Google · {{ reviews.count }} {{ tx.trust.ratingSuffix }}</span>
       </div>
       <div class="trust-item">
-        <span class="trust-badge">Radiofrecuencia INDIBA</span><span class="trust-text"> Certified</span>
+        <span class="trust-badge">{{ tx.trust.badge1 }}</span><span class="trust-text"> Certified</span>
       </div>
       <div class="trust-item">
         <span class="trust-badge">Ultherapy HIFU</span><span class="trust-text"> Certified</span>
@@ -61,7 +70,7 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
         <span class="trust-badge">Dermapen</span><span class="trust-text"> Certified</span>
       </div>
       <div class="trust-item">
-        <span class="trust-text"><strong style="color:#fff">35 años</strong> de oficio heredado</span>
+        <span class="trust-text">{{ tx.trust.years_html | safe }}</span>
       </div>
     </div>
   </div>
@@ -70,236 +79,185 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
 <!-- DOLOR → SOLUCIÓN AFLUENTE (Slice 3) -->
 {% include "dolor-solucion.njk" %}
 
-<!-- PACK Radiofrecuencia INDIBA — TRATAMIENTO ESTRELLA -->
+<!-- {{ tx.c.pack }} -->
 <section class="section pack-indiba-section" id="pack-indiba">
   <div class="container">
     <div class="section-header rv">
-      <span class="section-label">Tratamiento estrella</span>
-      <h2 class="section-title">Pack Radiofrecuencia INDIBA Anti-Edad<br><em>10 sesiones (45 min) por 500 €</em></h2>
-      <p class="section-subtitle">Reafirma rostro o cuerpo con la tecnología que más recomendamos. Resultados visibles desde las primeras sesiones, sin cirugía y sin recuperación.</p>
+      <span class="section-label">{{ tx.pack.label }}</span>
+      <h2 class="section-title">{{ tx.pack.h2_html | safe }}</h2>
+      <p class="section-subtitle">{{ tx.pack.subtitle }}</p>
     </div>
 
     <div class="pack-grid rv">
 
       <div class="pack-include">
-        <h3>Qué incluye tu Pack 10</h3>
+        <h3>{{ tx.pack.includeH3_html | safe }}</h3>
         <ul class="pack-stack">
-          <li class="pack-stack-item">
+          {%- for it in tx.pack.items %}
+          <li class="pack-stack-item{% if it.cls %} {{ it.cls }}{% endif %}">
             <div class="pack-stack-head">
-              <span class="pack-stack-name">10 sesiones radiofrecuencia INDIBA (45 min)</span>
-              <span class="pack-stack-value">650 €</span>
+              <span class="pack-stack-name">{{ it.name_html | safe }}</span>
+              <span class="pack-stack-value">{{ it.value }}</span>
             </div>
-            <p class="pack-stack-reason">Sesión suelta de 45 min cuesta 65 € en clínica — pagar 10 sesiones sueltas saldría a 650 €.</p>
+            <p class="pack-stack-reason">{{ it.reason_html | safe }}</p>
           </li>
-          <li class="pack-stack-item">
-            <div class="pack-stack-head">
-              <span class="pack-stack-name">Diagnóstico inicial + plan personalizado por zona</span>
-              <span class="pack-stack-value">80 €</span>
-            </div>
-            <p class="pack-stack-reason">Una valoración estética profesional con recomendación de protocolo cuesta entre 60 y 100 € en la zona.</p>
-          </li>
-          <li class="pack-stack-item">
-            <div class="pack-stack-head">
-              <span class="pack-stack-name">Seguimiento sesión a sesión con ajuste de parámetros</span>
-              <span class="pack-stack-value">50 €</span>
-            </div>
-            <p class="pack-stack-reason">Cada cita calibramos potencia y tiempos a tu piel. Ese ajuste es lo que hace que los resultados se noten.</p>
-          </li>
-          <li class="pack-stack-item">
-            <div class="pack-stack-head">
-              <span class="pack-stack-name">Plan de cuidados en casa para sostener resultados</span>
-              <span class="pack-stack-value">30 €</span>
-            </div>
-            <p class="pack-stack-reason">Rutina personalizada para tu tipo de piel. Te decimos qué usar en casa, sin comisiones ni marca propia que vender.</p>
-          </li>
-          <li class="pack-stack-item is-guarantee">
-            <div class="pack-stack-head">
-              <span class="pack-stack-name"><strong>Garantía sesión 11:</strong> notas mejora o la 11ª corre de nuestra cuenta</span>
-              <span class="pack-stack-value">65 €</span>
-            </div>
-            <p class="pack-stack-reason">Tan seguras estamos de tu mejora que, si no la notas en las 10 sesiones, la 11ª la pagamos nosotras.</p>
-          </li>
+          {%- endfor %}
         </ul>
 
         <div class="pack-total">
-          <p class="pack-total-line">Valor total entregado: <s>875 €</s></p>
-          <p class="pack-total-price">Tu inversión hoy: <strong>500 €</strong></p>
-          <p class="pack-total-savings">Ahorras <strong>375 €</strong> (43 %)</p>
+          <p class="pack-total-line">{{ tx.pack.totalLine_html | safe }}</p>
+          <p class="pack-total-price">{{ tx.pack.price_html | safe }}</p>
+          <p class="pack-total-savings">{{ tx.pack.savings_html | safe }}</p>
         </div>
       </div>
 
       <div class="pack-table">
-        <h3>Compara opciones</h3>
+        <h3>{{ tx.pack.tableH3 }}</h3>
         <table>
           <thead>
             <tr>
-              <th>Opción</th>
-              <th class="num">Precio</th>
-              <th class="num">Por sesión</th>
+              <th>{{ tx.pack.thOption }}</th>
+              <th class="num">{{ tx.pack.thPrice }}</th>
+              <th class="num">{{ tx.pack.thPer }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Sesión suelta (45 min)</td>
-              <td class="num">65 €</td>
-              <td class="num">65 €</td>
+            {%- for r in tx.pack.rows %}
+            <tr{% if r.hl %} class="pack-row-highlight"{% endif %}>
+              <td>{{ r.td }}</td>
+              <td class="num{% if r.hl %} terra{% endif %}">{{ r.p }}</td>
+              <td class="num{% if r.hl %} terra{% endif %}">{{ r.s }}</td>
             </tr>
-            <tr>
-              <td>Pack 10 (30 min/sesión)</td>
-              <td class="num">350 €</td>
-              <td class="num">35 €</td>
-            </tr>
-            <tr class="pack-row-highlight">
-              <td>Pack 10 (45 min/sesión)</td>
-              <td class="num terra">500 €</td>
-              <td class="num terra">50 €</td>
-            </tr>
+            {%- endfor %}
           </tbody>
         </table>
 
-        <p class="pack-note">Las sesiones del pack de 500 € duran 45 minutos: mejor precio por volumen.</p>
+        <p class="pack-note">{{ tx.pack.note }}</p>
 
-        <p class="pack-reason"><strong>¿Por qué 10 sesiones a 500 €?</strong> Porque es el protocolo completo. Por debajo de 10, Radiofrecuencia INDIBA no consolida resultado. Lo que cobramos es lo que tu piel necesita — ni una sesión más, ni una menos.</p>
+        <p class="pack-reason">{{ tx.pack.reason_html | safe }}</p>
       </div>
     </div>
 
     <div class="section-cta pack-cta rv">
-      <a href="https://wa.me/34656306167?text=Hola%2C%20quiero%20reservar%20mi%20Pack%20Radiofrecuencia%20INDIBA%20Anti-Edad%20de%2010%20sesiones." class="btn btn-terra" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"pack-indiba"}'>Reservar mi Pack Radiofrecuencia INDIBA por WhatsApp</a>
+      <a href="{{ tx.pack.waHref }}" class="btn btn-terra" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"pack-indiba"}'>{{ tx.pack.waCta }}</a>
     </div>
   </div>
 </section>
 
-<!-- OTROS TRATAMIENTOS (tira inferior compacta) -->
+<!-- {{ tx.c.otros }} -->
 <section class="section otros-tratamientos-section">
   <div class="container">
     <div class="rv otros-wrap">
-      <p class="otros-intro">Nuestra especialidad es Radiofrecuencia INDIBA. También hacemos Ultherapy HIFU, Botox y rellenos, Dermapen, Limpieza Platinum, Maderoterapia y Presoterapia. Si vienes por uno de estos, te atendemos igual de bien — pero si pudieras venir por uno solo, te diríamos Radiofrecuencia INDIBA.</p>
+      <p class="otros-intro">{{ tx.otros.intro_html | safe }}</p>
       <div class="otros-chips">
-        <a href="{{ '/services/lifting-antiaging/#ultherapy-hifu' | url }}" class="otros-chip">Ultherapy HIFU Lifting</a>
-        <a href="{{ '/services/inyectables/#botox-zona' | url }}" class="otros-chip">Botox &amp; Rellenos</a>
-        <a href="{{ '/services/tratamientos-faciales/#dermapen-hidratacion' | url }}" class="otros-chip">Dermapen</a>
-        <a href="{{ '/services/limpiezas-faciales/#limpieza-facial-platinum' | url }}" class="otros-chip">Limpieza Platinum</a>
-        <a href="{{ '/services/corporal/#maderoterapia' | url }}" class="otros-chip">Maderoterapia</a>
-        <a href="{{ '/services/corporal/#presoterapia' | url }}" class="otros-chip">Presoterapia</a>
-        <a href="{{ '/services/inyectables/#acido-hialuronico' | url }}" class="otros-chip">Ácido Hialurónico</a>
+        {%- for ch in tx.otros.chips %}
+        <a href="{{ (l.prefix + ch.path) | url }}" class="otros-chip">{{ ch.label }}</a>
+        {%- endfor %}
       </div>
-      <a href="{{ '/services/' | url }}" class="btn btn-outline-terra">Ver catálogo completo</a>
+      <a href="{{ (l.prefix + '/services/') | url }}" class="btn btn-outline-terra">{{ tx.otros.catalogCta }}</a>
     </div>
   </div>
 </section>
 
-<!-- POR QUÉ ELEGIRNOS -->
+<!-- {{ tx.c.porque }} -->
 <section class="section porque-section">
   <div class="container">
     <div class="section-header rv">
-      <span class="section-label">¿Por qué AnyLopez?</span>
-      <h2 class="section-title">Nuestra diferencia</h2>
+      <span class="section-label">{{ tx.porque.label }}</span>
+      <h2 class="section-title">{{ tx.porque.h2 }}</h2>
     </div>
     <div class="porque-grid">
       <div class="porque-card rv d1">
         <div class="porque-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
         </div>
-        <h3>35 años de oficio, clínica desde 2018</h3>
-        <p>Heredamos un saber argentino de 35 años en el cuidado de la piel. Hoy lo aplicamos cada día en Benidorm, con la misma exigencia.</p>
+        <h3>{{ tx.porque.c1.h3 }}</h3>
+        <p>{{ tx.porque.c1.p_html | safe }}</p>
       </div>
       <div class="porque-card rv d2">
         <div class="porque-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
         </div>
-        <h3>Tecnología avanzada</h3>
-        <p>Equipos de Radiofrecuencia INDIBA &amp; Ultherapy HIFU. Seguridad y eficacia respaldadas por la ciencia.</p>
+        <h3>{{ tx.porque.c2.h3 }}</h3>
+        <p>{{ tx.porque.c2.p_html | safe }}</p>
       </div>
       <div class="porque-card rv d3">
         <div class="porque-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
         </div>
-        <h3>Atención personalizada</h3>
-        <p>Cada tratamiento se diseña a medida para tus necesidades, objetivos y tipo de piel. Sin protocolos genéricos.</p>
+        <h3>{{ tx.porque.c3.h3 }}</h3>
+        <p>{{ tx.porque.c3.p_html | safe }}</p>
       </div>
       <div class="porque-card rv d4">
         <div class="porque-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
         </div>
-        <h3>Resultados garantizados</h3>
-        <p>{{ reviews.count }} reseñas de 5 estrellas en Google lo avalan. Si no estás satisfecha, buscamos la solución contigo.</p>
+        <h3>{{ tx.porque.c4.h3 }}</h3>
+        <p>{{ reviews.count }}{{ tx.porque.c4.p_html | safe }}</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LEGADO + EQUIPO -->
+<!-- {{ tx.c.legado }} -->
 <section class="section legado-section">
   <div class="container">
     <div class="section-header rv">
-      <span class="section-label">Nuestra historia</span>
-      <h2 class="section-title">35 años de oficio.<br><em>Una clínica fiel a ese legado.</em></h2>
+      <span class="section-label">{{ tx.legado.label }}</span>
+      <h2 class="section-title">{{ tx.legado.h2_html | safe }}</h2>
     </div>
     <div class="legado-grid rv">
-      <p>Esta clínica empezó en 2018, heredando 35 años de oficio de una esteticista argentina que entendía algo: la piel no se maltrata, se escucha. Hoy seguimos haciéndolo así.</p>
-      <p><strong>No vendemos sesiones de más. No tratamos lo que no necesitas. Si tu piel no necesita Radiofrecuencia INDIBA, te lo diremos.</strong></p>
-      <p>Cada persona es única y cada piel tiene sus propias necesidades. Por eso no aplicamos protocolos en serie: hablamos contigo, valoramos tu piel y diseñamos un plan a tu medida.</p>
+      <p>{{ tx.legado.p1_html | safe }}</p>
+      <p>{{ tx.legado.p2_html | safe }}</p>
+      <p>{{ tx.legado.p3_html | safe }}</p>
     </div>
 
     <div class="equipo-block rv">
       <div class="equipo-header">
-        <span class="section-label">Quién está hoy detrás de la clínica</span>
+        <span class="section-label">{{ tx.legado.eqLabel }}</span>
       </div>
       <div class="equipo-card">
         <div class="equipo-photo">
           <picture>
             <source srcset="{{ '/images/kumar-bata-sonrisa-elegancia.webp' | url }}" type="image/webp">
-            <img src="{{ '/images/kumar-bata-sonrisa-elegancia.jpeg' | url }}" alt="Gogna Kumar — Director de AnyLopez Clínica Estética" width="280" height="280" loading="lazy" decoding="async" />
+            <img src="{{ '/images/kumar-bata-sonrisa-elegancia.jpeg' | url }}" alt="{{ tx.legado.imgAlt }}" width="280" height="280" loading="lazy" decoding="async" />
           </picture>
         </div>
         <div class="equipo-info">
           <h3>Gogna Kumar</h3>
-          <p class="equipo-rol">Director de la clínica</p>
-          <p>Asumí la dirección de AnyLopez para que el cuidado que define a esta clínica siga aquí, en Benidorm, con las mismas manos expertas y la misma tecnología.</p>
-          <p class="equipo-bio-last">No vendo paquetes más largos de lo que tu piel necesita. No empiezo un tratamiento sin valoración. Si tienes dudas antes de empezar, escríbeme tú directamente al WhatsApp de la clínica — prefiero perder una venta a que llegues sin todas tus preguntas resueltas.</p>
-          <a href="https://wa.me/34656306167?text=Hola%20Kumar%2C%20tengo%20unas%20dudas%20antes%20de%20empezar." class="btn btn-terra" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"legacy-team"}'>Escribir directamente a Kumar</a>
+          <p class="equipo-rol">{{ tx.legado.rol }}</p>
+          <p>{{ tx.legado.bio1 }}</p>
+          <p class="equipo-bio-last">{{ tx.legado.bio2_html | safe }}</p>
+          <a href="{{ tx.legado.waHref }}" class="btn btn-terra" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"legacy-team"}'>{{ tx.legado.waCta }}</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESO -->
+<!-- {{ tx.c.proceso }} -->
 <section class="section proceso-section">
   <div class="container">
     <div class="section-header rv">
-      <span class="section-label">Cómo funciona</span>
-      <h2 class="section-title">Tu camino hacia la piel que mereces</h2>
+      <span class="section-label">{{ tx.proceso.label }}</span>
+      <h2 class="section-title">{{ tx.proceso.h2 }}</h2>
     </div>
     <div class="proceso-steps">
-      <div class="proceso-step rv d1">
-        <span class="p-num">01</span>
-        <h3>Consulta gratuita</h3>
-        <p>Analizamos tu piel y escuchamos tus objetivos sin compromiso.</p>
+      {%- for st in tx.proceso.steps %}
+      <div class="proceso-step rv d{{ loop.index }}">
+        <span class="p-num">0{{ loop.index }}</span>
+        <h3>{{ st.h3 }}</h3>
+        <p>{{ st.p }}</p>
       </div>
-      <div class="proceso-step rv d2">
-        <span class="p-num">02</span>
-        <h3>Plan personalizado</h3>
-        <p>Diseñamos un protocolo adaptado a tu piel, ritmo de vida y presupuesto.</p>
-      </div>
-      <div class="proceso-step rv d3">
-        <span class="p-num">03</span>
-        <h3>Tratamiento</h3>
-        <p>Aplicamos la tecnología más avanzada con precisión y cuidado experto.</p>
-      </div>
-      <div class="proceso-step rv d4">
-        <span class="p-num">04</span>
-        <h3>Seguimiento</h3>
-        <p>Te acompañamos para mantener y potenciar los resultados a largo plazo.</p>
-      </div>
+      {%- endfor %}
     </div>
     <div class="section-cta rv">
-      <a href="{{ '/contact/' | url }}" class="btn btn-terra">Empieza hoy — consulta gratuita</a>
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-terra">{{ tx.proceso.ctaLabel }}</a>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIOS -->
+<!-- {{ tx.c.testi }} -->
 <section class="testi-section">
   <div class="container">
     <div class="testi-head rv">
@@ -309,41 +267,25 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
           <div>
             <span class="g-rating-big">{{ reviews.rating }}</span>
             <div class="g-stars">★★★★★</div>
-            <div class="g-count">{{ reviews.count }} reseñas verificadas</div>
+            <div class="g-count">{{ reviews.count }} {{ tx.testi.countSuffix }}</div>
           </div>
         </div>
-        <h2 class="rv d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;color:var(--ivory);line-height:1.1;">Lo que dicen<br><em style="font-style:italic;color:var(--gold);">nuestras clientas</em></h2>
+        <h2 class="rv d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;color:var(--ivory);line-height:1.1;">{{ tx.testi.h2_html | safe }}</h2>
       </div>
       <div class="rv d2" style="display:flex;flex-direction:column;justify-content:flex-end;gap:16px;">
-        <p style="font-size:15px;font-weight:300;color:rgba(248,243,237,0.5);line-height:1.8;">Más de {{ reviews.count }} personas confían en nosotras. Estas son algunas de sus historias — todas reales, todas en nuestro perfil de Google.</p>
-        <a href="https://www.google.com/search?q=AnyLopez+Clinica+Estetica+Benidorm&hl=es" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light" style="align-self:flex-start;">Ver todas las reseñas →</a>
+        <p style="font-size:15px;font-weight:300;color:rgba(248,243,237,0.5);line-height:1.8;">{{ tx.testi.introPre }}{{ reviews.count }}{{ tx.testi.introPost }}</p>
+        <a href="https://www.google.com/search?q=AnyLopez+Clinica+Estetica+Benidorm&hl={{ l.code }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light" style="align-self:flex-start;">{{ tx.testi.allCta }}</a>
       </div>
     </div>
     <div class="testi-grid rv">
-      <div class="t-card featured">
+      {%- for t in tx.testi.cards %}
+      <div class="t-card{% if t.featured %} featured{% endif %}">
         <div class="t-stars">★★★★★</div>
-        <p class="t-quote">«Es un centro espectacular. Andrea es muy profesional, es de 10. Un trato personalizado que se nota desde el primer momento.»</p>
-        <div class="t-name">Cris</div>
-        <div class="t-service">Radiofrecuencia INDIBA facial · Enero 2026</div>
+        <p class="t-quote">{{ t.quote_html | safe }}</p>
+        <div class="t-name">{{ t.name }}</div>
+        <div class="t-service">{{ t.service }}</div>
       </div>
-      <div class="t-card">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">«Mi cutis rejuvenció treinta años. Trato formidable y profesionalidad a prueba de dudas. Volveré sin ninguna duda.»</p>
-        <div class="t-name">Pedro</div>
-        <div class="t-service">Limpieza facial · Marzo 2026</div>
-      </div>
-      <div class="t-card">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">«Llevo más de 20 años haciéndome limpiezas faciales, pero como esta ninguna. Quedé maravillada desde la primera sesión. 100% recomendables.»</p>
-        <div class="t-name">Bárbara G.</div>
-        <div class="t-service">Limpieza facial · 2025</div>
-      </div>
-      <div class="t-card">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">«Llevaba 17 años con dolor lumbar. Después de solo tres sesiones de radiofrecuencia INDIBA, he mejorado un 95%. Recomiendo este centro a cualquier persona que busque una solución eficaz para el dolor.»</p>
-        <div class="t-name">Param Singh</div>
-        <div class="t-service">Radiofrecuencia INDIBA · Junio 2026</div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -352,109 +294,23 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
 <section class="section faq-section">
   <div class="container">
     <div class="section-header rv">
-      <span class="section-label">Preguntas frecuentes</span>
-      <h2 class="section-title">Todo lo que necesitas saber</h2>
+      <span class="section-label">{{ tx.faq.label }}</span>
+      <h2 class="section-title">{{ tx.faq.h2 }}</h2>
     </div>
     <div class="faq-list rv">
+      {%- for f in tx.faq.items %}
 
       <div class="faq-item">
-        <input type="checkbox" id="faq1" class="faq-check" />
-        <label class="faq-label" for="faq1">
-          ¿Duele el tratamiento Radiofrecuencia INDIBA?
+        <input type="checkbox" id="faq{{ loop.index }}" class="faq-check" />
+        <label class="faq-label" for="faq{{ loop.index }}">
+          {{ f.q_html | safe }}
           <span class="faq-icon" aria-hidden="true"></span>
         </label>
         <div class="faq-answer">
-          <p>No, la radiofrecuencia INDIBA es completamente indolora. Muchas clientas lo describen como una sensación de calor agradable y relajante. Es apto para todo tipo de pieles, incluyendo las más sensibles.</p>
+          <p>{{ f.a_html | safe }}</p>
         </div>
       </div>
-
-      <div class="faq-item">
-        <input type="checkbox" id="faq2" class="faq-check" />
-        <label class="faq-label" for="faq2">
-          ¿Cuántas sesiones necesito?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </label>
-        <div class="faq-answer">
-          <p>Depende del tratamiento y del objetivo. Normalmente se recomiendan entre 6 y 10 sesiones para obtener resultados óptimos. En la consulta gratuita te diseñamos un plan personalizado.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <input type="checkbox" id="faq3" class="faq-check" />
-        <label class="faq-label" for="faq3">
-          ¿Y si no me funciona, como me ha pasado en otras clínicas?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </label>
-        <div class="faq-answer">
-          <p>Te entendemos — la decepción de invertir y no ver resultado es real. Por eso trabajamos con garantía: si terminas tu Pack 10 Radiofrecuencia INDIBA y no notas mejora, la sesión 11 es gratis. Antes de empezar valoramos tu piel sin compromiso y, si pensamos que no es el tratamiento que necesitas, te lo decimos. Preferimos perder una venta a que te lleves otra decepción.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <input type="checkbox" id="faq4" class="faq-check" />
-        <label class="faq-label" for="faq4">
-          ¿Por qué AnyLopez y no una clínica más barata o una franquicia más grande?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </label>
-        <div class="faq-answer">
-          <p>En franquicia te tratan en serie con un protocolo idéntico para todas. Aquí heredamos 35 años de oficio y diseñamos cada sesión a tu piel — Radiofrecuencia INDIBA con parámetros específicos, tiempos calibrados, seguimiento sesión a sesión. Y cuando en una clínica más barata reducen el coste, normalmente reducen el tiempo de cada sesión o la potencia del equipo. Nosotras hacemos lo contrario: 10 sesiones reales de 30 minutos a la potencia que tu piel necesita, ni una de menos.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <input type="checkbox" id="faq5" class="faq-check" />
-        <label class="faq-label" for="faq5">
-          ¿Es seguro? ¿Tiene contraindicaciones?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </label>
-        <div class="faq-answer">
-          <p>La radiofrecuencia INDIBA está aprobada para uso estético y médico, es no invasiva y no requiere anestesia ni recuperación. Las contraindicaciones absolutas son pocas: embarazo, marcapasos o implantes electrónicos, prótesis metálicas en la zona a tratar, enfermedades oncológicas activas y trombosis. En la consulta inicial revisamos tu historial; si hay algo que desaconseja el tratamiento, te lo diremos antes de cobrarte nada.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <input type="checkbox" id="faq6" class="faq-check" />
-        <label class="faq-label" for="faq6">
-          ¿Cuándo veré resultados de verdad? ¿No me estarán vendiendo humo?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </label>
-        <div class="faq-answer">
-          <p>Sinceridad: notarás piel más hidratada y luminosa desde la 1ª–2ª sesión (efecto inmediato del calor profundo). El efecto firmeza se asienta entre la 5ª y la 8ª sesión, cuando se reorganiza el colágeno. Y el resultado consolidado se ve al terminar las 10 sesiones, con mejora progresiva durante 3–6 meses más mientras tu piel sigue regenerándose. Si alguien te promete antes que eso, te está vendiendo humo.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <input type="checkbox" id="faq7" class="faq-check" />
-        <label class="faq-label" for="faq7">
-          ¿Cuánto duran los resultados?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </label>
-        <div class="faq-answer">
-          <p>Los resultados varían según el tratamiento y los cuidados en casa, pero generalmente se mantienen entre 6 y 12 meses. Con sesiones de mantenimiento periódicas los resultados pueden ser permanentes.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <input type="checkbox" id="faq8" class="faq-check" />
-        <label class="faq-label" for="faq8">
-          ¿Desde qué edad se puede tratar?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </label>
-        <div class="faq-answer">
-          <p>A partir de 18 años. Para menores de edad es necesaria la autorización y presencia de un tutor legal en la consulta inicial.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <input type="checkbox" id="faq9" class="faq-check" />
-        <label class="faq-label" for="faq9">
-          ¿Hay que pedir cita previa?
-          <span class="faq-icon" aria-hidden="true"></span>
-        </label>
-        <div class="faq-answer">
-          <p>Sí, trabajamos exclusivamente con cita previa para garantizar la atención personalizada que cada clienta merece. Puedes reservar por teléfono, WhatsApp o a través del formulario de contacto.</p>
-        </div>
-      </div>
+      {%- endfor %}
 
     </div>
   </div>
@@ -464,16 +320,17 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Pack Radiofrecuencia INDIBA Anti-Edad — 10 sesiones",
-  "description": "Protocolo completo de radiofrecuencia INDIBA para reafirmar rostro o cuerpo. Incluye 10 sesiones de 45 min, diagnóstico inicial, plan personalizado, seguimiento sesión a sesión, plan de cuidados en casa y garantía sesión 11.",
-  "image": "{{ site.url }}/images/fotoscatalogoanylopez/radiofrecuenciacorporal.webp",
+  "name": "{{ tx.jsonldProduct.name | safe }}",
+  "description": "{{ tx.jsonldProduct.description | safe }}",
+  "image": "{{ site.url }}/images/fotoscatalogoanylopez/radiofrecuenciacorporal.webp",{% if tx.jsonldProduct.inLanguage %}
+  "inLanguage": "{{ tx.jsonldProduct.inLanguage }}",{% endif %}
   "brand": {
     "@type": "Brand",
-    "name": "AnyLopez Clínica Estética"
+    "name": "{{ tx.jsonldProduct.clinicName | safe }}"
   },
   "offers": {
     "@type": "Offer",
-    "url": "{{ site.url }}/#pack-indiba",
+    "url": "{{ site.url }}{{ l.prefix }}/#pack-indiba",
     "priceCurrency": "EUR",
     "price": "500",
     "priceValidUntil": "2026-12-31",
@@ -481,7 +338,7 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
     "itemCondition": "https://schema.org/NewCondition",
     "seller": {
       "@type": "MedicalClinic",
-      "name": "AnyLopez Clínica Estética",
+      "name": "{{ tx.jsonldProduct.clinicName | safe }}",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Benidorm",
@@ -503,80 +360,19 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "FAQPage",{% if tx.jsonldProduct.inLanguage %}
+  "inLanguage": "{{ tx.jsonldProduct.inLanguage }}",{% endif %}
   "mainEntity": [
+    {%- for q in tx.jsonldFaq %}
     {
       "@type": "Question",
-      "name": "¿Duele el tratamiento Radiofrecuencia INDIBA?",
+      "name": "{{ q.name | safe }}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, la radiofrecuencia INDIBA es completamente indolora. Muchas clientas lo describen como una sensación de calor agradable y relajante. Es apto para todo tipo de pieles, incluyendo las más sensibles."
+        "text": "{{ q.text | safe }}"
       }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuántas sesiones necesito?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende del tratamiento y del objetivo. Normalmente se recomiendan entre 6 y 10 sesiones para obtener resultados óptimos. En la consulta gratuita te diseñamos un plan personalizado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Y si no me funciona, como me ha pasado en otras clínicas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Trabajamos con garantía: si terminas tu Pack 10 Radiofrecuencia INDIBA y no notas mejora, la sesión 11 es gratis. Antes de empezar valoramos tu piel sin compromiso y, si pensamos que no es el tratamiento que necesitas, te lo decimos. Preferimos perder una venta a que te lleves otra decepción."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Por qué AnyLopez y no una clínica más barata o una franquicia más grande?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En franquicia te tratan en serie con un protocolo idéntico para todas. En AnyLopez heredamos 35 años de oficio y diseñamos cada sesión a tu piel: Radiofrecuencia INDIBA con parámetros específicos, tiempos calibrados y seguimiento sesión a sesión. Cuando una clínica más barata reduce el precio, normalmente reduce el tiempo de cada sesión o la potencia del equipo. Aquí hacemos lo contrario: 10 sesiones de 30 minutos a la potencia que tu piel necesita."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es seguro? ¿Tiene contraindicaciones?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La radiofrecuencia INDIBA está aprobada para uso estético y médico, es no invasiva y no requiere anestesia ni recuperación. Las contraindicaciones absolutas son pocas: embarazo, marcapasos o implantes electrónicos, prótesis metálicas en la zona a tratar, enfermedades oncológicas activas y trombosis. En la consulta inicial revisamos tu historial; si hay algo que desaconseja el tratamiento, te lo diremos antes de cobrarte nada."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuándo veré resultados de verdad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Notarás piel más hidratada y luminosa desde la primera o segunda sesión (efecto inmediato del calor profundo). El efecto firmeza se asienta entre la 5ª y la 8ª sesión, cuando se reorganiza el colágeno. El resultado consolidado se ve al terminar las 10 sesiones, con mejora progresiva durante 3 a 6 meses más mientras tu piel sigue regenerándose."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto duran los resultados?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Los resultados varían según el tratamiento y los cuidados en casa, pero generalmente se mantienen entre 6 y 12 meses. Con sesiones de mantenimiento periódicas los resultados pueden ser permanentes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Desde qué edad se puede tratar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A partir de 18 años. Para menores de edad es necesaria la autorización y presencia de un tutor legal en la consulta inicial."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Hay que pedir cita previa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, trabajamos exclusivamente con cita previa para garantizar la atención personalizada que cada clienta merece. Puedes reservar por teléfono, WhatsApp o a través del formulario de contacto."
-      }
-    }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
   ]
 }
 </script>
@@ -586,40 +382,40 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
   <div class="container">
     <div class="ig-header rv">
       <div>
-        <span class="section-label">Síguenos</span>
+        <span class="section-label">{{ tx.ig.label }}</span>
         <h2 class="ig-title">@<span class="ig-handle">anylopez.estetica</span></h2>
       </div>
-      <a href="https://www.instagram.com/anylopez.estetica/" class="btn btn-terra" target="_blank" rel="noopener noreferrer">Ver perfil →</a>
+      <a href="https://www.instagram.com/anylopez.estetica/" class="btn btn-terra" target="_blank" rel="noopener noreferrer">{{ tx.ig.profileCta }}</a>
     </div>
     <div class="ig-footer rv d1">
       <a href="https://www.instagram.com/anylopez.estetica/" class="btn btn-outline-terra" target="_blank" rel="noopener noreferrer">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        Seguirnos en Instagram →
+        {{ tx.ig.followCta }}
       </a>
     </div>
   </div>
 </section>
 
-<!-- DÓNDE ESTAMOS -->
+<!-- {{ tx.c.donde }} -->
 <section class="donde-section">
   <div class="container">
     <div class="donde-header rv">
-      <span class="section-label">Dónde estamos</span>
-      <h2 class="section-title">Visítanos en <em style="font-style:italic;color:var(--terra);">Benidorm</em></h2>
+      <span class="section-label">{{ tx.donde.label }}</span>
+      <h2 class="section-title">{{ tx.donde.h2_html | safe }}</h2>
     </div>
     <div class="donde-grid">
       <div class="donde-map-wrap rv">
         <button
           type="button"
           class="donde-map-placeholder"
-          data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19{{ reviews.rating }}5200463471965!2d-0.13294496084974686!3d38.53763894033556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6205c0952b0439%3A0xc134f6679c32e94c!2sAnyLopez%20Clinica%20Est%C3%A9tica!5e0!3m2!1ses!2ses!4v1777479067286!5m2!1ses!2ses"
-          data-map-title="Mapa de AnyLopez Clínica Estética — C/ Marqués de Comillas 4 Local 6, Benidorm"
-          aria-label="Cargar mapa interactivo"
+          data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19{{ reviews.rating }}5200463471965!2d-0.13294496084974686!3d38.53763894033556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6205c0952b0439%3A0xc134f6679c32e94c!2sAnyLopez%20Clinica%20Est%C3%A9tica!5e0!3m2!1s{{ l.code }}!2ses!4v1777479067286!5m2!1s{{ l.code }}!2ses"
+          data-map-title="{{ tx.donde.mapTitle }}"
+          aria-label="{{ tx.donde.mapText }}"
         >
           <span class="donde-map-placeholder-icon" aria-hidden="true">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </span>
-          <span class="donde-map-placeholder-text">Cargar mapa interactivo</span>
+          <span class="donde-map-placeholder-text">{{ tx.donde.mapText }}</span>
           <span class="donde-map-placeholder-hint">C/ Marqués de Comillas 4, Local 6 · Benidorm</span>
         </button>
         <a
@@ -627,16 +423,16 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
           target="_blank"
           rel="noopener noreferrer"
           class="donde-map-cta"
-          aria-label="Ver en Google Maps (abre en nueva pestaña)"
+          aria-label="{{ tx.donde.openAria }}"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Abrir en Google Maps
+          {{ tx.donde.openLabel }}
         </a>
       </div>
       <div class="donde-info rv d1">
         <div>
-          <h3 class="donde-info-title">Escríbenos</h3>
-          <p class="donde-info-desc">Respondemos en menos de 24 horas. También puedes llamarnos o venir directamente.</p>
+          <h3 class="donde-info-title">{{ tx.donde.infoTitle }}</h3>
+          <p class="donde-info-desc">{{ tx.donde.infoDesc_html | safe }}</p>
           <ul class="donde-meta">
             <li class="donde-meta-item">
               <span class="donde-meta-icon" aria-hidden="true">
@@ -648,7 +444,7 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
               <span class="donde-meta-icon" aria-hidden="true">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </span>
-              <span>Lun–Vie · 10:00–14:00 / 16:00–20:00</span>
+              <span>{{ tx.donde.hours }}</span>
             </li>
             <li class="donde-meta-item donde-meta-phone">
               <span class="donde-meta-icon" aria-hidden="true">
@@ -660,42 +456,39 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
         </div>
         <div id="dondeFormWrap">
           <form id="dondeForm" class="donde-form" action="https://formspree.io/f/xrerbgdw" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="Consulta desde sección Dónde Estamos" />
+            <input type="hidden" name="_subject" value="{{ tx.donde.form.subject }}" />
             <div class="donde-form-row">
               <div class="form-field">
-                <label for="d-nombre">Nombre</label>
-                <input type="text" id="d-nombre" name="nombre" placeholder="Tu nombre" required />
+                <label for="d-nombre">{{ tx.donde.form.nameLabel }}</label>
+                <input type="text" id="d-nombre" name="nombre" placeholder="{{ tx.donde.form.namePh }}" required />
               </div>
               <div class="form-field">
-                <label for="d-tel">Teléfono</label>
-                <input type="tel" id="d-tel" name="telefono" placeholder="6XX XXX XXX" />
+                <label for="d-tel">{{ tx.donde.form.telLabel }}</label>
+                <input type="tel" id="d-tel" name="telefono" placeholder="{{ tx.donde.form.telPh }}" />
               </div>
             </div>
             <div class="form-field">
-              <label for="d-serv">Tratamiento de interés</label>
+              <label for="d-serv">{{ tx.donde.form.servLabel }}</label>
               <select id="d-serv" name="tratamiento">
-                <option value="" disabled selected>Selecciona un tratamiento</option>
-                <option>Radiofrecuencia INDIBA Radiofrecuencia</option>
-                <option>Ultherapy HIFU Lifting</option>
-                <option>Botox &amp; Rellenos</option>
-                <option>Limpieza Facial</option>
-                <option>Dermapen</option>
-                <option>Otro / Consulta general</option>
+                <option value="" disabled selected>{{ tx.donde.form.servPh }}</option>
+                {%- for o in tx.donde.form.options %}
+                <option>{{ o }}</option>
+                {%- endfor %}
               </select>
             </div>
             <div class="form-field">
-              <label for="d-msg">Mensaje</label>
-              <textarea id="d-msg" name="mensaje" rows="3" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+              <label for="d-msg">{{ tx.donde.form.msgLabel }}</label>
+              <textarea id="d-msg" name="mensaje" rows="3" placeholder="{{ tx.donde.form.msgPh }}"></textarea>
             </div>
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
             <button type="submit" class="btn btn-terra" style="width:100%; justify-content:center;">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Enviar mensaje
+              {{ tx.donde.form.submit }}
             </button>
           </form>
           <div id="dondeFormSuccess" class="donde-form-success">
             <div style="font-size:36px;">✅</div>
-            <p>¡Mensaje recibido! Te contactamos pronto.</p>
+            <p>{{ tx.donde.form.successMsg_html | safe }}</p>
           </div>
         </div>
       </div>
@@ -703,29 +496,29 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
   </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- {{ tx.c.cta }} -->
 <section class="cta-section">
   <div class="container">
     <div class="cta-box">
       <div>
-        <h2 class="cta-title rv">¿Empezamos por<br><em>una valoración?</em></h2>
-        <p class="cta-sub rv d1">Cuéntanos qué te preocupa de tu piel. Te respondemos por WhatsApp en horario de clínica, sin compromiso y sin formularios largos.</p>
+        <h2 class="cta-title rv">{{ tx.cta.title_html | safe }}</h2>
+        <p class="cta-sub rv d1">{{ tx.cta.sub_html | safe }}</p>
         <div class="cta-actions rv d2">
-          <a href="https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20gratuita." class="btn btn-terra" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"home-contact"}'>Escríbenos por WhatsApp</a>
+          <a href="{{ tx.cta.waHref }}" class="btn btn-terra" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"home-contact"}'>{{ tx.cta.waCta }}</a>
         </div>
         <div class="cta-info-list rv d3">
           <div class="cta-info-item"><div class="cta-info-dot"></div>C/ Marqués de Comillas 4, Local 6, Benidorm</div>
-          <div class="cta-info-item"><div class="cta-info-dot"></div>Lun–Vie 10:00–14:00 / 16:00–20:00</div>
+          <div class="cta-info-item"><div class="cta-info-dot"></div>{{ tx.cta.hours }}</div>
           <div class="cta-info-item"><div class="cta-info-dot"></div>info@anylopez.com</div>
         </div>
       </div>
       <div class="cta-right rv d2">
-        <p class="cta-phone-label">Llámanos ahora</p>
+        <p class="cta-phone-label">{{ tx.cta.phoneLabel }}</p>
         <a href="tel:656306167" class="cta-phone" data-event="phone_clicked" data-event-props='{"location":"home-contact","number":"656306167"}'>656 306 167</a>
         <a href="tel:865710769" class="cta-phone" data-event="phone_clicked" data-event-props='{"location":"home-contact","number":"865710769"}'>865 710 769</a>
-        <a href="https://wa.me/34656306167?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="cta-wa-btn" data-event="whatsapp_clicked" data-event-props='{"location":"home-contact"}'>
+        <a href="{{ tx.cta.wa2Href }}" target="_blank" rel="noopener noreferrer" class="cta-wa-btn" data-event="whatsapp_clicked" data-event-props='{"location":"home-contact"}'>
           <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 {{ reviews.rating }}77 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347ZM12.05 21.785h-.01a9.87 9.87 0 0 1-{{ reviews.rating }}31-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 0 1 2.16 12.04C2.16 6.58 6.58 2.16 12.05 2.16c2.66 0 5.16 1.036 7.04 2.92a9.88 9.88 0 0 1 2.91 7.04c-.004 5.46-4.424 9.88-9.88 9.88ZM20.52 3.449C18.24 1.245 15.24 0 12.05 0 5.464 0 .104 5.334.1 11.893c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.422-8.449Z"/></svg>
-          Escríbenos por WhatsApp
+          {{ tx.cta.wa2Cta }}
         </a>
       </div>
     </div>
@@ -757,7 +550,7 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
       e.preventDefault();
       const btn = dondeForm.querySelector('button[type="submit"]');
       btn.disabled = true;
-      btn.textContent = 'Enviando...';
+      btn.textContent = '{{ tx.js.sending }}';
       fetch(dondeForm.action, {
         method: 'POST',
         body: new FormData(dondeForm),
@@ -768,16 +561,16 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
           document.getElementById('dondeFormSuccess').style.display = 'block';
         } else {
           btn.disabled = false;
-          btn.textContent = 'Enviar mensaje';
+          btn.textContent = '{{ tx.js.send }}';
         }
       }).catch(() => {
         btn.disabled = false;
-        btn.textContent = 'Enviar mensaje';
+        btn.textContent = '{{ tx.js.send }}';
       });
     });
   }
 
-  /* ── Lead form AJAX (evitar redirect a Formspree) ── */
+  /* {{ tx.js.leadComment }} */
   const leadForm = document.getElementById('leadForm');
   const leadMsg  = document.getElementById('leadFormMsg');
   if (leadForm) {
@@ -785,7 +578,7 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
       e.preventDefault();
       const btn = leadForm.querySelector('button[type="submit"]');
       btn.disabled = true;
-      btn.textContent = 'Enviando...';
+      btn.textContent = '{{ tx.js.sending }}';
       fetch(leadForm.action, {
         method: 'POST',
         body: new FormData(leadForm),
@@ -796,17 +589,16 @@ description: "Clínica estética en Benidorm especializada en Ultherapy HIFU y r
           leadMsg.style.display = 'block';
         } else {
           btn.disabled = false;
-          btn.textContent = 'Solicitar cita';
-          alert('Error al enviar. Llámanos al 656 306 167.');
+          btn.textContent = '{{ tx.js.book }}';
+          alert('{{ tx.js.err }}');
         }
       }).catch(() => {
         btn.disabled = false;
-        btn.textContent = 'Solicitar cita';
-        alert('Error al enviar. Llámanos al 656 306 167.');
+        btn.textContent = '{{ tx.js.book }}';
+        alert('{{ tx.js.err }}');
       });
     });
   }
 
 
 </script>
-

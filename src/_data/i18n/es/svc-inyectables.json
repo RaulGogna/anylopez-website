@@ -1,0 +1,111 @@
+{
+  "title": "Medicina estética inyectable en Benidorm — Bótox, hialurónico, hilos · AnyLopez",
+  "description": "Bótox, ácido hialurónico, hilos tensores y PRP en clínica estética AnyLopez Benidorm. Diagnóstico antes de inyectar y técnicas conservadoras.",
+  "jsonld": {
+    "name": "Medicina estética inyectable AnyLopez",
+    "alternateName": "Inyectables faciales",
+    "description": "Catálogo de medicina estética inyectable en AnyLopez Clínica Estética Benidorm: bótox, ácido hialurónico, hilos tensores y PRP. Diagnóstico antes de inyectar, productos de marca y técnicas conservadoras.",
+    "specialties": [
+      "Bótox",
+      "Ácido Hialurónico",
+      "Hilos Tensores",
+      "PRP Plasma Rico en Plaquetas"
+    ],
+    "faq": [
+      { "q": "¿Bótox o hialurónico?", "a": "Bótox relaja músculos (frente, entrecejo, patas de gallo). Hialurónico rellena volumen perdido (surcos, labios, contorno). En el diagnóstico vemos qué hace falta — muchas veces es ambos en zonas distintas." },
+      { "q": "¿Duele?", "a": "Mínimamente. Las agujas son finísimas. En zonas sensibles aplicamos crema anestésica previa. La mayoría de pacientes describe la sensación como pellizco breve." },
+      { "q": "¿Cuándo se ven resultados?", "a": "Bótox: efecto progresivo entre día 3 y día 14 (pleno a 2 semanas). Hialurónico: visible en horas, pleno a 2-4 semanas. Hilos: lifting inmediato + estimulación de colágeno a 3 meses. PRP: efectos a 4-6 semanas." },
+      { "q": "¿Cuánto duran?", "a": "Bótox: 4-6 meses según zona. Hialurónico: 6-12 meses según producto. Hilos espiculados: 12-18 meses. PRP: 6-12 meses con sesiones de mantenimiento." },
+      { "q": "¿Embarazo o lactancia?", "a": "Inyectables están contraindicados en embarazo y lactancia. Esperamos hasta que termines la lactancia para empezar plan." }
+    ]
+  },
+  "css": {
+    "xsellComment": "Radiofrecuencia INDIBA"
+  },
+  "breadcrumb": { "services": "Servicios", "current_html": "Medicina Estética Inyectable" },
+  "callCta": "Llamar 656 306 167",
+  "hero": {
+    "imgAlt_html": "Medicina estética inyectable en AnyLopez Clínica Estética Benidorm",
+    "eyebrow_html": "Medicina estética inyectable · 4 protocolos",
+    "h1_html": "Volumen, no exceso. <em>Sutil, técnica, propia.</em>",
+    "lead": "Bótox para suavizar líneas, ácido hialurónico para devolver volumen, hilos tensores para reposicionar, PRP para regenerar. Cada uno tiene su momento exacto en tu rostro — y es ese momento lo que separa un resultado natural de uno congelado.",
+    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "reviews": "reseñas Google",
+    "free": "Diagnóstico inicial sin coste"
+  },
+  "pain": {
+    "eyebrow": "¿Te suena alguna de estas?",
+    "h2": "La mayoría de pacientes que llegan aquí han pasado por lo mismo.",
+    "p_html": "No vienes de la nada. Vienes después de dudar, comparar y temer pasarte de la raya.",
+    "items": [
+      { "h3_html": "Te has quedado fuera por miedo a que se note.", "p_html": "Has visto pómulos exagerados, labios sobreproyectados, frentes paralizadas — y no quieres eso. Pero tampoco aceptas que tu rostro envejezca sin opción real." },
+      { "h3_html": "Has visto resultados que parecen máscaras y huyes.", "p_html": "El \"look hecho\" es señal de inyección sin criterio. La medicina estética bien aplicada se nota porque te ves descansada, no diferente." },
+      { "h3_html": "No sabes si lo tuyo es bótox, hialurónico o realmente otra cosa.", "p_html": "Has leído de todo, te has confundido más, y no decides porque cada profesional te recomienda lo suyo. Diagnóstico honesto cierra esa duda." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Por qué los inyectables en AnyLopez funcionan",
+    "h2_html": "Seis razones por las que aquí funcionan donde otros sitios no.",
+    "p_html": "No es marketing. Es diagnóstico médico, marca trazable y técnica conservadora.",
+    "items": [
+      { "h3": "Diagnóstico antes de inyectar", "p_html": "Vemos qué necesitas REALMENTE — no qué se vende mejor. A veces no es bótox; a veces es hialurónico. A veces ninguno." },
+      { "h3": "Productos de marca registrada y trazabilidad", "p_html": "Vistabel, Restylane, Juvederm — productos clínicamente validados. Cada lote registrado. Sin \"genéricos\" ni reciclados." },
+      { "h3": "Técnica conservadora siempre", "p_html": "Mejor poco y revisión a 15 días que pasarse en la primera sesión. Filler progresivo (capa por capa), no bombear cara." },
+      { "h3": "Toda la paleta en un solo plan", "p_html": "Bótox + hialurónico + hilos + PRP — combinables si tu caso lo pide. Diseñamos secuencia que multiplica resultados." },
+      { "h3": "Revisión incluida a 15-30 días", "p_html": "Ajustamos hasta tu satisfacción. No es venta de un día — es seguimiento del resultado." },
+      { "h3": "Aplica medicina estética profesional", "p_html": "Médicos cualificados, no esteticistas con curso fin de semana. Misma exigencia que en toda la clínica." }
+    ]
+  },
+  "xsell": {
+    "eyebrow": "Si lo tuyo va más allá del relleno",
+    "h2_html": "El volumen <em>se complementa con tono.</em>",
+    "p": "El ácido hialurónico devuelve volumen, pero la flacidez profunda se trata con tecnología. Si combinas inyectables con Ultherapy HIFU o Radiofrecuencia INDIBA, los resultados se potencian.",
+    "cta_html": "Ver Lifting y Antiaging →"
+  },
+  "grid": {
+    "eyebrow": "Cuatro protocolos · una sola filosofía",
+    "h2": "Los tratamientos inyectables del catálogo.",
+    "p": "Pulsa cualquier tarjeta para ver beneficios completos, precios y packs.",
+    "altSuffix": "en AnyLopez Benidorm",
+    "detailsAria": "Ver detalles de",
+    "detailsCta": "Ver detalles →"
+  },
+  "tests": {
+    "eyebrow": "Pacientes reales",
+    "h2": "Resultados que se notan, y se cuentan.",
+    "p": "Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.",
+    "items": [
+      { "quote_html": "\"Pedí bótox para 'hacerlo' y me hicieron entender que mi caso era hialurónico para los surcos. La diferencia es exactamente lo que quería: descansada, no diferente.\"", "author": "Lucía A.", "meta": "Paciente · Hialurónico" },
+      { "quote_html": "\"Hilos tensores espiculados con técnica increíble. Notas el lifting natural sin que nadie pregunte 'qué te has hecho'. Justo lo que buscaba.\"", "author": "María Pilar T.", "meta": "Paciente · Hilos Tensores" },
+      { "quote_html": "\"PRP combinado con hialurónico fue la combinación clave. Mi rostro luce regenerado, sin parecer otra persona.\"", "author": "Paciente verificada", "meta": "Reseña Google" }
+    ]
+  },
+  "process": {
+    "eyebrow": "¿Cómo lo empezamos?",
+    "h2": "Cuatro pasos. Sin sorpresas, sin letra pequeña.",
+    "p": "Diagnóstico médico antes de cualquier aguja — y revisión incluida tras la sesión.",
+    "steps": [
+      { "h3": "Reservas tu diagnóstico gratuito", "p_html": "Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso." },
+      { "h3": "Valoración médica del rostro", "p_html": "Médico estético cualificado evalúa tu caso: zonas a tratar, expectativas, antecedentes. Si tu objetivo no es inyectable, te lo decimos." },
+      { "h3": "Plan secuenciado con marca y dosis", "p_html": "Diseñamos qué producto, qué cantidad y en qué orden — siempre conservador. Sabes exactamente qué entra y por qué." },
+      { "h3": "Revisión a 15-30 días incluida", "p_html": "Volvemos a vernos para ajustar lo que haga falta. El resultado se afina; no se cierra el primer día." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Dudas frecuentes",
+    "h2": "Lo que más nos preguntan sobre los inyectables.",
+    "items": [
+      { "q": "¿Bótox o hialurónico?", "a_html": "Bótox relaja músculos (frente, entrecejo, patas de gallo). Hialurónico rellena volumen perdido (surcos, labios, contorno). En el diagnóstico vemos qué hace falta — muchas veces es ambos en zonas distintas." },
+      { "q": "¿Duele?", "a_html": "Mínimamente. Las agujas son finísimas. En zonas sensibles aplicamos crema anestésica previa. La mayoría de pacientes describe la sensación como pellizco breve." },
+      { "q": "¿Cuándo se ven resultados?", "a_html": "Bótox: efecto progresivo entre día 3 y día 14 (pleno a 2 semanas). Hialurónico: visible en horas, pleno a 2-4 semanas. Hilos: lifting inmediato + estimulación de colágeno a 3 meses. PRP: efectos a 4-6 semanas." },
+      { "q": "¿Cuánto duran?", "a_html": "Bótox: 4-6 meses según zona. Hialurónico: 6-12 meses según producto. Hilos espiculados: 12-18 meses. PRP: 6-12 meses con sesiones de mantenimiento." },
+      { "q": "¿Embarazo o lactancia?", "a_html": "Inyectables están contraindicados en embarazo y lactancia. Esperamos hasta que termines la lactancia para empezar plan." }
+    ]
+  },
+  "final": {
+    "eyebrow": "Diagnóstico antes que pinchazo",
+    "h2_html": "Reserva tu valoración. <em>Empieza por saber qué necesitas — y qué no</em>.",
+    "p_html": "Treinta minutos en clínica con médico estético cualificado. Si tu caso no es inyectable, te lo decimos. Si lo es, diseñamos plan conservador.",
+    "cta": "Reservar valoración →"
+  }
+}

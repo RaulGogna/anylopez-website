@@ -1,0 +1,62 @@
+{
+  "title": "Behandlungen in der AnyLopez Ästhetikklinik — Benidorm",
+  "description": "Acht Spezialgebiete, ein Handwerk. Redaktioneller Katalog der Gesichts-, Körper- und Injektionsbehandlungen sowie apparativen Kosmetik in der AnyLopez Ästhetikklinik, Benidorm.",
+  "breadcrumb": "Behandlungen",
+  "css": {
+    "eyebrowColor": "var(--terra-dk)",
+    "tratListColor": "var(--text-mid)",
+    "flagshipLabel": "INDIBA Radiofrequenz"
+  },
+  "hero": {
+    "eyebrow": "Katalog · 8 Spezialgebiete",
+    "h1_html": "Acht Spezialgebiete,<br><em>ein Handwerk.</em>",
+    "lead_html": "Drei Generationen, die jede Behandlung entwerfen, durchführen und überwachen. Hier gibt es keine Praktikanten und keine Fließband-Termine — wer bei uns bucht, wird von der Person behandelt, die für das Ergebnis geradesteht.",
+    "reviews_html": "{rating} bei {count} Bewertungen auf Google",
+    "treatments": "verfügbare Behandlungen",
+    "free": "Kostenlose Erstdiagnose"
+  },
+  "catLabels": {
+    "limpiezas-faciales": "Reinigung + regelmäßige Pflege",
+    "tratamientos-faciales": "Erneuerung · Anti-Akne · Pigmentflecken",
+    "lifting-antiaging": "Straffung ohne OP",
+    "inyectables": "Fortgeschrittene ästhetische Medizin",
+    "corporal": "Körper · Tonus · Regeneration",
+    "masajes": "Manuell · Therapeutisch · Drainage",
+    "estetica-decorativa": "Wimpern · Micropigmentierung",
+    "depilacion": "IPL · Gepflegte Haut"
+  },
+  "cards": {
+    "flag": "Star-Spezialgebiet",
+    "altSuffix": "bei AnyLopez Benidorm",
+    "unit": "Behandlung",
+    "cta": "Behandlungen ansehen"
+  },
+  "trust": {
+    "reviews": "verifizierte Bewertungen auf Google",
+    "sub": "Über 30 Jahre an der Seite unserer Patientinnen in Benidorm"
+  },
+  "flagship": {
+    "comment": "INDIBA Radiofrequenz",
+    "alt": "INDIBA Radiofrequenz bei AnyLopez Benidorm",
+    "eyebrow": "Flaggschiff-Behandlung",
+    "h2_html": "INDIBA Radiofrequenz — <em>das Lifting, das man nicht sieht</em>.",
+    "p_html": "Sie haben Ihre Haut ein Leben lang gepflegt, und trotzdem zeigt der Spiegel Hauterschlaffung? INDIBA Radiofrequenz ist die Antwort ohne OP. CRet/RES-Technologie, die ab der ersten Sitzung Ihr eigenes Kollagen stimuliert. Schmerzfrei, ohne Ausfallzeit, mit allem anderen kombinierbar.",
+    "m1v": "500 €",
+    "m1l": "Paket 10 Sitzungen (45 Min.)",
+    "m2v": "375 €",
+    "m2l": "Ersparnis vs. Einzelsitzung",
+    "m3v": "1. Sitzung",
+    "m3l": "Sichtbare Ergebnisse",
+    "cta": "INDIBA Radiofrequenz entdecken →"
+  },
+  "finalCta": {
+    "eyebrow": "Sie wissen nicht, wo Sie anfangen sollen?",
+    "h2_html": "Buchen Sie eine kostenlose Diagnose — wir sagen Ihnen, was Sie brauchen und was nicht.",
+    "p_html": "Dreißig Minuten, unverbindlich. Wenn es nichts für Sie ist, sagen wir es Ihnen offen und beraten Sie weiter. Ehrlichkeit vor Umsatz.",
+    "btn": "Beratung buchen →",
+    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
+  },
+  "jsonld": {
+    "name": "Spezialgebiete der AnyLopez Ästhetikklinik"
+  }
+}

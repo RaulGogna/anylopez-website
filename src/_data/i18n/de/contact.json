@@ -1,0 +1,78 @@
+{
+  "title": "Kontakt — AnyLopez Ästhetikklinik",
+  "description": "Kontaktieren Sie die AnyLopez Ästhetikklinik in Benidorm. Calle Marqués de Comillas 4, Local 6. Tel: 656 306 167. Mo–Fr 10–14 / 16–20 Uhr.",
+  "breadcrumb": "Kontakt",
+  "comments": {
+    "main": "HAUPTKONTAKT",
+    "map": "KARTE",
+    "form": "FORMULAR",
+    "cta": "DIREKTER ANRUF"
+  },
+  "hero": {
+    "label": "Kontakt aufnehmen",
+    "h1": "Kontaktieren Sie uns",
+    "sub_html": "Lernen Sie unsere Klinik kennen und genießen Sie unsere Räumlichkeiten und eine persönliche Betreuung auf höchstem Niveau"
+  },
+  "info": {
+    "label": "Information",
+    "h2": "Worauf warten Sie noch?",
+    "p_html": "Wir freuen uns, Sie zu betreuen und alle Ihre Fragen zu beantworten. Vereinbaren Sie Ihren Termin oder besuchen Sie uns direkt in unserer Klinik in Benidorm.",
+    "direccion": "Adresse",
+    "telefonos": "Telefon",
+    "email": "E-Mail",
+    "horario": "Öffnungszeiten",
+    "horario_html": "Montag bis Freitag<br>10:00 – 14:00 · 16:00 – 20:00"
+  },
+  "map": {
+    "aria": "AnyLopez Ästhetikklinik auf Google Maps ansehen (öffnet in neuem Tab)",
+    "text": "Auf Google Maps ansehen"
+  },
+  "form": {
+    "label": "Formular",
+    "h2": "Termin vereinbaren",
+    "p_html": "Füllen Sie das Formular aus — wir melden uns so schnell wie möglich bei Ihnen.",
+    "nombre": "Vorname *",
+    "nombrePh": "Ihr Vorname",
+    "apellidos": "Nachname *",
+    "apellidosPh": "Ihr Nachname",
+    "email": "E-Mail *",
+    "emailPh": "ihre@email.com",
+    "telefono": "Telefon",
+    "telefonoPh": "Ihre Telefonnummer",
+    "tratamiento": "Gewünschte Behandlung",
+    "options": [
+      { "value": "", "label": "Behandlung auswählen..." },
+      { "value": "higiene-facial", "label": "Gesichtsreinigung" },
+      { "value": "radiofrecuencia-facial", "label": "Radiofrequenz Gesicht" },
+      { "value": "radiofrecuencia-corporal", "label": "Radiofrequenz Körper" },
+      { "value": "radiofrecuencia-indiba", "label": "INDIBA Radiofrequenz System" },
+      { "value": "ultherapy", "label": "Ultherapy" },
+      { "value": "dermapen", "label": "Dermapen" },
+      { "value": "botox", "label": "Botox" },
+      { "value": "acido-hialuronico", "label": "Hyaluronsäure-Filler" },
+      { "value": "vitaminas-exosomas", "label": "Vitamine + Exosomen" },
+      { "value": "micropigmentacion", "label": "Micropigmentierung" },
+      { "value": "otro", "label": "Sonstiges / Allgemeine Anfrage" }
+    ],
+    "mensaje": "Nachricht oder Anmerkungen",
+    "mensajePh": "Erzählen Sie uns, wie wir Ihnen helfen können...",
+    "consent_html": "<span>Ich habe die <a href=\"{privacyUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">Datenschutzerklärung</a> gelesen und akzeptiere sie</span>",
+    "submit": "Anfrage senden",
+    "note": "Wir antworten in weniger als 24 Stunden.",
+    "successH3": "Nachricht gesendet!",
+    "successP_html": "Wir melden uns innerhalb von 24 Stunden bei Ihnen."
+  },
+  "ctaBottom": {
+    "label": "Direkter Anruf",
+    "h2": "Rufen Sie uns an: 656 306 167",
+    "p": "Wenn Sie lieber direkt mit uns sprechen möchten, rufen Sie uns während unserer Öffnungszeiten an.",
+    "btn_html": "<a href=\"tel:656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Jetzt anrufen</a>"
+  },
+  "js": {
+    "required": "Bitte füllen Sie die Pflichtfelder aus (Vorname, Nachname und E-Mail).",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "sending": "Wird gesendet...",
+    "serverError": "Serverfehler",
+    "sendError": "Beim Senden des Formulars ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder rufen Sie uns an: 656 306 167."
+  }
+}

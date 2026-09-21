@@ -46,7 +46,7 @@
 
 .legal-wrap ul,
 .legal-wrap ol {
-  padding-left: 1.5em;
+  padding-inline-start: 1.5em;
   margin-bottom: 1em;
 }
 
@@ -82,7 +82,7 @@
 
 .legal-wrap th,
 .legal-wrap td {
-  text-align: left;
+  text-align: start;
   padding: 8px 12px;
   border-bottom: 1px solid var(--border);
 }

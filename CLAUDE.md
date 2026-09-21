@@ -36,18 +36,63 @@ URL live: https://anylopez.com — GitHub Pages (`deploy.yml`) solo sirve redire
 
 ---
 
+## i18n — arquitectura multiidioma (refactor sep-2026)
+
+**El sitio ya NO duplica plantillas por idioma.** Antes: ES en `src/`, EN en `src/en/`. Ahora:
+**una plantilla por página, paginada sobre `langs`**, con el copy en JSON por idioma.
+
+```
+src/_data/
+  langs.json                  # fuente unica: code, locale, bcp47, schemaName, dir, name, flag, prefix, hreflang
+  pages.json + pagesI18n.js   # rutas/priority por idioma; "only": ["es"] para paginas de un solo idioma
+  i18n/<lang>/chrome.json     # nav, header, footer, mobileBar, crumbs (lo comun a todas las paginas)
+  i18n/<lang>/<pagina>.json   # copy de cada pagina (home, about, contact, services, svc-*, partials...)
+  catalogo/<lang>.json        # 36 tratamientos; precios identicos en todos los idiomas
+```
+
+**Anadir un idioma** = 1 entrada en `langs.json` + su carpeta `i18n/<lang>/` + `catalogo/<lang>.json`. Cero cambios en plantillas.
+
+**Patron de plantilla** (ver `src/about.njk` como referencia canonica):
+```njk
+---
+pagination: { data: langs, size: 1, alias: l }
+permalink: "{{ l.prefix }}/about/"
+eleventyComputed:
+  lang: "{{ l.code }}"
+  locale: "{{ l.locale }}"
+  title: "{{ i18n[l.code].about.title | safe }}"     # el | safe evita doble escape (&amp;amp;)
+---
+{%- set tx = i18n[l.code].about %}
+```
+
+Reglas del patron:
+- `| safe` **obligatorio** en `title`/`description` de `eleventyComputed`, o el `&` sale como `&amp;amp;`.
+- Texto plano -> campo JSON normal. Markup inline, entidades (`&amp;`, `&rarr;`, `&nbsp;`) o apostrofes
+  -> campo con sufijo `_html` emitido con `| safe`.
+- hrefs internos: `{{ (l.prefix + '/ruta/') | url }}`.
+- Placeholders dinamicos dentro de `*_html`: `{count}` -> `| replace("{count}", reviews.count)`.
+- Catalogo: `{%- set tdata = catalogo[l.code] %}`. Antes del `include` del modal: `{%- set tratamientos = catalogo[l.code] %}`.
+- `dir="rtl"` sale solo si `l.dir == 'rtl'` (preparado para el arabe).
+
+**Gate de regresion (usar siempre que se toque i18n o CSS compartido):** build antes -> snapshot de `_site/`
+-> cambio -> build -> `diff -r --strip-trailing-cr <snapshot> _site`. Las URLs estan indexadas: el diff
+debe salir vacio salvo lo que el cambio pretenda alterar.
+
 ## Estructura
 
 ```
 anylopez/website/
 ├── src/
-│   ├── _includes/base.njk     # Layout único (header, footer, WA, mobile-bar)
-│   ├── _data/tratamientos.json # 35 tratamientos · 8 categorías
-│   ├── index.njk              # Homepage
-│   ├── about.njk
-│   ├── services.njk           # Catálogo (usa byCategory filter + tratamientos.json)
-│   ├── radiofrecuencia.njk    # Página INDIBA
-│   └── contact.njk            # Formspree xrerbgdw
+│   ├── _includes/base.njk     # Layout unico (header, footer, WA, mobile-bar) — 100% i18n, sin if-lang
+│   ├── _data/langs.json       # idiomas activos (es, en, fr, de)
+│   ├── _data/i18n/<lang>/     # copy por idioma (chrome + una entrada por pagina)
+│   ├── _data/catalogo/<lang>.json # 36 tratamientos · 8 categorias, por idioma
+│   ├── index.njk              # Homepage (paginada sobre langs)
+│   ├── about.njk              # ← referencia canonica del patron i18n
+│   ├── services.njk           # Hub del catalogo (byCategory + catalogo[l.code])
+│   ├── radiofrecuencia.njk    # Pagina INDIBA
+│   ├── contact.njk            # Formspree xrerbgdw
+│   └── privacidad{,-en,-fr,-de}.md  # legales (aviso-legal solo ES)
 ├── css/styles.css             # Sistema de diseño V3 (ver .claude/css-variables.md)
 ├── images/
 │   ├── logo-color-sin-fondo.{png,webp}  # Logo (WebP para web, PNG fallback)
@@ -80,7 +125,7 @@ Para CSS variables completas: `.claude/css-variables.md`
 
 ## Gotchas conocidos
 
-- `byCategory` filter está en `.eleventy.js` — necesario para `services.njk`
+- `byCategory` filter está en `.eleventy.js` — necesario para `services.njk`. Junto a él viven `langByCode` y `entryByUrl` (i18n) y `bust`
 - `images/fotoscatalogoanylopez/` contiene las **fotos hero reales** usadas en la homepage (`src/index.njk`). Servir siempre la versión `.webp` vía `<picture>` con fallback PNG. Las imágenes de `images/tratamientos/` son las del catálogo (`services.njk`) y algunas tienen overlays/compresión — pendiente auditoría de calidad en aiplan futuro.
 - El video hero solo existe en formato `.mp4` (no WebP/optimizado)
 - Las imágenes de `images/tratamientos/` existen en PNG y WebP — usar WebP en HTML
