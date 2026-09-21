@@ -24,7 +24,7 @@
   "callCta": "Anrufen: 656 306 167",
   "hero": {
     "imgAlt": "Professionelle Gesichtsreinigungen in der AnyLopez Ästhetikklinik Benidorm",
-    "eyebrow_html": "Gesichtsreinigungen · 5 gestufte Stufen",
+    "eyebrow_html": "Gesichtsreinigungen · 5 Stufen",
     "h1_html": "Gesichtsreinigung, ernst genommen. <em>Nicht die vom Hotel-Spa.</em>",
     "lead": "Wenn Sie sich seit Jahren zu Hause reinigen oder in Studios, wo man Schaum aufträgt und Sie in einer halben Stunde abfertigt, pflegen Sie Ihre Haut nicht — Sie lassen sie, wie sie war. Eine professionelle Reinigung beginnt damit, Ihre Haut anzusehen und die Stufe zu wählen.",
     "ctaPrimary": "Kostenlose Diagnose buchen →",
@@ -47,7 +47,7 @@
     "p": "Kein Marketing. Vorherige Diagnose, gestufte Protokolle und echte klinische Apparatetechnik.",
     "items": [
       { "h3": "Immer vorherige Diagnose", "p_html": "Wir beginnen nicht, ohne zu sehen, welchen Hauttyp Sie haben und was er braucht. Mal ist es GOLD, mal ELITE." },
-      { "h3": "5 gestufte Stufen", "p_html": "GOLD essenziell · PLATINUM mit Hydratation · DETOX mit Nanonadel-Peeling · DIAMOND mit Apparatetechnik · ELITE Premium mit Gipstherapie." },
+      { "h3": "5 abgestufte Niveaus", "p_html": "GOLD essenziell · PLATINUM mit Hydratation · DETOX mit Nanonadel-Peeling · DIAMOND mit Apparatetechnik · ELITE Premium mit Gipstherapie." },
       { "h3": "Kombinierbar mit fortgeschrittenen Behandlungen", "p_html": "Eine Reinigung bereitet die Haut auf Peelings, Dermapen oder Radiofrequenz vor. Sie vervielfachen die Ergebnisse." },
       { "h3": "Apparatetechnik in klinischer Qualität", "p_html": "Kein YouTube-Ultraschall, kein kosmetischer Schaum. Echte Profigeräte." },
       { "h3": "Echte geplante Pflege", "p_html": "Alle 4–6 Wochen je nach Haut — nicht „wenn Sie daran denken“. Wir planen die Termine gemeinsam." },
