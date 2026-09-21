@@ -19,6 +19,8 @@ layout: null
 - [Sobre nosotras]({{ site.url }}/about/)
 - [Contacto y reservas]({{ site.url }}/contact/)
 
-## English
-- [Home]({{ site.url }}/en/)
-- [Treatments]({{ site.url }}/en/services/)
+{%- for l in langs %}{%- if l.code != 'es' %}
+## {{ l.name }}
+- [{{ i18n[l.code].chrome.nav.home }}]({{ site.url }}{{ l.prefix }}/)
+- [{{ i18n[l.code].chrome.nav.services }}]({{ site.url }}{{ l.prefix }}/services/)
+{%- endif %}{%- endfor %}

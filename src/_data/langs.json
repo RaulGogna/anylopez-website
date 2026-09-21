@@ -42,5 +42,16 @@
     "flag": "🇩🇪",
     "prefix": "/de",
     "hreflang": "de"
+  },
+  {
+    "code": "ar",
+    "locale": "ar_AR",
+    "bcp47": "ar",
+    "schemaName": "Arabic",
+    "dir": "rtl",
+    "name": "العربية",
+    "flag": "🌐",
+    "prefix": "/ar",
+    "hreflang": "ar"
   }
 ]
