@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "radiofrecuencia": "الترددات الراديوية INDIBA",
+    "contact": "اتصلي بنا"
+  },
+  "header": {
+    "bookCta": "احجزي موعدكِ",
+    "waHref": "https://wa.me/34656306167?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85.",
+    "menuToggle": "فتح القائمة"
+  },
+  "breadcrumbHome": "الرئيسية",
+  "footer": {
+    "brand": "عيادة تجميل للوجه والجسم في بنيدورم. أكثر من 35 عاماً من الخبرة بتقنيات الترددات الراديوية INDIBA و Ultherapy HIFU.",
+    "servicesHeading": "الخدمات",
+    "servicesLinks": {
+      "/radiofrecuencia/": "الترددات الراديوية INDIBA",
+      "/services/lifting-antiaging/": "Ultherapy HIFU",
+      "/services/inyectables/": "حقن Botox والفيلر",
+      "/services/limpiezas-faciales/": "تنظيف البشرة",
+      "/services/tratamientos-faciales/": "Dermapen",
+      "/services/depilacion/": "إزالة الشعر IPL",
+      "/services/masajes/": "التدليك",
+      "/services/corporal/": "علاجات الجسم",
+      "/services/estetica-decorativa/": "المكياج الدائم"
+    },
+    "infoHeading": "معلومات",
+    "infoLinks": {
+      "/": "الرئيسية",
+      "/about/": "من نحن",
+      "/radiofrecuencia/": "الترددات الراديوية INDIBA",
+      "/contact/": "اتصلي بنا"
+    },
+    "googleReviews": "تقييماً على Google",
+    "contactHeading": "اتصلي بنا",
+    "hours": "الاثنين–الجمعة: 10–14 / 16–20",
+    "rights": "جميع الحقوق محفوظة.",
+    "privacyLabel": "سياسة الخصوصية",
+    "legalLabel": "إشعار قانوني"
+  },
+  "mobileBar": {
+    "call": "اتصال"
+  },
+  "crumbs": {
+    "about": "من نحن",
+    "services": "الخدمات",
+    "radiofrecuencia": "الترددات الراديوية INDIBA",
+    "limpiezas-faciales": "تنظيف البشرة",
+    "tratamientos-faciales": "علاجات الوجه المتقدمة",
+    "lifting-antiaging": "الشد ومكافحة الشيخوخة",
+    "inyectables": "الطب التجميلي بالحقن",
+    "corporal": "علاجات الجسم",
+    "masajes": "التدليك",
+    "estetica-decorativa": "المكياج الدائم والرموش",
+    "depilacion": "إزالة الشعر IPL",
+    "contact": "اتصلي بنا"
+  }
+}
