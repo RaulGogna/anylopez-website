@@ -14,7 +14,19 @@
 import { chromium } from "playwright";
 
 const argv = process.argv.slice(2);
-const PREFIX = (argv[0] ?? "").replace(/\/$/, "");
+
+// Git Bash convierte un argumento "/ru" en una ruta de Windows
+// ("C:/Program Files/Git/ru"). Se acepta el código a secas ("ru") y se
+// reconstruye el prefijo aquí; y si llega ya mutilado, se rescata el último
+// segmento.
+function normalizePrefix(raw) {
+  if (raw == null || raw === "" || raw === "es") return "";
+  let v = String(raw).replace(/\\/g, "/").replace(/\/$/, "");
+  if (/^[A-Za-z]:/.test(v) || v.includes("Git/")) v = v.split("/").pop();
+  if (!v || v === "es") return "";
+  return "/" + v.replace(/^\/+/, "");
+}
+const PREFIX = normalizePrefix(argv[0]);
 const W = Number(argv.find((a) => /^\d+$/.test(a)) || 768);
 const BASE = (argv.find((a) => a.startsWith("--base=")) || "--base=http://localhost:8087").slice(7);
 

@@ -53,5 +53,17 @@
     "flag": "🌐",
     "prefix": "/ar",
     "hreflang": "ar"
+  },
+  {
+    "code": "ru",
+    "locale": "ru_RU",
+    "bcp47": "ru-RU",
+    "schemaName": "Russian",
+    "dir": "ltr",
+    "script": "cyrillic",
+    "name": "Русский",
+    "flag": "🌐",
+    "prefix": "/ru",
+    "hreflang": "ru"
   }
 ]
