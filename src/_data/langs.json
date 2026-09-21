@@ -65,5 +65,17 @@
     "flag": "🌐",
     "prefix": "/ru",
     "hreflang": "ru"
+  },
+  {
+    "code": "uk",
+    "locale": "uk_UA",
+    "bcp47": "uk-UA",
+    "schemaName": "Ukrainian",
+    "dir": "ltr",
+    "script": "cyrillic",
+    "name": "Українська",
+    "flag": "🌐",
+    "prefix": "/uk",
+    "hreflang": "uk"
   }
 ]
