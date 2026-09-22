@@ -78,6 +78,25 @@ Reglas del patron:
 -> cambio -> build -> `diff -r --strip-trailing-cr <snapshot> _site`. Las URLs estan indexadas: el diff
 debe salir vacio salvo lo que el cambio pretenda alterar.
 
+
+**Interpolaciones dentro de un bloque `ld+json`: `| dump | safe`, nunca entre comillas manuales.**
+El autoescape de Nunjucks está pensado para HTML y dentro de un JSON-LD mete entidades: 19 páginas
+servían `d&#39;expérience` y `INDIBA &amp; Ultherapy` a Google como datos estructurados (sep-2026).
+
+⚠️ **Efecto secundario del arreglo:** si a un idioma le falta la clave, `dump` emite vacío y sale
+`"description": ,` — **el `@graph` entero deja de parsear** y las 14 páginas de ese idioma pierden
+clínica, reseñas y breadcrumbs de golpe y en silencio. Antes, con comillas manuales, una clave
+ausente solo dejaba una cadena vacía: degradaba, no rompía. Por eso toda clave interpolada ahí
+lleva fallback (`{{ (t.x or i18n.es.chrome.x) | dump | safe }}`) y **`npm run build` ejecuta
+`check-jsonld.mjs`**: un JSON-LD roto para el deploy en vez de publicarse.
+
+**El «deploy doble» del chat widget no es automático.** `wrangler deploy` solo hace falta si
+cambió `src/` del worker o el snapshot `content/tratamientos.json`. Un cambio solo en `widget/`
+(UI, i18n) viaja en el `dist/widget.min.js` que se copia a `src/assets/chat/` y se publica con la
+web. Comprobar `git diff <base>..HEAD -- src/ content/` antes de desplegar el worker: en sep-2026
+se anunció el deploy del worker como pendiente y resultó innecesario, porque el worker ni siquiera
+recibe el idioma.
+
 ## Estructura
 
 ```
