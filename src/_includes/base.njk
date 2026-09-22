@@ -180,6 +180,74 @@
 </head>
 <body class="preload">
 
+  <!-- SPRITE: banderas del selector de idioma (definidas una vez, referenciadas con <use>) -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="flag-clip"><rect width="20" height="15" rx="2" /></clipPath>
+
+      <symbol id="flag-es" viewBox="0 0 20 15">
+        <g clip-path="url(#flag-clip)">
+          <rect width="20" height="15" fill="#AA151B" />
+          <rect y="3.75" width="20" height="7.5" fill="#F1BF00" />
+        </g>
+      </symbol>
+
+      <symbol id="flag-en" viewBox="0 0 20 15">
+        <g clip-path="url(#flag-clip)">
+          <rect width="20" height="15" fill="#0A1A5C" />
+          <line x1="0" y1="0" x2="20" y2="15" stroke="#fff" stroke-width="3.4" />
+          <line x1="20" y1="0" x2="0" y2="15" stroke="#fff" stroke-width="3.4" />
+          <line x1="0" y1="0" x2="20" y2="15" stroke="#C8102E" stroke-width="1.4" />
+          <line x1="20" y1="0" x2="0" y2="15" stroke="#C8102E" stroke-width="1.4" />
+          <rect x="8.3" width="3.4" height="15" fill="#fff" />
+          <rect y="5.8" width="20" height="3.4" fill="#fff" />
+          <rect x="9.1" width="1.8" height="15" fill="#C8102E" />
+          <rect y="6.6" width="20" height="1.8" fill="#C8102E" />
+        </g>
+      </symbol>
+
+      <symbol id="flag-fr" viewBox="0 0 20 15">
+        <g clip-path="url(#flag-clip)">
+          <rect width="6.67" height="15" fill="#0055A4" />
+          <rect x="6.67" width="6.66" height="15" fill="#fff" />
+          <rect x="13.33" width="6.67" height="15" fill="#EF4135" />
+        </g>
+      </symbol>
+
+      <symbol id="flag-de" viewBox="0 0 20 15">
+        <g clip-path="url(#flag-clip)">
+          <rect width="20" height="5" fill="#000" />
+          <rect y="5" width="20" height="5" fill="#DD0000" />
+          <rect y="10" width="20" height="5" fill="#FFCE00" />
+        </g>
+      </symbol>
+
+      <symbol id="flag-ru" viewBox="0 0 20 15">
+        <g clip-path="url(#flag-clip)">
+          <rect width="20" height="5" fill="#fff" />
+          <rect y="5" width="20" height="5" fill="#0039A6" />
+          <rect y="10" width="20" height="5" fill="#D52B1E" />
+        </g>
+      </symbol>
+
+      <symbol id="flag-uk" viewBox="0 0 20 15">
+        <g clip-path="url(#flag-clip)">
+          <rect width="20" height="7.5" fill="#0057B7" />
+          <rect y="7.5" width="20" height="7.5" fill="#FFD700" />
+        </g>
+      </symbol>
+
+      <symbol id="flag-ar" viewBox="0 0 20 15">
+        <circle cx="10" cy="7.5" r="6.8" fill="#4A7FB5" stroke="#2F5A87" stroke-width="0.6" />
+        <ellipse cx="10" cy="7.5" rx="2.6" ry="6.8" fill="none" stroke="#DFE9F5" stroke-width="0.5" />
+        <ellipse cx="10" cy="7.5" rx="5.6" ry="6.8" fill="none" stroke="#DFE9F5" stroke-width="0.5" />
+        <line x1="3.2" y1="7.5" x2="16.8" y2="7.5" stroke="#DFE9F5" stroke-width="0.5" />
+        <line x1="4" y1="4.2" x2="16" y2="4.2" stroke="#DFE9F5" stroke-width="0.4" opacity="0.7" />
+        <line x1="4" y1="10.8" x2="16" y2="10.8" stroke="#DFE9F5" stroke-width="0.4" opacity="0.7" />
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
@@ -201,11 +269,11 @@
       <div class="header-ctas">
         <div class="lang-switcher" id="langSwitcher">
           <button class="lang-btn" aria-label="Select language" aria-expanded="false" id="langBtn">
-            🌐 {{ l.code | upper }} <span class="lang-arrow">▾</span>
+            <svg class="lang-flag" aria-hidden="true" focusable="false"><use href="#flag-{{ l.code }}"></use></svg> {{ l.code | upper }} <span class="lang-arrow">▾</span>
           </button>
           <ul class="lang-dropdown" id="langDropdown" role="menu">
             {%- for l2 in langs %}
-            <li role="menuitem"><a href="{{ (curEntry.urls[l2.code] if (curEntry and curEntry.urls[l2.code]) else (l2.prefix + '/')) | url }}" data-lang="{{ l2.code }}" data-event="lang_switched" data-event-props='{"from":"{{ l.code }}","to":"{{ l2.code }}"}'>{{ l2.flag }} {{ l2.name }}</a></li>
+            <li role="menuitem"><a href="{{ (curEntry.urls[l2.code] if (curEntry and curEntry.urls[l2.code]) else (l2.prefix + '/')) | url }}" data-lang="{{ l2.code }}" data-event="lang_switched" data-event-props='{"from":"{{ l.code }}","to":"{{ l2.code }}"}'><svg class="lang-flag" aria-hidden="true" focusable="false"><use href="#flag-{{ l2.code }}"></use></svg> {{ l2.name }}</a></li>
             {%- endfor %}
           </ul>
         </div>
