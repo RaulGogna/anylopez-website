@@ -17,13 +17,13 @@ eleventyComputed:
 {
   "@context": "https://schema.org",
   "@type": "MedicalSpecialty",
-  "name": "{{ tx.jsonld.name | safe }}",
-  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
-  "description": "{{ tx.jsonld.description | safe }}",
+  "name": {{ tx.jsonld.name | dump | safe }},
+  "alternateName": {{ tx.jsonld.alternateName | dump | safe }},
+  "description": {{ tx.jsonld.description | dump | safe }},
   "url": "{{ site.url }}{{ l.prefix }}/services/depilacion/",
   "relevantSpecialty": [
 {%- for s in tx.jsonld.specialties %}
-    "{{ s | safe }}"{% if not loop.last %},{% endif %}
+    {{ s | dump | safe }}{% if not loop.last %},{% endif %}
 {%- endfor %}
   ],
   "provider": { "@id": "{{ site.url }}/#clinic" }
@@ -36,7 +36,7 @@ eleventyComputed:
   "@type": "FAQPage",
   "mainEntity": [
 {%- for f in tx.jsonld.faq %}
-    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+    { "@type": "Question", "name": {{ f.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | dump | safe }} } }{% if not loop.last %},{% endif %}
 {%- endfor %}
   ]
 }

@@ -320,13 +320,13 @@ eleventyComputed:
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "{{ tx.jsonldProduct.name | safe }}",
-  "description": "{{ tx.jsonldProduct.description | safe }}",
+  "name": {{ tx.jsonldProduct.name | dump | safe }},
+  "description": {{ tx.jsonldProduct.description | dump | safe }},
   "image": "{{ site.url }}/images/fotoscatalogoanylopez/radiofrecuenciacorporal.webp",{% if tx.jsonldProduct.inLanguage %}
-  "inLanguage": "{{ tx.jsonldProduct.inLanguage }}",{% endif %}
+  "inLanguage": {{ tx.jsonldProduct.inLanguage | dump | safe }},{% endif %}
   "brand": {
     "@type": "Brand",
-    "name": "{{ tx.jsonldProduct.clinicName | safe }}"
+    "name": {{ tx.jsonldProduct.clinicName | dump | safe }}
   },
   "offers": {
     "@type": "Offer",
@@ -338,7 +338,7 @@ eleventyComputed:
     "itemCondition": "https://schema.org/NewCondition",
     "seller": {
       "@type": "MedicalClinic",
-      "name": "{{ tx.jsonldProduct.clinicName | safe }}",
+      "name": {{ tx.jsonldProduct.clinicName | dump | safe }},
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Benidorm",
@@ -361,15 +361,15 @@ eleventyComputed:
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",{% if tx.jsonldProduct.inLanguage %}
-  "inLanguage": "{{ tx.jsonldProduct.inLanguage }}",{% endif %}
+  "inLanguage": {{ tx.jsonldProduct.inLanguage | dump | safe }},{% endif %}
   "mainEntity": [
     {%- for q in tx.jsonldFaq %}
     {
       "@type": "Question",
-      "name": "{{ q.name | safe }}",
+      "name": {{ q.name | dump | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{{ q.text | safe }}"
+        "text": {{ q.text | dump | safe }}
       }
     }{% if not loop.last %},{% endif %}
     {%- endfor %}

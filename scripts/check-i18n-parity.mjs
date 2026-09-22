@@ -1,0 +1,255 @@
+#!/usr/bin/env node
+/**
+ * Paridad estructural de los diccionarios i18n contra el español.
+ *
+ * Comprueba, para cada idioma dado (o todos los de langs.json):
+ *   - que existen los mismos archivos que en es/
+ *   - que cada archivo tiene exactamente las mismas claves, en el mismo orden y anidamiento
+ *   - que los arrays tienen la misma longitud
+ *   - que ninguna cadena traducible ha quedado idéntica al español (salvo excepciones legítimas)
+ *   - que el catálogo conserva slug/imagen/categoria/id sin tocar
+ *
+ * Uso:  node scripts/check-i18n-parity.mjs [ru uk ...]
+ */
+import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const I18N = join(ROOT, "src/_data/i18n");
+const CAT = join(ROOT, "src/_data/catalogo");
+
+const read = (p) => JSON.parse(readFileSync(p, "utf8"));
+
+/** Claves que son identificadores, no texto: nunca deben traducirse. */
+const FROZEN_CATALOG_KEYS = new Set(["slug", "imagen", "categoria", "id", "packDestacado"]);
+
+/**
+ * Claves cuyo valor es un identificador, un token CSS o un nombre propio de
+ * persona. Coincidir con el español ahí es lo correcto, no un olvido.
+ * Sale de auditar de/ y ar/, donde los 43 "sin traducir" iniciales eran todos
+ * de este tipo: `value` de <option>, `cls`, colores, autores de testimonios.
+ */
+const IDENTIFIER_KEYS = new Set([
+  "value", "cls", "class", "id", "slug", "icon", "color",
+  "telPh", "inLanguage", "href", "url", "src", "imagen", "categoria", "code",
+]);
+
+/**
+ * `name` y `author` suelen traer nombres de personas reales (no se traducen),
+ * pero a veces traen una etiqueta genérica que sí hay que traducir. Excluirlas
+ * por nombre de clave dejaba pasar «Paciente verificada» sin traducir en los
+ * ocho svc-*.json. Se excluyen solo cuando el valor PARECE un nombre propio:
+ * pocas palabras y todas capitalizadas (admitiendo iniciales como "G.").
+ */
+const PERSON_NAME_KEYS = new Set(["name", "author"]);
+function looksLikePersonName(v) {
+  const words = v.trim().split(/\s+/);
+  if (words.length > 4) return false;
+  return words.every((w) => /^[\p{Lu}]/u.test(w) || /^[\p{Lu}]\.$/u.test(w));
+}
+
+/** Cualquier cosa bajo una clave `css` es un token de estilo, no texto. */
+const isCssPath = (path) => /(^|\.)css(\.|\[)/.test(path);
+
+/**
+ * Subárboles que no son texto de cara al usuario:
+ *  - `c` y `comments`: marcadores de sección que las plantillas emiten como
+ *    comentarios HTML (`<!-- {{ tx.c.cta }} -->`), nunca visibles.
+ *  - `booking.weekdays`: abreviaturas de día. En francés e inglés coinciden
+ *    legítimamente con las españolas (L, M, J, V, S…), y marcarlas convertía
+ *    el informe en ruido.
+ */
+const isInternalPath = (path) =>
+  /(^|\.)(c|comments)(\.|\[)/.test(path) || /booking\.weekdays\[/.test(path);
+
+/**
+ * Cadenas que pueden coincidir legítimamente con el español: marcas, nombres
+ * de tecnología, URLs, rutas, números, símbolos y siglas.
+ */
+function mayMatchSpanish(value) {
+  if (typeof value !== "string") return true;
+  let v = value.trim();
+  if (v === "") return true;
+  if (/^https?:\/\//.test(v) || v.startsWith("/") || v.startsWith("#")) return true;
+  if (/^var\(--/.test(v)) return true;
+  // Las etiquetas HTML y las entidades no son texto de la lengua.
+  v = v.replace(/<[^>]+>/g, " ").replace(/&[a-z]+;|&#\d+;/gi, " ");
+  // Sin una sola letra: números, símbolos, emoji, puntuación.
+  if (!/\p{L}/u.test(v)) return true;
+  // Solo marcas / siglas / tecnología (más números y puntuación).
+  const BRANDS = /INDIBA|Ultherapy|HIFU|dermapen|AnyLopez|IPL|PRP|LED|GOLD|Botox|B[oó]tox|WhatsApp|Google|Instagram|Facebook|TikTok|SPF|ANY|LOPEZ|Bizum|Cal\.com|Lifting|Email|Pack|Abdomen|Dermaplaning/gi;
+  const rest = v.replace(BRANDS, "").replace(/[\d\s\p{P}\p{S}]/gu, "");
+  if (rest === "") return true;
+  return false;
+}
+
+
+/**
+ * Coincidencias con el español que se han revisado una a una y son correctas.
+ * Van nombradas y con motivo, en vez de relajar la heurística: así se pueden
+ * discutir y retirar cuando dejen de valer.
+ */
+const EXCEPCIONES = new Map([
+  ["fr::home.json::hero.chips[2]", "«Pack», «min» y «€» se escriben igual en francés"],
+  ["fr::catalogo::tratamientos[8].nombre", "«Cicatrices» es idéntico en francés y español"],
+  ["en::catalogo::tratamientos[11].nombre", "«Dermaplaning Facial» es el nombre comercial, y «facial» es palabra inglesa"],
+]);
+
+/** ¿Está esta coincidencia en la lista de revisadas-y-correctas? */
+function esExcepcion(lang, file, path) {
+  const base = file.startsWith("catalogo") ? "catalogo" : file;
+  return EXCEPCIONES.has(`${lang}::${base}::${path}`);
+}
+
+/** Recorre dos valores en paralelo y acumula las diferencias estructurales. */
+function walk(esVal, trVal, path, out, opts) {
+  const esType = Array.isArray(esVal) ? "array" : typeof esVal;
+  const trType = Array.isArray(trVal) ? "array" : typeof trVal;
+
+  if (trVal === undefined) {
+    out.missing.push(path);
+    return;
+  }
+  if (esType !== trType) {
+    out.typeMismatch.push(`${path}: es=${esType} tr=${trType}`);
+    return;
+  }
+
+  if (esType === "array") {
+    if (esVal.length !== trVal.length) {
+      out.arrayLen.push(`${path}: es=${esVal.length} tr=${trVal.length}`);
+    }
+    const n = Math.min(esVal.length, trVal.length);
+    for (let i = 0; i < n; i++) walk(esVal[i], trVal[i], `${path}[${i}]`, out, opts);
+    return;
+  }
+
+  if (esType === "object" && esVal !== null) {
+    const esKeys = Object.keys(esVal);
+    const trKeys = Object.keys(trVal);
+    for (const k of esKeys) {
+      if (!(k in trVal)) out.missing.push(`${path}.${k}`);
+    }
+    for (const k of trKeys) {
+      if (!(k in esVal)) out.extra.push(`${path}.${k}`);
+    }
+    // Comparar como JSON evita elegir un separador: un NUL crudo aquí hacía
+    // que git tratara este script como binario y no generara diffs revisables.
+    const common = esKeys.filter((k) => k in trVal);
+    if (JSON.stringify(common) !== JSON.stringify(trKeys.filter((k) => esKeys.includes(k)))) {
+      out.order.push(path === "" ? "(raíz)" : path);
+    }
+    for (const k of common) {
+      const childPath = path ? `${path}.${k}` : k;
+      // Una clave que es una ruta o URL es un identificador: su VALOR sí se traduce,
+      // pero la clave debe conservarse igual (ya cubierto por missing/extra).
+      walk(esVal[k], trVal[k], childPath, out, { ...opts, key: k });
+    }
+    return;
+  }
+
+  if (esType === "string") {
+    if (opts.frozen && FROZEN_CATALOG_KEYS.has(opts.key)) {
+      if (esVal !== trVal) out.frozenChanged.push(`${path}: "${esVal}" -> "${trVal}"`);
+      return;
+    }
+    if (IDENTIFIER_KEYS.has(opts.key) || isCssPath(path) || isInternalPath(path)) return;
+    if (PERSON_NAME_KEYS.has(opts.key) && looksLikePersonName(esVal)) return;
+    if (esVal === trVal && !mayMatchSpanish(esVal)) {
+      out.untranslated.push(`${path}: "${esVal.slice(0, 70)}"`);
+    }
+  }
+}
+
+function checkLang(lang) {
+  const out = { missing: [], extra: [], order: [], arrayLen: [], typeMismatch: [], untranslated: [], frozenChanged: [], files: [] };
+  const esDir = join(I18N, "es");
+  const trDir = join(I18N, lang);
+
+  if (!existsSync(trDir)) {
+    out.files.push(`falta el directorio src/_data/i18n/${lang}/`);
+    return out;
+  }
+
+  const esFiles = readdirSync(esDir).filter((f) => f.endsWith(".json")).sort();
+  const trFiles = readdirSync(trDir).filter((f) => f.endsWith(".json")).sort();
+  for (const f of esFiles) if (!trFiles.includes(f)) out.files.push(`falta ${lang}/${f}`);
+  for (const f of trFiles) if (!esFiles.includes(f)) out.files.push(`sobra ${lang}/${f}`);
+
+  for (const f of esFiles.filter((f) => trFiles.includes(f))) {
+    walk(read(join(esDir, f)), read(join(trDir, f)), "", out, { file: f, prefix: f });
+    // Prefijar el archivo en los paths ya acumulados es más ruidoso que útil:
+    // en su lugar anotamos el archivo al vuelo.
+    for (const key of ["missing", "extra", "order", "arrayLen", "typeMismatch", "untranslated"]) {
+      out[key] = out[key].map((m) => (m.startsWith(f + " ") ? m : m.includes(" :: ") ? m : `${f} :: ${m}`));
+    }
+  }
+
+  const esCat = join(CAT, "es.json");
+  const trCat = join(CAT, `${lang}.json`);
+  if (!existsSync(trCat)) {
+    out.files.push(`falta src/_data/catalogo/${lang}.json`);
+  } else {
+    const before = Object.fromEntries(Object.entries(out).map(([k, v]) => [k, [...v]]));
+    walk(read(esCat), read(trCat), "", out, { frozen: true });
+    for (const key of ["missing", "extra", "order", "arrayLen", "typeMismatch", "untranslated"]) {
+      out[key] = out[key].map((m, i) =>
+        i >= (before[key] || []).length && !m.includes(" :: ") ? `catalogo/${lang}.json :: ${m}` : m
+      );
+    }
+  }
+
+  // Descontar las coincidencias ya revisadas y aceptadas (ver EXCEPCIONES)
+  out.untranslated = out.untranslated.filter((m) => {
+    const [file, resto] = m.split(" :: ");
+    const path = (resto || "").split(":")[0].trim();
+    return !esExcepcion(lang, file, path);
+  });
+
+  const md = join(ROOT, `src/privacidad-${lang}.md`);
+  if (!existsSync(md)) out.files.push(`falta src/privacidad-${lang}.md`);
+
+  return out;
+}
+
+const LABELS = {
+  files: "ARCHIVOS",
+  missing: "CLAVES QUE FALTAN",
+  extra: "CLAVES QUE SOBRAN",
+  order: "ORDEN DE CLAVES DISTINTO",
+  arrayLen: "LONGITUD DE ARRAY DISTINTA",
+  typeMismatch: "TIPO DISTINTO",
+  frozenChanged: "IDENTIFICADOR MODIFICADO (slug/imagen/categoria/id)",
+  untranslated: "SIN TRADUCIR (idéntico al español)",
+};
+
+const langsFile = join(ROOT, "src/_data/langs.json");
+const argLangs = process.argv.slice(2);
+const langs = argLangs.length
+  ? argLangs
+  : read(langsFile).map((l) => l.code).filter((c) => c !== "es");
+
+let failed = false;
+for (const lang of langs) {
+  const r = checkLang(lang);
+  const total = Object.values(r).reduce((a, b) => a + b.length, 0);
+  if (total === 0) {
+    console.log(`✅ ${lang}: paridad completa con es/`);
+    continue;
+  }
+  failed = true;
+  console.log(`\n❌ ${lang}: ${total} problema(s)`);
+  for (const [key, label] of Object.entries(LABELS)) {
+    if (!r[key].length) continue;
+    console.log(`\n  ${label} (${r[key].length}):`);
+    for (const m of r[key].slice(0, 25)) console.log(`    - ${m}`);
+    if (r[key].length > 25) console.log(`    … y ${r[key].length - 25} más`);
+  }
+}
+
+if (failed) {
+  console.log("\nFALLO: hay diferencias estructurales o cadenas sin traducir.");
+  process.exit(1);
+}
+console.log("\nTodos los idiomas en paridad.");

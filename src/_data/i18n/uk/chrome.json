@@ -1,0 +1,62 @@
+{
+  "siteName": "AnyLopez Естетична клініка",
+  "clinicDescription": "Естетична клініка обличчя і тіла в Бенідормі з понад 35-річним досвідом. Спеціалісти з радіочастотної терапії INDIBA, Ultherapy HIFU, dermapen, лазерної епіляції, ботоксу та філерів.",
+  "nav": {
+    "home": "Головна",
+    "about": "Про нас",
+    "services": "Послуги",
+    "radiofrecuencia": "Радіочастота INDIBA",
+    "contact": "Контакти"
+  },
+  "header": {
+    "bookCta": "Записатися",
+    "waHref": "https://wa.me/34656306167?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%2C%20%D1%85%D0%BE%D1%82%D1%96%D0%BB%D0%BE%D1%81%D1%8F%20%D0%B1%20%D0%B4%D1%96%D0%B7%D0%BD%D0%B0%D1%82%D0%B8%D1%81%D1%8F%20%D0%B1%D1%96%D0%BB%D1%8C%D1%88%D0%B5%20%D0%BF%D1%80%D0%BE%20%D0%B2%D0%B0%D1%88%D1%96%20%D0%BF%D0%BE%D1%81%D0%BB%D1%83%D0%B3%D0%B8.",
+    "menuToggle": "Відкрити меню"
+  },
+  "breadcrumbHome": "Головна",
+  "footer": {
+    "brand": "Естетична клініка обличчя і тіла в Бенідормі. Понад 35 років досвіду роботи з технологіями радіочастоти INDIBA та Ultherapy HIFU.",
+    "servicesHeading": "Послуги",
+    "servicesLinks": {
+      "/radiofrecuencia/": "Радіочастота INDIBA",
+      "/services/lifting-antiaging/": "Ultherapy HIFU",
+      "/services/inyectables/": "Ботокс і філери",
+      "/services/limpiezas-faciales/": "Чищення обличчя",
+      "/services/tratamientos-faciales/": "Dermapen",
+      "/services/depilacion/": "Епіляція IPL",
+      "/services/masajes/": "Масаж",
+      "/services/corporal/": "Тіло",
+      "/services/estetica-decorativa/": "Мікропігментація"
+    },
+    "infoHeading": "Інформація",
+    "infoLinks": {
+      "/": "Головна",
+      "/about/": "Про нас",
+      "/radiofrecuencia/": "Радіочастота INDIBA",
+      "/contact/": "Контакти"
+    },
+    "googleReviews": "відгуків у Google",
+    "contactHeading": "Контакти",
+    "hours": "Пн–Пт: 10:00–14:00 / 16:00–20:00",
+    "rights": "Усі права захищені.",
+    "privacyLabel": "Політика конфіденційності",
+    "legalLabel": "Юридична інформація"
+  },
+  "mobileBar": {
+    "call": "Подзвонити"
+  },
+  "crumbs": {
+    "about": "Про нас",
+    "services": "Послуги",
+    "radiofrecuencia": "Радіочастота INDIBA",
+    "limpiezas-faciales": "Чищення обличчя",
+    "tratamientos-faciales": "Просунутий догляд за обличчям",
+    "lifting-antiaging": "Ліфтинг і антивіковий догляд",
+    "inyectables": "Ін'єкційна естетична медицина",
+    "corporal": "Процедури для тіла",
+    "masajes": "Масаж",
+    "estetica-decorativa": "Декоративна естетика",
+    "depilacion": "Епіляція IPL",
+    "contact": "Контакти"
+  }
+}

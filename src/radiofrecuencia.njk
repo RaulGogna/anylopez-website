@@ -16,21 +16,21 @@ eleventyComputed:
 {
   "@context": "https://schema.org",
   "@type": "MedicalTherapy",
-  "name": "{{ tx.jsonld.name | safe }}",
-  "alternateName": "{{ tx.jsonld.alternateName | safe }}",
-  "description": "{{ tx.jsonld.description | safe }}",
+  "name": {{ tx.jsonld.name | dump | safe }},
+  "alternateName": {{ tx.jsonld.alternateName | dump | safe }},
+  "description": {{ tx.jsonld.description | dump | safe }},
   "url": "{{ site.url }}{{ l.prefix }}/radiofrecuencia/",
   "procedureType": "https://schema.org/NoninvasiveProcedure",
-  "bodyLocation": [{% for b in tx.jsonld.bodyLocation %}"{{ b | safe }}"{% if not loop.last %}, {% endif %}{% endfor %}],
-  "howPerformed": "{{ tx.jsonld.howPerformed | safe }}",
-  "preparation": "{{ tx.jsonld.preparation | safe }}",
-  "followup": "{{ tx.jsonld.followup | safe }}",
+  "bodyLocation": [{% for b in tx.jsonld.bodyLocation %}{{ b | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %}],
+  "howPerformed": {{ tx.jsonld.howPerformed | dump | safe }},
+  "preparation": {{ tx.jsonld.preparation | dump | safe }},
+  "followup": {{ tx.jsonld.followup | dump | safe }},
   "offers": {
     "@type": "Offer",
     "price": "500",
     "priceCurrency": "EUR",
-    "name": "{{ tx.jsonld.offerName | safe }}",
-    "description": "{{ tx.jsonld.offerDescription | safe }}",
+    "name": {{ tx.jsonld.offerName | dump | safe }},
+    "description": {{ tx.jsonld.offerDescription | dump | safe }},
     "availability": "https://schema.org/InStock",
     "url": "{{ site.url }}{{ l.prefix }}/radiofrecuencia/"
   },
@@ -44,7 +44,7 @@ eleventyComputed:
   "@type": "FAQPage",
   "mainEntity": [
 {%- for f in tx.jsonld.faq %}
-    { "@type": "Question", "name": "{{ f.q | safe }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ f.a | safe }}" } }{% if not loop.last %},{% endif %}
+    { "@type": "Question", "name": {{ f.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | dump | safe }} } }{% if not loop.last %},{% endif %}
 {%- endfor %}
   ]
 }

@@ -1,0 +1,78 @@
+{
+  "title": "Контакты — AnyLopez Эстетическая клиника",
+  "description": "Свяжитесь с клиникой AnyLopez в Бенидорме. Calle Marqués de Comillas 4, Local 6. Тел.: 656 306 167. Пн–Пт 10:00–14:00 / 16:00–20:00.",
+  "breadcrumb": "Контакты",
+  "comments": {
+    "main": "ОСНОВНОЙ КОНТАКТ",
+    "map": "КАРТА",
+    "form": "ФОРМА",
+    "cta": "ПРЯМОЙ ЗВОНОК"
+  },
+  "hero": {
+    "label": "Свяжитесь с нами",
+    "h1": "Контакты",
+    "sub_html": "Познакомьтесь с нашей клиникой: уютные помещения и внимательное индивидуальное обслуживание"
+  },
+  "info": {
+    "label": "Информация",
+    "h2": "Не откладывайте — свяжитесь с нами!",
+    "p_html": "Мы с радостью ответим на все ваши вопросы. Запишитесь на приём или приходите к нам в клинику в Бенидорме.",
+    "direccion": "Адрес",
+    "telefonos": "Телефоны",
+    "email": "Email",
+    "horario": "Часы работы",
+    "horario_html": "Понедельник–пятница<br>10:00 – 14:00 · 16:00 – 20:00"
+  },
+  "map": {
+    "aria": "Посмотреть клинику AnyLopez на Google Maps (открывается в новой вкладке)",
+    "text": "Смотреть на Google Maps"
+  },
+  "form": {
+    "label": "Форма",
+    "h2": "Запишитесь на приём",
+    "p_html": "Заполните форму, и мы свяжемся с вами как можно скорее.",
+    "nombre": "Имя *",
+    "nombrePh": "Ваше имя",
+    "apellidos": "Фамилия *",
+    "apellidosPh": "Ваша фамилия",
+    "email": "Email *",
+    "emailPh": "ваш@email.com",
+    "telefono": "Телефон",
+    "telefonoPh": "Ваш номер телефона",
+    "tratamiento": "Интересующая процедура",
+    "options": [
+      { "value": "", "label": "Выберите процедуру..." },
+      { "value": "higiene-facial", "label": "Гигиена лица" },
+      { "value": "radiofrecuencia-facial", "label": "Радиочастота для лица" },
+      { "value": "radiofrecuencia-corporal", "label": "Радиочастота для тела" },
+      { "value": "radiofrecuencia-indiba", "label": "Радиочастотная система INDIBA" },
+      { "value": "ultherapy", "label": "Ultherapy" },
+      { "value": "dermapen", "label": "Dermapen" },
+      { "value": "botox", "label": "Ботокс" },
+      { "value": "acido-hialuronico", "label": "Филлер на основе гиалуроновой кислоты" },
+      { "value": "vitaminas-exosomas", "label": "Витамины + экзосомы" },
+      { "value": "micropigmentacion", "label": "Микропигментация" },
+      { "value": "otro", "label": "Другое / общая консультация" }
+    ],
+    "mensaje": "Сообщение или комментарий",
+    "mensajePh": "Расскажите, чем мы можем вам помочь...",
+    "consent_html": "<span>Я ознакомлен(а) с <a href=\"{privacyUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">политикой конфиденциальности</a> и принимаю её условия</span>",
+    "submit": "Отправить заявку",
+    "note": "Отвечаем в течение 24 часов.",
+    "successH3": "Сообщение отправлено!",
+    "successP_html": "Мы свяжемся с вами в течение 24 часов."
+  },
+  "ctaBottom": {
+    "label": "Прямой звонок",
+    "h2": "Позвоните нам: 656 306 167",
+    "p": "Если хотите поговорить с нами напрямую, звоните в часы работы клиники.",
+    "btn_html": "<a href=\"tel:656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Позвонить сейчас</a>"
+  },
+  "js": {
+    "required": "Пожалуйста, заполните обязательные поля (имя, фамилию и email).",
+    "invalidEmail": "Пожалуйста, введите корректный email.",
+    "sending": "Отправка...",
+    "serverError": "Ошибка сервера",
+    "sendError": "Произошла ошибка при отправке формы. Попробуйте ещё раз или позвоните нам: 656 306 167."
+  }
+}

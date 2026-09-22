@@ -1,6 +1,9 @@
 {
   "title": "AnyLopez Benidorm — Ultherapy HIFU y Pack Radiofrecuencia INDIBA",
   "description": "Clínica estética en Benidorm especializada en Ultherapy HIFU y radiofrecuencia INDIBA. Pack 10 sesiones (45 min) por 500 € con garantía: si no notas mejora, sesión 11 gratis.",
+  "ogTitle": "AnyLopez Benidorm — Especialistas en Ultherapy HIFU y Radiofrecuencia INDIBA",
+  "ogDescPre": "Clínica estética en Benidorm. Radiofrecuencia INDIBA, Ultherapy HIFU, Botox, tratamientos faciales y más. ",
+  "ogDescPost": " reseñas de cinco estrellas. Reserva tu consulta gratuita por WhatsApp.",
   "c": {
     "booking": "BOOKING CUSTOM — primario (sustituye Cal.com)",
     "leadStrip": "LEAD STRIP — fallback fuera de horario",
@@ -216,6 +219,7 @@
   "jsonldProduct": {
     "name": "Pack Radiofrecuencia INDIBA Anti-Edad — 10 sesiones",
     "description": "Protocolo completo de radiofrecuencia INDIBA para reafirmar rostro o cuerpo. Incluye 10 sesiones de 45 min, diagnóstico inicial, plan personalizado, seguimiento sesión a sesión, plan de cuidados en casa y garantía sesión 11.",
+    "inLanguage": "es",
     "clinicName": "AnyLopez Clínica Estética"
   },
   "jsonldFaq": [
