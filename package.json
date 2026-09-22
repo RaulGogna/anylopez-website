@@ -5,7 +5,8 @@
   "scripts": {
     "build": "eleventy && node scripts/check-jsonld.mjs",
     "serve": "eleventy --serve",
-    "verify": "node scripts/check-jsonld.mjs && node scripts/check-seo-i18n.mjs && node scripts/check-i18n-parity.mjs"
+    "verify": "node scripts/check-jsonld.mjs && node scripts/check-seo-i18n.mjs && node scripts/check-i18n-parity.mjs",
+    "verify:booking": "eleventy && node scripts/check-booking-locale.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

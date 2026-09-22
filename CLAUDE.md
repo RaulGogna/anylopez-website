@@ -90,6 +90,16 @@ ausente solo dejaba una cadena vacía: degradaba, no rompía. Por eso toda clave
 lleva fallback (`{{ (t.x or i18n.es.chrome.x) | dump | safe }}`) y **`npm run build` ejecuta
 `check-jsonld.mjs`**: un JSON-LD roto para el deploy en vez de publicarse.
 
+**Gate de locale del calendario de reservas: `npm run verify:booking`.** Comprueba que `booking.js`
+pinta meses/días/horas en el idioma y la zona horaria correctos para los 7 idiomas, abriendo un
+Chromium de verdad y haciendo clic. Ningún verificador que lee el HTML generado puede detectarlo:
+ese texto lo escribe el JS en el navegador (no existe en el `_site` estático) y la etiqueta del día
+solo aparece tras un clic en un hueco del calendario. `verify:booking` no vive dentro de `build` ni
+de `verify` porque necesita Chromium instalado y el worker de disponibilidad respondiendo en vivo —
+no es apto para CI sin esas dos cosas. Ejecutar manualmente tras tocar `booking.js` o `booking.njk`:
+`npm run verify:booking` (que hace `eleventy && node scripts/check-booking-locale.mjs` — el build
+delante es obligatorio, o el script mide el `_site` viejo y puede dar verde sobre fuente rota).
+
 **El «deploy doble» del chat widget no es automático.** `wrangler deploy` solo hace falta si
 cambió `src/` del worker o el snapshot `content/tratamientos.json`. Un cambio solo en `widget/`
 (UI, i18n) viaja en el `dist/widget.min.js` que se copia a `src/assets/chat/` y se publica con la

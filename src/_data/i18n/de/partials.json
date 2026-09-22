@@ -26,6 +26,8 @@
     "formNotes": "Anmerkungen (optional)",
     "submit": "Termin buchen und per WhatsApp melden",
     "submitHint": "Wir öffnen WhatsApp mit Ihrer fertigen Buchung. AnyLopez bestätigt in weniger als 2 Std.",
+    "waTemplate": "Hallo! Ich habe gerade einen Termin gebucht: {date} um {time} für {treatment}. Mein Name: {name}.{notes} Ich freue mich auf Ihre Bestätigung, vielen Dank!",
+    "waNotes": " Anmerkungen: {notes}.",
     "success": "Wir haben Ihre Buchung erhalten. AnyLopez bestätigt per WhatsApp in weniger als 2 Std. (während der Öffnungszeiten).",
     "error": "Die Verfügbarkeit konnte nicht geladen werden. Rufen Sie uns an unter +34 656 306 167 oder nutzen Sie WhatsApp.",
     "fallbackHref": "https://wa.me/34656306167",

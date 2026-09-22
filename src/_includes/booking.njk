@@ -1,6 +1,7 @@
 {# anylopez-website/src/_includes/booking.njk #}
 {% set lang = lang or "es" %}
 {% set L = i18n[lang or 'es'].partials.booking %}
+{% set LES = i18n.es.partials.booking %}
 
 <section class="booking-section" id="booking"
   data-api="https://anylopez-booking-worker.anylopez.workers.dev/booking/availability"
@@ -59,14 +60,14 @@
         <span>{{ L.formTreatment }}</span>
         <select name="treatment" required>
           <option value="" disabled selected></option>
-          <option value="{{ L.consultation }}">{{ L.consultation }}</option>
+          <option value="{{ L.consultation }}" data-es="{{ LES.consultation }}">{{ L.consultation }}</option>
           <optgroup label="{{ L.starLabel }}">
-            <option value="{{ L.star }}">{{ L.star }}</option>
+            <option value="{{ L.star }}" data-es="{{ LES.star }}">{{ L.star }}</option>
           </optgroup>
           <optgroup label="{{ L.groupLabel }}">
-            {% for t in L.groups %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
+            {% for t in L.groups %}<option value="{{ t }}" data-es="{{ LES.groups[loop.index0] }}">{{ t }}</option>{% endfor %}
           </optgroup>
-          <option value="{{ L.other }}">{{ L.other }}</option>
+          <option value="{{ L.other }}" data-es="{{ LES.other }}">{{ L.other }}</option>
         </select>
       </label>
       <label>
@@ -84,7 +85,7 @@
 </section>
 
 <script>
-  window.__BOOKING_LANG__ = "{{ lang }}";
+  window.__BOOKING_LOCALE__ = "{{ l.bcp47 or 'es-ES' }}";
   window.__BOOKING_TXT__ = {{ L | dump | safe }};
 </script>
 <link rel="stylesheet" href="{{ '/css/booking.css' | url | bust }}" media="print" onload="this.media='all'">

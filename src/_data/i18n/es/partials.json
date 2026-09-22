@@ -26,6 +26,8 @@
     "formNotes": "Notas (opcional)",
     "submit": "Reservar cita y avisar por WhatsApp",
     "submitHint": "Abriremos WhatsApp con tu reserva escrita. AnyLopez te confirma en menos de 2 h.",
+    "waTemplate": "Hola, acabo de reservar el {date} a las {time} para {treatment}. Mi nombre: {name}.{notes} Espero vuestra confirmación, ¡gracias!",
+    "waNotes": " Notas: {notes}.",
     "success": "Hemos recibido tu reserva. AnyLopez te confirma por WhatsApp en menos de 2 h (horario de clínica).",
     "error": "No hemos podido cargar la disponibilidad. Llámanos al +34 656 306 167 o usa WhatsApp.",
     "fallbackHref": "https://wa.me/34656306167",
