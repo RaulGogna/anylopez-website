@@ -16,7 +16,15 @@
     "subtitle": "30 minutes · personalised diagnosis · no commitment",
     "prevMonth": "Previous month",
     "nextMonth": "Next month",
-    "weekdays": ["M", "T", "W", "T", "F", "S", "S"],
+    "weekdays": [
+      "M",
+      "T",
+      "W",
+      "T",
+      "F",
+      "S",
+      "S"
+    ],
     "pickDay": "Pick your slot",
     "noSlots": "No slots this day",
     "scarcityNote": "Limited availability for personalised attention",
@@ -53,12 +61,30 @@
     "selAria": "Treatment of interest",
     "selPh": "What are you interested in?",
     "options": [
-      { "value": "INDIBA", "label": "Radiofrecuencia INDIBA" },
-      { "value": "HIFU", "label": "Ultherapy HIFU Lifting" },
-      { "value": "Botox", "label": "Botox & Fillers" },
-      { "value": "Limpieza Facial", "label": "Facial Cleanse" },
-      { "value": "Dermapen", "label": "Dermapen" },
-      { "value": "Otro", "label": "Other treatment" }
+      {
+        "value": "INDIBA",
+        "label": "INDIBA Radiofrequency"
+      },
+      {
+        "value": "HIFU",
+        "label": "Ultherapy HIFU Lifting"
+      },
+      {
+        "value": "Botox",
+        "label": "Botox & Fillers"
+      },
+      {
+        "value": "Limpieza Facial",
+        "label": "Facial Cleanse"
+      },
+      {
+        "value": "Dermapen",
+        "label": "Dermapen"
+      },
+      {
+        "value": "Otro",
+        "label": "Other treatment"
+      }
     ],
     "submit": "Book appointment",
     "msg_html": "✓ Received — we'll be in touch shortly."

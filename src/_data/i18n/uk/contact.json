@@ -36,23 +36,59 @@
     "apellidos": "Прізвище *",
     "apellidosPh": "Ваше прізвище",
     "email": "Email *",
-    "emailPh": "tu@email.com",
+    "emailPh": "ваш@email.com",
     "telefono": "Телефон",
     "telefonoPh": "Ваш номер телефону",
     "tratamiento": "Процедура, яка цікавить",
     "options": [
-      { "value": "", "label": "Оберіть процедуру..." },
-      { "value": "higiene-facial", "label": "Гігієна обличчя" },
-      { "value": "radiofrecuencia-facial", "label": "Радіочастота обличчя" },
-      { "value": "radiofrecuencia-corporal", "label": "Радіочастота тіла" },
-      { "value": "radiofrecuencia-indiba", "label": "Радіочастота INDIBA" },
-      { "value": "ultherapy", "label": "Ultherapy" },
-      { "value": "dermapen", "label": "Dermapen" },
-      { "value": "botox", "label": "Ботокс" },
-      { "value": "acido-hialuronico", "label": "Філер з гіалуроновою кислотою" },
-      { "value": "vitaminas-exosomas", "label": "Вітаміни + екзосоми" },
-      { "value": "micropigmentacion", "label": "Мікропігментація" },
-      { "value": "otro", "label": "Інше / Загальна консультація" }
+      {
+        "value": "",
+        "label": "Оберіть процедуру..."
+      },
+      {
+        "value": "higiene-facial",
+        "label": "Гігієна обличчя"
+      },
+      {
+        "value": "radiofrecuencia-facial",
+        "label": "Радіочастота обличчя"
+      },
+      {
+        "value": "radiofrecuencia-corporal",
+        "label": "Радіочастота тіла"
+      },
+      {
+        "value": "radiofrecuencia-indiba",
+        "label": "Радіочастота INDIBA"
+      },
+      {
+        "value": "ultherapy",
+        "label": "Ultherapy"
+      },
+      {
+        "value": "dermapen",
+        "label": "Dermapen"
+      },
+      {
+        "value": "botox",
+        "label": "Ботокс"
+      },
+      {
+        "value": "acido-hialuronico",
+        "label": "Філер з гіалуроновою кислотою"
+      },
+      {
+        "value": "vitaminas-exosomas",
+        "label": "Вітаміни + екзосоми"
+      },
+      {
+        "value": "micropigmentacion",
+        "label": "Мікропігментація"
+      },
+      {
+        "value": "otro",
+        "label": "Інше / Загальна консультація"
+      }
     ],
     "mensaje": "Повідомлення або коментарі",
     "mensajePh": "Розкажіть, чим ми можемо вам допомогти...",

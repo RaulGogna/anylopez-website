@@ -51,7 +51,7 @@
   {%- if l.dir == 'rtl' %}
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/noto-naskh-arabic-v44-arabic-400.woff2' | url }}" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/ibm-plex-sans-arabic-v15-arabic-400.woff2' | url }}" crossorigin />
-  {%- elif l.script == 'cyrillic' or (not l.script and l.code in ['ru', 'uk']) %}
+  {%- elif l.script == 'cyrillic' %}
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/cormorant-garamond-v21-cyrillic-300.woff2' | url }}" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/jost-v20-cyrillic-regular.woff2' | url }}" crossorigin />
   {%- else %}
@@ -100,7 +100,12 @@
         "@id": "{{ site.url }}/#clinic",
         "name": "AnyLopez Clínica Estética",
         "alternateName": "AnyLopez Benidorm",
-        "description": {{ t.clinicDescription | dump | safe }},
+        {#- Sin el `or`, un idioma al que le faltara la clave emitiria
+            `"description": ,` y dejaria TODO el @graph sin parsear: Google
+            perderia clinica, reviews y breadcrumbs de sus 14 paginas de golpe
+            y en silencio. Con el fallback degrada al espanol, que es peor que
+            traducido pero infinitamente mejor que invalido. #}
+        "description": {{ (t.clinicDescription or i18n.es.chrome.clinicDescription) | dump | safe }},
         "url": "{{ site.url }}/",
         "logo": "{{ site.url }}/images/logo-color-sin-fondo.webp",
         "image": [
