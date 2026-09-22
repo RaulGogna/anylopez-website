@@ -34,6 +34,8 @@
     "formNotes": "Notes (optional)",
     "submit": "Book and notify via WhatsApp",
     "submitHint": "We'll open WhatsApp with your booking written. AnyLopez confirms within 2 h.",
+    "waTemplate": "Hi! I've just booked {date} at {time} for {treatment}. My name: {name}.{notes} Looking forward to your confirmation, thanks!",
+    "waNotes": " Notes: {notes}.",
     "success": "We've received your booking. AnyLopez will confirm via WhatsApp within 2 h (clinic hours).",
     "error": "We couldn't load availability. Call us at +34 656 306 167 or use WhatsApp.",
     "fallbackHref": "https://wa.me/34656306167",
