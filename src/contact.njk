@@ -53,8 +53,8 @@ eleventyComputed:
             <div class="contact-icon">📞</div>
             <div>
               <h4>{{ tx.info.telefonos }}</h4>
-              <a href="tel:656306167" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"656306167"}'>656 306 167</a>
-              <a href="tel:865710769" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"865710769"}'>865 710 769</a>
+              <a href="tel:+34656306167" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"656306167"}'>656 306 167</a>
+              <a href="tel:+34865710769" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"865710769"}'>865 710 769</a>
             </div>
           </div>
 
@@ -138,7 +138,7 @@ eleventyComputed:
               <div class="form-group form-consent">
                 <label class="consent-label">
                   <input type="checkbox" name="_consent" required />
-                  {{ tx.form.consent_html | replace("{privacyUrl}", '/privacidad/' | url) | safe }}
+                  {{ tx.form.consent_html | replace("{privacyUrl}", (l.prefix + '/privacidad/') | url) | safe }}
                 </label>
               </div>
 

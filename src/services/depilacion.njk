@@ -478,7 +478,7 @@ eleventyComputed:
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="{{ '/' | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
     <span>›</span>
     <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
     <span>›</span>

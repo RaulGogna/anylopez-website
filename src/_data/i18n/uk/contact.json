@@ -102,7 +102,7 @@
     "label": "Прямий дзвінок",
     "h2": "Зателефонуйте нам: 656 306 167",
     "p": "Якщо хочете поговорити з нами напряму, телефонуйте в години роботи клініки.",
-    "btn_html": "<a href=\"tel:656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Зателефонувати зараз</a>"
+    "btn_html": "<a href=\"tel:+34656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Зателефонувати зараз</a>"
   },
   "js": {
     "required": "Будь ласка, заповніть обов'язкові поля (ім'я, прізвище та email).",

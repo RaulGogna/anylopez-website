@@ -66,7 +66,7 @@
     "label": "Direkter Anruf",
     "h2": "Rufen Sie uns an: 656 306 167",
     "p": "Wenn Sie lieber direkt mit uns sprechen möchten, rufen Sie uns während unserer Öffnungszeiten an.",
-    "btn_html": "<a href=\"tel:656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Jetzt anrufen</a>"
+    "btn_html": "<a href=\"tel:+34656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Jetzt anrufen</a>"
   },
   "js": {
     "required": "Bitte füllen Sie die Pflichtfelder aus (Vorname, Nachname und E-Mail).",
