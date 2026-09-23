@@ -5,7 +5,7 @@
   "scripts": {
     "build": "eleventy && node scripts/check-jsonld.mjs",
     "serve": "eleventy --serve",
-    "verify": "node scripts/check-jsonld.mjs && node scripts/check-seo-i18n.mjs && node scripts/check-i18n-parity.mjs",
+    "verify": "node scripts/check-jsonld.mjs && node scripts/check-seo-i18n.mjs && node scripts/check-i18n-parity.mjs && node -e \"require('fs').rmSync('lang-links-report.txt',{force:true})\" && node scripts/check-lang-links.mjs && node -e \"require('fs').rmSync('link-targets-report.txt',{force:true})\" && node scripts/check-link-targets.mjs",
     "verify:booking": "eleventy && node scripts/check-booking-locale.mjs"
   },
   "devDependencies": {

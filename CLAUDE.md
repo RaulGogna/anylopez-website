@@ -90,6 +90,14 @@ ausente solo dejaba una cadena vacía: degradaba, no rompía. Por eso toda clave
 lleva fallback (`{{ (t.x or i18n.es.chrome.x) | dump | safe }}`) y **`npm run build` ejecuta
 `check-jsonld.mjs`**: un JSON-LD roto para el deploy en vez de publicarse.
 
+**Gate de enlaces cruzados de idioma: `scripts/check-lang-links.mjs`, dentro de `npm run verify`.**
+Recorre el `_site` construido y marca todo `<a href>` interno de una página en idioma X que apunte
+a otro idioma, deduciendo los prefijos de `langs.json` y las páginas solo-ES de `pages.json`
+(excluye el selector de idioma por su `data-lang`). Nació en rojo: el enlace de privacidad de
+`contact.njk` y el breadcrumb de `services/depilacion.njk` se habían dejado el `l.prefix` y mandaban
+a la página española desde los 6 idiomas no-ES — un bug que vivió desde el refactor i18n de sep-2026
+sin que ningún gate lo viera, y que se descubrió navegando `/uk/contact/` a mano.
+
 **Gate de locale del calendario de reservas: `npm run verify:booking`.** Comprueba que `booking.js`
 pinta meses/días/horas en el idioma y la zona horaria correctos para los 7 idiomas, abriendo un
 Chromium de verdad y haciendo clic. Ningún verificador que lee el HTML generado puede detectarlo:
