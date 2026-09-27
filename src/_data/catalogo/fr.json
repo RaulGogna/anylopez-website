@@ -562,8 +562,8 @@
         { "concepto": "Mains (30 min)", "precio": "200 €" },
         { "concepto": "Abdomen (60 min par zone)", "precio": "350 €" },
         { "concepto": "Demi-jambes (45 min par zone)", "precio": "350 €" },
-        { "concepto": "Traitement vaginal (45 min)", "precio": "490 €" },
-        { "concepto": "Traitement vaginal — Pack 2 séances", "precio": "595 €" }
+        { "concepto": "Traitement vaginal (30 min)", "precio": "350 €" },
+        { "concepto": "Traitement vaginal — Pack 2 séances par an", "precio": "499 €" }
       ],
       "packDestacado": 0
     },
@@ -600,12 +600,11 @@
         { "concepto": "Séance visage ou corps (30 min)", "precio": "45 €" },
         { "concepto": "Séance visage (45 min)", "precio": "65 €" },
         { "concepto": "Séance corps (60 min, par zone)", "precio": "85 €" },
-        { "concepto": "Séance vaginale (60 min)", "precio": "85 €" },
         { "concepto": "Pack 5 séances (30 min)", "precio": "250 €" },
         { "concepto": "Pack 10 séances (30 min)", "precio": "350 €" },
         { "concepto": "Pack 10 séances (45 min)", "precio": "500 €" }
       ],
-      "packDestacado": 6
+      "packDestacado": 5
     },
     {
       "slug": "botox-zona",

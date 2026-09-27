@@ -508,8 +508,8 @@
         { "concepto": "Hands (30 min)", "precio": "200 €" },
         { "concepto": "Abdomen (60 min per area)", "precio": "350 €" },
         { "concepto": "Half legs (45 min per area)", "precio": "350 €" },
-        { "concepto": "Vaginal treatment (45 min)", "precio": "490 €" },
-        { "concepto": "Vaginal treatment — pack of 2 sessions", "precio": "595 €" }
+        { "concepto": "Vaginal treatment (30 min)", "precio": "350 €" },
+        { "concepto": "Vaginal treatment — pack of 2 sessions per year", "precio": "499 €" }
       ],
       "packDestacado": 0
     },
@@ -546,12 +546,11 @@
         { "concepto": "Facial or body session (30 min)", "precio": "45 €" },
         { "concepto": "Facial session (45 min)", "precio": "65 €" },
         { "concepto": "Body session (60 min, per area)", "precio": "85 €" },
-        { "concepto": "Vaginal session (60 min)", "precio": "85 €" },
         { "concepto": "5-session pack (30 min)", "precio": "250 €" },
         { "concepto": "10-session pack (30 min)", "precio": "350 €" },
         { "concepto": "10-session pack (45 min)", "precio": "500 €" }
       ],
-      "packDestacado": 6
+      "packDestacado": 5
     },
     {
       "slug": "botox-zona",

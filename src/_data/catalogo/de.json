@@ -638,12 +638,12 @@
           "precio": "350 €"
         },
         {
-          "concepto": "Vaginale Behandlung (45 Min.)",
-          "precio": "490 €"
+          "concepto": "Vaginale Behandlung (30 Min.)",
+          "precio": "350 €"
         },
         {
-          "concepto": "Vaginale Behandlung — Paket 2 Sitzungen",
-          "precio": "595 €"
+          "concepto": "Vaginale Behandlung — Paket 2 Sitzungen pro Jahr",
+          "precio": "499 €"
         }
       ],
       "packDestacado": 0
@@ -691,10 +691,6 @@
           "precio": "85 €"
         },
         {
-          "concepto": "Vaginale Sitzung (60 Min.)",
-          "precio": "85 €"
-        },
-        {
           "concepto": "Paket 5 Sitzungen (30 Min.)",
           "precio": "250 €"
         },
@@ -707,7 +703,7 @@
           "precio": "500 €"
         }
       ],
-      "packDestacado": 6
+      "packDestacado": 5
     },
     {
       "slug": "botox-zona",
