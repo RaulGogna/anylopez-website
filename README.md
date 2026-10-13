@@ -8,7 +8,7 @@ Sitio web estático para **AnyLopez Clínica Estética**, ubicada en Benidorm. M
 - Nunjucks (`.njk`) como motor de plantillas
 - CSS3 personalizado (`css/styles.css`) — sin frameworks externos
 - JavaScript vanilla para el menú móvil
-- GitHub Actions para CI/CD → GitHub Pages
+- GitHub Actions para CI/CD → Hostalia (producción) y GitHub Pages (solo redirecciones)
 
 ## Estructura
 
@@ -16,7 +16,8 @@ Sitio web estático para **AnyLopez Clínica Estética**, ubicada en Benidorm. M
 anylopez-website/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml       # Build + deploy automático a GitHub Pages
+│       ├── deploy-hostalia.yml  # Build + despliegue a Hostalia (producción)
+│       └── deploy.yml           # Redirecciones a anylopez.com en GitHub Pages
 ├── src/
 │   ├── _includes/
 │   │   └── base.njk         # Layout base compartido por todas las páginas
@@ -55,9 +56,12 @@ El build se ejecuta automáticamente en cada push a `master` mediante GitHub Act
 
 1. Instala dependencias (`npm ci`)
 2. Genera el sitio (`npm run build` → `_site/`)
-3. Publica `_site/` en GitHub Pages
+3. `deploy-hostalia.yml` lo sube por FTPS a Hostalia, que es producción
+4. `deploy.yml` publica en GitHub Pages solo páginas de redirección hacia `anylopez.com` (`scripts/build-redirects.mjs`), para que los enlaces antiguos sigan llegando
 
-**URL de producción:** https://raulgogna.github.io/anylopez-website/
+**URL de producción:** https://anylopez.com
+
+La dirección antigua, https://raulgogna.github.io/anylopez-website/, solo redirige.
 
 ## Contacto clínica
 
