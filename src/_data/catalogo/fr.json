@@ -595,7 +595,7 @@
         "Sans douleur, sans convalescence"
       ],
       "idealPara": "Personnes avec relâchement cutané, perte de fermeté ou signes de vieillissement sur le visage et le corps.",
-      "duracion": "45 minutes",
+      "duracion": "30, 45 ou 60 minutes selon la séance",
       "precios": [
         { "concepto": "Séance visage ou corps (30 min)", "precio": "45 €" },
         { "concepto": "Séance visage (45 min)", "precio": "65 €" },
@@ -888,7 +888,7 @@
         "Confortable et sûr"
       ],
       "idealPara": "Personnes avec gênes musculaires, tension accumulée ou surcharge dans différentes zones du corps.",
-      "duracion": "45 minutes par zone",
+      "duracion": "30 ou 45 minutes par zone",
       "precios": [
         { "concepto": "Séance corps (45 min par zone)", "precio": "65 €" },
         { "concepto": "Pack 5 séances (30 min)", "precio": "225 €" },

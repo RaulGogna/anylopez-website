@@ -541,7 +541,7 @@
         "Painless, no downtime"
       ],
       "idealPara": "People with sagging, loss of firmness or signs of ageing on the face and body.",
-      "duracion": "45 minutes",
+      "duracion": "30, 45 or 60 minutes depending on the session",
       "precios": [
         { "concepto": "Facial or body session (30 min)", "precio": "45 €" },
         { "concepto": "Facial session (45 min)", "precio": "65 €" },
@@ -830,7 +830,7 @@
         "Comfortable and safe"
       ],
       "idealPara": "People with muscle discomfort, accumulated tension or overload in different body areas.",
-      "duracion": "45 minutes per area",
+      "duracion": "30 or 45 minutes per area",
       "precios": [
         { "concepto": "Body session (45 min per area)", "precio": "65 €" },
         { "concepto": "Pack 5 sessions (30 min)", "precio": "225 €" },
