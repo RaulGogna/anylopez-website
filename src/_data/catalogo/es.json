@@ -573,7 +573,7 @@
         "Sin dolor, sin recuperación"
       ],
       "idealPara": "Personas con flacidez, pérdida de firmeza o signos de envejecimiento en rostro y cuerpo.",
-      "duracion": "45 minutos",
+      "duracion": "30, 45 o 60 minutos según la sesión",
       "precios": [
         { "concepto": "Sesión facial o corporal (30 min)", "precio": "45 €" },
         { "concepto": "Sesión facial (45 min)", "precio": "65 €" },
@@ -862,7 +862,7 @@
         "Cómodo y seguro"
       ],
       "idealPara": "Personas con molestias musculares, tensión acumulada o sobrecarga en distintas zonas del cuerpo.",
-      "duracion": "45 minutos por zona",
+      "duracion": "30 o 45 minutos por zona",
       "precios": [
         { "concepto": "Sesión corporal (45 min por zona)", "precio": "65 €" },
         { "concepto": "Pack 5 sesiones (30 min)", "precio": "225 €" },
