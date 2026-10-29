@@ -1,8 +1,8 @@
 {
-  "title": "AnyLopez Benidorm — Ultherapy HIFU und INDIBA Radiofrequenz Paket",
-  "description": "Ästhetikklinik in Benidorm, spezialisiert auf Ultherapy HIFU und INDIBA Radiofrequenz. Paket mit 10 Sitzungen (45 Min.) für 500 € mit Garantie: Wenn Sie keine Verbesserung bemerken, ist die 11. Sitzung gratis.",
-  "ogTitle": "AnyLopez Benidorm — Spezialisten für Ultherapy HIFU & INDIBA Radiofrequenz",
-  "ogDescPre": "Ästhetikklinik in Benidorm. INDIBA Radiofrequenz, Ultherapy HIFU, Botox, Gesichtsbehandlungen und mehr. ",
+  "title": "AnyLopez Benidorm — Ultherapy und INDIBA Radiofrequenz Paket",
+  "description": "Ästhetikklinik in Benidorm, spezialisiert auf Ultherapy und INDIBA Radiofrequenz. Paket mit 10 Sitzungen (45 Min.) für 500 € mit Garantie: Wenn Sie keine Verbesserung bemerken, ist die 11. Sitzung gratis.",
+  "ogTitle": "AnyLopez Benidorm — Spezialisten für Ultherapy & INDIBA Radiofrequenz",
+  "ogDescPre": "Ästhetikklinik in Benidorm. INDIBA Radiofrequenz, Ultherapy, Botox, Gesichtsbehandlungen und mehr. ",
   "ogDescPost": " Fünf-Sterne-Bewertungen. Buchen Sie Ihre kostenlose Beratung per WhatsApp.",
   "c": {
     "booking": "BOOKING CUSTOM — primär (ersetzt Cal.com)",
@@ -105,11 +105,11 @@
     "waCta": "Mein INDIBA Radiofrequenz Paket per WhatsApp buchen"
   },
   "otros": {
-    "intro_html": "Unser Spezialgebiet ist die INDIBA Radiofrequenz. Wir bieten auch Ultherapy HIFU, Botox und Filler, Dermapen, Platinum-Reinigung, Holztherapie und Pressotherapie an. Wenn Sie wegen einer dieser Behandlungen kommen, betreuen wir Sie genauso gut — aber wenn Sie nur für eine einzige kommen könnten, würden wir Ihnen die INDIBA Radiofrequenz empfehlen.",
+    "intro_html": "Unser Spezialgebiet ist die INDIBA Radiofrequenz. Wir bieten auch Ultherapy, Botox und Filler, Dermapen, Platinum-Reinigung, Holztherapie und Pressotherapie an. Wenn Sie wegen einer dieser Behandlungen kommen, betreuen wir Sie genauso gut — aber wenn Sie nur für eine einzige kommen könnten, würden wir Ihnen die INDIBA Radiofrequenz empfehlen.",
     "chips": [
       {
-        "path": "/services/lifting-antiaging/#ultherapy-hifu",
-        "label": "Ultherapy HIFU Lifting"
+        "path": "/services/lifting-antiaging/#ultherapy",
+        "label": "Ultherapy Lifting"
       },
       {
         "path": "/services/inyectables/#botox-zona",
@@ -147,7 +147,7 @@
     },
     "c2": {
       "h3": "Fortschrittliche Technologie",
-      "p_html": "Geräte für INDIBA Radiofrequenz &amp; Ultherapy HIFU. Sicherheit und Wirksamkeit, wissenschaftlich belegt."
+      "p_html": "Geräte für INDIBA Radiofrequenz &amp; Ultherapy. Sicherheit und Wirksamkeit, wissenschaftlich belegt."
     },
     "c3": {
       "h3": "Persönliche Betreuung",
@@ -336,7 +336,7 @@
       "servPh": "Behandlung auswählen",
       "options": [
         "INDIBA Radiofrequenz",
-        "Ultherapy HIFU Lifting",
+        "Ultherapy Lifting",
         "Botox & Filler",
         "Gesichtsreinigung",
         "Dermapen",

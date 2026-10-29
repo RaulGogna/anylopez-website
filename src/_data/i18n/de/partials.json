@@ -56,7 +56,7 @@
     "selPh": "Was interessiert Sie?",
     "options": [
       { "value": "INDIBA", "label": "INDIBA Radiofrequenz" },
-      { "value": "HIFU", "label": "Ultherapy HIFU Lifting" },
+      { "value": "Ultherapy", "label": "Ultherapy Lifting" },
       { "value": "Botox", "label": "Botox & Filler" },
       { "value": "Limpieza Facial", "label": "Gesichtsreinigung" },
       { "value": "Dermapen", "label": "Dermapen" },

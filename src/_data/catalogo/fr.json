@@ -14,7 +14,7 @@
     {
       "id": "lifting-antiaging",
       "nombre": "Lifting et Anti-âge",
-      "descripcion": "Raffermissement sans chirurgie avec Ultherapy HIFU et radiofréquence INDIBA."
+      "descripcion": "Raffermissement sans chirurgie avec Ultherapy et radiofréquence INDIBA."
     },
     {
       "id": "inyectables",
@@ -525,10 +525,10 @@
       "packDestacado": 0
     },
     {
-      "slug": "ultherapy-hifu",
-      "imagen": "ultherapy-hifu.png",
+      "slug": "ultherapy",
+      "imagen": "ultherapy.png",
       "categoria": "lifting-antiaging",
-      "nombre": "Ultherapy HIFU – Lifting sans Chirurgie",
+      "nombre": "Ultherapy – Lifting sans Chirurgie",
       "descripcion": "Ultrasons focalisés qui raffermissent, remodèlent et rajeunissent. Stimule la production naturelle de collagène et d'élastine pour un lifting sans chirurgie.",
       "paraQuien": "Pour qui recherche un effet lifting naturel sans bloc opératoire, sans anesthésie et sans temps de récupération.",
       "comoFunciona": [
@@ -554,16 +554,16 @@
       "idealPara": "Personnes avec relâchement cutané du visage ou du corps qui recherchent un lifting naturel sans bloc opératoire.",
       "duracion": "Variable selon la zone",
       "precios": [
-        { "concepto": "Visage complet (120 min)", "precio": "350 €" },
-        { "concepto": "Cernes (20 min)", "precio": "160 €" },
-        { "concepto": "Cou (60 min)", "precio": "250 €" },
-        { "concepto": "Décolleté (60 min)", "precio": "250 €" },
-        { "concepto": "Bras (60 min)", "precio": "350 €" },
+        { "concepto": "Visage complet (120 min)", "precio": "450 €" },
+        { "concepto": "Cernes (20 min)", "precio": "260 €" },
+        { "concepto": "Cou (60 min)", "precio": "350 €" },
+        { "concepto": "Décolleté (60 min)", "precio": "450 €" },
+        { "concepto": "Bras (60 min)", "precio": "550 €" },
         { "concepto": "Mains (30 min)", "precio": "200 €" },
-        { "concepto": "Abdomen (60 min par zone)", "precio": "350 €" },
-        { "concepto": "Demi-jambes (45 min par zone)", "precio": "350 €" },
-        { "concepto": "Traitement vaginal (30 min)", "precio": "350 €" },
-        { "concepto": "Traitement vaginal — Pack 2 séances par an", "precio": "499 €" }
+        { "concepto": "Abdomen (60 min par zone)", "precio": "550 €" },
+        { "concepto": "Demi-jambes (45 min par zone)", "precio": "550 €" },
+        { "concepto": "Traitement vaginal (45 min)", "precio": "490 €" },
+        { "concepto": "Traitement vaginal — Pack 2 séances", "precio": "795 €" }
       ],
       "packDestacado": 0
     },

@@ -14,7 +14,7 @@
     {
       "id": "lifting-antiaging",
       "nombre": "Lifting y Antiaging",
-      "descripcion": "Reafirmación sin cirugía con Ultherapy HIFU y radiofrecuencia INDIBA."
+      "descripcion": "Reafirmación sin cirugía con Ultherapy y radiofrecuencia INDIBA."
     },
     {
       "id": "inyectables",
@@ -503,10 +503,10 @@
       "packDestacado": 0
     },
     {
-      "slug": "ultherapy-hifu",
-      "imagen": "ultherapy-hifu.png",
+      "slug": "ultherapy",
+      "imagen": "ultherapy.png",
       "categoria": "lifting-antiaging",
-      "nombre": "Ultherapy HIFU – Lifting sin Cirugía",
+      "nombre": "Ultherapy – Lifting sin Cirugía",
       "descripcion": "Ultrasonido focalizado que reafirma, moldea y rejuvenece. Estimula la producción natural de colágeno y elastina para lifting sin cirugía.",
       "paraQuien": "Para quien busca un efecto lifting natural sin quirófano, sin anestesia y sin tiempo de recuperación.",
       "comoFunciona": [
@@ -532,16 +532,16 @@
       "idealPara": "Personas con flacidez facial o corporal que buscan un lifting natural sin quirófano.",
       "duracion": "Variable según zona",
       "precios": [
-        { "concepto": "Facial completo (120 min)", "precio": "350 €" },
-        { "concepto": "Ojeras (20 min)", "precio": "160 €" },
-        { "concepto": "Cuello (60 min)", "precio": "250 €" },
-        { "concepto": "Escote (60 min)", "precio": "250 €" },
-        { "concepto": "Brazos (60 min)", "precio": "350 €" },
+        { "concepto": "Facial completo (120 min)", "precio": "450 €" },
+        { "concepto": "Ojeras (20 min)", "precio": "260 €" },
+        { "concepto": "Cuello (60 min)", "precio": "350 €" },
+        { "concepto": "Escote (60 min)", "precio": "450 €" },
+        { "concepto": "Brazos (60 min)", "precio": "550 €" },
         { "concepto": "Manos (30 min)", "precio": "200 €" },
-        { "concepto": "Abdomen (60 min por zona)", "precio": "350 €" },
-        { "concepto": "Medias piernas (45 min por zona)", "precio": "350 €" },
-        { "concepto": "Tratamiento vaginal (30 min)", "precio": "350 €" },
-        { "concepto": "Tratamiento vaginal — Pack 2 sesiones anuales", "precio": "499 €" }
+        { "concepto": "Abdomen (60 min por zona)", "precio": "550 €" },
+        { "concepto": "Medias piernas (45 min por zona)", "precio": "550 €" },
+        { "concepto": "Tratamiento vaginal (45 min)", "precio": "490 €" },
+        { "concepto": "Tratamiento vaginal — Pack 2 sesiones", "precio": "795 €" }
       ],
       "packDestacado": 0
     },

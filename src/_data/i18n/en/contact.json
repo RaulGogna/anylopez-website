@@ -46,7 +46,7 @@
       { "value": "radiofrecuencia-facial", "label": "Facial Radiofrequency" },
       { "value": "radiofrecuencia-corporal", "label": "Body Radiofrequency" },
       { "value": "radiofrecuencia-indiba", "label": "INDIBA Radiofrequency System" },
-      { "value": "ultherapy", "label": "Ultherapy (HIFU)" },
+      { "value": "ultherapy", "label": "Ultherapy" },
       { "value": "dermapen", "label": "Dermapen" },
       { "value": "botox", "label": "Botox" },
       { "value": "acido-hialuronico", "label": "Hyaluronic Acid Filler" },

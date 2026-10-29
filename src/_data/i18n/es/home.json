@@ -1,8 +1,8 @@
 {
-  "title": "AnyLopez Benidorm — Ultherapy HIFU y Pack Radiofrecuencia INDIBA",
-  "description": "Clínica estética en Benidorm especializada en Ultherapy HIFU y radiofrecuencia INDIBA. Pack 10 sesiones (45 min) por 500 € con garantía: si no notas mejora, sesión 11 gratis.",
-  "ogTitle": "AnyLopez Benidorm — Especialistas en Ultherapy HIFU y Radiofrecuencia INDIBA",
-  "ogDescPre": "Clínica estética en Benidorm. Radiofrecuencia INDIBA, Ultherapy HIFU, Botox, tratamientos faciales y más. ",
+  "title": "AnyLopez Benidorm — Ultherapy y Pack Radiofrecuencia INDIBA",
+  "description": "Clínica estética en Benidorm especializada en Ultherapy y radiofrecuencia INDIBA. Pack 10 sesiones (45 min) por 500 € con garantía: si no notas mejora, sesión 11 gratis.",
+  "ogTitle": "AnyLopez Benidorm — Especialistas en Ultherapy y Radiofrecuencia INDIBA",
+  "ogDescPre": "Clínica estética en Benidorm. Radiofrecuencia INDIBA, Ultherapy, Botox, tratamientos faciales y más. ",
   "ogDescPost": " reseñas de cinco estrellas. Reserva tu consulta gratuita por WhatsApp.",
   "c": {
     "booking": "BOOKING CUSTOM — primario (sustituye Cal.com)",
@@ -87,9 +87,9 @@
     "waCta": "Reservar mi Pack Radiofrecuencia INDIBA por WhatsApp"
   },
   "otros": {
-    "intro_html": "Nuestra especialidad es Radiofrecuencia INDIBA. También hacemos Ultherapy HIFU, Botox y rellenos, Dermapen, Limpieza Platinum, Maderoterapia y Presoterapia. Si vienes por uno de estos, te atendemos igual de bien — pero si pudieras venir por uno solo, te diríamos Radiofrecuencia INDIBA.",
+    "intro_html": "Nuestra especialidad es Radiofrecuencia INDIBA. También hacemos Ultherapy, Botox y rellenos, Dermapen, Limpieza Platinum, Maderoterapia y Presoterapia. Si vienes por uno de estos, te atendemos igual de bien — pero si pudieras venir por uno solo, te diríamos Radiofrecuencia INDIBA.",
     "chips": [
-      { "path": "/services/lifting-antiaging/#ultherapy-hifu", "label": "Ultherapy HIFU Lifting" },
+      { "path": "/services/lifting-antiaging/#ultherapy", "label": "Ultherapy Lifting" },
       { "path": "/services/inyectables/#botox-zona", "label": "Botox & Rellenos" },
       { "path": "/services/tratamientos-faciales/#dermapen-hidratacion", "label": "Dermapen" },
       { "path": "/services/limpiezas-faciales/#limpieza-facial-platinum", "label": "Limpieza Platinum" },
@@ -108,7 +108,7 @@
     },
     "c2": {
       "h3": "Tecnología avanzada",
-      "p_html": "Equipos de Radiofrecuencia INDIBA &amp; Ultherapy HIFU. Seguridad y eficacia respaldadas por la ciencia."
+      "p_html": "Equipos de Radiofrecuencia INDIBA &amp; Ultherapy. Seguridad y eficacia respaldadas por la ciencia."
     },
     "c3": {
       "h3": "Atención personalizada",
@@ -285,7 +285,7 @@
       "servPh": "Selecciona un tratamiento",
       "options": [
         "Radiofrecuencia INDIBA",
-        "Ultherapy HIFU Lifting",
+        "Ultherapy Lifting",
         "Botox & Rellenos",
         "Limpieza Facial",
         "Dermapen",

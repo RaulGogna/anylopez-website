@@ -1,6 +1,6 @@
 {
   "siteName": "AnyLopez Aesthetic Clinic",
-  "clinicDescription": "Facial and body aesthetic clinic in Benidorm with 35+ years of experience. Specialists in INDIBA Radiofrequency, Ultherapy HIFU, dermapen, laser hair removal, botox and fillers.",
+  "clinicDescription": "Facial and body aesthetic clinic in Benidorm with 35+ years of experience. Specialists in INDIBA Radiofrequency, Ultherapy, dermapen, laser hair removal, botox and fillers.",
   "nav": {
     "home": "Home",
     "about": "About Us",
@@ -15,11 +15,11 @@
   },
   "breadcrumbHome": "Home",
   "footer": {
-    "brand": "Aesthetic clinic in Benidorm. 35+ years of expertise with INDIBA Radiofrequency & Ultherapy HIFU technology.",
+    "brand": "Aesthetic clinic in Benidorm. 35+ years of expertise with INDIBA Radiofrequency & Ultherapy technology.",
     "servicesHeading": "Treatments",
     "servicesLinks": {
       "/radiofrecuencia/": "INDIBA Radiofrequency",
-      "/services/lifting-antiaging/": "Ultherapy HIFU",
+      "/services/lifting-antiaging/": "Ultherapy",
       "/services/inyectables/": "Botox & Fillers",
       "/services/limpiezas-faciales/": "Facials",
       "/services/tratamientos-faciales/": "Dermapen",

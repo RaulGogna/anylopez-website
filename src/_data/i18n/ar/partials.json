@@ -56,7 +56,7 @@
     "selPh": "ما الذي يهمك؟",
     "options": [
       { "value": "INDIBA", "label": "الترددات الراديوية INDIBA" },
-      { "value": "HIFU", "label": "شد Ultherapy HIFU" },
+      { "value": "Ultherapy", "label": "شد Ultherapy" },
       { "value": "Botox", "label": "حقن Botox والفيلر" },
       { "value": "Limpieza Facial", "label": "تنظيف البشرة" },
       { "value": "Dermapen", "label": "Dermapen" },

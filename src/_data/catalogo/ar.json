@@ -14,7 +14,7 @@
     {
       "id": "lifting-antiaging",
       "nombre": "الشد ومكافحة الشيخوخة",
-      "descripcion": "شد للبشرة دون جراحة باستخدام Ultherapy HIFU والترددات الراديوية INDIBA."
+      "descripcion": "شد للبشرة دون جراحة باستخدام Ultherapy والترددات الراديوية INDIBA."
     },
     {
       "id": "inyectables",
@@ -503,10 +503,10 @@
       "packDestacado": 0
     },
     {
-      "slug": "ultherapy-hifu",
-      "imagen": "ultherapy-hifu.png",
+      "slug": "ultherapy",
+      "imagen": "ultherapy.png",
       "categoria": "lifting-antiaging",
-      "nombre": "Ultherapy HIFU – شدّ دون جراحة",
+      "nombre": "Ultherapy – شدّ دون جراحة",
       "descripcion": "موجات فوق صوتية مركّزة تشدّ وتنحت وتجدد. تحفّز الإنتاج الطبيعي للكولاجين والإيلاستين لشدّ دون جراحة.",
       "paraQuien": "لمن تبحث عن تأثير شدّ طبيعي دون غرفة عمليات، دون تخدير ودون فترة تعافٍ.",
       "comoFunciona": [
@@ -532,16 +532,16 @@
       "idealPara": "من يعانين من ترهل في الوجه أو الجسم ويبحثن عن شدّ طبيعي دون غرفة عمليات.",
       "duracion": "متغيرة حسب المنطقة",
       "precios": [
-        { "concepto": "الوجه كاملاً (120 دقيقة)", "precio": "350 €" },
-        { "concepto": "الهالات السوداء (20 دقيقة)", "precio": "160 €" },
-        { "concepto": "الرقبة (60 دقيقة)", "precio": "250 €" },
-        { "concepto": "منطقة الصدر (60 دقيقة)", "precio": "250 €" },
-        { "concepto": "الذراعان (60 دقيقة)", "precio": "350 €" },
+        { "concepto": "الوجه كاملاً (120 دقيقة)", "precio": "450 €" },
+        { "concepto": "الهالات السوداء (20 دقيقة)", "precio": "260 €" },
+        { "concepto": "الرقبة (60 دقيقة)", "precio": "350 €" },
+        { "concepto": "منطقة الصدر (60 دقيقة)", "precio": "450 €" },
+        { "concepto": "الذراعان (60 دقيقة)", "precio": "550 €" },
         { "concepto": "اليدان (30 دقيقة)", "precio": "200 €" },
-        { "concepto": "البطن (60 دقيقة لكل منطقة)", "precio": "350 €" },
-        { "concepto": "نصف الساقين (45 دقيقة لكل منطقة)", "precio": "350 €" },
-        { "concepto": "العلاج المهبلي (30 دقيقة)", "precio": "350 €" },
-        { "concepto": "العلاج المهبلي — باقة جلستين سنويًا", "precio": "499 €" }
+        { "concepto": "البطن (60 دقيقة لكل منطقة)", "precio": "550 €" },
+        { "concepto": "نصف الساقين (45 دقيقة لكل منطقة)", "precio": "550 €" },
+        { "concepto": "العلاج المهبلي (45 دقيقة)", "precio": "490 €" },
+        { "concepto": "العلاج المهبلي — باقة جلستين", "precio": "795 €" }
       ],
       "packDestacado": 0
     },

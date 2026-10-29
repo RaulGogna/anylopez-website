@@ -1,18 +1,18 @@
 {
   "title": "Lifting y Antiaging sin cirugía en Benidorm — Ultherapy + Radiofrecuencia INDIBA · AnyLopez",
-  "description": "Reafirmación facial y corporal sin quirófano: Ultherapy HIFU y radiofrecuencia INDIBA en AnyLopez Clínica Estética Benidorm. Diagnóstico inicial gratuito.",
+  "description": "Reafirmación facial y corporal sin quirófano: Ultherapy y radiofrecuencia INDIBA en AnyLopez Clínica Estética Benidorm. Diagnóstico inicial gratuito.",
   "brandRF": "Radiofrecuencia INDIBA",
   "jsonld": {
     "name": "Lifting y Antiaging AnyLopez",
     "alternateName": "Reafirmación sin cirugía",
-    "description": "Catálogo de tratamientos de lifting y antiaging sin cirugía en AnyLopez Clínica Estética Benidorm: Ultherapy HIFU y radiofrecuencia INDIBA. Estimulación profunda de colágeno y elastina, sin quirófano, sin baja.",
+    "description": "Catálogo de tratamientos de lifting y antiaging sin cirugía en AnyLopez Clínica Estética Benidorm: Ultherapy y radiofrecuencia INDIBA. Estimulación profunda de colágeno y elastina, sin quirófano, sin baja.",
     "specialties": [
-      "Ultherapy HIFU",
+      "Ultherapy",
       "Radiofrecuencia INDIBA"
     ],
     "faq": [
-      { "q": "¿Ultherapy HIFU o Radiofrecuencia INDIBA, cuál elegir?", "a": "Depende. HIFU es de choque (1-2 sesiones, resultados a 3-6 meses). Radiofrecuencia INDIBA es progresivo (Pack 10 sesiones, resultados desde la 1ª). HIFU para flacidez moderada-alta. Radiofrecuencia INDIBA para mantenimiento + reafirmación gradual. En el diagnóstico te lo concretamos." },
-      { "q": "¿Cuántas sesiones de Ultherapy HIFU necesito?", "a": "1-2 sesiones según zona y grado de flacidez. Las sesiones se espacian 6-12 meses para mantenimiento. Radiofrecuencia INDIBA es Pack 10 con cadencia semanal." },
+      { "q": "¿Ultherapy o Radiofrecuencia INDIBA, cuál elegir?", "a": "Depende. Ultherapy es de choque (1-2 sesiones, resultados a 3-6 meses). Radiofrecuencia INDIBA es progresivo (Pack 10 sesiones, resultados desde la 1ª). Ultherapy para flacidez moderada-alta. Radiofrecuencia INDIBA para mantenimiento + reafirmación gradual. En el diagnóstico te lo concretamos." },
+      { "q": "¿Cuántas sesiones de Ultherapy necesito?", "a": "1-2 sesiones según zona y grado de flacidez. Las sesiones se espacian 6-12 meses para mantenimiento. Radiofrecuencia INDIBA es Pack 10 con cadencia semanal." },
       { "q": "¿Cuánto duran los resultados?", "a": "Ultherapy: 12-18 meses tras pleno efecto a los 3-6 meses. Radiofrecuencia INDIBA: efecto durable con mantenimiento mensual tras Pack." },
       { "q": "¿A qué edad empezar?", "a": "Cuando notas pérdida de firmeza del óvalo, normalmente desde 35-45 años. Mejor antes que después: estimular colágeno funciona mejor cuando aún hay reserva." },
       { "q": "¿Cuidados post-sesión?", "a": "Mínimos: hidratación tópica, protector solar estricto los siguientes días, evitar saunas/calor extremo 48h. Te entregamos pauta escrita tras cada sesión." }
@@ -24,7 +24,7 @@
     "imgAlt": "Lifting y antiaging sin cirugía en AnyLopez Clínica Estética Benidorm",
     "eyebrow_html": "Lifting y Antiaging · 2 tecnologías complementarias",
     "h1_html": "Reafirma con tecnología, <em>no con bisturí.</em>",
-    "lead_html": "Si has descartado quirófano por miedo, por riesgo o por la baja postoperatoria — y las cremas firming siguen sin devolverte tono — la respuesta está en aparatología profunda. Ultherapy HIFU e Radiofrecuencia INDIBA llegan donde un cirujano corta. Sin cortar.",
+    "lead_html": "Si has descartado quirófano por miedo, por riesgo o por la baja postoperatoria — y las cremas firming siguen sin devolverte tono — la respuesta está en aparatología profunda. Ultherapy y Radiofrecuencia INDIBA llegan donde un cirujano corta. Sin cortar.",
     "ctaPrimary": "Reservar diagnóstico gratuito →",
     "reviews": "reseñas Google",
     "free": "Diagnóstico inicial sin coste"
@@ -44,8 +44,8 @@
     "h2_html": "Seis razones por las que aquí funcionan donde otros sitios no.",
     "p": "No es marketing. Es tecnología profunda, criterio clínico y oficio de décadas.",
     "items": [
-      { "h3": "Dos tecnologías profundas y complementarias", "p": "Ultherapy HIFU trabaja a nivel SMAS (donde el cirujano corta para hacer un lifting). La radiofrecuencia INDIBA a 448 kHz penetra hasta hipodermis. Cada una ataca capas distintas." },
-      { "h3": "Combinables con sinergia real", "p": "Si tu caso lo pide, combinamos Ultherapy HIFU + Radiofrecuencia INDIBA en plan secuenciado. No es vendedor — es protocolo clínico." },
+      { "h3": "Dos tecnologías profundas y complementarias", "p": "Ultherapy trabaja a nivel SMAS (donde el cirujano corta para hacer un lifting). La radiofrecuencia INDIBA a 448 kHz penetra hasta hipodermis. Cada una ataca capas distintas." },
+      { "h3": "Combinables con sinergia real", "p": "Si tu caso lo pide, combinamos Ultherapy + Radiofrecuencia INDIBA en plan secuenciado. No es vendedor — es protocolo clínico." },
       { "h3": "Sin quirófano, sin anestesia, sin baja", "p": "Sales y sigues con tu vida. Sin marcas, sin medicación, sin un mes recluido." },
       { "h3": "Resultados graduales y duraderos", "p": "No es magia inmediata. Es estímulo de tu propio colágeno y elastina, que tarda 3-6 meses en pleno efecto y dura 12-18 meses." },
       { "h3": "Diagnóstico clínico honesto", "p": "Te decimos cuál de los dos (o ambos) es para ti. Si tu caso necesita inyectables o cirugía mejor, también te lo decimos." },
@@ -72,9 +72,9 @@
     "h2": "Resultados que se notan, y se cuentan.",
     "p": "Reseñas verificadas en Google. Sin actores, sin pastillas, sin antes-después photoshopeados.",
     "items": [
-      { "quote_html": "\"Una sesión de Ultherapy y a los tres meses la mandíbula ha recuperado el dibujo que tenía hace 10 años. Sin quirófano, sin baja. Estoy alucinada.\"", "author": "Cristina M.", "meta": "Paciente · Ultherapy HIFU" },
-      { "quote_html": "\"Combinamos Ultherapy con Pack Radiofrecuencia INDIBA y los resultados se potencian uno al otro. Diagnóstico honesto desde el principio.\"", "author": "Pilar R.", "meta": "Paciente · Ultherapy HIFU + Radiofrecuencia INDIBA" },
-      { "quote_html": "\"Vine pensando que necesitaba hilos tensores y me hicieron entender que mi caso era Ultherapy HIFU + Botox. La diferencia entre vender un tratamiento o resolver un problema.\"", "author": "Paciente verificada", "meta": "Reseña Google" }
+      { "quote_html": "\"Una sesión de Ultherapy y a los tres meses la mandíbula ha recuperado el dibujo que tenía hace 10 años. Sin quirófano, sin baja. Estoy alucinada.\"", "author": "Cristina M.", "meta": "Paciente · Ultherapy" },
+      { "quote_html": "\"Combinamos Ultherapy con Pack Radiofrecuencia INDIBA y los resultados se potencian uno al otro. Diagnóstico honesto desde el principio.\"", "author": "Pilar R.", "meta": "Paciente · Ultherapy + Radiofrecuencia INDIBA" },
+      { "quote_html": "\"Vine pensando que necesitaba hilos tensores y me hicieron entender que mi caso era Ultherapy + Botox. La diferencia entre vender un tratamiento o resolver un problema.\"", "author": "Paciente verificada", "meta": "Reseña Google" }
     ]
   },
   "process": {
@@ -83,17 +83,17 @@
     "p": "Desde tu primer mensaje hasta que ves la primera mejora pasan menos de dos semanas.",
     "steps": [
       { "h3": "Reservas tu diagnóstico gratuito", "p_html": "Llamada/WhatsApp para encontrar hueco. 30 min en clínica, sin coste, sin compromiso." },
-      { "h3": "Valoración clínica del caso", "p_html": "Te evaluamos zona, grado de flacidez, calidad de piel y objetivo. Decidimos si tu caso es Ultherapy HIFU, Radiofrecuencia INDIBA, ambos en combinación, o si por sus características conviene derivar a otra solución." },
-      { "h3": "Plan personalizado Ultherapy HIFU / Radiofrecuencia INDIBA / combinado", "p_html": "No \"vienes a una sesión\". Diseñamos protocolo: número de sesiones, cadencia, qué combinar y por qué. Y si lo tuyo se resuelve con menos de lo previsto, lo decimos." },
-      { "h3": "Seguimiento durante meses tras la sesión", "p_html": "El resultado de Ultherapy HIFU es progresivo: no se ve hoy, se ve a 3-6 meses. WhatsApp directo para dudas, ajustes y guía hasta que veas el efecto final." }
+      { "h3": "Valoración clínica del caso", "p_html": "Te evaluamos zona, grado de flacidez, calidad de piel y objetivo. Decidimos si tu caso es Ultherapy, Radiofrecuencia INDIBA, ambos en combinación, o si por sus características conviene derivar a otra solución." },
+      { "h3": "Plan personalizado Ultherapy / Radiofrecuencia INDIBA / combinado", "p_html": "No \"vienes a una sesión\". Diseñamos protocolo: número de sesiones, cadencia, qué combinar y por qué. Y si lo tuyo se resuelve con menos de lo previsto, lo decimos." },
+      { "h3": "Seguimiento durante meses tras la sesión", "p_html": "El resultado de Ultherapy es progresivo: no se ve hoy, se ve a 3-6 meses. WhatsApp directo para dudas, ajustes y guía hasta que veas el efecto final." }
     ]
   },
   "faq": {
     "eyebrow": "Dudas frecuentes",
     "h2": "Lo que más nos preguntan sobre lifting y antiaging.",
     "items": [
-      { "q": "¿Ultherapy HIFU o Radiofrecuencia INDIBA, cuál elegir?", "a": "Depende. HIFU es de choque (1-2 sesiones, resultados a 3-6 meses). Radiofrecuencia INDIBA es progresivo (Pack 10 sesiones, resultados desde la 1ª). HIFU para flacidez moderada-alta. Radiofrecuencia INDIBA para mantenimiento + reafirmación gradual. En el diagnóstico te lo concretamos." },
-      { "q": "¿Cuántas sesiones de Ultherapy HIFU necesito?", "a": "1-2 sesiones según zona y grado de flacidez. Las sesiones se espacian 6-12 meses para mantenimiento. Radiofrecuencia INDIBA es Pack 10 con cadencia semanal." },
+      { "q": "¿Ultherapy o Radiofrecuencia INDIBA, cuál elegir?", "a": "Depende. Ultherapy es de choque (1-2 sesiones, resultados a 3-6 meses). Radiofrecuencia INDIBA es progresivo (Pack 10 sesiones, resultados desde la 1ª). Ultherapy para flacidez moderada-alta. Radiofrecuencia INDIBA para mantenimiento + reafirmación gradual. En el diagnóstico te lo concretamos." },
+      { "q": "¿Cuántas sesiones de Ultherapy necesito?", "a": "1-2 sesiones según zona y grado de flacidez. Las sesiones se espacian 6-12 meses para mantenimiento. Radiofrecuencia INDIBA es Pack 10 con cadencia semanal." },
       { "q": "¿Cuánto duran los resultados?", "a": "Ultherapy: 12-18 meses tras pleno efecto a los 3-6 meses. Radiofrecuencia INDIBA: efecto durable con mantenimiento mensual tras Pack." },
       { "q": "¿A qué edad empezar?", "a": "Cuando notas pérdida de firmeza del óvalo, normalmente desde 35-45 años. Mejor antes que después: estimular colágeno funciona mejor cuando aún hay reserva." },
       { "q": "¿Cuidados post-sesión?", "a": "Mínimos: hidratación tópica, protector solar estricto los siguientes días, evitar saunas/calor extremo 48h. Te entregamos pauta escrita tras cada sesión." }
@@ -102,7 +102,7 @@
   "final": {
     "eyebrow": "Sin compromiso",
     "h2_html": "Reserva un diagnóstico gratuito. <em>Te decimos qué tecnología es para ti</em>.",
-    "p_html": "Treinta minutos en clínica con quien lleva décadas con Ultherapy HIFU e Radiofrecuencia INDIBA. Si tu caso pide otra cosa (inyectables, hilos, cirugía), te lo decimos honestamente.",
+    "p_html": "Treinta minutos en clínica con quien lleva décadas con Ultherapy y Radiofrecuencia INDIBA. Si tu caso pide otra cosa (inyectables, hilos, cirugía), te lo decimos honestamente.",
     "cta": "Reservar valoración →"
   }
 }

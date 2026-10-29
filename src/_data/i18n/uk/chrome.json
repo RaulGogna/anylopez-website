@@ -1,6 +1,6 @@
 {
   "siteName": "AnyLopez Естетична клініка",
-  "clinicDescription": "Естетична клініка обличчя і тіла в Бенідормі з понад 35-річним досвідом. Спеціалісти з радіочастотної терапії INDIBA, Ultherapy HIFU, dermapen, лазерної епіляції, ботоксу та філерів.",
+  "clinicDescription": "Естетична клініка обличчя і тіла в Бенідормі з понад 35-річним досвідом. Спеціалісти з радіочастотної терапії INDIBA, Ultherapy, dermapen, лазерної епіляції, ботоксу та філерів.",
   "nav": {
     "home": "Головна",
     "about": "Про нас",
@@ -15,11 +15,11 @@
   },
   "breadcrumbHome": "Головна",
   "footer": {
-    "brand": "Естетична клініка обличчя і тіла в Бенідормі. Понад 35 років досвіду роботи з технологіями радіочастоти INDIBA та Ultherapy HIFU.",
+    "brand": "Естетична клініка обличчя і тіла в Бенідормі. Понад 35 років досвіду роботи з технологіями радіочастоти INDIBA та Ultherapy.",
     "servicesHeading": "Послуги",
     "servicesLinks": {
       "/radiofrecuencia/": "Радіочастота INDIBA",
-      "/services/lifting-antiaging/": "Ultherapy HIFU",
+      "/services/lifting-antiaging/": "Ultherapy",
       "/services/inyectables/": "Ботокс і філери",
       "/services/limpiezas-faciales/": "Чищення обличчя",
       "/services/tratamientos-faciales/": "Dermapen",

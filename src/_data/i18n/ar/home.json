@@ -1,8 +1,8 @@
 {
-  "title": "AnyLopez بنيدورم — Ultherapy HIFU وباقة الترددات الراديوية INDIBA",
-  "description": "عيادة تجميل في بنيدورم متخصصة في Ultherapy HIFU والترددات الراديوية INDIBA. باقة 10 جلسات (45 دقيقة) بسعر 500 € مع ضمان: إذا لم تلاحظي تحسناً، الجلسة 11 مجانية.",
-  "ogTitle": "AnyLopez بنيدورم — متخصصون في Ultherapy HIFU والترددات الراديوية INDIBA",
-  "ogDescPre": "عيادة تجميل في بنيدورم متخصصة في الترددات الراديوية INDIBA وUltherapy HIFU وBotox والعناية بالوجه والمزيد. ",
+  "title": "AnyLopez بنيدورم — Ultherapy وباقة الترددات الراديوية INDIBA",
+  "description": "عيادة تجميل في بنيدورم متخصصة في Ultherapy والترددات الراديوية INDIBA. باقة 10 جلسات (45 دقيقة) بسعر 500 € مع ضمان: إذا لم تلاحظي تحسناً، الجلسة 11 مجانية.",
+  "ogTitle": "AnyLopez بنيدورم — متخصصون في Ultherapy والترددات الراديوية INDIBA",
+  "ogDescPre": "عيادة تجميل في بنيدورم متخصصة في الترددات الراديوية INDIBA وUltherapy وBotox والعناية بالوجه والمزيد. ",
   "ogDescPost": " تقييم بخمس نجوم. احجزي استشارتك المجانية عبر WhatsApp.",
   "c": {
     "booking": "الحجز المخصص — أساسي (يحل محل Cal.com)",
@@ -105,11 +105,11 @@
     "waCta": "احجزي باقتك من الترددات الراديوية INDIBA عبر WhatsApp"
   },
   "otros": {
-    "intro_html": "تخصصنا هو الترددات الراديوية INDIBA. كما نقدّم أيضاً Ultherapy HIFU وحقن Botox والفيلر وDermapen وتنظيف Platinum والعلاج بالخشب والضغط الهوائي العلاجي. إذا أتيتِ من أجل أحد هذه العلاجات، سنعتني بكِ بالقدر نفسه من العناية — لكن لو كان بإمكانك اختيار علاج واحد فقط، لقلنا لكِ الترددات الراديوية INDIBA.",
+    "intro_html": "تخصصنا هو الترددات الراديوية INDIBA. كما نقدّم أيضاً Ultherapy وحقن Botox والفيلر وDermapen وتنظيف Platinum والعلاج بالخشب والضغط الهوائي العلاجي. إذا أتيتِ من أجل أحد هذه العلاجات، سنعتني بكِ بالقدر نفسه من العناية — لكن لو كان بإمكانك اختيار علاج واحد فقط، لقلنا لكِ الترددات الراديوية INDIBA.",
     "chips": [
       {
-        "path": "/services/lifting-antiaging/#ultherapy-hifu",
-        "label": "شد Ultherapy HIFU"
+        "path": "/services/lifting-antiaging/#ultherapy",
+        "label": "شد Ultherapy"
       },
       {
         "path": "/services/inyectables/#botox-zona",
@@ -147,7 +147,7 @@
     },
     "c2": {
       "h3": "تقنية متطورة",
-      "p_html": "أجهزة الترددات الراديوية <span dir=\"ltr\">INDIBA &amp; Ultherapy HIFU</span>. أمان وفعالية يدعمهما العلم."
+      "p_html": "أجهزة الترددات الراديوية <span dir=\"ltr\">INDIBA &amp; Ultherapy</span>. أمان وفعالية يدعمهما العلم."
     },
     "c3": {
       "h3": "عناية مخصصة",
@@ -336,7 +336,7 @@
       "servPh": "اختاري علاجاً",
       "options": [
         "الترددات الراديوية INDIBA",
-        "شد Ultherapy HIFU",
+        "شد Ultherapy",
         "حقن Botox والفيلر",
         "تنظيف البشرة",
         "Dermapen",
