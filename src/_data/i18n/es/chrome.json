@@ -1,6 +1,6 @@
 {
   "siteName": "AnyLopez Clínica Estética",
-  "clinicDescription": "Clínica estética facial y corporal en Benidorm con 35+ años de experiencia. Especialistas en radiofrecuencia INDIBA, Ultherapy HIFU, dermapen, depilación láser, botox y rellenos.",
+  "clinicDescription": "Clínica estética facial y corporal en Benidorm con 35+ años de experiencia. Especialistas en radiofrecuencia INDIBA, Ultherapy, dermapen, depilación láser, botox y rellenos.",
   "nav": {
     "home": "Inicio",
     "about": "Nosotras",
@@ -15,11 +15,11 @@
   },
   "breadcrumbHome": "Inicio",
   "footer": {
-    "brand": "Clínica estética facial y corporal en Benidorm. Más de 35 años de experiencia con tecnología Radiofrecuencia INDIBA & Ultherapy HIFU.",
+    "brand": "Clínica estética facial y corporal en Benidorm. Más de 35 años de experiencia con tecnología Radiofrecuencia INDIBA & Ultherapy.",
     "servicesHeading": "Servicios",
     "servicesLinks": {
       "/radiofrecuencia/": "Radiofrecuencia INDIBA",
-      "/services/lifting-antiaging/": "Ultherapy HIFU",
+      "/services/lifting-antiaging/": "Ultherapy",
       "/services/inyectables/": "Botox & Rellenos",
       "/services/limpiezas-faciales/": "Limpieza Facial",
       "/services/tratamientos-faciales/": "Dermapen",

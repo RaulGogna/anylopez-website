@@ -14,7 +14,7 @@
     {
       "id": "lifting-antiaging",
       "nombre": "Lifting & Anti-Aging",
-      "descripcion": "Straffung ohne OP mit Ultherapy HIFU und INDIBA Radiofrequenz."
+      "descripcion": "Straffung ohne OP mit Ultherapy und INDIBA Radiofrequenz."
     },
     {
       "id": "inyectables",
@@ -576,10 +576,10 @@
       "packDestacado": 0
     },
     {
-      "slug": "ultherapy-hifu",
-      "imagen": "ultherapy-hifu.png",
+      "slug": "ultherapy",
+      "imagen": "ultherapy.png",
       "categoria": "lifting-antiaging",
-      "nombre": "Ultherapy HIFU – Lifting ohne OP",
+      "nombre": "Ultherapy – Lifting ohne OP",
       "descripcion": "Fokussierter Ultraschall, der strafft, formt und verjüngt. Er regt die natürliche Produktion von Kollagen und Elastin an — für ein Lifting ohne OP.",
       "paraQuien": "Für alle, die einen natürlichen Lifting-Effekt suchen — ohne OP-Saal, ohne Narkose, ohne Erholungszeit.",
       "comoFunciona": [
@@ -607,23 +607,23 @@
       "precios": [
         {
           "concepto": "Komplettes Gesicht (120 Min.)",
-          "precio": "350 €"
+          "precio": "450 €"
         },
         {
           "concepto": "Augenringe (20 Min.)",
-          "precio": "160 €"
+          "precio": "260 €"
         },
         {
           "concepto": "Hals (60 Min.)",
-          "precio": "250 €"
+          "precio": "350 €"
         },
         {
           "concepto": "Dekolleté (60 Min.)",
-          "precio": "250 €"
+          "precio": "450 €"
         },
         {
           "concepto": "Arme (60 Min.)",
-          "precio": "350 €"
+          "precio": "550 €"
         },
         {
           "concepto": "Hände (30 Min.)",
@@ -631,19 +631,19 @@
         },
         {
           "concepto": "Bauch (60 Min. pro Zone)",
-          "precio": "350 €"
+          "precio": "550 €"
         },
         {
           "concepto": "Unterschenkel (45 Min. pro Zone)",
-          "precio": "350 €"
+          "precio": "550 €"
         },
         {
-          "concepto": "Vaginale Behandlung (30 Min.)",
-          "precio": "350 €"
+          "concepto": "Vaginale Behandlung (45 Min.)",
+          "precio": "490 €"
         },
         {
-          "concepto": "Vaginale Behandlung — Paket 2 Sitzungen pro Jahr",
-          "precio": "499 €"
+          "concepto": "Vaginale Behandlung — Paket 2 Sitzungen",
+          "precio": "795 €"
         }
       ],
       "packDestacado": 0

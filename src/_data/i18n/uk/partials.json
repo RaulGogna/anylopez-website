@@ -56,7 +56,7 @@
     "selPh": "Що вас цікавить?",
     "options": [
       { "value": "INDIBA", "label": "Радіочастота INDIBA" },
-      { "value": "HIFU", "label": "Ultherapy HIFU ліфтинг" },
+      { "value": "Ultherapy", "label": "Ultherapy ліфтинг" },
       { "value": "Botox", "label": "Ботокс і філери" },
       { "value": "Limpieza Facial", "label": "Чищення обличчя" },
       { "value": "Dermapen", "label": "Dermapen" },

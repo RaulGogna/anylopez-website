@@ -3,7 +3,7 @@
   "categorias": [
     { "id": "limpiezas-faciales",   "nombre": "Facials & Deep Cleanse",                    "descripcion": "Facial care at different levels of depth and sophistication." },
     { "id": "tratamientos-faciales","nombre": "Advanced Facials",                           "descripcion": "Peels, mesotherapy, dermapen and regeneration technology." },
-    { "id": "lifting-antiaging",    "nombre": "Lifting & Anti-Ageing",                     "descripcion": "Non-surgical firming with Ultherapy HIFU and INDIBA radiofrequency." },
+    { "id": "lifting-antiaging",    "nombre": "Lifting & Anti-Ageing",                     "descripcion": "Non-surgical firming with Ultherapy and INDIBA radiofrequency." },
     { "id": "inyectables",          "nombre": "Botox & Fillers",                           "descripcion": "Botox, hyaluronic acid, thread lifts and PRP." },
     { "id": "corporal",             "nombre": "Body Treatments",                           "descripcion": "Wood therapy, pressotherapy, drainage and muscle recovery." },
     { "id": "masajes",              "nombre": "Massages",                                  "descripcion": "Relaxing, therapeutic, facial and specialist massages." },
@@ -471,10 +471,10 @@
       "packDestacado": 0
     },
     {
-      "slug": "ultherapy-hifu",
-      "imagen": "ultherapy-hifu.png",
+      "slug": "ultherapy",
+      "imagen": "ultherapy.png",
       "categoria": "lifting-antiaging",
-      "nombre": "Ultherapy HIFU Non-Surgical Facelift",
+      "nombre": "Ultherapy Non-Surgical Facelift",
       "descripcion": "Focused ultrasound that firms, sculpts and rejuvenates. Stimulates natural collagen and elastin production for a non-surgical facelift.",
       "paraQuien": "For those seeking a natural lifting effect without surgery, anaesthesia or downtime.",
       "comoFunciona": [
@@ -500,16 +500,16 @@
       "idealPara": "People with facial or body sagging looking for a natural facelift without surgery.",
       "duracion": "Variable by area",
       "precios": [
-        { "concepto": "Full face (120 min)", "precio": "350 €" },
-        { "concepto": "Under-eyes (20 min)", "precio": "160 €" },
-        { "concepto": "Neck (60 min)", "precio": "250 €" },
-        { "concepto": "Décolletage (60 min)", "precio": "250 €" },
-        { "concepto": "Arms (60 min)", "precio": "350 €" },
+        { "concepto": "Full face (120 min)", "precio": "450 €" },
+        { "concepto": "Under-eyes (20 min)", "precio": "260 €" },
+        { "concepto": "Neck (60 min)", "precio": "350 €" },
+        { "concepto": "Décolletage (60 min)", "precio": "450 €" },
+        { "concepto": "Arms (60 min)", "precio": "550 €" },
         { "concepto": "Hands (30 min)", "precio": "200 €" },
-        { "concepto": "Abdomen (60 min per area)", "precio": "350 €" },
-        { "concepto": "Half legs (45 min per area)", "precio": "350 €" },
-        { "concepto": "Vaginal treatment (30 min)", "precio": "350 €" },
-        { "concepto": "Vaginal treatment — pack of 2 sessions per year", "precio": "499 €" }
+        { "concepto": "Abdomen (60 min per area)", "precio": "550 €" },
+        { "concepto": "Half legs (45 min per area)", "precio": "550 €" },
+        { "concepto": "Vaginal treatment (45 min)", "precio": "490 €" },
+        { "concepto": "Vaginal treatment — pack of 2 sessions", "precio": "795 €" }
       ],
       "packDestacado": 0
     },

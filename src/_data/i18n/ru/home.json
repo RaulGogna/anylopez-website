@@ -1,8 +1,8 @@
 {
-  "title": "AnyLopez Бенидорм — Ultherapy HIFU и Пакет Радиочастота INDIBA",
-  "description": "Эстетическая клиника в Бенидорме, специализирующаяся на Ultherapy HIFU и радиочастоте INDIBA. Пакет 10 сеансов (45 мин) за 500 € с гарантией: если улучшения не заметны, 11-й сеанс бесплатно.",
-  "ogTitle": "AnyLopez Бенидорм — Специалисты по Ultherapy HIFU и Радиочастоте INDIBA",
-  "ogDescPre": "Эстетическая клиника в Бенидорме. Радиочастота INDIBA, Ultherapy HIFU, ботокс, уход за лицом и другое. ",
+  "title": "AnyLopez Бенидорм — Ultherapy и Пакет Радиочастота INDIBA",
+  "description": "Эстетическая клиника в Бенидорме, специализирующаяся на Ultherapy и радиочастоте INDIBA. Пакет 10 сеансов (45 мин) за 500 € с гарантией: если улучшения не заметны, 11-й сеанс бесплатно.",
+  "ogTitle": "AnyLopez Бенидорм — Специалисты по Ultherapy и Радиочастоте INDIBA",
+  "ogDescPre": "Эстетическая клиника в Бенидорме. Радиочастота INDIBA, Ultherapy, ботокс, уход за лицом и другое. ",
   "ogDescPost": " пятизвёздочных отзывов. Запишитесь на бесплатную консультацию через WhatsApp.",
   "c": {
     "booking": "BOOKING CUSTOM — основной (заменяет Cal.com)",
@@ -87,9 +87,9 @@
     "waCta": "Записаться на Пакет Радиочастота INDIBA через WhatsApp"
   },
   "otros": {
-    "intro_html": "Наша специализация — Радиочастота INDIBA. Также мы делаем Ultherapy HIFU, ботокс и филлеры, Dermapen, Чистку лица PLATINUM, мадеротерапию и прессотерапию. Если вы пришли за одной из этих процедур, мы позаботимся о вас так же внимательно — но если бы пришлось выбрать что-то одно, мы бы посоветовали Радиочастоту INDIBA.",
+    "intro_html": "Наша специализация — Радиочастота INDIBA. Также мы делаем Ultherapy, ботокс и филлеры, Dermapen, Чистку лица PLATINUM, мадеротерапию и прессотерапию. Если вы пришли за одной из этих процедур, мы позаботимся о вас так же внимательно — но если бы пришлось выбрать что-то одно, мы бы посоветовали Радиочастоту INDIBA.",
     "chips": [
-      { "path": "/services/lifting-antiaging/#ultherapy-hifu", "label": "Ultherapy HIFU лифтинг" },
+      { "path": "/services/lifting-antiaging/#ultherapy", "label": "Ultherapy лифтинг" },
       { "path": "/services/inyectables/#botox-zona", "label": "Ботокс и филлеры" },
       { "path": "/services/tratamientos-faciales/#dermapen-hidratacion", "label": "Dermapen" },
       { "path": "/services/limpiezas-faciales/#limpieza-facial-platinum", "label": "Чистка лица PLATINUM" },
@@ -108,7 +108,7 @@
     },
     "c2": {
       "h3": "Передовые технологии",
-      "p_html": "Оборудование Радиочастоты INDIBA &amp; Ultherapy HIFU. Безопасность и эффективность, подтверждённые наукой."
+      "p_html": "Оборудование Радиочастоты INDIBA &amp; Ultherapy. Безопасность и эффективность, подтверждённые наукой."
     },
     "c3": {
       "h3": "Индивидуальный подход",
@@ -285,7 +285,7 @@
       "servPh": "Выберите процедуру",
       "options": [
         "Радиочастота INDIBA",
-        "Ultherapy HIFU лифтинг",
+        "Ultherapy лифтинг",
         "Ботокс и филлеры",
         "Чистка лица",
         "Dermapen",
