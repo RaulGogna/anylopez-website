@@ -8,6 +8,11 @@
   Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
   # HSTS: apex + www ya fuerzan HTTPS. Sin includeSubDomains/preload a propósito (evita romper subdominios y es reversible).
   Header always set Strict-Transport-Security "max-age=31536000"
+
+  # Huella del catálogo: la lee Usopp para detectar desfases web/chat/teléfono; que no se quede cacheada.
+  <Files "catalogo-huella.json">
+    Header set Cache-Control "max-age=60"
+  </Files>
 </IfModule>
 
 <IfModule mod_deflate.c>
