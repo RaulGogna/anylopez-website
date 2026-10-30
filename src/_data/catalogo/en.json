@@ -541,16 +541,18 @@
         "Painless, no downtime"
       ],
       "idealPara": "People with sagging, loss of firmness or signs of ageing on the face and body.",
-      "duracion": "30, 45 or 60 minutes depending on the session",
+      "duracion": "30, 45, 60 or 75 minutes depending on the session",
       "precios": [
-        { "concepto": "Facial or body session (30 min)", "precio": "45 €" },
-        { "concepto": "Facial session (45 min)", "precio": "65 €" },
-        { "concepto": "Body session (60 min, per area)", "precio": "85 €" },
-        { "concepto": "5-session pack (30 min)", "precio": "250 €" },
-        { "concepto": "10-session pack (30 min)", "precio": "350 €" },
-        { "concepto": "10-session pack (45 min)", "precio": "500 €" }
+        { "concepto": "Facial session (30 min)", "precio": "65 €" },
+        { "concepto": "Facial session (45 min)", "precio": "85 €" },
+        { "concepto": "Facial session (75 min)", "precio": "150 €" },
+        { "concepto": "Body session (30 min, per area)", "precio": "85 €" },
+        { "concepto": "Body session (75 min, per area)", "precio": "150 €" },
+        { "concepto": "5-session pack (30 min)", "precio": "395 €" },
+        { "concepto": "10-session pack (45 min)", "precio": "650 €" },
+        { "concepto": "10-session pack (60 min)", "precio": "750 €" }
       ],
-      "packDestacado": 5
+      "packDestacado": 6
     },
     {
       "slug": "botox-zona",

@@ -1,12 +1,12 @@
 {
   "title": "INDIBA Radiofrequency in Benidorm — Non-surgical lifting · AnyLopez",
-  "description": "INDIBA radiofrequency at AnyLopez Benidorm. Deep CRet/RES technology. 10-Session Packs from €350. Results from the first session — no pain, no downtime.",
+  "description": "INDIBA radiofrequency at AnyLopez Benidorm. Deep CRet/RES technology. Packs from €395. Results from the first session — no pain, no downtime.",
   "jsonld": {
     "name": "INDIBA Radiofrequency",
     "alternateName": "INDIBA Radiofrequency Anti-Ageing",
-    "description": "Deep INDIBA radiofrequency with CRet/RES technology. Non-invasive, painless treatment for facial and body sagging, cellulite, wrinkles and firming. 10-Session Packs from €350.",
+    "description": "Deep INDIBA radiofrequency with CRet/RES technology. Non-invasive, painless treatment for facial and body sagging, cellulite, wrinkles and firming. Packs from €395.",
     "bodyLocation": ["Face", "Neck", "Abdomen", "Buttocks", "Legs", "Arms"],
-    "howPerformed": "Manual application with a CRet or RES head over the treatment area for 30-60 minutes. No needles, no pain, no recovery time.",
+    "howPerformed": "Manual application with a CRet or RES head over the treatment area for 30-75 minutes. No needles, no pain, no recovery time.",
     "preparation": "No prior preparation required. Arrive with clean skin and no creams.",
     "followup": "Personalised plan of 10 sessions recommended. Monthly maintenance after the pack.",
     "offerName": "10-Session (45 min) INDIBA Radiofrequency Anti-Ageing Pack",
@@ -18,7 +18,7 @@
       { "q": "What makes INDIBA Radiofrequency different from other radiofrequencies?", "a": "INDIBA radiofrequency works at 448 kHz, a patented frequency that safely penetrates the deep (hypodermic) layers. Other radiofrequencies operate at more superficial frequencies or are more aggressive and painful. INDIBA Radiofrequency is the clinical reference for deep firming without surgery." },
       { "q": "Can INDIBA Radiofrequency be combined with other treatments?", "a": "Yes. INDIBA Radiofrequency enhances and combines seamlessly with Ultherapy, wood therapy, mesotherapy and peels. During the free assessment we design the optimal combined plan for you." },
       { "q": "How many INDIBA Radiofrequency sessions do I need?", "a": "We recommend a 10-session pack (1-2 per week) for optimal results. The exact number depends on the treatment area and goal. During your first (free) assessment we evaluate your case and design the right plan." },
-      { "q": "How much does the INDIBA Radiofrequency Pack cost?", "a": "The 10-session 45-min pack costs €500 — €50 per session, saving you €375 versus buying everything separately. There is also a 10-session 30-min pack for €350 and a 5-session 30-min pack for €250. Single sessions range from €45 to €85 depending on duration and area. Free initial assessment, no strings attached." }
+      { "q": "How much does the INDIBA Radiofrequency Pack cost?", "a": "The 10-session 45-min pack costs €650 — €65 per session, saving you €425 versus buying everything separately. There is also a 10-session 60-min pack for €750 and a 5-session 30-min pack for €395. Single sessions range from €65 to €150 depending on duration and area. Free initial assessment, no strings attached." }
     ]
   },
   "breadcrumb": { "services": "Services", "current": "INDIBA Radiofrequency" },
@@ -30,7 +30,7 @@
     "lead": "If you have been looking after yourself for years and the mirror still shows sagging, it is not your fault — creams simply do not reach where INDIBA Radiofrequency reaches. Deep CRet/RES technology that stimulates your own collagen. No needles, no pain, no downtime.",
     "ctaPrimary": "Book your free assessment →",
     "reviews": "Google reviews",
-    "packMeta_html": "10-Session Pack (45 min) <strong>€500</strong> (you save €375)"
+    "packMeta_html": "10-Session Pack (45 min) <strong>€650</strong> (you save €425)"
   },
   "pain": {
     "eyebrow": "Does any of this sound familiar?",
@@ -87,26 +87,28 @@
     "h2_html": "Everything that's included, <em>and everything you save</em>.",
     "p_html": "This is not an \"offer\". It is the difference between buying it all piecemeal and buying it properly.",
     "stack": [
-      { "label": "10 INDIBA radiofrequency sessions, 45 min each (CRet/RES)", "price": "€650" },
+      { "label": "10 INDIBA radiofrequency sessions, 45 min each (CRet/RES)", "price": "€850" },
       { "label": "Personalised initial assessment (30 min)", "price": "€80" },
       { "label": "Bespoke protocol plan + adjustments", "price": "€50" },
       { "label": "Between-sessions follow-up (direct WhatsApp)", "price": "€30" },
       { "label": "60-day review after finishing the pack", "price": "€65" }
     ],
     "totalLabel": "Total value",
-    "crossed": "€875",
+    "crossed": "€1,075",
     "priceLabel": "Your pack price",
-    "final_html": "€500",
-    "savings": "Save €375 · 43% less than buying it piecemeal",
+    "final_html": "€650",
+    "savings": "Save €425 · 40% less than buying it piecemeal",
     "waText_html": "Hi,%20I'm%20interested%20in%20the%20INDIBA%20Radiofrequency%20Pack",
     "ratesTitle": "All INDIBA Radiofrequency prices",
     "rates": [
-      { "label_html": "Facial or body session (30 min)", "price_html": "€45" },
-      { "label_html": "Facial session (45 min)", "price_html": "€65" },
-      { "label_html": "Body session (60 min, per area)", "price_html": "€85" },
-      { "label_html": "5-session pack (30 min)", "price_html": "€250" },
-      { "label_html": "10-session pack (30 min)", "price_html": "€350" },
-      { "label_html": "<strong>10-session pack (45 min) — best value</strong>", "price_html": "<strong>€500</strong>" }
+      { "label_html": "Facial session (30 min)", "price_html": "€65" },
+      { "label_html": "Facial session (45 min)", "price_html": "€85" },
+      { "label_html": "Facial session (75 min)", "price_html": "€150" },
+      { "label_html": "Body session (30 min, per area)", "price_html": "€85" },
+      { "label_html": "Body session (75 min, per area)", "price_html": "€150" },
+      { "label_html": "5-session pack (30 min)", "price_html": "€395" },
+      { "label_html": "<strong>10-session pack (45 min) — best value</strong>", "price_html": "<strong>€650</strong>" },
+      { "label_html": "10-session pack (60 min)", "price_html": "€750" }
     ]
   },
   "tests": {
@@ -140,7 +142,7 @@
       { "q": "What sets INDIBA Radiofrequency apart from other radiofrequencies on the market?", "a_html": "INDIBA radiofrequency works at 448 kHz — a patented frequency that safely and deeply penetrates the hypodermic layer. Other radiofrequencies operate at more superficial frequencies or are more aggressive and painful. INDIBA Radiofrequency is the clinical reference for deep firming without surgery." },
       { "q": "Can it be combined with other treatments?", "a_html": "Yes. INDIBA Radiofrequency enhances and combines seamlessly with Ultherapy, wood therapy, mesotherapy and peels. During the assessment we design the optimal combined plan for your case." },
       { "q": "How many sessions do I need?", "a_html": "We recommend a 10-session pack (1-2 per week). The exact number depends on the area and your goal. During your first free consultation we evaluate your case and design the right plan." },
-      { "q": "How much does it cost?", "a_html": "The 10-session 45-min pack costs <strong>€500</strong> — €50 per session, saving you <strong>€375</strong> versus buying everything separately. There is also a 10-session 30-min pack for €350 and a 5-session 30-min pack for €250. Single sessions range from €45 to €85 depending on duration and area. Free initial assessment, no strings attached." }
+      { "q": "How much does it cost?", "a_html": "The 10-session 45-min pack costs <strong>€650</strong> — €65 per session, saving you <strong>€425</strong> versus buying everything separately. There is also a 10-session 60-min pack for €750 and a 5-session 30-min pack for €395. Single sessions range from €65 to €150 depending on duration and area. Free initial assessment, no strings attached." }
     ]
   },
   "final": {

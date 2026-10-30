@@ -573,16 +573,18 @@
         "Sin dolor, sin recuperación"
       ],
       "idealPara": "Personas con flacidez, pérdida de firmeza o signos de envejecimiento en rostro y cuerpo.",
-      "duracion": "30, 45 o 60 minutos según la sesión",
+      "duracion": "30, 45, 60 o 75 minutos según la sesión",
       "precios": [
-        { "concepto": "Sesión facial o corporal (30 min)", "precio": "45 €" },
-        { "concepto": "Sesión facial (45 min)", "precio": "65 €" },
-        { "concepto": "Sesión corporal (60 min, por zona)", "precio": "85 €" },
-        { "concepto": "Pack 5 sesiones (30 min)", "precio": "250 €" },
-        { "concepto": "Pack 10 sesiones (30 min)", "precio": "350 €" },
-        { "concepto": "Pack 10 sesiones (45 min)", "precio": "500 €" }
+        { "concepto": "Sesión facial (30 min)", "precio": "65 €" },
+        { "concepto": "Sesión facial (45 min)", "precio": "85 €" },
+        { "concepto": "Sesión facial (75 min)", "precio": "150 €" },
+        { "concepto": "Sesión corporal (30 min, por zona)", "precio": "85 €" },
+        { "concepto": "Sesión corporal (75 min, por zona)", "precio": "150 €" },
+        { "concepto": "Pack 5 sesiones (30 min)", "precio": "395 €" },
+        { "concepto": "Pack 10 sesiones (45 min)", "precio": "650 €" },
+        { "concepto": "Pack 10 sesiones (60 min)", "precio": "750 €" }
       ],
-      "packDestacado": 5
+      "packDestacado": 6
     },
     {
       "slug": "botox-zona",

@@ -1,6 +1,6 @@
 {
   "title": "AnyLopez Benidorm — Ultherapy und INDIBA Radiofrequenz Paket",
-  "description": "Ästhetikklinik in Benidorm, spezialisiert auf Ultherapy und INDIBA Radiofrequenz. Paket mit 10 Sitzungen (45 Min.) für 500 € mit Garantie: Wenn Sie keine Verbesserung bemerken, ist die 11. Sitzung gratis.",
+  "description": "Ästhetikklinik in Benidorm, spezialisiert auf Ultherapy und INDIBA Radiofrequenz. Paket mit 10 Sitzungen (45 Min.) für 650 € mit Garantie: Wenn Sie keine Verbesserung bemerken, ist die 11. Sitzung gratis.",
   "ogTitle": "AnyLopez Benidorm — Spezialisten für Ultherapy & INDIBA Radiofrequenz",
   "ogDescPre": "Ästhetikklinik in Benidorm. INDIBA Radiofrequenz, Ultherapy, Botox, Gesichtsbehandlungen und mehr. ",
   "ogDescPost": " Fünf-Sterne-Bewertungen. Buchen Sie Ihre kostenlose Beratung per WhatsApp.",
@@ -31,7 +31,7 @@
     "chips": [
       "Schmerzfrei",
       "Keine Ausfallzeit",
-      "Paket (45 Min.) 500 €",
+      "Paket (45 Min.) 650 €",
       "Garantie: 11. Sitzung"
     ],
     "guarantee": "Wenn Sie nach Ihrem 10er-Paket INDIBA Radiofrequenz keine Verbesserung bemerken, ist Ihre 11. Sitzung gratis."
@@ -43,14 +43,14 @@
   },
   "pack": {
     "label": "Star-Behandlung",
-    "h2_html": "INDIBA Radiofrequenz Anti-Aging-Paket<br><em>10 Sitzungen (45 Min.) für 500 €</em>",
+    "h2_html": "INDIBA Radiofrequenz Anti-Aging-Paket<br><em>10 Sitzungen (45 Min.) für 650 €</em>",
     "subtitle": "Straffen Sie Gesicht oder Körper mit der Technologie, die wir am meisten empfehlen. Sichtbare Ergebnisse ab den ersten Sitzungen, ohne OP und ohne Ausfallzeit.",
     "includeH3_html": "Was Ihr 10er-Paket enthält",
     "items": [
       {
         "name_html": "10 Sitzungen INDIBA Radiofrequenz (45 Min.)",
-        "value": "650 €",
-        "reason_html": "Eine Einzelsitzung von 45 Min. kostet in der Klinik 65 € — 10 Einzelsitzungen kämen auf 650 €."
+        "value": "850 €",
+        "reason_html": "Eine Einzelsitzung von 45 Min. kostet in der Klinik 85 € — 10 Einzelsitzungen kämen auf 850 €."
       },
       {
         "name_html": "Erstdiagnose + individueller Plan pro Zone",
@@ -74,9 +74,9 @@
         "reason_html": "Wir sind so sicher, dass Sie eine Verbesserung sehen: Wenn nicht in den 10 Sitzungen, zahlen wir die 11."
       }
     ],
-    "totalLine_html": "Gesamtwert: <s>875 €</s>",
-    "price_html": "Ihre Investition heute: <strong>500 €</strong>",
-    "savings_html": "Sie sparen <strong>375 €</strong> (43 %)",
+    "totalLine_html": "Gesamtwert: <s>1.075 €</s>",
+    "price_html": "Ihre Investition heute: <strong>650 €</strong>",
+    "savings_html": "Sie sparen <strong>425 €</strong> (40 %)",
     "tableH3": "Optionen im Vergleich",
     "thOption": "Option",
     "thPrice": "Preis",
@@ -84,23 +84,18 @@
     "rows": [
       {
         "td": "Einzelsitzung (45 Min.)",
-        "p": "65 €",
-        "s": "65 €"
-      },
-      {
-        "td": "Paket 10 (30 Min./Sitzung)",
-        "p": "350 €",
-        "s": "35 €"
+        "p": "85 €",
+        "s": "85 €"
       },
       {
         "td": "Paket 10 (45 Min./Sitzung)",
-        "p": "500 €",
-        "s": "50 €",
+        "p": "650 €",
+        "s": "65 €",
         "hl": true
       }
     ],
-    "note": "Die Sitzungen des 500-€-Pakets dauern 45 Minuten: bester Preis im Paket.",
-    "reason_html": "<strong>Warum 10 Sitzungen für 500 €?</strong> Weil das das vollständige Protokoll ist. Unter 10 Sitzungen festigt INDIBA Radiofrequenz das Ergebnis nicht. Wir berechnen, was Ihre Haut braucht — keine Sitzung mehr, keine weniger.",
+    "note": "Die Sitzungen des 650-€-Pakets dauern 45 Minuten: bester Preis im Paket.",
+    "reason_html": "<strong>Warum 10 Sitzungen für 650 €?</strong> Weil das das vollständige Protokoll ist. Unter 10 Sitzungen festigt INDIBA Radiofrequenz das Ergebnis nicht. Wir berechnen, was Ihre Haut braucht — keine Sitzung mehr, keine weniger.",
     "waHref": "https://wa.me/34656306167?text=Hallo%2C%20ich%20m%C3%B6chte%20mein%20INDIBA%20Radiofrequenz%20Anti-Aging-Paket%20mit%2010%20Sitzungen%20buchen.",
     "waCta": "Mein INDIBA Radiofrequenz Paket per WhatsApp buchen"
   },
@@ -243,7 +238,7 @@
       },
       {
         "q_html": "Warum AnyLopez und nicht eine günstigere Klinik oder eine größere Kette?",
-        "a_html": "In einer Kette werden Sie in Serie behandelt, mit einem identischen Protokoll für alle. Wir haben 35 Jahre Handwerk geerbt und stimmen jede Sitzung auf Ihre Haut ab — INDIBA Radiofrequenz mit spezifischen Parametern, kalibrierten Zeiten und Begleitung Sitzung für Sitzung. Und wenn eine günstigere Klinik die Kosten senkt, kürzt sie in der Regel die Sitzungsdauer oder die Geräteleistung. Wir machen das Gegenteil: 10 echte Sitzungen à 30 Minuten mit der Leistung, die Ihre Haut braucht — keine einzige weniger."
+        "a_html": "In einer Kette werden Sie in Serie behandelt, mit einem identischen Protokoll für alle. Wir haben 35 Jahre Handwerk geerbt und stimmen jede Sitzung auf Ihre Haut ab — INDIBA Radiofrequenz mit spezifischen Parametern, kalibrierten Zeiten und Begleitung Sitzung für Sitzung. Und wenn eine günstigere Klinik die Kosten senkt, kürzt sie in der Regel die Sitzungsdauer oder die Geräteleistung. Wir machen das Gegenteil: 10 echte Sitzungen à 45 Minuten mit der Leistung, die Ihre Haut braucht — keine einzige weniger."
       },
       {
         "q_html": "Ist es sicher? Gibt es Kontraindikationen?",
@@ -288,7 +283,7 @@
     },
     {
       "name": "Warum AnyLopez und nicht eine günstigere Klinik oder eine größere Kette?",
-      "text": "In einer Kette werden Sie in Serie behandelt, mit einem identischen Protokoll für alle. Bei AnyLopez haben wir 35 Jahre Handwerk geerbt und stimmen jede Sitzung auf Ihre Haut ab: INDIBA Radiofrequenz mit spezifischen Parametern, kalibrierten Zeiten und Begleitung Sitzung für Sitzung. Wenn eine günstigere Klinik den Preis senkt, kürzt sie in der Regel die Sitzungsdauer oder die Geräteleistung. Wir machen das Gegenteil: 10 Sitzungen à 30 Minuten mit der Leistung, die Ihre Haut braucht."
+      "text": "In einer Kette werden Sie in Serie behandelt, mit einem identischen Protokoll für alle. Bei AnyLopez haben wir 35 Jahre Handwerk geerbt und stimmen jede Sitzung auf Ihre Haut ab: INDIBA Radiofrequenz mit spezifischen Parametern, kalibrierten Zeiten und Begleitung Sitzung für Sitzung. Wenn eine günstigere Klinik den Preis senkt, kürzt sie in der Regel die Sitzungsdauer oder die Geräteleistung. Wir machen das Gegenteil: 10 Sitzungen à 45 Minuten mit der Leistung, die Ihre Haut braucht."
     },
     {
       "name": "Ist es sicher? Gibt es Kontraindikationen?",
