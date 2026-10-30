@@ -676,34 +676,42 @@
         "Ohne Schmerz, ohne Erholungszeit"
       ],
       "idealPara": "Menschen mit Hauterschlaffung, nachlassender Festigkeit oder Alterungszeichen an Gesicht und Körper.",
-      "duracion": "30, 45 oder 60 Minuten je nach Sitzung",
+      "duracion": "30, 45, 60 oder 75 Minuten je nach Sitzung",
       "precios": [
         {
-          "concepto": "Sitzung Gesicht oder Körper (30 Min.)",
-          "precio": "45 €"
-        },
-        {
-          "concepto": "Sitzung Gesicht (45 Min.)",
+          "concepto": "Sitzung Gesicht (30 Min.)",
           "precio": "65 €"
         },
         {
-          "concepto": "Sitzung Körper (60 Min., pro Zone)",
+          "concepto": "Sitzung Gesicht (45 Min.)",
           "precio": "85 €"
         },
         {
-          "concepto": "Paket 5 Sitzungen (30 Min.)",
-          "precio": "250 €"
+          "concepto": "Sitzung Gesicht (75 Min.)",
+          "precio": "150 €"
         },
         {
-          "concepto": "Paket 10 Sitzungen (30 Min.)",
-          "precio": "350 €"
+          "concepto": "Sitzung Körper (30 Min., pro Zone)",
+          "precio": "85 €"
+        },
+        {
+          "concepto": "Sitzung Körper (75 Min., pro Zone)",
+          "precio": "150 €"
+        },
+        {
+          "concepto": "Paket 5 Sitzungen (30 Min.)",
+          "precio": "395 €"
         },
         {
           "concepto": "Paket 10 Sitzungen (45 Min.)",
-          "precio": "500 €"
+          "precio": "650 €"
+        },
+        {
+          "concepto": "Paket 10 Sitzungen (60 Min.)",
+          "precio": "750 €"
         }
       ],
-      "packDestacado": 5
+      "packDestacado": 6
     },
     {
       "slug": "botox-zona",

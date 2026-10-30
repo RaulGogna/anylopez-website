@@ -595,16 +595,18 @@
         "Sans douleur, sans convalescence"
       ],
       "idealPara": "Personnes avec relâchement cutané, perte de fermeté ou signes de vieillissement sur le visage et le corps.",
-      "duracion": "30, 45 ou 60 minutes selon la séance",
+      "duracion": "30, 45, 60 ou 75 minutes selon la séance",
       "precios": [
-        { "concepto": "Séance visage ou corps (30 min)", "precio": "45 €" },
-        { "concepto": "Séance visage (45 min)", "precio": "65 €" },
-        { "concepto": "Séance corps (60 min, par zone)", "precio": "85 €" },
-        { "concepto": "Pack 5 séances (30 min)", "precio": "250 €" },
-        { "concepto": "Pack 10 séances (30 min)", "precio": "350 €" },
-        { "concepto": "Pack 10 séances (45 min)", "precio": "500 €" }
+        { "concepto": "Séance visage (30 min)", "precio": "65 €" },
+        { "concepto": "Séance visage (45 min)", "precio": "85 €" },
+        { "concepto": "Séance visage (75 min)", "precio": "150 €" },
+        { "concepto": "Séance corps (30 min, par zone)", "precio": "85 €" },
+        { "concepto": "Séance corps (75 min, par zone)", "precio": "150 €" },
+        { "concepto": "Pack 5 séances (30 min)", "precio": "395 €" },
+        { "concepto": "Pack 10 séances (45 min)", "precio": "650 €" },
+        { "concepto": "Pack 10 séances (60 min)", "precio": "750 €" }
       ],
-      "packDestacado": 5
+      "packDestacado": 6
     },
     {
       "slug": "botox-zona",

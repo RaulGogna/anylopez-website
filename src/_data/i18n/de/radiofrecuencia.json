@@ -1,12 +1,12 @@
 {
   "title": "INDIBA Radiofrequenz in Benidorm — Lifting ohne OP · AnyLopez",
-  "description": "INDIBA Radiofrequenz bei AnyLopez Benidorm. Tiefenwirksame CRet/RES-Technologie. Pakete mit 10 Sitzungen ab 350 €. Ergebnisse ab der ersten Sitzung, schmerzfrei, ohne Ausfallzeit.",
+  "description": "INDIBA Radiofrequenz bei AnyLopez Benidorm. Tiefenwirksame CRet/RES-Technologie. Pakete ab 395 €. Ergebnisse ab der ersten Sitzung, schmerzfrei, ohne Ausfallzeit.",
   "jsonld": {
     "name": "INDIBA Radiofrequenz",
     "alternateName": "INDIBA Radiofrequenz Anti-Aging",
-    "description": "Tiefenwirksame INDIBA Radiofrequenz mit CRet/RES-Technologie. Nicht-invasive, schmerzfreie Behandlung gegen Hauterschlaffung an Gesicht und Körper, Cellulite und Falten sowie zur Straffung. Pakete mit 10 Sitzungen ab 350 €.",
+    "description": "Tiefenwirksame INDIBA Radiofrequenz mit CRet/RES-Technologie. Nicht-invasive, schmerzfreie Behandlung gegen Hauterschlaffung an Gesicht und Körper, Cellulite und Falten sowie zur Straffung. Pakete ab 395 €.",
     "bodyLocation": ["Gesicht", "Hals", "Bauch", "Gesäß", "Beine", "Arme"],
-    "howPerformed": "Manuelle Anwendung mit CRet- oder RES-Kopf auf der zu behandelnden Zone, 30-60 Minuten. Ohne Nadeln, ohne Schmerzen, ohne Erholungszeit.",
+    "howPerformed": "Manuelle Anwendung mit CRet- oder RES-Kopf auf der zu behandelnden Zone, 30-75 Minuten. Ohne Nadeln, ohne Schmerzen, ohne Erholungszeit.",
     "preparation": "Keine Vorbereitung erforderlich. Bitte mit sauberer Haut und ohne Cremes kommen.",
     "followup": "Empfohlen wird ein individueller Plan mit 10 Sitzungen. Monatliche Erhaltung nach dem Paket.",
     "offerName": "Paket 10 Sitzungen (45 Min.) INDIBA Radiofrequenz Anti-Aging",
@@ -18,7 +18,7 @@
       { "q": "Was unterscheidet die INDIBA Radiofrequenz von anderen Radiofrequenzen?", "a": "Die INDIBA Radiofrequenz arbeitet mit 448 kHz, einer patentierten Frequenz, die sicher bis in die tiefen Hautschichten (Hypodermis) eindringt. Andere Radiofrequenzen arbeiten oberflächlicher oder sind aggressiver und schmerzhaft. Die INDIBA Radiofrequenz ist die klinische Referenz für tiefe Straffung ohne OP." },
       { "q": "Kann man die INDIBA Radiofrequenz mit anderen Behandlungen kombinieren?", "a": "Ja. Die INDIBA Radiofrequenz verstärkt und kombiniert sich problemlos mit Ultherapy, Holztherapie, Mesotherapie und Peelings. In der kostenlosen Diagnose entwerfen wir den optimalen Kombinationsplan für Sie." },
       { "q": "Wie viele Sitzungen INDIBA Radiofrequenz brauche ich?", "a": "Wir empfehlen ein Paket mit 10 Sitzungen (1-2 pro Woche) für optimale Ergebnisse. Die genaue Anzahl hängt von der Zone und dem Ziel ab. In der ersten (kostenlosen) Diagnose-Beratung beurteilen wir Ihren Fall und entwerfen den passenden Plan." },
-      { "q": "Was kostet das INDIBA Radiofrequenz Paket?", "a": "Das Paket mit 10 Sitzungen à 45 Min. kostet 500 € — das sind 50 € pro Sitzung, und Sie sparen 375 € gegenüber Einzelbuchungen. Es gibt auch ein 10er-Paket à 30 Min. für 350 € und ein 5er-Paket à 30 Min. für 250 €. Die Einzelsitzung kostet je nach Dauer und Zone 45 € bis 85 €. Kostenlose und unverbindliche Erstdiagnose." }
+      { "q": "Was kostet das INDIBA Radiofrequenz Paket?", "a": "Das Paket mit 10 Sitzungen à 45 Min. kostet 650 € — das sind 65 € pro Sitzung, und Sie sparen 425 € gegenüber Einzelbuchungen. Es gibt auch ein 10er-Paket à 60 Min. für 750 € und ein 5er-Paket à 30 Min. für 395 €. Die Einzelsitzung kostet je nach Dauer und Zone 65 € bis 150 €. Kostenlose und unverbindliche Erstdiagnose." }
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current": "INDIBA Radiofrequenz" },
@@ -30,7 +30,7 @@
     "lead": "Sie pflegen sich seit Jahren, und trotzdem zeigt der Spiegel Hauterschlaffung? Das ist nicht Ihre Schuld — Cremes reichen nicht dorthin, wo die INDIBA Radiofrequenz wirkt. Tiefenwirksame CRet/RES-Technologie, die Ihr eigenes Kollagen stimuliert. Ohne Nadeln, ohne Schmerzen, ohne Ausfallzeit.",
     "ctaPrimary": "Kostenlose Diagnose buchen →",
     "reviews": "Google-Bewertungen",
-    "packMeta_html": "Paket 10 Sitzungen (45 Min.) <strong>500 €</strong> (Sie sparen 375 €)"
+    "packMeta_html": "Paket 10 Sitzungen (45 Min.) <strong>650 €</strong> (Sie sparen 425 €)"
   },
   "pain": {
     "eyebrow": "Kommt Ihnen das bekannt vor?",
@@ -87,26 +87,28 @@
     "h2_html": "Alles, was enthalten ist — <em>und alles, was Sie sparen</em>.",
     "p_html": "Das ist kein \"Angebot\". Es ist der Unterschied zwischen allem einzeln kaufen und richtig kaufen.",
     "stack": [
-      { "label": "10 Sitzungen INDIBA Radiofrequenz à 45 Min. (CRet/RES)", "price": "650 €" },
+      { "label": "10 Sitzungen INDIBA Radiofrequenz à 45 Min. (CRet/RES)", "price": "850 €" },
       { "label": "Individuelle Erstdiagnose (30 Min.)", "price": "80 €" },
       { "label": "Maßgeschneiderter Protokollplan + Anpassungen", "price": "50 €" },
       { "label": "Begleitung zwischen den Sitzungen (direktes WhatsApp)", "price": "30 €" },
       { "label": "Kontrolle 60 Tage nach Abschluss des Pakets", "price": "65 €" }
     ],
     "totalLabel": "Gesamtwert",
-    "crossed": "875 €",
+    "crossed": "1.075 €",
     "priceLabel": "Ihr Paketpreis",
-    "final_html": "500&nbsp;€",
-    "savings": "Sie sparen 375 € · 43 % weniger als einzeln gekauft",
+    "final_html": "650&nbsp;€",
+    "savings": "Sie sparen 425 € · 40 % weniger als einzeln gekauft",
     "waText_html": "Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20das%20INDIBA%20Radiofrequenz%20Paket",
     "ratesTitle": "Alle Tarife INDIBA Radiofrequenz",
     "rates": [
-      { "label_html": "Sitzung Gesicht oder Körper (30 Min.)", "price_html": "45 €" },
-      { "label_html": "Sitzung Gesicht (45 Min.)", "price_html": "65 €" },
-      { "label_html": "Sitzung Körper (60 Min., pro Zone)", "price_html": "85 €" },
-      { "label_html": "Paket 5 Sitzungen (30 Min.)", "price_html": "250 €" },
-      { "label_html": "Paket 10 Sitzungen (30 Min.)", "price_html": "350 €" },
-      { "label_html": "<strong>Paket 10 Sitzungen (45 Min.) — das lohnendste</strong>", "price_html": "<strong>500 €</strong>" }
+      { "label_html": "Sitzung Gesicht (30 Min.)", "price_html": "65 €" },
+      { "label_html": "Sitzung Gesicht (45 Min.)", "price_html": "85 €" },
+      { "label_html": "Sitzung Gesicht (75 Min.)", "price_html": "150 €" },
+      { "label_html": "Sitzung Körper (30 Min., pro Zone)", "price_html": "85 €" },
+      { "label_html": "Sitzung Körper (75 Min., pro Zone)", "price_html": "150 €" },
+      { "label_html": "Paket 5 Sitzungen (30 Min.)", "price_html": "395 €" },
+      { "label_html": "<strong>Paket 10 Sitzungen (45 Min.) — das lohnendste</strong>", "price_html": "<strong>650 €</strong>" },
+      { "label_html": "Paket 10 Sitzungen (60 Min.)", "price_html": "750 €" }
     ]
   },
   "tests": {
@@ -140,7 +142,7 @@
       { "q": "Was unterscheidet die INDIBA Radiofrequenz von anderen Radiofrequenzen am Markt?", "a_html": "Die INDIBA Radiofrequenz arbeitet mit 448 kHz — einer patentierten Frequenz, die sicher und tief bis zur Hypodermis vordringt. Andere Radiofrequenzen arbeiten oberflächlicher oder sind aggressiver und schmerzhaft. Die INDIBA Radiofrequenz ist die klinische Referenz für tiefe Straffung ohne OP." },
       { "q": "Kann man sie mit anderen Behandlungen kombinieren?", "a_html": "Ja. Die INDIBA Radiofrequenz verstärkt und kombiniert sich problemlos mit Ultherapy, Holztherapie, Mesotherapie und Peelings. In der Diagnose entwerfen wir den optimalen Kombinationsplan für Ihren Fall." },
       { "q": "Wie viele Sitzungen brauche ich?", "a_html": "Wir empfehlen ein Paket mit 10 Sitzungen (1-2 pro Woche). Die genaue Anzahl hängt von der Zone und Ihrem Ziel ab. In der ersten kostenlosen Beratung beurteilen wir Ihren Fall und entwerfen den passenden Plan." },
-      { "q": "Was kostet es?", "a_html": "Das Paket mit 10 Sitzungen à 45 Min. kostet <strong>500 €</strong> — das sind 50 € pro Sitzung, und Sie <strong>sparen 375 €</strong> gegenüber Einzelbuchungen. Es gibt auch ein 10er-Paket à 30 Min. für 350 € und ein 5er-Paket à 30 Min. für 250 €. Die Einzelsitzung kostet je nach Dauer und Zone 45 € bis 85 €. Kostenlose und unverbindliche Erstdiagnose." }
+      { "q": "Was kostet es?", "a_html": "Das Paket mit 10 Sitzungen à 45 Min. kostet <strong>650 €</strong> — das sind 65 € pro Sitzung, und Sie <strong>sparen 425 €</strong> gegenüber Einzelbuchungen. Es gibt auch ein 10er-Paket à 60 Min. für 750 € und ein 5er-Paket à 30 Min. für 395 €. Die Einzelsitzung kostet je nach Dauer und Zone 65 € bis 150 €. Kostenlose und unverbindliche Erstdiagnose." }
     ]
   },
   "final": {

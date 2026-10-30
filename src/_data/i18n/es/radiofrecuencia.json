@@ -1,12 +1,12 @@
 {
   "title": "Radiofrecuencia INDIBA en Benidorm — Lifting sin cirugía · AnyLopez",
-  "description": "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES profunda. Packs 10 sesiones desde 350 €. Resultados desde la primera sesión, sin dolor, sin recuperación.",
+  "description": "Radiofrecuencia INDIBA en AnyLopez Benidorm. Tecnología CRet/RES profunda. Packs desde 395 €. Resultados desde la primera sesión, sin dolor, sin recuperación.",
   "jsonld": {
     "name": "Radiofrecuencia INDIBA",
     "alternateName": "Radiofrecuencia INDIBA Anti-Edad",
-    "description": "Radiofrecuencia profunda INDIBA con tecnología CRet/RES. Tratamiento no invasivo e indoloro para flacidez facial y corporal, celulitis, arrugas y reafirmación. Packs 10 sesiones desde 350 €.",
+    "description": "Radiofrecuencia profunda INDIBA con tecnología CRet/RES. Tratamiento no invasivo e indoloro para flacidez facial y corporal, celulitis, arrugas y reafirmación. Packs desde 395 €.",
     "bodyLocation": ["Cara", "Cuello", "Abdomen", "Glúteos", "Piernas", "Brazos"],
-    "howPerformed": "Aplicación manual con cabezal CRet o RES sobre la zona a tratar durante 30-60 minutos. Sin agujas, sin dolor, sin tiempo de recuperación.",
+    "howPerformed": "Aplicación manual con cabezal CRet o RES sobre la zona a tratar durante 30-75 minutos. Sin agujas, sin dolor, sin tiempo de recuperación.",
     "preparation": "No se requiere preparación previa. Acudir con la piel limpia y sin cremas.",
     "followup": "Plan personalizado de 10 sesiones recomendado. Mantenimiento mensual tras el pack.",
     "offerName": "Pack 10 sesiones (45 min) Radiofrecuencia INDIBA Anti-Edad",
@@ -18,7 +18,7 @@
       { "q": "¿Qué diferencia Radiofrecuencia INDIBA de otras radiofrecuencias?", "a": "La radiofrecuencia INDIBA trabaja a 448 kHz, una frecuencia patentada que penetra hasta las capas profundas (hipodérmica) de manera segura. Otras radiofrecuencias operan en frecuencias más superficiales o son más agresivas y dolorosas. Radiofrecuencia INDIBA es la referencia clínica para reafirmación profunda sin cirugía." },
       { "q": "¿Se puede combinar Radiofrecuencia INDIBA con otros tratamientos?", "a": "Sí. Radiofrecuencia INDIBA potencia y se combina sin problema con Ultherapy, maderoterapia, mesoterapia y peelings. En el diagnóstico gratuito te diseñamos el plan combinado óptimo." },
       { "q": "¿Cuántas sesiones de Radiofrecuencia INDIBA necesito?", "a": "Recomendamos un Pack de 10 sesiones (1-2 por semana) para resultados óptimos. El número exacto depende del área a tratar y el objetivo. En la primera consulta de diagnóstico (gratuita) evaluamos tu caso y diseñamos el plan adecuado." },
-      { "q": "¿Cuánto cuesta el Pack Radiofrecuencia INDIBA?", "a": "El Pack 10 sesiones de 45 min cuesta 500 € — sale a 50 € por sesión y ahorras 375 € frente a comprarlo todo suelto. También hay Pack 10 de 30 min por 350 € y Pack 5 de 30 min por 250 €. La sesión suelta va de 45 € a 85 € según duración y zona. Diagnóstico inicial gratuito y sin compromiso." }
+      { "q": "¿Cuánto cuesta el Pack Radiofrecuencia INDIBA?", "a": "El Pack 10 sesiones de 45 min cuesta 650 € — sale a 65 € por sesión y ahorras 425 € frente a comprarlo todo suelto. También hay Pack 10 de 60 min por 750 € y Pack 5 de 30 min por 395 €. La sesión suelta va de 65 € a 150 € según duración y zona. Diagnóstico inicial gratuito y sin compromiso." }
     ]
   },
   "breadcrumb": { "services": "Servicios", "current": "Radiofrecuencia INDIBA" },
@@ -30,7 +30,7 @@
     "lead": "Si llevas años cuidándote y aun así el espejo te devuelve flacidez, no es tu culpa — las cremas no llegan donde llega Radiofrecuencia INDIBA. Tecnología CRet/RES profunda que estimula tu propio colágeno. Sin agujas, sin dolor, sin recuperación.",
     "ctaPrimary": "Reservar diagnóstico gratuito →",
     "reviews": "reseñas Google",
-    "packMeta_html": "Pack 10 sesiones (45 min) <strong>500 €</strong> (ahorras 375 €)"
+    "packMeta_html": "Pack 10 sesiones (45 min) <strong>650 €</strong> (ahorras 425 €)"
   },
   "pain": {
     "eyebrow": "¿Te suena alguna de estas?",
@@ -87,26 +87,28 @@
     "h2_html": "Todo lo que entra, <em>y todo lo que ahorras</em>.",
     "p_html": "No es una \"oferta\". Es la diferencia entre comprarlo todo suelto a comprarlo bien.",
     "stack": [
-      { "label": "10 sesiones de radiofrecuencia INDIBA de 45 min (CRet/RES)", "price": "650 €" },
+      { "label": "10 sesiones de radiofrecuencia INDIBA de 45 min (CRet/RES)", "price": "850 €" },
       { "label": "Diagnóstico inicial personalizado (30 min)", "price": "80 €" },
       { "label": "Plan de protocolo a medida + ajustes", "price": "50 €" },
       { "label": "Seguimiento entre sesiones (WhatsApp directo)", "price": "30 €" },
       { "label": "Revisión a 60 días tras finalizar el Pack", "price": "65 €" }
     ],
     "totalLabel": "Valor total",
-    "crossed": "875 €",
+    "crossed": "1.075 €",
     "priceLabel": "Tu precio Pack",
-    "final_html": "500&nbsp;€",
-    "savings": "Ahorras 375 € · 43% menos que comprándolo suelto",
+    "final_html": "650&nbsp;€",
+    "savings": "Ahorras 425 € · 40 % menos que comprándolo suelto",
     "waText_html": "Hola,%20me%20interesa%20el%20Pack%20Radiofrecuencia%20INDIBA",
     "ratesTitle": "Todas las tarifas Radiofrecuencia INDIBA",
     "rates": [
-      { "label_html": "Sesión facial o corporal (30 min)", "price_html": "45 €" },
-      { "label_html": "Sesión facial (45 min)", "price_html": "65 €" },
-      { "label_html": "Sesión corporal (60 min, por zona)", "price_html": "85 €" },
-      { "label_html": "Pack 5 sesiones (30 min)", "price_html": "250 €" },
-      { "label_html": "Pack 10 sesiones (30 min)", "price_html": "350 €" },
-      { "label_html": "<strong>Pack 10 sesiones (45 min) — el que más renta</strong>", "price_html": "<strong>500 €</strong>" }
+      { "label_html": "Sesión facial (30 min)", "price_html": "65 €" },
+      { "label_html": "Sesión facial (45 min)", "price_html": "85 €" },
+      { "label_html": "Sesión facial (75 min)", "price_html": "150 €" },
+      { "label_html": "Sesión corporal (30 min, por zona)", "price_html": "85 €" },
+      { "label_html": "Sesión corporal (75 min, por zona)", "price_html": "150 €" },
+      { "label_html": "Pack 5 sesiones (30 min)", "price_html": "395 €" },
+      { "label_html": "<strong>Pack 10 sesiones (45 min) — el que más renta</strong>", "price_html": "<strong>650 €</strong>" },
+      { "label_html": "Pack 10 sesiones (60 min)", "price_html": "750 €" }
     ]
   },
   "tests": {
@@ -140,7 +142,7 @@
       { "q": "¿Qué diferencia Radiofrecuencia INDIBA de otras radiofrecuencias del mercado?", "a_html": "La radiofrecuencia INDIBA trabaja a 448 kHz — una frecuencia patentada que penetra hasta la capa hipodérmica de manera segura y profunda. Otras radiofrecuencias operan en frecuencias más superficiales o son más agresivas y dolorosas. Radiofrecuencia INDIBA es la referencia clínica para reafirmación profunda sin cirugía." },
       { "q": "¿Se puede combinar con otros tratamientos?", "a_html": "Sí. Radiofrecuencia INDIBA potencia y se combina sin problema con Ultherapy, maderoterapia, mesoterapia y peelings. En el diagnóstico te diseñamos el plan combinado óptimo según tu caso." },
       { "q": "¿Cuántas sesiones necesito?", "a_html": "Recomendamos un Pack de 10 sesiones (1-2 por semana). El número exacto depende del área a tratar y tu objetivo. En la primera consulta gratuita evaluamos tu caso y diseñamos el plan adecuado." },
-      { "q": "¿Cuánto cuesta?", "a_html": "El Pack 10 sesiones de 45 min cuesta <strong>500 €</strong> — sale a 50 € por sesión y <strong>ahorras 375 €</strong> frente a comprarlo todo suelto. También hay Pack 10 de 30 min por 350 € y Pack 5 de 30 min por 250 €. La sesión suelta va de 45 € a 85 € según duración y zona. Diagnóstico inicial gratuito y sin compromiso." }
+      { "q": "¿Cuánto cuesta?", "a_html": "El Pack 10 sesiones de 45 min cuesta <strong>650 €</strong> — sale a 65 € por sesión y <strong>ahorras 425 €</strong> frente a comprarlo todo suelto. También hay Pack 10 de 60 min por 750 € y Pack 5 de 30 min por 395 €. La sesión suelta va de 65 € a 150 € según duración y zona. Diagnóstico inicial gratuito y sin compromiso." }
     ]
   },
   "final": {

@@ -1,6 +1,6 @@
 {
   "title": "AnyLopez Benidorm — Ultherapy & INDIBA Radiofrequency",
-  "description": "Aesthetic clinic in Benidorm specialising in Ultherapy and INDIBA radiofrequency. Pack of 10 sessions (45 min) for €500 with guarantee: if you see no improvement, session 11 is on us.",
+  "description": "Aesthetic clinic in Benidorm specialising in Ultherapy and INDIBA radiofrequency. Pack of 10 sessions (45 min) for €650 with guarantee: if you see no improvement, session 11 is on us.",
   "ogTitle": "AnyLopez Benidorm — Ultherapy & INDIBA Radiofrequency Specialists",
   "ogDescPre": "Award-winning aesthetic clinic in Benidorm. INDIBA Radiofrequency, Ultherapy, Botox, facials and more. ",
   "ogDescPost": " five-star reviews. Book your free consultation on WhatsApp.",
@@ -28,7 +28,7 @@
     "aria3": " stars)",
     "ratingSuffix": "verified Google reviews",
     "chipsAria": "INDIBA Radiofrequency Pack benefits",
-    "chips": ["Painless", "No downtime", "Pack (45 min) €500", "Session 11 guarantee"],
+    "chips": ["Painless", "No downtime", "Pack (45 min) €650", "Session 11 guarantee"],
     "guarantee": "If after your 10-session INDIBA Radiofrequency Pack you see no improvement, session 11 is on us."
   },
   "trust": {
@@ -38,14 +38,14 @@
   },
   "pack": {
     "label": "Our signature treatment",
-    "h2_html": "INDIBA Radiofrequency Anti-Ageing Pack<br><em>10 sessions (45 min) for €500</em>",
+    "h2_html": "INDIBA Radiofrequency Anti-Ageing Pack<br><em>10 sessions (45 min) for €650</em>",
     "subtitle": "Firm and rejuvenate your face or body with the technology we trust most. Visible results from the very first sessions — no surgery, no recovery time.",
     "includeH3_html": "What's included in your Pack of 10",
     "items": [
       {
         "name_html": "10 INDIBA radiofrequency sessions (45 min each)",
-        "value": "€650",
-        "reason_html": "A single 45-min session costs €65 at our clinic — paying for 10 single sessions would cost €650."
+        "value": "€850",
+        "reason_html": "A single 45-min session costs €85 at our clinic — paying for 10 single sessions would cost €850."
       },
       {
         "name_html": "Initial assessment + personalised plan for your area",
@@ -69,20 +69,19 @@
         "reason_html": "We're so confident you'll improve that if you don't after 10 sessions, session 11 is on us."
       }
     ],
-    "totalLine_html": "Total value delivered: <s>€875</s>",
-    "price_html": "Your investment today: <strong>€500</strong>",
-    "savings_html": "You save <strong>€375</strong> (43%)",
+    "totalLine_html": "Total value delivered: <s>€1,075</s>",
+    "price_html": "Your investment today: <strong>€650</strong>",
+    "savings_html": "You save <strong>€425</strong> (40%)",
     "tableH3": "Compare your options",
     "thOption": "Option",
     "thPrice": "Price",
     "thPer": "Per session",
     "rows": [
-      { "td": "Single session (45 min)", "p": "€65", "s": "€65" },
-      { "td": "Pack of 10 (30 min/session)", "p": "€350", "s": "€35" },
-      { "td": "Pack of 10 (45 min/session)", "p": "€500", "s": "€50", "hl": true }
+      { "td": "Single session (45 min)", "p": "€85", "s": "€85" },
+      { "td": "Pack of 10 (45 min/session)", "p": "€650", "s": "€65", "hl": true }
     ],
-    "note": "Sessions in the €500 pack last 45 minutes: better price for volume.",
-    "reason_html": "<strong>Why 10 sessions for €500?</strong> Because that's the full protocol. Fewer than 10, and INDIBA Radiofrequency doesn't consolidate results. What we charge is exactly what your skin needs — not one session more, not one less.",
+    "note": "Sessions in the €650 pack last 45 minutes: better price for volume.",
+    "reason_html": "<strong>Why 10 sessions for €650?</strong> Because that's the full protocol. Fewer than 10, and INDIBA Radiofrequency doesn't consolidate results. What we charge is exactly what your skin needs — not one session more, not one less.",
     "waHref": "https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20my%2010-session%20INDIBA%20Radiofrequency%20Anti-Ageing%20Pack.",
     "waCta": "Book my INDIBA Radiofrequency Pack on WhatsApp"
   },
@@ -192,7 +191,7 @@
       },
       {
         "q_html": "Why AnyLopez and not a cheaper clinic or a bigger franchise?",
-        "a_html": "At a franchise, treatment is delivered in series — the same protocol for everyone. Here we carry 35 years of skincare expertise and design every session around your skin: INDIBA Radiofrequency with specific parameters, calibrated timing, session-by-session monitoring. When a cheaper clinic cuts price, they usually cut session length or device intensity. We do the opposite: 10 real 30-minute sessions at the power your skin actually needs — not one less."
+        "a_html": "At a franchise, treatment is delivered in series — the same protocol for everyone. Here we carry 35 years of skincare expertise and design every session around your skin: INDIBA Radiofrequency with specific parameters, calibrated timing, session-by-session monitoring. When a cheaper clinic cuts price, they usually cut session length or device intensity. We do the opposite: 10 real 45-minute sessions at the power your skin actually needs — not one less."
       },
       {
         "q_html": "Is it safe? Are there any contraindications?",
@@ -237,7 +236,7 @@
     },
     {
       "name": "Why AnyLopez and not a cheaper clinic or a bigger franchise?",
-      "text": "At a franchise, treatment is delivered in series — the same protocol for everyone. At AnyLopez we carry 35 years of skincare expertise and design every session around your skin: INDIBA Radiofrequency with specific parameters, calibrated timing, session-by-session monitoring. When a cheaper clinic cuts price, they usually cut session length or device intensity. We do the opposite: 10 real 30-minute sessions at the power your skin actually needs."
+      "text": "At a franchise, treatment is delivered in series — the same protocol for everyone. At AnyLopez we carry 35 years of skincare expertise and design every session around your skin: INDIBA Radiofrequency with specific parameters, calibrated timing, session-by-session monitoring. When a cheaper clinic cuts price, they usually cut session length or device intensity. We do the opposite: 10 real 45-minute sessions at the power your skin actually needs."
     },
     {
       "name": "Is it safe? Are there any contraindications?",

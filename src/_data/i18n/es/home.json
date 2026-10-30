@@ -1,6 +1,6 @@
 {
   "title": "AnyLopez Benidorm — Ultherapy y Pack Radiofrecuencia INDIBA",
-  "description": "Clínica estética en Benidorm especializada en Ultherapy y radiofrecuencia INDIBA. Pack 10 sesiones (45 min) por 500 € con garantía: si no notas mejora, sesión 11 gratis.",
+  "description": "Clínica estética en Benidorm especializada en Ultherapy y radiofrecuencia INDIBA. Pack 10 sesiones (45 min) por 650 € con garantía: si no notas mejora, sesión 11 gratis.",
   "ogTitle": "AnyLopez Benidorm — Especialistas en Ultherapy y Radiofrecuencia INDIBA",
   "ogDescPre": "Clínica estética en Benidorm. Radiofrecuencia INDIBA, Ultherapy, Botox, tratamientos faciales y más. ",
   "ogDescPost": " reseñas de cinco estrellas. Reserva tu consulta gratuita por WhatsApp.",
@@ -28,7 +28,7 @@
     "aria3": " estrellas)",
     "ratingSuffix": "reseñas verificadas en Google",
     "chipsAria": "Ventajas del Pack Radiofrecuencia INDIBA",
-    "chips": ["Sin dolor", "Sin recuperación", "Pack (45 min) 500 €", "Garantía sesión 11"],
+    "chips": ["Sin dolor", "Sin recuperación", "Pack (45 min) 650 €", "Garantía sesión 11"],
     "guarantee": "Si tras tu Pack 10 Radiofrecuencia INDIBA no notas mejora, tu sesión 11 es gratis."
   },
   "trust": {
@@ -38,14 +38,14 @@
   },
   "pack": {
     "label": "Tratamiento estrella",
-    "h2_html": "Pack Radiofrecuencia INDIBA Anti-Edad<br><em>10 sesiones (45 min) por 500 €</em>",
+    "h2_html": "Pack Radiofrecuencia INDIBA Anti-Edad<br><em>10 sesiones (45 min) por 650 €</em>",
     "subtitle": "Reafirma rostro o cuerpo con la tecnología que más recomendamos. Resultados visibles desde las primeras sesiones, sin cirugía y sin recuperación.",
     "includeH3_html": "Qué incluye tu Pack 10",
     "items": [
       {
         "name_html": "10 sesiones radiofrecuencia INDIBA (45 min)",
-        "value": "650 €",
-        "reason_html": "Sesión suelta de 45 min cuesta 65 € en clínica — pagar 10 sesiones sueltas saldría a 650 €."
+        "value": "850 €",
+        "reason_html": "Sesión suelta de 45 min cuesta 85 € en clínica — pagar 10 sesiones sueltas saldría a 850 €."
       },
       {
         "name_html": "Diagnóstico inicial + plan personalizado por zona",
@@ -69,20 +69,19 @@
         "reason_html": "Tan seguras estamos de tu mejora que, si no la notas en las 10 sesiones, la 11ª la pagamos nosotras."
       }
     ],
-    "totalLine_html": "Valor total entregado: <s>875 €</s>",
-    "price_html": "Tu inversión hoy: <strong>500 €</strong>",
-    "savings_html": "Ahorras <strong>375 €</strong> (43 %)",
+    "totalLine_html": "Valor total entregado: <s>1.075 €</s>",
+    "price_html": "Tu inversión hoy: <strong>650 €</strong>",
+    "savings_html": "Ahorras <strong>425 €</strong> (40 %)",
     "tableH3": "Compara opciones",
     "thOption": "Opción",
     "thPrice": "Precio",
     "thPer": "Por sesión",
     "rows": [
-      { "td": "Sesión suelta (45 min)", "p": "65 €", "s": "65 €" },
-      { "td": "Pack 10 (30 min/sesión)", "p": "350 €", "s": "35 €" },
-      { "td": "Pack 10 (45 min/sesión)", "p": "500 €", "s": "50 €", "hl": true }
+      { "td": "Sesión suelta (45 min)", "p": "85 €", "s": "85 €" },
+      { "td": "Pack 10 (45 min/sesión)", "p": "650 €", "s": "65 €", "hl": true }
     ],
-    "note": "Las sesiones del pack de 500 € duran 45 minutos: mejor precio por volumen.",
-    "reason_html": "<strong>¿Por qué 10 sesiones a 500 €?</strong> Porque es el protocolo completo. Por debajo de 10, Radiofrecuencia INDIBA no consolida resultado. Lo que cobramos es lo que tu piel necesita — ni una sesión más, ni una menos.",
+    "note": "Las sesiones del pack de 650 € duran 45 minutos: mejor precio por volumen.",
+    "reason_html": "<strong>¿Por qué 10 sesiones a 650 €?</strong> Porque es el protocolo completo. Por debajo de 10, Radiofrecuencia INDIBA no consolida resultado. Lo que cobramos es lo que tu piel necesita — ni una sesión más, ni una menos.",
     "waHref": "https://wa.me/34656306167?text=Hola%2C%20quiero%20reservar%20mi%20Pack%20Radiofrecuencia%20INDIBA%20Anti-Edad%20de%2010%20sesiones.",
     "waCta": "Reservar mi Pack Radiofrecuencia INDIBA por WhatsApp"
   },
@@ -192,7 +191,7 @@
       },
       {
         "q_html": "¿Por qué AnyLopez y no una clínica más barata o una franquicia más grande?",
-        "a_html": "En franquicia te tratan en serie con un protocolo idéntico para todas. Aquí heredamos 35 años de oficio y diseñamos cada sesión a tu piel — Radiofrecuencia INDIBA con parámetros específicos, tiempos calibrados, seguimiento sesión a sesión. Y cuando en una clínica más barata reducen el coste, normalmente reducen el tiempo de cada sesión o la potencia del equipo. Nosotras hacemos lo contrario: 10 sesiones reales de 30 minutos a la potencia que tu piel necesita, ni una de menos."
+        "a_html": "En franquicia te tratan en serie con un protocolo idéntico para todas. Aquí heredamos 35 años de oficio y diseñamos cada sesión a tu piel — Radiofrecuencia INDIBA con parámetros específicos, tiempos calibrados, seguimiento sesión a sesión. Y cuando en una clínica más barata reducen el coste, normalmente reducen el tiempo de cada sesión o la potencia del equipo. Nosotras hacemos lo contrario: 10 sesiones reales de 45 minutos a la potencia que tu piel necesita, ni una de menos."
       },
       {
         "q_html": "¿Es seguro? ¿Tiene contraindicaciones?",
@@ -237,7 +236,7 @@
     },
     {
       "name": "¿Por qué AnyLopez y no una clínica más barata o una franquicia más grande?",
-      "text": "En franquicia te tratan en serie con un protocolo idéntico para todas. En AnyLopez heredamos 35 años de oficio y diseñamos cada sesión a tu piel: Radiofrecuencia INDIBA con parámetros específicos, tiempos calibrados y seguimiento sesión a sesión. Cuando una clínica más barata reduce el precio, normalmente reduce el tiempo de cada sesión o la potencia del equipo. Aquí hacemos lo contrario: 10 sesiones de 30 minutos a la potencia que tu piel necesita."
+      "text": "En franquicia te tratan en serie con un protocolo idéntico para todas. En AnyLopez heredamos 35 años de oficio y diseñamos cada sesión a tu piel: Radiofrecuencia INDIBA con parámetros específicos, tiempos calibrados y seguimiento sesión a sesión. Cuando una clínica más barata reduce el precio, normalmente reduce el tiempo de cada sesión o la potencia del equipo. Aquí hacemos lo contrario: 10 sesiones de 45 minutos a la potencia que tu piel necesita."
     },
     {
       "name": "¿Es seguro? ¿Tiene contraindicaciones?",
