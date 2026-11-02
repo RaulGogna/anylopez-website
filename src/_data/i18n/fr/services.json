@@ -2,11 +2,6 @@
   "title": "Soins chez AnyLopez Clinique Esthétique — Benidorm",
   "description": "Huit spécialités, un seul savoir-faire. Catalogue éditorial de soins du visage, du corps, injectables et technologies esthétiques chez AnyLopez Clinique Esthétique, Benidorm.",
   "breadcrumb": "Soins",
-  "css": {
-    "eyebrowColor": "var(--terra-dk)",
-    "tratListColor": "var(--text-mid)",
-    "flagshipLabel": "Radiofréquence INDIBA"
-  },
   "hero": {
     "eyebrow": "Catalogue · 8 spécialités",
     "h1_html": "Huit spécialités,<br><em>un seul savoir-faire.</em>",
@@ -15,21 +10,25 @@
     "treatments": "soins disponibles",
     "free": "Diagnostic initial gratuit"
   },
-  "catLabels": {
-    "limpiezas-faciales": "Hygiène + soin régulier",
-    "tratamientos-faciales": "Rénovation · Anti-acné · Taches pigmentaires",
-    "lifting-antiaging": "Raffermissement sans chirurgie",
-    "inyectables": "Médecine esthétique avancée",
-    "corporal": "Corps · Tonicité · Récupération",
-    "masajes": "Manuel · Thérapeutique · Drainage",
-    "estetica-decorativa": "Cils · Micropigmentation",
-    "depilacion": "IPL · Peaux apaisées"
+  "nav": {
+    "categories": "Catégories de soins",
+    "goals": "Filtrer par objectif",
+    "all": "Tous"
   },
-  "cards": {
+  "goals": {
+    "arrugas-flacidez": "Rides et relâchement",
+    "manchas-tono": "Taches et teint",
+    "acne-cicatrices": "Acné et cicatrices",
+    "luminosidad": "Éclat et hydratation",
+    "celulitis-cuerpo": "Cellulite et graisse localisée",
+    "piernas-retencion": "Jambes et rétention d'eau",
+    "relax-tension": "Détente et tensions musculaires",
+    "belleza-depilacion": "Maquillage, cils et épilation"
+  },
+  "list": {
     "flag": "Spécialité phare",
-    "altSuffix": "chez AnyLopez Benidorm",
-    "unit": "soin",
-    "cta": "Voir les soins"
+    "from": "dès",
+    "count": "Soins affichés : {shown} sur {total}"
   },
   "trust": {
     "reviews": "avis vérifiés sur Google",

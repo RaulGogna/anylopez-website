@@ -2,11 +2,6 @@
   "title": "Behandlungen in der AnyLopez Ästhetikklinik — Benidorm",
   "description": "Acht Spezialgebiete, ein Handwerk. Redaktioneller Katalog der Gesichts-, Körper- und Injektionsbehandlungen sowie apparativen Kosmetik in der AnyLopez Ästhetikklinik, Benidorm.",
   "breadcrumb": "Behandlungen",
-  "css": {
-    "eyebrowColor": "var(--terra-dk)",
-    "tratListColor": "var(--text-mid)",
-    "flagshipLabel": "INDIBA Radiofrequenz"
-  },
   "hero": {
     "eyebrow": "Katalog · 8 Spezialgebiete",
     "h1_html": "Acht Spezialgebiete,<br><em>ein Handwerk.</em>",
@@ -15,21 +10,25 @@
     "treatments": "verfügbare Behandlungen",
     "free": "Kostenlose Erstdiagnose"
   },
-  "catLabels": {
-    "limpiezas-faciales": "Reinigung + regelmäßige Pflege",
-    "tratamientos-faciales": "Erneuerung · Anti-Akne · Pigmentflecken",
-    "lifting-antiaging": "Straffung ohne OP",
-    "inyectables": "Fortgeschrittene ästhetische Medizin",
-    "corporal": "Körper · Tonus · Regeneration",
-    "masajes": "Manuell · Therapeutisch · Drainage",
-    "estetica-decorativa": "Wimpern · Micropigmentierung",
-    "depilacion": "IPL · Gepflegte Haut"
+  "nav": {
+    "categories": "Behandlungskategorien",
+    "goals": "Nach Ziel filtern",
+    "all": "Alle"
   },
-  "cards": {
+  "goals": {
+    "arrugas-flacidez": "Falten und Erschlaffung",
+    "manchas-tono": "Pigmentflecken und Hautton",
+    "acne-cicatrices": "Akne und Narben",
+    "luminosidad": "Frische und Feuchtigkeit",
+    "celulitis-cuerpo": "Cellulite und lokale Fettpolster",
+    "piernas-retencion": "Beine und Wassereinlagerungen",
+    "relax-tension": "Entspannung und Muskelverspannungen",
+    "belleza-depilacion": "Make-up, Wimpern und Haarentfernung"
+  },
+  "list": {
     "flag": "Star-Spezialgebiet",
-    "altSuffix": "bei AnyLopez Benidorm",
-    "unit": "Behandlung",
-    "cta": "Behandlungen ansehen"
+    "from": "ab",
+    "count": "Angezeigte Behandlungen: {shown} von {total}"
   },
   "trust": {
     "reviews": "verifizierte Bewertungen auf Google",

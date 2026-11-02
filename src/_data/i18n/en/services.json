@@ -2,11 +2,6 @@
   "title": "Aesthetic Treatments at AnyLopez Clinic — Benidorm",
   "description": "Eight specialities, one craft. Editorial catalogue of facial, body, injectable and apparatology treatments at AnyLopez Aesthetic Clinic, Benidorm.",
   "breadcrumb": "Services",
-  "css": {
-    "eyebrowColor": "var(--terra)",
-    "tratListColor": "var(--text-light)",
-    "flagshipLabel": "INDIBA Radiofrequency"
-  },
   "hero": {
     "eyebrow": "Catalogue · 8 specialities",
     "h1_html": "Eight specialities,<br><em>one craft.</em>",
@@ -15,21 +10,25 @@
     "treatments": "treatments available",
     "free": "Free initial assessment"
   },
-  "catLabels": {
-    "limpiezas-faciales": "Hygiene + regular care",
-    "tratamientos-faciales": "Renewal · Anti-acne · Pigmentation",
-    "lifting-antiaging": "Non-surgical firming",
-    "inyectables": "Advanced aesthetic medicine",
-    "corporal": "Body · Tone · Recovery",
-    "masajes": "Manual · Therapeutic · Drainage",
-    "estetica-decorativa": "Lashes · Semi-permanent make-up",
-    "depilacion": "IPL · Comfortable for sensitive skin"
+  "nav": {
+    "categories": "Treatment categories",
+    "goals": "Filter by goal",
+    "all": "All"
   },
-  "cards": {
+  "goals": {
+    "arrugas-flacidez": "Wrinkles & sagging",
+    "manchas-tono": "Dark spots & skin tone",
+    "acne-cicatrices": "Acne & scars",
+    "luminosidad": "Radiance & hydration",
+    "celulitis-cuerpo": "Cellulite & localised fat",
+    "piernas-retencion": "Legs & fluid retention",
+    "relax-tension": "Relaxation & muscle tension",
+    "belleza-depilacion": "Make-up, lashes & hair removal"
+  },
+  "list": {
     "flag": "Flagship speciality",
-    "altSuffix": "at AnyLopez Benidorm",
-    "unit": "treatment",
-    "cta": "View treatments"
+    "from": "from",
+    "count": "Treatments shown: {shown} of {total}"
   },
   "trust": {
     "reviews": "verified Google reviews",

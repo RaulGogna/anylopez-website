@@ -65,7 +65,7 @@
   {% endif %}
   <link rel="stylesheet" href="{{ '/css/styles.css' | url | bust }}" />
   <style>.lang-dropdown li a[data-lang="{{ l.code }}"] { color: var(--terra, #8b3a1a); font-weight: 600; }</style>
-  {% if legalPage %}<link rel="stylesheet" href="{{ '/assets/css/legal.css' | url | bust }}" />{% endif %}{% if categoryPage %}<link rel="stylesheet" href="{{ '/css/category.css' | url | bust }}" />{% endif %}
+  {% if legalPage %}<link rel="stylesheet" href="{{ '/assets/css/legal.css' | url | bust }}" />{% endif %}{% if pageCss %}<link rel="stylesheet" href="{{ ('/css/' + pageCss + '.css') | url | bust }}" />{% endif %}
 
   {%- set _crumbName = t.crumbs[curEntry.key] if curEntry else null -%}
   {%- if _crumbName -%}
