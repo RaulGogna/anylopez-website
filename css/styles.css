@@ -1147,9 +1147,10 @@ button[type="submit"] {
 }
 .lead-strip-inner > * { min-width: 0; }
 .lead-form {
-  display: flex; gap: 12px; align-items: stretch; flex-wrap: nowrap;
+  display: flex; gap: 12px; align-items: stretch; flex-wrap: wrap;
 }
-.lead-form input:not([type="hidden"]),
+.lead-form .form-consent { flex: 0 0 100%; margin-top: 0; }
+.lead-form input:not([type="hidden"]):not([type="checkbox"]),
 .lead-form select {
   flex: 1; min-width: 0;
   background: #fff; border: 1.5px solid var(--border);
