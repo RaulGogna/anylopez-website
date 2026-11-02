@@ -40,10 +40,13 @@
     }
   }, true);
 
+  // El <form method="dialog"> del modal solo cierra el diálogo: no es un formulario del visitante.
+  function isDialogForm(form) { return form.getAttribute('method') === 'dialog'; }
+
   var formsStarted = new WeakSet();
   document.addEventListener('focusin', function (e) {
     var form = e.target.closest('form');
-    if (!form || formsStarted.has(form)) return;
+    if (!form || isDialogForm(form) || formsStarted.has(form)) return;
     formsStarted.add(form);
     var formName = form.dataset.formName || form.id || 'unknown';
     track('form_started', { form: formName });
@@ -51,7 +54,7 @@
 
   document.addEventListener('submit', function (e) {
     var form = e.target;
-    if (!form || form.tagName !== 'FORM') return;
+    if (!form || form.tagName !== 'FORM' || isDialogForm(form)) return;
     var formName = form.dataset.formName || form.id || 'unknown';
     track('form_submitted', { form: formName });
   });

@@ -53,7 +53,7 @@ eleventyComputed:
     </nav>
 
     <div class="svc-goals" hidden>
-      <p class="svc-goals-label" id="svc-goals-label">{{ tx.nav.goals }}</p>
+      <p class="svc-goals-label" id="svc-goals-label">{{ tx.nav.goalsLabel }}</p>
       <ul class="svc-chips" aria-labelledby="svc-goals-label">
         <li><button type="button" class="svc-chip" data-goal="" aria-pressed="true" data-event="treatment_goal_filtered" data-event-props='{"goal":"all"}'>{{ tx.nav.all }}</button></li>
         {%- for goal in catalogo.objetivos %}
@@ -64,7 +64,7 @@ eleventyComputed:
     </div>
 
     {%- for cat in tdata.categorias %}
-    <section class="svc-group" id="{{ cat.id }}" data-cat="{{ cat.id }}">
+    <section class="svc-group" id="{{ cat.id }}">
       <header class="svc-group-head">
         <h2><a href="{{ (l.prefix + '/services/' + cat.id + '/') | url }}">{{ cat.nombre }}</a></h2>
         {%- if cat.id == "lifting-antiaging" %}<span class="svc-group-flag">{{ tx.list.flag }}</span>{% endif %}
@@ -72,13 +72,13 @@ eleventyComputed:
       </header>
       <ul class="svc-rows">
         {%- for t in tdata.tratamientos | byCategory(cat.id) %}
-        {%- set desde = preciosDesde[t.slug] %}
+        {%- set minimo = preciosDesde[t.slug] %}
         <li>
           <a class="svc-row" href="{{ (l.prefix + '/services/' + cat.id + '/#' + t.slug) | url }}" data-slug="{{ t.slug }}">
             <span class="svc-row-name">{{ t.nombre }}</span>
             <span class="svc-row-meta">{{ t.duracion }}</span>
-            {%- if desde %}
-            <span class="svc-row-price">{% if desde.desde %}<span class="svc-row-from">{{ tx.list.from }}</span>{% endif %}<bdi>{{ desde.precio }}</bdi></span>
+            {%- if minimo %}
+            <span class="svc-row-price">{% if minimo.esDesde %}<span class="svc-row-from">{{ tx.list.from }}</span>{% endif %}<bdi>{{ minimo.precio }}</bdi></span>
             {%- endif %}
           </a>
         </li>

@@ -12,7 +12,7 @@
   },
   "nav": {
     "categories": "Catégories de soins",
-    "goals": "Filtrer par objectif",
+    "goalsLabel": "Filtrer par objectif",
     "all": "Tous"
   },
   "goals": {

@@ -140,6 +140,7 @@
     const trigger = e.target.closest('[data-slug]');
     if (!trigger) return;
     if (dialog.contains(trigger)) return;
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     open(trigger.dataset.slug);
   });

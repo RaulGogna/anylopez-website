@@ -142,8 +142,23 @@
 
 
 /* ─── CARTA DE TRATAMIENTOS ───────────────────────── */
+:root {
+  --chip-h: 44px;
+  /* chip + 2 × 8px de padding + 1px de borde: lo que ocupa la fila de categorías fija */
+  --svc-nav-h: calc(var(--chip-h) + 17px);
+}
+/* El foco y las anclas no deben quedar bajo la cabecera, la fila fija ni la barra móvil (74px). */
+html {
+  scroll-padding-top: calc(var(--header-h) + var(--svc-nav-h) + 8px);
+  scroll-padding-bottom: 16px;
+}
+@media (max-width: 768px) {
+  html { scroll-padding-bottom: 90px; }
+  /* Sin esto el último enlace del pie no se puede subir por encima de la barra móvil. */
+  .site-footer { padding-bottom: 52px; }
+}
+
 .svc-index {
-  --svc-nav-h: 61px;
   padding: 0 0 40px;
   background: var(--ivory);
 }
@@ -170,7 +185,7 @@
 .svc-chip {
   display: inline-flex;
   align-items: center;
-  min-block-size: 44px;
+  min-block-size: var(--chip-h);
   padding-inline: 16px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -204,11 +219,10 @@
   font-size: 13px;
   color: var(--text-mid);
 }
-.svc-count:empty { display: none; }
+.svc-count:empty { margin: 0; }
 
 .svc-group {
   padding-block: 16px 0;
-  scroll-margin-top: calc(var(--header-h) + var(--svc-nav-h) + 8px);
 }
 .svc-group[hidden] { display: none; }
 .svc-group-head h2 {
@@ -262,7 +276,7 @@
   text-decoration: none;
   transition: background 0.2s var(--ease);
 }
-.svc-row:hover { background: rgba(237, 228, 216, 0.45); }
+.svc-row:hover { background: color-mix(in srgb, var(--sand) 45%, transparent); }
 .svc-row:focus-visible { outline: 2px solid var(--terra); outline-offset: -2px; }
 .svc-row-name {
   grid-column: 1;
@@ -311,7 +325,7 @@
 }
 @media (max-width: 640px) {
   .svc-hero { padding: 48px 0 40px; }
-  .svc-trust { padding: 40px 0; }
-  .svc-flagship { padding: 48px 0; }
-  .svc-final-cta { padding: 48px 0; }
+  .svc-trust { padding: 32px 0; }
+  .svc-flagship { padding: 40px 0; }
+  .svc-final-cta { padding: 40px 0; }
 }

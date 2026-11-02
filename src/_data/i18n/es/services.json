@@ -12,7 +12,7 @@
   },
   "nav": {
     "categories": "Categorías de tratamientos",
-    "goals": "Filtrar por objetivo",
+    "goalsLabel": "Filtrar por objetivo",
     "all": "Todos"
   },
   "goals": {

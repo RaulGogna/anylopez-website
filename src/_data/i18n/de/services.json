@@ -12,7 +12,7 @@
   },
   "nav": {
     "categories": "Behandlungskategorien",
-    "goals": "Nach Ziel filtern",
+    "goalsLabel": "Nach Ziel filtern",
     "all": "Alle"
   },
   "goals": {
