@@ -19,9 +19,6 @@
       { "q": "¿Embarazo o lactancia?", "a": "Inyectables están contraindicados en embarazo y lactancia. Esperamos hasta que termines la lactancia para empezar plan." }
     ]
   },
-  "css": {
-    "xsellComment": "Radiofrecuencia INDIBA"
-  },
   "breadcrumb": { "services": "Servicios", "current_html": "Medicina Estética Inyectable" },
   "callCta": "Llamar 656 306 167",
   "hero": {

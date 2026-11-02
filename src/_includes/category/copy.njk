@@ -1,0 +1,3 @@
+{%- macro copy(obj, key) -%}
+{%- if obj[key + '_html'] is defined -%}{{ obj[key + '_html'] | safe }}{%- else -%}{{ obj[key] }}{%- endif -%}
+{%- endmacro -%}

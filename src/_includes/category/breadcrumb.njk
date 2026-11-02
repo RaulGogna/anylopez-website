@@ -1,0 +1,11 @@
+{% import "category/copy.njk" as c %}
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="{{ (l.prefix + '/') | url }}">{{ i18n[l.code].chrome.breadcrumbHome }}</a>
+    <span>›</span>
+    <a href="{{ (l.prefix + '/services/') | url }}">{{ tx.breadcrumb.services }}</a>
+    <span>›</span>
+    <span>{{ c.copy(tx.breadcrumb, 'current') }}</span>
+  </div>
+</div>

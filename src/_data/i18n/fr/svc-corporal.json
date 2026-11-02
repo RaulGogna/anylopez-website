@@ -19,12 +19,6 @@
       { "q": "La manipulation me fera-t-elle mal ?", "a": "Le drainage lymphatique est très doux — il ne fait pas mal. La madérothérapie et la récupération musculaire ont une intensité moyenne à élevée selon votre tolérance, mais toujours dans le seuil thérapeutique. Si à un moment c'est trop, nous ajustons. Nous ne soignons personne qui serre les dents." }
     ]
   },
-  "css": {
-    "xsellComment": "Radiofréquence INDIBA"
-  },
-  "comments": {
-    "xsell": "Radiofréquence INDIBA"
-  },
   "breadcrumb": { "services": "Soins", "current": "Soins du Corps" },
   "callCta": "Appeler le 656 306 167",
   "hero": {

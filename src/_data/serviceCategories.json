@@ -1,0 +1,60 @@
+{
+  "defaults": {
+    "sections": ["hero", "pain", "why", "grid", "xsell", "tests", "process", "faq", "final"],
+    "gridSectionClass": "cat-page-section",
+    "gridHeadClass": "cat-page-section-head",
+    "card": { "width": 540, "height": 220 },
+    "incluyeLimit": 3,
+    "linkedTreatments": {},
+    "xsellHref": "/radiofrecuencia/"
+  },
+  "categories": [
+    {
+      "id": "corporal",
+      "heroImage": "/images/tratamientos/maderoterapia"
+    },
+    {
+      "id": "depilacion",
+      "heroImage": "/images/tratamientos/depilacion-ipl",
+      "card": { "width": 540, "height": 260 },
+      "incluyeLimit": null,
+      "xsellHref": "/services/masajes/"
+    },
+    {
+      "id": "estetica-decorativa",
+      "heroImage": "/images/tratamientos/micropigmentacion",
+      "xsellHref": "/services/limpiezas-faciales/"
+    },
+    {
+      "id": "inyectables",
+      "heroImage": "/images/fotoscatalogoanylopez/rellenoacidohialuronico",
+      "xsellHref": "/services/lifting-antiaging/"
+    },
+    {
+      "id": "lifting-antiaging",
+      "heroImage": "/images/fotoscatalogoanylopez/ultherapyfacial",
+      "linkedTreatments": { "radiofrecuencia-indiba": "/radiofrecuencia/" }
+    },
+    {
+      "id": "limpiezas-faciales",
+      "heroImage": "/images/fotoscatalogoanylopez/limpiezafacial",
+      "xsellHref": "/services/tratamientos-faciales/"
+    },
+    {
+      "id": "masajes",
+      "heroImage": "/images/tratamientos/masajes",
+      "sections": ["hero", "pain", "why", "xsell", "grid", "tests", "process", "faq", "final"],
+      "xsellHref": "/services/corporal/"
+    },
+    {
+      "id": "tratamientos-faciales",
+      "heroImage": "/images/fotoscatalogoanylopez/dermapen",
+      "sections": ["hero", "pain", "why", "grid", "cross", "tests", "process", "faq", "final"],
+      "gridSectionClass": "cat-page-grid-section",
+      "gridHeadClass": "cat-page-grid-head",
+      "card": { "width": 400, "height": 200 },
+      "crossHrefs": ["/radiofrecuencia/", "/services/inyectables/"],
+      "specialties": ["https://schema.org/Dermatologic", "https://schema.org/PlasticSurgery"]
+    }
+  ]
+}

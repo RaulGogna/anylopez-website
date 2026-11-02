@@ -1,0 +1,16 @@
+{% import "category/copy.njk" as c %}
+<!-- TREATMENTS GRID -->
+<section class="{{ cat.gridSectionClass }}">
+  <div class="container">
+    <div class="{{ cat.gridHeadClass }}">
+      <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
+      <h2>{{ tx.grid.h2 }}</h2>
+      <p>{{ c.copy(tx.grid, 'p') }}</p>
+    </div>
+    <div class="cat-page-grid">
+      {%- for trat in tdata.tratamientos | byCategory(cat.id) %}
+      {% include "category/card.njk" %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

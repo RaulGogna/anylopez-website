@@ -1,0 +1,12 @@
+{% import "category/copy.njk" as c %}
+<!-- CROSS-SELL BAND -->
+<section class="cat-page-xsell">
+  <div class="container">
+    <div class="cat-page-xsell-inner">
+      <span class="eyebrow">{{ tx.xsell.eyebrow }}</span>
+      <h2>{{ tx.xsell.h2_html | safe }}</h2>
+      <p>{{ c.copy(tx.xsell, 'p') }}</p>
+      <a href="{{ (l.prefix + cat.xsellHref) | url }}" class="btn btn-accent">{{ c.copy(tx.xsell, 'cta') }}</a>
+    </div>
+  </div>
+</section>

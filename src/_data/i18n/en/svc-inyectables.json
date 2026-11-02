@@ -19,9 +19,6 @@
       { "q": "Pregnancy or breastfeeding?", "a": "Injectables are contraindicated during pregnancy and breastfeeding. We wait until you finish breastfeeding before starting any plan." }
     ]
   },
-  "css": {
-    "xsellComment": "INDIBA Radiofrequency"
-  },
   "breadcrumb": { "services": "Services", "current_html": "Botox & Fillers" },
   "callCta": "Call 656 306 167",
   "hero": {

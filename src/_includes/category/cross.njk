@@ -1,0 +1,21 @@
+<!-- CROSS-SELL BAND -->
+<section class="cat-page-cross">
+  <div class="container">
+    <div class="cat-page-cross-head">
+      <span class="eyebrow">{{ tx.cross.eyebrow }}</span>
+      <h2>{{ tx.cross.h2_html | safe }}</h2>
+      <p>{{ tx.cross.p_html | safe }}</p>
+    </div>
+    <div class="cat-page-cross-grid">
+      {%- for href in cat.crossHrefs %}
+      {%- set card = tx.cross['card' + loop.index] %}
+      <a href="{{ (l.prefix + href) | url }}" class="cat-page-cross-card">
+        <span class="eyebrow">{{ card.eyebrow }}</span>
+        <h3>{{ card.h3_html | safe }}</h3>
+        <p>{{ card.p_html | safe }}</p>
+        <span class="arrow">{{ card.arrow_html | safe }}</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

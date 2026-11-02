@@ -1,0 +1,22 @@
+{% import "category/copy.njk" as c %}
+<!-- PROCESS -->
+<section class="cat-page-process">
+  <div class="container">
+    <div class="cat-page-process-head">
+      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+      <h2>{{ tx.process.h2 }}</h2>
+      <p>{{ c.copy(tx.process, 'p') }}</p>
+    </div>
+    <div class="cat-page-steps">
+      {%- for it in tx.process.steps %}
+      <div class="cat-page-step">
+        <div class="cat-page-step-num">{{ loop.index }}</div>
+        <div class="cat-page-step-body">
+          <h3>{{ c.copy(it, 'h3') }}</h3>
+          <p>{{ c.copy(it, 'p') }}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
