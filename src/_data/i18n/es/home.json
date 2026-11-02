@@ -310,7 +310,6 @@
     "leadComment": "── Lead form AJAX (evitar redirect a Formspree) ──",
     "sending": "Enviando...",
     "send": "Enviar mensaje",
-    "book": "Solicitar cita",
     "err": "Error al enviar. Llámanos al 656 306 167."
   }
 }

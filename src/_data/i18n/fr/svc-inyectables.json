@@ -19,9 +19,6 @@
       { "q": "Grossesse ou allaitement ?", "a": "Les injectables sont contre-indiqués pendant la grossesse et l'allaitement. Nous attendons la fin de l'allaitement pour commencer le plan." }
     ]
   },
-  "css": {
-    "xsellComment": "Radiofréquence INDIBA"
-  },
   "breadcrumb": { "services": "Soins", "current_html": "Médecine Esthétique Injectable" },
   "callCta": "Appeler le 656 306 167",
   "hero": {

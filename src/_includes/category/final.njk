@@ -1,0 +1,13 @@
+{% import "category/copy.njk" as c %}
+<!-- FINAL CTA -->
+<section class="cat-page-final">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--gold);">{{ tx.final.eyebrow }}</span>
+    <h2>{{ tx.final.h2_html | safe }}</h2>
+    <p>{{ c.copy(tx.final, 'p') }}</p>
+    <div class="cat-page-final-row">
+      <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
+      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
+    </div>
+  </div>
+</section>

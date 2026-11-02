@@ -13,6 +13,12 @@
         {%- endfor %}
       </select>
       <button type="submit" class="btn btn-terra">{{ tp.leadStrip.submit }}</button>
+      <div class="form-consent">
+        <label class="consent-label">
+          <input type="checkbox" name="_consent" required />
+          {{ i18n[l.code].contact.form.consent_html | replace("{privacyUrl}", (l.prefix + '/privacidad/') | url) | safe }}
+        </label>
+      </div>
     </form>
     <p id="leadFormMsg">{{ tp.leadStrip.msg_html | safe }}</p>
   </div>

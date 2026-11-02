@@ -1,0 +1,26 @@
+---
+layout: base.njk
+pagination:
+  data: categoryPages
+  size: 1
+  alias: catPage
+categoryPage: true
+---
+{%- set cat = catPage.cat %}
+{%- set tx = i18n[l.code]['svc-' + cat.id] %}
+{%- set tdata = catalogo[l.code] %}
+{% include "category/jsonld.njk" %}
+
+<div class="category-page" data-category="{{ cat.id }}">
+{% include "category/breadcrumb.njk" %}
+{%- for section in cat.sections %}
+
+{% include "category/" + section + ".njk" %}
+{%- endfor %}
+</div>
+
+<!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{%- set tratamientos = tdata %}
+{% include "treatment-modal.njk" %}
+
+{% include "category/faq-script.njk" %}

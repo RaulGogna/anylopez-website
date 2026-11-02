@@ -34,12 +34,6 @@
       }
     ]
   },
-  "css": {
-    "xsellComment": "Radiofrecuencia INDIBA"
-  },
-  "comments": {
-    "xsell": "Радіочастота INDIBA"
-  },
   "breadcrumb": {
     "services": "Послуги",
     "current": "Тілесні процедури"

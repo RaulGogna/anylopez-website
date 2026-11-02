@@ -1,0 +1,20 @@
+<!-- TESTIMONIOS -->
+<section class="cat-page-tests">
+  <div class="container">
+    <div class="cat-page-tests-head">
+      <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
+      <h2>{{ tx.tests.h2 }}</h2>
+      <p>{{ tx.tests.p }}</p>
+    </div>
+    <div class="cat-page-tests-grid">
+      {%- for it in tx.tests.items %}
+      <div class="cat-page-test">
+        <div class="cat-page-test-stars">★★★★★</div>
+        <p class="cat-page-test-quote">{{ it.quote_html | safe }}</p>
+        <div class="cat-page-test-author">{{ it.author }}</div>
+        <div class="cat-page-test-meta">{{ it.meta }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

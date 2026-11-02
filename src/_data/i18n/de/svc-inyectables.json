@@ -19,9 +19,6 @@
       { "q": "Schwangerschaft oder Stillzeit?", "a": "Injektionen sind in Schwangerschaft und Stillzeit kontraindiziert. Wir warten mit dem Behandlungsplan bis zum Ende der Stillzeit." }
     ]
   },
-  "css": {
-    "xsellComment": "INDIBA Radiofrequenz"
-  },
   "breadcrumb": { "services": "Behandlungen", "current_html": "Ästhetische Injektionen" },
   "callCta": "Anrufen: 656 306 167",
   "hero": {

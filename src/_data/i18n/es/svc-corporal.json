@@ -19,12 +19,6 @@
       { "q": "¿La manipulación me dolerá?", "a": "El drenaje linfático es muy suave — no duele. La maderoterapia y la recuperación muscular tienen una intensidad media-alta dependiendo de tu tolerancia, pero siempre dentro del umbral terapéutico. Si en algún momento es demasiado, ajustamos. No tratamos a nadie aguantando dolor." }
     ]
   },
-  "css": {
-    "xsellComment": "Radiofrecuencia INDIBA"
-  },
-  "comments": {
-    "xsell": "Radiofrecuencia INDIBA"
-  },
   "breadcrumb": { "services": "Servicios", "current": "Tratamientos Corporales" },
   "callCta": "Llamar 656 306 167",
   "hero": {

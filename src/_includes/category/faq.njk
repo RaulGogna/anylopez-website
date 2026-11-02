@@ -1,0 +1,18 @@
+{% import "category/copy.njk" as c %}
+<!-- FAQ -->
+<section class="cat-page-faq">
+  <div class="container">
+    <div class="cat-page-faq-head">
+      <span class="eyebrow">{{ tx.faq.eyebrow }}</span>
+      <h2>{{ c.copy(tx.faq, 'h2') }}</h2>
+    </div>
+    <div class="cat-page-faq-list">
+      {%- for f in tx.faq.items %}
+      <div class="cat-page-faq-item{% if loop.first %} open{% endif %}">
+        <button class="cat-page-faq-q" type="button">{{ c.copy(f, 'q') }} <span class="icon">+</span></button>
+        <div class="cat-page-faq-a"><p>{{ c.copy(f, 'a') }}</p></div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

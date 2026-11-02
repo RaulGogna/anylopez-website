@@ -115,6 +115,15 @@ web. Comprobar `git diff <base>..HEAD -- src/ content/` antes de desplegar el wo
 se anunció el deploy del worker como pendiente y resultó innecesario, porque el worker ni siquiera
 recibe el idioma.
 
+**Páginas de categoría (`/services/<cat>/`): una sola plantilla, `src/services/category.njk`.**
+Para añadir una categoría: entrada en `src/_data/serviceCategories.json` (solo lo que difiere de
+`defaults`), `pages.json`, `i18n/<lang>/svc-<id>.json`, los tratamientos en `catalogo/` y el
+enlace en `footer.servicesLinks` de `i18n/<lang>/chrome.json` (las 8 categorías, en los 7 idiomas). Lo que cambia de
+verdad respecto al resto va como override en `css/category.css` bajo
+`.category-page[data-category="<id>"]`. `scripts/compare-sites.mjs <baseline> <actual>` es una
+herramienta puntual para refactors de estas páginas: compara contra una baseline construida antes
+del cambio, no es un gate permanente.
+
 ## Estructura
 
 ```

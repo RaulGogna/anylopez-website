@@ -1,0 +1,37 @@
+{% import "category/copy.njk" as c %}
+<!-- HERO CINEMATIC -->
+<section class="cat-page-hero">
+  <div class="cat-page-hero-img">
+    <picture>
+      <source srcset="{{ (cat.heroImage + '.webp') | url }}" type="image/webp">
+      <img
+        src="{{ (cat.heroImage + '.png') | url }}"
+        alt="{{ c.copy(tx.hero, 'imgAlt') }}"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="1920"
+        height="1080"
+      />
+    </picture>
+  </div>
+  <div class="cat-page-hero-inner">
+    <div class="container">
+      <div class="cat-page-hero-content">
+        <span class="eyebrow" style="color: var(--gold);">{{ c.copy(tx.hero, 'eyebrow') }}</span>
+        <h1>{{ tx.hero.h1_html | safe }}</h1>
+        <p class="lead">{{ c.copy(tx.hero, 'lead') }}</p>
+        <div class="cat-page-hero-ctas">
+          <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
+          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
+        </div>
+        <div class="cat-page-hero-meta">
+          <span class="stars">★★★★★</span>
+          <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
+          <span class="dot">·</span>
+          <span>{{ tx.hero.free }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
