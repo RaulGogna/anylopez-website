@@ -37,7 +37,7 @@
     "apellidosPh": "اسم عائلتك",
     "email": "البريد الإلكتروني *",
     "emailPh": "example@email.com",
-    "telefono": "الهاتف",
+    "telefono": "الهاتف *",
     "telefonoPh": "رقم هاتفك",
     "tratamiento": "العلاج الذي يهمك",
     "options": [
@@ -69,7 +69,9 @@
     "btn_html": "<a href=\"tel:+34656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>اتصلي الآن</a>"
   },
   "js": {
-    "required": "يرجى تعبئة الحقول الإلزامية (الاسم واسم العائلة والبريد الإلكتروني).",
+    "required": "يرجى تعبئة الحقول الإلزامية (الاسم واسم العائلة والهاتف والبريد الإلكتروني).",
+
+    "consent": "يرجى قبول سياسة الخصوصية لإرسال النموذج.",
     "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح.",
     "sending": "جارٍ الإرسال...",
     "serverError": "خطأ في الخادم",

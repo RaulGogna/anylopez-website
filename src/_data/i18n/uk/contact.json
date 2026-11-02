@@ -37,7 +37,7 @@
     "apellidosPh": "Ваше прізвище",
     "email": "Email *",
     "emailPh": "ваш@email.com",
-    "telefono": "Телефон",
+    "telefono": "Телефон *",
     "telefonoPh": "Ваш номер телефону",
     "tratamiento": "Процедура, яка цікавить",
     "options": [
@@ -105,7 +105,9 @@
     "btn_html": "<a href=\"tel:+34656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Зателефонувати зараз</a>"
   },
   "js": {
-    "required": "Будь ласка, заповніть обов'язкові поля (ім'я, прізвище та email).",
+    "required": "Будь ласка, заповніть обов'язкові поля (ім'я, прізвище, телефон та email).",
+
+    "consent": "Будь ласка, прийміть політику конфіденційності, щоб надіслати форму.",
     "invalidEmail": "Будь ласка, введіть дійсну електронну адресу.",
     "sending": "Надсилання...",
     "serverError": "Помилка сервера",

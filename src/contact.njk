@@ -116,7 +116,7 @@ eleventyComputed:
 
               <div class="form-group">
                 <label for="telefono">{{ tx.form.telefono }}</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="{{ tx.form.telefonoPh }}" />
+                <input type="tel" id="telefono" name="telefono" placeholder="{{ tx.form.telefonoPh }}" required />
               </div>
 
               <div class="form-group">
@@ -180,17 +180,22 @@ eleventyComputed:
       const nombre = document.getElementById('nombre').value.trim();
       const apellidos = document.getElementById('apellidos').value.trim();
       const email  = document.getElementById('email').value.trim();
-      if (!nombre || !apellidos || !email) {
-        alert('{{ tx.js.required }}');
+      const telefono = document.getElementById('telefono').value.trim();
+      if (!nombre || !apellidos || !email || !telefono) {
+        alert({{ tx.js.required | dump | safe }});
         return;
       }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert('{{ tx.js.invalidEmail }}');
+        alert({{ tx.js.invalidEmail | dump | safe }});
+        return;
+      }
+      if (!form.querySelector('input[name="_consent"]').checked) {
+        alert({{ tx.js.consent | dump | safe }});
         return;
       }
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
-      btn.textContent = '{{ tx.js.sending }}';
+      btn.textContent = {{ tx.js.sending | dump | safe }};
 
       fetch(form.action, {
         method: 'POST',
@@ -201,12 +206,12 @@ eleventyComputed:
           form.style.display = 'none';
           document.getElementById('formSuccess').style.display = 'block';
         } else {
-          throw new Error('{{ tx.js.serverError }}');
+          throw new Error({{ tx.js.serverError | dump | safe }});
         }
       }).catch(function() {
-        alert('{{ tx.js.sendError }}');
+        alert({{ tx.js.sendError | dump | safe }});
         btn.disabled = false;
-        btn.textContent = '{{ tx.form.submit }}';
+        btn.textContent = {{ tx.form.submit | dump | safe }};
       });
     });
   </script>
