@@ -1252,7 +1252,7 @@ button[type="submit"] {
   .lead-strip-label { white-space: normal; border-inline-end: 0; padding-inline-end: 0; }
   .lead-form { flex-direction: column; }
   .lead-strip { padding: 24px 0; }
-  .lead-form .btn { width: 100%; justify-content: center; }
+  .lead-form .btn { width: 100%; justify-content: center; order: 1; }
 
   .trust-inner { overflow-x: auto; flex-wrap: nowrap; padding: 0 16px; justify-content: flex-start; }
   .services-grid { grid-template-columns: 1fr; }
