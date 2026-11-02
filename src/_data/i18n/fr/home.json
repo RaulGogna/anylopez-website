@@ -310,7 +310,6 @@
     "leadComment": "── Lead form AJAX (éviter la redirection vers Formspree) ──",
     "sending": "Envoi en cours...",
     "send": "Envoyer le message",
-    "book": "Demander un rendez-vous",
     "err": "Erreur lors de l'envoi. Appelez-nous au 656 306 167."
   }
 }

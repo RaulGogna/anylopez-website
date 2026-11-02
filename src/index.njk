@@ -584,6 +584,7 @@ eleventyComputed:
     leadForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const btn = leadForm.querySelector('button[type="submit"]');
+      const originalLabel = btn.textContent;
       btn.disabled = true;
       btn.textContent = {{ tx.js.sending | dump | safe }};
       fetch(leadForm.action, {
@@ -596,12 +597,12 @@ eleventyComputed:
           leadMsg.style.display = 'block';
         } else {
           btn.disabled = false;
-          btn.textContent = {{ tx.js.book | dump | safe }};
+          btn.textContent = originalLabel;
           alert({{ tx.js.err | dump | safe }});
         }
       }).catch(() => {
         btn.disabled = false;
-        btn.textContent = {{ tx.js.book | dump | safe }};
+        btn.textContent = originalLabel;
         alert({{ tx.js.err | dump | safe }});
       });
     });
