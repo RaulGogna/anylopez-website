@@ -37,7 +37,7 @@
     "apellidosPh": "Votre nom",
     "email": "Email *",
     "emailPh": "vous@email.com",
-    "telefono": "Téléphone",
+    "telefono": "Téléphone *",
     "telefonoPh": "Votre numéro de téléphone",
     "tratamiento": "Soin qui vous intéresse",
     "options": [
@@ -69,7 +69,9 @@
     "btn_html": "<a href=\"tel:+34656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Appeler Maintenant</a>"
   },
   "js": {
-    "required": "Veuillez remplir les champs obligatoires (prénom, nom et email).",
+    "required": "Veuillez remplir les champs obligatoires (prénom, nom, téléphone et email).",
+
+    "consent": "Veuillez accepter la politique de confidentialité pour envoyer le formulaire.",
     "invalidEmail": "Veuillez saisir un email valide.",
     "sending": "Envoi en cours...",
     "serverError": "Erreur du serveur",

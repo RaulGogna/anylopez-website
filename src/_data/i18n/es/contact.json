@@ -37,7 +37,7 @@
     "apellidosPh": "Tus apellidos",
     "email": "Email *",
     "emailPh": "tu@email.com",
-    "telefono": "Teléfono",
+    "telefono": "Teléfono *",
     "telefonoPh": "Tu número de teléfono",
     "tratamiento": "Tratamiento de Interés",
     "options": [
@@ -69,7 +69,9 @@
     "btn_html": "<a href=\"tel:+34656306167\" class=\"btn btn-accent\" data-event=\"phone_clicked\" data-event-props='{\"location\":\"contact-page-bottom\",\"number\":\"656306167\"}'>Llamar Ahora</a>"
   },
   "js": {
-    "required": "Por favor completa los campos obligatorios (nombre, apellidos y email).",
+    "required": "Por favor completa los campos obligatorios (nombre, apellidos, teléfono y email).",
+
+    "consent": "Por favor acepta la política de privacidad para enviar el formulario.",
     "invalidEmail": "Por favor introduce un email válido.",
     "sending": "Enviando...",
     "serverError": "Error del servidor",

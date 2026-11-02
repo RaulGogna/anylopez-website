@@ -550,7 +550,7 @@ eleventyComputed:
       e.preventDefault();
       const btn = dondeForm.querySelector('button[type="submit"]');
       btn.disabled = true;
-      btn.textContent = '{{ tx.js.sending }}';
+      btn.textContent = {{ tx.js.sending | dump | safe }};
       fetch(dondeForm.action, {
         method: 'POST',
         body: new FormData(dondeForm),
@@ -561,11 +561,11 @@ eleventyComputed:
           document.getElementById('dondeFormSuccess').style.display = 'block';
         } else {
           btn.disabled = false;
-          btn.textContent = '{{ tx.js.send }}';
+          btn.textContent = {{ tx.js.send | dump | safe }};
         }
       }).catch(() => {
         btn.disabled = false;
-        btn.textContent = '{{ tx.js.send }}';
+        btn.textContent = {{ tx.js.send | dump | safe }};
       });
     });
   }
@@ -578,7 +578,7 @@ eleventyComputed:
       e.preventDefault();
       const btn = leadForm.querySelector('button[type="submit"]');
       btn.disabled = true;
-      btn.textContent = '{{ tx.js.sending }}';
+      btn.textContent = {{ tx.js.sending | dump | safe }};
       fetch(leadForm.action, {
         method: 'POST',
         body: new FormData(leadForm),
@@ -589,13 +589,13 @@ eleventyComputed:
           leadMsg.style.display = 'block';
         } else {
           btn.disabled = false;
-          btn.textContent = '{{ tx.js.book }}';
-          alert('{{ tx.js.err }}');
+          btn.textContent = {{ tx.js.book | dump | safe }};
+          alert({{ tx.js.err | dump | safe }});
         }
       }).catch(() => {
         btn.disabled = false;
-        btn.textContent = '{{ tx.js.book }}';
-        alert('{{ tx.js.err }}');
+        btn.textContent = {{ tx.js.book | dump | safe }};
+        alert({{ tx.js.err | dump | safe }});
       });
     });
   }
