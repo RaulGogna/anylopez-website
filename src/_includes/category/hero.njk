@@ -28,14 +28,12 @@
 </section>
 <section class="cat-page-intro">
   <div class="container">
-    <div class="cat-page-hero-content">
-      <p class="lead">{{ c.copy(tx.hero, 'lead') }}</p>
-      <div class="cat-page-hero-meta">
-        <span class="stars">★★★★★</span>
-        <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
-        <span class="dot">·</span>
-        <span>{{ tx.hero.free }}</span>
-      </div>
+    <p class="lead">{{ c.copy(tx.hero, 'lead') }}</p>
+    <div class="cat-page-hero-meta">
+      <span class="stars">★★★★★</span>
+      <strong>{{ reviews.rating }} · {{ reviews.count }} {{ tx.hero.reviews }}</strong>
+      <span class="dot">·</span>
+      <span>{{ tx.hero.free }}</span>
     </div>
   </div>
 </section>

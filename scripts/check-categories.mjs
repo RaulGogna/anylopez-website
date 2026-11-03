@@ -16,10 +16,10 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
-import { HOST, cerrar, lanzarNavegador, nuevaPagina, nuevaPaginaIphone } from "./lib/browser.mjs";
+import { HOST, cerrar, lanzarNavegador, nuevaPagina, nuevaPaginaIphone, forzarVisible } from "./lib/browser.mjs";
 import { filasDelHub } from "./lib/hub.mjs";
 import { recorrerFoco } from "./lib/foco.mjs";
-import { controlesPequenos, controlesPequenosDeLaCabecera, primeraPantalla } from "./lib/movil.mjs";
+import { TACTIL, controlesPequenos, controlesPequenosDeLaCabecera, primeraPantalla } from "./lib/movil.mjs";
 
 const require = createRequire(import.meta.url);
 const todas = require("../src/_data/categoryPages.js");
@@ -32,7 +32,6 @@ const ESCRITORIO = { width: 1440, height: 900 };
 const ANCHOS = [320, 375, 768, 1024, 1440];
 const MAX_PRIMER_TRATAMIENTO = { movil: 1.3, escritorio: 1.1 };
 const MAX_PANTALLAS = 9.5;
-const TACTIL = 44;
 const SECCIONES_DE_COPY = ["pain", "why", "process", "tests", "faq"];
 const opcion = (nombre) => (process.argv.includes(nombre) ? process.argv[process.argv.indexOf(nombre) + 1] : null);
 const BASE = opcion("--base");
@@ -97,7 +96,6 @@ async function leerHub(browser, base, lang) {
   return new Map(filas.map((f) => [f.slug, f]));
 }
 
-const forzarVisible = (page) => page.addStyleTag({ content: "*{content-visibility:visible !important}" });
 const pantallasHasta = (page, alto, selector) =>
   page.evaluate(([sel, vh]) => (document.querySelector(sel).getBoundingClientRect().top + scrollY) / vh, [selector, alto]);
 
@@ -240,14 +238,14 @@ async function comprobarMedidas(page, id) {
 
 // iPhone 13 (390×664 útiles, táctil): el nombre del primer tratamiento se ve sin desplazar y por encima
 // de la barra móvil, y todo control de la tarjeta y de la cabecera mide al menos 44 px de alto
-// (EXCLUIDOS_TACTIL en lib/movil.mjs).
+// (exclusiones en lib/movil.mjs).
 async function comprobarMovil(browser, base, { url }, id) {
   const page = await nuevaPaginaIphone(browser);
   await page.goto(`${base}${url}`, { waitUntil: "load" });
   const { fondo, barra } = await primeraPantalla(page, ".trat-card-name");
   if (fondo > barra) fallar(id, `a 390×664, el nombre del primer tratamiento acaba a ${Math.round(fondo)} px, bajo la barra móvil (${Math.round(barra)} px)`);
   const pequenos = [...(await controlesPequenos(page, [".site-header", ".trat-card"])), ...(await controlesPequenosDeLaCabecera(page))];
-  if (pequenos.length) fallar(id, `a 390×664, controles de menos de ${TACTIL} px de alto: ${[...new Set(pequenos)].join(", ")}`);
+  if (pequenos.length) fallar(id, `a 390×664, controles de menos de ${TACTIL} px de alto o ancho: ${[...new Set(pequenos)].join(", ")}`);
   await forzarVisible(page);
   const alto = await page.evaluate(() => document.documentElement.scrollHeight);
   await cerrar(page);

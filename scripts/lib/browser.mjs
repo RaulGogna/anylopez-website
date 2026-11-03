@@ -8,12 +8,10 @@ export const lanzarNavegador = () => chromium.launch({ args: [`--host-resolver-r
 
 // iPhone 13: 390×664 útiles (con la barra de Safari), táctil. `defaultBrowserType` no vale en newContext.
 const { defaultBrowserType, ...iphone13 } = devices["iPhone 13"];
-export const IPHONE_13 = iphone13;
 
 // window.__eventos recoge lo que tracking.js y los parciales emiten a umami.track.
-// `contexto` añade opciones de contexto (emulación de dispositivo) a las del viewport.
-export async function nuevaPagina(browser, viewport, contexto = {}) {
-  const context = await browser.newContext({ viewport, ...contexto });
+async function paginaConContexto(browser, opciones) {
+  const context = await browser.newContext(opciones);
   await context.route("**/*", (route) => (new URL(route.request().url()).hostname === HOST ? route.continue() : route.abort()));
   const page = await context.newPage();
   await page.addInitScript(() => {
@@ -23,6 +21,10 @@ export async function nuevaPagina(browser, viewport, contexto = {}) {
   return page;
 }
 
+export const nuevaPagina = (browser, viewport) => paginaConContexto(browser, { viewport });
+export const nuevaPaginaIphone = (browser) => paginaConContexto(browser, iphone13);
+
 export const cerrar = (page) => page.context().close();
 
-export const nuevaPaginaIphone = (browser) => nuevaPagina(browser, IPHONE_13.viewport, IPHONE_13);
+// Las secciones con `content-visibility: auto` miden fuera de pantalla su tamaño de reserva, no el real.
+export const forzarVisible = (page) => page.addStyleTag({ content: "*{content-visibility:visible !important}" });

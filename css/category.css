@@ -12,6 +12,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .cat-page-hero-img,
 .category-page > .cat-page-hero { grid-row: 2; }
 .category-page > .cat-page-grid-section { grid-row: 3; }
+/* La presentación y el párrafo de la rejilla son texto sin enlaces ni controles: moverlos no altera el orden de foco, y en móvil suben el primer tratamiento a la primera pantalla. */
 .category-page > .cat-page-intro { grid-row: 4; background: var(--dark); }
 .category-page > .cat-page-hero { padding-block: 20px; }
 .cat-page-hero-img {

@@ -1,8 +1,8 @@
 // Medidas a 390×664 en emulación de iPhone 13 (ver IPHONE_13 en browser.mjs).
 export const TACTIL = 44;
 
-// Enlaces de texto en párrafos, migas y pie: no son objetivos táctiles que medir.
-export const EXCLUIDOS_TACTIL = ["p a", ".breadcrumb", "footer"];
+// Enlaces de texto dentro de un párrafo: no son objetivos táctiles que medir.
+export const EXCLUIDOS_TACTIL = ["p a"];
 
 // Dónde acaba el primer elemento `selector` y dónde empieza la barra móvil, en px de viewport sin
 // desplazar. El elemento cabe si `fondo <= barra`.
@@ -12,8 +12,8 @@ export const primeraPantalla = (page, selector) =>
     barra: document.querySelector(".mobile-bar").getBoundingClientRect().top,
   }), selector);
 
-// Controles interactivos visibles dentro de `ambitos` con menos de TACTIL px de alto, salvo los
-// que caen en EXCLUIDOS_TACTIL. Devuelve «selector (alto px)».
+// Controles interactivos visibles dentro de `ambitos` con menos de TACTIL px de alto o de ancho, salvo los
+// que caen en EXCLUIDOS_TACTIL. Devuelve «selector (ancho × alto px)».
 export const controlesPequenos = (page, ambitos) =>
   page.evaluate(([zonas, excluidos, min]) => {
     const sel = "a[href], button, summary, input, select, textarea, [role='button'], [tabindex]:not([tabindex='-1'])";
@@ -21,9 +21,9 @@ export const controlesPequenos = (page, ambitos) =>
     const pequenos = new Set();
     for (const zona of zonas) {
       for (const el of document.querySelectorAll(`${zona} :is(${sel})`)) {
-        const alto = el.getBoundingClientRect().height;
-        if (!alto || el.closest(excluidos.join(","))) continue;
-        if (alto < min - 0.5) pequenos.add(`${nombre(el)} (${Math.round(alto)} px)`);
+        const { width, height } = el.getBoundingClientRect();
+        if (!height || el.closest(excluidos.join(","))) continue;
+        if (height < min - 0.5 || width < min - 0.5) pequenos.add(`${nombre(el)} (${Math.round(width)}×${Math.round(height)} px)`);
       }
     }
     return [...pequenos];

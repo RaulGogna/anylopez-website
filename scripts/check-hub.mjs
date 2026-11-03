@@ -12,7 +12,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
-import { HOST, cerrar, lanzarNavegador, nuevaPagina, nuevaPaginaIphone } from "./lib/browser.mjs";
+import { HOST, cerrar, lanzarNavegador, nuevaPagina, nuevaPaginaIphone, forzarVisible } from "./lib/browser.mjs";
 import { filasDelHub } from "./lib/hub.mjs";
 import { recorrerFoco } from "./lib/foco.mjs";
 import { TACTIL, controlesPequenos, controlesPequenosDeLaCabecera, primeraPantalla } from "./lib/movil.mjs";
@@ -276,7 +276,7 @@ async function comprobarMedidas(browser, lang, base) {
   }
   const page = await nuevaPagina(browser, { width: 390, height: 844 });
   await page.goto(base + urlDe(lang, "/services/"), { waitUntil: "load" });
-  await page.addStyleTag({ content: "*{content-visibility:visible !important}" });
+  await forzarVisible(page);
   const pantallas = (await page.evaluate(() => document.documentElement.scrollHeight)) / 844;
   if (pantallas > MAX_PANTALLAS) fallar(code, `la página mide ${pantallas.toFixed(2)} pantallas a 390×844 (máximo ${MAX_PANTALLAS})`);
   await cerrar(page);
@@ -285,26 +285,26 @@ async function comprobarMedidas(browser, lang, base) {
 
 // iPhone 13 (390×664 útiles, táctil): sin desplazar y por encima de la barra móvil se ven los chips de
 // categoría, la fila de objetivos y la primera fila de tratamiento; y todo control del hub y de la
-// cabecera mide al menos 44 px de alto (EXCLUIDOS_TACTIL en lib/movil.mjs).
+// cabecera mide al menos 44 px de alto (exclusiones en lib/movil.mjs).
 async function comprobarMovil(browser, lang, base) {
   const code = lang.code;
   const page = await nuevaPaginaIphone(browser);
   await page.goto(base + urlDe(lang, "/services/"), { waitUntil: "load" });
   await page.locator(".svc-goals:not([hidden])").waitFor();
 
-  let fila;
+  const fondos = {};
   for (const [nombre, selector] of [["los chips de categoría", ".svc-nav"], ["la fila de objetivos", ".svc-goals"], ["la primera fila", ".svc-row"]]) {
     const { fondo, barra } = await primeraPantalla(page, selector);
+    fondos[selector] = fondo;
     if (fondo > barra) fallar(code, `a 390×664, ${nombre} acaba a ${Math.round(fondo)} px, bajo la barra móvil (${Math.round(barra)} px)`);
-    fila = fondo;
   }
-  const pequenos = [...(await controlesPequenos(page, [".site-header", ".svc-main"])), ...(await controlesPequenosDeLaCabecera(page))];
-  if (pequenos.length) fallar(code, `a 390×664, controles de menos de ${TACTIL} px de alto: ${[...new Set(pequenos)].join(", ")}`);
+  const pequenos = [...(await controlesPequenos(page, [".site-header", ".svc-index"])), ...(await controlesPequenosDeLaCabecera(page))];
+  if (pequenos.length) fallar(code, `a 390×664, controles de menos de ${TACTIL} px de alto o ancho: ${[...new Set(pequenos)].join(", ")}`);
 
-  await page.addStyleTag({ content: "*{content-visibility:visible !important}" });
+  await forzarVisible(page);
   const alto = await page.evaluate(() => document.documentElement.scrollHeight);
   await cerrar(page);
-  return { fila, alto };
+  return { fila: fondos[".svc-row"], alto };
 }
 
 const server = await serveStatic(SITE);

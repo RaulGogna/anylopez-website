@@ -1,12 +1,11 @@
 /* ─── HERO ─────────────────────────────────────────── */
-.svc-main { display: flex; flex-direction: column; }
 .svc-hero {
-  padding: 96px 0 0;
+  padding: 96px 0 72px;
   background: var(--ivory);
   text-align: center;
 }
 .svc-intro {
-  padding: 0 0 72px;
+  padding: 56px 0 72px;
   background: var(--ivory);
   text-align: center;
 }
@@ -321,8 +320,7 @@ html { scroll-padding-top: calc(var(--header-h) + var(--svc-nav-h) + 8px); }
 @media (max-width: 640px) {
   .svc-hero { padding: 20px 0 12px; }
   .svc-hero h1 { font-size: 30px; margin: 6px auto 0; }
-  /* Primera pantalla: filtro y tratamientos antes que el texto de presentación. */
-  .svc-intro { order: 1; padding: 40px 0; }
+  .svc-intro { padding: 40px 0; }
   .svc-intro .lead { margin-block-end: 0; }
   .svc-goals { padding-block-start: 8px; }
   .svc-goals .svc-chips { padding-block: 6px 2px; }
