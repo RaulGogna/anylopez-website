@@ -248,14 +248,15 @@ html {
 .svc-group-head h2 a:hover { color: var(--terra-dk); border-color: currentColor; }
 .svc-group-head h2 a:focus-visible { outline: 2px solid var(--terra); outline-offset: 4px; }
 .svc-group-flag {
-  display: inline-block;
-  margin-inline-start: 12px;
-  vertical-align: middle;
+  display: block;
+  margin-block-start: 6px;
   font: 600 10px/1 'Jost', sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--terra-dk);
 }
+[dir="rtl"] .svc-goals-label,
+[dir="rtl"] .svc-group-flag { letter-spacing: 0; }
 .svc-group-desc {
   margin: 4px 0 12px;
   font-size: 14px;
