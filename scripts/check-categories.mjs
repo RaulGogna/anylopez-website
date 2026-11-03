@@ -18,6 +18,7 @@ import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
 import { HOST, cerrar, lanzarNavegador, nuevaPagina } from "./lib/browser.mjs";
 import { filasDelHub } from "./lib/hub.mjs";
+import { recorrerFoco } from "./lib/foco.mjs";
 
 const require = createRequire(import.meta.url);
 const todas = require("../src/_data/categoryPages.js");
@@ -105,6 +106,7 @@ async function comprobarTarjetas(page, { l, cat, url }, id, hub) {
   const tarjetas = await page.$$eval(".trat-card", (cs) =>
     cs.map((c) => ({
       id: c.id,
+      panel: c.querySelector(".trat-card-more-panel")?.textContent ?? "",
       href: c.querySelector("a.trat-cta")?.getAttribute("href") ?? null,
       nombre: c.querySelector(".trat-card-name")?.textContent.trim(),
       precio: c.querySelector(".price-from bdi")?.textContent.trim() ?? null,
@@ -119,6 +121,7 @@ async function comprobarTarjetas(page, { l, cat, url }, id, hub) {
     if (!tarjeta) { fallar(id, `falta la tarjeta ${t.slug}`); continue; }
     if (!fila) { fallar(id, `el hub no tiene ${t.slug}`); continue; }
     if (tarjeta.nombre !== t.nombre || tarjeta.nombre !== fila.nombre) fallar(id, `${t.slug}: nombre «${tarjeta.nombre}» ≠ «${t.nombre}»`);
+    if (!tarjeta.panel.includes(t.duracion)) fallar(id, `${t.slug}: el panel «Qué incluye» no repite la duración completa «${t.duracion}»`);
     if (tarjeta.precio !== fila.precio) fallar(id, `${t.slug}: precio «${tarjeta.precio}» ≠ hub «${fila.precio}»`);
     if (tarjeta.marcaDesde !== fila.marcaDesde) fallar(id, `${t.slug}: marcador «${tarjeta.marcaDesde}» ≠ hub «${fila.marcaDesde}»`);
     if (fila.href !== `${url}#${t.slug}`) fallar(id, `${t.slug}: el hub enlaza ${fila.href}, no ${url}#${t.slug}`);
@@ -158,12 +161,56 @@ async function carruselConTabindex(page, id, desplaza) {
   if (!ok) fallar(id, `tabindex del carrusel ${desplaza ? "ausente cuando desplaza" : "presente cuando no desplaza"}`);
 }
 
+// Botones de tarjeta y resúmenes: una sola línea. Los `.btn` de la página llevan copy largo que en
+// móvil se parte, pero la flecha final nunca debe quedarse sola en la última línea.
+function botonesPartidos(page) {
+  return page.evaluate(() => {
+    const lineas = (nodo, desde, hasta) => {
+      const r = document.createRange();
+      r.setStart(nodo.first, desde);
+      r.setEnd(nodo.last, hasta);
+      const tops = [...r.getClientRects()].filter((q) => q.width > 0).map((q) => q.top).sort((a, b) => a - b);
+      return tops.reduce((n, top, i) => (i && top - tops[i - 1] > 6 ? n + 1 : n), tops.length ? 1 : 0);
+    };
+    const textos = (el) => {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodos = [];
+      while (walker.nextNode()) if (walker.currentNode.data.trim()) nodos.push(walker.currentNode);
+      return nodos.length ? { first: nodos[0], last: nodos.at(-1) } : null;
+    };
+    const partidos = [];
+    for (const el of document.querySelectorAll(".trat-cta, .trat-card-more summary, .category-page .btn")) {
+      const t = textos(el);
+      if (!t || !el.getClientRects().length) continue;
+      const fin = t.last.data.trimEnd().length;
+      const total = lineas(t, 0, fin);
+      const esBtn = el.classList.contains("btn");
+      if (!esBtn && total > 1) partidos.push(`${el.className}: ${total} líneas`);
+      if (esBtn && /[→←]$/.test(t.last.data.trimEnd()) && total > lineas(t, 0, fin - 1)) partidos.push(`${el.className}: la flecha queda sola`);
+    }
+    return partidos;
+  });
+}
+
+// `.btn` pinta su propia flecha: no puede repetir la del copy ni acompañar a un enlace tel:.
+function flechasDobles(page) {
+  return page.evaluate(() =>
+    [...document.querySelectorAll(".category-page .btn")]
+      .filter((el) => getComputedStyle(el, "::after").display !== "none")
+      .filter((el) => /[→←]$/.test(el.textContent.trim()) || el.getAttribute("href")?.startsWith("tel:"))
+      .map((el) => el.textContent.trim().slice(0, 40))
+  );
+}
+
 async function comprobarMedidas(page, id) {
   await page.setViewportSize(MOVIL);
   const primero = await pantallasHasta(page, MOVIL.height, ".trat-card");
   if (primero > MAX_PRIMER_TRATAMIENTO.movil) fallar(id, `el primer tratamiento queda a ${primero.toFixed(2)} pantallas a 390×844 (máximo ${MAX_PRIMER_TRATAMIENTO.movil})`);
   const pantallas = (await page.evaluate(() => document.documentElement.scrollHeight)) / MOVIL.height;
   if (pantallas > MAX_PANTALLAS) fallar(id, `la página mide ${pantallas.toFixed(2)} pantallas a 390×844 (máximo ${MAX_PANTALLAS})`);
+
+  const dobles = await flechasDobles(page);
+  if (dobles.length) fallar(id, `botones con la flecha repetida: ${dobles.join("; ")}`);
 
   const pequenos = await page.evaluate((min) => {
     const cajas = [...document.querySelectorAll(".trat-card .trat-cta, .trat-card-more summary, .cat-page-faq-q, .cat-page-process-details summary, .cat-page-hero .btn, .cat-page-final .btn")];
@@ -175,6 +222,8 @@ async function comprobarMedidas(page, id) {
     await page.setViewportSize({ width: ancho, height: 900 });
     const { scrollW, clientW } = await page.evaluate(() => ({ scrollW: document.documentElement.scrollWidth, clientW: document.documentElement.clientWidth }));
     if (scrollW > clientW) fallar(id, `desborde horizontal a ${ancho}px (${scrollW} > ${clientW})`);
+    const partidos = await botonesPartidos(page);
+    if (partidos.length) fallar(id, `botón partido a ${ancho}px: ${[...new Set(partidos)].join("; ")}`);
   }
   await page.setViewportSize(ESCRITORIO);
   const enEscritorio = await pantallasHasta(page, ESCRITORIO.height, ".trat-card");
@@ -216,6 +265,51 @@ async function comprobarModal(page, { l, cat }, id) {
   }
 }
 
+// Un solo panel «Qué incluye» abierto; Escape y un clic fuera lo cierran (Escape devuelve el foco al
+// resumen) y abrirlo no abre el modal.
+async function comprobarDesplegables(page, id) {
+  const resumenes = page.locator(".trat-card-more summary");
+  const abiertos = () => page.locator(".trat-card-more[open]").count();
+  const pulsar = async (i) => {
+    const r = resumenes.nth(i);
+    await r.evaluate((el) => el.scrollIntoView({ block: "center" }));
+    await r.click();
+  };
+  const n = await resumenes.count();
+  await pulsar(0);
+  if ((await abiertos()) !== 1) fallar(id, "el resumen «Qué incluye» no abre su panel");
+  if (await page.evaluate(() => document.getElementById("trat-modal").open)) fallar(id, "abrir «Qué incluye» abrió el modal");
+  if (n > 1) {
+    // Con el primer panel abierto, el segundo resumen queda bajo él: se abre con el teclado.
+    await resumenes.nth(1).focus();
+    await page.keyboard.press("Enter");
+    await page.waitForFunction(() => document.querySelectorAll(".trat-card-more")[1].open, null, { timeout: 2000 });
+    await page.waitForTimeout(100);
+    const abierto = await page.evaluate(() => [...document.querySelectorAll(".trat-card-more")].map((d) => d.open));
+    if (abierto.filter(Boolean).length !== 1 || !abierto[1]) fallar(id, "abrir un panel no cierra el anterior");
+  }
+  const ultimo = n > 1 ? 1 : 0;
+  await page.keyboard.press("Escape");
+  if ((await abiertos()) !== 0) fallar(id, "Escape no cierra el panel «Qué incluye»");
+  if (!(await resumenes.nth(ultimo).evaluate((el) => el === document.activeElement))) fallar(id, "Escape no devuelve el foco al resumen");
+  await pulsar(0);
+  await page.locator(".cat-page-hero h1").click({ position: { x: 4, y: 4 }, force: true });
+  if ((await abiertos()) !== 0) fallar(id, "un clic fuera no cierra el panel «Qué incluye»");
+}
+
+// Ningún elemento enfocado queda bajo la cabecera ni la barra móvil.
+async function comprobarFoco(page, id) {
+  for (const [viewport, teclas] of [[MOVIL, "ambas"], [ESCRITORIO, "Tab"]]) {
+    await page.setViewportSize(viewport);
+    await page.reload({ waitUntil: "load" });
+    for (const { tecla, recorridos, tapado } of await recorrerFoco(page, [".site-header", ".mobile-bar"])) {
+      if (teclas !== "ambas" && tecla !== teclas) continue;
+      if (tapado) fallar(id, `${tecla} a ${viewport.width}px: ${tapado}`);
+      if (recorridos < 30) fallar(id, `${tecla} a ${viewport.width}px solo recorrió ${recorridos} elementos`);
+    }
+  }
+}
+
 async function comprobarProceso(page, id) {
   const detalles = page.locator(".cat-page-process-details");
   if (await detalles.evaluate((d) => d.open)) fallar(id, "el proceso empieza abierto");
@@ -248,6 +342,8 @@ try {
     const { primero, pantallas } = await comprobarMedidas(page, id);
     await comprobarModal(page, pagina, id);
     await comprobarProceso(page, id);
+    await comprobarDesplegables(page, id);
+    await comprobarFoco(page, id);
     resumen.push(`${id}: ${pantallas.toFixed(2)} pantallas, primer tratamiento a ${primero.toFixed(2)}`);
     await cerrar(page);
   }

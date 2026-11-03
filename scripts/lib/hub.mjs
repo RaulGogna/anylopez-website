@@ -1,4 +1,4 @@
-// Filas de la carta del hub tal como las pinta el navegador, por slug.
+// Filas de la carta del hub tal como las pinta el navegador, en un array.
 export const filasDelHub = (page) =>
   page.$$eval(".svc-row", (rows) =>
     rows.map((r) => ({

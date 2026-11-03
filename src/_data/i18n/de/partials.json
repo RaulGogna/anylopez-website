@@ -1,6 +1,7 @@
 {
   "catalog": {
     "from": "ab",
+    "duration": "Dauer",
     "includes": "Was enthalten ist",
     "processToggle": "Alle {count} Schritte ansehen"
   },

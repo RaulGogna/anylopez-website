@@ -14,6 +14,7 @@ import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
 import { HOST, cerrar, lanzarNavegador, nuevaPagina } from "./lib/browser.mjs";
 import { filasDelHub } from "./lib/hub.mjs";
+import { recorrerFoco } from "./lib/foco.mjs";
 
 const require = createRequire(import.meta.url);
 const LANGS = require("../src/_data/langs.json");
@@ -256,39 +257,8 @@ async function comprobarFocoVisible(browser, lang, base, ancho) {
   await page.goto(base + urlDe(lang, "/services/"), { waitUntil: "load" });
   await page.locator(".svc-goals:not([hidden])").waitFor();
 
-  // Devuelve null al salir de la página, "repetido" al cerrar el ciclo, o el nombre del elemento
-  // (con " queda bajo <selector>" si algo lo tapa).
-  const siguiente = () =>
-    page.evaluate(async () => {
-      await new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)));
-      const el = document.activeElement;
-      if (!el || el === document.body) return null;
-      window.__recorridos ??= new WeakSet();
-      if (window.__recorridos.has(el)) return "repetido";
-      window.__recorridos.add(el);
-      const caja = el.getBoundingClientRect();
-      const nombre = el.dataset.slug || el.getAttribute("href") || el.textContent.trim().slice(0, 30);
-      for (const sel of [".site-header", ".svc-nav", ".mobile-bar"]) {
-        const cubierta = document.querySelector(sel);
-        if (!cubierta || cubierta.contains(el) || getComputedStyle(cubierta).display === "none") continue;
-        const c = cubierta.getBoundingClientRect();
-        const solapeV = Math.min(caja.bottom, c.bottom) - Math.max(caja.top, c.top);
-        const solapeH = Math.min(caja.right, c.right) - Math.max(caja.left, c.left);
-        if (solapeV > 1 && solapeH > 1) return `${nombre} queda bajo ${sel}`;
-      }
-      return nombre;
-    });
-
-  for (const tecla of ["Tab", "Shift+Tab"]) {
-    await page.evaluate(() => { window.__recorridos = new WeakSet(); document.activeElement?.blur(); });
-    let recorridos = 0;
-    for (let i = 0; i < 400; i++) {
-      await page.keyboard.press(tecla);
-      const resultado = await siguiente();
-      if (resultado === null || resultado === "repetido") break;
-      recorridos++;
-      if (resultado.includes(" queda bajo ")) { fallar(code, `${tecla} a ${ancho}px: ${resultado}`); break; }
-    }
+  for (const { tecla, recorridos, tapado } of await recorrerFoco(page, [".site-header", ".svc-nav", ".mobile-bar"])) {
+    if (tapado) fallar(code, `${tecla} a ${ancho}px: ${tapado}`);
     if (recorridos < 50) fallar(code, `${tecla} a ${ancho}px solo recorrió ${recorridos} elementos: ¿el recorrido se cortó?`);
   }
   await cerrar(page);

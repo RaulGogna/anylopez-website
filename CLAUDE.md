@@ -149,6 +149,9 @@ verdad respecto al resto va en `serviceCategories.json` (xsellHref, crossHrefs, 
 `crossHrefs`, si no `xsell`), dolor y por qué (`pain-why`), testimonios (scroll-snap en móvil), FAQ, proceso (`<details>`) y cierre.
 `npm run verify:categories` (Chromium real, 56 páginas; `--base <_site de master>` compara cabeceras y JSON-LD) vigila tarjetas, precios y anclas contra el hub,
 copy íntegro, primer tratamiento ≤ 1,3 (móvil) / 1,1 (escritorio) pantallas, ≤ 9,5 pantallas a 390×844 y desborde.
+Tarjeta: el «Qué incluye» es un `<details>` con panel flotante (Escape, clic fuera y uno solo abierto, en `category/scripts.njk`);
+`.btn` no pinta su flecha cuando el copy ya la trae o es un `tel:` (transform `btnNoArrow` en `.eleventy.js`);
+la altura de la barra móvil vive en `--mobile-bar-h` (`styles.css`) y de ella salen `scroll-padding-bottom` y el relleno del pie.
 `scripts/compare-sites.mjs <baseline> <actual>` es una
 herramienta puntual para refactors de estas páginas: compara contra una baseline construida antes
 del cambio, no es un gate permanente.

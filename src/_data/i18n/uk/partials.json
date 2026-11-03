@@ -1,6 +1,7 @@
 {
   "catalog": {
     "from": "від",
+    "duration": "Тривалість",
     "includes": "Що входить",
     "processToggle": "Показати кроки ({count})"
   },

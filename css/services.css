@@ -147,16 +147,8 @@
   /* chip + 2 × 8px de padding + 1px de borde: lo que ocupa la fila de categorías fija */
   --svc-nav-h: calc(var(--chip-h) + 17px);
 }
-/* El foco y las anclas no deben quedar bajo la cabecera, la fila fija ni la barra móvil (74px). */
-html {
-  scroll-padding-top: calc(var(--header-h) + var(--svc-nav-h) + 8px);
-  scroll-padding-bottom: 16px;
-}
-@media (max-width: 768px) {
-  html { scroll-padding-bottom: 90px; }
-  /* Sin esto el último enlace del pie no se puede subir por encima de la barra móvil. */
-  .site-footer { padding-bottom: 52px; }
-}
+/* El foco y las anclas no deben quedar bajo la cabecera ni la fila fija. */
+html { scroll-padding-top: calc(var(--header-h) + var(--svc-nav-h) + 8px); }
 
 .svc-index {
   padding: 0 0 40px;
@@ -294,6 +286,10 @@ html {
   grid-column: 2;
   grid-row: 1 / span 2;
   text-align: end;
+}
+.svc-row .price-from-label {
+  display: block;
+  margin-inline-end: 0;
 }
 
 /* ─── RESPONSIVE ──────────────────────────────────── */

@@ -1,4 +1,5 @@
 {%- set pageHref = cat.linkedTreatments[trat.slug] -%}
+{#- Solo las tarjetas con modal llevan data-slug: treatment-modal.js abre el modal al pulsar en cualquier punto de ellas. -#}
 <article id="{{ trat.slug }}" class="trat-card{% if pageHref %} trat-card-link{% endif %}"{% if not pageHref %} data-slug="{{ trat.slug }}"{% endif %}>
   <picture>
     <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
@@ -13,10 +14,8 @@
   <div class="trat-card-body">
     <h3 class="trat-card-name">{{ trat.nombre }}</h3>
     <p class="trat-card-desc">{{ trat.descripcion }}</p>
-  </div>
-  <div class="trat-card-meta">
     <div class="trat-card-facts">
-      <span class="trat-duracion" title="{{ trat.duracion }}">
+      <span class="trat-duracion">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
         </svg>
@@ -24,10 +23,12 @@
       </span>
       {{ price.priceFrom(preciosDesde[trat.slug], catalogText.from) }}
     </div>
-    {%- if trat.incluye or tx.grid.forWhom_html %}
+  </div>
+  <div class="trat-card-actions">
     <details class="trat-card-more">
       <summary>{{ catalogText.includes }}</summary>
       <div class="trat-card-more-panel">
+        <p><strong>{{ catalogText.duration }}</strong> {{ trat.duracion }}</p>
         {%- if tx.grid.forWhom_html %}
         <p><strong>{{ tx.grid.forWhom_html | safe }}</strong> {{ trat.paraQuien }}</p>
         {%- endif %}
@@ -38,16 +39,15 @@
         </ul>
       </div>
     </details>
-    {%- endif %}
     {%- if pageHref %}
-    <a class="trat-cta" href="{{ (l.prefix + pageHref) | url }}">{{ tx.grid.viewFullCta | replace(" →", "&nbsp;→") | replace(" ←", "&nbsp;←") | safe }}</a>
+    <a class="trat-cta" href="{{ (l.prefix + pageHref) | url }}">{{ tx.grid.viewFullCta | glueArrow }}</a>
     {%- else %}
     <button
       type="button"
       class="trat-cta"
       data-slug="{{ trat.slug }}"
       aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
-    >{{ tx.grid.detailsCta | replace(" →", "&nbsp;→") | replace(" ←", "&nbsp;←") | safe }}</button>
+    >{{ tx.grid.detailsCta | glueArrow }}</button>
     {%- endif %}
   </div>
 </article>

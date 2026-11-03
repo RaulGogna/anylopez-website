@@ -9,6 +9,7 @@ pageCss: category
 {%- set cat = catPage.cat %}
 {%- set tx = i18n[l.code]['svc-' + cat.id] %}
 {%- set tdata = catalogo[l.code] %}
+{%- set catalogText = i18n[l.code].partials.catalog %}
 {% include "category/jsonld.njk" %}
 
 <div class="category-page">

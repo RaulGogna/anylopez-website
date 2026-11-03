@@ -139,6 +139,7 @@ body::before {
   cursor: pointer; border: none; transition: all 0.3s var(--ease);
   text-decoration: none;
 }
+.btn-no-arrow::after { display: none; }
 .btn::after { content: '→'; font-size: 13px; transition: transform 0.3s var(--ease); }
 .btn:hover::after { transform: translateX(4px); }
 
@@ -940,8 +941,10 @@ body::before {
    ═══════════════════════════════════════════════════ */
 /* Borde superior + padding superior + botón (2×13 de padding, 2×1 de borde, línea de 12px×1.75) + padding inferior */
 :root { --mobile-bar-h: calc(1px + 12px + (2 * 13px + 2 * 1px + 12px * 1.75) + max(12px, env(safe-area-inset-bottom))); }
+html { scroll-padding-bottom: 16px; }
 .mobile-bar {
   display: none;
+  min-height: var(--mobile-bar-h);
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 9981;
   background: var(--dark); border-top: 1px solid rgba(255,255,255,0.1);
   padding: 12px 16px;
@@ -1270,6 +1273,9 @@ button[type="submit"] {
   .whatsapp-float, #wa-float a { bottom: calc(var(--mobile-bar-h) + 6px) !important; }
   .mobile-bar { display: grid; }
   anylopez-chat { --anylopez-chat-offset-bottom: calc(var(--mobile-bar-h) + 16px); }
+  /* El foco, las anclas y el último enlace del pie no deben quedar bajo la barra. */
+  html { scroll-padding-bottom: calc(var(--mobile-bar-h) + 16px); }
+  .site-footer { padding-bottom: calc(var(--mobile-bar-h) - 22px); }
 
   .testi-grid { grid-template-columns: 1fr; }
   .ig-grid { grid-template-columns: repeat(3,1fr); }
@@ -1725,7 +1731,7 @@ button[type="submit"] {
   color: var(--dark);
 }
 .price-from-label {
-  display: block;
+  margin-inline-end: 4px;
   font: 400 11px/1.3 'Jost', sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;

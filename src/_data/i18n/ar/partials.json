@@ -1,6 +1,7 @@
 {
   "catalog": {
     "from": "ابتداءً من",
+    "duration": "المدة",
     "includes": "ما يتضمنه",
     "processToggle": "عرض الخطوات ({count})"
   },

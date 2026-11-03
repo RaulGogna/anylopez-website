@@ -8,7 +8,7 @@
       <p>{{ c.copy(tx.process, 'p') }}</p>
     </div>
     <details class="cat-page-process-details">
-      <summary>{{ i18n[l.code].partials.catalog.processToggle | replace("{count}", tx.process.steps | length) }}</summary>
+      <summary>{{ catalogText.processToggle | replace("{count}", tx.process.steps | length) }}</summary>
       <ol class="cat-page-steps">
         {%- for it in tx.process.steps %}
         <li class="cat-page-step">
