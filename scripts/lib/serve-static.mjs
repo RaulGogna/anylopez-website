@@ -1,6 +1,6 @@
 import { createServer } from "node:http";
 import { createReadStream, existsSync, statSync } from "node:fs";
-import { extname, join, resolve } from "node:path";
+import { extname, join, resolve, sep } from "node:path";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -20,10 +20,16 @@ const MIME = {
 export function serveStatic(dir) {
   const root = resolve(dir);
   const server = createServer((req, res) => {
-    let ruta = decodeURIComponent(new URL(req.url, "http://x").pathname);
+    let ruta;
+    try {
+      ruta = decodeURIComponent(new URL(req.url, "http://x").pathname);
+    } catch {
+      res.writeHead(400).end("bad request");
+      return;
+    }
     if (ruta.endsWith("/")) ruta += "index.html";
     const fichero = join(root, ruta);
-    if (!fichero.startsWith(root) || !existsSync(fichero) || statSync(fichero).isDirectory()) {
+    if (!fichero.startsWith(root + sep) || !existsSync(fichero) || statSync(fichero).isDirectory()) {
       res.writeHead(404).end("not found");
       return;
     }

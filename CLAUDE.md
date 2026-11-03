@@ -111,10 +111,24 @@ delante es obligatorio, o el script mide el `_site` viejo y puede dar verde sobr
 **Hub `/services/` = carta filtrable (`css/services.css`, `js/services-filter.js`).** Los objetivos del
 filtro viven en `src/_data/catalogo/objetivos.json` (`id` + `slugs`; etiquetas en `i18n/<lang>/services.json`
 → `goals`; **nunca** meter objetivos en `catalogo/es.json`, su sha256 lo vigilan otros sistemas) y el
-«desde» sale de `src/_data/preciosDesde.js` (mínimo sin packs, siempre del catálogo es).
+«desde» sale de `src/_data/preciosDesde.js`: mínimo de los conceptos sueltos del catálogo es, **sin packs
+ni retoques** (singular o plural), con «desde» si hay varios importes o el concepto ya lo dice.
 `check-objetivos.mjs` (dentro de `build`) falla si un tratamiento queda sin objetivo o un objetivo cita un
-slug inexistente; `npm run verify:hub` (`eleventy && node scripts/check-hub.mjs`, Chromium real, no apto
-para CI sin él) comprueba filas, precios, anclas, filtros, modal, teclado, desborde y ≤ 8,5 pantallas a 390×844.
+slug inexistente. `npm run verify:hub` (`eleventy && node scripts/check-hub.mjs`, Chromium real, no apto
+para CI sin él) comprueba, en los 7 idiomas:
+- filas, nombres, anclas, enlaces de categoría, y precio y «desde» de cada fila contra una tabla fija;
+- filtros por objetivo (filas, `aria-pressed`, recuento anunciado, sin grupos vacíos);
+- modal: abre con clic, Enter y `#slug`, sin salir del hub; emite `treatment_modal_opened`, y su
+  `<form method="dialog">` no emite `form_*`; los CTA emiten un solo `whatsapp_clicked`/`phone_clicked` con
+  `treatment_slug` y sin `outbound_clicked`;
+- clics con modificador (Ctrl, Shift, botón central, Meta) abren pestaña y no el modal;
+- foco: Tab y Shift+Tab a 390 y 1440 px, sin nada enfocado bajo la cabecera, la fila de categorías ni la
+  barra móvil, y orden de Tab entre objetivos, filas y chips;
+- desborde horizontal a 320–1440 px y ≤ 8,5 pantallas a 390×844.
+
+**Al cambiar precios del catálogo, `verify:hub` falla a propósito:** la tabla `PRECIO_ESPERADO` de
+`scripts/check-hub.mjs` está escrita a mano (no se deriva de `preciosDesde.js`, para que un error de esa
+regla no pase en los dos lados). Revisa el catálogo, actualiza la tabla a mano y vuelve a pasar el gate.
 
 **CSS por página: front matter `pageCss: <nombre>`** enlaza `css/<nombre>.css` (con `| url | bust`) desde
 `base.njk`. Lo usan `services/category.njk` (`category`) y `services.njk` (`services`).

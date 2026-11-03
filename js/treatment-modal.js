@@ -12,8 +12,8 @@
   const CATS = DATA.categorias || [];
   const GARANTIA_DEFAULT = DATA.garantiaDefault || '';
 
-  const WA_NUMBER = '34656306167';
-  const PHONE_NUMBER = '656306167';
+  const WA_NUMBER = dialog.dataset.waNumber;
+  const PHONE_NUMBER = dialog.dataset.phone;
   const IMG_BASE = window.__TRAT_IMG_BASE || '/images/tratamientos/';
 
   const catById = Object.fromEntries(CATS.map((c) => [c.id, c]));
@@ -25,10 +25,7 @@
     });
   }
 
-  let currentSlug = '';
-
   function hydrate(trat) {
-    currentSlug = trat.slug;
     const cat = catById[trat.categoria] || {};
     const png = IMG_BASE + trat.imagen;
     const webp = png.replace('.png', '.webp');
@@ -99,13 +96,13 @@
     const wa = dialog.querySelector('[data-field="cta-wa"]');
     const text = 'Hola, vengo de la web. Me interesa ' + trat.nombre + ' — ¿podríais ayudarme a reservar?';
     wa.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text) + '&src=modal-' + trat.slug;
-    setEventProps(wa, {});
-    setEventProps(dialog.querySelector('.trat-modal-cta-tel'), { number: PHONE_NUMBER });
+    setEventProps(wa, trat.slug, {});
+    setEventProps(dialog.querySelector('.trat-modal-cta-tel'), trat.slug, { number: PHONE_NUMBER });
   }
 
   // tracking.js lee data-event-props en cada clic: aquí se fija a qué tratamiento corresponde.
-  function setEventProps(el, extra) {
-    el.dataset.eventProps = JSON.stringify(Object.assign({ location: 'treatment-modal', treatment_slug: currentSlug }, extra));
+  function setEventProps(el, slug, extra) {
+    el.dataset.eventProps = JSON.stringify(Object.assign({ location: 'treatment-modal', treatment_slug: slug }, extra));
   }
 
   function setOptional(field, wrapField, value) {
