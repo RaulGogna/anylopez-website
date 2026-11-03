@@ -285,17 +285,17 @@ async function comprobarMedidas(browser, lang, base) {
 
 // iPhone 13 (390×664 útiles, táctil): sin desplazar y por encima de la barra móvil se ven los chips de
 // categoría, la fila de objetivos y la primera fila de tratamiento; y todo control del hub y de la
-// cabecera mide al menos 44 px de alto (exclusiones en lib/movil.mjs).
+// cabecera mide al menos 44 px de alto y de ancho (exclusiones en lib/movil.mjs).
 async function comprobarMovil(browser, lang, base) {
   const code = lang.code;
   const page = await nuevaPaginaIphone(browser);
   await page.goto(base + urlDe(lang, "/services/"), { waitUntil: "load" });
   await page.locator(".svc-goals:not([hidden])").waitFor();
 
-  const fondos = {};
+  let fila;
   for (const [nombre, selector] of [["los chips de categoría", ".svc-nav"], ["la fila de objetivos", ".svc-goals"], ["la primera fila", ".svc-row"]]) {
     const { fondo, barra } = await primeraPantalla(page, selector);
-    fondos[selector] = fondo;
+    if (selector === ".svc-row") fila = fondo;
     if (fondo > barra) fallar(code, `a 390×664, ${nombre} acaba a ${Math.round(fondo)} px, bajo la barra móvil (${Math.round(barra)} px)`);
   }
   const pequenos = [...(await controlesPequenos(page, [".site-header", ".svc-index"])), ...(await controlesPequenosDeLaCabecera(page))];
@@ -304,7 +304,7 @@ async function comprobarMovil(browser, lang, base) {
   await forzarVisible(page);
   const alto = await page.evaluate(() => document.documentElement.scrollHeight);
   await cerrar(page);
-  return { fila: fondos[".svc-row"], alto };
+  return { fila, alto };
 }
 
 const server = await serveStatic(SITE);

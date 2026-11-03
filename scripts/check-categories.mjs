@@ -237,7 +237,7 @@ async function comprobarMedidas(page, id) {
 }
 
 // iPhone 13 (390×664 útiles, táctil): el nombre del primer tratamiento se ve sin desplazar y por encima
-// de la barra móvil, y todo control de la tarjeta y de la cabecera mide al menos 44 px de alto
+// de la barra móvil, y todo control de la tarjeta y de la cabecera mide al menos 44 px de alto y de ancho
 // (exclusiones en lib/movil.mjs).
 async function comprobarMovil(browser, base, { url }, id) {
   const page = await nuevaPaginaIphone(browser);

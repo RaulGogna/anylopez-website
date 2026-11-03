@@ -1,4 +1,4 @@
-// Medidas a 390×664 en emulación de iPhone 13 (ver IPHONE_13 en browser.mjs).
+// Medidas a 390×664 en emulación de iPhone 13.
 export const TACTIL = 44;
 
 // Enlaces de texto dentro de un párrafo: no son objetivos táctiles que medir.
