@@ -268,8 +268,8 @@ async function comprobarModal(page, { l, cat }, id) {
   }
 }
 
-// Un solo panel «Qué incluye» abierto; Escape y un clic fuera lo cierran (Escape devuelve el foco al
-// resumen) y abrirlo no abre el modal.
+// Un solo panel «Qué incluye» abierto; Escape lo cierra y devuelve el foco al resumen, y abrirlo no
+// abre el modal.
 async function comprobarDesplegables(page, id) {
   const resumenes = page.locator(".trat-card-more summary");
   const abiertos = () => page.locator(".trat-card-more[open]").count();
@@ -294,9 +294,25 @@ async function comprobarDesplegables(page, id) {
   await page.keyboard.press("Escape");
   if ((await abiertos()) !== 0) fallar(id, "Escape no cierra el panel «Qué incluye»");
   if (!(await resumenes.nth(ultimo).evaluate((el) => el === document.activeElement))) fallar(id, "Escape no devuelve el foco al resumen");
-  await pulsar(0);
-  await page.locator(".cat-page-hero h1").click({ position: { x: 4, y: 4 }, force: true });
-  if ((await abiertos()) !== 0) fallar(id, "un clic fuera no cierra el panel «Qué incluye»");
+}
+
+// El orden del DOM (el de tabulación) coincide con el visual: «Qué incluye» antes que «Ver detalles»
+// en el sentido de lectura de la página (izquierda a derecha, o derecha a izquierda en RTL).
+async function comprobarOrdenDeTabulacion(page, id) {
+  const desordenadas = await page.evaluate(() => {
+    const rtl = getComputedStyle(document.documentElement).direction === "rtl";
+    return [...document.querySelectorAll(".trat-card")].filter((card) => {
+      const resumen = card.querySelector(".trat-card-more summary");
+      const cta = card.querySelector(".trat-cta");
+      const r = resumen.getBoundingClientRect();
+      const c = cta.getBoundingClientRect();
+      const domOk = !!(resumen.compareDocumentPosition(cta) & Node.DOCUMENT_POSITION_FOLLOWING);
+      const mismaFila = Math.abs(c.top - r.top) < r.height / 2;
+      const visualOk = !mismaFila || (rtl ? r.left > c.left : r.left < c.left);
+      return !domOk || !visualOk;
+    }).map((card) => card.id);
+  });
+  if (desordenadas.length) fallar(id, `el orden de tabulación no coincide con el visual en: ${desordenadas.join(", ")}`);
 }
 
 // Ningún elemento enfocado queda bajo la cabecera ni la barra móvil.
@@ -344,6 +360,7 @@ try {
     const { primero, pantallas } = await comprobarMedidas(page, id);
     await comprobarModal(page, pagina, id);
     await comprobarProceso(page, id);
+    await comprobarOrdenDeTabulacion(page, id);
     await comprobarDesplegables(page, id);
     await comprobarFoco(page, id);
     resumen.push(`${id}: ${pantallas.toFixed(2)} pantallas, primer tratamiento a ${primero.toFixed(2)}`);

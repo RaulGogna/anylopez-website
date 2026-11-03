@@ -916,6 +916,7 @@ body::before {
   transition: background 0.2s; color: rgba(255,255,255,0.7);
 }
 .social-link:hover, .footer-social a:hover { background: var(--terra); color: #fff; }
+:root { --footer-bottom-pad: 24px; }
 .footer-bottom { padding: var(--footer-bottom-pad) 0; text-align: center; font-size: var(--fs-2xs); color: rgba(255,255,255,0.5); }
 .footer-bottom a { color: inherit; }
 .footer-bottom a:hover { color: var(--ivory); }
@@ -941,7 +942,6 @@ body::before {
    ═══════════════════════════════════════════════════ */
 /* Borde superior + padding superior + botón (2×13 de padding, 2×1 de borde, línea de 12px×1.75) + padding inferior */
 :root { --mobile-bar-h: calc(1px + 12px + (2 * 13px + 2 * 1px + 12px * 1.75) + max(12px, env(safe-area-inset-bottom))); }
-:root { --footer-bottom-pad: 24px; }
 html { scroll-padding-bottom: 16px; }
 .mobile-bar {
   display: none;

@@ -41,7 +41,7 @@ function bustAsset(publicUrl) {
 }
 
 // Pega la flecha final a la palabra anterior para que un botón no la deje sola en otra línea.
-const glueArrow = (text) => text.replace(/\s+([→←])\s*$/, " $1");
+const glueArrow = (text) => text.replace(/\s+([→←])\s*$/, "\u00a0$1");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");

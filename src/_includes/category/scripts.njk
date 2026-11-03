@@ -11,13 +11,13 @@
   const panels = [...document.querySelectorAll('.trat-card-more')];
   panels.forEach((d) => {
     // treatment-modal.js abre el modal al pulsar en cualquier punto de una tarjeta (delegado en
-    // document): un clic en el desplegable no debe llegar hasta allí.
+    // document): un clic en el desplegable o en su panel no debe llegar hasta allí.
     d.addEventListener('click', (e) => e.stopPropagation());
+    d.parentElement.querySelector('.trat-card-more-panel').addEventListener('click', (e) => e.stopPropagation());
     d.addEventListener('toggle', () => {
       if (d.open) panels.forEach((o) => { if (o !== d) o.open = false; });
     });
   });
-  document.addEventListener('click', () => panels.forEach((d) => { d.open = false; }));
   document.addEventListener('keydown', (e) => {
     const abierto = panels.find((d) => d.open);
     if (e.key !== 'Escape' || !abierto) return;

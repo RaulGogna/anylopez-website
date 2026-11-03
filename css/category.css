@@ -141,8 +141,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .trat-duracion span { -webkit-line-clamp: 2; line-clamp: 2; }
 .trat-duracion svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--terra); }
 .trat-card .price-from { font-size: 17px; line-height: 1; }
-/* «Ver detalles» flota al final; si «Qué incluye» no cabe a su lado baja debajo, como un flex-wrap. */
-.trat-card-actions { grid-column: 1 / -1; display: flow-root; }
+.trat-card-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; }
 .trat-cta,
 .trat-card-more summary {
   display: inline-flex;
@@ -155,7 +154,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
   white-space: nowrap;
 }
 .trat-cta {
-  float: inline-end;
+  margin-inline-start: auto;
   text-decoration: none;
   background: none;
   border: none;
@@ -169,8 +168,10 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .trat-card-more summary::-webkit-details-marker { display: none; }
 .trat-card-more summary::after { content: '▾'; }
 .trat-card-more[open] summary::after { content: '▴'; }
+.trat-card-more[open] ~ .trat-card-more-panel { display: block; }
 .trat-card-more-panel {
-  clear: both;
+  display: none;
+  flex: 0 0 100%;
   padding: 10px 4px 6px;
   border-top: 1px solid var(--border);
   font-size: 13px;
