@@ -4,19 +4,23 @@
 html { scroll-padding-top: calc(var(--header-h) + 16px); }
 
 /* ─── HERO ────────────────────────────────────────── */
-.category-page > .cat-page-hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding-block: 32px;
-}
+/* Imagen, titular y presentación comparten fila de la rejilla de la página. En móvil la
+   presentación (.cat-page-intro) baja bajo las tarjetas para que el primer tratamiento entre en la primera pantalla. */
+.category-page { display: grid; grid-template-columns: minmax(0, 1fr); }
+.category-page > * { grid-column: 1; }
+.category-page > .breadcrumb { grid-row: 1; }
+.cat-page-hero-img,
+.category-page > .cat-page-hero { grid-row: 2; }
+.category-page > .cat-page-grid-section { grid-row: 3; }
+.category-page > .cat-page-intro { grid-row: 4; background: var(--dark); }
+.category-page > .cat-page-hero { padding-block: 20px; }
 .cat-page-hero-img {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  position: relative;
+  overflow: hidden;
 }
 .cat-page-hero-img img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -28,11 +32,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
   inset: 0;
   background: linear-gradient(105deg, rgba(26,18,8,0.78) 0%, rgba(26,18,8,0.55) 50%, rgba(26,18,8,0.25) 100%);
 }
-.cat-page-hero-inner {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
+.category-page > .cat-page-hero { position: relative; z-index: 2; }
 .cat-page-hero-content { max-width: 720px; }
 .cat-page-hero h1 {
   color: #fff;
@@ -42,18 +42,17 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
   margin: 10px 0 14px;
 }
 .cat-page-hero h1 em { font-style: italic; color: var(--gold); }
-.cat-page-hero .lead {
+.cat-page-intro .lead {
   color: rgba(255,255,255,0.88);
   font-size: clamp(15px, 1.6vw, 17px);
   line-height: 1.55;
   max-width: 560px;
-  margin-block-end: 20px;
+  margin-block-end: 14px;
 }
 .cat-page-hero-ctas {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-block-end: 18px;
 }
 .cat-page-hero-ctas .btn { min-height: 44px; }
 .cat-page-hero-meta {
@@ -83,6 +82,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .cat-page-grid-section,
 .cat-page-tests { background: var(--ivory); }
 .cat-page-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 8px;
@@ -409,7 +409,11 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 /* ─── RESPONSIVE ──────────────────────────────────── */
 @media (min-width: 641px) {
   .category-page { --cat-pad: 56px; }
-  .category-page > .cat-page-hero { padding-block: 48px; }
+  .cat-page-hero-img { grid-row: 2 / 4; }
+  .category-page > .cat-page-intro { grid-row: 3; background: none; z-index: 2; position: relative; }
+  .category-page > .cat-page-grid-section { grid-row: 4; }
+  .category-page > .cat-page-hero { padding-block: 48px 0; }
+  .category-page > .cat-page-intro { padding-block: 20px 48px; }
 }
 @media (min-width: 901px) {
   .cat-page-pw-grid { grid-template-columns: repeat(2, 1fr); gap: 56px; align-items: start; }
@@ -417,4 +421,15 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 }
 @media (max-width: 900px) {
   .cat-page-cross-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .category-page > .breadcrumb { padding-block: 8px; }
+  .category-page > .cat-page-hero { padding-block: 12px; }
+  .category-page > .cat-page-grid-section { padding-block-start: 12px; }
+  .cat-page-hero h1 { font-size: 26px; margin-block: 6px 12px; }
+  /* La introducción de la rejilla baja bajo las tarjetas: el primer tratamiento entra en la primera pantalla. */
+  .cat-page-grid-section > .container { display: flex; flex-direction: column; }
+  .cat-page-grid-section .cat-page-section-head { display: contents; }
+  .cat-page-grid-section .cat-page-section-head p { order: 1; margin-block-start: 16px; }
+  .cat-page-grid-section .cat-page-section-head h2 { margin-block-end: 14px; }
 }

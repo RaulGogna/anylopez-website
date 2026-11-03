@@ -25,11 +25,17 @@ eleventyComputed:
   </div>
 </div>
 
+<div class="svc-main">
 <!-- HERO -->
 <section class="svc-hero">
   <div class="container">
     <span class="eyebrow">{{ tx.hero.eyebrow }}</span>
     <h1>{{ tx.hero.h1_html | safe }}</h1>
+  </div>
+</section>
+
+<section class="svc-intro">
+  <div class="container">
     <p class="lead">{{ tx.hero.lead_html | safe }}</p>
     <div class="svc-hero-meta">
       <span class="svc-hero-stars">★★★★★</span>
@@ -41,7 +47,6 @@ eleventyComputed:
     </div>
   </div>
 </section>
-
 
 <!-- CARTA DE TRATAMIENTOS -->
 <section class="svc-index">
@@ -87,6 +92,7 @@ eleventyComputed:
     {%- endfor %}
   </div>
 </section>
+</div>
 
 <script type="application/json" id="svc-goals-data">{{ catalogo.objetivos | dump | safe }}</script>
 

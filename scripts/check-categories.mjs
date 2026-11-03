@@ -16,9 +16,10 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
-import { HOST, cerrar, lanzarNavegador, nuevaPagina } from "./lib/browser.mjs";
+import { HOST, cerrar, lanzarNavegador, nuevaPagina, nuevaPaginaIphone } from "./lib/browser.mjs";
 import { filasDelHub } from "./lib/hub.mjs";
 import { recorrerFoco } from "./lib/foco.mjs";
+import { controlesPequenos, controlesPequenosDeLaCabecera, primeraPantalla } from "./lib/movil.mjs";
 
 const require = createRequire(import.meta.url);
 const todas = require("../src/_data/categoryPages.js");
@@ -237,6 +238,22 @@ async function comprobarMedidas(page, id) {
   return { primero, pantallas };
 }
 
+// iPhone 13 (390×664 útiles, táctil): el nombre del primer tratamiento se ve sin desplazar y por encima
+// de la barra móvil, y todo control de la tarjeta y de la cabecera mide al menos 44 px de alto
+// (EXCLUIDOS_TACTIL en lib/movil.mjs).
+async function comprobarMovil(browser, base, { url }, id) {
+  const page = await nuevaPaginaIphone(browser);
+  await page.goto(`${base}${url}`, { waitUntil: "load" });
+  const { fondo, barra } = await primeraPantalla(page, ".trat-card-name");
+  if (fondo > barra) fallar(id, `a 390×664, el nombre del primer tratamiento acaba a ${Math.round(fondo)} px, bajo la barra móvil (${Math.round(barra)} px)`);
+  const pequenos = [...(await controlesPequenos(page, [".site-header", ".trat-card"])), ...(await controlesPequenosDeLaCabecera(page))];
+  if (pequenos.length) fallar(id, `a 390×664, controles de menos de ${TACTIL} px de alto: ${[...new Set(pequenos)].join(", ")}`);
+  await forzarVisible(page);
+  const alto = await page.evaluate(() => document.documentElement.scrollHeight);
+  await cerrar(page);
+  return { fondo, alto };
+}
+
 async function comprobarModal(page, { l, cat }, id) {
   const esperados = catalogo(l.code).tratamientos.filter((t) => t.categoria === cat.id && !cat.linkedTreatments[t.slug]);
   const emitidos = (nombre) => page.evaluate((n) => window.__eventos.filter((e) => e.nombre === n), nombre);
@@ -363,7 +380,8 @@ try {
     await comprobarOrdenDeTabulacion(page, id);
     await comprobarDesplegables(page, id);
     await comprobarFoco(page, id);
-    resumen.push(`${id}: ${pantallas.toFixed(2)} pantallas, primer tratamiento a ${primero.toFixed(2)}`);
+    const movil = await comprobarMovil(browser, base, pagina, id);
+    resumen.push(`${id}: ${pantallas.toFixed(2)} pantallas, primer tratamiento a ${primero.toFixed(2)}; a 390×664 su nombre acaba en ${Math.round(movil.fondo)} px, la página mide ${movil.alto} px`);
     await cerrar(page);
   }
 } catch (err) {

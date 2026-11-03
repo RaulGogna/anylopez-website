@@ -1,6 +1,12 @@
 /* ─── HERO ─────────────────────────────────────────── */
+.svc-main { display: flex; flex-direction: column; }
 .svc-hero {
-  padding: 96px 0 72px;
+  padding: 96px 0 0;
+  background: var(--ivory);
+  text-align: center;
+}
+.svc-intro {
+  padding: 0 0 72px;
   background: var(--ivory);
   text-align: center;
 }
@@ -15,7 +21,7 @@
   font-style: italic;
   color: var(--terra);
 }
-.svc-hero p.lead {
+.svc-intro .lead {
   font-size: clamp(16px, 2vw, 19px);
   color: var(--text-mid);
   max-width: 620px;
@@ -224,6 +230,9 @@ html { scroll-padding-top: calc(var(--header-h) + var(--svc-nav-h) + 8px); }
   line-height: 1.1;
 }
 .svc-group-head h2 a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
   color: var(--dark);
   text-decoration: none;
   border-block-end: 1px solid transparent;
@@ -310,7 +319,15 @@ html { scroll-padding-top: calc(var(--header-h) + var(--svc-nav-h) + 8px); }
   .svc-flagship-img { aspect-ratio: 16/10; }
 }
 @media (max-width: 640px) {
-  .svc-hero { padding: 48px 0 40px; }
+  .svc-hero { padding: 20px 0 12px; }
+  .svc-hero h1 { font-size: 30px; margin: 6px auto 0; }
+  /* Primera pantalla: filtro y tratamientos antes que el texto de presentación. */
+  .svc-intro { order: 1; padding: 40px 0; }
+  .svc-intro .lead { margin-block-end: 0; }
+  .svc-goals { padding-block-start: 8px; }
+  .svc-goals .svc-chips { padding-block: 6px 2px; }
+  .svc-group { padding-block-start: 12px; }
+  .svc-group-desc { margin-block-end: 8px; }
   .svc-trust { padding: 32px 0; }
   .svc-flagship { padding: 40px 0; }
   .svc-final-cta { padding: 40px 0; }

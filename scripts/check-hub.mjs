@@ -12,9 +12,10 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
-import { HOST, cerrar, lanzarNavegador, nuevaPagina } from "./lib/browser.mjs";
+import { HOST, cerrar, lanzarNavegador, nuevaPagina, nuevaPaginaIphone } from "./lib/browser.mjs";
 import { filasDelHub } from "./lib/hub.mjs";
 import { recorrerFoco } from "./lib/foco.mjs";
+import { TACTIL, controlesPequenos, controlesPequenosDeLaCabecera, primeraPantalla } from "./lib/movil.mjs";
 
 const require = createRequire(import.meta.url);
 const LANGS = require("../src/_data/langs.json");
@@ -282,6 +283,30 @@ async function comprobarMedidas(browser, lang, base) {
   return pantallas;
 }
 
+// iPhone 13 (390×664 útiles, táctil): sin desplazar y por encima de la barra móvil se ven los chips de
+// categoría, la fila de objetivos y la primera fila de tratamiento; y todo control del hub y de la
+// cabecera mide al menos 44 px de alto (EXCLUIDOS_TACTIL en lib/movil.mjs).
+async function comprobarMovil(browser, lang, base) {
+  const code = lang.code;
+  const page = await nuevaPaginaIphone(browser);
+  await page.goto(base + urlDe(lang, "/services/"), { waitUntil: "load" });
+  await page.locator(".svc-goals:not([hidden])").waitFor();
+
+  let fila;
+  for (const [nombre, selector] of [["los chips de categoría", ".svc-nav"], ["la fila de objetivos", ".svc-goals"], ["la primera fila", ".svc-row"]]) {
+    const { fondo, barra } = await primeraPantalla(page, selector);
+    if (fondo > barra) fallar(code, `a 390×664, ${nombre} acaba a ${Math.round(fondo)} px, bajo la barra móvil (${Math.round(barra)} px)`);
+    fila = fondo;
+  }
+  const pequenos = [...(await controlesPequenos(page, [".site-header", ".svc-main"])), ...(await controlesPequenosDeLaCabecera(page))];
+  if (pequenos.length) fallar(code, `a 390×664, controles de menos de ${TACTIL} px de alto: ${[...new Set(pequenos)].join(", ")}`);
+
+  await page.addStyleTag({ content: "*{content-visibility:visible !important}" });
+  const alto = await page.evaluate(() => document.documentElement.scrollHeight);
+  await cerrar(page);
+  return { fila, alto };
+}
+
 const server = await serveStatic(SITE);
 const base = `http://${HOST}:${server.address().port}`;
 const browser = await lanzarNavegador();
@@ -297,7 +322,8 @@ try {
     await comprobarTracking(browser, lang, base);
     for (const ancho of [390, 1440]) await comprobarFocoVisible(browser, lang, base, ancho);
     const pantallas = await comprobarMedidas(browser, lang, base);
-    console.log(`${lang.code}: ${pantallas.toFixed(2)} pantallas a 390×844`);
+    const { fila, alto } = await comprobarMovil(browser, lang, base);
+    console.log(`${lang.code}: ${pantallas.toFixed(2)} pantallas a 390×844; a 390×664 la primera fila acaba en ${Math.round(fila)} px, la página mide ${alto} px`);
   }
 } catch (err) {
   fallos.push(`excepción: ${err.stack || err}`);

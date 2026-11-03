@@ -232,7 +232,8 @@ body::before {
 
 /* Mobile hamburger */
 .menu-toggle {
-  display: none; flex-direction: column; gap: 5px;
+  display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  min-width: 44px; min-height: 44px;
   background: none; border: none; cursor: pointer; padding: 8px;
 }
 .menu-toggle span {
@@ -1932,6 +1933,7 @@ button[type="submit"] {
   display: flex;
   align-items: center;
   gap: 4px;
+  min-height: 44px;
   background: transparent;
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 4px;
