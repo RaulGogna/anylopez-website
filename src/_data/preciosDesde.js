@@ -7,7 +7,7 @@ const importe = (precio) => parseFloat(precio.match(IMPORTE)[0].replace(",", "."
 
 function precioDesde({ precios = [] }) {
   const sueltos = precios.filter(
-    (p) => !/\b(pack|retoque)\b/i.test(p.concepto) && IMPORTE.test(p.precio)
+    (p) => !/\b(pack|retoque)s?\b/i.test(p.concepto) && IMPORTE.test(p.precio)
   );
   if (!sueltos.length) return null;
   const minimo = sueltos.reduce((a, b) => (importe(b.precio) < importe(a.precio) ? b : a));

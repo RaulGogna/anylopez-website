@@ -1,8 +1,8 @@
 /**
  * Carta del hub (/services/) en Chromium real sobre `_site`, en todos los idiomas de langs.json.
  *
- * Lo que mira es el DOM que pinta el navegador: nombres, precios y filtros se calculan aquí a
- * partir de los catálogos, no de src/_data/preciosDesde.js, para que un fallo allí no se replique.
+ * Lo que mira es el DOM que pinta el navegador: los precios salen de una tabla fija de este script,
+ * no de src/_data/preciosDesde.js, para que un fallo allí no se replique; nombres y filtros, de los catálogos.
  * Las secciones con `content-visibility: auto` miden fuera de pantalla su tamaño de reserva, no el
  * real: se fuerza `visible` antes de medir la altura.
  *
@@ -29,20 +29,50 @@ const ANCHOS = [320, 375, 768, 1024, 1440];
 const MAX_PANTALLAS = 8.5;
 const ULTIMO_OBJETIVO = OBJETIVOS.at(-1).id;
 
-const noCuenta = (concepto) => /\b(pack|retoque)\b/i.test(concepto);
-const importe = (precio) => Number(precio.replace(/[^\d,.]/g, "").replace(",", "."));
+// Precios que debe pintar el hub, fijados a mano contra catalogo/es.json (los packs y los retoques
+// no cuentan; los precios son iguales en todos los idiomas). Si el catálogo cambia, este gate falla
+// a propósito: revisa el catálogo y actualiza esta tabla a mano, no la derives de él.
+const D = true;
+const PRECIO_ESPERADO = new Map(Object.entries({
+  "limpieza-facial-gold": ["50 €"],
+  "limpieza-facial-platinum": ["75 €"],
+  "limpieza-facial-detox": ["150 €"],
+  "limpieza-facial-diamond": ["150 €"],
+  "limpieza-facial-elite": ["200 €"],
+  "mesoterapia-virtual": ["90 €"],
+  "velo-colageno-puro": ["150 €"],
+  "dermapen-hidratacion": ["150 €"],
+  "dermapen-cicatrices": ["75 €"],
+  "peeling-antimanchas": ["175 €"],
+  "peeling-quimico-facial": ["150 €"],
+  "dermaplaning-facial": ["50 €"],
+  "anti-acne": ["75 €"],
+  "laser-plasma-pen": ["95 €", D],
+  "ultherapy": ["200 €", D],
+  "radiofrecuencia-indiba": ["65 €", D],
+  "botox-zona": ["300 €"],
+  "acido-hialuronico": ["300 €", D],
+  "hilos-tensores": ["395 €", D],
+  "prp-plasma": ["275 €"],
+  "maderoterapia": ["40 €"],
+  "presoterapia": ["25 €"],
+  "drenaje-linfatico-postop": ["65 €", D],
+  "dolor-muscular-corporal": ["65 €"],
+  "triple-accion-anticelulitica": ["90 €"],
+  "masaje-corporal": ["35 €", D],
+  "masaje-relajante": ["25 €", D],
+  "masaje-craneo-facial-cervical": ["50 €", D],
+  "masaje-podal": ["45 €", D],
+  "masaje-piernas-cansadas": ["45 €", D],
+  "masaje-aloe-vera": ["75 €"],
+  "masaje-facial-colageno": ["60 €"],
+  "masaje-facial-vitamina-c": ["50 €"],
+  "pestanas-pelo-a-pelo": ["70 €", D],
+  "micropigmentacion": ["300 €"],
+  "depilacion-ipl": ["12 €", D],
+}).map(([slug, [precio, esDesde = false]]) => [slug, { precio, esDesde }]));
 
-// Mínimo de los conceptos sueltos del catálogo español (los precios son iguales en todos los
-// idiomas y `concepto` solo es fiable en es); lleva «desde» si hay varios importes o ya lo dice.
-function precioEsperado({ precios }) {
-  const sueltos = precios.filter((p) => !noCuenta(p.concepto) && /\d/.test(p.precio));
-  if (!sueltos.length) return null;
-  const minimo = sueltos.reduce((a, b) => (importe(b.precio) < importe(a.precio) ? b : a));
-  const hayVarios = sueltos.some((p) => importe(p.precio) !== importe(minimo.precio));
-  return { precio: minimo.precio, esDesde: hayVarios || minimo.concepto.toLowerCase().startsWith("desde") };
-}
-
-const PRECIO_ESPERADO = new Map(catalogo("es").tratamientos.map((t) => [t.slug, precioEsperado(t)]));
+const AVISO_TABLA = "revisa el catálogo y actualiza PRECIO_ESPERADO en scripts/check-hub.mjs a mano";
 
 const urlDe = (lang, ruta) => `${lang.prefix}${ruta}`;
 
@@ -54,6 +84,12 @@ function slugsDelModal(url) {
 
 const fallos = [];
 const fallar = (code, msg) => fallos.push(`[${code}] ${msg}`);
+
+const slugsCatalogo = catalogo("es").tratamientos.map((t) => t.slug);
+const sinPrecio = slugsCatalogo.filter((s) => !PRECIO_ESPERADO.has(s));
+const sobrantes = [...PRECIO_ESPERADO.keys()].filter((s) => !slugsCatalogo.includes(s));
+if (sinPrecio.length || sobrantes.length)
+  fallar("es", `el catálogo cambió (sin precio esperado: ${sinPrecio.join(", ") || "-"}; sobran: ${sobrantes.join(", ") || "-"}): ${AVISO_TABLA}`);
 
 async function nuevaPagina(browser, viewport) {
   const context = await browser.newContext({ viewport });
@@ -93,9 +129,9 @@ async function comprobarContenido(page, lang, base) {
     if (!fila) { fallar(code, `falta la fila de ${t.slug}`); continue; }
     const esperado = PRECIO_ESPERADO.get(t.slug);
     if (fila.nombre !== t.nombre) fallar(code, `${t.slug}: nombre «${fila.nombre}» ≠ «${t.nombre}»`);
-    if (fila.precio !== (esperado?.precio ?? null)) fallar(code, `${t.slug}: precio «${fila.precio}» ≠ «${esperado?.precio ?? null}»`);
+    if (fila.precio !== (esperado?.precio ?? null)) fallar(code, `${t.slug}: precio «${fila.precio}» ≠ «${esperado?.precio ?? null}»; ${AVISO_TABLA}`);
     const marcaEsperada = esperado?.esDesde ? desde : null;
-    if (fila.marcaDesde !== marcaEsperada) fallar(code, `${t.slug}: marcador «${fila.marcaDesde}» ≠ «${marcaEsperada}»`);
+    if (fila.marcaDesde !== marcaEsperada) fallar(code, `${t.slug}: marcador «${fila.marcaDesde}» ≠ «${marcaEsperada}»; ${AVISO_TABLA}`);
 
     const destino = urlDe(lang, `/services/${t.categoria}/`);
     if (fila.href !== `${destino}#${t.slug}`) fallar(code, `${t.slug}: href ${fila.href} ≠ ${destino}#${t.slug}`);
