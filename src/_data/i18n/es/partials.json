@@ -1,4 +1,9 @@
 {
+  "catalog": {
+    "from": "desde",
+    "includes": "Qué incluye",
+    "processToggle": "Ver los {count} pasos"
+  },
   "modal": {
     "close": "Cerrar ficha",
     "benefits": "Beneficios",

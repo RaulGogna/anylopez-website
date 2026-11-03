@@ -1,9 +1,5 @@
 {%- set pageHref = cat.linkedTreatments[trat.slug] -%}
-{%- if pageHref -%}
-<a href="{{ (l.prefix + pageHref) | url }}" class="trat-card trat-card-link" id="{{ trat.slug }}">
-{%- else -%}
-<article id="{{ trat.slug }}" class="trat-card" data-slug="{{ trat.slug }}">
-{%- endif %}
+<article id="{{ trat.slug }}" class="trat-card{% if pageHref %} trat-card-link{% endif %}"{% if not pageHref %} data-slug="{{ trat.slug }}"{% endif %}>
   <picture>
     <source srcset="{{ ('/images/tratamientos/' + trat.imagen.replace('.png', '.webp')) | url }}" type="image/webp">
     <img
@@ -12,33 +8,46 @@
       class="trat-card-img"
       loading="lazy"
       decoding="async"
-      width="88"
-      height="88"
     />
   </picture>
   <div class="trat-card-body">
     <h3 class="trat-card-name">{{ trat.nombre }}</h3>
     <p class="trat-card-desc">{{ trat.descripcion }}</p>
-    <div class="trat-card-meta">
-      <div class="trat-card-facts">
-        <span class="trat-duracion">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
-          {{ trat.duracion }}
-        </span>
-        {{ price.priceFrom(preciosDesde[trat.slug], hubFrom) }}
-      </div>
-      {%- if pageHref %}
-      <span class="trat-cta">{{ tx.grid.viewFullCta }}</span>
-      {%- else %}
-      <button
-        type="button"
-        class="trat-cta"
-        data-slug="{{ trat.slug }}"
-        aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
-      >{{ tx.grid.detailsCta }}</button>
-      {%- endif %}
-    </div>
   </div>
-{% if pageHref %}</a>{% else %}</article>{% endif %}
+  <div class="trat-card-meta">
+    <div class="trat-card-facts">
+      <span class="trat-duracion" title="{{ trat.duracion }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>{{ trat.duracion }}</span>
+      </span>
+      {{ price.priceFrom(preciosDesde[trat.slug], catalogText.from) }}
+    </div>
+    {%- if trat.incluye or tx.grid.forWhom_html %}
+    <details class="trat-card-more">
+      <summary>{{ catalogText.includes }}</summary>
+      <div class="trat-card-more-panel">
+        {%- if tx.grid.forWhom_html %}
+        <p><strong>{{ tx.grid.forWhom_html | safe }}</strong> {{ trat.paraQuien }}</p>
+        {%- endif %}
+        <ul>
+          {%- for item in trat.incluye %}
+          <li>{{ item }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </details>
+    {%- endif %}
+    {%- if pageHref %}
+    <a class="trat-cta" href="{{ (l.prefix + pageHref) | url }}">{{ tx.grid.viewFullCta | replace(" →", "&nbsp;→") | replace(" ←", "&nbsp;←") | safe }}</a>
+    {%- else %}
+    <button
+      type="button"
+      class="trat-cta"
+      data-slug="{{ trat.slug }}"
+      aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
+    >{{ tx.grid.detailsCta | replace(" →", "&nbsp;→") | replace(" ←", "&nbsp;←") | safe }}</button>
+    {%- endif %}
+  </div>
+</article>

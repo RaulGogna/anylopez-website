@@ -1,4 +1,9 @@
 {
+  "catalog": {
+    "from": "ابتداءً من",
+    "includes": "ما يتضمنه",
+    "processToggle": "عرض الخطوات ({count})"
+  },
   "modal": {
     "close": "إغلاق البطاقة",
     "benefits": "الفوائد",

@@ -1,4 +1,9 @@
 {
+  "catalog": {
+    "from": "від",
+    "includes": "Що входить",
+    "processToggle": "Показати кроки ({count})"
+  },
   "modal": {
     "close": "Закрити картку",
     "benefits": "Переваги",

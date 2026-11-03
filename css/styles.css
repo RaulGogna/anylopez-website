@@ -1718,6 +1718,26 @@ button[type="submit"] {
   margin: 0 0 8px;
   color: #fff;
 }
+.price-from {
+  white-space: nowrap;
+  font: 600 20px/1.1 'Cormorant Garamond', serif;
+  font-variant-numeric: lining-nums;
+  color: var(--dark);
+}
+.price-from-label {
+  display: block;
+  font: 400 11px/1.3 'Jost', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+}
+.trat-modal-descripcion {
+  margin: 0;
+  padding: 24px 32px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
 .trat-modal-paraquien {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
@@ -1882,6 +1902,7 @@ button[type="submit"] {
   .trat-modal-img img { height: 200px; }
   .trat-modal-hero-text { padding: 20px 20px; }
   .trat-modal-section { padding: 22px 20px 4px; }
+  .trat-modal-descripcion { padding: 20px 20px 0; }
   .trat-modal-beneficios { grid-template-columns: 1fr; }
   .trat-modal-garantia { margin: 8px 20px 0; }
   .trat-modal-ctas { padding: 20px; }

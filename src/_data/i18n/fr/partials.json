@@ -1,4 +1,9 @@
 {
+  "catalog": {
+    "from": "dès",
+    "includes": "Ce qui est inclus",
+    "processToggle": "Voir les {count} étapes"
+  },
   "modal": {
     "close": "Fermer la fiche",
     "benefits": "Bienfaits",

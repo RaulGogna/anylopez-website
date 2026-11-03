@@ -1,0 +1,23 @@
+<script>
+  document.querySelectorAll('.cat-page-faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.cat-page-faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.cat-page-faq-item').forEach((i) => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  document.querySelectorAll('.trat-card-more').forEach((d) => {
+    d.addEventListener('click', (e) => e.stopPropagation());
+  });
+
+  const carousel = document.querySelector('.cat-page-tests-grid');
+  if (carousel) {
+    const sync = () => {
+      if (carousel.scrollWidth > carousel.clientWidth) carousel.tabIndex = 0;
+      else carousel.removeAttribute('tabindex');
+    };
+    new ResizeObserver(sync).observe(carousel);
+  }
+</script>

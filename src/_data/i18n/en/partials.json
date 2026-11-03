@@ -1,4 +1,9 @@
 {
+  "catalog": {
+    "from": "from",
+    "includes": "What's included",
+    "processToggle": "See the {count} steps"
+  },
   "modal": {
     "close": "Close",
     "benefits": "Benefits",

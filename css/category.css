@@ -1,4 +1,4 @@
-.category-page { --cat-pad: 40px; }
+.category-page { --cat-pad: 32px; --trat-thumb: 72px; }
 .category-page > section { padding-block: var(--cat-pad); }
 
 /* ─── HERO ────────────────────────────────────────── */
@@ -79,8 +79,7 @@
 
 /* ─── TRATAMIENTOS ────────────────────────────────── */
 .cat-page-grid-section,
-.cat-page-tests,
-.cat-page-process { background: var(--ivory); }
+.cat-page-tests { background: var(--ivory); }
 .cat-page-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
@@ -89,10 +88,11 @@
   margin-inline: auto;
 }
 .trat-card {
+  position: relative;
   display: grid;
-  grid-template-columns: 88px minmax(0, 1fr);
-  align-items: center;
-  gap: 12px;
+  grid-template-columns: var(--trat-thumb) minmax(0, 1fr);
+  align-items: start;
+  gap: 2px 12px;
   padding: 10px;
   background: #fff;
   border-radius: 2px;
@@ -101,8 +101,7 @@
   scroll-margin-top: calc(var(--header-h) + 16px);
 }
 .trat-card:focus-within { box-shadow: 0 0 0 3px rgba(192,98,48,.35), var(--shadow); }
-.trat-card-link { text-decoration: none; color: inherit; }
-.trat-card-img { width: 88px; height: 88px; object-fit: cover; display: block; background: var(--bg-light); }
+.trat-card-img { width: var(--trat-thumb); height: var(--trat-thumb); object-fit: cover; display: block; background: var(--bg-light); }
 .trat-card-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .trat-card-name {
   font-family: 'Cormorant Garamond', serif;
@@ -111,19 +110,22 @@
   color: var(--dark);
   margin: 0;
 }
+.trat-card-desc,
+.trat-duracion span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .trat-card-desc {
   font-size: 13px;
   line-height: 1.4;
   color: var(--text-mid);
   margin: 0;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
-  overflow: hidden;
 }
-.trat-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.trat-card-facts { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; row-gap: 2px; min-width: 0; }
+.trat-card-meta { grid-column: 1 / -1; display: flex; align-items: center; column-gap: 10px; }
+.trat-card-facts { display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; min-width: 0; flex: 1 1 auto; }
 .trat-duracion {
   display: inline-flex;
   align-items: center;
@@ -134,27 +136,61 @@
   color: var(--text-mid);
   text-transform: uppercase;
 }
+.trat-duracion span { -webkit-line-clamp: 2; line-clamp: 2; }
 .trat-duracion svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--terra); }
-.trat-card .svc-row-price { font: 600 17px/1 'Cormorant Garamond', serif; font-variant-numeric: lining-nums; color: var(--dark); white-space: nowrap; }
-.trat-card .svc-row-from { font: 400 11px/1 'Jost', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-mid); margin-inline-end: 4px; }
-.trat-cta {
-  margin-inline-start: auto;
+.trat-card .price-from { font-size: 17px; line-height: 1; }
+.trat-card .price-from-label { display: inline; margin-inline-end: 4px; }
+
+.trat-cta,
+.trat-card-more summary {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  padding-inline: 4px;
   font: 700 11px/1.2 'Jost', sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  text-align: start;
   color: var(--terra-dk);
+  cursor: pointer;
+}
+.trat-cta {
+  flex: 0 1 auto;
+  padding-inline: 4px;
+  text-align: start;
+  text-decoration: none;
   background: none;
   border: none;
-  cursor: pointer;
   transition: color 0.2s;
 }
 .trat-cta:hover { color: var(--terra); }
-.trat-cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.trat-cta:focus-visible,
+.trat-card-more summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.trat-card-link .trat-cta::after { content: ''; position: absolute; inset: 0; }
+.trat-card-more { flex: 0 0 auto; }
+.trat-card-more summary { position: relative; z-index: 1; list-style: none; gap: 3px; padding-inline: 4px; }
+.trat-card-more summary::-webkit-details-marker { display: none; }
+.trat-card-more summary::after { content: '▾'; }
+.trat-card-more[open] summary::after { content: '▴'; }
+.trat-card-more-panel {
+  position: absolute;
+  z-index: 2;
+  inset-inline: 0;
+  top: 100%;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  cursor: default;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-mid);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.trat-card-more-panel p { margin: 0 0 8px; }
+.trat-card-more-panel ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.trat-card-more-panel li { position: relative; padding-inline-start: 16px; }
+.trat-card-more-panel li::before { content: '✓'; position: absolute; inset-inline-start: 0; color: var(--terra); font-weight: 700; }
 
 /* ─── VENTA CRUZADA ───────────────────────────────── */
 .cat-page-xsell,
@@ -165,7 +201,7 @@
 }
 .cat-page-xsell-inner { max-width: 820px; margin-inline: auto; text-align: center; }
 .cat-page-xsell .eyebrow,
-.cat-page-cross-head .eyebrow,
+.cat-page-cross .cat-page-section-head .eyebrow,
 .cat-page-cross-card .eyebrow { color: var(--gold); }
 .cat-page-xsell h2 {
   color: #fff;
@@ -174,7 +210,7 @@
   margin: 8px 0 14px;
 }
 .cat-page-xsell h2 em,
-.cat-page-cross-head h2 em,
+.cat-page-cross .cat-page-section-head h2 em,
 .cat-page-cross-card h3 em,
 .cat-page-final h2 em { font-style: italic; color: var(--gold); }
 .cat-page-xsell p {
@@ -185,14 +221,9 @@
   margin: 0 auto 24px;
 }
 
-.cat-page-cross-head { text-align: center; max-width: 720px; margin: 0 auto 20px; }
-.cat-page-cross-head h2 {
-  color: #fff;
-  font-size: clamp(23px, 3.6vw, 38px);
-  line-height: 1.15;
-  margin: 8px 0 10px;
-}
-.cat-page-cross-head p { color: rgba(255,255,255,0.78); font-size: 15px; }
+.cat-page-cross .cat-page-section-head h2,
+.cat-page-cross .cat-page-section-head p { color: #fff; }
+.cat-page-cross .cat-page-section-head p { opacity: 0.78; }
 .cat-page-cross-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -327,29 +358,26 @@
 .cat-page-faq-item.open .cat-page-faq-a { max-height: 600px; padding-block-end: 14px; }
 
 /* ─── PROCESO ─────────────────────────────────────── */
+.cat-page-process { background: var(--ivory); }
 .cat-page-process-details { max-width: 800px; margin-inline: auto; }
+.cat-page-process-details[open] summary { margin-block-end: 8px; }
 .cat-page-process-details summary {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   min-height: 44px;
+  font: 700 12px/1.2 'Jost', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--terra-dk);
   cursor: pointer;
   list-style: none;
 }
 .cat-page-process-details summary::-webkit-details-marker { display: none; }
-.cat-page-process-details summary::after {
-  content: '+';
-  flex-shrink: 0;
-  font-size: 26px;
-  color: var(--terra);
-  transition: transform 0.3s var(--ease);
-}
+.cat-page-process-details summary::after { content: '+'; font-size: 20px; transition: transform 0.3s var(--ease); }
 .cat-page-process-details[open] summary::after { transform: rotate(45deg); }
 .cat-page-process-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.cat-page-process-details summary h2 { font-size: clamp(24px, 3.2vw, 32px); line-height: 1.15; margin: 0; }
-.cat-page-process-body { padding-block-start: 12px; }
-.cat-page-process-body > p { color: var(--text-mid); font-size: 15px; margin-block: 6px 12px; }
 .cat-page-steps { list-style: none; margin: 0; padding: 0; }
 .cat-page-step { display: flex; gap: 16px; padding-block: 14px; border-block-end: 1px solid var(--border); }
 .cat-page-step:last-child { border-block-end: none; }

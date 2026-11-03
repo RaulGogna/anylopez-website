@@ -11,7 +11,7 @@ pageCss: category
 {%- set tdata = catalogo[l.code] %}
 {% include "category/jsonld.njk" %}
 
-<div class="category-page" data-category="{{ cat.id }}">
+<div class="category-page">
 {% include "category/breadcrumb.njk" %}
 {% include "category/hero.njk" %}
 {% include "category/grid.njk" %}
@@ -27,4 +27,4 @@ pageCss: category
 {%- set tratamientos = tdata %}
 {% include "treatment-modal.njk" %}
 
-{% include "category/faq-script.njk" %}
+{% include "category/scripts.njk" %}

@@ -67,7 +67,7 @@ const listFiles = (dir) =>
 // Lo unico que el refactor cambia, por forma exacta. Se aplica igual a baseline y actual.
 const CATEGORY_STYLE_BLOCK = /<style>\s*\/\* ─── HERO CINEMATIC[\s\S]*?<\/style>/;
 const CATEGORY_CSS_LINK = /<link rel="stylesheet" href="[^"]*\/css\/category\.css\?v=[0-9a-f]{8}" \/>/;
-const categoryWrapperOpen = (id) => `<div class="category-page" data-category="${id}">`;
+const categoryWrapperOpen = () => '<div class="category-page">';
 const WRAPPER_CLOSE = /(<\/section>\s*)<\/div>(\s*<!-- TREATMENT MODAL)/;
 // Excepciones nominales: tratamientos-faciales tenia dos particularidades propias.
 const TF_SPECIALTIES_INLINE =
@@ -96,7 +96,7 @@ function normalize(html, id) {
   let out = html
     .replace(CATEGORY_STYLE_BLOCK, "")
     .replace(CATEGORY_CSS_LINK, "")
-    .replace(categoryWrapperOpen(id), "")
+    .replace(categoryWrapperOpen(), "")
     .replace(WRAPPER_CLOSE, "$1$2");
   if (id === "tratamientos-faciales") {
     const eol = out.includes("\r\n") ? "\r\n" : "\n";
@@ -161,7 +161,7 @@ function collectStyles(detailIndexes) {
     return h >>> 0;
   };
   const elements = [document.documentElement, ...document.body.querySelectorAll("*")].filter(
-    (el) => !SKIP.has(el.tagName) && !el.matches(".category-page[data-category]"),
+    (el) => !SKIP.has(el.tagName) && !el.matches(".category-page"),
   );
   const describe = (el) => {
     const id = el.id ? `#${el.id}` : "";

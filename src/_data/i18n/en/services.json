@@ -27,7 +27,6 @@
   },
   "list": {
     "flag": "Flagship speciality",
-    "from": "from",
     "count": "Treatments shown: {shown} of {total}"
   },
   "trust": {

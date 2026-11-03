@@ -27,7 +27,6 @@
   },
   "list": {
     "flag": "Spécialité phare",
-    "from": "dès",
     "count": "Soins affichés : {shown} sur {total}"
   },
   "trust": {

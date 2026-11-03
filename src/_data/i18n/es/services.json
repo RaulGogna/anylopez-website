@@ -27,7 +27,6 @@
   },
   "list": {
     "flag": "Especialidad estrella",
-    "from": "desde",
     "count": "Tratamientos mostrados: {shown} de {total}"
   },
   "trust": {

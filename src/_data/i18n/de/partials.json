@@ -1,4 +1,9 @@
 {
+  "catalog": {
+    "from": "ab",
+    "includes": "Was enthalten ist",
+    "processToggle": "Alle {count} Schritte ansehen"
+  },
   "modal": {
     "close": "Karte schließen",
     "benefits": "Vorteile",

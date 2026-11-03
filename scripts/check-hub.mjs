@@ -6,8 +6,6 @@
  * Las secciones con `content-visibility: auto` miden fuera de pantalla su tamaño de reserva, no el
  * real: se fuerza `visible` antes de medir la altura.
  *
- * El navegador y el host de prueba vienen de scripts/lib/browser.mjs.
- *
  * Uso: npm run verify:hub   (construye y comprueba)
  */
 import { existsSync, readFileSync } from "node:fs";
@@ -15,12 +13,13 @@ import { join } from "node:path";
 import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
 import { HOST, cerrar, lanzarNavegador, nuevaPagina } from "./lib/browser.mjs";
+import { filasDelHub } from "./lib/hub.mjs";
 
 const require = createRequire(import.meta.url);
 const LANGS = require("../src/_data/langs.json");
 const OBJETIVOS = require("../src/_data/catalogo/objetivos.json");
 const catalogo = (code) => require(`../src/_data/catalogo/${code}.json`);
-const textos = (code) => require(`../src/_data/i18n/${code}/services.json`);
+const textos = (code, nombre = "services") => require(`../src/_data/i18n/${code}/${nombre}.json`);
 
 const SITE = "_site";
 const ANCHOS = [320, 375, 768, 1024, 1440];
@@ -95,19 +94,11 @@ async function comprobarContenido(page, lang, base) {
   const code = lang.code;
   const cat = catalogo(code);
   const total = cat.tratamientos.length;
-  const desde = textos(code).list.from;
+  const desde = textos(code, "partials").catalog.from;
   await page.goto(base + urlDe(lang, "/services/"), { waitUntil: "load" });
   await page.locator(".svc-goals:not([hidden])").waitFor({ timeout: 10000 });
 
-  const filas = await page.$$eval(".svc-row", (rows) =>
-    rows.map((r) => ({
-      slug: r.dataset.slug,
-      href: r.getAttribute("href"),
-      nombre: r.querySelector(".svc-row-name")?.textContent.trim(),
-      precio: r.querySelector(".svc-row-price bdi")?.textContent.trim() ?? null,
-      marcaDesde: r.querySelector(".svc-row-from")?.textContent.trim() ?? null,
-    }))
-  );
+  const filas = await filasDelHub(page);
   if (filas.length !== total) fallar(code, `${filas.length} filas, se esperaban ${total}`);
 
   for (const t of cat.tratamientos) {

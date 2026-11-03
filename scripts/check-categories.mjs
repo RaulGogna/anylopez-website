@@ -17,6 +17,7 @@ import { join } from "node:path";
 import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
 import { HOST, cerrar, lanzarNavegador, nuevaPagina } from "./lib/browser.mjs";
+import { filasDelHub } from "./lib/hub.mjs";
 
 const require = createRequire(import.meta.url);
 const todas = require("../src/_data/categoryPages.js");
@@ -52,6 +53,16 @@ function cadenasDeCopy(tx) {
   return salida;
 }
 
+// Lo que el catálogo aporta a la tarjeta y el modal ya no enseña: `incluye` y, donde la categoría
+// lo etiqueta, `paraQuien`.
+function cadenasDeCatalogo(code, tx, cat) {
+  const tratamientos = catalogo(code).tratamientos.filter((t) => t.categoria === cat.id);
+  return tratamientos.flatMap((t) => [
+    ...(t.incluye ?? []),
+    ...(tx.grid.forWhom_html ? [t.paraQuien] : []),
+  ]).map((valor) => ({ clave: "catalogo", valor }));
+}
+
 const cabecera = (html) => {
   const una = (re) => html.match(re)?.[1].trim() ?? null;
   return {
@@ -79,15 +90,7 @@ function comprobarCabecera({ url }, id) {
 async function leerHub(browser, base, lang) {
   const page = await nuevaPagina(browser, MOVIL);
   await page.goto(`${base}${lang.prefix}/services/`, { waitUntil: "load" });
-  const filas = await page.$$eval(".svc-row", (rows) =>
-    rows.map((r) => ({
-      slug: r.dataset.slug,
-      href: r.getAttribute("href"),
-      nombre: r.querySelector(".svc-row-name")?.textContent.trim(),
-      precio: r.querySelector(".svc-row-price bdi")?.textContent.trim() ?? null,
-      marcaDesde: r.querySelector(".svc-row-from")?.textContent.trim() ?? null,
-    }))
-  );
+  const filas = await filasDelHub(page);
   await cerrar(page);
   return new Map(filas.map((f) => [f.slug, f]));
 }
@@ -102,10 +105,10 @@ async function comprobarTarjetas(page, { l, cat, url }, id, hub) {
   const tarjetas = await page.$$eval(".trat-card", (cs) =>
     cs.map((c) => ({
       id: c.id,
-      href: c.tagName === "A" ? c.getAttribute("href") : null,
+      href: c.querySelector("a.trat-cta")?.getAttribute("href") ?? null,
       nombre: c.querySelector(".trat-card-name")?.textContent.trim(),
-      precio: c.querySelector(".svc-row-price bdi")?.textContent.trim() ?? null,
-      marcaDesde: c.querySelector(".svc-row-from")?.textContent.trim() ?? null,
+      precio: c.querySelector(".price-from bdi")?.textContent.trim() ?? null,
+      marcaDesde: c.querySelector(".price-from-label")?.textContent.trim() ?? null,
     }))
   );
   if (tarjetas.length !== esperados.length) fallar(id, `${tarjetas.length} tarjetas, se esperaban ${esperados.length}`);
@@ -127,7 +130,7 @@ async function comprobarTarjetas(page, { l, cat, url }, id, hub) {
 
 async function comprobarCopy(page, { l, cat }, id) {
   const tx = textos(l.code, `svc-${cat.id}`);
-  const cadenas = cadenasDeCopy(tx);
+  const cadenas = [...cadenasDeCopy(tx), ...cadenasDeCatalogo(l.code, tx, cat)];
   const ausentes = await page.evaluate((lista) => {
     const compacto = (s) => s.replace(/\s+/g, " ").trim();
     const pagina = compacto(document.querySelector(".category-page").textContent);
@@ -142,6 +145,19 @@ async function comprobarCopy(page, { l, cat }, id) {
   if (!cadenas.length) fallar(id, "no se leyó ninguna cadena de copy");
 }
 
+// El carrusel de testimonios solo es foco de teclado cuando desplaza de verdad.
+async function carruselConTabindex(page, id, desplaza) {
+  const esperado = desplaza ? "0" : null;
+  const ok = await page
+    .waitForFunction(
+      (e) => document.querySelector(".cat-page-tests-grid").getAttribute("tabindex") === e,
+      esperado,
+      { timeout: 3000 }
+    )
+    .then(() => true, () => false);
+  if (!ok) fallar(id, `tabindex del carrusel ${desplaza ? "ausente cuando desplaza" : "presente cuando no desplaza"}`);
+}
+
 async function comprobarMedidas(page, id) {
   await page.setViewportSize(MOVIL);
   const primero = await pantallasHasta(page, MOVIL.height, ".trat-card");
@@ -150,7 +166,7 @@ async function comprobarMedidas(page, id) {
   if (pantallas > MAX_PANTALLAS) fallar(id, `la página mide ${pantallas.toFixed(2)} pantallas a 390×844 (máximo ${MAX_PANTALLAS})`);
 
   const pequenos = await page.evaluate((min) => {
-    const cajas = [...document.querySelectorAll(".trat-card .trat-cta, .cat-page-faq-q, .cat-page-process-details summary, .cat-page-hero .btn, .cat-page-final .btn")];
+    const cajas = [...document.querySelectorAll(".trat-card .trat-cta, .trat-card-more summary, .cat-page-faq-q, .cat-page-process-details summary, .cat-page-hero .btn, .cat-page-final .btn")];
     return cajas.filter((e) => e.getBoundingClientRect().height < min - 0.5).map((e) => e.className || e.tagName);
   }, TACTIL);
   if (pequenos.length) fallar(id, `objetivos táctiles de menos de ${TACTIL} px: ${[...new Set(pequenos)].join(", ")}`);
@@ -163,7 +179,9 @@ async function comprobarMedidas(page, id) {
   await page.setViewportSize(ESCRITORIO);
   const enEscritorio = await pantallasHasta(page, ESCRITORIO.height, ".trat-card");
   if (enEscritorio > MAX_PRIMER_TRATAMIENTO.escritorio) fallar(id, `el primer tratamiento queda a ${enEscritorio.toFixed(2)} pantallas a 1440×900 (máximo ${MAX_PRIMER_TRATAMIENTO.escritorio})`);
+  await carruselConTabindex(page, id, false);
   await page.setViewportSize(MOVIL);
+  await carruselConTabindex(page, id, true);
   return { primero, pantallas };
 }
 
@@ -182,6 +200,8 @@ async function comprobarModal(page, { l, cat }, id) {
     await boton.evaluate((el) => el.scrollIntoView({ block: "center" }));
     await boton.click();
     await abierto(t.nombre).catch(() => fallar(id, `la tarjeta ${t.slug} no abre su modal`));
+    const descripcion = await page.locator('#trat-modal [data-field="descripcion"]').textContent();
+    if (descripcion !== t.descripcion) fallar(id, `el modal de ${t.slug} no muestra la descripción completa`);
 
     if (i === 0 || i === esperados.length - 1) {
       await page.evaluate(() => { window.__eventos = []; });

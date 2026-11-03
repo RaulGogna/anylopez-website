@@ -41,6 +41,7 @@
     fillSlot('categoria', cat.nombre || '');
     fillSlot('nombre', trat.nombre);
     fillSlot('paraQuien', trat.paraQuien || '');
+    fillSlot('descripcion', trat.descripcion);
     fillSlot('duracion', trat.duracion || '');
     fillSlot('garantia', trat.garantia || GARANTIA_DEFAULT);
 
