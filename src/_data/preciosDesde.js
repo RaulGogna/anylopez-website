@@ -1,13 +1,13 @@
 const { tratamientos } = require("./catalogo/es.json");
 
 // Los precios son iguales en todos los idiomas y `concepto` solo es fiable en es:
-// el "desde" sale siempre del catalogo espanol. Los packs no cuentan.
+// el "desde" sale siempre del catalogo espanol. Ni los packs ni los retoques cuentan.
 const IMPORTE = /\d+(?:[.,]\d+)?/;
 const importe = (precio) => parseFloat(precio.match(IMPORTE)[0].replace(",", "."));
 
 function precioDesde({ precios = [] }) {
   const sueltos = precios.filter(
-    (p) => !/\bpack\b/i.test(p.concepto) && IMPORTE.test(p.precio)
+    (p) => !/\b(pack|retoque)\b/i.test(p.concepto) && IMPORTE.test(p.precio)
   );
   if (!sueltos.length) return null;
   const minimo = sueltos.reduce((a, b) => (importe(b.precio) < importe(a.precio) ? b : a));

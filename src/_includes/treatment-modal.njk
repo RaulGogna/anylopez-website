@@ -50,10 +50,10 @@
       <strong>{{ tp.modal.guarantee }}</strong> <span data-field="garantia"></span>
     </aside>
     <footer class="trat-modal-ctas">
-      <a class="btn btn-accent trat-modal-cta-wa" href="{{ tp.modal.waHref }}" data-field="cta-wa" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-accent trat-modal-cta-wa" href="{{ tp.modal.waHref }}" data-field="cta-wa" data-event="whatsapp_clicked" target="_blank" rel="noopener noreferrer">
         {{ tp.modal.waCta }}
       </a>
-      <a class="btn btn-outline trat-modal-cta-tel" href="tel:+34656306167">
+      <a class="btn btn-outline trat-modal-cta-tel" href="tel:+34656306167" data-event="phone_clicked" data-event-props='{"location":"treatment-modal","number":"656306167"}'>
         {{ tp.modal.telCta }}
       </a>
     </footer>

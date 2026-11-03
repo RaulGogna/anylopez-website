@@ -29,13 +29,13 @@ const ANCHOS = [320, 375, 768, 1024, 1440];
 const MAX_PANTALLAS = 8.5;
 const ULTIMO_OBJETIVO = OBJETIVOS.at(-1).id;
 
-const esPack = (concepto) => /\bpack\b/i.test(concepto);
+const noCuenta = (concepto) => /\b(pack|retoque)\b/i.test(concepto);
 const importe = (precio) => Number(precio.replace(/[^\d,.]/g, "").replace(",", "."));
 
 // Mínimo de los conceptos sueltos del catálogo español (los precios son iguales en todos los
 // idiomas y `concepto` solo es fiable en es); lleva «desde» si hay varios importes o ya lo dice.
 function precioEsperado({ precios }) {
-  const sueltos = precios.filter((p) => !esPack(p.concepto) && /\d/.test(p.precio));
+  const sueltos = precios.filter((p) => !noCuenta(p.concepto) && /\d/.test(p.precio));
   if (!sueltos.length) return null;
   const minimo = sueltos.reduce((a, b) => (importe(b.precio) < importe(a.precio) ? b : a));
   const hayVarios = sueltos.some((p) => importe(p.precio) !== importe(minimo.precio));
@@ -198,6 +198,34 @@ async function comprobarClicsNativos(page, lang) {
   }
 }
 
+// Los CTA del modal llevan data-event: sin él, tracking.js contaría el clic a wa.me como outbound_clicked.
+// El clic abre wa.me en otra pestaña, y el route de nuevaPagina lo aborta: no se sale a la red.
+async function comprobarEventosDelModal(page, lang) {
+  const code = lang.code;
+  const slug = catalogo(code).tratamientos[0].slug;
+  const emitidos = (nombre) => page.evaluate((n) => window.__eventos.filter((e) => e.nombre === n), nombre);
+
+  await page.click(`.svc-row[data-slug="${slug}"]`);
+  await page.locator("#trat-modal[open]").waitFor();
+  await page.evaluate(() => { window.__eventos = []; });
+
+  const popup = page.context().waitForEvent("page", { timeout: 5000 }).catch(() => null);
+  await page.click(".trat-modal-cta-wa");
+  await (await popup)?.close();
+  const wa = await emitidos("whatsapp_clicked");
+  if (wa.length !== 1) fallar(code, `el CTA de WhatsApp emitió ${wa.length} whatsapp_clicked, se esperaba 1`);
+  else if (wa[0].props?.treatment_slug !== slug || wa[0].props?.location !== "treatment-modal")
+    fallar(code, `whatsapp_clicked con props ${JSON.stringify(wa[0].props)}, se esperaba ${slug} en treatment-modal`);
+  if ((await emitidos("outbound_clicked")).length) fallar(code, "el CTA de WhatsApp emitió outbound_clicked");
+
+  await page.evaluate(() => { window.__eventos = []; });
+  await page.click(".trat-modal-cta-tel").catch(() => {});
+  const tel = await emitidos("phone_clicked");
+  if (tel.length !== 1 || tel[0].props?.treatment_slug !== slug || tel[0].props?.number !== "656306167")
+    fallar(code, `el CTA de teléfono emitió ${JSON.stringify(tel)}`);
+  await page.keyboard.press("Escape");
+}
+
 async function comprobarTracking(browser, lang, base) {
   const page = await nuevaPagina(browser, { width: 1024, height: 800 });
   await page.goto(base + urlDe(lang, "/contact/"), { waitUntil: "load" });
@@ -280,6 +308,7 @@ try {
     await comprobarContenido(page, lang, base);
     await comprobarFiltros(page, lang);
     await comprobarModal(page, lang);
+    await comprobarEventosDelModal(page, lang);
     await comprobarClicsNativos(page, lang);
     await cerrar(page);
     await comprobarTracking(browser, lang, base);
