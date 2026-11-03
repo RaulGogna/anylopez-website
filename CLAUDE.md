@@ -144,8 +144,12 @@ recibe el idioma.
 Para añadir una categoría: entrada en `src/_data/serviceCategories.json` (solo lo que difiere de
 `defaults`), `pages.json`, `i18n/<lang>/svc-<id>.json`, los tratamientos en `catalogo/` y el
 enlace en `footer.servicesLinks` de `i18n/<lang>/chrome.json` (las 8 categorías, en los 7 idiomas). Lo que cambia de
-verdad respecto al resto va como override en `css/category.css` bajo
-`.category-page[data-category="<id>"]`. `scripts/compare-sites.mjs <baseline> <actual>` es una
+verdad respecto al resto va en `serviceCategories.json` (xsellHref, crossHrefs, linkedTreatments); no hay overrides de CSS por categoría.
+**Orden fijo de secciones, igual para las 8:** hero, tratamientos (tarjeta compacta, un solo tamaño), venta cruzada (`cross` si hay
+`crossHrefs`, si no `xsell`), dolor y por qué (`pain-why`), testimonios (scroll-snap en móvil), FAQ, proceso (`<details>`) y cierre.
+`npm run verify:categories` (Chromium real, 56 páginas; `--base <_site de master>` compara cabeceras y JSON-LD) vigila tarjetas, precios y anclas contra el hub,
+copy íntegro, primer tratamiento ≤ 1,3 (móvil) / 1,1 (escritorio) pantallas, ≤ 9,5 pantallas a 390×844 y desborde.
+`scripts/compare-sites.mjs <baseline> <actual>` es una
 herramienta puntual para refactors de estas páginas: compara contra una baseline construida antes
 del cambio, no es un gate permanente.
 

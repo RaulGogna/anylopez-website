@@ -1,0 +1,39 @@
+{% import "category/copy.njk" as c %}
+<!-- PAIN POINTS + WHY IT WORKS -->
+<section class="cat-page-pw">
+  <div class="container cat-page-pw-grid">
+    <div class="cat-page-pain">
+      <div class="cat-page-pw-head">
+        <span class="eyebrow">{{ tx.pain.eyebrow }}</span>
+        <h2>{{ tx.pain.h2 }}</h2>
+        <p>{{ c.copy(tx.pain, 'p') }}</p>
+      </div>
+      <ul class="cat-page-pain-list">
+        {%- for it in tx.pain.items %}
+        <li>
+          <h3>{{ it.h3_html | safe }}</h3>
+          <p>{{ c.copy(it, 'p') }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="cat-page-why">
+      <div class="cat-page-pw-head">
+        <span class="eyebrow">{{ c.copy(tx.why, 'eyebrow') }}</span>
+        <h2>{{ c.copy(tx.why, 'h2') }}</h2>
+        <p>{{ c.copy(tx.why, 'p') }}</p>
+      </div>
+      <ol class="cat-page-why-list">
+        {%- for it in tx.why.items %}
+        <li>
+          <span class="cat-page-why-num" aria-hidden="true">{{ loop.index }}</span>
+          <div>
+            <h3>{{ c.copy(it, 'h3') }}</h3>
+            <p>{{ c.copy(it, 'p') }}</p>
+          </div>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>

@@ -13,10 +13,14 @@ pageCss: category
 
 <div class="category-page" data-category="{{ cat.id }}">
 {% include "category/breadcrumb.njk" %}
-{%- for section in cat.sections %}
-
-{% include "category/" + section + ".njk" %}
-{%- endfor %}
+{% include "category/hero.njk" %}
+{% include "category/grid.njk" %}
+{% include "category/" + ("cross" if cat.crossHrefs else "xsell") + ".njk" %}
+{% include "category/pain-why.njk" %}
+{% include "category/tests.njk" %}
+{% include "category/faq.njk" %}
+{% include "category/process.njk" %}
+{% include "category/final.njk" %}
 </div>
 
 <!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->

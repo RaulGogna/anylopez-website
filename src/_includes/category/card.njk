@@ -12,40 +12,29 @@
       class="trat-card-img"
       loading="lazy"
       decoding="async"
-      width="{{ cat.card.width }}"
-      height="{{ cat.card.height }}"
+      width="88"
+      height="88"
     />
   </picture>
   <div class="trat-card-body">
     <h3 class="trat-card-name">{{ trat.nombre }}</h3>
     <p class="trat-card-desc">{{ trat.descripcion }}</p>
-    {%- if tx.grid.forWhom_html %}
-    <p class="trat-card-desc"><strong>{{ tx.grid.forWhom_html | safe }}</strong> {{ trat.paraQuien }}</p>
-    {%- endif %}
-
-    {% if trat.incluye %}
-    <ul class="trat-card-incluye">
-      {%- for item in trat.incluye %}
-      {%- if not cat.incluyeLimit or loop.index <= cat.incluyeLimit %}
-      <li>{{ item }}</li>
-      {%- endif %}
-      {%- endfor %}
-    </ul>
-    {% endif %}
-
     <div class="trat-card-meta">
-      <span class="trat-duracion">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-        </svg>
-        {{ trat.duracion }}
-      </span>
+      <div class="trat-card-facts">
+        <span class="trat-duracion">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          {{ trat.duracion }}
+        </span>
+        {{ price.priceFrom(preciosDesde[trat.slug], hubFrom) }}
+      </div>
       {%- if pageHref %}
       <span class="trat-cta">{{ tx.grid.viewFullCta }}</span>
       {%- else %}
       <button
         type="button"
-        class="trat-cta trat-card-trigger"
+        class="trat-cta"
         data-slug="{{ trat.slug }}"
         aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
       >{{ tx.grid.detailsCta }}</button>

@@ -966,7 +966,7 @@ body::before {
   background: var(--sand); padding: 14px 0;
   border-bottom: 1px solid var(--border);
 }
-.breadcrumb .container { display: flex; gap: 8px; align-items: center; }
+.breadcrumb .container { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
 .breadcrumb a { font-size: var(--fs-2xs); color: var(--text-mid); transition: color 0.2s; }
 .breadcrumb a:hover { color: var(--terra); }
 .breadcrumb span { font-size: var(--fs-2xs); color: var(--text-mid); }
@@ -1624,26 +1624,6 @@ button[type="submit"] {
   .legado-section .section-title { font-size: 32px; }
   .hero-guarantee { font-size: 12px; }
 }
-
-/* ─── TREATMENT CARD INTERACTIVE ───────────────────────────────── */
-.trat-card { cursor: pointer; }
-.trat-card:focus-within { box-shadow: 0 0 0 3px rgba(192,98,48,.35), var(--shadow); }
-.trat-card-trigger {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--terra-dk);
-  transition: color 0.2s;
-}
-.trat-card-trigger:hover { color: var(--primary); }
-.trat-card-trigger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 
 /* ─── TREATMENT MODAL ──────────────────────────────────────────── */
 .trat-modal {

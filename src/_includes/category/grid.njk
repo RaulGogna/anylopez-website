@@ -1,8 +1,10 @@
 {% import "category/copy.njk" as c %}
+{% import "price-from.njk" as price %}
+{%- set hubFrom = i18n[l.code].services.list.from %}
 <!-- TREATMENTS GRID -->
-<section class="{{ cat.gridSectionClass }}">
+<section class="cat-page-grid-section">
   <div class="container">
-    <div class="{{ cat.gridHeadClass }}">
+    <div class="cat-page-section-head">
       <span class="eyebrow">{{ tx.grid.eyebrow }}</span>
       <h2>{{ tx.grid.h2 }}</h2>
       <p>{{ c.copy(tx.grid, 'p') }}</p>

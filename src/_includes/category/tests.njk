@@ -1,12 +1,12 @@
 <!-- TESTIMONIOS -->
 <section class="cat-page-tests">
   <div class="container">
-    <div class="cat-page-tests-head">
+    <div class="cat-page-section-head">
       <span class="eyebrow">{{ tx.tests.eyebrow }}</span>
-      <h2>{{ tx.tests.h2 }}</h2>
+      <h2 id="cat-page-tests-title">{{ tx.tests.h2 }}</h2>
       <p>{{ tx.tests.p }}</p>
     </div>
-    <div class="cat-page-tests-grid">
+    <div class="cat-page-tests-grid" role="region" aria-labelledby="cat-page-tests-title" tabindex="0">
       {%- for it in tx.tests.items %}
       <div class="cat-page-test">
         <div class="cat-page-test-stars">★★★★★</div>

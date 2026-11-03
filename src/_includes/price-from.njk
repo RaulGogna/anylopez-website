@@ -1,0 +1,5 @@
+{%- macro priceFrom(minimo, from) -%}
+{%- if minimo -%}
+<span class="svc-row-price">{% if minimo.esDesde %}<span class="svc-row-from">{{ from }}</span>{% endif %}<bdi>{{ minimo.precio }}</bdi></span>
+{%- endif -%}
+{%- endmacro -%}

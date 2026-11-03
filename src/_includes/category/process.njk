@@ -2,21 +2,23 @@
 <!-- PROCESS -->
 <section class="cat-page-process">
   <div class="container">
-    <div class="cat-page-process-head">
-      <span class="eyebrow">{{ tx.process.eyebrow }}</span>
-      <h2>{{ tx.process.h2 }}</h2>
-      <p>{{ c.copy(tx.process, 'p') }}</p>
-    </div>
-    <div class="cat-page-steps">
-      {%- for it in tx.process.steps %}
-      <div class="cat-page-step">
-        <div class="cat-page-step-num">{{ loop.index }}</div>
-        <div class="cat-page-step-body">
-          <h3>{{ c.copy(it, 'h3') }}</h3>
-          <p>{{ c.copy(it, 'p') }}</p>
-        </div>
+    <details class="cat-page-process-details">
+      <summary><h2>{{ tx.process.h2 }}</h2></summary>
+      <div class="cat-page-process-body">
+        <span class="eyebrow">{{ tx.process.eyebrow }}</span>
+        <p>{{ c.copy(tx.process, 'p') }}</p>
+        <ol class="cat-page-steps">
+          {%- for it in tx.process.steps %}
+          <li class="cat-page-step">
+            <span class="cat-page-step-num" aria-hidden="true">{{ loop.index }}</span>
+            <div>
+              <h3>{{ c.copy(it, 'h3') }}</h3>
+              <p>{{ c.copy(it, 'p') }}</p>
+            </div>
+          </li>
+          {%- endfor %}
+        </ol>
       </div>
-      {%- endfor %}
-    </div>
+    </details>
   </div>
 </section>

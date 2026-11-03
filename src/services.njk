@@ -14,6 +14,7 @@ eleventyComputed:
 ---
 {%- set tx = i18n[l.code].services %}
 {%- set tdata = catalogo[l.code] %}
+{% import "price-from.njk" as p %}
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
@@ -72,14 +73,11 @@ eleventyComputed:
       </header>
       <ul class="svc-rows">
         {%- for t in tdata.tratamientos | byCategory(cat.id) %}
-        {%- set minimo = preciosDesde[t.slug] %}
         <li>
           <a class="svc-row" href="{{ (l.prefix + '/services/' + cat.id + '/#' + t.slug) | url }}" data-slug="{{ t.slug }}">
             <span class="svc-row-name">{{ t.nombre }}</span>
             <span class="svc-row-meta">{{ t.duracion }}</span>
-            {%- if minimo %}
-            <span class="svc-row-price">{% if minimo.esDesde %}<span class="svc-row-from">{{ tx.list.from }}</span>{% endif %}<bdi>{{ minimo.precio }}</bdi></span>
-            {%- endif %}
+            {{ p.priceFrom(preciosDesde[t.slug], tx.list.from) }}
           </a>
         </li>
         {%- endfor %}
