@@ -24,11 +24,9 @@
  * sabemos roto, el probe no vale: arréglalo antes de fiarte de su verde.
  */
 import { chromium } from "playwright";
-import { createServer } from "node:http";
-import { readFile } from "node:fs/promises";
-import { extname, join, normalize } from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
+import { serveStatic } from "./lib/serve-static.mjs";
 import { writeFileSync, rmSync } from "node:fs";
 
 const require = createRequire(import.meta.url);
@@ -40,38 +38,6 @@ const TZ_CLINICA = "Europe/Madrid";
 // saliera con 0: el verde por vacío que este gate existe para evitar.
 if (LANGS.length !== 7) {
   throw new Error(`langs.json trae ${LANGS.length} idiomas y se esperaban 7. Actualiza este gate a conciencia.`);
-}
-
-const MIME = {
-  ".html": "text/html; charset=utf-8",
-  ".js": "text/javascript; charset=utf-8",
-  ".css": "text/css; charset=utf-8",
-  ".json": "application/json; charset=utf-8",
-  ".svg": "image/svg+xml",
-  ".webp": "image/webp",
-  ".woff2": "font/woff2",
-  ".png": "image/png",
-  ".jpg": "image/jpeg",
-  ".ico": "image/x-icon",
-  ".mp4": "video/mp4",
-};
-
-function serve(root) {
-  const server = createServer(async (req, res) => {
-    try {
-      let p = decodeURIComponent(req.url.split("?")[0]);
-      if (p.endsWith("/")) p += "index.html";
-      const file = join(root, normalize(p).replace(/^(\.\.[/\\])+/, ""));
-      const body = await readFile(file);
-      res.writeHead(200, { "content-type": MIME[extname(file)] || "application/octet-stream" });
-      res.end(body);
-    } catch {
-      res.writeHead(404).end("not found");
-    }
-  });
-  return new Promise((resolve) => {
-    server.listen(0, "127.0.0.1", () => resolve({ server, port: server.address().port }));
-  });
 }
 
 const capFirst = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
@@ -261,9 +227,8 @@ const arg = process.argv[2];
 let base = arg;
 let server = null;
 if (!base) {
-  const s = await serve(fileURLToPath(new URL("../_site", import.meta.url)));
-  server = s.server;
-  base = `http://127.0.0.1:${s.port}`;
+  server = await serveStatic(fileURLToPath(new URL("../_site", import.meta.url)));
+  base = `http://127.0.0.1:${server.address().port}`;
 }
 
 const browser = await chromium.launch();

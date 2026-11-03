@@ -1,0 +1,10 @@
+[
+  { "id": "arrugas-flacidez", "slugs": ["ultherapy", "radiofrecuencia-indiba", "hilos-tensores", "botox-zona", "acido-hialuronico", "prp-plasma", "dermapen-hidratacion", "peeling-quimico-facial", "masaje-facial-colageno"] },
+  { "id": "manchas-tono", "slugs": ["peeling-antimanchas", "peeling-quimico-facial", "laser-plasma-pen", "masaje-facial-vitamina-c"] },
+  { "id": "acne-cicatrices", "slugs": ["anti-acne", "dermapen-cicatrices", "limpieza-facial-detox"] },
+  { "id": "luminosidad", "slugs": ["limpieza-facial-gold", "limpieza-facial-platinum", "limpieza-facial-diamond", "limpieza-facial-elite", "velo-colageno-puro", "dermaplaning-facial", "masaje-facial-vitamina-c", "masaje-aloe-vera"] },
+  { "id": "celulitis-cuerpo", "slugs": ["maderoterapia", "triple-accion-anticelulitica", "mesoterapia-virtual", "radiofrecuencia-indiba"] },
+  { "id": "piernas-retencion", "slugs": ["presoterapia", "drenaje-linfatico-postop", "masaje-piernas-cansadas", "masaje-podal"] },
+  { "id": "relax-tension", "slugs": ["masaje-corporal", "masaje-relajante", "masaje-craneo-facial-cervical", "masaje-podal", "dolor-muscular-corporal"] },
+  { "id": "belleza-depilacion", "slugs": ["pestanas-pelo-a-pelo", "micropigmentacion", "depilacion-ipl"] }
+]

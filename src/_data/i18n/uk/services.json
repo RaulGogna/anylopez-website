@@ -2,11 +2,6 @@
   "title": "Процедури в AnyLopez Естетична клініка — Бенідорм",
   "description": "Вісім напрямків, одна майстерність. Каталог процедур для обличчя, тіла, ін'єкційних методик та апаратної косметології в AnyLopez Естетична клініка, Бенідорм.",
   "breadcrumb": "Послуги",
-  "css": {
-    "eyebrowColor": "var(--terra-dk)",
-    "tratListColor": "var(--text-mid)",
-    "flagshipLabel": "Radiofrecuencia INDIBA"
-  },
   "hero": {
     "eyebrow": "Каталог · 8 напрямків",
     "h1_html": "Вісім напрямків,<br><em>одна майстерність.</em>",
@@ -15,21 +10,25 @@
     "treatments": "доступних процедур",
     "free": "Безкоштовна первинна діагностика"
   },
-  "catLabels": {
-    "limpiezas-faciales": "Гігієна + регулярний догляд",
-    "tratamientos-faciales": "Оновлення · Проти акне · Пігментація",
-    "lifting-antiaging": "Підтяжка без хірургії",
-    "inyectables": "Передова естетична медицина",
-    "corporal": "Тіло · Тонус · Відновлення",
-    "masajes": "Ручний · Терапевтичний · Дренаж",
-    "estetica-decorativa": "Вії · Мікропігментація",
-    "depilacion": "IPL · Комфортна шкіра"
+  "nav": {
+    "categories": "Категорії процедур",
+    "goalsLabel": "Фільтр за метою",
+    "all": "Усі"
   },
-  "cards": {
+  "goals": {
+    "arrugas-flacidez": "Зморшки та в’язлість",
+    "manchas-tono": "Пігментація та тон шкіри",
+    "acne-cicatrices": "Акне та рубці",
+    "luminosidad": "Сяйво та зволоження",
+    "celulitis-cuerpo": "Целюліт та локальні жирові відкладення",
+    "piernas-retencion": "Ноги та затримка рідини",
+    "relax-tension": "Релакс та м’язова напруга",
+    "belleza-depilacion": "Макіяж, вії та депіляція"
+  },
+  "list": {
     "flag": "Флагманська процедура",
-    "altSuffix": "в AnyLopez Бенідорм",
-    "unit": "процедура",
-    "cta": "Переглянути процедури"
+    "from": "від",
+    "count": "Показано процедур: {shown} з {total}"
   },
   "trust": {
     "reviews": "перевірених відгуків у Google",

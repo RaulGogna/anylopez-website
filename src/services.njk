@@ -4,6 +4,7 @@ pagination:
   data: langs
   size: 1
   alias: l
+pageCss: services
 permalink: "{{ l.prefix }}/services/"
 eleventyComputed:
   lang: "{{ l.code }}"
@@ -13,291 +14,6 @@ eleventyComputed:
 ---
 {%- set tx = i18n[l.code].services %}
 {%- set tdata = catalogo[l.code] %}
-<style>
-  /* ─── HERO ─────────────────────────────────────────── */
-  .svc-hero {
-    padding: 96px 0 72px;
-    background: var(--ivory);
-    text-align: center;
-  }
-  .svc-hero h1 {
-    font-size: clamp(40px, 6.5vw, 76px);
-    line-height: 1.05;
-    margin: 12px auto 24px;
-    max-width: 880px;
-    letter-spacing: -0.01em;
-  }
-  .svc-hero h1 em {
-    font-style: italic;
-    color: var(--terra);
-  }
-  .svc-hero p.lead {
-    font-size: clamp(16px, 2vw, 19px);
-    color: var(--text-mid);
-    max-width: 620px;
-    margin: 0 auto 36px;
-    line-height: 1.6;
-  }
-  .svc-hero-meta {
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 13px;
-    color: var(--text-mid);
-    margin-top: 28px;
-  }
-  .svc-hero-meta strong { color: var(--text); font-weight: 600; }
-  .svc-hero-meta span.dot { color: var(--sand-mid); }
-  .svc-hero-stars { color: var(--gold); letter-spacing: 1px; font-size: 15px; }
-
-  /* ─── INDEX GRID ──────────────────────────────────── */
-  .svc-index {
-    padding: 24px 0 96px;
-    background: var(--ivory);
-  }
-  .svc-index-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-
-  /* ─── CATEGORY CARD (editorial) ───────────────────── */
-  .svc-cat {
-    position: relative;
-    display: block;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
-  }
-  /* PERF: aplazar layout/paint de las tarjetas below-fold. Las 2 primeras
-     quedan above-fold en mobile (viewport ~640px, card ~574px). */
-  .svc-cat:nth-child(n+3) {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 574px;
-  }
-  .svc-cat:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--terra);
-  }
-  .svc-cat-img {
-    position: relative;
-    height: 280px;
-    overflow: hidden;
-  }
-  .svc-cat-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.7s var(--ease);
-  }
-  .svc-cat:hover .svc-cat-img img { transform: scale(1.04); }
-  .svc-cat-img::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(26,18,8,0) 0%, rgba(26,18,8,0.45) 100%);
-  }
-  .svc-cat-num {
-    position: absolute;
-    top: 20px;
-    inset-inline-start: 24px;
-    z-index: 2;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: rgba(255,255,255,0.85);
-  }
-  .svc-cat-flag {
-    position: absolute;
-    top: 20px;
-    inset-inline-end: 24px;
-    z-index: 2;
-    background: var(--terra);
-    color: #fff;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 6px 12px;
-    border-radius: 2px;
-  }
-  .svc-cat-body {
-    padding: 32px 32px 36px;
-  }
-  .svc-cat-eyebrow {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: {{ tx.css.eyebrowColor }};
-    margin-bottom: 12px;
-    display: block;
-  }
-  .svc-cat-name {
-    font-size: clamp(24px, 3vw, 32px);
-    line-height: 1.15;
-    margin-bottom: 14px;
-    color: var(--dark);
-  }
-  .svc-cat-desc {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--text-mid);
-    margin-bottom: 20px;
-  }
-  .svc-cat-trat-list {
-    font-size: 13px;
-    color: {{ tx.css.tratListColor }};
-    line-height: 1.6;
-    margin-bottom: 24px;
-  }
-  .svc-cat-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--terra-dk);
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 4px;
-    transition: gap 0.25s var(--ease), color 0.25s var(--ease);
-  }
-  .svc-cat:hover .svc-cat-cta {
-    gap: 14px;
-    color: var(--terra);
-  }
-
-  /* ─── FLAGSHIP BAND ({{ tx.css.flagshipLabel }}) ──────────────────────── */
-  .svc-flagship {
-    background: var(--dark);
-    color: #fff;
-    padding: 96px 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .svc-flagship-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
-  }
-  .svc-flagship-img {
-    border-radius: 2px;
-    overflow: hidden;
-    position: relative;
-    aspect-ratio: 4 / 5;
-  }
-  .svc-flagship-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .svc-flagship h2 {
-    color: #fff;
-    font-size: clamp(34px, 4.5vw, 56px);
-    line-height: 1.05;
-    margin-bottom: 24px;
-  }
-  .svc-flagship h2 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-  .svc-flagship p {
-    font-size: 17px;
-    color: rgba(255,255,255,0.78);
-    line-height: 1.65;
-    margin-bottom: 28px;
-  }
-  .svc-flagship-meta {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-  }
-  .svc-flagship-meta-item {
-    font-size: 13px;
-    color: rgba(255,255,255,0.7);
-  }
-  .svc-flagship-meta-item strong {
-    display: block;
-    color: var(--gold);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-
-  /* ─── TRUST STRIP ─────────────────────────────────── */
-  .svc-trust {
-    background: var(--sand);
-    padding: 56px 0;
-    text-align: center;
-  }
-  .svc-trust-stars { color: var(--gold); font-size: 22px; letter-spacing: 2px; margin-bottom: 12px; }
-  .svc-trust-rating {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 500;
-    color: var(--dark);
-    margin-bottom: 6px;
-  }
-  .svc-trust-rating strong { color: var(--terra); font-weight: 500; }
-  .svc-trust-sub { font-size: 13px; color: var(--text-mid); letter-spacing: 0.04em; }
-
-  /* ─── FINAL CTA ───────────────────────────────────── */
-  .svc-final-cta {
-    padding: 120px 0;
-    text-align: center;
-    background: var(--ivory);
-  }
-  .svc-final-cta h2 {
-    font-size: clamp(32px, 4.5vw, 52px);
-    line-height: 1.1;
-    max-width: 720px;
-    margin: 0 auto 20px;
-  }
-  .svc-final-cta p {
-    font-size: 17px;
-    color: var(--text-mid);
-    max-width: 540px;
-    margin: 0 auto 36px;
-  }
-  .svc-final-cta-row {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* ─── RESPONSIVE ──────────────────────────────────── */
-  @media (max-width: 900px) {
-    .svc-index-grid { grid-template-columns: 1fr; gap: 24px; }
-    .svc-flagship-grid { grid-template-columns: 1fr; gap: 40px; }
-    .svc-flagship-img { aspect-ratio: 16/10; }
-    .svc-cat-img { height: 220px; }
-    .svc-cat-body { padding: 24px 24px 28px; }
-  }
-  @media (max-width: 640px) {
-    .svc-hero { padding: 64px 0 48px; }
-    .svc-flagship { padding: 64px 0; }
-    .svc-final-cta { padding: 80px 0; }
-  }
-</style>
-
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="container">
@@ -324,70 +40,56 @@ eleventyComputed:
   </div>
 </section>
 
-<!-- INDEX GRID -->
+
+<!-- CARTA DE TRATAMIENTOS -->
 <section class="svc-index">
   <div class="container">
-    <div class="svc-index-grid">
+    <nav class="svc-nav" aria-label="{{ tx.nav.categories }}">
+      <ul class="svc-chips">
+        {%- for cat in tdata.categorias %}
+        <li><a class="svc-chip" href="#{{ cat.id }}" data-cat="{{ cat.id }}">{{ cat.nombre }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
 
-      {%- set catImages = {
-        "limpiezas-faciales":   "fotoscatalogoanylopez/limpiezafacial",
-        "tratamientos-faciales":"fotoscatalogoanylopez/dermapen",
-        "lifting-antiaging":    "fotoscatalogoanylopez/ultherapyfacial",
-        "inyectables":          "fotoscatalogoanylopez/rellenoacidohialuronico",
-        "corporal":             "tratamientos/maderoterapia",
-        "masajes":              "tratamientos/masajes",
-        "estetica-decorativa":  "tratamientos/micropigmentacion",
-        "depilacion":           "tratamientos/depilacion-ipl"
-      } -%}
-
-      {% for cat in tdata.categorias %}
-        {%- set catTrats = tdata.tratamientos | byCategory(cat.id) -%}
-        {%- set imgPath = catImages[cat.id] -%}
-        {%- set isFlag = cat.id == "lifting-antiaging" -%}
-        {%- set padded = "0" + (loop.index | string) if loop.index < 10 else (loop.index | string) -%}
-        {%- set total = "0" + (tdata.categorias | length | string) if (tdata.categorias | length) < 10 else (tdata.categorias | length | string) -%}
-
-        <a href="{{ (l.prefix + '/services/' + cat.id + '/') | url }}" class="svc-cat" data-cat="{{ cat.id }}">
-          <div class="svc-cat-img">
-            <span class="svc-cat-num">{{ padded }} / {{ total }}</span>
-            {% if isFlag %}<span class="svc-cat-flag">{{ tx.cards.flag }}</span>{% endif %}
-            <picture>
-              <source srcset="{{ ('/images/' + imgPath + '.webp') | url }}" type="image/webp">
-              <img
-                src="{{ ('/images/' + imgPath + '.png') | url }}"
-                alt="{{ cat.nombre }} {{ tx.cards.altSuffix }}"
-                loading="{{ 'eager' if loop.index <= 2 else 'lazy' }}"
-                {% if loop.index == 1 %}fetchpriority="high"{% endif %}
-                decoding="async"
-                width="640"
-                height="360"
-              />
-            </picture>
-          </div>
-          <div class="svc-cat-body">
-            <span class="svc-cat-eyebrow">{{ tx.catLabels[cat.id] }}</span>
-            <h2 class="svc-cat-name">{{ cat.nombre }}</h2>
-            <p class="svc-cat-desc">{{ cat.descripcion }}</p>
-            <p class="svc-cat-trat-list">
-              {%- set tratNamesStr = "" -%}
-              {%- for t in catTrats -%}
-                {%- if loop.first -%}
-                  {%- set tratNamesStr = t.nombre -%}
-                {%- else -%}
-                  {%- set tratNamesStr = tratNamesStr + " · " + t.nombre -%}
-                {%- endif -%}
-              {%- endfor -%}
-              {{ catTrats | length }} {{ tx.cards.unit }}{{ "s" if catTrats | length > 1 else "" }} ·
-              {{ tratNamesStr | truncate(110, true, "…") }}
-            </p>
-            <span class="svc-cat-cta">{{ tx.cards.cta }} <span aria-hidden="true">→</span></span>
-          </div>
-        </a>
-      {% endfor %}
-
+    <div class="svc-goals" hidden>
+      <p class="svc-goals-label" id="svc-goals-label">{{ tx.nav.goalsLabel }}</p>
+      <ul class="svc-chips" aria-labelledby="svc-goals-label">
+        <li><button type="button" class="svc-chip" data-goal="" aria-pressed="true" data-event="treatment_goal_filtered" data-event-props='{"goal":"all"}'>{{ tx.nav.all }}</button></li>
+        {%- for goal in catalogo.objetivos %}
+        <li><button type="button" class="svc-chip" data-goal="{{ goal.id }}" aria-pressed="false" data-event="treatment_goal_filtered" data-event-props='{"goal":"{{ goal.id }}"}'>{{ tx.goals[goal.id] }}</button></li>
+        {%- endfor %}
+      </ul>
+      <p class="svc-count" role="status" data-template="{{ tx.list.count }}"></p>
     </div>
+
+    {%- for cat in tdata.categorias %}
+    <section class="svc-group" id="{{ cat.id }}">
+      <header class="svc-group-head">
+        <h2><a href="{{ (l.prefix + '/services/' + cat.id + '/') | url }}">{{ cat.nombre }}</a></h2>
+        {%- if cat.id == "lifting-antiaging" %}<span class="svc-group-flag">{{ tx.list.flag }}</span>{% endif %}
+        <p class="svc-group-desc">{{ cat.descripcion }}</p>
+      </header>
+      <ul class="svc-rows">
+        {%- for t in tdata.tratamientos | byCategory(cat.id) %}
+        {%- set minimo = preciosDesde[t.slug] %}
+        <li>
+          <a class="svc-row" href="{{ (l.prefix + '/services/' + cat.id + '/#' + t.slug) | url }}" data-slug="{{ t.slug }}">
+            <span class="svc-row-name">{{ t.nombre }}</span>
+            <span class="svc-row-meta">{{ t.duracion }}</span>
+            {%- if minimo %}
+            <span class="svc-row-price">{% if minimo.esDesde %}<span class="svc-row-from">{{ tx.list.from }}</span>{% endif %}<bdi>{{ minimo.precio }}</bdi></span>
+            {%- endif %}
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
+    {%- endfor %}
   </div>
 </section>
+
+<script type="application/json" id="svc-goals-data">{{ catalogo.objetivos | dump | safe }}</script>
 
 <!-- TRUST STRIP -->
 <section class="svc-trust">
@@ -475,3 +177,8 @@ eleventyComputed:
   ]
 }
 </script>
+
+<!-- TREATMENT MODAL (shared partial — drives data-slug triggers) -->
+{%- set tratamientos = tdata %}
+{% include "treatment-modal.njk" %}
+<script src="{{ '/js/services-filter.js' | url | bust }}" defer></script>

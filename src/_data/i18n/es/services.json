@@ -2,11 +2,6 @@
   "title": "Tratamientos en AnyLopez Clínica Estética — Benidorm",
   "description": "Ocho especialidades, un único oficio. Catálogo editorial de tratamientos faciales, corporales, inyectables y aparatología en AnyLopez Clínica Estética, Benidorm.",
   "breadcrumb": "Servicios",
-  "css": {
-    "eyebrowColor": "var(--terra-dk)",
-    "tratListColor": "var(--text-mid)",
-    "flagshipLabel": "Radiofrecuencia INDIBA"
-  },
   "hero": {
     "eyebrow": "Catálogo · 8 especialidades",
     "h1_html": "Ocho especialidades,<br><em>un único oficio.</em>",
@@ -15,21 +10,25 @@
     "treatments": "tratamientos disponibles",
     "free": "Diagnóstico inicial gratuito"
   },
-  "catLabels": {
-    "limpiezas-faciales": "Higiene + cuidado regular",
-    "tratamientos-faciales": "Renovación · Anti-acné · Manchas",
-    "lifting-antiaging": "Reafirmación sin cirugía",
-    "inyectables": "Medicina estética avanzada",
-    "corporal": "Cuerpo · Tonicidad · Recuperación",
-    "masajes": "Manual · Terapéutico · Drenaje",
-    "estetica-decorativa": "Pestañas · Micropigmentación",
-    "depilacion": "IPL · Pieles cómodas"
+  "nav": {
+    "categories": "Categorías de tratamientos",
+    "goalsLabel": "Filtrar por objetivo",
+    "all": "Todos"
   },
-  "cards": {
+  "goals": {
+    "arrugas-flacidez": "Arrugas y flacidez",
+    "manchas-tono": "Manchas y tono",
+    "acne-cicatrices": "Acné y cicatrices",
+    "luminosidad": "Luminosidad e hidratación",
+    "celulitis-cuerpo": "Celulitis y grasa localizada",
+    "piernas-retencion": "Piernas y retención",
+    "relax-tension": "Relax y tensión muscular",
+    "belleza-depilacion": "Maquillaje, pestañas y depilación"
+  },
+  "list": {
     "flag": "Especialidad estrella",
-    "altSuffix": "en AnyLopez Benidorm",
-    "unit": "tratamiento",
-    "cta": "Ver tratamientos"
+    "from": "desde",
+    "count": "Tratamientos mostrados: {shown} de {total}"
   },
   "trust": {
     "reviews": "reseñas verificadas en Google",

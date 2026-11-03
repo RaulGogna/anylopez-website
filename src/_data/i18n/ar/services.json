@@ -2,11 +2,6 @@
   "title": "العلاجات في عيادة AnyLopez للتجميل — بنيدورم",
   "description": "ثماني تخصصات وحرفة واحدة. كتالوج علاجات الوجه والجسم والحقن التجميلية والأجهزة في عيادة AnyLopez للتجميل في بنيدورم.",
   "breadcrumb": "الخدمات",
-  "css": {
-    "eyebrowColor": "var(--terra-dk)",
-    "tratListColor": "var(--text-mid)",
-    "flagshipLabel": "الترددات الراديوية INDIBA"
-  },
   "hero": {
     "eyebrow": "الكتالوج · 8 تخصصات",
     "h1_html": "ثماني تخصصات،<br><em>وحرفة واحدة.</em>",
@@ -15,21 +10,25 @@
     "treatments": "علاجاً متاحاً",
     "free": "التشخيص الأولي مجاني"
   },
-  "catLabels": {
-    "limpiezas-faciales": "تنظيف البشرة + العناية المنتظمة",
-    "tratamientos-faciales": "تجديد البشرة · مكافحة حب الشباب · التصبغات",
-    "lifting-antiaging": "شد البشرة دون جراحة",
-    "inyectables": "طب تجميلي متقدم",
-    "corporal": "الجسم · التماسك · التعافي",
-    "masajes": "يدوي · علاجي · تصريف لمفاوي",
-    "estetica-decorativa": "الرموش · المكياج الدائم",
-    "depilacion": "IPL · بشرة مرتاحة"
+  "nav": {
+    "categories": "أقسام العلاجات",
+    "goalsLabel": "تصفية حسب الهدف",
+    "all": "الكل"
   },
-  "cards": {
+  "goals": {
+    "arrugas-flacidez": "التجاعيد والترهل",
+    "manchas-tono": "البقع وتوحيد لون البشرة",
+    "acne-cicatrices": "حب الشباب والندبات",
+    "luminosidad": "النضارة والترطيب",
+    "celulitis-cuerpo": "السيلوليت والدهون الموضعية",
+    "piernas-retencion": "الساقان واحتباس السوائل",
+    "relax-tension": "الاسترخاء وتوتر العضلات",
+    "belleza-depilacion": "المكياج والرموش وإزالة الشعر"
+  },
+  "list": {
     "flag": "التخصص الأبرز",
-    "altSuffix": "في AnyLopez بنيدورم",
-    "unit": "علاج",
-    "cta": "عرض العلاجات"
+    "from": "ابتداءً من",
+    "count": "العلاجات المعروضة: {shown} من {total}"
   },
   "trust": {
     "reviews": "تقييماً موثّقاً على Google",

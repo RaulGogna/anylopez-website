@@ -108,6 +108,17 @@ no es apto para CI sin esas dos cosas. Ejecutar manualmente tras tocar `booking.
 `npm run verify:booking` (que hace `eleventy && node scripts/check-booking-locale.mjs` — el build
 delante es obligatorio, o el script mide el `_site` viejo y puede dar verde sobre fuente rota).
 
+**Hub `/services/` = carta filtrable (`css/services.css`, `js/services-filter.js`).** Los objetivos del
+filtro viven en `src/_data/catalogo/objetivos.json` (`id` + `slugs`; etiquetas en `i18n/<lang>/services.json`
+→ `goals`; **nunca** meter objetivos en `catalogo/es.json`, su sha256 lo vigilan otros sistemas) y el
+«desde» sale de `src/_data/preciosDesde.js` (mínimo sin packs, siempre del catálogo es).
+`check-objetivos.mjs` (dentro de `build`) falla si un tratamiento queda sin objetivo o un objetivo cita un
+slug inexistente; `npm run verify:hub` (`eleventy && node scripts/check-hub.mjs`, Chromium real, no apto
+para CI sin él) comprueba filas, precios, anclas, filtros, modal, teclado, desborde y ≤ 8,5 pantallas a 390×844.
+
+**CSS por página: front matter `pageCss: <nombre>`** enlaza `css/<nombre>.css` (con `| url | bust`) desde
+`base.njk`. Lo usan `services/category.njk` (`category`) y `services.njk` (`services`).
+
 **El «deploy doble» del chat widget no es automático.** `wrangler deploy` solo hace falta si
 cambió `src/` del worker o el snapshot `content/tratamientos.json`. Un cambio solo en `widget/`
 (UI, i18n) viaja en el `dist/widget.min.js` que se copia a `src/assets/chat/` y se publica con la

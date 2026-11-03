@@ -13,9 +13,9 @@
 // Sale con codigo 1 si hay cualquier diferencia.
 
 import fs from "node:fs";
-import http from "node:http";
 import path from "node:path";
 import { createRequire } from "node:module";
+import { serveStatic } from "./lib/serve-static.mjs";
 
 const require = createRequire(import.meta.url);
 const root = path.resolve(import.meta.dirname, "..");
@@ -147,23 +147,6 @@ function compareHtml() {
   }
 }
 
-const MIME = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".webp": "image/webp", ".png": "image/png", ".mp4": "video/mp4" };
-
-function serve(dir) {
-  const server = http.createServer((req, res) => {
-    let rel = decodeURIComponent(new URL(req.url, "http://x").pathname);
-    if (rel.endsWith("/")) rel += "index.html";
-    const file = path.join(dir, rel);
-    if (!file.startsWith(dir) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
-      res.writeHead(404).end();
-      return;
-    }
-    res.writeHead(200, { "content-type": MIME[path.extname(file)] || "application/octet-stream" });
-    fs.createReadStream(file).pipe(res);
-  });
-  return new Promise((resolve) => server.listen(0, "127.0.0.1", () => resolve(server)));
-}
-
 // Se ejecuta dentro de la pagina: una huella por elemento (y sus pseudo-elementos) y la altura total.
 function collectStyles(detailIndexes) {
   const SKIP = new Set(["STYLE", "LINK", "SCRIPT", "NOSCRIPT", "TEMPLATE", "META"]);
@@ -197,7 +180,7 @@ function collectStyles(detailIndexes) {
 
 async function compareStyles() {
   const { chromium } = await import("playwright");
-  const [baseServer, actualServer] = await Promise.all([serve(baselineDir), serve(actualDir)]);
+  const [baseServer, actualServer] = await Promise.all([serveStatic(baselineDir), serveStatic(actualDir)]);
   const origins = {
     baseline: `http://127.0.0.1:${baseServer.address().port}`,
     actual: `http://127.0.0.1:${actualServer.address().port}`,
