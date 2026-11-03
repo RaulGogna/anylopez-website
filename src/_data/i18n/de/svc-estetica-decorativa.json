@@ -26,7 +26,7 @@
     "eyebrow_html": "Dekorative Ästhetik · Wimpern + Micropigmentierung",
     "h1_html": "Details, die man sieht — <em>ohne dass sie auffallen.</em>",
     "lead": "Mit fertigem Gesicht aufwachen. Einzeln applizierte Wimpern und micropigmentierte Brauen/Lippen/Eyeliner — aber mit Urteilsvermögen gemacht: vorheriges Design, langlebige Pigmente, konservative Technik, die gut altert und aufgefrischt wird, statt mit den Jahren zu verblassen.",
-    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "ctaPrimary": "Kostenlose Diagnose buchen",
     "reviews": "Google-Bewertungen",
     "free": "Erstdiagnose kostenfrei"
   },
@@ -65,7 +65,7 @@
     "eyebrow": "Um die Basis zu stärken",
     "h2_html": "Dekorative Ästhetik wirkt am besten <em>auf gepflegter Haut.</em>",
     "p": "Brauen und Lippen kommen auf sauberer, strahlender Haut besser zur Geltung. Soll das Gesamtbild stimmig wirken, machen regelmäßige Gesichtsreinigungen den Unterschied.",
-    "cta": "Gesichtsreinigungen ansehen →"
+    "cta": "Gesichtsreinigungen ansehen"
   },
   "tests": {
     "eyebrow": "Echte Patientinnen",
@@ -103,6 +103,6 @@
     "eyebrow": "Unverbindlich",
     "h2_html": "Buchen Sie eine Beurteilung. <em>Wir entwerfen, bevor wir anwenden</em>.",
     "p_html": "Dreißig Minuten, um Ihr Gesicht anzusehen, über Ihre Wünsche zu sprechen und auf Ihrer Haut zu zeichnen. Überzeugt Sie das Design nicht zu 100 %, beginnen wir nicht.",
-    "cta": "Beurteilung buchen →"
+    "cta": "Beurteilung buchen"
   }
 }

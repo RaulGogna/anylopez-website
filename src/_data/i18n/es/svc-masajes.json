@@ -30,7 +30,7 @@
     "eyebrow": "Masajes · 8 modalidades especializadas",
     "h1_html": "Manos que diagnostican <em>mientras tratan.</em>",
     "lead": "Has probado masajes en SPAs que te relajaban una hora pero no resolvían nada. Aquí cada masaje tiene un objetivo — descanso real, descongestión, antifatiga, terapia facial — y se elige tras valorar qué pide tu cuerpo o tu rostro ese día.",
-    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "ctaPrimary": "Reservar diagnóstico gratuito",
     "reviews": "reseñas Google",
     "free": "Diagnóstico inicial sin coste"
   },
@@ -61,7 +61,7 @@
     "eyebrow": "Si arrastras tensión muscular crónica",
     "h2_html": "El masaje alivia, <em>el corporal terapéutico resuelve.</em>",
     "p": "Para casos de tensión persistente, lumbalgias, recuperación postquirúrgica o celulitis estructural, los tratamientos corporales (recuperación muscular específica, drenaje linfático, maderoterapia) van más allá del masaje.",
-    "cta": "Ver tratamientos corporales →"
+    "cta": "Ver tratamientos corporales"
   },
   "grid": {
     "eyebrow": "Ocho modalidades · una sola filosofía",
@@ -107,6 +107,6 @@
     "eyebrow": "Sin compromiso",
     "h2_html": "Reserva tu primera sesión. <em>Decide modalidad después</em>.",
     "p": "Te valoramos al llegar y elegimos modalidad según pida tu cuerpo ese día. Si lo tuyo es derivable a fisioterapia médica, te lo decimos.",
-    "cta": "Reservar valoración →"
+    "cta": "Reservar valoración"
   }
 }

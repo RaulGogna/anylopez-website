@@ -30,7 +30,7 @@
     "eyebrow": "Massages · 8 modalités spécialisées",
     "h1_html": "Des mains qui diagnostiquent <em>pendant qu'elles soignent.</em>",
     "lead": "Vous avez essayé des massages en spa qui vous détendaient une heure sans rien résoudre. Ici, chaque massage a un objectif — repos réel, décongestion, antifatigue, soin du visage — et se choisit après avoir évalué ce que demande votre corps ou votre visage ce jour-là.",
-    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "ctaPrimary": "Réserver un diagnostic gratuit",
     "reviews": "avis Google",
     "free": "Diagnostic initial sans frais"
   },
@@ -61,7 +61,7 @@
     "eyebrow": "Si vous traînez une tension musculaire chronique",
     "h2_html": "Le massage soulage, <em>le soin corporel thérapeutique résout.</em>",
     "p": "Pour les tensions persistantes, les lombalgies, la récupération post-chirurgicale ou la cellulite structurelle, les soins du corps (récupération musculaire spécifique, drainage lymphatique, madérothérapie) vont au-delà du massage.",
-    "cta": "Voir les soins du corps →"
+    "cta": "Voir les soins du corps"
   },
   "grid": {
     "eyebrow": "Huit modalités · une seule philosophie",
@@ -107,6 +107,6 @@
     "eyebrow": "Sans engagement",
     "h2_html": "Réservez votre première séance. <em>Choisissez la modalité ensuite</em>.",
     "p": "Nous vous évaluons à votre arrivée et choisissons la modalité selon ce que demande votre corps ce jour-là. Si votre cas relève de la kinésithérapie médicale, nous vous le disons.",
-    "cta": "Réserver un bilan →"
+    "cta": "Réserver un bilan"
   }
 }

@@ -107,6 +107,7 @@ async function comprobarTarjetas(page, { l, cat, url }, id, hub) {
     cs.map((c) => ({
       id: c.id,
       panel: c.querySelector(".trat-card-more-panel")?.textContent ?? "",
+      etiquetas: [...c.querySelectorAll(".trat-card-more-panel strong")].map((e) => e.textContent.trim()),
       href: c.querySelector("a.trat-cta")?.getAttribute("href") ?? null,
       nombre: c.querySelector(".trat-card-name")?.textContent.trim(),
       precio: c.querySelector(".price-from bdi")?.textContent.trim() ?? null,
@@ -122,6 +123,8 @@ async function comprobarTarjetas(page, { l, cat, url }, id, hub) {
     if (!fila) { fallar(id, `el hub no tiene ${t.slug}`); continue; }
     if (tarjeta.nombre !== t.nombre || tarjeta.nombre !== fila.nombre) fallar(id, `${t.slug}: nombre «${tarjeta.nombre}» ≠ «${t.nombre}»`);
     if (!tarjeta.panel.includes(t.duracion)) fallar(id, `${t.slug}: el panel «Qué incluye» no repite la duración completa «${t.duracion}»`);
+    const sinDosPuntos = tarjeta.etiquetas.filter((e) => !/\s?:$/.test(e));
+    if (sinDosPuntos.length) fallar(id, `${t.slug}: etiquetas del panel sin «:» final: ${sinDosPuntos.join(", ")}`);
     if (tarjeta.precio !== fila.precio) fallar(id, `${t.slug}: precio «${tarjeta.precio}» ≠ hub «${fila.precio}»`);
     if (tarjeta.marcaDesde !== fila.marcaDesde) fallar(id, `${t.slug}: marcador «${tarjeta.marcaDesde}» ≠ hub «${fila.marcaDesde}»`);
     if (fila.href !== `${url}#${t.slug}`) fallar(id, `${t.slug}: el hub enlaza ${fila.href}, no ${url}#${t.slug}`);
@@ -273,17 +276,16 @@ async function comprobarDesplegables(page, id) {
   const pulsar = async (i) => {
     const r = resumenes.nth(i);
     await r.evaluate((el) => el.scrollIntoView({ block: "center" }));
-    await r.click();
+    await r.click({ timeout: 3000 }).catch(() => fallar(id, `el resumen ${i + 1} no se puede pulsar con un clic (¿lo tapa otro panel?)`));
   };
   const n = await resumenes.count();
   await pulsar(0);
   if ((await abiertos()) !== 1) fallar(id, "el resumen «Qué incluye» no abre su panel");
   if (await page.evaluate(() => document.getElementById("trat-modal").open)) fallar(id, "abrir «Qué incluye» abrió el modal");
   if (n > 1) {
-    // Con el primer panel abierto, el segundo resumen queda bajo él: se abre con el teclado.
-    await resumenes.nth(1).focus();
-    await page.keyboard.press("Enter");
-    await page.waitForFunction(() => document.querySelectorAll(".trat-card-more")[1].open, null, { timeout: 2000 });
+    // El panel abierto está en el flujo: el resumen de la tarjeta de debajo sigue siendo pulsable.
+    await pulsar(1);
+    await page.waitForFunction(() => document.querySelectorAll(".trat-card-more")[1].open, null, { timeout: 2000 }).catch(() => {});
     await page.waitForTimeout(100);
     const abierto = await page.evaluate(() => [...document.querySelectorAll(".trat-card-more")].map((d) => d.open));
     if (abierto.filter(Boolean).length !== 1 || !abierto[1]) fallar(id, "abrir un panel no cierra el anterior");

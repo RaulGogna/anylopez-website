@@ -1,7 +1,7 @@
 {
   "catalog": {
     "from": "ab",
-    "duration": "Dauer",
+    "duration": "Dauer:",
     "includes": "Was enthalten ist",
     "processToggle": "Alle {count} Schritte ansehen"
   },
@@ -14,7 +14,7 @@
     "recommendations": "Empfehlungen",
     "guarantee": "Unverbindlich —",
     "waText": "Hallo%2C%20ich%20h%C3%A4tte%20gern%20Informationen%20zu%20Ihren%20Behandlungen.",
-    "waCta": "Per WhatsApp buchen →",
+    "waCta": "Per WhatsApp buchen",
     "telCta": "Anrufen: 656 306 167"
   },
   "booking": {

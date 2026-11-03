@@ -148,7 +148,7 @@
     "h2_html": "Що кажуть<br><em style=\"font-style:italic;color:var(--gold);\">наші клієнтки</em>",
     "introPre": "Більше ",
     "introPost": " людей довіряють нам. Ось декілька їхніх історій — усі реальні, усі на нашому профілі в Google.",
-    "allCta": "Переглянути всі відгуки →",
+    "allCta": "Переглянути всі відгуки",
     "cards": [
       {
         "featured": true,
@@ -261,8 +261,8 @@
   ],
   "ig": {
     "label": "Слідкуйте за нами",
-    "profileCta": "Переглянути профіль →",
-    "followCta": "Слідкуйте за нами в Instagram →"
+    "profileCta": "Переглянути профіль",
+    "followCta": "Слідкуйте за нами в Instagram"
   },
   "donde": {
     "label": "Де ми знаходимося",

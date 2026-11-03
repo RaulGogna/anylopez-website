@@ -148,7 +148,7 @@
     "h2_html": "Ce que disent<br><em style=\"font-style:italic;color:var(--gold);\">nos clientes</em>",
     "introPre": "Plus de ",
     "introPost": " personnes nous font confiance. Voici quelques-unes de leurs histoires — toutes réelles, toutes sur notre profil Google.",
-    "allCta": "Voir tous les avis →",
+    "allCta": "Voir tous les avis",
     "cards": [
       {
         "featured": true,
@@ -261,8 +261,8 @@
   ],
   "ig": {
     "label": "Suivez-nous",
-    "profileCta": "Voir le profil →",
-    "followCta": "Nous suivre sur Instagram →"
+    "profileCta": "Voir le profil",
+    "followCta": "Nous suivre sur Instagram"
   },
   "donde": {
     "label": "Où nous trouver",

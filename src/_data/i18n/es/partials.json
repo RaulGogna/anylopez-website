@@ -1,7 +1,7 @@
 {
   "catalog": {
     "from": "desde",
-    "duration": "Duración",
+    "duration": "Duración:",
     "includes": "Qué incluye",
     "processToggle": "Ver los {count} pasos"
   },
@@ -14,7 +14,7 @@
     "recommendations": "Recomendaciones",
     "guarantee": "Sin compromiso —",
     "waText": "Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios.",
-    "waCta": "Reservar por WhatsApp →",
+    "waCta": "Reservar por WhatsApp",
     "telCta": "Llamar 656 306 167"
   },
   "booking": {

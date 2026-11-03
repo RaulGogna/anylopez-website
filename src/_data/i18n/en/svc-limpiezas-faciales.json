@@ -27,7 +27,7 @@
     "eyebrow_html": "Facials & Deep Cleanse · 5 tiered levels",
     "h1_html": "Serious facials. <em>Not the ones at the hotel spa.</em>",
     "lead": "If you have spent years cleansing at home or at places that apply some foam and send you out in half an hour, you are not caring for your skin — you are leaving it as it was. A professional facial starts by reading your skin and choosing the right level.",
-    "ctaPrimary": "Book your free assessment →",
+    "ctaPrimary": "Book your free assessment",
     "reviews": "Google reviews",
     "free": "Free initial assessment"
   },
@@ -66,7 +66,7 @@
     "eyebrow": "The next step",
     "h2_html": "After cleansing, <em>time to renew?</em>",
     "p_html": "Clean skin is the foundation. If you want more — fading dark spots, smoothing lines, improving texture — advanced facials reach where a cleanse can't.",
-    "cta": "See advanced facials →"
+    "cta": "See advanced facials"
   },
   "tests": {
     "eyebrow": "Real patients",
@@ -104,6 +104,6 @@
     "eyebrow": "No obligation",
     "h2_html": "Book your free assessment. <em>Start by knowing what level your skin needs</em>.",
     "p_html": "Thirty minutes at the clinic with a professional magnifying lamp and real experience. If you only need basic maintenance, we'll tell you so.",
-    "cta": "Book your assessment →"
+    "cta": "Book your assessment"
   }
 }

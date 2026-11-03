@@ -25,7 +25,7 @@
     "eyebrow": "Depilación IPL · Pulsada intensa",
     "h1_html": "Depilación IPL en serio. <em>No la del centro de barrio.</em>",
     "lead_html": "Cera, cuchilla, cremas... llevas años con depilaciones temporales que se acumulan en gastos y en piel maltratada. La IPL bien aplicada reduce vello permanentemente — pero solo bien aplicada. Equipo de calidad clínica y plan según tu fototipo y ciclo capilar real, no protocolo único de cadena low-cost.",
-    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "ctaPrimary": "Reservar diagnóstico gratuito",
     "reviews": "reseñas Google",
     "free": "Diagnóstico inicial sin coste"
   },
@@ -56,7 +56,7 @@
     "eyebrow": "Después de IPL",
     "h2_html": "Una piel sin vello <em>se cuida diferente.</em>",
     "p": "Tras un protocolo IPL, la piel queda más suave y receptiva — momento perfecto para incorporar limpiezas faciales o masajes regeneradores como mantenimiento integral.",
-    "cta": "Ver masajes →"
+    "cta": "Ver masajes"
   },
   "grid": {
     "eyebrow": "Un protocolo · todas las zonas",
@@ -103,6 +103,6 @@
     "eyebrow": "Sin compromiso",
     "h2_html": "Reserva tu valoración. <em>Diagnóstico de fototipo y plan a medida</em>.",
     "p_html": "Treinta minutos para evaluar tu piel y vello, decirte si IPL es lo adecuado para tu caso (no siempre lo es) y diseñar plan realista.",
-    "cta": "Reservar valoración →"
+    "cta": "Reservar valoración"
   }
 }

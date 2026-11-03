@@ -26,7 +26,7 @@
     "eyebrow": "Tratamientos corporales · 4 protocolos",
     "h1_html": "Tu cuerpo no necesita una máquina más. <em>Necesita manos que sepan dónde insistir.</em>",
     "lead_html": "Retención, piernas pesadas, recuperación postquirúrgica, tensión muscular crónica. Cosas que no se arreglan con un masaje genérico ni con una máquina sin criterio. Aquí trabajamos con técnica manual experta y protocolos específicos para cada caso.",
-    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "ctaPrimary": "Reservar diagnóstico gratuito",
     "reviews": "reseñas Google",
     "free": "Diagnóstico inicial sin coste"
   },
@@ -57,7 +57,7 @@
     "eyebrow": "Cuando cuerpo y piel van juntos",
     "h2_html": "Si tu caso combina cuerpo y <em>flacidez profunda</em>…",
     "p": "Muchos protocolos corporales se potencian combinándolos con radiofrecuencia INDIBA. Si tu objetivo incluye reafirmación de piel además de drenaje o tonicidad, lo combinamos en el diagnóstico gratuito.",
-    "cta": "Conocer Radiofrecuencia INDIBA →"
+    "cta": "Conocer Radiofrecuencia INDIBA"
   },
   "grid": {
     "eyebrow": "Cuatro protocolos · una sola filosofía",
@@ -103,6 +103,6 @@
     "eyebrow": "Sin compromiso",
     "h2_html": "Reserva tu diagnóstico gratuito. <em>Empieza por saber qué necesita tu cuerpo</em>.",
     "p_html": "Treinta minutos en clínica con quien lleva décadas con manos. Si lo tuyo es derivable a fisio, traumatólogo u otro especialista, te lo decimos.",
-    "cta": "Reservar valoración →"
+    "cta": "Reservar valoración"
   }
 }

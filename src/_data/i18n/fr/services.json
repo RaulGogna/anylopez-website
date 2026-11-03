@@ -45,13 +45,13 @@
     "m2l": "Économie vs séance à l'unité",
     "m3v": "1re séance",
     "m3l": "Résultats visibles",
-    "cta": "Découvrir la Radiofréquence INDIBA →"
+    "cta": "Découvrir la Radiofréquence INDIBA"
   },
   "finalCta": {
     "eyebrow": "Vous ne savez pas par où commencer ?",
     "h2_html": "Réservez un diagnostic gratuit et nous vous dirons ce qu'il vous faut — et ce qu'il ne vous faut pas.",
     "p_html": "Trente minutes sans engagement. Si ce n'est pas pour vous, nous vous le dirons franchement et nous vous orienterons. L'honnêteté avant le panier.",
-    "btn": "Réserver un bilan →",
+    "btn": "Réserver un bilan",
     "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
   },
   "jsonld": {

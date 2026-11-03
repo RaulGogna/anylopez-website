@@ -25,7 +25,7 @@
     "eyebrow": "IPL-Haarentfernung · Intenspulslicht",
     "h1_html": "IPL-Haarentfernung, ernst genommen. <em>Nicht die vom Studio um die Ecke.</em>",
     "lead_html": "Wachs, Rasierer, Cremes … seit Jahren zahlen Sie für vorübergehende Haarentfernungen — mit strapazierter Haut als Ergebnis. Richtig angewandtes IPL reduziert Haare dauerhaft — aber nur richtig angewandt. Gerät in klinischer Qualität und ein Plan nach Ihrem Hauttyp und echten Haarzyklus, kein Einheitsprotokoll einer Billigkette.",
-    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "ctaPrimary": "Kostenlose Diagnose buchen",
     "reviews": "Google-Bewertungen",
     "free": "Erstdiagnose kostenfrei"
   },
@@ -56,7 +56,7 @@
     "eyebrow": "Nach dem IPL",
     "h2_html": "Haut ohne Haare <em>pflegt man anders.</em>",
     "p": "Nach einem IPL-Protokoll ist die Haut glatter und aufnahmefähiger — der perfekte Moment, Gesichtsreinigungen oder regenerierende Massagen als ganzheitliche Pflege einzubauen.",
-    "cta": "Massagen ansehen →"
+    "cta": "Massagen ansehen"
   },
   "grid": {
     "eyebrow": "Ein Protokoll · alle Zonen",
@@ -103,6 +103,6 @@
     "eyebrow": "Unverbindlich",
     "h2_html": "Buchen Sie Ihre Beurteilung. <em>Hauttyp-Diagnose und Plan nach Maß</em>.",
     "p_html": "Dreißig Minuten, um Haut und Haar zu beurteilen, Ihnen zu sagen, ob IPL das Richtige für Ihren Fall ist (nicht immer), und einen realistischen Plan zu erstellen.",
-    "cta": "Beurteilung buchen →"
+    "cta": "Beurteilung buchen"
   }
 }

@@ -139,7 +139,7 @@ body::before {
   cursor: pointer; border: none; transition: all 0.3s var(--ease);
   text-decoration: none;
 }
-.btn-no-arrow::after { display: none; }
+.btn[href^="tel:"]::after { display: none; }
 .btn::after { content: '→'; font-size: 13px; transition: transform 0.3s var(--ease); }
 .btn:hover::after { transform: translateX(4px); }
 
@@ -916,7 +916,7 @@ body::before {
   transition: background 0.2s; color: rgba(255,255,255,0.7);
 }
 .social-link:hover, .footer-social a:hover { background: var(--terra); color: #fff; }
-.footer-bottom { padding: 24px 0; text-align: center; font-size: var(--fs-2xs); color: rgba(255,255,255,0.5); }
+.footer-bottom { padding: var(--footer-bottom-pad) 0; text-align: center; font-size: var(--fs-2xs); color: rgba(255,255,255,0.5); }
 .footer-bottom a { color: inherit; }
 .footer-bottom a:hover { color: var(--ivory); }
 .footer-legal-links { margin-top: 6px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
@@ -941,6 +941,7 @@ body::before {
    ═══════════════════════════════════════════════════ */
 /* Borde superior + padding superior + botón (2×13 de padding, 2×1 de borde, línea de 12px×1.75) + padding inferior */
 :root { --mobile-bar-h: calc(1px + 12px + (2 * 13px + 2 * 1px + 12px * 1.75) + max(12px, env(safe-area-inset-bottom))); }
+:root { --footer-bottom-pad: 24px; }
 html { scroll-padding-bottom: 16px; }
 .mobile-bar {
   display: none;
@@ -1275,7 +1276,8 @@ button[type="submit"] {
   anylopez-chat { --anylopez-chat-offset-bottom: calc(var(--mobile-bar-h) + 16px); }
   /* El foco, las anclas y el último enlace del pie no deben quedar bajo la barra. */
   html { scroll-padding-bottom: calc(var(--mobile-bar-h) + 16px); }
-  .site-footer { padding-bottom: calc(var(--mobile-bar-h) - 22px); }
+  /* .footer-bottom ya deja su propio relleno bajo el último enlace: solo falta lo que la barra tapa. */
+  .site-footer { padding-bottom: calc(var(--mobile-bar-h) - var(--footer-bottom-pad)); }
 
   .testi-grid { grid-template-columns: 1fr; }
   .ig-grid { grid-template-columns: repeat(3,1fr); }

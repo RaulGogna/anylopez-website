@@ -26,7 +26,7 @@
     "eyebrow": "Soins du corps · 4 protocoles",
     "h1_html": "Votre corps n'a pas besoin d'une machine de plus. <em>Il a besoin de mains qui savent où insister.</em>",
     "lead_html": "Rétention d'eau, jambes lourdes, récupération post-chirurgicale, tension musculaire chronique. Des choses qui ne se règlent ni avec un massage générique ni avec une machine sans discernement. Ici, nous travaillons avec une technique manuelle experte et des protocoles spécifiques à chaque cas.",
-    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "ctaPrimary": "Réserver un diagnostic gratuit",
     "reviews": "avis Google",
     "free": "Diagnostic initial sans frais"
   },
@@ -57,7 +57,7 @@
     "eyebrow": "Quand le corps et la peau vont de pair",
     "h2_html": "Si votre cas associe corps et <em>relâchement cutané profond</em>…",
     "p": "Beaucoup de protocoles corporels sont renforcés par la radiofréquence INDIBA. Si votre objectif inclut de raffermir la peau en plus du drainage ou de la tonicité, nous les combinons lors du diagnostic gratuit.",
-    "cta": "Découvrir la Radiofréquence INDIBA →"
+    "cta": "Découvrir la Radiofréquence INDIBA"
   },
   "grid": {
     "eyebrow": "Quatre protocoles · une seule philosophie",
@@ -103,6 +103,6 @@
     "eyebrow": "Sans engagement",
     "h2_html": "Réservez votre diagnostic gratuit. <em>Commencez par savoir ce dont votre corps a besoin</em>.",
     "p_html": "Trente minutes en clinique avec des mains qui pratiquent depuis des décennies. Si votre cas relève d'un kinésithérapeute, d'un traumatologue ou d'un autre spécialiste, nous vous le disons.",
-    "cta": "Réserver un bilan →"
+    "cta": "Réserver un bilan"
   }
 }

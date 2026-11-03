@@ -148,7 +148,7 @@
     "h2_html": "What our<br><em style=\"font-style:italic;color:var(--gold);\">clients say</em>",
     "introPre": "Over ",
     "introPost": " people trust us with their skin. These are some of their stories — all genuine, all on our Google profile.",
-    "allCta": "Read all reviews →",
+    "allCta": "Read all reviews",
     "cards": [
       {
         "featured": true,
@@ -261,8 +261,8 @@
   ],
   "ig": {
     "label": "Follow us",
-    "profileCta": "View profile →",
-    "followCta": "Follow us on Instagram →"
+    "profileCta": "View profile",
+    "followCta": "Follow us on Instagram"
   },
   "donde": {
     "label": "Where to find us",

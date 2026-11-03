@@ -30,7 +30,7 @@
     "eyebrow": "Massagen · 8 spezialisierte Varianten",
     "h1_html": "Hände, die diagnostizieren, <em>während sie behandeln.</em>",
     "lead": "Sie haben Spa-Massagen probiert, die eine Stunde entspannten, aber nichts lösten. Hier hat jede Massage ein Ziel — echte Erholung, Entstauung, Anti-Müdigkeit, Gesichtspflege — und wird gewählt, nachdem wir beurteilt haben, was Ihr Körper oder Ihr Gesicht an diesem Tag braucht.",
-    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "ctaPrimary": "Kostenlose Diagnose buchen",
     "reviews": "Google-Bewertungen",
     "free": "Erstdiagnose kostenfrei"
   },
@@ -61,7 +61,7 @@
     "eyebrow": "Bei chronischer Muskelverspannung",
     "h2_html": "Die Massage lindert, <em>die therapeutische Körperbehandlung löst.</em>",
     "p": "Bei hartnäckiger Verspannung, Kreuzschmerzen, Erholung nach Operationen oder struktureller Cellulite gehen die Körperbehandlungen (gezielte Muskelregeneration, Lymphdrainage, Holztherapie) über die Massage hinaus.",
-    "cta": "Körperbehandlungen ansehen →"
+    "cta": "Körperbehandlungen ansehen"
   },
   "grid": {
     "eyebrow": "Acht Varianten · eine Philosophie",
@@ -107,6 +107,6 @@
     "eyebrow": "Unverbindlich",
     "h2_html": "Buchen Sie Ihre erste Sitzung. <em>Die Variante wählen wir danach</em>.",
     "p": "Wir beurteilen Sie bei der Ankunft und wählen die Variante nach dem, was Ihr Körper an diesem Tag braucht. Gehört Ihr Fall in die medizinische Physiotherapie, sagen wir es Ihnen.",
-    "cta": "Beurteilung buchen →"
+    "cta": "Beurteilung buchen"
   }
 }

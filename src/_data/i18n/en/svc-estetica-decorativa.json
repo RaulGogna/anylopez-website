@@ -26,7 +26,7 @@
     "eyebrow_html": "Lash extensions & semi-permanent make-up · Lashes + Micropigmentation",
     "h1_html": "Details that show, <em>not details that shout.</em>",
     "lead": "Wake up with your face already done. Individual (1:1) lash extensions and semi-permanent make-up for brows, lips and eyeliner — done with judgement: pre-design, durable pigments, conservative technique that ages well and can be touched up, rather than fading awkwardly with time.",
-    "ctaPrimary": "Book your free consultation →",
+    "ctaPrimary": "Book your free consultation",
     "reviews": "Google reviews",
     "free": "Initial consultation at no cost"
   },
@@ -65,7 +65,7 @@
     "eyebrow": "To enhance the canvas",
     "h2_html": "Lash extensions and semi-permanent make-up look better <em>on well-cared-for skin.</em>",
     "p": "Brows and lips stand out more on clean, luminous skin. If you want the whole look to feel cohesive, regular facials make all the difference.",
-    "cta": "See facial treatments →"
+    "cta": "See facial treatments"
   },
   "tests": {
     "eyebrow": "Real patients",
@@ -103,6 +103,6 @@
     "eyebrow": "No commitment",
     "h2_html": "Book your consultation. <em>We design before we apply</em>.",
     "p_html": "Thirty minutes to look at your face, talk through what you want and draw on your skin. If the design doesn't convince you 100%, we don't begin.",
-    "cta": "Book consultation →"
+    "cta": "Book consultation"
   }
 }

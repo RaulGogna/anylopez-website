@@ -27,7 +27,7 @@
     "eyebrow_html": "Nettoyages de peau · 5 niveaux progressifs",
     "h1_html": "Les nettoyages de peau sérieux. <em>Pas ceux du spa de l'hôtel.</em>",
     "lead": "Si vous vous nettoyez la peau depuis des années chez vous ou dans des centres où l'on vous applique de la mousse avant de vous expédier en une demi-heure, vous ne prenez pas soin de votre peau — vous la laissez telle quelle. Un nettoyage professionnel commence par examiner votre peau et choisir le niveau.",
-    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "ctaPrimary": "Réserver un diagnostic gratuit",
     "reviews": "avis Google",
     "free": "Diagnostic initial sans frais"
   },
@@ -66,7 +66,7 @@
     "eyebrow": "L'étape suivante",
     "h2_html": "Après le nettoyage, <em>place au renouvellement ?</em>",
     "p_html": "Une peau propre est la base. Si vous voulez plus — effacer les taches pigmentaires, lisser les ridules, améliorer la texture — les soins du visage avancés vont là où le nettoyage ne va pas.",
-    "cta": "Voir les soins du visage avancés →"
+    "cta": "Voir les soins du visage avancés"
   },
   "tests": {
     "eyebrow": "Patientes réelles",
@@ -104,6 +104,6 @@
     "eyebrow": "Sans engagement",
     "h2_html": "Réservez votre diagnostic gratuit. <em>Commencez par savoir de quel niveau votre peau a besoin</em>.",
     "p_html": "Trente minutes en clinique avec loupe professionnelle et expérience réelle. Si vous n'avez besoin que d'un entretien basique, nous vous le disons.",
-    "cta": "Réserver un bilan →"
+    "cta": "Réserver un bilan"
   }
 }

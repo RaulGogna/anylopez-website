@@ -26,7 +26,7 @@
     "eyebrow_html": "Médecine esthétique injectable · 4 protocoles",
     "h1_html": "Du volume, pas de l'excès. <em>Subtil, technique, fidèle à vous-même.</em>",
     "lead": "Le Botox pour lisser les rides, l'acide hyaluronique pour restaurer les volumes, les fils tenseurs pour repositionner, le PRP pour régénérer. Chacun a son moment précis sur votre visage — et c'est ce moment qui sépare un résultat naturel d'un résultat figé.",
-    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "ctaPrimary": "Réserver un diagnostic gratuit",
     "reviews": "avis Google",
     "free": "Diagnostic initial sans frais"
   },
@@ -57,7 +57,7 @@
     "eyebrow": "Si votre cas va au-delà du comblement",
     "h2_html": "Le volume <em>se complète par le tonus.</em>",
     "p": "L'acide hyaluronique restaure les volumes, mais le relâchement cutané profond se traite par la technologie. En combinant les injectables avec Ultherapy ou la Radiofréquence INDIBA, les résultats se renforcent.",
-    "cta_html": "Voir Lifting et Anti-âge →"
+    "cta_html": "Voir Lifting et Anti-âge"
   },
   "grid": {
     "eyebrow": "Quatre protocoles · une seule philosophie",
@@ -103,6 +103,6 @@
     "eyebrow": "Le diagnostic avant la piqûre",
     "h2_html": "Réservez votre bilan. <em>Commencez par savoir ce qu'il vous faut — et ce qu'il ne vous faut pas</em>.",
     "p_html": "Trente minutes en clinique avec un médecin esthétique qualifié. Si votre cas ne relève pas des injectables, nous vous le disons. S'il en relève, nous concevons un plan conservateur.",
-    "cta": "Réserver un bilan →"
+    "cta": "Réserver un bilan"
   }
 }

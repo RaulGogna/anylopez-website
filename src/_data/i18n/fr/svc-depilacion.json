@@ -25,7 +25,7 @@
     "eyebrow": "Épilation IPL · Lumière pulsée intense",
     "h1_html": "L'épilation IPL sérieuse. <em>Pas celle du centre de quartier.</em>",
     "lead_html": "Cire, rasoir, crèmes... des années d'épilations temporaires qui s'accumulent en dépenses et en peau maltraitée. L'IPL bien appliquée réduit la pilosité de façon permanente — mais seulement bien appliquée. Équipement de qualité clinique et plan selon votre phototype et votre vrai cycle pilaire, pas le protocole unique d'une chaîne low-cost.",
-    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "ctaPrimary": "Réserver un diagnostic gratuit",
     "reviews": "avis Google",
     "free": "Diagnostic initial sans frais"
   },
@@ -56,7 +56,7 @@
     "eyebrow": "Après l'IPL",
     "h2_html": "Une peau sans poils <em>se soigne différemment.</em>",
     "p": "Après un protocole IPL, la peau est plus douce et plus réceptive — le moment parfait pour intégrer des nettoyages de peau ou des massages régénérants en entretien global.",
-    "cta": "Voir les massages →"
+    "cta": "Voir les massages"
   },
   "grid": {
     "eyebrow": "Un protocole · toutes les zones",
@@ -103,6 +103,6 @@
     "eyebrow": "Sans engagement",
     "h2_html": "Réservez votre bilan. <em>Diagnostic du phototype et plan sur mesure</em>.",
     "p_html": "Trente minutes pour évaluer votre peau et votre pilosité, vous dire si l'IPL est adaptée à votre cas (elle ne l'est pas toujours) et concevoir un plan réaliste.",
-    "cta": "Réserver un bilan →"
+    "cta": "Réserver un bilan"
   }
 }

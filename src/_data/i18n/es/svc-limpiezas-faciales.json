@@ -27,7 +27,7 @@
     "eyebrow_html": "Limpiezas faciales · 5 niveles escalonados",
     "h1_html": "Las limpiezas faciales en serio. <em>No las del SPA del hotel.</em>",
     "lead": "Si llevas años haciéndote la limpieza en casa o en centros donde te aplican espuma y te despachan en media hora, no estás cuidando tu piel — la estás dejando como estaba. Una limpieza profesional empieza por ver tu piel y elegir nivel.",
-    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "ctaPrimary": "Reservar diagnóstico gratuito",
     "reviews": "reseñas Google",
     "free": "Diagnóstico inicial sin coste"
   },
@@ -66,7 +66,7 @@
     "eyebrow": "El siguiente paso",
     "h2_html": "Después de limpiar, <em>¿toca renovar?</em>",
     "p_html": "Una piel limpia es la base. Si quieres más — borrar manchas, suavizar líneas, mejorar textura — los tratamientos faciales avanzados llegan donde la limpieza no.",
-    "cta": "Ver tratamientos faciales avanzados →"
+    "cta": "Ver tratamientos faciales avanzados"
   },
   "tests": {
     "eyebrow": "Pacientes reales",
@@ -104,6 +104,6 @@
     "eyebrow": "Sin compromiso",
     "h2_html": "Reserva tu diagnóstico gratuito. <em>Empieza por saber qué nivel necesita tu piel</em>.",
     "p_html": "Treinta minutos en clínica con lupa profesional y experiencia real. Si solo necesitas mantenimiento básico, te lo decimos.",
-    "cta": "Reservar valoración →"
+    "cta": "Reservar valoración"
   }
 }

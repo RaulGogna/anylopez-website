@@ -24,7 +24,7 @@
     "eyebrow_html": "Lifting et Anti-âge · 2 technologies complémentaires",
     "h1_html": "Raffermissez avec la technologie, <em>pas avec le bistouri.</em>",
     "lead_html": "Si vous avez écarté le bloc opératoire par peur, par risque ou à cause de la convalescence — et que les crèmes raffermissantes ne vous rendent toujours pas de tonus — la réponse est dans la technologie profonde. Ultherapy et la Radiofréquence INDIBA arrivent là où un chirurgien incise. Sans inciser.",
-    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "ctaPrimary": "Réserver un diagnostic gratuit",
     "reviews": "avis Google",
     "free": "Diagnostic initial sans frais"
   },
@@ -64,7 +64,7 @@
     "eyebrow": "La Radiofréquence INDIBA est notre soin phare",
     "h2_html": "Si votre cas appelle la Radiofréquence INDIBA, <em>nous avons une fiche complète.</em>",
     "p": "La radiofréquence INDIBA est notre soin phare. Une fiche dédiée avec le Pack 10 séances, les modalités visage et corps, et tout le détail clinique.",
-    "cta": "Voir la fiche complète de la Radiofréquence INDIBA →"
+    "cta": "Voir la fiche complète de la Radiofréquence INDIBA"
   },
   "tests": {
     "eyebrow": "Patientes réelles",
@@ -102,6 +102,6 @@
     "eyebrow": "Sans engagement",
     "h2_html": "Réservez un diagnostic gratuit. <em>Nous vous dirons quelle technologie est pour vous</em>.",
     "p_html": "Trente minutes en clinique avec quelqu'un qui pratique Ultherapy et la Radiofréquence INDIBA depuis des décennies. Si votre cas appelle autre chose (injectables, fils, chirurgie), nous vous le disons honnêtement.",
-    "cta": "Réserver un bilan →"
+    "cta": "Réserver un bilan"
   }
 }

@@ -25,7 +25,7 @@
     "eyebrow": "IPL Hair Removal · Intense Pulsed Light",
     "h1_html": "Serious IPL hair removal. <em>Not the high-street version.</em>",
     "lead_html": "Wax, razors, creams... you've spent years on temporary hair removal that piles up costs and damaged skin. IPL done properly reduces hair permanently — but only when it's done properly. Clinical-grade equipment and a plan tailored to your skin phototype and real hair growth cycle, not a one-size-fits-all low-cost chain protocol.",
-    "ctaPrimary": "Book a free assessment →",
+    "ctaPrimary": "Book a free assessment",
     "reviews": "Google reviews",
     "free": "Free initial assessment"
   },
@@ -56,7 +56,7 @@
     "eyebrow": "After IPL",
     "h2_html": "Hair-free skin <em>deserves different care.</em>",
     "p": "After an IPL protocol, your skin feels softer and more receptive — the perfect moment to add facials or restorative massages as part of your overall maintenance.",
-    "cta": "See massages →"
+    "cta": "See massages"
   },
   "grid": {
     "eyebrow": "One protocol · all areas",
@@ -103,6 +103,6 @@
     "eyebrow": "No commitment",
     "h2_html": "Book your assessment. <em>Phototype diagnosis and a tailored plan</em>.",
     "p_html": "Thirty minutes to evaluate your skin and hair, tell you whether IPL is right for your case (it isn't always) and design a realistic plan.",
-    "cta": "Book your assessment →"
+    "cta": "Book your assessment"
   }
 }

@@ -148,7 +148,7 @@
     "h2_html": "Что говорят<br><em style=\"font-style:italic;color:var(--gold);\">наши клиентки</em>",
     "introPre": "Более ",
     "introPost": " человек доверяют нам. Вот некоторые из их историй — все реальные, все на нашем профиле в Google.",
-    "allCta": "Смотреть все отзывы →",
+    "allCta": "Смотреть все отзывы",
     "cards": [
       {
         "featured": true,
@@ -261,8 +261,8 @@
   ],
   "ig": {
     "label": "Подписывайтесь",
-    "profileCta": "Смотреть профиль →",
-    "followCta": "Подписаться в Instagram →"
+    "profileCta": "Смотреть профиль",
+    "followCta": "Подписаться в Instagram"
   },
   "donde": {
     "label": "Где мы находимся",

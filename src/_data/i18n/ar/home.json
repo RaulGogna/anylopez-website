@@ -195,7 +195,7 @@
     "h2_html": "ما يقلنه<br><em style=\"font-style:italic;color:var(--gold);\">عميلاتنا</em>",
     "introPre": "أكثر من ",
     "introPost": " شخص يثقون بنا. هذه بعض قصصهم — جميعها حقيقية، وجميعها على صفحتنا في Google.",
-    "allCta": "عرض جميع التقييمات ←",
+    "allCta": "عرض جميع التقييمات",
     "cards": [
       {
         "featured": true,
@@ -308,8 +308,8 @@
   ],
   "ig": {
     "label": "تابعينا",
-    "profileCta": "عرض الملف الشخصي ←",
-    "followCta": "تابعينا على Instagram ←"
+    "profileCta": "عرض الملف الشخصي",
+    "followCta": "تابعينا على Instagram"
   },
   "donde": {
     "label": "أين نحن",

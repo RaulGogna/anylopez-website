@@ -26,7 +26,7 @@
     "eyebrow_html": "Estética decorativa · Pestañas + Micropigmentación",
     "h1_html": "Detalles que se notan, <em>no que llaman la atención.</em>",
     "lead": "Despertar con la cara hecha. Pestañas pelo a pelo y cejas/labios/eyeliner micropigmentados — pero hechos con criterio: diseño previo, pigmentos durables, técnica conservadora que envejece bien y se retoca, no que se borre con la edad.",
-    "ctaPrimary": "Reservar diagnóstico gratuito →",
+    "ctaPrimary": "Reservar diagnóstico gratuito",
     "reviews": "reseñas Google",
     "free": "Diagnóstico inicial sin coste"
   },
@@ -65,7 +65,7 @@
     "eyebrow": "Para potenciar la base",
     "h2_html": "La estética decorativa luce mejor <em>sobre piel cuidada.</em>",
     "p": "Cejas y labios destacan más sobre piel limpia y luminosa. Si quieres que el conjunto se vea integral, las limpiezas faciales periódicas hacen la diferencia.",
-    "cta": "Ver limpiezas faciales →"
+    "cta": "Ver limpiezas faciales"
   },
   "tests": {
     "eyebrow": "Pacientes reales",
@@ -103,6 +103,6 @@
     "eyebrow": "Sin compromiso",
     "h2_html": "Reserva una valoración. <em>Diseñamos antes de aplicar</em>.",
     "p_html": "Treinta minutos para ver tu rostro, hablar de qué buscas y dibujar sobre tu piel. Si el diseño no te convence al 100%, no empezamos.",
-    "cta": "Reservar valoración →"
+    "cta": "Reservar valoración"
   }
 }

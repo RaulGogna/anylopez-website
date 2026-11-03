@@ -30,7 +30,7 @@
     "eyebrow": "Massages · 8 specialised modalities",
     "h1_html": "Hands that diagnose <em>while they treat.</em>",
     "lead": "You have tried massages at spas that relaxed you for an hour but resolved nothing. Here every massage has an objective — real rest, decongestion, anti-fatigue, facial therapy — and is chosen after assessing what your body or face is asking for that day.",
-    "ctaPrimary": "Book your free consultation →",
+    "ctaPrimary": "Book your free consultation",
     "reviews": "Google reviews",
     "free": "Initial consultation at no cost"
   },
@@ -61,7 +61,7 @@
     "eyebrow": "If you carry chronic muscle tension",
     "h2_html": "Massage relieves, <em>therapeutic body work resolves.</em>",
     "p": "For cases of persistent tension, lower-back pain, post-surgical recovery or structural cellulite, body treatments (specific muscle recovery, lymphatic drainage, wood therapy) go beyond massage.",
-    "cta": "See body treatments →"
+    "cta": "See body treatments"
   },
   "grid": {
     "eyebrow": "Eight modalities · one single philosophy",
@@ -107,6 +107,6 @@
     "eyebrow": "No commitment",
     "h2_html": "Book your first session. <em>Decide the modality afterwards</em>.",
     "p": "We assess you on arrival and choose the modality based on what your body asks for that day. If your case is better referred to medical physiotherapy, we tell you.",
-    "cta": "Book your assessment →"
+    "cta": "Book your assessment"
   }
 }

@@ -40,11 +40,8 @@ function bustAsset(publicUrl) {
   return result;
 }
 
-const BTN = /<(a|button)\b([^>]*\bclass="[^"]*\bbtn\b[^"]*"[^>]*)>([\s\S]*?)<\/\1>/g;
-const ENDS_WITH_ARROW = /(?:[→←]|&rarr;|&larr;)$/;
-
 // Pega la flecha final a la palabra anterior para que un botón no la deje sola en otra línea.
-const glueArrow = (text) => text.replace(/\s+([→←])\s*$/, "\u00a0$1");
+const glueArrow = (text) => text.replace(/\s+([→←])\s*$/, " $1");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
@@ -59,17 +56,6 @@ module.exports = function (eleventyConfig) {
   );
 
   eleventyConfig.addFilter("glueArrow", glueArrow);
-
-  // `.btn` pinta su propia flecha (::after): el copy que ya termina en → o ← la repetiría, y un
-  // enlace tel: no la necesita. Se marca aquí, sin tocar el copy ni cada plantilla.
-  eleventyConfig.addTransform("btnNoArrow", (content, outputPath) => {
-    if (!outputPath?.endsWith(".html")) return content;
-    return content.replace(BTN, (tag, el, attrs, inner) => {
-      const texto = inner.replace(/<[^>]+>/g, "").trim();
-      if (!ENDS_WITH_ARROW.test(texto) && !/href="tel:/.test(attrs)) return tag;
-      return `<${el}${attrs.replace(/class="([^"]*)"/, 'class="$1 btn-no-arrow"')}>${glueArrow(inner)}</${el}>`;
-    });
-  });
 
   eleventyConfig.addFilter("startsWith", (str, prefix) =>
     typeof str === "string" && str.startsWith(prefix)

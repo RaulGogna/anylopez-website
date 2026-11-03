@@ -26,7 +26,7 @@
     "eyebrow": "Body treatments · 4 protocols",
     "h1_html": "Your body doesn't need another machine. <em>It needs hands that know where to insist.</em>",
     "lead_html": "Fluid retention, heavy legs, post-surgical recovery, chronic muscle tension. Things that aren't fixed with a generic massage or a machine without judgement. Here we work with expert manual technique and specific protocols for each case.",
-    "ctaPrimary": "Book your free diagnosis →",
+    "ctaPrimary": "Book your free diagnosis",
     "reviews": "Google reviews",
     "free": "Initial diagnosis at no cost"
   },
@@ -57,7 +57,7 @@
     "eyebrow": "When body and skin go together",
     "h2_html": "If your case combines body and <em>deep laxity</em>…",
     "p": "Many body protocols are enhanced when combined with INDIBA radiofrequency. If your goal includes skin firming on top of drainage or toning, we combine them in the free diagnosis.",
-    "cta": "Discover INDIBA Radiofrequency →"
+    "cta": "Discover INDIBA Radiofrequency"
   },
   "grid": {
     "eyebrow": "Four protocols · one single philosophy",
@@ -103,6 +103,6 @@
     "eyebrow": "No commitment",
     "h2_html": "Book your free diagnosis. <em>Start by knowing what your body needs</em>.",
     "p_html": "Thirty minutes at the clinic with someone who's spent decades using their hands. If your case should be referred to a physiotherapist, orthopaedist or another specialist, we'll tell you.",
-    "cta": "Book your assessment →"
+    "cta": "Book your assessment"
   }
 }

@@ -26,7 +26,7 @@
     "eyebrow_html": "Botox & Fillers · 4 protocols",
     "h1_html": "Volume, not excess. <em>Subtle, technical, your own.</em>",
     "lead": "Botox to soften lines, hyaluronic acid to restore volume, thread lifts to reposition, PRP to regenerate. Each one has its precise moment in your face — and that moment is what separates a natural result from a frozen one.",
-    "ctaPrimary": "Book your free assessment →",
+    "ctaPrimary": "Book your free assessment",
     "reviews": "Google reviews",
     "free": "Initial assessment at no cost"
   },
@@ -57,7 +57,7 @@
     "eyebrow": "If your case goes beyond filling",
     "h2_html": "Volume <em>pairs with tone.</em>",
     "p": "Hyaluronic acid restores volume, but deep sagging is treated with technology. Combining injectables with Ultherapy or INDIBA Radiofrequency amplifies the results.",
-    "cta_html": "See Lifting & Antiaging →"
+    "cta_html": "See Lifting & Antiaging"
   },
   "grid": {
     "eyebrow": "Four protocols · one philosophy",
@@ -103,6 +103,6 @@
     "eyebrow": "Diagnosis before the needle",
     "h2_html": "Book your assessment. <em>Start by knowing what you need — and what you don't</em>.",
     "p_html": "Thirty minutes at the clinic with a qualified aesthetic doctor. If your case isn't injectable, we'll say so. If it is, we design a conservative plan.",
-    "cta": "Book your assessment →"
+    "cta": "Book your assessment"
   }
 }

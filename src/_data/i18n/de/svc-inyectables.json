@@ -26,7 +26,7 @@
     "eyebrow_html": "Ästhetische Injektionen · 4 Protokolle",
     "h1_html": "Volumen, nicht Übermaß. <em>Subtil, präzise, ganz Sie.</em>",
     "lead": "Botox, um Linien zu glätten, Hyaluronsäure, um Volumen zurückzugeben, Fadenlifting zum Repositionieren, PRP zur Regeneration. Jedes hat seinen genauen Moment in Ihrem Gesicht — und dieser Moment trennt ein natürliches Ergebnis von einem eingefrorenen.",
-    "ctaPrimary": "Kostenlose Diagnose buchen →",
+    "ctaPrimary": "Kostenlose Diagnose buchen",
     "reviews": "Google-Bewertungen",
     "free": "Erstdiagnose kostenfrei"
   },
@@ -57,7 +57,7 @@
     "eyebrow": "Wenn es um mehr als Filler geht",
     "h2_html": "Volumen <em>wird durch Spannkraft ergänzt.</em>",
     "p": "Hyaluronsäure gibt Volumen zurück, doch tiefe Hauterschlaffung behandelt man mit Technologie. Kombinieren Sie Injektionen mit Ultherapy oder INDIBA Radiofrequenz, verstärken sich die Ergebnisse.",
-    "cta_html": "Lifting & Anti-Aging ansehen →"
+    "cta_html": "Lifting & Anti-Aging ansehen"
   },
   "grid": {
     "eyebrow": "Vier Protokolle · eine Philosophie",
@@ -103,6 +103,6 @@
     "eyebrow": "Diagnose vor der Nadel",
     "h2_html": "Buchen Sie Ihre Beurteilung. <em>Erfahren Sie zuerst, was Sie brauchen — und was nicht</em>.",
     "p_html": "Dreißig Minuten in der Klinik mit einem qualifizierten Ästhetikmediziner. Ist Ihr Fall keine Injektion, sagen wir es Ihnen. Ist er es, planen wir konservativ.",
-    "cta": "Beurteilung buchen →"
+    "cta": "Beurteilung buchen"
   }
 }

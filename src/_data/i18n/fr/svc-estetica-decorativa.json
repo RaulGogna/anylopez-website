@@ -26,7 +26,7 @@
     "eyebrow_html": "Esthétique décorative · Cils + Micropigmentation",
     "h1_html": "Des détails qui se remarquent, <em>sans attirer l'attention.</em>",
     "lead": "Se réveiller déjà maquillée. Des cils poil par poil et des sourcils/lèvres/eye-liner micropigmentés — mais faits avec discernement : dessin préalable, pigments durables, une technique conservatrice qui vieillit bien et se retouche, au lieu de s'effacer avec l'âge.",
-    "ctaPrimary": "Réserver un diagnostic gratuit →",
+    "ctaPrimary": "Réserver un diagnostic gratuit",
     "reviews": "avis Google",
     "free": "Diagnostic initial sans frais"
   },
@@ -65,7 +65,7 @@
     "eyebrow": "Pour sublimer la base",
     "h2_html": "L'esthétique décorative est plus belle <em>sur une peau soignée.</em>",
     "p": "Les sourcils et les lèvres ressortent davantage sur une peau propre et lumineuse. Pour un rendu d'ensemble harmonieux, les nettoyages de peau réguliers font la différence.",
-    "cta": "Voir les nettoyages de peau →"
+    "cta": "Voir les nettoyages de peau"
   },
   "tests": {
     "eyebrow": "Patientes réelles",
@@ -103,6 +103,6 @@
     "eyebrow": "Sans engagement",
     "h2_html": "Réservez un bilan. <em>Nous dessinons avant d'appliquer</em>.",
     "p_html": "Trente minutes pour observer votre visage, parler de ce que vous cherchez et dessiner sur votre peau. Si le dessin ne vous convainc pas à 100 %, nous ne commençons pas.",
-    "cta": "Réserver un bilan →"
+    "cta": "Réserver un bilan"
   }
 }
