@@ -41,7 +41,7 @@
   }, true);
 
   // El <form method="dialog"> del modal solo cierra el diálogo: no es un formulario del visitante.
-  function isDialogForm(form) { return form.getAttribute('method') === 'dialog'; }
+  function isDialogForm(form) { return form.method === 'dialog'; }
 
   var formsStarted = new WeakSet();
   document.addEventListener('focusin', function (e) {
