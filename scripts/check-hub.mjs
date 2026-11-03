@@ -6,16 +6,15 @@
  * Las secciones con `content-visibility: auto` miden fuera de pantalla su tamaño de reserva, no el
  * real: se fuerza `visible` antes de medir la altura.
  *
- * Se sirve en anylopez.test (mapeado a 127.0.0.1) porque tracking.js no emite en localhost, y se
- * bloquea todo lo que no sea ese host.
+ * El navegador y el host de prueba vienen de scripts/lib/browser.mjs.
  *
  * Uso: npm run verify:hub   (construye y comprueba)
  */
-import { chromium } from "playwright";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createRequire } from "node:module";
 import { serveStatic } from "./lib/serve-static.mjs";
+import { HOST, cerrar, lanzarNavegador, nuevaPagina } from "./lib/browser.mjs";
 
 const require = createRequire(import.meta.url);
 const LANGS = require("../src/_data/langs.json");
@@ -24,7 +23,6 @@ const catalogo = (code) => require(`../src/_data/catalogo/${code}.json`);
 const textos = (code) => require(`../src/_data/i18n/${code}/services.json`);
 
 const SITE = "_site";
-const HOST = "anylopez.test";
 const ANCHOS = [320, 375, 768, 1024, 1440];
 const MAX_PANTALLAS = 8.5;
 const ULTIMO_OBJETIVO = OBJETIVOS.at(-1).id;
@@ -91,18 +89,6 @@ const sobrantes = [...PRECIO_ESPERADO.keys()].filter((s) => !slugsCatalogo.inclu
 if (sinPrecio.length || sobrantes.length)
   fallar("es", `el catálogo cambió (sin precio esperado: ${sinPrecio.join(", ") || "-"}; sobran: ${sobrantes.join(", ") || "-"}): ${AVISO_TABLA}`);
 
-async function nuevaPagina(browser, viewport) {
-  const context = await browser.newContext({ viewport });
-  await context.route("**/*", (route) => (new URL(route.request().url()).hostname === HOST ? route.continue() : route.abort()));
-  const page = await context.newPage();
-  await page.addInitScript(() => {
-    window.__eventos = [];
-    window.umami = { track: (nombre, props) => window.__eventos.push({ nombre, props }) };
-  });
-  return page;
-}
-
-const cerrar = (page) => page.context().close();
 const eventos = (page) => page.evaluate(() => window.__eventos.map((e) => e.nombre));
 
 async function comprobarContenido(page, lang, base) {
@@ -337,7 +323,7 @@ async function comprobarMedidas(browser, lang, base) {
 
 const server = await serveStatic(SITE);
 const base = `http://${HOST}:${server.address().port}`;
-const browser = await chromium.launch({ args: [`--host-resolver-rules=MAP ${HOST} 127.0.0.1`] });
+const browser = await lanzarNavegador();
 try {
   for (const lang of LANGS) {
     const page = await nuevaPagina(browser, { width: 390, height: 844 });
