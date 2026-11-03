@@ -32,7 +32,7 @@ const ULTIMO_OBJETIVO = OBJETIVOS.at(-1).id;
 // Precios que debe pintar el hub, fijados a mano contra catalogo/es.json (los packs y los retoques
 // no cuentan; los precios son iguales en todos los idiomas). Si el catálogo cambia, este gate falla
 // a propósito: revisa el catálogo y actualiza esta tabla a mano, no la derives de él.
-const D = true;
+const DESDE = true;
 const PRECIO_ESPERADO = new Map(Object.entries({
   "limpieza-facial-gold": ["50 €"],
   "limpieza-facial-platinum": ["75 €"],
@@ -47,29 +47,29 @@ const PRECIO_ESPERADO = new Map(Object.entries({
   "peeling-quimico-facial": ["150 €"],
   "dermaplaning-facial": ["50 €"],
   "anti-acne": ["75 €"],
-  "laser-plasma-pen": ["95 €", D],
-  "ultherapy": ["200 €", D],
-  "radiofrecuencia-indiba": ["65 €", D],
+  "laser-plasma-pen": ["95 €", DESDE],
+  "ultherapy": ["200 €", DESDE],
+  "radiofrecuencia-indiba": ["65 €", DESDE],
   "botox-zona": ["300 €"],
-  "acido-hialuronico": ["300 €", D],
-  "hilos-tensores": ["395 €", D],
+  "acido-hialuronico": ["300 €", DESDE],
+  "hilos-tensores": ["395 €", DESDE],
   "prp-plasma": ["275 €"],
   "maderoterapia": ["40 €"],
   "presoterapia": ["25 €"],
-  "drenaje-linfatico-postop": ["65 €", D],
+  "drenaje-linfatico-postop": ["65 €", DESDE],
   "dolor-muscular-corporal": ["65 €"],
   "triple-accion-anticelulitica": ["90 €"],
-  "masaje-corporal": ["35 €", D],
-  "masaje-relajante": ["25 €", D],
-  "masaje-craneo-facial-cervical": ["50 €", D],
-  "masaje-podal": ["45 €", D],
-  "masaje-piernas-cansadas": ["45 €", D],
+  "masaje-corporal": ["35 €", DESDE],
+  "masaje-relajante": ["25 €", DESDE],
+  "masaje-craneo-facial-cervical": ["50 €", DESDE],
+  "masaje-podal": ["45 €", DESDE],
+  "masaje-piernas-cansadas": ["45 €", DESDE],
   "masaje-aloe-vera": ["75 €"],
   "masaje-facial-colageno": ["60 €"],
   "masaje-facial-vitamina-c": ["50 €"],
-  "pestanas-pelo-a-pelo": ["70 €", D],
+  "pestanas-pelo-a-pelo": ["70 €", DESDE],
   "micropigmentacion": ["300 €"],
-  "depilacion-ipl": ["12 €", D],
+  "depilacion-ipl": ["12 €", DESDE],
 }).map(([slug, [precio, esDesde = false]]) => [slug, { precio, esDesde }]));
 
 const AVISO_TABLA = "revisa el catálogo y actualiza PRECIO_ESPERADO en scripts/check-hub.mjs a mano";

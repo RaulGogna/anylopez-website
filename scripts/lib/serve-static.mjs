@@ -29,7 +29,7 @@ export function serveStatic(dir) {
     }
     if (ruta.endsWith("/")) ruta += "index.html";
     const fichero = join(root, ruta);
-    if (!(fichero === root || fichero.startsWith(root + sep)) || !existsSync(fichero) || statSync(fichero).isDirectory()) {
+    if (!fichero.startsWith(root + sep) || !existsSync(fichero) || statSync(fichero).isDirectory()) {
       res.writeHead(404).end("not found");
       return;
     }
