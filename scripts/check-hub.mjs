@@ -207,8 +207,17 @@ async function comprobarClicsNativos(page, lang) {
   ];
   for (const { nombre, opciones, abrePestana } of casos) {
     const popup = abrePestana ? page.context().waitForEvent("page", { timeout: 5000 }).catch(() => null) : null;
+    // Meta+clic no abre pestaña en Windows y el enlace navegaría en la misma: se frena en window, tras
+    // los manejadores de la página, para que la comprobación no compita con la navegación.
+    if (!abrePestana) {
+      await page.evaluate(() => {
+        window.__prevenidoPorLaPagina = null;
+        window.addEventListener("click", (e) => { window.__prevenidoPorLaPagina = e.defaultPrevented; e.preventDefault(); }, { once: true });
+      });
+    }
     await fila.click(opciones);
     if (abrePestana && !(await popup)) fallar(code, `clic con ${nombre}: no abrió otra pestaña`);
+    if (!abrePestana && (await page.evaluate(() => window.__prevenidoPorLaPagina)) !== false) fallar(code, `clic con ${nombre}: la página lo tomó (preventDefault) o no llegó el clic`);
     if (await page.evaluate(() => document.getElementById("trat-modal").open)) fallar(code, `clic con ${nombre} abrió el modal`);
   }
 }

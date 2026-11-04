@@ -2,7 +2,7 @@
  * Cada HTML de `_site` tiene exactamente un <main>, y dentro no hay cabecera, barra móvil ni pie.
  * Un segundo <main> (p. ej. el de una plantilla que ya lo traía) invalida el landmark.
  *
- * Uso: node scripts/check-main.mjs   (sobre un `_site` ya construido; forma parte de `npm run verify`)
+ * Uso: node scripts/check-main.mjs   (sobre un `_site` ya construido; corre dentro de `npm run build`)
  */
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
