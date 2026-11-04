@@ -25,9 +25,7 @@
     </div>
   </div>
   <div class="trat-card-actions">
-    <details class="trat-card-more">
-      <summary>{{ catalogText.includes }}</summary>
-    </details>
+    <button type="button" class="trat-card-more-btn" aria-expanded="false" aria-controls="incluye-{{ trat.slug }}" hidden>{{ catalogText.includes }}</button>
     {%- if pageHref %}
     <a class="trat-cta" href="{{ (l.prefix + pageHref) | url }}">{{ tx.grid.viewFullCta | glueArrow }}</a>
     {%- else %}
@@ -38,7 +36,7 @@
       aria-label="{{ tx.grid.detailsAria }} {{ trat.nombre }}"
     >{{ tx.grid.detailsCta | glueArrow }}</button>
     {%- endif %}
-    <div class="trat-card-more-panel">
+    <div class="trat-card-more-panel" id="incluye-{{ trat.slug }}">
       <p><strong>{{ catalogText.duration }}</strong> {{ trat.duracion }}</p>
       {%- if tx.grid.forWhom_html %}
       <p><strong>{{ tx.grid.forWhom_html | safe }}</strong> {{ trat.paraQuien }}</p>

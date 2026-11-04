@@ -1,4 +1,4 @@
-.category-page { --cat-pad: 24px; --trat-thumb: 72px; }
+.category-page { --cat-pad: 24px; --trat-thumb: 96px; }
 .category-page > section { padding-block: var(--cat-pad); }
 
 html { scroll-padding-top: calc(var(--header-h) + 16px); }
@@ -144,7 +144,7 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .trat-card .price-from { font-size: 17px; line-height: 1; }
 .trat-card-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; }
 .trat-cta,
-.trat-card-more summary {
+.trat-card-more-btn {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -163,15 +163,14 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 }
 .trat-cta:hover { color: var(--terra); }
 .trat-cta:focus-visible,
-.trat-card-more summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.trat-card-more-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 .trat-card-link .trat-cta::after { content: ''; position: absolute; inset: 0; }
-.trat-card-more summary { position: relative; z-index: 1; list-style: none; gap: 4px; }
-.trat-card-more summary::-webkit-details-marker { display: none; }
-.trat-card-more summary::after { content: '▾'; }
-.trat-card-more[open] summary::after { content: '▴'; }
-.trat-card-more[open] ~ .trat-card-more-panel { display: block; }
+.trat-card-more-btn { position: relative; z-index: 1; gap: 4px; background: none; border: none; }
+.trat-card-more-btn[hidden],
+.trat-card-more-panel[hidden] { display: none; }
+.trat-card-more-btn::after { content: '▾'; content: '▾' / ''; }
+.trat-card-more-btn[aria-expanded="true"]::after { content: '▴'; content: '▴' / ''; }
 .trat-card-more-panel {
-  display: none;
   flex: 0 0 100%;
   padding: 10px 4px 6px;
   border-top: 1px solid var(--border);

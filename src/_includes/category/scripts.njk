@@ -8,21 +8,31 @@
     });
   });
 
-  const panels = [...document.querySelectorAll('.trat-card-more')];
-  panels.forEach((d) => {
+  // Sin JS el panel «Qué incluye» queda abierto en el HTML y el botón oculto: aquí se invierte.
+  const botones = [...document.querySelectorAll('.trat-card-more-btn')];
+  const panelDe = (b) => document.getElementById(b.getAttribute('aria-controls'));
+  const fijar = (b, abierto) => {
+    b.setAttribute('aria-expanded', String(abierto));
+    panelDe(b).hidden = !abierto;
+  };
+  botones.forEach((b) => {
+    b.hidden = false;
+    fijar(b, false);
     // treatment-modal.js abre el modal al pulsar en cualquier punto de una tarjeta (delegado en
-    // document): un clic en el desplegable o en su panel no debe llegar hasta allí.
-    d.addEventListener('click', (e) => e.stopPropagation());
-    d.parentElement.querySelector('.trat-card-more-panel').addEventListener('click', (e) => e.stopPropagation());
-    d.addEventListener('toggle', () => {
-      if (d.open) panels.forEach((o) => { if (o !== d) o.open = false; });
+    // document): un clic en el botón o en su panel no debe llegar hasta allí.
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const abrir = b.getAttribute('aria-expanded') !== 'true';
+      botones.forEach((o) => fijar(o, false));
+      if (abrir) fijar(b, true);
     });
+    panelDe(b).addEventListener('click', (e) => e.stopPropagation());
   });
   document.addEventListener('keydown', (e) => {
-    const abierto = panels.find((d) => d.open);
+    const abierto = botones.find((b) => b.getAttribute('aria-expanded') === 'true');
     if (e.key !== 'Escape' || !abierto) return;
-    abierto.open = false;
-    abierto.querySelector('summary').focus();
+    fijar(abierto, false);
+    abierto.focus();
   });
 
   const carousel = document.querySelector('.cat-page-tests-grid');

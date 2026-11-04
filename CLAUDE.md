@@ -149,7 +149,7 @@ verdad respecto al resto va en `serviceCategories.json` (xsellHref, crossHrefs, 
 `crossHrefs`, si no `xsell`), dolor y por qué (`pain-why`), testimonios (scroll-snap en móvil), FAQ, proceso (`<details>`) y cierre.
 `npm run verify:categories` (Chromium real, 56 páginas; `--base <_site de master>` compara cabeceras y JSON-LD) vigila tarjetas, precios y anclas contra el hub,
 copy íntegro, primer tratamiento ≤ 1,3 (móvil) / 1,1 (escritorio) pantallas, ≤ 9,5 pantallas a 390×844 y desborde.
-Tarjeta: el «Qué incluye» es un `<details>` cuyo panel va en el flujo (la tarjeta crece; Escape y uno solo abierto, en `category/scripts.njk`).
+Tarjeta: el «Qué incluye» es un `<button aria-expanded aria-controls>` sobre un panel en el flujo (la tarjeta crece; Escape con foco al botón y uno solo abierto, en `category/scripts.njk`). Sin JS el panel va abierto en el HTML y el botón oculto; el JS invierte ambos al iniciar. `check-main.mjs` corre dentro de `npm run build`, porque el deploy solo ejecuta `build`.
 **`.btn` pinta su propia flecha (`::after`): el copy de lo que va dentro de un `.btn` no termina en → ni ←** (ni `&rarr;`); los `.btn[href^="tel:"]` no la pintan (CSS).
 La altura de la barra móvil vive en `--mobile-bar-h` (`styles.css`) y de ella salen `scroll-padding-bottom` y el relleno del pie.
 `scripts/compare-sites.mjs <baseline> <actual>` es una

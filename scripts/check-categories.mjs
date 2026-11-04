@@ -181,7 +181,7 @@ function botonesPartidos(page) {
       return nodos.length ? { first: nodos[0], last: nodos.at(-1) } : null;
     };
     const partidos = [];
-    for (const el of document.querySelectorAll(".trat-cta, .trat-card-more summary, .category-page .btn")) {
+    for (const el of document.querySelectorAll(".trat-cta, .trat-card-more-btn, .category-page .btn")) {
       const t = textos(el);
       if (!t || !el.getClientRects().length) continue;
       const fin = t.last.data.trimEnd().length;
@@ -215,7 +215,7 @@ async function comprobarMedidas(page, id) {
   if (dobles.length) fallar(id, `botones con la flecha repetida: ${dobles.join("; ")}`);
 
   const pequenos = await page.evaluate((min) => {
-    const cajas = [...document.querySelectorAll(".trat-card .trat-cta, .trat-card-more summary, .cat-page-faq-q, .cat-page-process-details summary, .cat-page-hero .btn, .cat-page-final .btn")];
+    const cajas = [...document.querySelectorAll(".trat-card .trat-cta, .trat-card-more-btn, .cat-page-faq-q, .cat-page-process-details summary, .cat-page-hero .btn, .cat-page-final .btn")];
     return cajas.filter((e) => e.getBoundingClientRect().height < min - 0.5).map((e) => e.className || e.tagName);
   }, TACTIL);
   if (pequenos.length) fallar(id, `objetivos táctiles de menos de ${TACTIL} px: ${[...new Set(pequenos)].join(", ")}`);
@@ -283,32 +283,62 @@ async function comprobarModal(page, { l, cat }, id) {
   }
 }
 
-// Un solo panel «Qué incluye» abierto; Escape lo cierra y devuelve el foco al resumen, y abrirlo no
-// abre el modal.
+// «Qué incluye» es un botón con aria-expanded/aria-controls sobre un panel con `hidden`. Sin JS el panel
+// va abierto en el HTML (SEO) y el botón oculto. Con JS: un solo panel abierto, la tarjeta crece, un clic
+// fuera no cierra, Escape cierra y devuelve el foco al botón, y abrirlo no abre el modal.
 async function comprobarDesplegables(page, id) {
-  const resumenes = page.locator(".trat-card-more summary");
-  const abiertos = () => page.locator(".trat-card-more[open]").count();
+  const estado = () =>
+    page.$$eval(".trat-card-more-btn", (bs) =>
+      bs.map((b) => {
+        const panel = document.getElementById(b.getAttribute("aria-controls"));
+        return { tag: b.tagName, tipo: b.type, expandido: b.getAttribute("aria-expanded"), panelOculto: panel?.hidden ?? null, panelVisible: !!panel && panel.offsetHeight > 0 };
+      })
+    );
+  const coherente = (e, i, abierto) => e[i].tag === "BUTTON" && e[i].tipo === "button" && e[i].expandido === String(abierto) && e[i].panelOculto === !abierto && e[i].panelVisible === abierto;
+  const botones = page.locator(".trat-card-more-btn");
+  const n = await botones.count();
+
+  const estatico = await page.evaluate(async () => {
+    const doc = new DOMParser().parseFromString(await (await fetch(location.href)).text(), "text/html");
+    return [...doc.querySelectorAll(".trat-card-more-btn")].map((b) => {
+      const panel = doc.getElementById(b.getAttribute("aria-controls"));
+      return { botonOculto: b.hidden, panelOculto: panel?.hidden ?? null, texto: panel?.textContent.trim().length ?? 0 };
+    });
+  });
+  if (estatico.length !== n || estatico.some((e) => !e.botonOculto || e.panelOculto !== false || !e.texto))
+    fallar(id, "sin JS el panel «Qué incluye» debe ir abierto en el HTML con su botón oculto");
+
+  const inicial = await estado();
+  if (!n || inicial.some((_, i) => !coherente(inicial, i, false))) fallar(id, "con JS, todos los «Qué incluye» deben empezar como botón cerrado con su panel hidden");
+
   const pulsar = async (i) => {
-    const r = resumenes.nth(i);
-    await r.evaluate((el) => el.scrollIntoView({ block: "center" }));
-    await r.click({ timeout: 3000 }).catch(() => fallar(id, `el resumen ${i + 1} no se puede pulsar con un clic (¿lo tapa otro panel?)`));
+    const b = botones.nth(i);
+    await b.evaluate((el) => el.scrollIntoView({ block: "center" }));
+    await b.click({ timeout: 3000 }).catch(() => fallar(id, `el botón ${i + 1} no se puede pulsar con un clic (¿lo tapa otro panel?)`));
   };
-  const n = await resumenes.count();
+  const alto = () => page.locator(".trat-card").first().evaluate((el) => el.getBoundingClientRect().height);
+  const antes = await alto();
   await pulsar(0);
-  if ((await abiertos()) !== 1) fallar(id, "el resumen «Qué incluye» no abre su panel");
+  let e = await estado();
+  if (!e.length || !coherente(e, 0, true)) fallar(id, "el botón «Qué incluye» no abre su panel (aria-expanded/hidden)");
+  if ((await alto()) <= antes) fallar(id, "la tarjeta no crece al abrir «Qué incluye»");
   if (await page.evaluate(() => document.getElementById("trat-modal").open)) fallar(id, "abrir «Qué incluye» abrió el modal");
+  await page.evaluate(() => document.body.click());
+  e = await estado();
+  if (!e.length || !coherente(e, 0, true)) fallar(id, "un clic fuera cerró «Qué incluye»");
   if (n > 1) {
-    // El panel abierto está en el flujo: el resumen de la tarjeta de debajo sigue siendo pulsable.
     await pulsar(1);
-    await page.waitForFunction(() => document.querySelectorAll(".trat-card-more")[1].open, null, { timeout: 2000 }).catch(() => {});
+    await page.waitForFunction(() => document.querySelectorAll(".trat-card-more-btn")[1].getAttribute("aria-expanded") === "true", null, { timeout: 2000 }).catch(() => {});
     await page.waitForTimeout(100);
-    const abierto = await page.evaluate(() => [...document.querySelectorAll(".trat-card-more")].map((d) => d.open));
-    if (abierto.filter(Boolean).length !== 1 || !abierto[1]) fallar(id, "abrir un panel no cierra el anterior");
+    e = await estado();
+    if (e.filter((x) => x.expandido === "true").length !== 1 || !coherente(e, 1, true) || !coherente(e, 0, false)) fallar(id, "abrir un panel no cierra el anterior");
   }
   const ultimo = n > 1 ? 1 : 0;
+  await page.evaluate(() => document.activeElement.blur());
   await page.keyboard.press("Escape");
-  if ((await abiertos()) !== 0) fallar(id, "Escape no cierra el panel «Qué incluye»");
-  if (!(await resumenes.nth(ultimo).evaluate((el) => el === document.activeElement))) fallar(id, "Escape no devuelve el foco al resumen");
+  e = await estado();
+  if (e.some((_, i) => !coherente(e, i, false))) fallar(id, "Escape no cierra el panel «Qué incluye»");
+  if (!(await botones.nth(ultimo).evaluate((el) => el === document.activeElement))) fallar(id, "Escape no devuelve el foco al botón");
 }
 
 // El orden del DOM (el de tabulación) coincide con el visual: «Qué incluye» antes que «Ver detalles»
@@ -317,7 +347,7 @@ async function comprobarOrdenDeTabulacion(page, id) {
   const desordenadas = await page.evaluate(() => {
     const rtl = getComputedStyle(document.documentElement).direction === "rtl";
     return [...document.querySelectorAll(".trat-card")].filter((card) => {
-      const resumen = card.querySelector(".trat-card-more summary");
+      const resumen = card.querySelector(".trat-card-more-btn");
       const cta = card.querySelector(".trat-cta");
       const r = resumen.getBoundingClientRect();
       const c = cta.getBoundingClientRect();
