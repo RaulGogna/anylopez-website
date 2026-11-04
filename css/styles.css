@@ -938,6 +938,8 @@ body::before {
 /* ═══════════════════════════════════════════════════
    MOBILE STICKY BAR
    ═══════════════════════════════════════════════════ */
+/* Borde superior + padding superior + botón (2×13 de padding, 2×1 de borde, línea de 12px×1.75) + padding inferior */
+:root { --mobile-bar-h: calc(1px + 12px + (2 * 13px + 2 * 1px + 12px * 1.75) + max(12px, env(safe-area-inset-bottom))); }
 .mobile-bar {
   display: none;
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 9981;
@@ -1265,8 +1267,9 @@ button[type="submit"] {
   .container { padding: 0 24px; }
   .services-intro-wrap { padding-left: 24px; padding-right: 24px; }
 
-  .whatsapp-float, #wa-float a { bottom: 80px !important; }
+  .whatsapp-float, #wa-float a { bottom: calc(var(--mobile-bar-h) + 6px) !important; }
   .mobile-bar { display: grid; }
+  anylopez-chat { --anylopez-chat-offset-bottom: calc(var(--mobile-bar-h) + 16px); }
 
   .testi-grid { grid-template-columns: 1fr; }
   .ig-grid { grid-template-columns: repeat(3,1fr); }
