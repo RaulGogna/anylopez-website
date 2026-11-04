@@ -298,15 +298,29 @@ async function comprobarDesplegables(page, id) {
   const botones = page.locator(".trat-card-more-btn");
   const n = await botones.count();
 
-  const estatico = await page.evaluate(async () => {
-    const doc = new DOMParser().parseFromString(await (await fetch(location.href)).text(), "text/html");
-    return [...doc.querySelectorAll(".trat-card-more-btn")].map((b) => {
-      const panel = doc.getElementById(b.getAttribute("aria-controls"));
-      return { botonOculto: b.hidden, panelOculto: panel?.hidden ?? null, texto: panel?.textContent.trim().length ?? 0 };
-    });
-  });
-  if (estatico.length !== n || estatico.some((e) => !e.botonOculto || e.panelOculto !== false || !e.texto))
-    fallar(id, "sin JS el panel «Qué incluye» debe ir abierto en el HTML con su botón oculto");
+  // Sin JS: panel abierto en el HTML y botón oculto. Con la clase `js` del <head> (que se pone antes
+  // del primer pintado), el panel ya está oculto por CSS y el botón visible, sin esperar al JS del final.
+  const url = page.url();
+  const sinJs = await page.context().browser().newContext({ javaScriptEnabled: false, viewport: page.viewportSize() });
+  await sinJs.route("**/*", (route) => (new URL(route.request().url()).hostname === HOST ? route.continue() : route.abort()));
+  const estatica = await sinJs.newPage();
+  await estatica.goto(url, { waitUntil: "load" });
+  const medir = () =>
+    estatica.$$eval(".trat-card-more-btn", (bs) =>
+      bs.map((b) => {
+        const panel = document.getElementById(b.getAttribute("aria-controls"));
+        return { boton: b.offsetHeight > 0, panel: !!panel && panel.offsetHeight > 0 && !panel.hidden, texto: panel?.textContent.trim().length ?? 0 };
+      })
+    );
+  const sin = await medir();
+  if (sin.length !== n || sin.some((e) => e.boton || !e.panel || !e.texto))
+    fallar(id, "sin JS el panel «Qué incluye» debe verse abierto y el botón oculto");
+  const script = await estatica.evaluate(() => [...document.head.querySelectorAll("script:not([src])")].some((x) => /documentElement\.classList\.add\(['"]js['"]\)/.test(x.textContent)));
+  if (!script) fallar(id, "falta en <head> el script que pone la clase `js` antes del primer pintado");
+  await estatica.evaluate(() => document.documentElement.classList.add("js"));
+  const con = await medir();
+  if (con.some((e) => !e.boton || e.panel)) fallar(id, "con la clase `js` y antes de ejecutar el JS del final, el panel debe estar oculto y el botón visible");
+  await sinJs.close();
 
   const inicial = await estado();
   if (!n || inicial.some((_, i) => !coherente(inicial, i, false))) fallar(id, "con JS, todos los «Qué incluye» deben empezar como botón cerrado con su panel hidden");

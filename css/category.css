@@ -166,7 +166,9 @@ html { scroll-padding-top: calc(var(--header-h) + 16px); }
 .trat-card-more-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 .trat-card-link .trat-cta::after { content: ''; position: absolute; inset: 0; }
 .trat-card-more-btn { position: relative; z-index: 1; gap: 4px; background: none; border: none; }
-.trat-card-more-btn[hidden],
+.trat-card-more-btn { display: none; }
+.js .trat-card-more-btn { display: inline-flex; }
+.js .trat-card-more-btn[aria-expanded="false"] ~ .trat-card-more-panel,
 .trat-card-more-panel[hidden] { display: none; }
 .trat-card-more-btn::after { content: '▾'; content: '▾' / ''; }
 .trat-card-more-btn[aria-expanded="true"]::after { content: '▴'; content: '▴' / ''; }

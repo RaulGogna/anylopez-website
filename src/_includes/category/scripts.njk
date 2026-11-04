@@ -8,7 +8,7 @@
     });
   });
 
-  // Sin JS el panel «Qué incluye» queda abierto en el HTML y el botón oculto: aquí se invierte.
+  // Sin JS el panel va abierto y el botón oculto; la clase `js` de <head> los invierte antes del primer pintado.
   const botones = [...document.querySelectorAll('.trat-card-more-btn')];
   const panelDe = (b) => document.getElementById(b.getAttribute('aria-controls'));
   const fijar = (b, abierto) => {
@@ -16,7 +16,6 @@
     panelDe(b).hidden = !abierto;
   };
   botones.forEach((b) => {
-    b.hidden = false;
     fijar(b, false);
     // treatment-modal.js abre el modal al pulsar en cualquier punto de una tarjeta (delegado en
     // document): un clic en el botón o en su panel no debe llegar hasta allí.

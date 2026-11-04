@@ -25,7 +25,7 @@
     </div>
   </div>
   <div class="trat-card-actions">
-    <button type="button" class="trat-card-more-btn" aria-expanded="false" aria-controls="incluye-{{ trat.slug }}" hidden>{{ catalogText.includes }}</button>
+    <button type="button" class="trat-card-more-btn" aria-expanded="false" aria-controls="incluye-{{ trat.slug }}">{{ catalogText.includes }}</button>
     {%- if pageHref %}
     <a class="trat-cta" href="{{ (l.prefix + pageHref) | url }}">{{ tx.grid.viewFullCta | glueArrow }}</a>
     {%- else %}
