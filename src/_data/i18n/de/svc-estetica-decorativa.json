@@ -82,7 +82,7 @@
     "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
     "p_html": "Wir entwerfen, bevor wir anwenden. Überzeugt es Sie nicht, beginnen wir nicht.",
     "steps": [
-      { "h3": "Sie buchen Ihre Beurteilung", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
+      { "h3": "Sie buchen Ihre Beratung", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
       { "h3": "Design auf Ihrer Haut + Ihre Freigabe", "p_html": "Wir zeichnen Form, Farbe und Proportion direkt auf Ihr Gesicht. Sie sehen es im Spiegel, wir passen es mit Ihnen an. Überzeugt es Sie nicht zu 100 %, beginnen wir nicht." },
       { "h3": "Anwendung", "p_html": "Wimpern einzeln oder Micropigmentierung mit konservativer Technik. Betäubungscreme, wenn nötig. Zeit und Sorgfalt." },
       { "h3": "Geplante Auffrischung", "p_html": "Wimpern alle 3–4 Wochen. Micropigmentierung: erste Auffrischung nach 4–6 Wochen, danach jährlich. Echte Pflege statt Verschwinden nach dem Verkauf." }
@@ -101,7 +101,7 @@
   },
   "final": {
     "eyebrow": "Unverbindlich",
-    "h2_html": "Buchen Sie eine Beurteilung. <em>Wir entwerfen, bevor wir anwenden</em>.",
+    "h2_html": "Buchen Sie eine Beratung. <em>Wir entwerfen, bevor wir anwenden</em>.",
     "p_html": "Dreißig Minuten, um Ihr Gesicht anzusehen, über Ihre Wünsche zu sprechen und auf Ihrer Haut zu zeichnen. Überzeugt Sie das Design nicht zu 100 %, beginnen wir nicht.",
     "cta": "Beratung buchen"
   }

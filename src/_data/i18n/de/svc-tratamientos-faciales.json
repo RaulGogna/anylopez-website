@@ -10,7 +10,7 @@
       { "q": "Wie viel Ausfallzeit brauche ich?", "a": "Je nach Behandlung. Dermaplaning und virtuelle Mesotherapie: keine. Hydratation mit Dermapen und sanfte Peelings: 24–48 Std. mit leichter Rötung. Tiefe chemische Peelings: 4–7 Tage kontrollierter Schälung. Wir erklären es im Detail, bevor Sie das Protokoll wählen." },
       { "q": "Wann sehe ich Ergebnisse?", "a": "Behandlungen wie Kollagenschleier oder Dermaplaning geben ab der ersten Sitzung sofortige Frische. Anti-Pigmentflecken-Peelings und Dermapen gegen Narben wirken progressiv: Verbesserung nach einem Monat, volles Ergebnis nach 3–5 Sitzungen je nach Fall." },
       { "q": "Kann ich mehrere Behandlungen kombinieren?", "a": "Ja, und oft ist das die beste Strategie. Dermapen + Hydratation, Peeling + Radiofrequenz, Mesotherapie + Kollagenschleier sind übliche Kombinationen. Im persönlichen Plan gestalten wir die optimale Abfolge." },
-      { "q": "Ich habe empfindliche Haut, Rosazea oder bin schwanger. Gibt es Alternativen?", "a": "Ja. Wir haben spezifische Protokolle für empfindliche und reaktive Haut. In Schwangerschaft oder Stillzeit sind einige Behandlungen kontraindiziert, andere völlig sicher — wir sagen es Ihnen in der Beurteilung mit klinischer Ehrlichkeit." }
+      { "q": "Ich habe empfindliche Haut, Rosazea oder bin schwanger. Gibt es Alternativen?", "a": "Ja. Wir haben spezifische Protokolle für empfindliche und reaktive Haut. In Schwangerschaft oder Stillzeit sind einige Behandlungen kontraindiziert, andere völlig sicher — wir sagen es Ihnen in der Beratung mit klinischer Ehrlichkeit." }
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current": "Erweiterte Gesichtsbehandlungen" },
@@ -100,7 +100,7 @@
       { "q_html": "Wie viel Ausfallzeit brauche ich?", "a_html": "Je nach Behandlung. Dermaplaning und virtuelle Mesotherapie: keine. Hydratation mit Dermapen und sanfte Peelings: 24–48 Std. mit leichter Rötung. Tiefe chemische Peelings: 4–7 Tage kontrollierter Schälung. Wir erklären es im Detail, bevor Sie das Protokoll wählen." },
       { "q_html": "Wann sehe ich Ergebnisse?", "a_html": "Behandlungen wie Kollagenschleier oder Dermaplaning geben ab der ersten Sitzung sofortige Frische. Anti-Pigmentflecken-Peelings und Dermapen gegen Narben wirken progressiv: Verbesserung nach einem Monat, volles Ergebnis nach 3–5 Sitzungen je nach Fall." },
       { "q_html": "Kann ich mehrere Behandlungen kombinieren?", "a_html": "Ja, und oft ist das die beste Strategie. Dermapen + Hydratation, Peeling + Radiofrequenz, Mesotherapie + Kollagenschleier sind übliche Kombinationen. Im persönlichen Plan gestalten wir die optimale Abfolge." },
-      { "q_html": "Ich habe empfindliche Haut / Rosazea / bin schwanger. Gibt es Alternativen?", "a_html": "Ja. Wir haben spezifische Protokolle für empfindliche und reaktive Haut. In Schwangerschaft oder Stillzeit sind einige Behandlungen kontraindiziert, andere völlig sicher — wir sagen es Ihnen in der Beurteilung mit klinischer Ehrlichkeit." }
+      { "q_html": "Ich habe empfindliche Haut / Rosazea / bin schwanger. Gibt es Alternativen?", "a_html": "Ja. Wir haben spezifische Protokolle für empfindliche und reaktive Haut. In Schwangerschaft oder Stillzeit sind einige Behandlungen kontraindiziert, andere völlig sicher — wir sagen es Ihnen in der Beratung mit klinischer Ehrlichkeit." }
     ]
   },
   "final": {

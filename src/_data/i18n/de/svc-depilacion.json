@@ -82,7 +82,7 @@
     "h2": "Vier Schritte. Ohne Überraschungen, ohne Kleingedrucktes.",
     "p": "Von Ihrer ersten Nachricht bis zur ersten Sitzung vergehen weniger als zwei Wochen.",
     "steps": [
-      { "h3_html": "Sie buchen Ihre Beurteilung", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
+      { "h3_html": "Sie buchen Ihre Beratung", "p_html": "Anruf/WhatsApp für einen Termin. 30 Min. in der Klinik, kostenfrei, unverbindlich." },
       { "h3_html": "Diagnose von Hauttyp + Haartyp", "p_html": "Wir beurteilen Hautfarbe, Farbe und Stärke des Haars, Vorgeschichte und Zielzone. Wir sagen Ihnen ehrlich, ob IPL das Richtige für Sie ist — und wenn nicht, auch." },
       { "h3_html": "Sitzungsplan nach Zone und Zyklus", "p_html": "Wir planen eine realistische Zahl von Sitzungen und den Rhythmus im Respekt des Haarzyklus jeder Zone. Gesicht und Achseln: 4–6 Wochen. Beine und Körper: 6–8 Wochen." },
       { "h3_html": "Punktuelle Auffrischung nach Abschluss", "p_html": "Nach dem Anfangsplan genügt eine punktuelle Auffrischung pro Jahr. Ohne ewige Verpflichtungen." }
@@ -101,7 +101,7 @@
   },
   "final": {
     "eyebrow": "Unverbindlich",
-    "h2_html": "Buchen Sie Ihre Beurteilung. <em>Hauttyp-Diagnose und Plan nach Maß</em>.",
+    "h2_html": "Buchen Sie Ihre Beratung. <em>Hauttyp-Diagnose und Plan nach Maß</em>.",
     "p_html": "Dreißig Minuten, um Haut und Haar zu beurteilen, Ihnen zu sagen, ob IPL das Richtige für Ihren Fall ist (nicht immer), und einen realistischen Plan zu erstellen.",
     "cta": "Beratung buchen"
   }
