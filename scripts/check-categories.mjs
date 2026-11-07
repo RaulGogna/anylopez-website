@@ -315,8 +315,9 @@ async function comprobarCatalogoBloqueado(browser, base, { l, url }, id, hubsPro
   await cerrar(hub.page);
 }
 
-// El catálogo solo se pide cuando hace falta: con un hash que no es una tarjeta no sale la petición, con el de una
-// tarjeta se abre el modal, y tras el clic el disparador queda aria-busy y con cursor de espera hasta que llega el JSON.
+// El catálogo solo se pide cuando hace falta: ni un hash ajeno ni el de una tarjeta enlazada (sin data-slug) lo piden, el de
+// una tarjeta con modal lo abre, y tras el clic el disparador queda aria-busy y con cursor de espera hasta que llega el JSON.
+// Un segundo clic durante la espera no duplica la apertura ni su evento.
 async function comprobarCargaDelCatalogo(browser, base, { url }, id) {
   const abrir = async (ruta, antes) => {
     const page = await nuevaPagina(browser, MOVIL);
@@ -331,7 +332,16 @@ async function comprobarCargaDelCatalogo(browser, base, { url }, id) {
   const sinHash = await abrir(url);
   const ancla = await sinHash.page.evaluate(() => document.querySelector("[id]:not(.trat-card)")?.id);
   const slug = await sinHash.page.locator(".trat-card[data-slug]").first().getAttribute("id");
+  const tarjetaEnlazada = sinHash.page.locator(".trat-card-link").first();
+  const enlazada = (await tarjetaEnlazada.count()) ? await tarjetaEnlazada.getAttribute("id") : null;
   await cerrar(sinHash.page);
+
+  if (enlazada) {
+    const conEnlace = await abrir(`${url}#${enlazada}`);
+    const modalAbierto = await conEnlace.page.evaluate(() => document.getElementById("trat-modal").open);
+    if (conEnlace.peticiones.length || modalAbierto) fallar(id, `el hash #${enlazada}, de una tarjeta enlazada sin modal, pidió el catálogo o abrió el modal`);
+    await cerrar(conEnlace.page);
+  }
 
   const otroHash = await abrir(`${url}#${ancla}`);
   if (otroHash.peticiones.length) fallar(id, `el hash #${ancla}, que no es una tarjeta, pidió el catálogo`);
@@ -346,11 +356,14 @@ async function comprobarCargaDelCatalogo(browser, base, { url }, id) {
   const boton = lento.page.locator(".trat-cta[data-slug]").first();
   await boton.evaluate((el) => el.scrollIntoView({ block: "center" }));
   await boton.click();
-  const durante = await boton.evaluate((el) => [el.getAttribute("aria-busy"), el.style.cursor]);
+  await boton.click();
+  const durante = await boton.evaluate((el) => [el.getAttribute("aria-busy"), getComputedStyle(el).cursor]);
   if (durante[0] !== "true" || durante[1] !== "wait") fallar(id, `mientras llega el JSON el disparador tiene aria-busy=${durante[0]} y cursor=${durante[1]}`);
   await lento.page.waitForFunction(() => document.getElementById("trat-modal").open, null, { timeout: 8000 }).catch(() => fallar(id, "con el JSON lento el modal no se abrió"));
-  const despues = await boton.evaluate((el) => [el.getAttribute("aria-busy"), el.style.cursor]);
-  if (despues[0] !== null || despues[1] !== "") fallar(id, "el disparador sigue aria-busy o con cursor de espera tras abrirse el modal");
+  const despues = await boton.evaluate((el) => [el.getAttribute("aria-busy"), getComputedStyle(el).cursor]);
+  if (despues[0] !== null || despues[1] === "wait") fallar(id, "el disparador sigue aria-busy o con cursor de espera tras abrirse el modal");
+  const aperturas = await lento.page.evaluate(() => window.__eventos.filter((e) => e.nombre === "treatment_modal_opened").length);
+  if (aperturas !== 1) fallar(id, `dos clics durante la espera emitieron ${aperturas} treatment_modal_opened, se esperaba 1`);
   await cerrar(lento.page);
 }
 

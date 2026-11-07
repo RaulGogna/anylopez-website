@@ -195,6 +195,31 @@ async function comprobarModal(page, lang) {
   if ((await page.evaluate(() => document.activeElement.dataset.goal)) !== "") fallar(code, "Tab no pasa de los chips de categoría al filtro «Todos»");
 }
 
+// Recargar o compartir /services/#<slug> abre el modal de ese tratamiento; un hash que no es de una fila no pide el catálogo.
+async function comprobarHash(browser, lang, base) {
+  const code = lang.code;
+  const cat = catalogo(code);
+  const ruta = urlDe(lang, "/services/");
+  const abrir = async (hash) => {
+    const page = await nuevaPagina(browser, { width: 390, height: 844 });
+    const peticiones = [];
+    page.on("request", (r) => r.url().includes("/assets/catalogo/") && peticiones.push(r.url()));
+    await page.goto(`${base}${ruta}${hash}`, { waitUntil: "load" });
+    await page.waitForTimeout(500);
+    return { page, peticiones };
+  };
+
+  const t = cat.tratamientos.at(-1);
+  const conSlug = await abrir(`#${t.slug}`);
+  const nombre = await conSlug.page.evaluate(() => (document.getElementById("trat-modal").open ? document.querySelector('#trat-modal [data-field="nombre"]').textContent : null));
+  if (nombre !== t.nombre) fallar(code, `${ruta}#${t.slug} abrió «${nombre}», se esperaba «${t.nombre}»`);
+  await cerrar(conSlug.page);
+
+  const sinFila = await abrir("#flag-clip");
+  if (sinFila.peticiones.length) fallar(code, `${ruta}#flag-clip, que no es de una fila, pidió el catálogo`);
+  await cerrar(sinFila.page);
+}
+
 // Ctrl, Shift y botón central abren otra pestaña o ventana y deben dejar el hub sin modal.
 async function comprobarClicsNativos(page, lang) {
   const code = lang.code;
@@ -328,6 +353,7 @@ try {
     await comprobarEventosDelModal(page, lang);
     await comprobarClicsNativos(page, lang);
     await cerrar(page);
+    await comprobarHash(browser, lang, base);
     await comprobarTracking(browser, lang, base);
     for (const ancho of [390, 1440]) await comprobarFocoVisible(browser, lang, base, ancho);
     const pantallas = await comprobarMedidas(browser, lang, base);

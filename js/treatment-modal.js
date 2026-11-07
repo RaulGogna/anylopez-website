@@ -131,8 +131,12 @@
     })[c]);
   }
 
+  // Cada apertura anula la anterior que siga esperando el catálogo: un solo modal y un solo evento por apertura.
+  let apertura = 0;
   async function open(slug) {
+    const mia = ++apertura;
     const datos = await cargarCatalogo();
+    if (mia !== apertura) return;
     const trat = datos.tratBySlug[slug];
     if (!trat) return;
     hydrate(trat, datos);
@@ -160,15 +164,12 @@
     if (dialog.contains(trigger)) return;
     if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
+    if (trigger.getAttribute('aria-busy') === 'true') return;
     const slug = trigger.dataset.slug;
     trigger.setAttribute('aria-busy', 'true');
-    trigger.style.cursor = 'wait';
     open(slug)
       .catch(() => location.assign(trigger.href || '#' + slug))
-      .finally(() => {
-        trigger.removeAttribute('aria-busy');
-        trigger.style.cursor = '';
-      });
+      .finally(() => trigger.removeAttribute('aria-busy'));
   });
 
   dialog.addEventListener('click', (e) => {
@@ -181,11 +182,11 @@
     }
   });
 
-  // Solo se pide el catálogo si el hash apunta a una tarjeta de tratamiento de la página.
+  // Solo se pide el catálogo si el hash es el data-slug de un disparador de la página (fila del hub o tarjeta con modal).
   function openFromHash() {
     const slug = (location.hash || '').replace(/^#/, '');
-    const card = slug && document.getElementById(slug);
-    if (card && card.matches('.trat-card')) open(slug).catch(() => {});
+    const hayDisparador = [...document.querySelectorAll('[data-slug]')].some((el) => el.dataset.slug === slug);
+    if (slug && hayDisparador) open(slug).catch(() => {});
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', openFromHash);

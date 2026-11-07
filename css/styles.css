@@ -798,6 +798,9 @@ html { scroll-padding-bottom: 16px; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
 
+/* Disparador del modal de tratamiento mientras llega el catálogo */
+[data-slug][aria-busy="true"] { cursor: wait; }
+
 /* Contact page */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
 .contact-info-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px; }
