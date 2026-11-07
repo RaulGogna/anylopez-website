@@ -51,8 +51,7 @@
     "eyebrow": "Не знаєте, з чого почати?",
     "h2_html": "Забронюйте безкоштовну діагностику, і ми скажемо, що вам потрібно — а що ні.",
     "p_html": "Тридцять хвилин без зобов'язань. Якщо це не для вас, ми скажемо прямо і порадимо, куди звернутися. Чесність важливіша за продаж.",
-    "btn": "Забронювати консультацію",
-    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
+    "btn": "Забронювати консультацію"
   },
   "jsonld": {
     "name": "Напрямки AnyLopez Естетична клініка"

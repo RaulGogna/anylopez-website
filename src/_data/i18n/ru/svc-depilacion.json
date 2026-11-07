@@ -19,7 +19,7 @@
     ]
   },
   "breadcrumb": { "services": "Услуги", "current": "Депиляция IPL" },
-  "callCta": "Позвонить 656 306 167",
+  "callCta": "Позвонить {phoneNational}",
   "hero": {
     "imgAlt": "Депиляция IPL в AnyLopez Clínica Estética, Бенидорм",
     "eyebrow": "Депиляция IPL · интенсивный импульсный свет",

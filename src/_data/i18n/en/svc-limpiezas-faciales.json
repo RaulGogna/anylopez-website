@@ -21,7 +21,7 @@
     ]
   },
   "breadcrumb": { "services": "Services", "current_html": "Facials & Deep Cleanse" },
-  "callCta": "Call 656 306 167",
+  "callCta": "Call {phoneNational}",
   "hero": {
     "imgAlt": "Professional facials at AnyLopez Aesthetic Clinic Benidorm",
     "eyebrow_html": "Facials & Deep Cleanse · 5 tiered levels",

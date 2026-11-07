@@ -20,7 +20,7 @@
     "eyebrow": "Benidorm · Clínica estética desde 2018",
     "h1_html": "Piel más firme.<br>Más luminosa.<br><em>En pocas sesiones.</em>",
     "desc": "Radiofrecuencia INDIBA con protocolo personalizado. Heredamos 35 años de oficio en el cuidado de la piel y los aplicamos a cada sesión.",
-    "waHref": "https://wa.me/34656306167?text=Hola%2C%20quiero%20pedir%20mi%20valoraci%C3%B3n%20gratuita%20por%20Radiofrecuencia%20INDIBA.",
+    "waText": "Hola%2C%20quiero%20pedir%20mi%20valoraci%C3%B3n%20gratuita%20por%20Radiofrecuencia%20INDIBA.",
     "waCta": "Pídenos tu valoración por WhatsApp",
     "packCta": "Ver pack Radiofrecuencia INDIBA",
     "aria1_html": "Ver las ",
@@ -82,7 +82,7 @@
     ],
     "note": "Las sesiones del pack de 650 € duran 45 minutos: mejor precio por volumen.",
     "reason_html": "<strong>¿Por qué 10 sesiones a 650 €?</strong> Porque es el protocolo completo. Por debajo de 10, Radiofrecuencia INDIBA no consolida resultado. Lo que cobramos es lo que tu piel necesita — ni una sesión más, ni una menos.",
-    "waHref": "https://wa.me/34656306167?text=Hola%2C%20quiero%20reservar%20mi%20Pack%20Radiofrecuencia%20INDIBA%20Anti-Edad%20de%2010%20sesiones.",
+    "waText": "Hola%2C%20quiero%20reservar%20mi%20Pack%20Radiofrecuencia%20INDIBA%20Anti-Edad%20de%2010%20sesiones.",
     "waCta": "Reservar mi Pack Radiofrecuencia INDIBA por WhatsApp"
   },
   "otros": {
@@ -129,7 +129,7 @@
     "rol": "Director de la clínica",
     "bio1": "Asumí la dirección de AnyLopez para que el cuidado que define a esta clínica siga aquí, en Benidorm, con las mismas manos expertas y la misma tecnología.",
     "bio2_html": "No vendo paquetes más largos de lo que tu piel necesita. No empiezo un tratamiento sin valoración. Si tienes dudas antes de empezar, escríbeme tú directamente al WhatsApp de la clínica — prefiero perder una venta a que llegues sin todas tus preguntas resueltas.",
-    "waHref": "https://wa.me/34656306167?text=Hola%20Kumar%2C%20tengo%20unas%20dudas%20antes%20de%20empezar.",
+    "waText": "Hola%20Kumar%2C%20tengo%20unas%20dudas%20antes%20de%20empezar.",
     "waCta": "Escribir directamente a Kumar"
   },
   "proceso": {
@@ -299,11 +299,11 @@
   "cta": {
     "title_html": "¿Empezamos por<br><em>una valoración?</em>",
     "sub_html": "Cuéntanos qué te preocupa de tu piel. Te respondemos por WhatsApp en horario de clínica, sin compromiso y sin formularios largos.",
-    "waHref": "https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20gratuita.",
+    "waText": "Hola%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20gratuita.",
     "waCta": "Escríbenos por WhatsApp",
     "hours": "Lun–Vie 10:00–14:00 / 16:00–20:00",
     "phoneLabel": "Llámanos ahora",
-    "wa2Href": "https://wa.me/34656306167?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
+    "wa2Text": "Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n",
     "wa2Cta": "Escríbenos por WhatsApp"
   },
   "js": {

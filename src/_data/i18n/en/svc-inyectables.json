@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Services", "current_html": "Botox & Fillers" },
-  "callCta": "Call 656 306 167",
+  "callCta": "Call {phoneNational}",
   "hero": {
     "imgAlt_html": "Botox & Fillers at AnyLopez Aesthetic Clinic Benidorm",
     "eyebrow_html": "Botox & Fillers · 4 protocols",

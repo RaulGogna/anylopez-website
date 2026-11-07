@@ -22,7 +22,7 @@
     ]
   },
   "breadcrumb": { "services": "Послуги", "current": "Радіочастота INDIBA" },
-  "callCta": "Зателефонувати 656 306 167",
+  "callCta": "Зателефонувати {phoneNational}",
   "hero": {
     "imgAlt": "Сеанс радіочастоти INDIBA в AnyLopez Бенідорм",
     "eyebrow_html": "Флагманська процедура · Ліфтинг і антивіковий догляд",

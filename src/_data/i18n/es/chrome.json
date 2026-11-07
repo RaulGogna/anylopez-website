@@ -10,7 +10,7 @@
   },
   "header": {
     "bookCta": "Reservar cita",
-    "waHref": "https://wa.me/34656306167?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios.",
+    "waText": "Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios.",
     "menuToggle": "Abrir menú"
   },
   "breadcrumbHome": "Inicio",

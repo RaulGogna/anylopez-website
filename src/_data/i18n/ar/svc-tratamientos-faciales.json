@@ -14,7 +14,7 @@
     ]
   },
   "breadcrumb": { "services": "الخدمات", "current": "علاجات الوجه المتقدمة" },
-  "callCta": "اتصلي على 656 306 167",
+  "callCta": "اتصلي على {phoneNational}",
   "hero": {
     "imgAlt": "علاجات الوجه المتقدمة في AnyLopez بنيدورم",
     "eyebrow": "علاجات الوجه المتقدمة · 9 بروتوكولات",

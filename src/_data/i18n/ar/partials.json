@@ -15,7 +15,7 @@
     "guarantee": "دون التزام —",
     "waText": "%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85.",
     "waCta": "احجزي عبر WhatsApp",
-    "telCta": "اتصلي على 656 306 167"
+    "telCta": "اتصلي على {phoneNational}"
   },
   "booking": {
     "title": "احجزي استشارتك المجانية",
@@ -36,7 +36,6 @@
     "waNotes": " ملاحظات: {notes}.",
     "success": "لقد استلمنا حجزك. ستؤكد لك AnyLopez عبر WhatsApp في أقل من ساعتين، خلال ساعات عمل العيادة.",
     "error": "تعذّر تحميل المواعيد المتاحة. اتصلي بنا على +34 656 306 167 أو راسلينا عبر WhatsApp.",
-    "fallbackHref": "https://wa.me/34656306167",
     "fallbackText": "راسلينا عبر WhatsApp",
     "consultation": "استشارة مجانية مخصصة",
     "starLabel": "العلاج الأبرز",

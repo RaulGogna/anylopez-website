@@ -19,7 +19,7 @@
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current": "IPL-Haarentfernung" },
-  "callCta": "Anrufen: 656 306 167",
+  "callCta": "Anrufen: {phoneNational}",
   "hero": {
     "imgAlt": "IPL-Haarentfernung in der AnyLopez Ästhetikklinik Benidorm",
     "eyebrow": "IPL-Haarentfernung · Intenspulslicht",

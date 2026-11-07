@@ -15,7 +15,7 @@
     "guarantee": "Sans engagement —",
     "waText": "Bonjour%2C%20je%20souhaiterais%20des%20informations%20sur%20vos%20soins.",
     "waCta": "Réserver sur WhatsApp",
-    "telCta": "Appeler le 656 306 167"
+    "telCta": "Appeler le {phoneNational}"
   },
   "booking": {
     "title": "Réservez votre consultation gratuite",
@@ -36,7 +36,6 @@
     "waNotes": " Remarques : {notes}.",
     "success": "Nous avons bien reçu votre réservation. AnyLopez vous confirme par WhatsApp en moins de 2 h (horaires de la clinique).",
     "error": "Impossible de charger les disponibilités. Appelez-nous au +34 656 306 167 ou écrivez-nous sur WhatsApp.",
-    "fallbackHref": "https://wa.me/34656306167",
     "fallbackText": "Écrivez-nous sur WhatsApp",
     "consultation": "Consultation gratuite personnalisée",
     "starLabel": "Soin phare",

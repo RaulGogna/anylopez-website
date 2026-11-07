@@ -14,7 +14,7 @@
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current": "Erweiterte Gesichtsbehandlungen" },
-  "callCta": "Anrufen: 656 306 167",
+  "callCta": "Anrufen: {phoneNational}",
   "hero": {
     "imgAlt": "Erweiterte Gesichtsbehandlungen bei AnyLopez Benidorm",
     "eyebrow": "Erweiterte Gesichtsbehandlungen · 9 Protokolle",

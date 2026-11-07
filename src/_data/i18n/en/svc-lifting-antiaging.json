@@ -18,7 +18,7 @@
     ]
   },
   "breadcrumb": { "services": "Services", "current_html": "Lifting & Anti-Ageing" },
-  "callCta": "Call 656 306 167",
+  "callCta": "Call {phoneNational}",
   "hero": {
     "imgAlt": "Non-surgical lifting and anti-ageing at AnyLopez Aesthetic Clinic Benidorm",
     "eyebrow_html": "Lifting & Anti-Ageing · 2 complementary technologies",

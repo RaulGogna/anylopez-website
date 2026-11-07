@@ -53,8 +53,8 @@ eleventyComputed:
             <div class="contact-icon">📞</div>
             <div>
               <h4>{{ tx.info.telefonos }}</h4>
-              <a href="tel:+34656306167" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"656306167"}'>656 306 167</a>
-              <a href="tel:+34865710769" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"865710769"}'>865 710 769</a>
+              <a href="tel:{{ site.phoneE164 | phoneIntl }}" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"{{ site.phoneE164 | phoneDigits }}"}'>{{ site.phoneE164 | phoneNational }}</a>
+              <a href="tel:{{ site.phone2E164 | phoneIntl }}" style="display:block; color:var(--secondary);" data-event="phone_clicked" data-event-props='{"location":"contact-page","number":"{{ site.phone2E164 | phoneDigits }}"}'>{{ site.phone2E164 | phoneNational }}</a>
             </div>
           </div>
 
@@ -169,7 +169,7 @@ eleventyComputed:
       <span class="section-label" style="color:var(--accent)">{{ tx.ctaBottom.label }}</span>
       <h2 class="section-title" style="color:#fff; margin-bottom:16px;">{{ tx.ctaBottom.h2 }}</h2>
       <p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">{{ tx.ctaBottom.p }}</p>
-      {{ tx.ctaBottom.btn_html | safe }}
+      {{ tx.ctaBottom.btn_html | withPhone(site.phoneE164) | safe }}
     </div>
   </section>
 

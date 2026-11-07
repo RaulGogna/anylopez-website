@@ -66,7 +66,7 @@
     "label": "Book on WhatsApp",
     "h2": "Or book directly on WhatsApp",
     "p": "Prefer to speak with us directly? Send us a message on WhatsApp during our opening hours.",
-    "btn_html": "<a href=\"https://wa.me/34656306167?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment.\" class=\"btn btn-accent\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Book an appointment on WhatsApp (opens in new tab)\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"contact-page-bottom\"}'>Book on WhatsApp</a>"
+    "btn_html": "<a href=\"https://wa.me/{phoneE164}?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment.\" class=\"btn btn-accent\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Book an appointment on WhatsApp (opens in new tab)\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"contact-page-bottom\"}'>Book on WhatsApp</a>"
   },
   "js": {
     "required": "Please fill in the required fields (first name, last name, phone and email).",

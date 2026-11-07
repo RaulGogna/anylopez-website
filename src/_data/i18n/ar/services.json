@@ -51,8 +51,7 @@
     "eyebrow": "لا تعرفين من أين تبدئين؟",
     "h2_html": "احجزي تشخيصاً مجانياً وسنخبرك بما تحتاجينه — وما لا تحتاجينه.",
     "p_html": "ثلاثون دقيقة دون أي التزام. وإن لم يكن العلاج مناسباً لك، نقولها لك بصراحة ونوجهك. الصدق قبل البيع.",
-    "btn": "احجزي جلسة التقييم",
-    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
+    "btn": "احجزي جلسة التقييم"
   },
   "jsonld": {
     "name": "تخصصات عيادة AnyLopez للتجميل"

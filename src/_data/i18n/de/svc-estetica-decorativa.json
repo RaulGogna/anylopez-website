@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current_html": "Dekorative Ästhetik" },
-  "callCta": "Anrufen: 656 306 167",
+  "callCta": "Anrufen: {phoneNational}",
   "hero": {
     "imgAlt": "Dekorative Ästhetik: Wimpern und Micropigmentierung in der AnyLopez Ästhetikklinik Benidorm",
     "eyebrow_html": "Dekorative Ästhetik · Wimpern + Micropigmentierung",

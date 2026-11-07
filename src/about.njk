@@ -211,6 +211,6 @@ eleventyComputed:
       <h2 class="section-title" style="color:#fff; margin-bottom:16px;">{{ ta.cta.h2 }}</h2>
       <p style="color:rgba(255,255,255,0.8); margin-bottom:12px;">{{ ta.cta.p }}</p>
       <p style="color:rgba(255,255,255,0.55); font-size:14px; margin-bottom:32px;">{{ ta.cta.google_html | replace("{count}", reviews.count) | safe }}</p>
-      {{ ta.cta.btn_html | replace("{contactUrl}", (l.prefix + '/contact/') | url) | safe }}
+      {{ ta.cta.btn_html | replace("{contactUrl}", (l.prefix + '/contact/') | url) | withPhone(site.phoneE164) | safe }}
     </div>
   </section>

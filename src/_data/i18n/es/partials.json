@@ -15,7 +15,7 @@
     "guarantee": "Sin compromiso —",
     "waText": "Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20sobre%20vuestros%20servicios.",
     "waCta": "Reservar por WhatsApp",
-    "telCta": "Llamar 656 306 167"
+    "telCta": "Llamar {phoneNational}"
   },
   "booking": {
     "title": "Reserva tu consulta gratuita",
@@ -36,7 +36,6 @@
     "waNotes": " Notas: {notes}.",
     "success": "Hemos recibido tu reserva. AnyLopez te confirma por WhatsApp en menos de 2 h (horario de clínica).",
     "error": "No hemos podido cargar la disponibilidad. Llámanos al +34 656 306 167 o usa WhatsApp.",
-    "fallbackHref": "https://wa.me/34656306167",
     "fallbackText": "Escríbenos por WhatsApp",
     "consultation": "Consulta gratuita personalizada",
     "starLabel": "Tratamiento estrella",

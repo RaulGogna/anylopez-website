@@ -53,7 +53,7 @@
     "services": "الخدمات",
     "current": "الترددات الراديوية INDIBA"
   },
-  "callCta": "اتصال بـ 656 306 167",
+  "callCta": "اتصال بـ {phoneNational}",
   "hero": {
     "imgAlt": "جلسة الترددات الراديوية INDIBA في عيادة AnyLopez ببنيدورم",
     "eyebrow_html": "العلاج الرائد · الشد ومكافحة الشيخوخة",

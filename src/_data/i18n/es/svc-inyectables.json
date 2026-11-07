@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Servicios", "current_html": "Medicina Estética Inyectable" },
-  "callCta": "Llamar 656 306 167",
+  "callCta": "Llamar {phoneNational}",
   "hero": {
     "imgAlt_html": "Medicina estética inyectable en AnyLopez Clínica Estética Benidorm",
     "eyebrow_html": "Medicina estética inyectable · 4 protocolos",

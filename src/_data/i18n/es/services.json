@@ -51,8 +51,7 @@
     "eyebrow": "¿No sabes por dónde empezar?",
     "h2_html": "Reserva un diagnóstico gratuito y te decimos qué necesitas — y qué no.",
     "p_html": "Treinta minutos sin compromiso. Si no es para ti, te lo decimos de frente y te orientamos. Honestidad antes que carrito.",
-    "btn": "Reservar valoración",
-    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
+    "btn": "Reservar valoración"
   },
   "jsonld": {
     "name": "Especialidades de AnyLopez Clínica Estética"

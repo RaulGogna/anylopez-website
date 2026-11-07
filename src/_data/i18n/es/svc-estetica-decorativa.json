@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Servicios", "current_html": "Estética Decorativa" },
-  "callCta": "Llamar 656 306 167",
+  "callCta": "Llamar {phoneNational}",
   "hero": {
     "imgAlt": "Estética decorativa: pestañas y micropigmentación en AnyLopez Clínica Estética Benidorm",
     "eyebrow_html": "Estética decorativa · Pestañas + Micropigmentación",

@@ -21,7 +21,7 @@
       <h1>{{ tx.hero.h1_html | safe }}</h1>
       <div class="cat-page-hero-ctas">
         <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
-        <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
+        <a href="tel:{{ site.phoneE164 | phoneIntl }}" class="btn btn-outline-white">{{ tx.callCta | withPhone(site.phoneE164) }}</a>
       </div>
     </div>
   </div>

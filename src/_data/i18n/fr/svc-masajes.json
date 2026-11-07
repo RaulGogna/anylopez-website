@@ -24,7 +24,7 @@
     ]
   },
   "breadcrumb": { "services": "Soins", "current": "Massages" },
-  "callCta": "Appeler le 656 306 167",
+  "callCta": "Appeler le {phoneNational}",
   "hero": {
     "imgAlt": "Massages professionnels chez AnyLopez Clinique Esthétique Benidorm",
     "eyebrow": "Massages · 8 modalités spécialisées",

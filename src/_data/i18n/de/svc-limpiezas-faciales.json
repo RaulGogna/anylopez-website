@@ -21,7 +21,7 @@
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current_html": "Gesichtsreinigungen" },
-  "callCta": "Anrufen: 656 306 167",
+  "callCta": "Anrufen: {phoneNational}",
   "hero": {
     "imgAlt": "Professionelle Gesichtsreinigungen in der AnyLopez Ästhetikklinik Benidorm",
     "eyebrow_html": "Gesichtsreinigungen · 5 Stufen",

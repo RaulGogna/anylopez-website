@@ -527,7 +527,7 @@ eleventyComputed:
         <p class="lead">{{ tx.hero.lead }}</p>
         <div class="indiba-hero-ctas">
           <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
-          <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
+          <a href="tel:{{ site.phoneE164 | phoneIntl }}" class="btn btn-outline-white">{{ tx.callCta | withPhone(site.phoneE164) }}</a>
         </div>
         <div class="indiba-hero-meta">
           <span class="stars">★★★★★</span>
@@ -658,7 +658,7 @@ eleventyComputed:
       <div class="indiba-stack-savings">{{ tx.pack.savings }}</div>
       <div class="indiba-pack-cta">
         <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.hero.ctaPrimary }}</a>
-        <a href="https://wa.me/34656306167?text={{ tx.pack.waText_html | safe }}" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://wa.me/{{ site.phoneE164 }}?text={{ tx.pack.waText_html | safe }}" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </div>
     <div class="indiba-pack-card" style="margin-top: 2rem;">
@@ -743,7 +743,7 @@ eleventyComputed:
     <p>{{ tx.final.p }}</p>
     <div class="indiba-final-row">
       <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.final.cta }}</a>
-      <a href="tel:+34656306167" class="btn btn-outline-white">{{ tx.callCta }}</a>
+      <a href="tel:{{ site.phoneE164 | phoneIntl }}" class="btn btn-outline-white">{{ tx.callCta | withPhone(site.phoneE164) }}</a>
     </div>
   </div>
 </section>

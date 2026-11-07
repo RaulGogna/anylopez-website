@@ -152,7 +152,7 @@ eleventyComputed:
     <p>{{ tx.finalCta.p_html | safe }}</p>
     <div class="svc-final-cta-row">
       <a href="{{ (l.prefix + '/contact/') | url }}" class="btn btn-accent">{{ tx.finalCta.btn }}</a>
-      {{ tx.finalCta.wa_html | safe }}
+      <a href="https://wa.me/{{ site.phoneE164 }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer" data-event="whatsapp_clicked" data-event-props='{"location":"services-page"}'>WhatsApp {{ site.phoneE164 | phoneNational }}</a>
     </div>
   </div>
 </section>

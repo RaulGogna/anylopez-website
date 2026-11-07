@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Soins", "current_html": "Esthétique Décorative" },
-  "callCta": "Appeler le 656 306 167",
+  "callCta": "Appeler le {phoneNational}",
   "hero": {
     "imgAlt": "Esthétique décorative : cils et micropigmentation chez AnyLopez Clinique Esthétique Benidorm",
     "eyebrow_html": "Esthétique décorative · Cils + Micropigmentation",

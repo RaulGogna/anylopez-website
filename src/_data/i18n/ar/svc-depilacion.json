@@ -19,7 +19,7 @@
     ]
   },
   "breadcrumb": { "services": "الخدمات", "current": "إزالة الشعر IPL" },
-  "callCta": "اتصلي على 656 306 167",
+  "callCta": "اتصلي على {phoneNational}",
   "hero": {
     "imgAlt": "إزالة الشعر بتقنية IPL في عيادة AnyLopez للتجميل ببنيدورم",
     "eyebrow": "إزالة الشعر IPL · ضوء نبضي مكثف",

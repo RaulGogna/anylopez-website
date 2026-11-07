@@ -1,8 +1,7 @@
 {# Treatment modal partial — include in any category page that needs the JS-driven detail modal.
    Uses `lang` from page context (es | en) to localise headings and CTAs. #}
 {%- set tp = i18n[lang or 'es'].partials %}
-{%- set phoneNational = site.phoneE164 | replace(r/^34/, "") %}
-<dialog id="trat-modal" class="trat-modal" aria-labelledby="trat-modal-title" data-phone="{{ phoneNational }}" data-wa-number="{{ site.phoneE164 }}">
+<dialog id="trat-modal" class="trat-modal" aria-labelledby="trat-modal-title" data-phone="{{ site.phoneE164 | phoneDigits }}" data-wa-number="{{ site.phoneE164 }}">
   <form method="dialog" class="trat-modal-close-form">
     <button type="submit" class="trat-modal-close" aria-label="{{ tp.modal.close }}">&times;</button>
   </form>
@@ -55,8 +54,8 @@
       <a class="btn btn-accent trat-modal-cta-wa" href="https://wa.me/{{ site.phoneE164 }}?text={{ tp.modal.waText }}" data-field="cta-wa" data-event="whatsapp_clicked" target="_blank" rel="noopener noreferrer">
         {{ tp.modal.waCta }}
       </a>
-      <a class="btn btn-outline trat-modal-cta-tel" href="tel:+{{ site.phoneE164 }}" data-event="phone_clicked">
-        {{ tp.modal.telCta }}
+      <a class="btn btn-outline trat-modal-cta-tel" href="tel:{{ site.phoneE164 | phoneIntl }}" data-event="phone_clicked">
+        {{ tp.modal.telCta | withPhone(site.phoneE164) }}
       </a>
     </footer>
   </article>

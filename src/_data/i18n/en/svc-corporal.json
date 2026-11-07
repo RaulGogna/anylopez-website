@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Services", "current": "Body Treatments" },
-  "callCta": "Call 656 306 167",
+  "callCta": "Call {phoneNational}",
   "hero": {
     "imgAlt": "Body treatments at AnyLopez Aesthetic Clinic Benidorm",
     "eyebrow": "Body treatments · 4 protocols",

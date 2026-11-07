@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "الخدمات", "current_html": "الطب التجميلي بالحقن" },
-  "callCta": "اتصلي على 656 306 167",
+  "callCta": "اتصلي على {phoneNational}",
   "hero": {
     "imgAlt_html": "الطب التجميلي بالحقن في عيادة AnyLopez للتجميل ببنيدورم",
     "eyebrow_html": "الطب التجميلي بالحقن · 4 بروتوكولات",

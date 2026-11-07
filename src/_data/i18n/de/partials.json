@@ -15,7 +15,7 @@
     "guarantee": "Unverbindlich —",
     "waText": "Hallo%2C%20ich%20h%C3%A4tte%20gern%20Informationen%20zu%20Ihren%20Behandlungen.",
     "waCta": "Per WhatsApp buchen",
-    "telCta": "Anrufen: 656 306 167"
+    "telCta": "Anrufen: {phoneNational}"
   },
   "booking": {
     "title": "Buchen Sie Ihre kostenlose Beratung",
@@ -36,7 +36,6 @@
     "waNotes": " Anmerkungen: {notes}.",
     "success": "Wir haben Ihre Buchung erhalten. AnyLopez bestätigt per WhatsApp in weniger als 2 Std. (während der Öffnungszeiten).",
     "error": "Die Verfügbarkeit konnte nicht geladen werden. Rufen Sie uns an unter +34 656 306 167 oder nutzen Sie WhatsApp.",
-    "fallbackHref": "https://wa.me/34656306167",
     "fallbackText": "Schreiben Sie uns per WhatsApp",
     "consultation": "Kostenlose persönliche Beratung",
     "starLabel": "Star-Behandlung",

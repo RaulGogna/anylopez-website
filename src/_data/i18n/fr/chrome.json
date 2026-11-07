@@ -10,7 +10,7 @@
   },
   "header": {
     "bookCta": "Prendre rendez-vous",
-    "waHref": "https://wa.me/34656306167?text=Bonjour%2C%20je%20souhaiterais%20des%20informations%20sur%20vos%20soins.",
+    "waText": "Bonjour%2C%20je%20souhaiterais%20des%20informations%20sur%20vos%20soins.",
     "menuToggle": "Ouvrir le menu"
   },
   "breadcrumbHome": "Accueil",

@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Soins", "current": "Soins du Corps" },
-  "callCta": "Appeler le 656 306 167",
+  "callCta": "Appeler le {phoneNational}",
   "hero": {
     "imgAlt": "Soins du corps chez AnyLopez Clinique Esthétique Benidorm",
     "eyebrow": "Soins du corps · 4 protocoles",

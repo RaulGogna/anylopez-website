@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Services", "current_html": "Lash Extensions & Semi-Permanent Make-up" },
-  "callCta": "Call 656 306 167",
+  "callCta": "Call {phoneNational}",
   "hero": {
     "imgAlt": "Lash extensions and semi-permanent make-up at AnyLopez Aesthetic Clinic Benidorm",
     "eyebrow_html": "Lash extensions & semi-permanent make-up · Lashes + Micropigmentation",

@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Услуги", "current": "Процедуры для тела" },
-  "callCta": "Позвонить 656 306 167",
+  "callCta": "Позвонить {phoneNational}",
   "hero": {
     "imgAlt": "Процедуры для тела в AnyLopez Clínica Estética, Бенидорм",
     "eyebrow": "Процедуры для тела · 4 протокола",

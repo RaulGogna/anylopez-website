@@ -19,7 +19,7 @@
     ]
   },
   "breadcrumb": { "services": "Services", "current": "IPL Hair Removal" },
-  "callCta": "Call +34 656 306 167",
+  "callCta": "Call {phoneIntlSpaced}",
   "hero": {
     "imgAlt": "IPL hair removal at AnyLopez Aesthetic Clinic Benidorm",
     "eyebrow": "IPL Hair Removal · Intense Pulsed Light",

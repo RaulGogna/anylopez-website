@@ -39,7 +39,7 @@
     "services": "الخدمات",
     "current_html": "تنظيف البشرة"
   },
-  "callCta": "اتصلي على 656 306 167",
+  "callCta": "اتصلي على {phoneNational}",
   "hero": {
     "imgAlt": "تنظيف البشرة الاحترافي في عيادة AnyLopez للتجميل في بنيدورم",
     "eyebrow_html": "تنظيف البشرة · 5 مستويات متدرجة",

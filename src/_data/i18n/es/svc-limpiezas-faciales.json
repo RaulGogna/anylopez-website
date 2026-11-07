@@ -21,7 +21,7 @@
     ]
   },
   "breadcrumb": { "services": "Servicios", "current_html": "Limpiezas Faciales" },
-  "callCta": "Llamar 656 306 167",
+  "callCta": "Llamar {phoneNational}",
   "hero": {
     "imgAlt": "Limpiezas faciales profesionales en AnyLopez Clínica Estética Benidorm",
     "eyebrow_html": "Limpiezas faciales · 5 niveles escalonados",

@@ -15,7 +15,7 @@
     "guarantee": "No commitment —",
     "waText": "Hello%2C%20I%20would%20like%20to%20book%20a%20free%20consultation.",
     "waCta": "Book via WhatsApp",
-    "telCta": "Call 656 306 167"
+    "telCta": "Call {phoneNational}"
   },
   "booking": {
     "title": "Book your free consultation",
@@ -44,7 +44,6 @@
     "waNotes": " Notes: {notes}.",
     "success": "We've received your booking. AnyLopez will confirm via WhatsApp within 2 h (clinic hours).",
     "error": "We couldn't load availability. Call us at +34 656 306 167 or use WhatsApp.",
-    "fallbackHref": "https://wa.me/34656306167",
     "fallbackText": "Message us on WhatsApp",
     "consultation": "Free personalised consultation",
     "starLabel": "Featured treatment",

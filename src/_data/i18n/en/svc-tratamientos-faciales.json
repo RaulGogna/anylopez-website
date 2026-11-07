@@ -14,7 +14,7 @@
     ]
   },
   "breadcrumb": { "services": "Services", "current": "Advanced Facials" },
-  "callCta": "Call +34 656 306 167",
+  "callCta": "Call {phoneIntlSpaced}",
   "hero": {
     "imgAlt": "Advanced facials at AnyLopez Benidorm",
     "eyebrow": "Advanced facials · 9 protocols",

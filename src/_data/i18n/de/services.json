@@ -51,8 +51,7 @@
     "eyebrow": "Sie wissen nicht, wo Sie anfangen sollen?",
     "h2_html": "Buchen Sie eine kostenlose Diagnose — wir sagen Ihnen, was Sie brauchen und was nicht.",
     "p_html": "Dreißig Minuten, unverbindlich. Wenn es nichts für Sie ist, sagen wir es Ihnen offen und beraten Sie weiter. Ehrlichkeit vor Umsatz.",
-    "btn": "Beratung buchen",
-    "wa_html": "<a href=\"https://wa.me/34656306167\" class=\"btn btn-outline\" target=\"_blank\" rel=\"noopener noreferrer\" data-event=\"whatsapp_clicked\" data-event-props='{\"location\":\"services-page\"}'>WhatsApp 656 306 167</a>"
+    "btn": "Beratung buchen"
   },
   "jsonld": {
     "name": "Spezialgebiete der AnyLopez Ästhetikklinik"

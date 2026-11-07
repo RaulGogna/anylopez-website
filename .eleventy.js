@@ -43,6 +43,17 @@ function bustAsset(publicUrl) {
 // Pega la flecha final a la palabra anterior para que un botón no la deje sola en otra línea.
 const glueArrow = (text) => text.replace(/\s+([→←])\s*$/, "\u00a0$1");
 
+// Fuente unica: site.json guarda el E.164 sin "+"; todo formato visible se deriva de aqui.
+const nationalParts = (e164) => /^(\d{2})(\d{3})(\d{3})(\d{3})$/.exec(e164).slice(1);
+
+const PHONE_FORMATS = {
+  phoneE164: (e164) => e164,
+  phoneIntl: (e164) => `+${e164}`,
+  phoneDigits: (e164) => nationalParts(e164).slice(1).join(""),
+  phoneNational: (e164) => nationalParts(e164).slice(1).join(" "),
+  phoneIntlSpaced: (e164) => `+${nationalParts(e164).join(" ")}`,
+};
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("images");
@@ -72,6 +83,11 @@ module.exports = function (eleventyConfig) {
   );
 
   eleventyConfig.addFilter("bust", bustAsset);
+
+  for (const [name, format] of Object.entries(PHONE_FORMATS)) eleventyConfig.addFilter(name, format);
+  eleventyConfig.addFilter("withPhone", (str, e164) =>
+    str.replace(/\{(phone\w+)\}/g, (match, name) => PHONE_FORMATS[name]?.(e164) ?? match)
+  );
 
   return {
     pathPrefix: process.env.PATH_PREFIX || "/",

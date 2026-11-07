@@ -24,7 +24,7 @@
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current": "Massagen" },
-  "callCta": "Anrufen: 656 306 167",
+  "callCta": "Anrufen: {phoneNational}",
   "hero": {
     "imgAlt": "Professionelle Massagen in der AnyLopez Ästhetikklinik Benidorm",
     "eyebrow": "Massagen · 8 spezialisierte Varianten",

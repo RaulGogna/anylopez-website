@@ -20,6 +20,7 @@ import { TACTIL, controlesPequenos, controlesPequenosDeLaCabecera, primeraPantal
 const require = createRequire(import.meta.url);
 const LANGS = require("../src/_data/langs.json");
 const OBJETIVOS = require("../src/_data/catalogo/objetivos.json");
+const TELEFONO = require("../src/_data/site.json").phoneE164.replace(/^34/, "");
 const catalogo = (code) => require(`../src/_data/catalogo/${code}.json`);
 const textos = (code, nombre = "services") => require(`../src/_data/i18n/${code}/${nombre}.json`);
 
@@ -245,7 +246,7 @@ async function comprobarEventosDelModal(page, lang) {
   await page.evaluate(() => { window.__eventos = []; });
   await page.click(".trat-modal-cta-tel").catch(() => {});
   const tel = await emitidos("phone_clicked");
-  if (tel.length !== 1 || tel[0].props?.treatment_slug !== slug || tel[0].props?.number !== "656306167")
+  if (tel.length !== 1 || tel[0].props?.treatment_slug !== slug || tel[0].props?.number !== TELEFONO)
     fallar(code, `el CTA de teléfono emitió ${JSON.stringify(tel)}`);
   await page.keyboard.press("Escape");
 }

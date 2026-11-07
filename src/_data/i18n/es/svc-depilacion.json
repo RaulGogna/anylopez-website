@@ -19,7 +19,7 @@
     ]
   },
   "breadcrumb": { "services": "Servicios", "current": "Depilación IPL" },
-  "callCta": "Llamar 656 306 167",
+  "callCta": "Llamar {phoneNational}",
   "hero": {
     "imgAlt": "Depilación IPL en AnyLopez Clínica Estética Benidorm",
     "eyebrow": "Depilación IPL · Pulsada intensa",

@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Услуги", "current_html": "Декоративная эстетика" },
-  "callCta": "Позвонить 656 306 167",
+  "callCta": "Позвонить {phoneNational}",
   "hero": {
     "imgAlt": "Декоративная эстетика: ресницы и микропигментация в AnyLopez Clínica Estética, Бенидорм",
     "eyebrow_html": "Декоративная эстетика · ресницы + микропигментация",

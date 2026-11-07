@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Servicios", "current": "Tratamientos Corporales" },
-  "callCta": "Llamar 656 306 167",
+  "callCta": "Llamar {phoneNational}",
   "hero": {
     "imgAlt": "Tratamientos corporales en AnyLopez Clínica Estética Benidorm",
     "eyebrow": "Tratamientos corporales · 4 protocolos",

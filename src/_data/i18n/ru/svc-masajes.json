@@ -24,7 +24,7 @@
     ]
   },
   "breadcrumb": { "services": "Услуги", "current": "Массаж" },
-  "callCta": "Позвонить 656 306 167",
+  "callCta": "Позвонить {phoneNational}",
   "hero": {
     "imgAlt": "Профессиональный массаж в AnyLopez Clínica Estética, Бенидорм",
     "eyebrow": "Массаж · 8 специализированных видов",

@@ -14,7 +14,7 @@
     ]
   },
   "breadcrumb": { "services": "Soins", "current": "Soins du Visage Avancés" },
-  "callCta": "Appeler le 656 306 167",
+  "callCta": "Appeler le {phoneNational}",
   "hero": {
     "imgAlt": "Soins du visage avancés chez AnyLopez Benidorm",
     "eyebrow": "Soins du visage avancés · 9 protocoles",

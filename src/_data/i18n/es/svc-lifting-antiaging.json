@@ -18,7 +18,7 @@
     ]
   },
   "breadcrumb": { "services": "Servicios", "current_html": "Lifting y Antiaging" },
-  "callCta": "Llamar 656 306 167",
+  "callCta": "Llamar {phoneNational}",
   "hero": {
     "imgAlt": "Lifting y antiaging sin cirugía en AnyLopez Clínica Estética Benidorm",
     "eyebrow_html": "Lifting y Antiaging · 2 tecnologías complementarias",

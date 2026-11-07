@@ -22,7 +22,7 @@
     ]
   },
   "breadcrumb": { "services": "Servicios", "current": "Radiofrecuencia INDIBA" },
-  "callCta": "Llamar 656 306 167",
+  "callCta": "Llamar {phoneNational}",
   "hero": {
     "imgAlt": "Sesión de radiofrecuencia INDIBA en AnyLopez Benidorm",
     "eyebrow_html": "Tratamiento bandera · Lifting y Antiaging",

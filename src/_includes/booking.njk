@@ -6,7 +6,7 @@
 <section class="booking-section" id="booking"
   data-api="https://anylopez-booking-worker.anylopez.workers.dev/booking/availability"
   data-formspree="xrerbgdw"
-  data-wa="34656306167">
+  data-wa="{{ site.phoneE164 }}">
   <div class="booking-container">
     <header class="booking-header">
       <h2>{{ L.title }}</h2>
@@ -40,7 +40,7 @@
 
     <div class="booking-error" data-bind="error" hidden>
       <p>{{ L.error }}</p>
-      <a href="{{ L.fallbackHref }}" class="booking-fallback-cta">{{ L.fallbackText }}</a>
+      <a href="https://wa.me/{{ site.phoneE164 }}" class="booking-fallback-cta">{{ L.fallbackText }}</a>
     </div>
   </div>
 

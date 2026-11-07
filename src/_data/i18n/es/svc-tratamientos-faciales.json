@@ -14,7 +14,7 @@
     ]
   },
   "breadcrumb": { "services": "Servicios", "current": "Tratamientos Faciales Avanzados" },
-  "callCta": "Llamar 656 306 167",
+  "callCta": "Llamar {phoneNational}",
   "hero": {
     "imgAlt": "Tratamientos faciales avanzados en AnyLopez Benidorm",
     "eyebrow": "Tratamientos faciales avanzados · 9 protocolos",

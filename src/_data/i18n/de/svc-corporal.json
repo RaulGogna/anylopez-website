@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current": "Körperbehandlungen" },
-  "callCta": "Anrufen: 656 306 167",
+  "callCta": "Anrufen: {phoneNational}",
   "hero": {
     "imgAlt": "Körperbehandlungen in der AnyLopez Ästhetikklinik Benidorm",
     "eyebrow": "Körperbehandlungen · 4 Protokolle",

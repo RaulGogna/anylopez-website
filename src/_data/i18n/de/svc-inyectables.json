@@ -20,7 +20,7 @@
     ]
   },
   "breadcrumb": { "services": "Behandlungen", "current_html": "Ästhetische Injektionen" },
-  "callCta": "Anrufen: 656 306 167",
+  "callCta": "Anrufen: {phoneNational}",
   "hero": {
     "imgAlt_html": "Ästhetische Injektionsmedizin in der AnyLopez Ästhetikklinik Benidorm",
     "eyebrow_html": "Ästhetische Injektionen · 4 Protokolle",
