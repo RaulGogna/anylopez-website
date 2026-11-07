@@ -924,21 +924,6 @@ body::before {
 .footer-legal-links { margin-top: 6px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 
 /* ═══════════════════════════════════════════════════
-   WHATSAPP FLOTANTE
-   ═══════════════════════════════════════════════════ */
-.whatsapp-float, #wa-float a {
-  position: fixed; bottom: 28px; inset-inline-end: 28px; z-index: 9980;
-  display: flex; align-items: center; justify-content: center;
-  width: 58px; height: 58px; background: #25D366; border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.42);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.whatsapp-float:hover, #wa-float a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 28px rgba(37,211,102,0.55);
-}
-
-/* ═══════════════════════════════════════════════════
    MOBILE STICKY BAR
    ═══════════════════════════════════════════════════ */
 /* Borde superior + padding superior + botón (2×13 de padding, 2×1 de borde, línea de 12px×1.75) + padding inferior */
@@ -953,16 +938,6 @@ html { scroll-padding-bottom: 16px; }
   padding-bottom: max(12px, env(safe-area-inset-bottom));
   grid-template-columns: 1fr 1fr; gap: 10px;
 }
-.mb-btn {
-  display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px;
-  font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s;
-  text-decoration: none;
-}
-.mb-call { background: rgba(255,255,255,0.1); color: var(--ivory); border: 1px solid rgba(255,255,255,0.2); }
-.mb-call:hover { background: rgba(255,255,255,0.18); }
-.mb-wa { background: #25D366; color: #fff; border: none; }
-.mb-wa:hover { background: #20b857; }
 
 /* ═══════════════════════════════════════════════════
    INNER PAGES
@@ -1055,7 +1030,7 @@ button[type="submit"] {
 .testi-google-badge { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
 .testi-footer { text-align: center; margin-top: 48px; }
 
-/* Mobile bar buttons (alias for mb-btn) */
+/* Mobile bar buttons */
 .mobile-bar-btn {
   display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px;
   font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
@@ -1272,7 +1247,6 @@ button[type="submit"] {
   .container { padding: 0 24px; }
   .services-intro-wrap { padding-left: 24px; padding-right: 24px; }
 
-  .whatsapp-float, #wa-float a { bottom: calc(var(--mobile-bar-h) + 6px) !important; }
   .mobile-bar { display: grid; }
   anylopez-chat { --anylopez-chat-offset-bottom: calc(var(--mobile-bar-h) + 16px); }
   /* El foco, las anclas y el último enlace del pie no deben quedar bajo la barra. */
