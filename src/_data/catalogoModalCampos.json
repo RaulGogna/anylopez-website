@@ -1,0 +1,4 @@
+{
+  "tratamiento": ["slug", "categoria", "imagen", "nombre", "paraQuien", "descripcion", "duracion", "garantia", "beneficios", "comoFunciona", "precios", "packDestacado", "idealPara", "recomendaciones"],
+  "categoria": ["id", "nombre"]
+}
