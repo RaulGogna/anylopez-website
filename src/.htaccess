@@ -12,6 +12,7 @@
   # Huella del catálogo: la lee Usopp para detectar desfases web/chat/teléfono; que no se quede cacheada.
   <Files "catalogo-huella.json">
     Header set Cache-Control "max-age=60"
+    Header unset Expires
   </Files>
 </IfModule>
 
