@@ -315,6 +315,45 @@ async function comprobarCatalogoBloqueado(browser, base, { l, url }, id, hubsPro
   await cerrar(hub.page);
 }
 
+// El catálogo solo se pide cuando hace falta: con un hash que no es una tarjeta no sale la petición, con el de una
+// tarjeta se abre el modal, y tras el clic el disparador queda aria-busy y con cursor de espera hasta que llega el JSON.
+async function comprobarCargaDelCatalogo(browser, base, { url }, id) {
+  const abrir = async (ruta, antes) => {
+    const page = await nuevaPagina(browser, MOVIL);
+    const peticiones = [];
+    page.on("request", (r) => r.url().includes("/assets/catalogo/") && peticiones.push(r.url()));
+    if (antes) await antes(page);
+    await page.goto(`${base}${ruta}`, { waitUntil: "load" });
+    await page.waitForTimeout(500);
+    return { page, peticiones };
+  };
+
+  const sinHash = await abrir(url);
+  const ancla = await sinHash.page.evaluate(() => document.querySelector("[id]:not(.trat-card)")?.id);
+  const slug = await sinHash.page.locator(".trat-card[data-slug]").first().getAttribute("id");
+  await cerrar(sinHash.page);
+
+  const otroHash = await abrir(`${url}#${ancla}`);
+  if (otroHash.peticiones.length) fallar(id, `el hash #${ancla}, que no es una tarjeta, pidió el catálogo`);
+  await cerrar(otroHash.page);
+
+  const hashTarjeta = await abrir(`${url}#${slug}`);
+  const abierto = await hashTarjeta.page.evaluate(() => document.getElementById("trat-modal").open);
+  if (!hashTarjeta.peticiones.length || !abierto) fallar(id, `el hash #${slug}, de una tarjeta, no abrió el modal`);
+  await cerrar(hashTarjeta.page);
+
+  const lento = await abrir(url, (page) => page.route("**/assets/catalogo/*", async (route) => { await new Promise((r) => setTimeout(r, 1500)); await route.continue(); }));
+  const boton = lento.page.locator(".trat-cta[data-slug]").first();
+  await boton.evaluate((el) => el.scrollIntoView({ block: "center" }));
+  await boton.click();
+  const durante = await boton.evaluate((el) => [el.getAttribute("aria-busy"), el.style.cursor]);
+  if (durante[0] !== "true" || durante[1] !== "wait") fallar(id, `mientras llega el JSON el disparador tiene aria-busy=${durante[0]} y cursor=${durante[1]}`);
+  await lento.page.waitForFunction(() => document.getElementById("trat-modal").open, null, { timeout: 8000 }).catch(() => fallar(id, "con el JSON lento el modal no se abrió"));
+  const despues = await boton.evaluate((el) => [el.getAttribute("aria-busy"), el.style.cursor]);
+  if (despues[0] !== null || despues[1] !== "") fallar(id, "el disparador sigue aria-busy o con cursor de espera tras abrirse el modal");
+  await cerrar(lento.page);
+}
+
 // «Qué incluye» es un botón con aria-expanded/aria-controls sobre un panel con `hidden`. Sin JS el panel
 // va abierto en el HTML (SEO) y el botón oculto. Con JS: un solo panel abierto, la tarjeta crece, un clic
 // fuera no cierra, Escape cierra y devuelve el foco al botón, y abrirlo no abre el modal.
@@ -452,6 +491,7 @@ try {
     const { primero, pantallas } = await comprobarMedidas(page, id);
     await comprobarModal(page, pagina, id);
     await comprobarCatalogoBloqueado(browser, base, pagina, id, hubsProbados);
+    if (l.code === "es") await comprobarCargaDelCatalogo(browser, base, pagina, id);
     await comprobarProceso(page, id);
     await comprobarOrdenDeTabulacion(page, id);
     await comprobarDesplegables(page, id);

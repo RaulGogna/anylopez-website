@@ -161,7 +161,14 @@
     if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     const slug = trigger.dataset.slug;
-    open(slug).catch(() => location.assign(trigger.href || '#' + slug));
+    trigger.setAttribute('aria-busy', 'true');
+    trigger.style.cursor = 'wait';
+    open(slug)
+      .catch(() => location.assign(trigger.href || '#' + slug))
+      .finally(() => {
+        trigger.removeAttribute('aria-busy');
+        trigger.style.cursor = '';
+      });
   });
 
   dialog.addEventListener('click', (e) => {
@@ -174,9 +181,11 @@
     }
   });
 
+  // Solo se pide el catálogo si el hash apunta a una tarjeta de tratamiento de la página.
   function openFromHash() {
     const slug = (location.hash || '').replace(/^#/, '');
-    if (slug) open(slug).catch(() => {});
+    const card = slug && document.getElementById(slug);
+    if (card && card.matches('.trat-card')) open(slug).catch(() => {});
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', openFromHash);
