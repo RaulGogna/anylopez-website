@@ -2,7 +2,7 @@
   "catalog": {
     "from": "ab",
     "duration": "Dauer:",
-    "includes": "Was enthalten ist",
+    "includes": "Was ist enthalten?",
     "processToggle": "Alle {count} Schritte ansehen"
   },
   "modal": {

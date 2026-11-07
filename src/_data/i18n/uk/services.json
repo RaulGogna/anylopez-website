@@ -16,17 +16,17 @@
     "all": "Усі"
   },
   "goals": {
-    "arrugas-flacidez": "Зморшки та в’язлість",
+    "arrugas-flacidez": "Зморшки та в'ялість шкіри",
     "manchas-tono": "Пігментація та тон шкіри",
     "acne-cicatrices": "Акне та рубці",
     "luminosidad": "Сяйво та зволоження",
-    "celulitis-cuerpo": "Целюліт та локальні жирові відкладення",
+    "celulitis-cuerpo": "Целюліт і локальний жир",
     "piernas-retencion": "Ноги та затримка рідини",
-    "relax-tension": "Релакс та м’язова напруга",
+    "relax-tension": "Релакс та м'язова напруга",
     "belleza-depilacion": "Макіяж, вії та депіляція"
   },
   "list": {
-    "flag": "Флагманська процедура",
+    "flag": "Флагманський напрямок",
     "count": "Показано процедур: {shown} з {total}"
   },
   "trust": {

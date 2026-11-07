@@ -3,7 +3,7 @@
     "from": "от",
     "duration": "Длительность:",
     "includes": "Что входит",
-    "processToggle": "Показать шаги ({count})"
+    "processToggle": "Все этапы ({count})"
   },
   "modal": {
     "close": "Закрыть карточку",
