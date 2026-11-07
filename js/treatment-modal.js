@@ -1,23 +1,31 @@
 (function () {
   'use strict';
 
-  const dataEl = document.getElementById('trat-data');
   const dialog = document.getElementById('trat-modal');
-  if (!dataEl || !dialog || typeof dialog.showModal !== 'function') return;
-
-  let DATA;
-  try { DATA = JSON.parse(dataEl.textContent); } catch (e) { return; }
-
-  const TRATS = DATA.tratamientos || [];
-  const CATS = DATA.categorias || [];
-  const GARANTIA_DEFAULT = DATA.garantiaDefault || '';
+  if (!dialog || typeof dialog.showModal !== 'function') return;
 
   const WA_NUMBER = dialog.dataset.waNumber;
   const PHONE_NUMBER = dialog.dataset.phone;
   const IMG_BASE = window.__TRAT_IMG_BASE || '/images/tratamientos/';
 
-  const catById = Object.fromEntries(CATS.map((c) => [c.id, c]));
-  const tratBySlug = Object.fromEntries(TRATS.map((t) => [t.slug, t]));
+  // El catálogo se pide al primer uso; si la petición falla se vuelve a intentar en el siguiente.
+  let catalogo = null;
+  function cargarCatalogo() {
+    if (!catalogo) {
+      catalogo = fetch(dialog.dataset.catalog)
+        .then((res) => {
+          if (!res.ok) throw new Error('catalogo ' + res.status);
+          return res.json();
+        })
+        .then((data) => ({
+          garantiaDefault: data.garantiaDefault || '',
+          catById: Object.fromEntries(data.categorias.map((c) => [c.id, c])),
+          tratBySlug: Object.fromEntries(data.tratamientos.map((t) => [t.slug, t])),
+        }));
+      catalogo.catch(() => { catalogo = null; });
+    }
+    return catalogo;
+  }
 
   function fillSlot(field, value) {
     dialog.querySelectorAll('[data-field="' + field + '"]').forEach((el) => {
@@ -25,7 +33,7 @@
     });
   }
 
-  function hydrate(trat) {
+  function hydrate(trat, { catById, garantiaDefault }) {
     const cat = catById[trat.categoria] || {};
     const png = IMG_BASE + trat.imagen;
     const webp = png.replace('.png', '.webp');
@@ -43,12 +51,12 @@
     fillSlot('paraQuien', trat.paraQuien || '');
     fillSlot('descripcion', trat.descripcion);
     fillSlot('duracion', trat.duracion || '');
-    fillSlot('garantia', trat.garantia || GARANTIA_DEFAULT);
+    fillSlot('garantia', trat.garantia || garantiaDefault);
 
     // Beneficios
     const benUl = dialog.querySelector('[data-field="beneficios"]');
     benUl.innerHTML = '';
-    (trat.beneficios || trat.incluye || []).forEach((b) => {
+    (trat.beneficios || []).forEach((b) => {
       const li = document.createElement('li');
       li.textContent = b;
       benUl.appendChild(li);
@@ -123,10 +131,11 @@
     })[c]);
   }
 
-  function open(slug) {
-    const trat = tratBySlug[slug];
+  async function open(slug) {
+    const datos = await cargarCatalogo();
+    const trat = datos.tratBySlug[slug];
     if (!trat) return;
-    hydrate(trat);
+    hydrate(trat, datos);
     if (!dialog.open) dialog.showModal();
     if (location.hash !== '#' + slug) {
       history.replaceState(null, '', '#' + slug);
@@ -151,7 +160,8 @@
     if (dialog.contains(trigger)) return;
     if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
-    open(trigger.dataset.slug);
+    const slug = trigger.dataset.slug;
+    open(slug).catch(() => location.assign(trigger.href || '#' + slug));
   });
 
   dialog.addEventListener('click', (e) => {
@@ -166,7 +176,7 @@
 
   function openFromHash() {
     const slug = (location.hash || '').replace(/^#/, '');
-    if (slug && tratBySlug[slug]) open(slug);
+    if (slug) open(slug).catch(() => {});
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', openFromHash);

@@ -1,7 +1,8 @@
 {# Treatment modal partial — include in any category page that needs the JS-driven detail modal.
    Uses `lang` from page context (es | en) to localise headings and CTAs. #}
 {%- set tp = i18n[lang or 'es'].partials %}
-<dialog id="trat-modal" class="trat-modal" aria-labelledby="trat-modal-title" data-phone="{{ site.phoneE164 | phoneDigits }}" data-wa-number="{{ site.phoneE164 }}">
+{%- set catalogoUrl = ('/assets/catalogo/' + (lang or 'es') + '.json') | url %}
+<dialog id="trat-modal" class="trat-modal" aria-labelledby="trat-modal-title" data-phone="{{ site.phoneE164 | phoneDigits }}" data-wa-number="{{ site.phoneE164 }}" data-catalog="{{ catalogoUrl }}?v={{ catalogoModal[lang or 'es'].version }}">
   <form method="dialog" class="trat-modal-close-form">
     <button type="submit" class="trat-modal-close" aria-label="{{ tp.modal.close }}">&times;</button>
   </form>
@@ -60,10 +61,6 @@
     </footer>
   </article>
 </dialog>
-
-<script id="trat-data" type="application/json">
-{{ tratamientos | dump | safe }}
-</script>
 
 <script>
   window.__TRAT_IMG_BASE = "{{ '/images/tratamientos/' | url }}";

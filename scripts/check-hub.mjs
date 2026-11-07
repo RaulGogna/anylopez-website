@@ -76,10 +76,9 @@ const AVISO_TABLA = "revisa el catálogo y actualiza PRECIO_ESPERADO en scripts/
 
 const urlDe = (lang, ruta) => `${lang.prefix}${ruta}`;
 
-function slugsDelModal(url) {
-  const html = readFileSync(join(SITE, url, "index.html"), "utf8");
-  const json = html.match(/<script id="trat-data" type="application\/json">([\s\S]*?)<\/script>/);
-  return json ? JSON.parse(json[1]).tratamientos.map((t) => t.slug) : [];
+function slugsDelModal(code) {
+  const ruta = join(SITE, "assets", "catalogo", `${code}.json`);
+  return existsSync(ruta) ? JSON.parse(readFileSync(ruta, "utf8")).tratamientos.map((t) => t.slug) : [];
 }
 
 const fallos = [];
@@ -116,7 +115,7 @@ async function comprobarContenido(page, lang, base) {
     const destino = urlDe(lang, `/services/${t.categoria}/`);
     if (fila.href !== `${destino}#${t.slug}`) fallar(code, `${t.slug}: href ${fila.href} ≠ ${destino}#${t.slug}`);
     else if (!existsSync(join(SITE, destino, "index.html"))) fallar(code, `${t.slug}: no existe ${destino}`);
-    else if (!slugsDelModal(destino).includes(t.slug)) fallar(code, `${t.slug}: el #slug no existe en ${destino}`);
+    else if (!slugsDelModal(code).includes(t.slug)) fallar(code, `${t.slug}: el modal no conoce el #slug de ${destino}`);
   }
 
   const cabeceras = await page.$$eval(".svc-group-head h2 a", (as) => as.map((a) => a.getAttribute("href")));

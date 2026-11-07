@@ -1,0 +1,7 @@
+---
+pagination: { data: langs, size: 1, alias: l }
+permalink: "assets/catalogo/{{ l.code }}.json"
+eleventyExcludeFromCollections: true
+layout: null
+---
+{{ catalogoModal[l.code].json | safe }}

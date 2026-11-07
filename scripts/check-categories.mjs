@@ -283,6 +283,38 @@ async function comprobarModal(page, { l, cat }, id) {
   }
 }
 
+// El catálogo del modal es una petición aparte: si falla, el clic lleva al ancla del tratamiento en vez de quedarse mudo.
+// En la categoría el ancla es la propia tarjeta; en el hub, la fila enlaza a su categoría.
+async function comprobarCatalogoBloqueado(browser, base, { l, url }, id, hubsProbados) {
+  const abrir = async (ruta, selector) => {
+    const page = await nuevaPagina(browser, MOVIL);
+    await page.route("**/assets/catalogo/*", (route) => route.abort());
+    await page.goto(`${base}${ruta}`, { waitUntil: "load" });
+    await forzarVisible(page);
+    const objetivo = page.locator(selector).first();
+    const slug = await objetivo.getAttribute("data-slug");
+    await objetivo.evaluate((el) => el.scrollIntoView({ block: "center" }));
+    await objetivo.click();
+    return { page, slug };
+  };
+
+  const categoria = await abrir(url, ".trat-cta[data-slug]");
+  await categoria.page
+    .waitForFunction((s) => location.hash === "#" + s, categoria.slug, { timeout: 5000 })
+    .catch(() => fallar(id, "con el JSON del catálogo bloqueado, el clic en la tarjeta no navega a su ancla"));
+  if (await categoria.page.evaluate(() => document.getElementById("trat-modal").open)) fallar(id, "con el JSON bloqueado el modal se abrió");
+  await cerrar(categoria.page);
+
+  if (hubsProbados.has(l.code)) return;
+  hubsProbados.add(l.code);
+  const rutaHub = `${l.prefix}/services/`;
+  const hub = await abrir(rutaHub, ".svc-row[data-slug]");
+  await hub.page
+    .waitForURL((u) => u.hash === "#" + hub.slug && u.pathname !== rutaHub, { timeout: 5000 })
+    .catch(() => fallar(l.code, "con el JSON del catálogo bloqueado, el clic en la fila del hub no navega a la categoría"));
+  await cerrar(hub.page);
+}
+
 // «Qué incluye» es un botón con aria-expanded/aria-controls sobre un panel con `hidden`. Sin JS el panel
 // va abierto en el HTML (SEO) y el botón oculto. Con JS: un solo panel abierto, la tarjeta crece, un clic
 // fuera no cierra, Escape cierra y devuelve el foco al botón, y abrirlo no abre el modal.
@@ -403,6 +435,7 @@ const browser = await lanzarNavegador();
 const resumen = [];
 try {
   const hubs = new Map();
+  const hubsProbados = new Set();
   for (const pagina of paginas) {
     const { l, cat, url } = pagina;
     const id = `${l.code}/${cat.id}`;
@@ -418,6 +451,7 @@ try {
     await comprobarCopy(page, pagina, id);
     const { primero, pantallas } = await comprobarMedidas(page, id);
     await comprobarModal(page, pagina, id);
+    await comprobarCatalogoBloqueado(browser, base, pagina, id, hubsProbados);
     await comprobarProceso(page, id);
     await comprobarOrdenDeTabulacion(page, id);
     await comprobarDesplegables(page, id);
