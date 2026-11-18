@@ -127,17 +127,17 @@ eleventyComputed:
         </div>
         <div class="team-card">
           <picture>
-            <source srcset="{{ '/images/about/team-member-2.webp' | url }}" type="image/webp">
+            <source srcset="{{ '/images/about/svitlana-romanenko.webp' | url }}" type="image/webp">
             <img
-              src="{{ '/images/about/team-member-2.jpg' | url }}"
-              alt="Eilen Vanessa Cardenas"
+              src="{{ '/images/about/svitlana-romanenko.jpg' | url }}"
+              alt="{{ ta.equipo.roles.svitlana_nombre }}"
               class="team-img"
               loading="lazy"
               decoding="async"
             />
           </picture>
-          <h3 class="team-name">Eilen Vanessa Cardenas</h3>
-          <p class="team-role">{{ ta.equipo.roles.eilen_html | safe }}</p>
+          <h3 class="team-name">{{ ta.equipo.roles.svitlana_nombre }}</h3>
+          <p class="team-role">{{ ta.equipo.roles.svitlana }}</p>
         </div>
         <div class="team-card">
           <picture>
